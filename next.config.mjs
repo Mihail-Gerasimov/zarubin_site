@@ -8,6 +8,7 @@ const nextConfig = {
     });
     return config;
   },
+  target: 'experimental-serverless-trace',
 };
 
 export default nextConfig;
