@@ -1,10 +1,10 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface Data {
   title: string;
-  prep_time: string;
-  cook_time: string;
-  bio: string;
+  description: string;
+  image: string;
   slug: string;
 }
 
@@ -16,20 +16,21 @@ export const BlogCard = ({ post }: Props) => {
   return (
     <Link
       href={`blog/${post.slug}`}
-      className='p-[10px] w-fit flex rounded-[20px] border-solid border-[1px] border-gray-200'
+      className='p-[10px] w-full flex rounded-lg ring-1 ring-inset ring-slate-700'
     >
-      <div className=''>
-        <h3 className=''>{post.title}</h3>
-        <p>{post.bio}</p>
-        <div>
-          <div>
-            <h5>Prep Time</h5>
-            <p>{post.prep_time}</p>
-          </div>
-          <div>
-            <h5>Cook Time</h5>
-            <p>{post.cook_time}</p>
-          </div>
+      <div className='w-full'>
+        <div className='overflow-hidden'>
+          <Image
+            src={`/${post.image}`}
+            alt='image'
+            width={300}
+            height={180}
+            className='w-full h-60 object-cover'
+          />
+        </div>
+        <div className='p-[24px] flex flex-col items-start'>
+          <h3 className='mt-2 text-[20px]'>{post.title}</h3>
+          <p className='mt-3 text-[16px]'>{post.description}</p>
         </div>
       </div>
     </Link>
