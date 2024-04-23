@@ -14,9 +14,12 @@ interface Props {
 
 export const BlogCard = ({ post }: Props) => {
   return (
-    <Link href={`blog/${post.slug}`}>
-      <div>
-        <h3>{post.title}</h3>
+    <Link
+      href={`blog/${post.slug}`}
+      className='p-[10px] w-fit flex rounded-[20px] border-solid border-[1px] border-gray-200'
+    >
+      <div className=''>
+        <h3 className=''>{post.title}</h3>
         <p>{post.bio}</p>
         <div>
           <div>

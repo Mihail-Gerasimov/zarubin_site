@@ -34,10 +34,8 @@ export default function BlogsPage(props: { params: { slug: string } }) {
   const post = getPostContent(slug);
 
   return (
-    <main>
-      <article className='prose prose-slate'>
-        <Markdown>{post.content}</Markdown>
-      </article>
-    </main>
+    <article className='prose'>
+      <Markdown>{post.content}</Markdown>
+    </article>
   );
 }

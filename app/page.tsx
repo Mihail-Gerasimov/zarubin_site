@@ -6,9 +6,9 @@ export default function Home() {
 
   return (
     <div className=''>
-      {postMetadata.map((post, idx) => {
-        return <BlogCard key={idx} post={post} />;
-      })}
+      {postMetadata.map((post, idx) => (
+        <BlogCard key={idx} post={post} />
+      ))}
     </div>
   );
 }
