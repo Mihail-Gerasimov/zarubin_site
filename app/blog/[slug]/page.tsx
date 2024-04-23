@@ -36,13 +36,13 @@ export default function BlogsPage(props: { params: { slug: string } }) {
 
   return (
     <article
-      className='prose max-w-[896px] mx-[auto]'
+      className='prose max-w-[896px] mx-[auto] '
       style={{
         backgroundColor: 'var(--bg-color)',
         color: 'var(--text-color)',
       }}
     >
-      <Markdown className='px-[24px] py-[40px]'>{post.content}</Markdown>
+      <Markdown className='px-[24px] py-[40px_60px]'>{post.content}</Markdown>
     </article>
   );
 }
