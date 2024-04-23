@@ -1,8 +1,8 @@
 ---
-title: 'Chocolate Chip Cookies'
-prep_time: '90 minutes'
-cook_time: '60 minutes'
-description: 'Some text for description'
+title: 'Juse'
+prep_time: '5 minutes'
+cook_time: '10 minutes'
+description: 'Some text for juce description'
 ---
 
 # Classic Apple Pie
