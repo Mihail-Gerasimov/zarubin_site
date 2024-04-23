@@ -4,16 +4,17 @@ import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
 
 const getPostContent = (slug: string) => {
-  const folder = 'src/recipes/';
+  const folder = 'src/posts/';
   const file = folder + `${slug}.md`;
   const content = fs.readFileSync(file, 'utf8');
 
   const matterResult = matter(content);
+
   return matterResult;
 };
 
 export const generateStaticParams = async () => {
-  const posts = getPostMetadata('src/recipes');
+  const posts = getPostMetadata('src/posts');
   return posts.map((post) => ({ slug: post.slug }));
 };
 
@@ -34,10 +35,14 @@ export default function BlogsPage(props: { params: { slug: string } }) {
   const post = getPostContent(slug);
 
   return (
-    <main>
-      <article className='prose prose-slate'>
-        <Markdown>{post.content}</Markdown>
-      </article>
-    </main>
+    <article
+      className='prose max-w-[896px] mx-[auto]'
+      style={{
+        backgroundColor: 'var(--bg-color)',
+        color: 'var(--text-color)',
+      }}
+    >
+      <Markdown className='px-[24px] py-[40px]'>{post.content}</Markdown>
+    </article>
   );
 }

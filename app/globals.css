@@ -23,6 +23,20 @@ p,
 a {
   margin: 0;
   padding: 0;
-  text-decoration: none;
-  list-style: none;
+  /* text-decoration: none; */
+  /* list-style: none; */
+}
+
+@layer components {
+  body {
+    --bg-color: #111827;
+    --text-color: #94a3b8;
+  }
+}
+
+@layer utilities {
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
 }

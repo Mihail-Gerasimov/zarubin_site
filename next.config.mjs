@@ -8,6 +8,26 @@ const nextConfig = {
     });
     return config;
   },
+  experimental: {
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'i.imgur.com',
+        port: '',
+        pathname: '/*',
+      },
+    ],
+  },
 };
 
 export default nextConfig;

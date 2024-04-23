@@ -2,12 +2,13 @@ import Link from 'next/link';
 
 export const Header = () => {
   return (
-    <header>
+    <header className='px-[14px] py-[40px] backdrop-blur-md sticky top-0 bg-slate-900/30'>
       <nav>
-        <ul>
+        <ul className='flex items-center justify-center gap-[12px] '>
           <li>
-            <Link href={'/'}>Main</Link>
-            <Link href={'#'}>Home</Link>
+            <Link href={'/'} className=' '>
+              Blog home
+            </Link>
           </li>
         </ul>
       </nav>
