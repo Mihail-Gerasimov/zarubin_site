@@ -1,7 +1,7 @@
 ---
 title: 'Привет, начинающий инвестор!'
 description: 'Хочешь научиться основам инвестиционной стратегии в мире футбола? Тогда этот пост для тебя!'
-image: 'https://dgtlbureau.github.io/soccer_blog/public/assets/images/test_2.jpg'
+image: 'https://dgtlbureau.github.io/soccer_blog/assets/images/test_2.jpg'
 ---
 
 # Привет, начинающий инвестор!
