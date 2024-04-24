@@ -1,3 +1,4 @@
+import { BASE_URL } from '@/src/utils/alias';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -13,6 +14,11 @@ interface Props {
 }
 
 export const BlogCard = ({ post }: Props) => {
+  let url = '';
+  if (process.env.NODE_ENV !== 'development') {
+    url = BASE_URL;
+  }
+
   return (
     <Link
       href={`/blog/${post.slug}`}
@@ -21,7 +27,7 @@ export const BlogCard = ({ post }: Props) => {
       <div className='w-full'>
         <div className='overflow-hidden'>
           <Image
-            src={post.image}
+            src={`${url}${post.image}`}
             alt='image'
             width={300}
             height={180}

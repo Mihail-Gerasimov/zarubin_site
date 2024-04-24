@@ -1,5 +1,4 @@
 import { Footer } from '@/src/components/Footer/Footer';
-import { Header } from '@/src/components/Header/Header';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import React from 'react';
@@ -18,12 +17,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en' className=''>
+    <html lang='en'>
       <body className={inter.className}>
-        <Header />
-        <main className='px-[14px] py-[20px] pb-[78px] w-full '>
-          {children}
-        </main>
+        {children}
         <Footer />
       </body>
     </html>
