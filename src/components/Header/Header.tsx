@@ -1,11 +1,21 @@
+import Arrow from '@/src/assets/svg/arrow-left.svg';
 import Link from 'next/link';
 
 export const Header = () => {
   return (
-    <header className='px-[14px] py-[40px] backdrop-blur-md sticky top-0 bg-slate-900/30'>
+    <header className='px-[24px] py-[40px] desktop:px-[144px] backdrop-blur-md sticky top-0 bg-purple-main bg-opacity-5'>
       <nav>
-        <ul className='flex items-center justify-center gap-[12px] '>
-          <li>
+        <ul className='grid grid-cols-2 desktop:grid-cols-3'>
+          <li className='flex'>
+            <a
+              href={'https://stocks.soccer/'}
+              className='flex items-center gap-[10px]'
+            >
+              <Arrow className='w-[16px] h-[16px] fill-white' />
+              Leagues
+            </a>
+          </li>
+          <li className='flex items-center justify-center'>
             <Link href={'/'} className=' '>
               Blog home
             </Link>

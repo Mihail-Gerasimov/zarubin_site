@@ -5,7 +5,7 @@ export default function Home() {
   const postMetadata = getPostMetadata('src/posts');
 
   return (
-    <div className='mx-auto max-w-[768px] flex flex-col items-center gap-12'>
+    <div className='mx-auto py-12 max-w-[768px] flex flex-col items-center gap-12'>
       {postMetadata.map((post, idx) => (
         <BlogCard key={idx} post={post} />
       ))}
