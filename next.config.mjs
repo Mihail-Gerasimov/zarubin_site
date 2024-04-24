@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // basePath: '/s.stocks.soccer',
   reactStrictMode: true,
   webpack: (config) => {
     config.module.rules.push({
