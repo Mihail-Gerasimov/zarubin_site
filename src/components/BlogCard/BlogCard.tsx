@@ -15,17 +15,18 @@ interface Props {
 export const BlogCard = ({ post }: Props) => {
   return (
     <Link
-      href={`blog/${post.slug}`}
-      className='p-[10px] w-full flex rounded-lg ring-1 ring-inset ring-slate-700'
+      href={`/blog/${post.slug}`}
+      className='p-[10px] w-full flex rounded-lg ring-1 ring-inset ring-purple-light'
     >
       <div className='w-full'>
         <div className='overflow-hidden'>
           <Image
-            src={`/${post.image}`}
+            src={post.image}
             alt='image'
             width={300}
             height={180}
             className='w-full h-60 object-cover'
+            unoptimized
           />
         </div>
         <div className='p-[24px] flex flex-col items-start'>

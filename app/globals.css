@@ -23,20 +23,21 @@ p,
 a {
   margin: 0;
   padding: 0;
-  /* text-decoration: none; */
-  /* list-style: none; */
 }
 
 @layer components {
   body {
-    --bg-color: #111827;
+    --bg-color: #4f0356;
+    --second-bg-color: #750080;
     --text-color: #94a3b8;
+    --accent-col: #a854fd;
+    --maim-white: #ffffff;
   }
 }
 
 @layer utilities {
   body {
     background-color: var(--bg-color);
-    color: var(--text-color);
+    color: var(--maim-white);
   }
 }

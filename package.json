@@ -10,6 +10,7 @@
     "prettify": "prettier --write next.config.mjs '{app,src}/**/*.{js,jsx,ts,tsx,css}' && organize-imports-cli tsconfig.json"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
     "gray-matter": "^4.0.3",
     "markdown-to-jsx": "^7.4.7",
     "next": "14.2.2",

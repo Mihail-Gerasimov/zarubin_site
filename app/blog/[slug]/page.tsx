@@ -35,13 +35,7 @@ export default function BlogsPage(props: { params: { slug: string } }) {
   const post = getPostContent(slug);
 
   return (
-    <article
-      className='prose max-w-[896px] mx-[auto]'
-      style={{
-        backgroundColor: 'var(--bg-color)',
-        color: 'var(--text-color)',
-      }}
-    >
+    <article className='prose max-w-[896px] mx-[auto] text-white'>
       <Markdown className='px-[24px] py-[40px]'>{post.content}</Markdown>
     </article>
   );

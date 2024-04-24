@@ -10,7 +10,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      typography: ({ theme }:{theme:PluginAPI["theme"]}) => ({
+      typography: ({ theme }: { theme: PluginAPI['theme'] }) => ({
         DEFAULT: {
           css: {
             h1: {
@@ -38,7 +38,12 @@ const config: Config = {
         },
       }),
       colors: {
-        'main-gray': '#94a3b8'
+        'main-gray': '#94a3b8',
+        'maim-bg': '#0D1115',
+        'accent-color': '#A854FD',
+        'purple-main': '#4f0356',
+        'purple-light': '#750080',
+        'black-bg': '#111111',
       },
     },
     screens: {
