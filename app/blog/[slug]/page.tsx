@@ -1,3 +1,5 @@
+import { Header } from '@/src/components/Header/Header';
+import { PostList } from '@/src/components/NavList/PostList';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import fs from 'fs';
 import matter from 'gray-matter';
@@ -35,8 +37,15 @@ export default function BlogsPage(props: { params: { slug: string } }) {
   const post = getPostContent(slug);
 
   return (
-    <article className='prose max-w-[896px] mx-[auto] text-white'>
-      <Markdown className='px-[24px] py-[40px]'>{post.content}</Markdown>
-    </article>
+    <>
+      <Header>
+        <PostList />
+      </Header>
+      <main className='px-[14px] py-[20px] pb-[78px] w-full'>
+        <article className='prose max-w-[896px] mx-[auto] text-white'>
+          <Markdown className='py-[20px_40px]'>{post.content}</Markdown>
+        </article>
+      </main>
+    </>
   );
 }

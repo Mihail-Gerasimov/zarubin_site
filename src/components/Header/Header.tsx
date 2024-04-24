@@ -1,11 +1,11 @@
-import Arrow from '@/src/assets/svg/arrow-left.svg';
-import Link from 'next/link';
+import React from 'react';
 
-export const Header = () => {
+export const Header = ({ children }: { children: React.ReactNode }) => {
   return (
     <header className='px-[24px] py-[40px] desktop:px-[144px] backdrop-blur-md sticky top-0 bg-purple-main bg-opacity-5'>
       <nav>
-        <ul className='grid grid-cols-2 desktop:grid-cols-3'>
+        {children}
+        {/* <ul className='grid grid-cols-2 desktop:grid-cols-3'>
           <li className='flex'>
             <a
               href={'https://stocks.soccer/'}
@@ -20,7 +20,7 @@ export const Header = () => {
               Blog home
             </Link>
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </header>
   );
