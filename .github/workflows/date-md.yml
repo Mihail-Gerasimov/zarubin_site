@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v3
       - run: |
           DATE=$(date +"%Y-%m-%d")
-          for FILE in src/blogs/*.md; do
+          for FILE in src/posts/*.md; do
             sed -i "s/date: .*/date: $DATE/" "$FILE"
           done
