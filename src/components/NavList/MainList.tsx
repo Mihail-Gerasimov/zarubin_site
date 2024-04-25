@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const MainList = () => {
   return (
-    <ul className='mx-[auto] max-w-[896px] grid grid-cols-3 desktop:grid-cols-3'>
+    <ul className='mx-[auto] grid grid-cols-3 desktop:grid-cols-3'>
       <li className='desktop:block' />
       <li className='flex items-center justify-center'>
         <Link href={'/'} className=' '>

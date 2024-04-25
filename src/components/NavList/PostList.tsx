@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export const PostList = () => {
   return (
-    <ul className='mx-[auto] max-w-[896px] grid grid-cols-3 grid-rows-2 desktop:grid-cols-3'>
+    <ul className='mx-[auto] grid grid-cols-3 desktop:grid-cols-3'>
       <li className='flex'>
         <Link
           href='/'
