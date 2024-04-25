@@ -1,7 +1,7 @@
 ---
 title: 'Hello, Investor!'
 description: 'Want to learn the basics of investment strategy in the world of football? Then this post is for you!'
-image: '/assets/images/test_2.jpg'
+image: '/assets/images/frame_2.png'
 ---
 
 # Hello, aspiring investor!
