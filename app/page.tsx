@@ -13,7 +13,7 @@ export default function Home() {
       </Header>
       <main className='px-[14px] py-[20px] pb-[78px] w-full'>
         <div className='mx-auto py-12 max-w-[896px] flex flex-col items-center gap-12'>
-          {postMetadata.map((post, idx) => (
+          {postMetadata.reverse().map((post, idx) => (
             <BlogCard key={idx} post={post} />
           ))}
         </div>

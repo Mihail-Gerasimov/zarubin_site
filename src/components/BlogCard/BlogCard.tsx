@@ -21,7 +21,7 @@ export const BlogCard = ({ post }: Props) => {
 
   return (
     <Link
-      href={`/blog/${post.slug}`}
+      href={`/${post.slug}`}
       className='p-[10px] w-full flex rounded-lg ring-1 ring-inset ring-purple-light'
     >
       <div className='w-full'>
