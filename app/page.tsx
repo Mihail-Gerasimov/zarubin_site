@@ -6,6 +6,8 @@ import { getPostMetadata } from '@/src/utils/getPostMetadata';
 export default function Home() {
   const postMetadata = getPostMetadata('src/posts');
 
+  // const sortedPosts = postMetadata.sort((a, b) => a.date - b.date);
+
   return (
     <>
       <Header>
