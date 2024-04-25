@@ -1,4 +1,4 @@
-name: Add date to MD file
+name: Add Date to Markdown File
 
 on:
   push:
@@ -6,8 +6,9 @@ on:
       - 'src/posts/*.md'
 
 jobs:
-  add-date:
+  addDate:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
       - run: |

@@ -1,14 +1,12 @@
 ---
 title: 'Привет, начинающий инвестор!'
 description: 'Хочешь научиться основам инвестиционной стратегии в мире футбола? Тогда этот пост для тебя!'
-image: '/assets/images/frame_2.png'
+image: '/assets/images/test_2.jpg'
 ---
 
 # Привет, начинающий инвестор!
 
-<div style="display: flex; align-items: center; gap:12px">
-<img src="/assets/images/avatar.png" alt="avatar" style="width:40px; height:auto; display:inlinee" /> <p style="color:#94a3b8; ">Written by Vitaliy Zarubin 24 apr 2024</p>
-</div>
+###### 24 апреля 2024
 
 Хочешь научиться основам инвестиционной стратегии в мире футбола? Тогда этот пост для тебя! Наш сервис симуляции биржевой торговли футболистами поможет тебе развить навыки продуманной купли-продажи игроков. Вот несколько советов, которые помогут тебе начать:
 
