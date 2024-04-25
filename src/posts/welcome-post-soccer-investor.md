@@ -6,7 +6,9 @@ image: '/assets/images/frame_2.png'
 
 # Hello, aspiring investor!
 
-###### Written by Vitaliy Zarubin 24 apr 2024
+<div style="display: flex; align-items: center; gap:12px">
+<img src="/assets/images/avatar.png" alt="avatar" style="width:40px; height:auto; display:inlinee" /> <p style="color:#94a3b8; ">Written by Vitaliy Zarubin 24 apr 2024</p>
+</div>
 
 Want to learn the basics of investment strategy in the world of football? Then this post is for you! Stocks Soccer will help develop your skills and solidify the basic principles of thoughtful buying and selling of players. Here are some tips to get you started:
 
