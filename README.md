@@ -34,3 +34,17 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+------------
+
+1.	Для загрузки поста необходимо зайти в репозиторий https://github.com/DgtlBureau/soccer_blog, перейти по следующим директориям : src/posts
+
+2. 	В разделе posts справа нажать на “Add file”, и выбрать “Upload files” что бы загрузить необходимые файлы с расширением .md . После выбора откроется окно в котором нужно будет нажать на “choose your files” и выбрать файлы. Так же нужно будет поставить отметку на “Commit directly to the main branch.” 
+
+3. 	Картинка которая будет использоваться в файле должна лежать в директории public/assets/images. В файле который загружается в posts должен быть прописан путь к изображению следующим образом: ‘/assets/images/<image_name>.png’ 
+ВАЖНО: имя файла картинки не должно содержать пробелы. Вместо пробелов использовать “-” или “_”
+
+4. 	Файл который загружается в posts должен быть размечен согласно Markdown разметке. Так же необходимо что бы были следующие поля в шапке: title, description, image
+
+Инструкция по разметке есть на следующих источниках: https://gist.github.com/Jekins/2bf2d0638163f1294637,
+https://doka.guide/tools/markdown, 
+
