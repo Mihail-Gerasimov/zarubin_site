@@ -3,7 +3,7 @@ name: Add Date to Markdown File
 on:
   push:
     paths:
-      - 'src/blogs/*.md' # Срабатывание при загрузке файлов с расширением .md
+      - 'src/posts/*.md' # Срабатывание при загрузке файлов с расширением .md
 
 jobs:
   addDate:
