@@ -3,26 +3,16 @@ name: Add Date to Markdown File
 on:
   push:
     paths:
-      - 'src/posts/*.md' # Срабатывание при загрузке файлов с расширением .md
+      - 'src/posts/*.md'
 
 jobs:
   addDate:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Add date to Markdown files
-        run: |
-          for file in $(find . -type f -name '*.md'); do
-            echo "$(date)" >> $file
+      - uses: actions/checkout@v3
+      - run: |
+          DATE=$(date +"%Y-%m-%d")
+          for FILE in src/posts/*.md; do
+            sed -i "s/date: .*/date: $DATE/" "$FILE"
           done
-
-      - name: Commit changes
-        run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
-          git add .
-          git commit -m "Add date to Markdown files"
-          git push
