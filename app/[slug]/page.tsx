@@ -47,7 +47,7 @@ export default function BlogSlug(props: { params: { slug: string } }) {
         <PostList />
       </Header>
       <main
-        className='px-[14px] py-[20px] pb-[78px] w-full overflow-hidden'
+        className='mb-[40px] px-[14px] p-[20px] pb-[78px] w-full overflow-hidden'
         style={{
           background: `linear-gradient(to bottom, rgba(117, 0, 128, 0.0) , #4f0356 200px)`,
         }}
@@ -60,7 +60,9 @@ export default function BlogSlug(props: { params: { slug: string } }) {
           className={styles.bannerContainer}
           unoptimized
         />
-        <article className='prose max-w-[896px] mx-[auto] text-white'>
+        <article
+          className={`prose max-w-[896px] mx-[auto] text-white ${styles.atr}`}
+        >
           <Markdown className='py-[20px_40px]'>{post.content}</Markdown>
         </article>
       </main>
