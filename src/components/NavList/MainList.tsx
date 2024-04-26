@@ -6,7 +6,7 @@ export const MainList = () => {
     <ul className='mx-[auto] grid grid-cols-3 desktop:grid-cols-3'>
       <li className='desktop:block' />
       <li className='flex items-center justify-center'>
-        <Link href={'https://s.stocks.soccer/'} className=' '>
+        <Link href={'https://stocks.soccer/'} className=' '>
           <Logo className='h-[16px] w-[auto] tablet:h-[20px]' />
         </Link>
       </li>

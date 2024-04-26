@@ -16,7 +16,7 @@ export const PostList = () => {
       </li>
       <li className='flex items-center justify-center'>
         <Link
-          href={'https://s.stocks.soccer/'}
+          href={'https://stocks.soccer/'}
           className='flex items-center justify-center'
         >
           <Logo className='h-[16px] w-[auto] tablet:h-[20px]' />
