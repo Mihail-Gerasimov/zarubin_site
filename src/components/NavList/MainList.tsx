@@ -15,7 +15,7 @@ export const MainList = () => {
           href={'https://stocks.soccer/'}
           className='flex text-[12px] tablet:text-[16px]'
         >
-          to League
+          to Leagues
         </a>
       </li>
     </ul>
