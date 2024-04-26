@@ -44,6 +44,7 @@ const config: Config = {
         'purple-main': '#4f0356',
         'purple-light': '#750080',
         'black-bg': '#111111',
+        'light-bg': '#1E293B',
       },
     },
     screens: {
