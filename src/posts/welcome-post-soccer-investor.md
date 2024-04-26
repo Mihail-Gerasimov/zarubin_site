@@ -2,6 +2,7 @@
 title: 'Hello, Investor!'
 description: 'Want to learn the basics of investment strategy in the world of football? Then this post is for you!'
 image: '/assets/images/frame_2.png'
+date: '25-04-2024'
 ---
 
 # Hello, aspiring investor!
