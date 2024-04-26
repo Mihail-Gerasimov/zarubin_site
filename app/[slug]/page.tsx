@@ -4,8 +4,8 @@ import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
-// import Image from 'next/image';
-// import styles from './Post.module.css';
+import Image from 'next/image';
+import styles from './Post.module.css';
 
 const getPostContent = (slug: string) => {
   const folder = 'src/posts/';
@@ -37,19 +37,29 @@ export async function generateMetadata({
 export default function BlogSlug(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const post = getPostContent(slug);
+  const image = post.data.image
+    ? post.data.image
+    : '/assets/images/frame_2.png';
 
   return (
     <>
       <Header>
         <PostList />
       </Header>
-      {/* <div
+      <main
+        className='px-[14px] py-[20px] pb-[78px] w-full overflow-hidden'
         style={{
-          backgroundImage: `url(${post.data.image})`,
+          background: `linear-gradient(to bottom, rgba(117, 0, 128, 0.0) , #4f0356 200px)`,
         }}
-        className={styles.bannerContainer}
-      /> */}
-      <main className='px-[14px] py-[20px] pb-[78px] w-full'>
+      >
+        <Image
+          src={image}
+          width={300}
+          height={180}
+          alt=''
+          className={styles.bannerContainer}
+          unoptimized
+        />
         <article className='prose max-w-[896px] mx-[auto] text-white'>
           <Markdown className='py-[20px_40px]'>{post.content}</Markdown>
         </article>
