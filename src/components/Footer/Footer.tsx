@@ -9,7 +9,7 @@ export const Footer = () => {
             <a href='https://stocks.soccer/'>Home</a>
           </li>
           <li>
-            <a href='https://stocks.soccer/'>to Leagues</a>
+            <a href='https://stocks.soccer/'>Stocks Soccer</a>
           </li>
         </ul>
         <div className='mx-[auto] tablet:mx-0 flex items-center justify-center'>
