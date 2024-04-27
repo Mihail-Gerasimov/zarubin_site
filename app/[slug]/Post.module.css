@@ -7,10 +7,6 @@
   z-index: -1;
 }
 
-.atr font {
-  color: #0088cc;
-}
-
 @media (min-width: 768px) {
   .bannerContainer {
     width: 100%;
