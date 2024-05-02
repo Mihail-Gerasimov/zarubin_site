@@ -1,22 +1,14 @@
-import Logo from '@/src/assets/svg/logo.svg';
-import Link from 'next/link';
+import { LeagueLink } from '@/src/ui-kit/LeagueLink/LeagueLink';
+import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
 
 export const MainList = () => {
   return (
-    <ul className='mx-[auto] grid grid-cols-3 desktop:grid-cols-3'>
-      <li className='desktop:block' />
-      <li className='flex items-center justify-center'>
-        <Link href={'https://stocks.soccer/'} className=' '>
-          <Logo className='h-[16px] w-[auto] tablet:h-[20px]' />
-        </Link>
+    <ul className='mx-[auto] grid grid-cols-2 desktop:grid-cols-2'>
+      <li className='flex items-center'>
+        <Logo />
       </li>
-      <li className='flex items-end justify-end'>
-        <a
-          href={'https://stocks.soccer/'}
-          className='flex text-[12px] tablet:text-[16px]'
-        >
-          Leagues
-        </a>
+      <li className='flex items-center justify-end'>
+        <LeagueLink />
       </li>
     </ul>
   );
