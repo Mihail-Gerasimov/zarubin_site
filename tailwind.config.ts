@@ -37,9 +37,16 @@ const config: Config = {
           },
         },
       }),
+      fontFamily: {
+        // monrope: [''],
+        bebas: ['Bebas Neue', 'sans-serif'],
+      },
       colors: {
         'main-gray': '#94a3b8',
-        'maim-bg': '#0D1115',
+        'main-bg': '#090215',
+        'header-bg': 'rgba(21, 10, 41, 0.40)',
+        'pink-gr': '#f50c72',
+        'indigo-gr': '#4d39d6',
         'accent-color': '#A854FD',
         'purple-main': '#4f0356',
         'purple-light': '#750080',
@@ -49,6 +56,7 @@ const config: Config = {
     },
     screens: {
       mobile: '320px',
+      'mobile-big': '375px',
       tablet: '768px',
       laptop: '1280px',
       desktop: '1440px',

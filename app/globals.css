@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -28,17 +30,17 @@ a {
 
 @layer components {
   body {
-    --bg-color: #4f0356;
+    --bg-color: #090215;
     --second-bg-color: #750080;
     --text-color: #94a3b8;
     --accent-col: #a854fd;
-    --maim-white: #ffffff;
+    --main-white: #ffffff;
   }
 }
 
 @layer utilities {
   body {
     background-color: var(--bg-color);
-    color: var(--maim-white);
+    color: var(--main-white);
   }
 }
