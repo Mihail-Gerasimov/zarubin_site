@@ -50,7 +50,6 @@ a {
   }
 }
 
-
 @layer components {
   .backImage {
     background-repeat: no-repeat;
@@ -59,11 +58,11 @@ a {
 
     background-image: url('@/public/assets/images/banner/mobile_main_banner.png');
 
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
       background-image: url('@/public/assets/images/banner/tablet_main_banner.png');
     }
 
-    @media (min-width:1440px) {
+    @media (min-width: 1440px) {
       background-image: url('@/public/assets/images/banner/desktop_main_banner.png');
     }
   }
@@ -86,13 +85,13 @@ a {
     z-index: 1;
   }
 
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     .mainContainer::after {
       background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--bg-color) 400px);
     }
   }
 
-  @media (min-width:1440px) {
+  @media (min-width: 1440px) {
     .mainContainer::after {
       background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--bg-color) 500px);
     }
