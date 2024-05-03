@@ -47,7 +47,7 @@ export default function BlogSlug(props: { params: { slug: string } }) {
         <PostList />
       </Header>
       <main
-        className='mb-[40px] px-[14px] p-[20px] pb-[150px] w-full overflow-hidden tablet:pb-[78px]'
+        className='px-[14px] p-[20px] w-full overflow-hidden tablet:pb-[78px]'
         style={{
           background: `linear-gradient(to bottom, rgba(117, 0, 128, 0.0) , #4f0356 200px)`,
         }}
