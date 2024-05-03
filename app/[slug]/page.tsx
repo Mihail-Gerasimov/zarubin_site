@@ -4,7 +4,6 @@ import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
-import Image from 'next/image';
 import styles from './Post.module.css';
 
 const getPostContent = (slug: string) => {
@@ -47,23 +46,17 @@ export default function BlogSlug(props: { params: { slug: string } }) {
         <PostList />
       </Header>
       <main
-        className='px-[14px] p-[20px] w-full overflow-hidden tablet:pb-[78px]'
+        className='px-[10px] w-full relative overflow-hidden tablet:px-[40px] mainContainer'
         style={{
-          background: `linear-gradient(to bottom, rgba(117, 0, 128, 0.0) , #4f0356 200px)`,
+          backgroundImage: `url(${image})`,
         }}
       >
-        <Image
-          src={image}
-          width={300}
-          height={180}
-          alt=''
-          className={styles.bannerContainer}
-          unoptimized
-        />
         <article
-          className={`prose max-w-[896px] mx-[auto] text-white ${styles.atr}`}
+          className={`prose pt-[160px] pb-[24px] max-w-[896px] mx-[auto] text-white tablet:pt-[204px] tablet:pb-[40px] desktop:pt-[300px] desktop:pb-[60px] desktop-big:pt-[372px] z-10 relative`}
         >
-          <Markdown className='py-[20px_40px]'>{post.content}</Markdown>
+          <Markdown className={`font-manrope z-20 ${styles.markdown}`}>
+            {post.content}
+          </Markdown>
         </article>
       </main>
     </>
