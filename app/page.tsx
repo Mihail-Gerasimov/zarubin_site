@@ -20,8 +20,9 @@ export default function Home() {
       <Header>
         <MainList />
       </Header>
-      <main className='px-[14px] p-[20px] w-full overflow-hidden tablet:pb-[78px]'>
-        <div className='mx-auto py-12 max-w-[896px] flex flex-col items-center gap-12'>
+      <main className='px-[14px] w-full tablet:pb-[78px]'>
+        <div className='w-full h-[100%] absolute top-0 left-0 z-[-1] bg-mobile-banner bg-no-repeat bg-contain tablet:bg-tablet-banner desktop:bg-desktop-banner' />
+        <div className='mx-auto pt-[180px] max-w-[896px] flex flex-col items-center gap-12 tablet:pt-[240px] desktop:pt-[300px] desktop-big:pt-[380px]'>
           {sortedPosts.map((post, idx) => (
             <BlogCard key={idx} post={post} />
           ))}

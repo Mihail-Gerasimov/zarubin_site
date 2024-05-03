@@ -10,6 +10,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'mobile-banner': "url('/assets/images/banner/mobile_main_banner.png')",
+        'tablet-banner': "url('/assets/images/banner/tablet_main_banner.png')",
+        'desktop-banner':
+          "url('/assets/images/banner/desktop_main_banner.png')",
+      },
       typography: ({ theme }: { theme: PluginAPI['theme'] }) => ({
         DEFAULT: {
           css: {
@@ -60,6 +66,7 @@ const config: Config = {
       tablet: '768px',
       laptop: '1280px',
       desktop: '1440px',
+      'desktop-big': '1800px',
     },
   },
   plugins: [require('@tailwindcss/typography')],
