@@ -20,7 +20,7 @@ export default function Home() {
       <Header>
         <MainList />
       </Header>
-      <main className='mb-[40px] px-[14px] p-[20px] pb-[150px] w-full overflow-hidden tablet:pb-[78px]'>
+      <main className='px-[14px] p-[20px] w-full overflow-hidden tablet:pb-[78px]'>
         <div className='mx-auto py-12 max-w-[896px] flex flex-col items-center gap-12'>
           {sortedPosts.map((post, idx) => (
             <BlogCard key={idx} post={post} />

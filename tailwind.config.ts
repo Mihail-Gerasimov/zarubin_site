@@ -38,7 +38,7 @@ const config: Config = {
         },
       }),
       fontFamily: {
-        // monrope: [''],
+        manrope: ['Manrope'],
         bebas: ['Bebas Neue', 'sans-serif'],
       },
       colors: {
