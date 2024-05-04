@@ -48,7 +48,7 @@ const config: Config = {
         bebas: ['Bebas Neue', 'sans-serif'],
       },
       colors: {
-        'main-gray': '#94a3b8',
+        'main-gray': '#1A1621',
         'main-bg': '#090215',
         'header-bg': 'rgba(21, 10, 41, 0.40)',
         'pink-gr': '#f50c72',
