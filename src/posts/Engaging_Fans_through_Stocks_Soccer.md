@@ -28,5 +28,4 @@ Let's look at the funnel using Stocks Soccer as an example:
 
 ** The mechanic is simple, but the competitive element makes it even more interesting and exciting! 😉⚽️🎮 **
 
-<font color='#0088cc'>\#StocksSoccer \#FantasySports \#FanEngagement \#Engagement
-\#StocksSoccerFans \#Investments \#TeamBuildingFun \#WinningStrategy \#EngageAndProfit \#BoostFanLove \#PlayToWin</font>
+<font color='#0088cc'>\#StocksSoccer \#FantasySports \#FanEngagement \#Engagement \#StocksSoccerFans \#Investments \#TeamBuildingFun \#WinningStrategy \#EngageAndProfit \#BoostFanLove \#PlayToWin</font>
