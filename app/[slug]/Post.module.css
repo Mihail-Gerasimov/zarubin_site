@@ -25,6 +25,31 @@
   padding-top: 116px;
 }
 
+.tagList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.tagItem {
+  margin: 0;
+  padding: 0;
+}
+
+.tag {
+  padding: 6px 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  background-color: #1a1621;
+}
+
+.tag::before {
+  content: '#';
+}
+
 @media (min-width: 768px) {
   .markdown h1 {
     font-size: 32px;
@@ -34,6 +59,11 @@
   .markdown p,
   .markdown strong {
     font-size: 21px;
+  }
+
+  .tag {
+    padding: 8px 12px;
+    font-size: 18px;
   }
 }
 

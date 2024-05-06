@@ -40,6 +40,24 @@ export default function BlogSlug(props: { params: { slug: string } }) {
     ? post.data.image
     : '/assets/images/frame_2.png';
 
+  const hashtagRegex = /#[A-Za-z_]+/g;
+  const regexFont = /<font color='(.+?)'>(.+?)<\/font>/g;
+
+  const extractedHashtags = post.content.match(hashtagRegex) ?? [];
+
+  const allPosts = post.content.replace(regexFont, () => {
+    const tags = extractedHashtags
+      .map((hashtag) => {
+        const tag = hashtag.split('#');
+        return `<li class="${styles.tagItem}">
+      <span class="${styles.tag}">${tag[1]}</span>
+    </li>`;
+      })
+      .join('');
+
+    return `<ul class="${styles.tagList}">${tags}</ul>`;
+  });
+
   return (
     <>
       <Header>
@@ -55,7 +73,7 @@ export default function BlogSlug(props: { params: { slug: string } }) {
           className={`prose pt-[160px] pb-[24px] max-w-[896px] mx-[auto] text-white tablet:pt-[204px] tablet:pb-[40px] desktop:pt-[300px] desktop:pb-[60px] desktop-big:pt-[372px] z-10 relative`}
         >
           <Markdown className={`font-manrope z-20 ${styles.markdown}`}>
-            {post.content}
+            {allPosts}
           </Markdown>
         </article>
       </main>
