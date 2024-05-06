@@ -1,4 +1,5 @@
 import { BASE_URL } from '@/src/utils/alias';
+import { headers } from 'next/headers';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -17,6 +18,9 @@ export const BlogCard = ({ post }: Props) => {
   let url = '';
   if (process.env.NODE_ENV !== 'development') {
     url = BASE_URL;
+    const hederLIst = headers();
+    const domain = hederLIst.get('x-forwarded-host');
+    console.log(domain);
   }
 
   const description =

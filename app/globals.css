@@ -56,14 +56,14 @@ a {
     background-size: contain;
     background-color: var(--bg-color);
 
-    background-image: url('@/public/assets/images/banner/mobile_main_banner.png');
+    background-image: url('/assets/images/banner/mobile_main_banner.png');
 
     @media (min-width: 768px) {
-      background-image: url('@/public/assets/images/banner/tablet_main_banner.png');
+      background-image: url('/assets/images/banner/tablet_main_banner.png');
     }
 
     @media (min-width: 1440px) {
-      background-image: url('@/public/assets/images/banner/desktop_main_banner.png');
+      background-image: url('/assets/images/banner/desktop_main_banner.png');
     }
   }
 
