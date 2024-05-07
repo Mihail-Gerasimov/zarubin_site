@@ -26,10 +26,17 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
-  const id = params?.slug ? ' . ' + params?.slug : '';
+  const post = getPostContent(params.slug);
+
+  const title = post.data.title;
+  const description =
+    post.data.description.length < 30
+      ? post.data.description
+      : post.data.description.slice(0, 35).trim() + '...';
 
   return {
-    title: `The Blog ${id.replaceAll('_', ' ')}`,
+    title: `Post - ${title}`,
+    description,
   };
 }
 
