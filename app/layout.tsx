@@ -11,7 +11,12 @@ export const metadata: Metadata = {
   title: 'Soccer Blog',
   description: 'Information about stock socker',
   icons: {
-    icon: '/public/assets/images/icons/favicon.svg',
+    icon: '/assets/images/icons/favicon.svg',
+  },
+  openGraph: {
+    title: 'Soccer Blog',
+    description: 'Information about stock socker',
+    images: '/assets/images/icons/favicon.svg',
   },
 };
 

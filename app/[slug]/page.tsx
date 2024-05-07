@@ -27,7 +27,7 @@ export async function generateMetadata({
   params: { slug: string };
 }) {
   const post = getPostContent(params.slug);
-
+  const id = params?.slug ? ' . ' + params?.slug : '';
   const title = post.data.title;
   const description =
     post.data.description.length < 30
@@ -35,8 +35,12 @@ export async function generateMetadata({
       : post.data.description.slice(0, 35).trim() + '...';
 
   return {
-    title: `Post - ${title}`,
+    title: `The Blog ${id.replaceAll('_', ' ')}`,
     description,
+    openGraph: {
+      title: `Post - ${title}`,
+      description,
+    },
   };
 }
 
