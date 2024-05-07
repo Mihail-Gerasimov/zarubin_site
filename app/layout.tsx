@@ -1,4 +1,5 @@
 import { Footer } from '@/src/components/Footer/Footer';
+import { openGraphImage } from '@/src/utils/openGraphParams';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
@@ -14,9 +15,9 @@ export const metadata: Metadata = {
     icon: '/assets/images/icons/favicon.svg',
   },
   openGraph: {
+    ...openGraphImage,
     title: 'Soccer Blog',
     description: 'Information about stock socker',
-    images: '/assets/images/icons/favicon.svg',
   },
 };
 
