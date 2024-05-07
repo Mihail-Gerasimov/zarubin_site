@@ -1,6 +1,7 @@
 import { Header } from '@/src/components/Header/Header';
 import { PostList } from '@/src/components/NavList/PostList';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
+import { openGraphImage } from '@/src/utils/openGraphParams';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
@@ -38,6 +39,7 @@ export async function generateMetadata({
     title: `The Blog ${id.replaceAll('_', ' ')}`,
     description,
     openGraph: {
+      ...openGraphImage,
       title: `Post - ${title}`,
       description,
     },
