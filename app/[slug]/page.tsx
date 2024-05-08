@@ -51,7 +51,7 @@ export default function BlogSlug(props: { params: { slug: string } }) {
   const post = getPostContent(slug);
   const image = post.data.image
     ? post.data.image
-    : '/assets/images/frame_2.png';
+    : '/assets/images/post/frame_2.png';
 
   const hashtagRegex = /#[A-Za-z_]+/g;
   const regexFont = /<font color='(.+?)'>(.+?)<\/font>/g;
