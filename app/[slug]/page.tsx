@@ -37,6 +37,7 @@ export async function generateMetadata({
   return {
     title: `The Blog ${id.replaceAll('_', ' ')}`,
     description,
+    metadataBase: new URL('https://blog.stocks.soccer/'),
     openGraph: {
       images: [{ url: post.data.image }],
       title: `Post - ${title}`,

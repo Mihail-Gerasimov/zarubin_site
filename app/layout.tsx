@@ -9,15 +9,20 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Soccer Blog',
-  description: 'Information about stock socker',
+  title:
+    'Stocks soccer – New Fantasy Soccer game in blog. Your Squad - your value',
+  description:
+    '⚽️Sport News . Assemble your squad (portfolio) 🚀 Keep track of your ranking.🏆 Get prizes.',
+  metadataBase: new URL('https://blog.stocks.soccer/'),
   icons: {
     icon: '/assets/images/icons/favicon.svg',
   },
   openGraph: {
     ...openGraphImage,
-    title: 'Soccer Blog',
-    description: 'Information about stock socker',
+    title:
+      'Stocks soccer – New Fantasy Soccer game in blog. Your Squad - your value',
+    description:
+      '⚽️Sport News . Assemble your squad (portfolio) 🚀 Keep track of your ranking.🏆 Get prizes.',
   },
 };
 
