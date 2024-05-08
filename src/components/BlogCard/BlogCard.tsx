@@ -1,4 +1,3 @@
-import { BASE_URL } from '@/src/utils/alias';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -14,8 +13,6 @@ interface Props {
 }
 
 export const BlogCard = ({ post }: Props) => {
-  const url = process.env.NODE_ENV !== 'development' ? '' : BASE_URL;
-
   const description =
     post.description.length < 150
       ? post.description
@@ -29,8 +26,8 @@ export const BlogCard = ({ post }: Props) => {
       <div className='w-full'>
         <div className='h-[128px] tablet:h-[196px] desktop:h-[241px] w-full relative overflow-hidden rounded-[20px]'>
           <Image
-            src={`${url}${post.image}`}
-            alt='image'
+            src={post.image}
+            alt={`Image ${post.slug}`}
             width={300}
             height={128}
             className='top-0 left-0 w-full h-full object-cover absolute'
