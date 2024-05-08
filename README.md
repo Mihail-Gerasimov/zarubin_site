@@ -40,18 +40,18 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 1.  Для загрузки поста необходимо зайти в репозиторий https://github.com/DgtlBureau/soccer_blog, перейти по следующим директориям : src/posts
     ![Инструкция c описанием директории](/public/assets/images/instruction/instruction-1.jpg)
 
-2.                        В разделе posts справа нажать на “Add file”, и выбрать “Upload files” что бы загрузить необходимые файлы с расширением .md . После выбора откроется окно в котором нужно будет нажать на “choose your files” и выбрать файлы. Так же нужно будет поставить отметку на “Commit directly to the main branch.”
+2.  В разделе posts справа нажать на “Add file”, и выбрать “Upload files” что бы загрузить необходимые файлы с расширением .md . После выбора откроется окно в котором нужно будет нажать на “choose your files” и выбрать файлы. Так же нужно будет поставить отметку на “Commit directly to the main branch.”
 
     ![Инструкция по добавлению файла](/public/assets/images/instruction/instruction-2.jpg)
     ![Инструкция по загрузке файла](/public/assets/images/instruction/instruction-3.jpg)
 
-3.                        Картинка которая будет использоваться в файле должна лежать в директории public/assets/images/post. В файле который загружается в posts должен быть прописан путь к изображению следующим образом: ‘assets/images/post/<image_name>.png’
+3.  Картинка которая будет использоваться в файле должна лежать в директории public/assets/images/post. В файле который загружается в posts должен быть прописан путь к изображению следующим образом: ‘assets/images/post/<image_name>.png’
 
     ![Инструкция по загрузке файла](/public/assets/images/instruction/instruction-3_1.jpg)
 
         ВАЖНО: имя файла картинки не должно содержать пробелы. Вместо пробелов использовать “-” или “\_”
 
-4.                        Файл который загружается в posts должен быть размечен согласно Markdown разметке. Так же необходимо что бы были следующие поля в шапке: title, description, image, date.
+4.  Файл который загружается в posts должен быть размечен согласно Markdown разметке. Так же необходимо что бы были следующие поля в шапке: title, description, image, date.
 
     ![Инструкция по заголовкам](/public/assets/images/instruction/instruction-4.jpg)
 
