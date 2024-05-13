@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://blog.stocks.soccer/';
+export const BASE_URL = 'https://zarubin_blog/';
