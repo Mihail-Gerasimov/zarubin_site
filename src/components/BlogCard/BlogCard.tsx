@@ -18,6 +18,9 @@ export const BlogCard = ({ post }: Props) => {
       ? post.description
       : post.description.slice(0, 150).trim() + '...';
 
+  const url =
+    process.env.NODE_ENV === 'development' ? '' : 'https://zarubin_blog';
+
   return (
     <Link
       href={`/${post.slug}`}
@@ -26,7 +29,7 @@ export const BlogCard = ({ post }: Props) => {
       <div className='w-full'>
         <div className='h-[128px] tablet:h-[196px] desktop:h-[241px] w-full relative overflow-hidden rounded-[20px]'>
           <Image
-            src={post.image}
+            src={`${url}${post.image}`}
             alt={`Image ${post.slug}`}
             width={300}
             height={128}
