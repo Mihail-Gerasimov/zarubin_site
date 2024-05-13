@@ -1,17 +1,6 @@
-'use client';
-import { usePathname, useSearchParams } from 'next/navigation';
 import Script from 'next/script';
-import { useEffect } from 'react';
-import ym from 'react-yandex-metrika';
 
 export function Metrika() {
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    ym(String(68177191), 'hit', window.location.href);
-  }, [pathname, searchParams]);
-
   return (
     <Script id='yandex-metrika'>{`
   (function (d, w, c) {

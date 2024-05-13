@@ -3,7 +3,6 @@ import { Metrika } from '@/src/components/Metrika/Metrika';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import React, { Suspense } from 'react';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -30,13 +29,11 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
+        <Metrika />
       </head>
       <body className={`${inter.className} `}>
         {children}
         <Footer />
-        <Suspense>
-          <Metrika />
-        </Suspense>
       </body>
     </html>
   );
