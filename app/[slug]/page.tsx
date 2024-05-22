@@ -1,5 +1,3 @@
-import { Header } from '@/src/components/Header/Header';
-import { PostList } from '@/src/components/NavList/PostList';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import fs from 'fs';
 import matter from 'gray-matter';
@@ -71,24 +69,19 @@ export default function BlogSlug(props: { params: { slug: string } }) {
   });
 
   return (
-    <>
-      {/* <Header>
-        <PostList />
-      </Header> */}
-      <main
-        className='px-[10px] w-full relative overflow-hidden tablet:px-[40px] mainContainer'
-        style={{
-          backgroundImage: `url(${image})`,
-        }}
+    <main
+      className='px-[10px] w-full relative overflow-hidden tablet:px-[40px] mainContainer'
+      style={{
+        backgroundImage: `url(${image})`,
+      }}
+    >
+      <article
+        className={`prose pt-[160px] pb-[24px] max-w-[896px] mx-[auto] text-white tablet:pt-[204px] tablet:pb-[40px] desktop:pt-[300px] desktop:pb-[60px] desktop-big:pt-[372px] z-10 relative`}
       >
-        <article
-          className={`prose pt-[160px] pb-[24px] max-w-[896px] mx-[auto] text-white tablet:pt-[204px] tablet:pb-[40px] desktop:pt-[300px] desktop:pb-[60px] desktop-big:pt-[372px] z-10 relative`}
-        >
-          <Markdown className={`font-manrope z-20 ${styles.markdown}`}>
-            {allPosts}
-          </Markdown>
-        </article>
-      </main>
-    </>
+        <Markdown className={`font-manrope z-20 ${styles.markdown}`}>
+          {allPosts}
+        </Markdown>
+      </article>
+    </main>
   );
 }

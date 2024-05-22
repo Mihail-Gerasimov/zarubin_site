@@ -34,19 +34,17 @@ a {
   --bg-color: #090215;
 }
 
-
 @font-face {
   font-family: 'Proxima Nova';
   src: url(/public/fonts/proximanova_regular.ttf) format('ttf');
 }
 
-
 @layer components {
   body {
-    --bg-color: #010C2C;
+    --bg-color: #010c2c;
     --second-bg-color: #750080;
     --text-color: #94a3b8;
-    --text-dark: #010C2C;
+    --text-dark: #010c2c;
     --accent-col: #a854fd;
     --main-white: #ffffff;
   }

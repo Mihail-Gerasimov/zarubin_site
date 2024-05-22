@@ -1,9 +1,7 @@
 'use client';
 
-import Arrow from '@/src/assets/svg/arrow.svg';
 import { ContactUsLink } from '@/src/ui-kit/LeagueLink/ContactUsBtn';
 import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export const PostList = () => {

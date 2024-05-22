@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import defaultImg from '@/public/assets/images/banner/default_logo.png';
+import Image from 'next/image';
 
 export const DefaultImage = () => {
   return (

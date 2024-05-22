@@ -1,10 +1,9 @@
 import { Footer } from '@/src/components/Footer/Footer';
+import { Header } from '@/src/components/Header/Header';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { Header } from '@/src/components/Header/Header';
-import { MainList } from '@/src/components/NavList/MainList';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -32,9 +31,7 @@ export default function RootLayout({
         <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
       </head>
       <body className={`${inter.className} `}>
-        <Header>
-          <MainList />
-        </Header>
+        <Header />
         {children}
         <Footer />
       </body>
