@@ -1,8 +1,7 @@
 import { ContactUsBtn } from '@/src/ui-kit/LeagueLink/ContactUsBtn';
 import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
-import React from 'react';
-import { MainList } from '../NavList/MainList';
 import { menuListLayer } from '@/src/utils/menuListLayer';
+import { MainList } from '../NavList/MainList';
 
 export const Header = () => {
   return (

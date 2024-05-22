@@ -1,9 +1,6 @@
 'use client';
 
-import Arrow from '@/src/assets/svg/arrow.svg';
-import { ContactUsLink } from '@/src/ui-kit/LeagueLink/ContactUsBtn';
 import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export const PostList = () => {
@@ -25,7 +22,7 @@ export const PostList = () => {
         <Logo />
       </li>
       <li className='flex items-center justify-end'>
-        <ContactUsLink />
+        {/* <ContactUsLink /> */}
       </li>
     </ul>
   );

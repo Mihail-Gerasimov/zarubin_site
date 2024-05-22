@@ -1,6 +1,6 @@
 import LightMainLogo from '@/public/assets/images/icons/second_logo.svg';
-import { menuListLayer } from '@/src/utils/menuListLayer';
 import TelegramIcon from '@/public/assets/images/icons/telegram.svg';
+import { menuListLayer } from '@/src/utils/menuListLayer';
 import Link from 'next/link';
 
 export const Footer = () => {

@@ -1,5 +1,3 @@
-import { Header } from '@/src/components/Header/Header';
-import { PostList } from '@/src/components/NavList/PostList';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import fs from 'fs';
 import matter from 'gray-matter';

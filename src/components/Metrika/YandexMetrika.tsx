@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
+import { useEffect } from 'react';
 import ym from 'react-yandex-metrika';
 
 export default function YandexMetrika() {
