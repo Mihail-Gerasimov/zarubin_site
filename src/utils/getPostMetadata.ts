@@ -15,6 +15,7 @@ export const getPostMetadata = (basePath: string) => {
       image: matterResult.data.image,
       slug: filename.replace('.md', ''),
       date: matterResult.data.date,
+      tag: matterResult.data.tag,
     };
   });
 

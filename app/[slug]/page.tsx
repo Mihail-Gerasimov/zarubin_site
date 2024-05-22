@@ -72,9 +72,9 @@ export default function BlogSlug(props: { params: { slug: string } }) {
 
   return (
     <>
-      <Header>
+      {/* <Header>
         <PostList />
-      </Header>
+      </Header> */}
       <main
         className='px-[10px] w-full relative overflow-hidden tablet:px-[40px] mainContainer'
         style={{

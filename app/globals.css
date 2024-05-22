@@ -34,11 +34,19 @@ a {
   --bg-color: #090215;
 }
 
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url(/public/fonts/proximanova_regular.ttf) format('ttf');
+}
+
+
 @layer components {
   body {
-    --bg-color: #090215;
+    --bg-color: #010C2C;
     --second-bg-color: #750080;
     --text-color: #94a3b8;
+    --text-dark: #010C2C;
     --accent-col: #a854fd;
     --main-white: #ffffff;
   }
@@ -46,25 +54,31 @@ a {
 
 @layer utilities {
   body {
-    color: var(--main-white);
+    color: var(--text-dark);
   }
 }
 
 @layer components {
   .backImage {
+    overflow: hidden;
+    position: relative;
     background-repeat: no-repeat;
-    background-size: contain;
-    background-color: var(--bg-color);
+    background-position: top;
+    background-size: cover;
+    background-color: var(--main-white);
+    background-image: url('/assets/images/banner/main_banner.png');
+  }
 
-    background-image: url('/assets/images/banner/mobile_main_banner.png');
-
-    @media (min-width: 768px) {
-      background-image: url('/assets/images/banner/tablet_main_banner.png');
-    }
-
-    @media (min-width: 1440px) {
-      background-image: url('/assets/images/banner/desktop_main_banner.png');
-    }
+  .backImage::after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: linear-gradient(180deg, #ffffff 0%, #ffffff 80%);
+    z-index: 4;
+    opacity: 0.5;
   }
 
   .mainContainer {

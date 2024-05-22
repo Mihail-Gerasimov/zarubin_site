@@ -1,9 +1,9 @@
-import LogoIcon from '@/public/assets/images/icons/logo_blog.svg';
+import LogoIcon from '@/public/assets/images/icons/dark_logo.svg';
 
 export const Logo = () => {
   return (
-    <a href={'https://stocks.soccer/'}>
-      <LogoIcon className='h-[16px] w-[auto] tablet:h-[26px] desktop:h-[34px]' />
+    <a href='/'>
+      <LogoIcon className='h-[40px] w-[auto] tablet:h-[62px]' />
     </a>
   );
 };

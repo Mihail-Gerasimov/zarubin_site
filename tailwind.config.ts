@@ -46,11 +46,15 @@ const config: Config = {
       fontFamily: {
         manrope: ['Manrope'],
         bebas: ['Bebas Neue', 'sans-serif'],
+        'proxima-reg': ['Proxima Nova', 'san-serif'],
       },
       colors: {
-        'main-gray': '#1A1621',
-        'main-bg': '#090215',
-        'header-bg': 'rgba(21, 10, 41, 0.40)',
+        'main-beige': '#F7F7F7',
+        'main-bg': '#00030C',
+        'main-blue': '#013EDF',
+        dark: '#1B2541',
+        'text-dark': '#010C2C',
+        'header-bg': '#010C2C',
         'pink-gr': '#f50c72',
         'indigo-gr': '#4d39d6',
         'accent-color': '#A854FD',

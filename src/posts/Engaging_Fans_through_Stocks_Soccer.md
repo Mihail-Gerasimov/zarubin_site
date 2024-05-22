@@ -3,6 +3,7 @@ title: 'Engaging Fans through Stocks Soccer!'
 description: 'Stocks Soccer is a project based on the mechanics of fantasy games that combines soccer and investments. The main goal of the player (manager) is to assemble a team of players, taking into account their value and projections. Players then need to make transfers at certain times by exchanging players. The one with the most expensive team will be declared the winner. ⚽️💰'
 image: '/assets/images/post/frame_2.png'
 date: '02-05-2024'
+tag: 'Product'
 ---
 
 # Engaging Fans through Stocks Soccer
