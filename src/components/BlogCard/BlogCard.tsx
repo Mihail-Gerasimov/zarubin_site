@@ -3,7 +3,6 @@ import { BASE_URL } from '@/src/utils/alias';
 import { DateTime } from 'luxon';
 import Image from 'next/image';
 import Link from 'next/link';
-import { DateTime } from 'luxon';
 
 interface Data {
   title: string;
