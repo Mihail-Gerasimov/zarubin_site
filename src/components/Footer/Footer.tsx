@@ -54,7 +54,7 @@ export const Footer = () => {
               href=''
               className='text-[26px] text-white leading-[1.1] opacity-50'
             >
-              Website creation
+              &copy; Zarubin&Co
             </Link>
           </li>
         </ul>
