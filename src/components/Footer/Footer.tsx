@@ -1,22 +1,61 @@
-import LightMainLogo from '@/public/assets/images/icons/zarubin_logo.svg';
+import LightMainLogo from '@/public/assets/images/icons/second_logo.svg';
+import { menuListLayer } from '@/src/utils/menuListLayer';
+import TelegramIcon from '@/public/assets/images/icons/telegram.svg';
+import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <footer className='w-full px-[10px] py-[10px] bg-main-bg flex justify-between text-[14px] leading-[1.2] tablet:py-[22px] tablet:px-[40px] desktop:text-[18px] desktop:leading-[1.1] desktop:px-[80px] desktop:py-[65px]'>
-      <div className='w-full tablet:flex-row tablet:items-center'>
-        <ul className='flex flex-row items-center justify-between'>
+    <footer className='w-full px-[10px] py-[60px] bg-main-bg flex flex-col gap-[80px] text-[14px] leading-[1.2] tablet:px-[40px] desktop:text-[18px] desktop:leading-[1.1] desktop:px-[75px]'>
+      <div className='w-full flex flex-col gap-[60px] desktop:flex-row desktop:items-center'>
+        <a href='https://zarubin.co.uk/' target='_blank'>
+          <LightMainLogo className='w-[auto] h-[54px] tablet:h-[107px] desktop:h-[60px]' />
+        </a>
+        <ul className='flex flex-col gap-[20px] tablet:flex-row'>
+          {menuListLayer.map((item) => (
+            <li key={item.id}>
+              <Link
+                href={item.link}
+                className='text-[26px] text-white leading-[1.1] whitespace-nowrap'
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <div className='flex flex-col gap-[12px]'>
+          <Link
+            href='mailto:hello@digitalburo.tech'
+            className='text-[26px] text-white'
+          >
+            hello@digitalburo.tech
+          </Link>
+          <Link
+            href=''
+            className='flex items-center gap-[12px] text-[26px] text-white'
+          >
+            <TelegramIcon className='w-[30px] h-[auto]' />
+            Contact us
+          </Link>
+        </div>
+      </div>
+      <div className='w-full border-t-[2px] border-dark'>
+        <span className='mb-[40px] w-full block h-[2px] bg-dark' />
+        <ul className='flex flex-col gap-[20px] tablet:flex-row tablet:justify-between'>
           <li>
-            <a
-              href='https://stocks.soccer/'
-              className='font-manrope text-[14px] tablet:text-[18px] desktop:text-[21px]'
+            <Link
+              href=''
+              className='text-[26px] text-white leading-[1.1] opacity-50'
             >
-              Home
-            </a>
+              Privacy Policy
+            </Link>
           </li>
           <li>
-            <a href='https://zarubin.co.uk/' target='_blank'>
-              <LightMainLogo className='w-[auto] h-[24px] tablet:h-[36px] desktop:h-[50px]' />
-            </a>
+            <Link
+              href=''
+              className='text-[26px] text-white leading-[1.1] opacity-50'
+            >
+              Website creation
+            </Link>
           </li>
         </ul>
       </div>

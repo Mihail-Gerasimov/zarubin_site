@@ -10,6 +10,7 @@ interface Posts {
   image: string;
   slug: string;
   date: string;
+  tag: string;
 }
 
 interface Props {
@@ -35,7 +36,7 @@ export const PostsComponent = ({ posts }: Props) => {
   };
 
   return (
-    <div className='mx-auto pt-[180px] pb-[24px] max-w-[876px] flex flex-col items-center gap-[16px] tablet:pt-[240px] tablet:pb-[40px] tablet:gap-[24px] desktop:pb-[60px] desktop:gap-[40px] desktop:pt-[300px] desktop-big:pt-[380px]'>
+    <div className='mx-auto pt-[30px] pb-[24px] max-w-[876px] flex flex-col items-center gap-[40px] tablet:pt-[60px] tablet:pb-[40px] desktop:pb-[60px]'>
       {currentPosts.map((post, idx) => (
         <BlogCard key={idx} post={post} />
       ))}
