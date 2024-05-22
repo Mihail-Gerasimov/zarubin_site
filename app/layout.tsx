@@ -4,6 +4,8 @@ import { openGraphImage } from '@/src/utils/openGraphParams';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { Header } from '@/src/components/Header/Header';
+import { MainList } from '@/src/components/NavList/MainList';
 
 const inter = Inter({ subsets: ['latin'] });
 
