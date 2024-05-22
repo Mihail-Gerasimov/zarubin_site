@@ -1,0 +1,67 @@
+.menuWeapper {
+  padding: 22px 10px 60px;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  bottom: 0;
+  background-color: var(--main-white);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.active {
+  left: 0;
+  opacity: 1;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  z-index: 35;
+}
+
+.menuList {
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.menuLink {
+  font-size: 26px;
+  color: var(--text-dark);
+}
+
+.contactWrapper {
+  padding-bottom: 40px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contactBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 162px;
+  height: 46px;
+  border: 1px solid #7cffcd;
+  border-radius: 6px;
+  color: var(--text-dark);
+}
+
+@media (min-width: 768px) {
+  .menuWeapper {
+    padding: 22px 40px 60px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .menuWeapper {
+    display: none;
+  }
+}

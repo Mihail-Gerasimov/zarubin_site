@@ -1,0 +1,62 @@
+import { useEffect, useState } from 'react';
+
+type Conditions = string | string[];
+
+export const breakpoints = {
+  phone: 480,
+  tablet: 768,
+  desktop: 960,
+  'desktop-m': 1280,
+  'desktop-l': 1440,
+};
+
+const getOperator = (condition: string) =>
+  ['>=', '>', '<=', '<'].find((operator) =>
+    condition.startsWith(operator),
+  ) as string;
+
+const getPrefix = (operator: string) =>
+  ['<', '<='].includes(operator) ? 'max' : 'min';
+
+const getValue = (condition: string, operator: string) => {
+  const rawValue = condition.replace(operator, '');
+  let value =
+    breakpoints[rawValue as keyof typeof breakpoints] || Number(rawValue);
+  if (operator === '>') {
+    value += 1;
+  } else if (operator === '<') {
+    value -= 1;
+  }
+  return value;
+};
+
+const parse = (conditions: Conditions) =>
+  (Array.isArray(conditions) ? conditions : [conditions]).map((condition) => {
+    const operator = getOperator(condition);
+    const prefix = getPrefix(operator);
+    const value = getValue(condition, operator);
+    return `(${prefix}-width: ${value}px)`;
+  });
+
+const useMediaQuery = (
+  conditions: Conditions,
+  joinOperator: 'and' | 'or' = 'and',
+) => {
+  const [matches, setMatches] = useState<boolean>(false);
+
+  useEffect(() => {
+    const query = parse(conditions).join(` ${joinOperator} `);
+    const mkl = window.matchMedia(query);
+    setMatches(mkl.matches);
+    const updateMatches = (e: MediaQueryListEvent) => setMatches(e.matches);
+
+    mkl.addEventListener('change', updateMatches);
+
+    return () => mkl.removeEventListener('change', updateMatches);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [conditions.toString(), joinOperator]);
+
+  return matches;
+};
+
+export default useMediaQuery;
