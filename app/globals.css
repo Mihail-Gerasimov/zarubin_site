@@ -48,6 +48,7 @@ a {
     --accent-col: #a854fd;
     --main-white: #ffffff;
     --main-blue: #013edf;
+    --pagination-col: #eceffa;
   }
 }
 
@@ -108,5 +109,11 @@ a {
     .mainContainer::after {
       background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--bg-color) 500px);
     }
+  }
+
+  .paginationBtn {
+    padding: 12px 8px;
+    border-radius: 8px;
+    background-color: var(--pagination-col);
   }
 }
