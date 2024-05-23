@@ -62,6 +62,7 @@ const config: Config = {
         'purple-light': '#750080',
         'black-bg': '#111111',
         'light-bg': '#1E293B',
+        'btn-col': '#ECEFFA',
       },
     },
     screens: {

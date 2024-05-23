@@ -1,8 +1,8 @@
 'use client';
 
-import Arrow from '@/public/assets/images/icons/double_arrow.svg';
 import { useState } from 'react';
 import { BlogCard } from '../BlogCard/BlogCard';
+import { Pagination } from '../Pagination/Pagination';
 
 interface Posts {
   title: string;
@@ -20,10 +20,15 @@ interface Props {
 export const PostsComponent = ({ posts }: Props) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(8);
+  const isPaginationVisible = posts.length > postsPerPage;
 
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = posts.slice(firstPostIndex, lastPostIndex);
+
+  const paginate = (postNumber: number) => {
+    setCurrentPage(postNumber);
+  };
 
   const nextPage = () => {
     if (currentPage >= posts.length / postsPerPage) return;
@@ -40,28 +45,16 @@ export const PostsComponent = ({ posts }: Props) => {
       {currentPosts.map((post, idx) => (
         <BlogCard key={idx} post={post} />
       ))}
-      <div className='w-full flex items-center'>
-        {currentPage !== 1 && (
-          <button
-            type='button'
-            onClick={prevPage}
-            className='flex items-center gap-[10px] tablet:text-[16px]'
-          >
-            <Arrow className='w-[24px]' />
-            Prev
-          </button>
-        )}
-        {currentPage < posts.length / postsPerPage && (
-          <button
-            type='button'
-            onClick={nextPage}
-            className='ml-[auto] flex items-center gap-[10px] tablet:text-[16px]'
-          >
-            Next
-            <Arrow className='w-[24px] transform rotate-[180deg]' />
-          </button>
-        )}
-      </div>
+      {isPaginationVisible && (
+        <Pagination
+          currentPage={currentPage}
+          postsPerPage={postsPerPage}
+          postLength={posts.length}
+          paginate={paginate}
+          prevPage={prevPage}
+          nextPage={nextPage}
+        />
+      )}
     </div>
   );
 };
