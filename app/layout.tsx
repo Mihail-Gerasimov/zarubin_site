@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Zarubin Blog',
   description: 'Information about zarubin_blog',
+  metadataBase: new URL('https://dgtlbureau.github.io/zarubin_blog'),
   icons: {
     icon: '/assets/images/icons/favicon.svg',
   },
