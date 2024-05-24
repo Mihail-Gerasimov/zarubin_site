@@ -10,7 +10,7 @@ interface Posts {
   image: string;
   slug: string;
   date: string;
-  tag: string;
+  tag: string | undefined;
 }
 
 interface Props {

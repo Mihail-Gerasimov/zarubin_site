@@ -1,17 +1,10 @@
 import { PostsComponent } from '@/src/components/PostsComponent/PostsComponent';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
-import { DateTime } from 'luxon';
+import { postsSorting } from '@/src/utils/postsSorting';
 
 export default function Home() {
   const postMetadata = getPostMetadata('src/posts');
-
-  const sortedPosts = postMetadata.sort((a, b) => {
-    const dateA = DateTime.fromFormat(a.date, 'dd-MM-yyyy');
-    const dateB = DateTime.fromFormat(b.date, 'dd-MM-yyyy');
-    if (dateA > dateB) return -1;
-    if (dateA < dateB) return 1;
-    return 0;
-  });
+  const sortedPosts = postsSorting(postMetadata);
 
   return (
     <>

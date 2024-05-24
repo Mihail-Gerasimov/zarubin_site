@@ -3,6 +3,7 @@ title: 'Exciting Update for All Stocks.Soccer Enthusiasts!'
 description: 'We are thrilled to announce the launch of our new tournament, "The Final Countdown," running from May 3rd to May 19th. This is a fantastic opportunity to showcase your strategic skills and compete for a chance to win $100! Here’s how you can jump into the action:'
 image: '/assets/images/post/soccer_april_countdown.png'
 date: '27-04-2024'
+tag: 'Expertise'
 ---
 
 # 🚨 Exciting Update for All Stocks.Soccer Enthusiasts! 🚨
