@@ -1,6 +1,7 @@
 import line from '@/public/assets/images/png/line.png';
 import { SocialFollow } from '@/src/components/SocialFollow/SocialFollow';
 import { BackLink } from '@/src/ui-kit/BackLink/BackLink';
+import { BASE_URL } from '@/src/utils/alias';
 import { formattedDate } from '@/src/utils/formattedDate';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import fs from 'fs';
@@ -8,6 +9,8 @@ import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
 import styles from './Post.module.css';
+
+const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 
 const getPostContent = (slug: string) => {
   const folder = 'src/posts/';
@@ -78,7 +81,7 @@ export default function BlogSlug(props: { params: { slug: string } }) {
   return (
     <main className='mt-[80px] px-[10px] relative w-full overflow-hidden tablet:px-[40px] mainContainer'>
       <Image
-        src={image}
+        src={URL + image}
         width={300}
         height={150}
         alt=''

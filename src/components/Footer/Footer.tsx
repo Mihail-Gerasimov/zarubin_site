@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const Footer = () => {
   return (
     <footer className='w-full px-[10px] py-[60px] bg-main-bg flex flex-col gap-[80px] text-[14px] leading-[1.2] tablet:px-[40px] desktop:text-[18px] desktop:leading-[1.1] desktop:px-[75px]'>
-      <div className='w-full flex flex-col gap-[60px] desktop:flex-row desktop:items-center'>
+      <div className='w-full flex flex-col gap-[60px] desktop:flex-row desktop:items-center desktop:justify-between'>
         <a href='https://zarubin.co.uk/' target='_blank'>
           <LightMainLogo className='w-[auto] h-[54px] tablet:h-[107px] desktop:h-[60px]' />
         </a>
