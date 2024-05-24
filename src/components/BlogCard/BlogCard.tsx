@@ -1,6 +1,6 @@
 import { DefaultImage } from '@/src/ui-kit/DefaultImage/DefaultImage';
 import { BASE_URL } from '@/src/utils/alias';
-import { DateTime } from 'luxon';
+import { formattedDate } from '@/src/utils/formattedDate';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -25,15 +25,7 @@ export const BlogCard = ({ post }: Props) => {
 
   const url = process.env.NODE_ENV === 'development' ? '' : BASE_URL;
 
-  const date = DateTime.fromFormat(post.date, 'dd-MM-yyyy');
-  const formattedDate = date
-    .setLocale('en-GB')
-    .toLocaleString({
-      day: '2-digit',
-      month: 'short',
-      year: 'numeric',
-    })
-    .toLocaleLowerCase();
+  const date = formattedDate(post.date);
 
   return (
     <Link href={`/${post.slug}`} className='w-full'>
@@ -62,7 +54,7 @@ export const BlogCard = ({ post }: Props) => {
             {post.title}
           </h3>
           <p className='text-[20px]'>{description}</p>
-          <span className='text-[16px] text-[#010C2C]'>{formattedDate}</span>
+          <span className='text-[16px] text-[#010C2C]'>{date}</span>
         </div>
       </div>
     </Link>

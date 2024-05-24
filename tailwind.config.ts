@@ -20,25 +20,25 @@ const config: Config = {
         DEFAULT: {
           css: {
             h1: {
-              color: theme('colors.white'),
+              color: theme('colors.text-dark'),
             },
             h2: {
-              color: theme('colors.white'),
+              color: theme('colors.text-dark'),
             },
             h3: {
-              color: theme('colors.white'),
+              color: theme('colors.text-dark'),
             },
             h4: {
-              color: theme('colors.white'),
+              color: theme('colors.text-dark'),
             },
             h5: {
-              color: theme('colors.white'),
+              color: theme('colors.text-dark'),
             },
             h6: {
               color: theme('colors.main-gray'),
             },
             strong: {
-              color: theme('colors.white'),
+              color: theme('colors.text-dark'),
             },
           },
         },
@@ -46,19 +46,20 @@ const config: Config = {
       fontFamily: {
         manrope: ['Manrope'],
         bebas: ['Bebas Neue', 'sans-serif'],
-        'proxima-reg': ['Proxima Nova', 'san-serif'],
+        unbound: ['Unbounded'],
+        proxima: ['Proxima Nova', 'sans-serif'],
       },
       colors: {
         'main-beige': '#F7F7F7',
         'main-bg': '#00030C',
         'main-blue': '#013EDF',
         dark: '#1B2541',
+        'text-gray': 'rgba(1, 12, 44, 0.50)',
         'text-dark': '#010C2C',
         'header-bg': '#010C2C',
         'pink-gr': '#f50c72',
         'indigo-gr': '#4d39d6',
         'accent-color': '#A854FD',
-        'purple-main': '#4f0356',
         'purple-light': '#750080',
         'black-bg': '#111111',
         'light-bg': '#1E293B',

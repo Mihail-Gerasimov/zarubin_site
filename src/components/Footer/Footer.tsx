@@ -30,7 +30,8 @@ export const Footer = () => {
             hello@digitalburo.tech
           </Link>
           <Link
-            href=''
+            href='https://t.me/zarubin_vs'
+            target='_blank'
             className='flex items-center gap-[12px] text-[26px] text-white'
           >
             <TelegramIcon className='w-[30px] h-[auto]' />
@@ -43,7 +44,7 @@ export const Footer = () => {
         <ul className='flex flex-col gap-[20px] tablet:flex-row tablet:justify-between'>
           <li>
             <Link
-              href=''
+              href='https://zarubin.co.uk/policy_en'
               className='text-[26px] text-white leading-[1.1] opacity-50'
             >
               Privacy Policy
@@ -51,7 +52,7 @@ export const Footer = () => {
           </li>
           <li>
             <Link
-              href=''
+              href='#'
               className='text-[26px] text-white leading-[1.1] opacity-50'
             >
               &copy; Zarubin&Co

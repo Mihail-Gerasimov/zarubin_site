@@ -26,7 +26,7 @@ export const MobileMenu = ({ isOpen }: Props) => {
           </ul>
         </div>
         <div className={styles.contactWrapper}>
-          <Link href='tel:+77777777777' className={styles.contactBtn}>
+          <Link href='' className={styles.contactBtn}>
             Contact us
           </Link>
           <div className='flex flex-col gap-[12px]'>
@@ -37,7 +37,7 @@ export const MobileMenu = ({ isOpen }: Props) => {
               hello@digitalburo.tech
             </Link>
             <Link
-              href=''
+              href='https://t.me/zarubin_vs'
               className='flex items-center gap-[12px] text-[16px] text-main-black tablet:text-[26px]'
             >
               <TelegramIcon className='w-[30px] h-[auto]' />

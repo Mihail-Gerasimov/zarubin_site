@@ -1,7 +1,12 @@
+import line from '@/public/assets/images/png/line.png';
+import { SocialFollow } from '@/src/components/SocialFollow/SocialFollow';
+import { BackLink } from '@/src/ui-kit/BackLink/BackLink';
+import { formattedDate } from '@/src/utils/formattedDate';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
+import Image from 'next/image';
 import styles from './Post.module.css';
 
 const getPostContent = (slug: string) => {
@@ -46,6 +51,8 @@ export async function generateMetadata({
 export default function BlogSlug(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const post = getPostContent(slug);
+  const tag = post.data.tag;
+  const date = formattedDate(post.data.date);
   const image = post.data.image
     ? post.data.image
     : '/assets/images/post/frame_2.png';
@@ -69,19 +76,41 @@ export default function BlogSlug(props: { params: { slug: string } }) {
   });
 
   return (
-    <main
-      className='px-[10px] w-full relative overflow-hidden tablet:px-[40px] mainContainer'
-      style={{
-        backgroundImage: `url(${image})`,
-      }}
-    >
-      <article
-        className={`prose pt-[160px] pb-[24px] max-w-[896px] mx-[auto] text-white tablet:pt-[204px] tablet:pb-[40px] desktop:pt-[300px] desktop:pb-[60px] desktop-big:pt-[372px] z-10 relative`}
-      >
-        <Markdown className={`font-manrope z-20 ${styles.markdown}`}>
-          {allPosts}
-        </Markdown>
-      </article>
+    <main className='mt-[80px] px-[10px] relative w-full overflow-hidden tablet:px-[40px] mainContainer'>
+      <Image
+        src={image}
+        width={300}
+        height={150}
+        alt=''
+        className='absolute left-0 top-0 w-full z-[-1]'
+        unoptimized
+      />
+      <BackLink linkName='/' />
+      <div className='mx-[auto] max-w-[896px] pb-[30px]'>
+        <div className='py-[30px] w-full relative flex items-center justify-center desktop:py-[60px]'>
+          <span className='p-[10px] text-[16px] text-white bg-text-dark rounded-[2px] z-[2] tablet:text-[20px]'>
+            {tag}
+          </span>
+          <Image
+            src={line}
+            width={300}
+            height={400}
+            alt='line'
+            className='w-full h-[4px] absolute z-[1]'
+          />
+        </div>
+        <span className='mb-[20px] block text-[16px] text-text-gray leading-[1.25]'>
+          {date}
+        </span>
+        <article
+          className={`prose max-w-[100%] pb-[24px] w-full text-white tablet:pb-[40px] desktop:pb-[60px] z-10 relative`}
+        >
+          <Markdown className={`w-full font-manrope z-20 ${styles.markdown}`}>
+            {allPosts}
+          </Markdown>
+        </article>
+        <SocialFollow />
+      </div>
     </main>
   );
 }
