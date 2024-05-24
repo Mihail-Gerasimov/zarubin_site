@@ -7,9 +7,10 @@ import styles from './MobileMenu.module.css';
 
 interface Props {
   isOpen: boolean;
+  onClick: () => void;
 }
 
-export const MobileMenu = ({ isOpen }: Props) => {
+export const MobileMenu = ({ isOpen, onClick }: Props) => {
   return (
     <div className={classNames(styles.menuWeapper, isOpen && styles.active)}>
       <Logo />
@@ -17,7 +18,7 @@ export const MobileMenu = ({ isOpen }: Props) => {
         <div className={styles.listWrapper}>
           <ul className={styles.menuList}>
             {menuListLayer.map((item) => (
-              <li key={item.id}>
+              <li key={item.id} onClick={onClick}>
                 <Link href={item.link} className={styles.menuLink}>
                   {item.name}
                 </Link>
@@ -26,7 +27,7 @@ export const MobileMenu = ({ isOpen }: Props) => {
           </ul>
         </div>
         <div className={styles.contactWrapper}>
-          <Link href='tel:+77777777777' className={styles.contactBtn}>
+          <Link href='' className={styles.contactBtn}>
             Contact us
           </Link>
           <div className='flex flex-col gap-[12px]'>
@@ -37,7 +38,7 @@ export const MobileMenu = ({ isOpen }: Props) => {
               hello@digitalburo.tech
             </Link>
             <Link
-              href=''
+              href='https://t.me/zarubin_vs'
               className='flex items-center gap-[12px] text-[16px] text-main-black tablet:text-[26px]'
             >
               <TelegramIcon className='w-[30px] h-[auto]' />

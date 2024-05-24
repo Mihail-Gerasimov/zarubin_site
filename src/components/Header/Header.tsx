@@ -24,13 +24,13 @@ export const Header = () => {
   }, [isMobile]);
 
   return (
-    <header className='px-[10px] tablet:px-[40px] desktop:px-[80px] h-[84px] w-full tablet:h-[80px] desktop:h-[100px] flex items-center fixed top-0 z-20 bg-white'>
+    <header className='px-[10px] tablet:px-[40px] desktop:px-[80px] h-[80px] w-full flex items-center fixed top-0 z-20 bg-white'>
       <Logo />
-      <nav className='mx-[auto] w-full px-[10px] tablet:px-[40px] desktop:px-[80px]'>
+      <nav className='mx-[auto] w-full'>
         <MainList list={menuListLayer} />
       </nav>
       <ContactUsBtn />
-      <MobileMenu isOpen={isOpen} />
+      <MobileMenu isOpen={isOpen} onClick={() => setIsOpen(false)} />
       <BurgerIcon isOpen={isOpen} setIsOpen={handleOpen} />
     </header>
   );
