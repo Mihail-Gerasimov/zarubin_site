@@ -30,7 +30,7 @@ export const Header = () => {
         <MainList list={menuListLayer} />
       </nav>
       <ContactUsBtn />
-      <MobileMenu isOpen={isOpen} />
+      <MobileMenu isOpen={isOpen} onClick={() => setIsOpen(false)} />
       <BurgerIcon isOpen={isOpen} setIsOpen={handleOpen} />
     </header>
   );

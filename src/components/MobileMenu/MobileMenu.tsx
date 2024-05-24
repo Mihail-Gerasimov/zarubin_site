@@ -7,9 +7,10 @@ import styles from './MobileMenu.module.css';
 
 interface Props {
   isOpen: boolean;
+  onClick: () => void;
 }
 
-export const MobileMenu = ({ isOpen }: Props) => {
+export const MobileMenu = ({ isOpen, onClick }: Props) => {
   return (
     <div className={classNames(styles.menuWeapper, isOpen && styles.active)}>
       <Logo />
@@ -17,7 +18,7 @@ export const MobileMenu = ({ isOpen }: Props) => {
         <div className={styles.listWrapper}>
           <ul className={styles.menuList}>
             {menuListLayer.map((item) => (
-              <li key={item.id}>
+              <li key={item.id} onClick={onClick}>
                 <Link href={item.link} className={styles.menuLink}>
                   {item.name}
                 </Link>
