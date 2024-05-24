@@ -1,5 +1,6 @@
 import { DefaultImage } from '@/src/ui-kit/DefaultImage/DefaultImage';
 import { BASE_URL } from '@/src/utils/alias';
+import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,7 +10,7 @@ interface Data {
   description: string;
   image: string;
   date: string;
-  tag: string;
+  tag: string | undefined;
   slug: string;
 }
 
@@ -18,10 +19,7 @@ interface Props {
 }
 
 export const BlogCard = ({ post }: Props) => {
-  const description =
-    post.description.length < 150
-      ? post.description
-      : post.description.slice(0, 150).trim() + '...';
+  const description = contentTrimming(post.description, 150);
 
   const url = process.env.NODE_ENV === 'development' ? '' : BASE_URL;
 

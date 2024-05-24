@@ -1,9 +1,11 @@
 import line from '@/public/assets/images/png/line.png';
+import { Featured } from '@/src/components/Featured/Featured';
 import { SocialFollow } from '@/src/components/SocialFollow/SocialFollow';
 import { BackLink } from '@/src/ui-kit/BackLink/BackLink';
 import { BASE_URL } from '@/src/utils/alias';
 import { formattedDate } from '@/src/utils/formattedDate';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
+import { postsSorting } from '@/src/utils/postsSorting';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
@@ -20,6 +22,11 @@ const getPostContent = (slug: string) => {
   const matterResult = matter(content);
 
   return matterResult;
+};
+
+const getAllPosts = () => {
+  const postMetadata = getPostMetadata('src/posts');
+  return postsSorting(postMetadata);
 };
 
 export const generateStaticParams = async () => {
@@ -78,6 +85,8 @@ export default function BlogSlug(props: { params: { slug: string } }) {
     return `<ul class="${styles.tagList}">${tags}</ul>`;
   });
 
+  console.log('slug', slug);
+
   return (
     <main className='mt-[80px] px-[10px] relative w-full overflow-hidden tablet:px-[40px] mainContainer'>
       <Image
@@ -113,6 +122,9 @@ export default function BlogSlug(props: { params: { slug: string } }) {
           </Markdown>
         </article>
         <SocialFollow />
+        <div className='mt-[30px] pb-[40px] relative z-[5] desktop:bp-0'>
+          <Featured slug={slug} posts={getAllPosts()} />
+        </div>
       </div>
     </main>
   );

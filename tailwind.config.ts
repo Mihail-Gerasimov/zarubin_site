@@ -54,7 +54,7 @@ const config: Config = {
         'main-bg': '#00030C',
         'main-blue': '#013EDF',
         dark: '#1B2541',
-        'text-gray': 'rgba(1, 12, 44, 0.50)',
+        'text-gray': 'rgba(1, 12, 44, 0.40)',
         'text-dark': '#010C2C',
         'header-bg': '#010C2C',
         'pink-gr': '#f50c72',

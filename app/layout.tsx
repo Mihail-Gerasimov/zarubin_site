@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: 'Information about zarubin_blog',
   metadataBase: new URL('https://dgtlbureau.github.io/zarubin_blog'),
   icons: {
-    icon: '/assets/images/icons/favicon.svg',
+    icon: '/assets/images/png/meta_logo_blue.png',
   },
   openGraph: {
     ...openGraphImage,
