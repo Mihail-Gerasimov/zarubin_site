@@ -9,7 +9,7 @@ tag: 'Product'
 # Engaging Fans through Stocks Soccer
 
 <div style="display: flex; align-items: center; gap:12px">
-<img src="/public/assets/images/author/avatar_kristina.jpeg" alt="avatar" style="width:80px; height:auto; display:inlinee; border-radius:100%" />
+<img src="/assets/images/author/avatar_kristina.jpeg" alt="avatar" style="width:80px; height:auto; display:inlinee; border-radius:100%" />
 <div style="margin-left:20px; display:flex; flex-direction:column;"><p style="margin:0; font-weight:700; color:#010C2C">Written by Kristina Shimkute</p><p style="margin:0; color:#010C2C">02 May 2024</p></div>
 </div>
 

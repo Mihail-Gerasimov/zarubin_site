@@ -72,7 +72,7 @@ a {
     background-position: top;
     background-size: cover;
     background-color: var(--main-white);
-    background-image: url('/public/assets/images/banner/main_banner.png');
+    background-image: url('/assets/images/banner/main_banner.png');
   }
 
   .backImage::after {
