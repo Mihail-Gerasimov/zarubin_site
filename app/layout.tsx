@@ -31,7 +31,7 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
       </head>
-      <body className={`${inter.className} `}>
+      <body className={`${inter.className} font-proxima`}>
         <Header />
         {children}
         <Footer />

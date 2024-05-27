@@ -27,13 +27,16 @@ export const MobileMenu = ({ isOpen, onClick }: Props) => {
           </ul>
         </div>
         <div className={styles.contactWrapper}>
-          <Link href='' className={styles.contactBtn}>
+          <Link
+            href=''
+            className={`${styles.contactBtn} font-bold text-[20px] leading-[1]`}
+          >
             Contact us
           </Link>
           <div className='flex flex-col gap-[12px]'>
             <Link
               href='mailto:hello@digitalburo.tech'
-              className='text-[22px] text-main-black tablet:text-[32px]'
+              className='font-bold text-[22px] text-main-black tablet:text-[32px] leading-[1.1]'
             >
               hello@digitalburo.tech
             </Link>
@@ -41,7 +44,7 @@ export const MobileMenu = ({ isOpen, onClick }: Props) => {
               href='https://t.me/zarubin_vs'
               className='flex items-center gap-[12px] text-[16px] text-main-black tablet:text-[26px]'
             >
-              <TelegramIcon className='w-[30px] h-[auto]' />
+              <TelegramIcon className='w-[30px] h-[auto] text-[16px] leading-[1.25]' />
               Свяжитесь с нами в Telegram
             </Link>
           </div>

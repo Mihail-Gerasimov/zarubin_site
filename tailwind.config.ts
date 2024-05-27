@@ -47,7 +47,7 @@ const config: Config = {
         manrope: ['Manrope'],
         bebas: ['Bebas Neue', 'sans-serif'],
         unbound: ['Unbounded'],
-        proxima: ['Proxima Nova', 'sans-serif'],
+        proxima: ['Proxima Nova'],
       },
       colors: {
         'main-beige': '#F7F7F7',
@@ -70,7 +70,7 @@ const config: Config = {
       mobile: '320px',
       'mobile-big': '375px',
       tablet: '768px',
-      laptop: '1280px',
+      laptop: '1200px',
       desktop: '1440px',
       'desktop-big': '1800px',
     },

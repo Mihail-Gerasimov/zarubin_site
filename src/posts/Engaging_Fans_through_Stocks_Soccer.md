@@ -3,13 +3,13 @@ title: 'Engaging Fans through Stocks Soccer!'
 description: 'Stocks Soccer is a project based on the mechanics of fantasy games that combines soccer and investments. The main goal of the player (manager) is to assemble a team of players, taking into account their value and projections. Players then need to make transfers at certain times by exchanging players. The one with the most expensive team will be declared the winner. ⚽️💰'
 image: '/assets/images/post/frame_2.png'
 date: '02-05-2024'
-tag: 'Product'
+tag: 'Notes'
 ---
 
 # Engaging Fans through Stocks Soccer
 
 <div style="display: flex; align-items: center; gap:12px">
-<img src="/assets/images/author/avatar_kristina.jpeg" alt="avatar" style="width:80px; height:auto; display:inlinee; border-radius:100%" />
+<img src="https://dgtlbureau.github.io/zarubin_blog/assets/images/author/avatar_kristina.jpeg" alt="avatar" style="width:80px; height:auto; display:inlinee; border-radius:100%" />
 <div style="margin-left:20px; display:flex; flex-direction:column;"><p style="margin:0; font-weight:700; color:#010C2C">Written by Kristina Shimkute</p><p style="margin:0; color:#010C2C">02 May 2024</p></div>
 </div>
 

@@ -27,11 +27,12 @@
   padding-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: 44px;
+  gap: 20px;
 }
 
 .menuLink {
-  font-size: 26px;
+  font-size: 16px;
+  line-height: 1.87;
   color: var(--text-dark);
 }
 
@@ -44,11 +45,11 @@
 }
 
 .contactBtn {
+  width: 162px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 162px;
-  height: 46px;
   border: 1px solid #7cffcd;
   border-radius: 6px;
   color: var(--text-dark);

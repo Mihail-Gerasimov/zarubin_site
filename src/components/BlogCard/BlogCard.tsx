@@ -1,6 +1,5 @@
 import { DefaultImage } from '@/src/ui-kit/DefaultImage/DefaultImage';
 import { BASE_URL } from '@/src/utils/alias';
-import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,8 +18,6 @@ interface Props {
 }
 
 export const BlogCard = ({ post }: Props) => {
-  const description = contentTrimming(post.description, 150);
-
   const url = process.env.NODE_ENV === 'development' ? '' : BASE_URL;
 
   const date = formattedDate(post.date);
@@ -44,15 +41,19 @@ export const BlogCard = ({ post }: Props) => {
         </div>
         <div className='p-[14px_16px_16px] flex flex-col gap-[24px] items-start bg-main-beige rounded-[12px] tablet:p-[40px_24px_24px] tablet:gap-[24px] desktop:p-[40px]'>
           {post.tag && (
-            <span className='p-[10px] text-[20px] rounded-[2px] bg-white'>
+            <span className='font-proxima p-[10px] text-[20px] rounded-[2px] bg-white'>
               {post.tag}
             </span>
           )}
-          <h3 className='text-[28px] tablet:text-[36px] desktop:text-[40px]'>
+          <h3 className='font-bold text-[28px] tablet:text-[36px] desktop:text-[40px]'>
             {post.title}
           </h3>
-          <p className='text-[20px]'>{description}</p>
-          <span className='text-[16px] text-[#010C2C]'>{date}</span>
+          <p className='text-[20px] overflow-hidden line-clamp-2 opacity-[70%]'>
+            {post.description}
+          </p>
+          <span className='text-[16px] text-[#010C2C] opacity-[50%]'>
+            {date}
+          </span>
         </div>
       </div>
     </Link>
