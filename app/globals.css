@@ -39,8 +39,7 @@ a {
   @font-face {
     font-family: Proxima Nova;
     font-weight: 400;
-    src: url(/public/fonts/proxima-nova/proxima_nova_regular.woff)
-      format('woff');
+    src: url(/public/fonts/proxima-nova/proxima_nova_regular.woff) format('woff');
   }
 }
 
@@ -72,8 +71,7 @@ a {
     background-position: top;
     background-size: cover;
     background-color: var(--main-white);
-    background-image: url('@/public/assets/images/banner/main_banner.png');
-    z-index: -1;
+    background-image: url('/public/assets/images/banner/main_banner.png');
   }
 
   /* 
