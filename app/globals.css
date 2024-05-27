@@ -72,9 +72,11 @@ a {
     background-position: top;
     background-size: cover;
     background-color: var(--main-white);
-    background-image: url('/assets/images/banner/main_banner.png');
+    background-image: url('@/public/assets/images/banner/main_banner.png');
+    z-index: -1;
   }
 
+  /* 
   .backImage::after {
     position: absolute;
     left: 0;
@@ -83,9 +85,8 @@ a {
     height: 100%;
     content: '';
     background: linear-gradient(180deg, #ffffff 0%, #ffffff 80%);
-    z-index: 4;
     opacity: 0.5;
-  }
+  } */
 
   .mainContainer {
     position: relative;
