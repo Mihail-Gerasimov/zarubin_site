@@ -17,7 +17,7 @@ export const MainList = ({ list }: Props) => {
         <li key={item.id}>
           <Link
             href={item.link}
-            className='text-[black] font-proxima-reg text-[26px]'
+            className='text-[black] font-proxima-reg text-[16px] leading-[1.87]'
           >
             {item.name}
           </Link>

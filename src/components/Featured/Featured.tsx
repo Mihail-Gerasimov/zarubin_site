@@ -36,7 +36,7 @@ export const Featured = ({ slug, posts }: Props) => {
 
   return (
     <div className='flex flex-col gap-[40px] border border-t-4 border-text-dark'>
-      <div className='relative flex items-center justify-between border-4 border-text-dark before:w-full before:absolute before:top-0 before:left-0 before:h-[1px] before:bg-text-gray'>
+      <div className='relative pt-[20px] flex items-center justify-between border-4 border-text-dark before:w-full before:absolute before:top-0 before:left-0 before:h-[1px] before:bg-text-gray'>
         <p className='font-unbound font-bold text-[24px] uppercase '>
           Featured
         </p>
@@ -57,7 +57,7 @@ export const Featured = ({ slug, posts }: Props) => {
           </button>
         </div>
       </div>
-      <div className='flex flex-col gap-[20px] tablet:flex-row'>
+      <div className='flex flex-col gap-[20px] tablet:grid tablet:grid-cols-2'>
         {currentPosts.map((item) => (
           <Link key={item.slug} href={`/${item.slug}`}>
             <SmallBlogCard

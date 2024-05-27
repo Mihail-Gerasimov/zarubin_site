@@ -88,19 +88,18 @@ export default function BlogSlug(props: { params: { slug: string } }) {
   console.log('slug', slug);
 
   return (
-    <main className='mt-[80px] px-[10px] relative w-full overflow-hidden tablet:px-[40px] mainContainer'>
-      <Image
-        src={URL + image}
-        width={300}
-        height={150}
-        alt=''
-        className='absolute left-0 top-0 w-full z-[-1]'
-        unoptimized
-      />
+    <main className='mt-[80px] px-[10px] relative w-full  tablet:px-[40px] mainContainer'>
+      <div
+        className='absolute top-0 left-0 h-[150px] w-full bg-cover bg-no-repeat bg-center tablet:h-[302px] laptop:h-[342px] opacity-[40%]'
+        style={{
+          backgroundImage: `url(${URL + image})`,
+          zIndex: '-1',
+        }}
+      ></div>
       <BackLink linkName='/' />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div className='py-[30px] w-full relative flex items-center justify-center desktop:py-[60px]'>
-          <span className='p-[10px] text-[16px] text-white bg-text-dark rounded-[2px] z-[2] tablet:text-[20px]'>
+          <span className='p-[10px] text-[16px] text-white bg-text-dark rounded-[2px] z-[5] tablet:text-[20px]'>
             {tag}
           </span>
           <Image
@@ -111,13 +110,13 @@ export default function BlogSlug(props: { params: { slug: string } }) {
             className='w-full h-[4px] absolute z-[1]'
           />
         </div>
-        <span className='mb-[20px] block text-[16px] text-text-gray leading-[1.25]'>
+        <span className='relative mb-[20px] block text-[16px] text-text-dark leading-[1.25] z-[10] opacity-[50%]'>
           {date}
         </span>
         <article
           className={`prose max-w-[100%] pb-[24px] w-full text-white tablet:pb-[40px] desktop:pb-[60px] z-10 relative`}
         >
-          <Markdown className={`w-full font-manrope z-20 ${styles.markdown}`}>
+          <Markdown className={`w-full font-proxima z-20 ${styles.markdown}`}>
             {allPosts}
           </Markdown>
         </article>

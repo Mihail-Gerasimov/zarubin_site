@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <footer className='w-full px-[10px] py-[60px] bg-main-bg flex flex-col gap-[80px] text-[14px] leading-[1.2] tablet:px-[40px] desktop:text-[18px] desktop:leading-[1.1] desktop:px-[75px]'>
+    <footer className='w-full px-[10px] py-[60px] bg-main-bg flex flex-col gap-[40px] text-[14px] leading-[1.2] tablet:px-[40px] tablet:gap-[80px] desktop:text-[18px] desktop:leading-[1.1] desktop:px-[75px]'>
       <div className='w-full flex flex-col gap-[60px] desktop:flex-row desktop:items-center desktop:justify-between'>
         <a href='https://zarubin.co.uk/' target='_blank'>
           <LightMainLogo className='w-[auto] h-[54px] tablet:h-[107px] desktop:h-[60px]' />
@@ -15,7 +15,7 @@ export const Footer = () => {
             <li key={item.id}>
               <Link
                 href={item.link}
-                className='text-[26px] text-white leading-[1.1] whitespace-nowrap'
+                className='text-[16px] text-white leading-[1.87] whitespace-nowrap'
               >
                 {item.name}
               </Link>
@@ -45,7 +45,7 @@ export const Footer = () => {
           <li>
             <Link
               href='https://zarubin.co.uk/policy_en'
-              className='text-[26px] text-white leading-[1.1] opacity-50'
+              className='text-[16px] text-white leading-[1.1] opacity-50'
             >
               Privacy Policy
             </Link>
@@ -53,7 +53,7 @@ export const Footer = () => {
           <li>
             <Link
               href='#'
-              className='text-[26px] text-white leading-[1.1] opacity-50'
+              className='text-[16px] text-white leading-[1.1] opacity-50'
             >
               &copy; Zarubin&Co
             </Link>
