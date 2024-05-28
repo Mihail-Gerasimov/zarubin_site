@@ -8,6 +8,9 @@ interface PostMetadata {
   slug: string;
   date: string;
   tag: string | undefined;
+  authorName: string;
+  authorImage: string;
+  downloadLink: string | undefined;
 }
 
 export const getPostMetadata = (basePath: string) => {
@@ -25,6 +28,9 @@ export const getPostMetadata = (basePath: string) => {
       slug: filename.replace('.md', ''),
       date: matterResult.data.date,
       tag: matterResult.data.tag,
+      authorName: matterResult.data.authorName,
+      authorImage: matterResult.data.authorImage,
+      downloadLink: matterResult.data.downloadLink,
     };
   });
 

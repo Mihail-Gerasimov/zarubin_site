@@ -36,7 +36,7 @@ export const Pagination = ({
         disabled={!isPrevtDisable}
       >
         <Arrow
-          className={`w-[20px] rotate-[180deg] ${isPrevtDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
+          className={`w-[20px] h-[auto] fill-text-dark rotate-[180deg] ${isPrevtDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
         />
         <span
           className={`text-[18px] leading-[1.3] ${isPrevtDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
@@ -50,7 +50,7 @@ export const Pagination = ({
             <li key={item}>
               <button
                 type='button'
-                className={`px-[16px] py-[12px] text-[18px] text-text-dark bg-btn-col rounded-[8px] ${currentPage === item && 'bg-white'}`}
+                className={`px-[16px] py-[12px] h-[48px] text-[18px] text-text-dark bg-btn-col rounded-[8px] ${currentPage === item && 'bg-white'}`}
                 onClick={() => paginate(item)}
               >
                 {item}
@@ -62,7 +62,7 @@ export const Pagination = ({
       <button
         type='button'
         onClick={nextPage}
-        className='paginationBtn flex items-center gap-[4px]'
+        className='paginationBtn h-[48px] flex items-center gap-[4px]'
         disabled={!isNextDisable}
       >
         <span
@@ -71,7 +71,7 @@ export const Pagination = ({
           Next
         </span>
         <Arrow
-          className={`w-[20px] ${isNextDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
+          className={`w-[20px] fill-text-dark ${isNextDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
         />
       </button>
     </div>

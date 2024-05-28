@@ -1,0 +1,24 @@
+<svg viewBox="0 0 26 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="26" height="2" fill="#F5F5F5"/>
+<g id="Research page">
+<path d="M-3486 -791C-3486 -792.104 -3485.1 -793 -3484 -793H587C588.105 -793 589 -792.105 589 -791V15688C589 15689.1 588.104 15690 587 15690H-3484C-3485.1 15690 -3486 15689.1 -3486 15688V-791Z" fill="#F3F3F3"/>
+<path d="M-3484 -792H587V-794H-3484V-792ZM588 -791V15688H590V-791H588ZM587 15689H-3484V15691H587V15689ZM-3485 15688V-791H-3487V15688H-3485ZM-3484 15689C-3484.55 15689 -3485 15688.6 -3485 15688H-3487C-3487 15689.7 -3485.66 15691 -3484 15691V15689ZM588 15688C588 15688.6 587.552 15689 587 15689V15691C588.657 15691 590 15689.7 590 15688H588ZM587 -792C587.552 -792 588 -791.552 588 -791H590C590 -792.657 588.657 -794 587 -794V-792ZM-3484 -794C-3485.66 -794 -3487 -792.656 -3487 -791H-3485C-3485 -791.552 -3484.55 -792 -3484 -792V-794Z" fill="black" fill-opacity="0.1"/>
+<g id="Research - 375" clip-path="url(#clip0_334_12067)">
+<rect width="375" height="10746" transform="translate(-9 -575)" fill="white"/>
+<g id="Content">
+<g id="Paragraphs">
+<g id="Frame 1948756912">
+<g id="Paragraph">
+<path id="Line 59" d="M1 1L25 0.999998" stroke="#010C2C" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_334_12067">
+<rect width="375" height="10746" fill="white" transform="translate(-9 -575)"/>
+</clipPath>
+</defs>
+</svg>

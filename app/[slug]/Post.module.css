@@ -8,20 +8,38 @@
   font-weight: 700;
 }
 
-.markdown p {
-  font-size: 16x;
+.markdown h2 {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 700;
 }
 
+.research.markdown h2::before {
+  margin-right: 12px;
+  content: '';
+  width: 24px;
+  height: 1px;
+  background-color: var(--text-dark);
+  border-radius: 2px;
+}
+
+.authorImg {
+  margin: 0;
+  width: 40px;
+  height: auto;
+  border-radius: 100%;
+}
+
+.markdown p,
 .markdown li {
-  font-size: 16px;
+  font-size: 16x;
+  columns: var(--text-dark);
+  opacity: 0.8;
 }
 
 .markdown strong {
   font-size: 16px;
-}
-
-.art {
-  padding-top: 116px;
 }
 
 .tagList {
@@ -55,6 +73,18 @@
     font-size: 36px;
   }
 
+  .markdown h2 {
+    font-size: 26px;
+  }
+
+  .research.markdown h2::before {
+    margin-right: 16px;
+  }
+
+  .authorImg {
+    width: 80px;
+  }
+
   .markdown li,
   .markdown p,
   .markdown strong {
@@ -70,6 +100,15 @@
 @media (min-width: 1440px) {
   .markdown h1 {
     font-size: 40px;
+  }
+
+  .markdown h2 {
+    font-size: 36px;
+  }
+
+  .research.markdown h2::before {
+    width: 100px;
+    margin-right: 20px;
   }
 
   .markdown li,

@@ -4,13 +4,10 @@ description: 'We are thrilled to announce the launch of our new tournament, "The
 image: '/assets/images/post/soccer_april_countdown.png'
 date: '27-04-2024'
 tag: 'Research'
+authorName: 'Vitaliy Zarubin'
+authorImage: '/assets/images/author/avatar.png'
+downloadLink: '/assets/files/test.txt'
 ---
-
-# 🚨 Exciting Update for All Stocks.Soccer Enthusiasts! 🚨
-
-<div style="display: flex; align-items: center; gap:12px">
-<img src="/assets/images/author/avatar.png" alt="avatar" style="width:40px; height:auto; display:inlinee border-radius:100%" /> <p style="color:#94a3b8; ">Written by Vitaliy Zarubin 27 apr 2024</p>
-</div>
 
 We are thrilled to announce the launch of our new tournament, "The Final Countdown," running from May 3rd to May 19th. This is a fantastic opportunity to showcase your strategic skills and compete for a chance to win $100! Here’s how you can jump into the action:
 
