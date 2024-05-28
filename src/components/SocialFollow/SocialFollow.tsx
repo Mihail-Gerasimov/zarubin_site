@@ -21,7 +21,7 @@ export const SocialFollow = () => {
 
   return (
     <div className='relative flex flex-col gap-[12px] z-[5]'>
-      <span className='text-[12px] text-text-dark font-bold tablet:text-[16px]'>
+      <span className='font-proxima text-[12px] text-text-dark font-bold tablet:text-[16px]'>
         Did you find this post interesting? Share it!
       </span>
       <ul className='flex gap-[20px]'>

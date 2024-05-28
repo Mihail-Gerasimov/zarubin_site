@@ -45,13 +45,13 @@ export const BlogCard = ({ post }: Props) => {
               {post.tag}
             </span>
           )}
-          <h3 className='font-bold text-[28px] tablet:text-[36px] desktop:text-[40px]'>
+          <h3 className='font-proxima font-bold text-[28px] tablet:text-[36px] desktop:text-[40px]'>
             {post.title}
           </h3>
-          <p className='text-[20px] overflow-hidden line-clamp-2 opacity-[70%]'>
+          <p className='font-proxima text-[20px] overflow-hidden line-clamp-2 opacity-[70%]'>
             {post.description}
           </p>
-          <span className='text-[16px] text-[#010C2C] opacity-[50%]'>
+          <span className='font-proxima text-[16px] text-[#010C2C] opacity-[50%]'>
             {date}
           </span>
         </div>

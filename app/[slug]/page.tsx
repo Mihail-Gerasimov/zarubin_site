@@ -99,8 +99,8 @@ export default function BlogSlug(props: { params: { slug: string } }) {
       <BackLink linkName='/' />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div className='py-[30px] w-full relative flex items-center justify-center desktop:py-[60px]'>
-          <span className='p-[10px] text-[16px] text-white bg-text-dark rounded-[2px] z-[5] tablet:text-[20px]'>
-            {tag}
+          <span className='p-[10px] font-proxima text-[16px] text-white bg-text-dark rounded-[2px] z-[5] tablet:text-[20px]'>
+            {tag ? tag : 'Notes'}
           </span>
           <Image
             src={line}
@@ -110,7 +110,7 @@ export default function BlogSlug(props: { params: { slug: string } }) {
             className='w-full h-[4px] absolute z-[1]'
           />
         </div>
-        <span className='relative mb-[20px] block text-[16px] text-text-dark leading-[1.25] z-[10] opacity-[50%]'>
+        <span className='relative mb-[20px] block font-proxima text-[16px] text-text-dark leading-[1.25] z-[10] opacity-[50%]'>
           {date}
         </span>
         <article
