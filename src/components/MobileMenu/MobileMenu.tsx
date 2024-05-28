@@ -19,7 +19,10 @@ export const MobileMenu = ({ isOpen, onClick }: Props) => {
           <ul className={styles.menuList}>
             {menuListLayer.map((item) => (
               <li key={item.id} onClick={onClick}>
-                <Link href={item.link} className={styles.menuLink}>
+                <Link
+                  href={item.link}
+                  className={`${styles.menuLink} font-proxima`}
+                >
                   {item.name}
                 </Link>
               </li>
@@ -29,20 +32,20 @@ export const MobileMenu = ({ isOpen, onClick }: Props) => {
         <div className={styles.contactWrapper}>
           <Link
             href=''
-            className={`${styles.contactBtn} font-bold text-[20px] leading-[1]`}
+            className={`${styles.contactBtn} font-proxima font-bold text-[20px] leading-[1]`}
           >
             Contact us
           </Link>
           <div className='flex flex-col gap-[12px]'>
             <Link
               href='mailto:hello@digitalburo.tech'
-              className='font-bold text-[22px] text-main-black tablet:text-[32px] leading-[1.1]'
+              className='font-proxima font-bold text-[22px] text-main-black tablet:text-[32px] leading-[1.1]'
             >
               hello@digitalburo.tech
             </Link>
             <Link
               href='https://t.me/zarubin_vs'
-              className='flex items-center gap-[12px] text-[16px] text-main-black tablet:text-[26px]'
+              className='font-proxima flex items-center gap-[12px] text-[16px] text-main-black tablet:text-[26px]'
             >
               <TelegramIcon className='w-[30px] h-[auto] text-[16px] leading-[1.25]' />
               Свяжитесь с нами в Telegram

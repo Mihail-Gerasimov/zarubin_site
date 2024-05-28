@@ -23,15 +23,21 @@ export const Featured = ({ slug, posts }: Props) => {
   const lastPostIndex = currentPage * postsPerPage;
   const firstPostIndex = lastPostIndex - postsPerPage;
   const currentPosts = posts.slice(firstPostIndex, lastPostIndex);
+  // const currentPosts = posts.slice(currentPage, currentPage + 2);
 
   const nextPage = () => {
     if (currentPage >= posts.length / postsPerPage) return;
     setCurrentPage((prev) => prev + 1);
+    // const nextIndex = currentPage + 2 < posts.length ? currentPage + 2 : 0;
+    // setCurrentPage(nextIndex);
   };
 
   const prevPage = () => {
     if (currentPage <= 1) return;
     setCurrentPage((prev) => prev - 1);
+    // const previousIndex =
+    //   currentPage - 2 >= 0 ? currentPage - 2 : posts.length - 2;
+    // setCurrentPage(previousIndex);
   };
 
   return (

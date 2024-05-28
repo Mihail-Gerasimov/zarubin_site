@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Zarubin Blog',
   description: 'Information about zarubin_blog',
-  metadataBase: new URL('https://dgtlbureau.github.io/zarubin_blog'),
+  metadataBase: new URL('https://dgtlbureau.github.io/zarubin_blog/'),
   icons: {
     icon: '/assets/images/png/meta_logo_blue.png',
   },
@@ -31,7 +31,7 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
       </head>
-      <body className={`${inter.className} font-proxima`}>
+      <body className={`${inter.className}`}>
         <Header />
         {children}
         <Footer />
