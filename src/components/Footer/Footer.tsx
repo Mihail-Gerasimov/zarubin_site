@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 export const Footer = () => {
   return (
-    <footer className='w-full px-[10px] py-[60px] bg-main-bg flex flex-col gap-[40px] text-[14px] leading-[1.2] tablet:px-[40px] tablet:gap-[80px] desktop:text-[18px] desktop:leading-[1.1] desktop:px-[75px]'>
+    <footer className='w-full px-[10px] py-[40px] bg-main-bg flex flex-col gap-[40px] text-[14px] leading-[1.2] tablet:px-[40px] tablet:py-[60px] tablet:gap-[40px] desktop:gap-[88px] desktop:text-[18px] desktop:leading-[1.1] desktop:px-[75px]'>
       <div className='w-full flex flex-col gap-[60px] desktop:flex-row desktop:items-center desktop:justify-between'>
         <a href='https://zarubin.co.uk/' target='_blank'>
-          <LightMainLogo className='w-[auto] h-[54px] tablet:h-[107px] desktop:h-[60px]' />
+          <LightMainLogo className='w-[auto] h-[54px] tablet:h-[71px] desktop:h-[60px]' />
         </a>
         <ul className='flex flex-col gap-[20px] tablet:flex-row'>
           {menuListLayer.map((item) => (

@@ -39,22 +39,20 @@ a {
   @font-face {
     font-family: Proxima Nova;
     font-weight: 400;
-    src: url(https://dgtlbureau.github.io/zarubin_blog/fonts/proxima-nova/proxima_nova_regular.woff)
-      format('woff');
+    src: url(/fonts/proxima-nova/proxima_nova_regular.woff) format('woff');
   }
 
   @font-face {
     font-family: Proxima Nova;
     font-weight: 700;
-    src: url(https://dgtlbureau.github.io/zarubin_blog/fonts/proxima-nova/ProximaNovaBold.woff)
-      format('woff');
+    src: url(/fonts/proxima-nova/ProximaNovaBold.woff) format('woff');
   }
 }
 
 @layer components {
   body {
     --bg-color: #010c2c;
-    --second-bg-color: #750080;
+    --second-bg-color: #f7f7f7;
     --text-color: #94a3b8;
     --text-dark: #010c2c;
     --accent-col: #a854fd;
@@ -69,6 +67,10 @@ a {
     color: var(--text-dark);
     font-family: 'Monrope', 'sans-serif';
   }
+
+  .article-description {
+    font-size: 35px;
+  }
 }
 
 @layer components {
@@ -79,7 +81,7 @@ a {
     background-position: top;
     background-size: cover;
     background-color: var(--main-white);
-    background-image: url('https://dgtlbureau.github.io/zarubin_blog/assets/images/banner/main_banner.png');
+    background-image: url('/assets/images/banner/main_banner.png');
   }
 
   /* 

@@ -13,7 +13,7 @@ export default function Home() {
           <h1 className='text-[45px] leading-[1] uppercase font-unbound font-bold z-[5] tablet:text-[60px] desktop:text-[90px]'>
             Insights
           </h1>
-          <p className='font-proxima text-[20px] text-[#00030C] leading-[1.2] z-[5] text-center'>
+          <p className='px-[70px] font-proxima text-[20px] text-[#00030C] leading-[1.2] z-[5] text-center'>
             Case studies, research and experience in detail
           </p>
         </div>

@@ -6,6 +6,10 @@ import Twitter from '@/public/assets/images/social/twitter-icon.svg';
 import { BASE_URL } from '@/src/utils/alias';
 import { usePathname } from 'next/navigation';
 
+interface Props {
+  isRight?: boolean;
+}
+
 const SHARING = {
   FACEBOOK_SHARE: 'https://www.facebook.com/sharer/sharer.php?u=',
   TWITTER: 'https://twitter.com/intent/tweet?&url=',
@@ -15,13 +19,17 @@ const SHARING = {
 
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 
-export const SocialFollow = () => {
+export const SocialFollow = ({ isRight = false }: Props) => {
   const pathName = usePathname();
   console.log(SHARING.FACEBOOK_SHARE + pathName);
 
   return (
-    <div className='relative flex flex-col gap-[12px] z-[5]'>
-      <span className='font-proxima text-[12px] text-text-dark font-bold tablet:text-[16px]'>
+    <div
+      className={`relative flex flex-col ${isRight && 'tablet:items-end'} gap-[12px] z-[5]`}
+    >
+      <span
+        className={`font-proxima text-[12px] text-text-dark ${isRight && 'tablet:text-end'} font-bold tablet:text-[16px]`}
+      >
         Did you find this post interesting? Share it!
       </span>
       <ul className='flex gap-[20px]'>

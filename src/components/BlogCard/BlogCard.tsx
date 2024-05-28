@@ -45,7 +45,7 @@ export const BlogCard = ({ post }: Props) => {
               {post.tag}
             </span>
           )}
-          <h3 className='font-proxima font-bold text-[28px] tablet:text-[36px] desktop:text-[40px]'>
+          <h3 className='font-proxima font-bold text-[28px] leading-[1.14] tablet:text-[36px] tablet:leading-[1.1] desktop:text-[40px]'>
             {post.title}
           </h3>
           <p className='font-proxima text-[20px] overflow-hidden line-clamp-2 opacity-[70%]'>

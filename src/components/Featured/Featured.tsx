@@ -14,10 +14,9 @@ interface Props {
 
 export const Featured = ({ slug, posts }: Props) => {
   const visiblePost = posts.findIndex((item) => item.slug === slug);
+  console.log(visiblePost);
 
-  const [currentPage, setCurrentPage] = useState(
-    visiblePost + 1 >= posts.length ? 1 : visiblePost + 1,
-  );
+  const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(2);
 
   const lastPostIndex = currentPage * postsPerPage;
@@ -65,7 +64,7 @@ export const Featured = ({ slug, posts }: Props) => {
       </div>
       <div className='flex flex-col gap-[20px] tablet:grid tablet:grid-cols-2'>
         {currentPosts.map((item) => (
-          <Link key={item.slug} href={`/${item.slug}`}>
+          <Link key={item.slug} href={`/${item.slug}`} className='flex flex-1'>
             <SmallBlogCard
               tag={item.tag ? item.tag : ''}
               title={item.title}
