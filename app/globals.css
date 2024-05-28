@@ -39,13 +39,15 @@ a {
   @font-face {
     font-family: Proxima Nova;
     font-weight: 400;
-    src: url(https://dgtlbureau.github.io/zarubin_blog/fonts/proxima-nova/proxima_nova_regular.woff) format('woff');
+    src: url(https://dgtlbureau.github.io/zarubin_blog/fonts/proxima-nova/proxima_nova_regular.woff)
+      format('woff');
   }
 
   @font-face {
     font-family: Proxima Nova;
     font-weight: 700;
-    src: url(https://dgtlbureau.github.io/zarubin_blog/fonts/proxima-nova/ProximaNovaBold.woff) format('woff');
+    src: url(https://dgtlbureau.github.io/zarubin_blog/fonts/proxima-nova/ProximaNovaBold.woff)
+      format('woff');
   }
 }
 
