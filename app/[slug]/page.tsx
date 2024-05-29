@@ -5,6 +5,7 @@ import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
 import { BackLink } from '@/src/ui-kit/BackLink/BackLink';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import { BASE_URL } from '@/src/utils/alias';
+import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
@@ -51,17 +52,14 @@ export async function generateMetadata({
   const post = getPostContent(params.slug);
   const id = params?.slug ? ' . ' + params?.slug : '';
   const title = post.data.title;
-  const description =
-    post.data.description.length < 30
-      ? post.data.description
-      : post.data.description.slice(0, 35).trim() + '...';
+  const description = contentTrimming(post.data.description, 150);
 
   return {
-    title: `The Blog ${id.replaceAll('_', ' ')}`,
+    title: `${id.replaceAll('_', ' ')}`,
     description,
     openGraph: {
       images: [{ url: post.data.image }],
-      title: `Post - ${title}`,
+      title: `${title}`,
       description,
     },
   };

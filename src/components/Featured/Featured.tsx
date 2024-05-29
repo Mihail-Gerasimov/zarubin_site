@@ -12,9 +12,6 @@ interface Props {
 }
 
 export const Featured = ({ slug, posts }: Props) => {
-  const visiblePost = posts.findIndex((item) => item.slug === slug);
-  console.log(visiblePost);
-
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(2);
 
@@ -41,9 +38,11 @@ export const Featured = ({ slug, posts }: Props) => {
   return (
     <div className='flex flex-col gap-[40px] border border-t-4 border-text-dark'>
       <div className='relative flex items-center justify-between border-4 border-text-dark pt-[20px] before:absolute before:left-0 before:top-0 before:h-[1px] before:w-full before:bg-text-gray'>
-        <p className='font-unbound text-[24px] font-bold uppercase '>
-          Featured
-        </p>
+        {slug && (
+          <p className='font-unbound text-[24px] font-bold uppercase '>
+            Featured
+          </p>
+        )}
         <div className='flex items-center gap-[16px]'>
           <button
             type='button'

@@ -8,16 +8,16 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Zarubin Blog',
-  description: 'Information about zarubin_blog',
-  metadataBase: new URL('https://dgtlbureau.github.io/zarubin_blog/'),
+  title: 'Insights – Zarubin&Co – Blog',
+  description: 'Case studies, research and experience in detail',
+  metadataBase: new URL('https://blog.zarubin.co.uk/'),
   icons: {
-    icon: '/assets/images/png/meta_logo_blue.png',
+    icon: '/assets/images/info/main_meta.png',
   },
   openGraph: {
     ...openGraphImage,
-    title: 'Zarubin Blog',
-    description: 'Information about zarubin_blog',
+    title: 'Insights – Zarubin&Co – Blog',
+    description: 'Case studies, research and experience in detail',
   },
 };
 
