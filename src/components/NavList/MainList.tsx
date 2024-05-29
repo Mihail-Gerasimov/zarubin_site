@@ -12,12 +12,12 @@ interface List {
 
 export const MainList = ({ list }: Props) => {
   return (
-    <ul className='hidden desktop:flex justify-center gap-[44px]'>
+    <ul className='hidden justify-center gap-[44px] desktop:flex'>
       {list.map((item) => (
         <li key={item.id}>
           <Link
             href={item.link}
-            className='text-[black] font-proxima text-[16px] leading-[1.87]'
+            className='font-proxima text-[16px] leading-[1.87] text-[black]'
           >
             {item.name}
           </Link>

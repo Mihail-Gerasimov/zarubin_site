@@ -32,22 +32,22 @@ export const MobileMenu = ({ isOpen, onClick }: Props) => {
         <div className={styles.contactWrapper}>
           <Link
             href=''
-            className={`${styles.contactBtn} font-proxima font-bold text-[20px] leading-[1]`}
+            className={`${styles.contactBtn} font-proxima text-[20px] font-bold leading-[1]`}
           >
             Contact us
           </Link>
           <div className='flex flex-col gap-[12px]'>
             <Link
               href='mailto:hello@digitalburo.tech'
-              className='font-proxima font-bold text-[22px] text-main-black tablet:text-[32px] leading-[1.1]'
+              className='text-main-black font-proxima text-[22px] font-bold leading-[1.1] tablet:text-[32px]'
             >
               hello@digitalburo.tech
             </Link>
             <Link
               href='https://t.me/zarubin_vs'
-              className='font-proxima flex items-center gap-[12px] text-[16px] text-main-black tablet:text-[26px]'
+              className='text-main-black flex items-center gap-[12px] font-proxima text-[16px] tablet:text-[26px]'
             >
-              <TelegramIcon className='w-[30px] h-[auto] text-[16px] leading-[1.25]' />
+              <TelegramIcon className='h-[auto] w-[30px] text-[16px] leading-[1.25]' />
               Свяжитесь с нами в Telegram
             </Link>
           </div>

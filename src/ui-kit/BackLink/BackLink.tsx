@@ -9,7 +9,7 @@ export const BackLink = ({ linkName }: Props) => {
   return (
     <Link
       href={linkName}
-      className='hidden fixed left-[73px] bottom-[43px] font-proxima font-bold text-[20px] desktop:flex items-center gap-[10px] z-[5]'
+      className='fixed bottom-[43px] left-[73px] z-[5] hidden items-center gap-[10px] font-proxima text-[20px] font-bold desktop:flex'
     >
       <Back className='w-[24px]' />
       Back to blog
