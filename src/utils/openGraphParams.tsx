@@ -1,3 +1,3 @@
 export const openGraphImage = {
-  images: [{ url: '/public/assets/images/banner/default_logo.png' }],
+  images: [{ url: '/assets/images/info/main_meta.png' }],
 };
