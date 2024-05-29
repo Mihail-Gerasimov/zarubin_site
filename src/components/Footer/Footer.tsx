@@ -7,9 +7,9 @@ export const Footer = () => {
   return (
     <footer className='w-full px-[10px] py-[40px] bg-main-bg flex flex-col gap-[40px] text-[14px] leading-[1.2] tablet:px-[40px] tablet:py-[60px] tablet:gap-[40px] desktop:gap-[88px] desktop:text-[18px] desktop:leading-[1.1] desktop:px-[75px]'>
       <div className='w-full flex flex-col gap-[60px] desktop:flex-row desktop:items-center desktop:justify-between'>
-        <a href='https://zarubin.co.uk/' target='_blank'>
+        <Link href='/'>
           <LightMainLogo className='w-[auto] h-[54px] tablet:h-[71px] desktop:h-[60px]' />
-        </a>
+        </Link>
         <ul className='flex flex-col gap-[20px] tablet:flex-row'>
           {menuListLayer.map((item) => (
             <li key={item.id}>
@@ -29,14 +29,14 @@ export const Footer = () => {
           >
             hello@digitalburo.tech
           </Link>
-          <Link
+          <a
             href='https://t.me/zarubin_vs'
             target='_blank'
             className='font-proxima flex items-center gap-[12px] text-[26px] text-white'
           >
             <TelegramIcon className='w-[30px] h-[auto]' />
             Contact us
-          </Link>
+          </a>
         </div>
       </div>
       <div className='w-full border-t-[2px] border-dark'>
@@ -51,12 +51,9 @@ export const Footer = () => {
             </Link>
           </li>
           <li>
-            <Link
-              href='#'
-              className='font-proxima text-[16px] text-white leading-[1.1] opacity-50'
-            >
+            <span className='font-proxima text-[16px] text-white leading-[1.1] opacity-50'>
               &copy; Zarubin&Co
-            </Link>
+            </span>
           </li>
         </ul>
       </div>

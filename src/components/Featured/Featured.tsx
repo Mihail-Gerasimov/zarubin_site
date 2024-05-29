@@ -1,7 +1,6 @@
 'use client';
 
 import Arrow from '@/public/assets/images/icons/arrow.svg';
-import { contentTrimming } from '@/src/utils/contentTrimming';
 import { Post } from '@/src/utils/types';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -68,7 +67,7 @@ export const Featured = ({ slug, posts }: Props) => {
             <SmallBlogCard
               tag={item.tag ? item.tag : ''}
               title={item.title}
-              description={contentTrimming(item.description, 90)}
+              description={item.description}
               date={item.date}
             />
           </Link>

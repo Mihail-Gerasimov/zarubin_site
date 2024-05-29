@@ -7,10 +7,12 @@ interface PostMetadata {
   image: string;
   slug: string;
   date: string;
+  type: string | undefined;
   tag: string | undefined;
   authorName: string;
   authorImage: string;
   downloadLink: string | undefined;
+  readingTime: string | undefined | null;
 }
 
 export const getPostMetadata = (basePath: string) => {
@@ -27,10 +29,12 @@ export const getPostMetadata = (basePath: string) => {
       image: matterResult.data.image,
       slug: filename.replace('.md', ''),
       date: matterResult.data.date,
+      type: matterResult.data.type,
       tag: matterResult.data.tag,
       authorName: matterResult.data.authorName,
       authorImage: matterResult.data.authorImage,
       downloadLink: matterResult.data.downloadLink,
+      readingTime: matterResult.data.readingTime,
     };
   });
 

@@ -25,10 +25,10 @@ export const SocialFollow = ({ isRight = false }: Props) => {
 
   return (
     <div
-      className={`relative flex flex-col ${isRight && 'tablet:items-end'} gap-[12px] z-[5]`}
+      className={`relative w-full flex flex-col ${isRight && 'tablet:items-end'} gap-[12px] z-[5]`}
     >
       <span
-        className={`font-proxima text-[12px] text-text-dark ${isRight && 'tablet:text-end'} font-bold tablet:text-[16px]`}
+        className={`font-proxima text-[12px] leading-[1] text-text-dark ${isRight && 'text-[18px] tablet:text-end tablet:text-[20px]'} font-bold tablet:text-[16px]`}
       >
         Did you find this post interesting? Share it!
       </span>
