@@ -8,7 +8,7 @@ export const DefaultImage = () => {
       alt=''
       width={300}
       height={150}
-      className='w-[auto] h-[102px] absolute right-[50%] top-[50%] translate-x-[50%] translate-y-[-50%] tablet:h-[173px]'
+      className='absolute right-[50%] top-[50%] h-[102px] w-[auto] translate-x-[50%] translate-y-[-50%] tablet:h-[173px]'
     />
   );
 };

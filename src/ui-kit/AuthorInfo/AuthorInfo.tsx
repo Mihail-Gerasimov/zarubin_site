@@ -14,13 +14,13 @@ export const AuthorInfo = ({ image, name, date }: Props) => {
         width={49}
         height={49}
         alt={name}
-        className='w-[49px] tablet:w-[80px] tablet:h-[80px] rounded-full'
+        className='w-[49px] rounded-full tablet:h-[80px] tablet:w-[80px]'
       />
-      <div className='w-full flex flex-col '>
-        <span className='font-proxima font-bold text-[18px] text-text-dark leading-[1.33] tablet:min-w-[309px] tablet:max-w-[309px]'>
+      <div className='flex w-full flex-col '>
+        <span className='font-proxima text-[18px] font-bold leading-[1.33] text-text-dark tablet:min-w-[309px] tablet:max-w-[309px]'>
           Written by {name}
         </span>
-        <span className='font-proxima text-[18px] text-text-dark leading-[1.33]'>
+        <span className='font-proxima text-[18px] leading-[1.33] text-text-dark'>
           {date}
         </span>
       </div>

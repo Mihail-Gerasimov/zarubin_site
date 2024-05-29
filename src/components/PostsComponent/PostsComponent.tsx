@@ -41,7 +41,7 @@ export const PostsComponent = ({ posts }: Props) => {
   };
 
   return (
-    <div className='mx-auto pt-[30px] pb-[24px] max-w-[876px] flex flex-col items-center gap-[40px] tablet:pt-[60px] tablet:pb-[40px] desktop:pb-[60px]'>
+    <div className='mx-auto flex max-w-[876px] flex-col items-center gap-[40px] pb-[24px] pt-[30px] tablet:pb-[40px] tablet:pt-[60px] desktop:pb-[60px]'>
       {currentPosts.map((post, idx) => (
         <BlogCard key={idx} post={post} />
       ))}

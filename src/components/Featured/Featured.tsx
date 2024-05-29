@@ -40,21 +40,21 @@ export const Featured = ({ slug, posts }: Props) => {
 
   return (
     <div className='flex flex-col gap-[40px] border border-t-4 border-text-dark'>
-      <div className='relative pt-[20px] flex items-center justify-between border-4 border-text-dark before:w-full before:absolute before:top-0 before:left-0 before:h-[1px] before:bg-text-gray'>
-        <p className='font-unbound font-bold text-[24px] uppercase '>
+      <div className='relative flex items-center justify-between border-4 border-text-dark pt-[20px] before:absolute before:left-0 before:top-0 before:h-[1px] before:w-full before:bg-text-gray'>
+        <p className='font-unbound text-[24px] font-bold uppercase '>
           Featured
         </p>
         <div className='flex items-center gap-[16px]'>
           <button
             type='button'
-            className='w-[50px] h-[50px] flex items-center justify-center rounded-[6px] bg-main-blue'
+            className='flex h-[50px] w-[50px] items-center justify-center rounded-[6px] bg-main-blue'
             onClick={prevPage}
           >
             <Arrow className='rotate-[180deg] fill-white' />
           </button>
           <button
             type='button'
-            className='w-[50px] h-[50px] flex items-center justify-center rounded-[6px] bg-main-blue'
+            className='flex h-[50px] w-[50px] items-center justify-center rounded-[6px] bg-main-blue'
             onClick={nextPage}
           >
             <Arrow className='fill-white' />

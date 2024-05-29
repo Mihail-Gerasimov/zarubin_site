@@ -24,7 +24,7 @@ export const Header = () => {
   }, [isMobile]);
 
   return (
-    <header className='px-[10px] tablet:px-[40px] desktop:px-[80px] h-[80px] w-full flex items-center fixed top-0 z-20 bg-white'>
+    <header className='fixed top-0 z-20 flex h-[80px] w-full items-center bg-white px-[10px] tablet:px-[40px] desktop:px-[80px]'>
       <Logo />
       <nav className='mx-[auto] w-full'>
         <MainList list={menuListLayer} />

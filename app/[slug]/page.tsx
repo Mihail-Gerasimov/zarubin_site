@@ -120,10 +120,10 @@ export default function BlogSlug(props: { params: { slug: string } }) {
     });
 
   return (
-    <main className='mt-[80px] px-[10px] relative w-full  tablet:px-[40px] mainContainer'>
+    <main className='mainContainer relative mt-[80px] w-full  px-[10px] tablet:px-[40px]'>
       {type !== POST_TYPE.MANIFESTO && (
         <div
-          className='absolute top-0 left-0 h-[150px] w-full bg-cover bg-no-repeat bg-center tablet:h-[302px] laptop:h-[342px] opacity-[40%]'
+          className='absolute left-0 top-0 h-[150px] w-full bg-cover bg-center bg-no-repeat opacity-[40%] tablet:h-[302px] laptop:h-[342px]'
           style={{
             backgroundImage: `url(${URL + image})`,
             zIndex: '-1',
@@ -133,9 +133,9 @@ export default function BlogSlug(props: { params: { slug: string } }) {
       <BackLink linkName='/' />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div
-          className={`py-[30px] w-full relative flex items-center justify-center desktop:py-[60px] ${type === POST_TYPE.RESEARCH && 'tablet:py-[40px]'}`}
+          className={`relative flex w-full items-center justify-center py-[30px] desktop:py-[60px] ${type === POST_TYPE.RESEARCH && 'tablet:py-[40px]'}`}
         >
-          <span className='p-[10px] font-proxima text-[16px] text-white bg-text-dark rounded-[2px] z-[5] tablet:text-[20px]'>
+          <span className='z-[5] rounded-[2px] bg-text-dark p-[10px] font-proxima text-[16px] text-white tablet:text-[20px]'>
             {type ? type : POST_TYPE.NOTES}
           </span>
           <Image
@@ -143,20 +143,22 @@ export default function BlogSlug(props: { params: { slug: string } }) {
             width={300}
             height={400}
             alt='line'
-            className='w-full h-[4px] absolute z-[1]'
+            className='absolute z-[1] h-[4px] w-full'
           />
         </div>
         {type === POST_TYPE.RESEARCH ? (
-          <span className='mb-[20px] hidden font-proxima text-[16px] text-text-dark leading-[1.25] opacity-[50%] desktop:block'>
+          <span className='mb-[20px] hidden font-proxima text-[16px] leading-[1.25] text-text-dark opacity-[50%] desktop:block'>
             Reading time: {readingTime}
           </span>
         ) : (
-          <span className='relative mb-[20px] block font-proxima text-[16px] text-text-dark leading-[1.25] z-[10] opacity-[50%]'>
+          <span className='relative z-[10] mb-[20px] block font-proxima text-[16px] leading-[1.25] text-text-dark opacity-[50%]'>
             {date}
           </span>
         )}
         <div className=''>
-          <h1 className='font-proxima font-bold text-[28px] text-text-dark leading-[1.1]'>
+          <h1
+            className={`font-proxima text-[28px] font-bold leading-[1.1] text-text-dark ${type === POST_TYPE.MANIFESTO && 'mb-[40px] tablet:mb-[40px] desktop:mb-[60px]'} `}
+          >
             {title}
           </h1>
           <div className='flex flex-col tablet:flex-col-reverse'>
@@ -165,11 +167,11 @@ export default function BlogSlug(props: { params: { slug: string } }) {
             )}
             {type !== POST_TYPE.MANIFESTO && (
               <div
-                className={`flex flex-col tablet:flex-row tablet:justify-between tablet:mt-[20px] ${type === POST_TYPE.NOTES && 'mt-[20px] mb-[10px] tablet:mt-[40px] desktop:mt-[20px] desktop:mb-[40px]'}`}
+                className={`flex flex-col tablet:mt-[20px] tablet:flex-row tablet:justify-between ${type === POST_TYPE.NOTES && 'mb-[10px] mt-[20px] tablet:mt-[40px] desktop:mb-[40px] desktop:mt-[20px]'}`}
               >
                 <AuthorInfo image={authorImage} name={authorName} date={date} />
                 {type === POST_TYPE.RESEARCH && (
-                  <div className='mt-[20px] py-[12px] tablet:mt-0 tablet:p-[0] tablet:ml-[auto]'>
+                  <div className='mt-[20px] py-[12px] tablet:ml-[auto] tablet:mt-0 tablet:p-[0]'>
                     <SocialFollow isRight />
                   </div>
                 )}
@@ -178,16 +180,16 @@ export default function BlogSlug(props: { params: { slug: string } }) {
           </div>
         </div>
         <article
-          className={`prose prose-p:text-[16px] prose-li:text-[16px] max-w-[100%] pb-[30px] w-full text-white tablet:pb-[40px] desktop:pb-[60px]`}
+          className={`prose prose-p:text-[16px] ${type === POST_TYPE.MANIFESTO && 'manifesto-list'} w-full max-w-[100%] pb-[30px] text-white prose-li:text-[16px] tablet:pb-[40px] desktop:pb-[60px]`}
         >
           <Markdown
-            className={`${styles.markdown} ${type === POST_TYPE.RESEARCH && styles.research} w-full font-proxima z-20`}
+            className={`${styles.markdown} ${type === POST_TYPE.RESEARCH && styles.research} z-20 w-full font-proxima`}
           >
             {allPosts}
           </Markdown>
         </article>
         <SocialFollow />
-        <div className='mt-[30px] pb-[40px] relative z-[5] desktop:bp-0'>
+        <div className='desktop:bp-0 relative z-[5] mt-[30px] pb-[40px]'>
           <Featured slug={slug} posts={getAllPosts()} />
         </div>
       </div>

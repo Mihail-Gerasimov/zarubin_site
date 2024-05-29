@@ -8,12 +8,12 @@ export default function Home() {
 
   return (
     <>
-      <main className='mt-[80px] pt-[30px] w-full'>
-        <div className='backImage w-full tablet:py-[31px] desktop:py-[48px] flex flex-col items-center gap-[20px]'>
-          <h1 className='text-[45px] leading-[1] uppercase font-unbound font-bold z-[5] tablet:text-[60px] desktop:text-[90px]'>
+      <main className='mt-[80px] w-full pt-[30px]'>
+        <div className='backImage flex w-full flex-col items-center gap-[20px] tablet:py-[31px] desktop:py-[48px]'>
+          <h1 className='z-[5] font-unbound text-[45px] font-bold uppercase leading-[1] tablet:text-[60px] desktop:text-[90px]'>
             Insights
           </h1>
-          <p className='px-[70px] font-proxima text-[20px] text-[#00030C] leading-[1.2] z-[5] text-center'>
+          <p className='z-[5] px-[70px] text-center font-proxima text-[20px] leading-[1.2] text-[#00030C]'>
             Case studies, research and experience in detail
           </p>
         </div>

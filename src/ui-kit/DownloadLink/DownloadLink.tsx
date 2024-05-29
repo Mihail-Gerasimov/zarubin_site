@@ -11,11 +11,11 @@ export const DownloadLink = ({ link }: Props) => {
       href={link}
       download
       target='_blank'
-      className='mt-[12px] mb-[12px] p-[10px] w-[262px] flex items-start gap-[12px] bg-main-bg  rounded-[5px] tablet:w-[263px] tablet:mb-0 tablet:mt-[20px]'
+      className='mb-[12px] mt-[12px] flex w-[262px] items-start gap-[12px] rounded-[5px] bg-main-bg  p-[10px] tablet:mb-0 tablet:mt-[20px] tablet:w-[263px]'
     >
-      <DownloadIcon className='w-[20px] h-[auto]' />
+      <DownloadIcon className='h-[auto] w-[20px]' />
       <div className='flex flex-col gap-[4px] text-white'>
-        <span className='font-proxima font-bold text-[12px] leading-[1.33] tablet:text-[20px] tablet:leading-[1]'>
+        <span className='font-proxima text-[12px] font-bold leading-[1.33] tablet:text-[20px] tablet:leading-[1]'>
           Download the research
         </span>
         <span className='font-proxima text-[12px] leading-[1.16]'>

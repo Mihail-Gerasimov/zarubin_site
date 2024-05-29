@@ -28,7 +28,7 @@ export const Pagination = ({
   const isPrevtDisable = currentPage !== 1;
 
   return (
-    <div className='w-full flex items-center justify-center gap-[4px]'>
+    <div className='flex w-full items-center justify-center gap-[4px]'>
       <button
         type='button'
         onClick={prevPage}
@@ -36,7 +36,7 @@ export const Pagination = ({
         disabled={!isPrevtDisable}
       >
         <Arrow
-          className={`w-[20px] h-[auto] fill-text-dark rotate-[180deg] ${isPrevtDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
+          className={`h-[auto] w-[20px] rotate-[180deg] fill-text-dark ${isPrevtDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
         />
         <span
           className={`text-[18px] leading-[1.3] ${isPrevtDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
@@ -50,7 +50,7 @@ export const Pagination = ({
             <li key={item}>
               <button
                 type='button'
-                className={`px-[16px] py-[12px] h-[48px] text-[18px] text-text-dark bg-btn-col rounded-[8px] ${currentPage === item && 'bg-white'}`}
+                className={`h-[48px] rounded-[8px] bg-btn-col px-[16px] py-[12px] text-[18px] text-text-dark ${currentPage === item && 'bg-white'}`}
                 onClick={() => paginate(item)}
               >
                 {item}
@@ -62,7 +62,7 @@ export const Pagination = ({
       <button
         type='button'
         onClick={nextPage}
-        className='paginationBtn h-[48px] flex items-center gap-[4px]'
+        className='paginationBtn flex h-[48px] items-center gap-[4px]'
         disabled={!isNextDisable}
       >
         <span
