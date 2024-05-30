@@ -1,4 +1,3 @@
-import TelegramIcon from '@/public/assets/images/icons/telegram.svg';
 import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
 import { menuListLayer } from '@/src/utils/menuListLayer';
 import classNames from 'classnames';
@@ -42,13 +41,6 @@ export const MobileMenu = ({ isOpen, onClick }: Props) => {
               className='text-main-black font-proxima text-[22px] font-bold leading-[1.1] tablet:text-[32px]'
             >
               hello@digitalburo.tech
-            </Link>
-            <Link
-              href='https://t.me/zarubin_vs'
-              className='text-main-black flex items-center gap-[12px] font-proxima text-[16px] tablet:text-[26px]'
-            >
-              <TelegramIcon className='h-[auto] w-[30px] text-[16px] leading-[1.25]' />
-              Свяжитесь с нами в Telegram
             </Link>
           </div>
         </div>

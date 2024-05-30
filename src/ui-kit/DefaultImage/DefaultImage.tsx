@@ -9,6 +9,7 @@ export const DefaultImage = () => {
       width={300}
       height={150}
       className='absolute right-[50%] top-[50%] h-[102px] w-[auto] translate-x-[50%] translate-y-[-50%] tablet:h-[173px]'
+      unoptimized
     />
   );
 };
