@@ -8,7 +8,8 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Insights – Zarubin&Co – Blog',
+  title:
+    'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
   description: 'Case studies, research and experience in detail',
   metadataBase: new URL('https://blog.zarubin.co.uk/'),
   icons: {
@@ -16,8 +17,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     ...openGraphImage,
-    title: 'Insights – Zarubin&Co – Blog',
-    description: 'Case studies, research and experience in detail',
+    title:
+      'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
+    description: 'Read. Think. Grow.',
   },
 };
 

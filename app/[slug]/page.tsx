@@ -80,7 +80,7 @@ export default function BlogSlug(props: { params: { slug: string } }) {
   } = post.data;
   const image = post.data.image
     ? post.data.image
-    : '/assets/images/post/frame_2.png';
+    : '/assets/images/banner/default_logo.png';
 
   const hashtagRegex = /#[A-Za-z_]+/g;
   const regexFont = /<font color='(.+?)'>(.+?)<\/font>/g;
