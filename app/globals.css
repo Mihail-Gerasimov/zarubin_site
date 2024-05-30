@@ -85,7 +85,6 @@ a {
 
   .mainContainer {
     position: relative;
-    overflow: hidden;
     background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--main-white) 150px);
   }
 
@@ -111,6 +110,11 @@ a {
     padding: 12px 8px;
     border-radius: 8px;
     background-color: var(--pagination-col);
+  }
+
+  .stickyLink {
+    position: sticky;
+    top: calc(100vh - 68px);
   }
 
   .manifesto-list {

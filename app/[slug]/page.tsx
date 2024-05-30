@@ -118,7 +118,7 @@ export default function BlogSlug(props: { params: { slug: string } }) {
     });
 
   return (
-    <main className='mainContainer relative mt-[80px] w-full  px-[10px] tablet:px-[40px]'>
+    <main className='mainContainer mt-[80px] w-full px-[10px] pb-[30px] tablet:px-[40px] tablet:pb-[40px] desktop:pb-[60px]'>
       {type !== POST_TYPE.MANIFESTO && (
         <div
           className='absolute left-0 top-0 h-[150px] w-full bg-cover bg-center bg-no-repeat opacity-[40%] tablet:h-[302px] laptop:h-[342px]'
@@ -187,7 +187,7 @@ export default function BlogSlug(props: { params: { slug: string } }) {
           </Markdown>
         </article>
         <SocialFollow />
-        <div className='desktop:bp-0 relative z-[5] mt-[30px] pb-[40px]'>
+        <div className='desktop:bp-0 relative z-[5] mt-[30px] pb-[20px]'>
           <Featured slug={slug} posts={getAllPosts()} />
         </div>
       </div>
