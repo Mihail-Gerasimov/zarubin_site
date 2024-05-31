@@ -7,7 +7,7 @@ import Link from 'next/link';
 interface Data {
   title: string;
   description: string;
-  image: string;
+  image: string | undefined;
   date: string;
   tag: string | undefined;
   slug: string;
@@ -21,6 +21,7 @@ export const BlogCard = ({ post }: Props) => {
   const url = process.env.NODE_ENV === 'development' ? '' : BASE_URL;
 
   const date = formattedDate(post.date);
+  // const date = post.date;
 
   return (
     <Link href={`/${post.slug}`} className='w-full'>

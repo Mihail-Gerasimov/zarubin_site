@@ -7,7 +7,7 @@ import { Pagination } from '../Pagination/Pagination';
 interface Posts {
   title: string;
   description: string;
-  image: string;
+  image: string | undefined;
   slug: string;
   date: string;
   tag: string | undefined;

@@ -3,7 +3,7 @@ import { DateTime } from 'luxon';
 interface Post {
   title: string;
   description: string;
-  image: string;
+  image: string | undefined;
   slug: string;
   date: string;
   tag: string | undefined;
