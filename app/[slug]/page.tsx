@@ -69,6 +69,7 @@ export default function BlogSlug(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   const date = formattedDate(post.data.date);
+  // const date = post.data.date;
   const {
     type,
     tag,

@@ -4,7 +4,7 @@ import matter from 'gray-matter';
 interface PostMetadata {
   title: string;
   description: string;
-  image: string;
+  image: string | undefined;
   slug: string;
   date: string;
   type: string | undefined;

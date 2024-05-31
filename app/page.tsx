@@ -5,6 +5,7 @@ import { postsSorting } from '@/src/utils/postsSorting';
 export default function Home() {
   const postMetadata = getPostMetadata('src/posts');
   const sortedPosts = postsSorting(postMetadata);
+  // const sortedPosts = postMetadata;
 
   return (
     <>
