@@ -31,11 +31,8 @@
   border-radius: 100%;
 }
 
-.markdown p,
-.markdown li {
-  font-size: 16x;
-  columns: var(--text-dark);
-  opacity: 0.8;
+.markdown > p > img {
+  opacity: 1;
 }
 
 .markdown strong {

@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [{ source: '/', destination: '/blog', permanent: true }];
+  },
   reactStrictMode: true,
   webpack: (config) => {
     config.module.rules.push({
