@@ -65,11 +65,11 @@ export async function generateMetadata({
   };
 }
 
-export default function BlogSlug(props: { params: { slug: string } }) {
+export default function MainBlogSlug(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const post = getPostContent(slug);
   const date = formattedDate(post.data.date);
-  // const date = post.data.date;
+
   const {
     type,
     tag,
@@ -129,7 +129,7 @@ export default function BlogSlug(props: { params: { slug: string } }) {
           }}
         ></div>
       )}
-      <BackLink linkName='/' />
+      <BackLink linkName='/blog' />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div
           className={`relative flex w-full items-center justify-center py-[30px] desktop:py-[60px] ${type === POST_TYPE.RESEARCH && 'tablet:py-[40px]'}`}
@@ -179,7 +179,7 @@ export default function BlogSlug(props: { params: { slug: string } }) {
           </div>
         </div>
         <article
-          className={`prose prose-p:text-[16px] ${type === POST_TYPE.MANIFESTO && 'manifesto-list'} w-full max-w-[100%] pb-[30px] text-white prose-li:text-[16px] tablet:pb-[40px] desktop:pb-[60px]`}
+          className={`prose prose-p:text-[16px] ${type === POST_TYPE.MANIFESTO && 'manifesto-list'} w-full max-w-[100%] pb-[30px] text-white prose-p:text-text-dark/80 prose-li:text-[16px] prose-li:text-text-dark/80 tablet:pb-[40px] desktop:pb-[60px]`}
         >
           <Markdown
             className={`${styles.markdown} ${type === POST_TYPE.RESEARCH && styles.research} z-20 w-full font-proxima`}
