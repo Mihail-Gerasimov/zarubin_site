@@ -5,7 +5,7 @@ const nextConfig = {
       { source: '/', destination: '/blog', permanent: true },
       {
         source: 'https://blog.zarubin.co.uk/',
-        destination: '/blog',
+        destination: 'https://blog.zarubin.co.uk/blog',
         permanent: true,
       },
     ];
