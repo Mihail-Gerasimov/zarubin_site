@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async redirects() {
-    return [{ source: '/', destination: '/blog', permanent: true }];
+    return [
+      { source: '/', destination: '/blog', permanent: true },
+      {
+        source: 'https://blog.zarubin.co.uk/',
+        destination: '/blog',
+        permanent: true,
+      },
+    ];
   },
   reactStrictMode: true,
   webpack: (config) => {
