@@ -1,7 +1,7 @@
 ---
 title: '§ 1. The Art of Custom Development'
 description: 'As I enter the 15th year of my professional journey, reflecting on my experiences feels both nostalgic and enlightening.'
-image: ''
+image: '/assets/images/post/manifesto/manifesto_1.png'
 date: '13-03-2023'
 type: 'Manifesto'
 tag: 'Management'

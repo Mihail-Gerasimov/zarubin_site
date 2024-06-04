@@ -1,7 +1,7 @@
 ---
 title: '§ 6. How Programming Languages Are Chosen in Business'
 description: 'In the world of development, there are many programming languages, and their number is constantly growing'
-image: ''
+image: '/assets/images/post/manifesto/manifesto_6.png'
 date: '21-03-2024'
 type: 'Manifesto'
 tag: 'Management'

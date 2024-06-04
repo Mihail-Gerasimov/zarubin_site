@@ -8,6 +8,7 @@ interface Data {
   title: string;
   description: string;
   image: string | undefined;
+  type: string | null | undefined;
   date: string;
   tag: string | undefined;
   slug: string;
@@ -37,7 +38,7 @@ export const BlogCard = ({ post }: Props) => {
               unoptimized
             />
           ) : (
-            <DefaultImage />
+            <DefaultImage type={post.type} />
           )}
         </div>
         <div className='flex flex-col items-start gap-[24px] rounded-[12px] bg-main-beige p-[14px_16px_16px] tablet:gap-[24px] tablet:p-[40px_24px_24px] desktop:p-[40px]'>

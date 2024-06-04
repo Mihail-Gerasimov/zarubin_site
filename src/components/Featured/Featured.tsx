@@ -62,7 +62,11 @@ export const Featured = ({ slug, posts }: Props) => {
       </div>
       <div className='flex flex-col gap-[20px] tablet:grid tablet:grid-cols-2'>
         {currentPosts.map((item) => (
-          <Link key={item.slug} href={`/${item.slug}`} className='flex flex-1'>
+          <Link
+            key={item.slug}
+            href={`/blog/${item.slug}`}
+            className='flex flex-1'
+          >
             <SmallBlogCard
               tag={item.tag ? item.tag : ''}
               title={item.title}

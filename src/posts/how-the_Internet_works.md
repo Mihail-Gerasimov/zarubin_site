@@ -1,7 +1,7 @@
 ---
 title: '§ 2. How the Internet Works'
 description: 'This question is designed to understand how a person thinks.'
-image: ''
+image: '/assets/images/post/manifesto/manifesto_2.png'
 date: '21-03-2024'
 type: 'Manifesto'
 tag: 'Management'
