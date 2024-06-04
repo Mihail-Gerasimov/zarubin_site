@@ -7,7 +7,7 @@ interface PostMetadata {
   image: string | undefined;
   slug: string;
   date: string;
-  type: string | undefined;
+  type: string | undefined | null;
   tag: string | undefined;
   authorName: string;
   authorImage: string;
