@@ -33,6 +33,7 @@
 
 .markdown > p > img {
   opacity: 1;
+  width: 100%;
 }
 
 .markdown strong {

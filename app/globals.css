@@ -51,6 +51,7 @@ a {
 
 @layer components {
   body {
+    --primary: #00030c;
     --bg-color: #010c2c;
     --second-bg-color: #f7f7f7;
     --text-color: #94a3b8;
@@ -74,6 +75,20 @@ a {
   .article-description {
     font-size: 35px;
   }
+
+  .text-stroke {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--main-white);
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @layer components {
@@ -84,6 +99,14 @@ a {
     background-position: top;
     background-size: cover;
     background-color: var(--main-white);
+    background-image: url('/assets/images/banner/main_banner.png');
+  }
+
+  .unlickSectionBg {
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url('/assets/images/banner/main_banner.png');
   }
 

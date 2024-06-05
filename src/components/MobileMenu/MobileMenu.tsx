@@ -7,12 +7,19 @@ import styles from './MobileMenu.module.css';
 interface Props {
   isOpen: boolean;
   onClick: () => void;
+  dark?: boolean;
 }
 
-export const MobileMenu = ({ isOpen, onClick }: Props) => {
+export const MobileMenu = ({ isOpen, onClick, dark = true }: Props) => {
   return (
-    <div className={classNames(styles.menuWeapper, isOpen && styles.active)}>
-      <Logo />
+    <div
+      className={classNames(
+        styles.menuWeapper,
+        dark ? styles.dark : styles.light,
+        isOpen && styles.active,
+      )}
+    >
+      <Logo dark={dark} />
       <div className={styles.content}>
         <div className={styles.listWrapper}>
           <ul className={styles.menuList}>
@@ -20,7 +27,7 @@ export const MobileMenu = ({ isOpen, onClick }: Props) => {
               <li key={item.id} onClick={onClick}>
                 <Link
                   href={item.link}
-                  className={`${styles.menuLink} font-proxima`}
+                  className={`${styles.menuLink} ${dark ? styles.dark : styles.light} font-proxima`}
                 >
                   {item.name}
                 </Link>
@@ -31,14 +38,14 @@ export const MobileMenu = ({ isOpen, onClick }: Props) => {
         <div className={styles.contactWrapper}>
           <Link
             href=''
-            className={`${styles.contactBtn} font-proxima text-[20px] font-bold leading-[1]`}
+            className={`${styles.contactBtn} ${dark ? styles.dark : styles.light} font-proxima text-[20px] font-bold leading-[1]`}
           >
             Contact us
           </Link>
           <div className='flex flex-col gap-[12px]'>
             <Link
               href='mailto:hello@digitalburo.tech'
-              className='text-main-black font-proxima text-[22px] font-bold leading-[1.1] tablet:text-[32px]'
+              className={`${dark ? 'text-white' : 'text-main-black'} font-proxima text-[22px] font-bold leading-[1.1] tablet:text-[32px]`}
             >
               hello@digitalburo.tech
             </Link>

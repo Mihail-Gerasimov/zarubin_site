@@ -11,7 +11,7 @@ export const DownloadLink = ({ link }: Props) => {
       href={link}
       download
       target='_blank'
-      className='mb-[12px] mt-[12px] flex w-[262px] items-start gap-[12px] rounded-[5px] bg-main-bg  p-[10px] tablet:mb-0 tablet:mt-[20px] tablet:w-[263px]'
+      className='flex w-[262px] items-start gap-[12px] rounded-[5px] bg-main-bg  p-[10px] tablet:w-[263px]'
     >
       <DownloadIcon className='h-[auto] w-[20px]' />
       <div className='flex flex-col gap-[4px] text-white'>

@@ -7,3 +7,10 @@ export interface Post {
   date: string;
   tag: string | undefined;
 }
+
+export interface IImage {
+  src: string;
+  height: number;
+  width: number;
+  blurDataURL?: string;
+}

@@ -1,12 +1,21 @@
 import LogoIcon from '@/public/assets/images/icons/dark_logo.svg';
+import LightLogoIcon from '@/public/assets/images/icons/light_logo.svg';
 // import { BASE_URL } from '@/src/utils/alias';
 
 // const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '/';
 
-export const Logo = () => {
+interface Props {
+  dark?: boolean;
+}
+
+export const Logo = ({ dark = true }: Props) => {
   return (
     <a href='/'>
-      <LogoIcon className='h-[40px] w-[auto] tablet:h-[62px]' />
+      {dark ? (
+        <LightLogoIcon className='h-[40px] w-[auto] tablet:h-[62px]' />
+      ) : (
+        <LogoIcon className='h-[40px] w-[auto] tablet:h-[62px]' />
+      )}
     </a>
   );
 };
