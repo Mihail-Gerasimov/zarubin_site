@@ -1,9 +1,12 @@
 import LinkArrowIcon from '@/public/assets/images/icons/link_arrow.svg';
 import solutionBg from '@/public/assets/images/main/solution_bg.png';
+import { BusinessSolving } from '@/src/components/BusinessSolving/BusinessSolving';
 import { ExpertiseCard } from '@/src/components/ExpertiseCard/ExpertiseCard';
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
 import { Industries } from '@/src/components/Industries/Industries';
+import { Insights } from '@/src/components/Main/Insights/Insights';
+import { TrustUs } from '@/src/components/Main/TrustUs/TrustUs';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import { LinkArrow } from '@/src/ui-kit/LinkArrow/LinkArrow';
 import { ExpertiseData } from '@/src/utils/DataLayers/ExpertiseData';
@@ -129,86 +132,43 @@ export default function Home() {
             <Industries />
           </div>
         </section>
-        <section>
-          <div>
-            <div>
-              <h2>Solving business problems</h2>
-              <div>
-                <button>{'<'}</button>
-                <button>{'>'}</button>
-              </div>
-            </div>
-            <div>
-              <ul>
-                <li>
-                  <span>Service</span>
-                </li>
-                <li>
-                  <span>#GridCapital</span>
-                </li>
-              </ul>
-              <h3>
-                In three weeks, we managed to set up the work process and start
-                finalizing the project
-              </h3>
-              <p>
-                We conducted a technical audit and a process audit in their IT
-                part
-              </p>
-              <Link href='#'>Go to the solution</Link>
-            </div>
+        <section id='business-problems' className='mt-[20px]'>
+          <div className='px-[10px] tablet:px-[40px] desktop:px-[80px]'>
+            <BusinessSolving />
           </div>
         </section>
-        <section id='Business Intelligence'>
-          <div>
-            <h2>
-              Where Leadership Meets <span>Business Intelligence</span>
-            </h2>
+        <section
+          id='business-intelligence'
+          className='mt-[40px] tablet:mt-[60px] desktop:mt-[80px]'
+        >
+          <div className='bussinesBg overflow-hidden px-[10px] py-[60px] text-right tablet:px-[40px] tablet:pb-[170px] tablet:pt-0 desktop:px-[80px] desktop:py-[100px]'>
+            <div className='relative z-30'>
+              <h2 className='font-unbound text-[32px] font-bold uppercase leading-[1.1] tablet:text-[60px] tablet:leading-[1] desktop-big:text-[90px]'>
+                Where Leadership Meets{' '}
+              </h2>
+              <h2 className='text-stroke font-unbound text-[32px] font-bold uppercase leading-[1.1] tablet:text-[60px] tablet:leading-[1] desktop:mb-[230px] desktop-big:text-[90px]'>
+                Business Intelligence
+              </h2>
+            </div>
+            <Image
+              width={400}
+              height={300}
+              src='/assets/images/main/bussines_bg.png'
+              alt=''
+              className='absolute right-[64px] top-[18px] h-[auto] w-[436px] tablet:right-0 tablet:top-[23px] tablet:w-full desktop:left-[-100px] desktop:h-[728px] desktop:w-[auto]'
+            />
           </div>
         </section>
-        <section id='insights'>
+        <section
+          id='insights'
+          className='mt-[40px] tablet:mt-[60px] desktop:mt-[80px]'
+        >
           <div>
-            <div>
-              <h2>Insights</h2>
-              <div>
-                <button>{'<'}</button>
-                <button>{'>'}</button>
-              </div>
-            </div>
-            <ul>
-              <li>
-                <span>SPORT</span>
-              </li>
-              <li>
-                <span>EXPERTISE</span>
-              </li>
-            </ul>
-            <h3>Top 15 Best Practices for Improving Metrics in Sports</h3>
-            <p>
-              Implement it in order to increase metrics and change the attitude
-              of the audience to the brand
-            </p>
-            <DownloadLink link='#' />
+            <Insights />
           </div>
         </section>
         <section id='clients'>
-          <div>
-            <h2>Trust us</h2>
-            <ul>
-              <li>
-                <Image src={'/'} width={80} height={40} alt='logo' />
-              </li>
-              <li>
-                <Image src={'/'} width={80} height={40} alt='logo' />
-              </li>
-              <li>
-                <Image src={'/'} width={80} height={40} alt='logo' />
-              </li>
-              <li>
-                <Image src={'/'} width={80} height={40} alt='logo' />
-              </li>
-            </ul>
-          </div>
+          <TrustUs />
         </section>
         <section id='feedback'>
           <div>

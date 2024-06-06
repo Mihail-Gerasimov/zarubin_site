@@ -54,6 +54,7 @@ const config: Config = {
         'main-bg': '#00030C',
         'main-blue': '#013EDF',
         'dark-blue': '#000A25',
+        'main-gray': 'rgba(255, 255, 255, 0.30)',
         'main-disabled': '#DCDDEB',
         dark: '#1B2541',
         'text-gray': 'rgba(1, 12, 44, 0.40)',
