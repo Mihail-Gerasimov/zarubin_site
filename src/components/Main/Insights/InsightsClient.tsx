@@ -7,9 +7,9 @@ import { InsightsCard } from './InsightsCard/InsightsCard';
 interface Post {
   title: string;
   description: string;
-  tag: string;
+  tag: string | undefined;
+  downloadLink?: string;
 }
-
 interface Props {
   posts: Post[];
 }

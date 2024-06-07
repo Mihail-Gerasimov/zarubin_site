@@ -12,7 +12,7 @@ export const InsightsCard = ({
   tag,
   title,
   description,
-  downloadLink,
+  downloadLink = '/',
 }: Props) => {
   const tags = tag?.split(' ');
 
@@ -31,7 +31,7 @@ export const InsightsCard = ({
       <p className={styles.description}>{description}</p>
       {tag === 'Management' && (
         <div className='mt-[25px]'>
-          <DownloadLink link={downloadLink ? downloadLink : '/'} />
+          <DownloadLink link={downloadLink} />
         </div>
       )}
     </div>
