@@ -14,7 +14,7 @@ interface Props {
   posts: Post[];
 }
 
-export const InsightsClient = ({ posts }) => {
+export const InsightsClient = ({ posts }: Props) => {
   const nextBtn = () => {
     console.log('next');
   };

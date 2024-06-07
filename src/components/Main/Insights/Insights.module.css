@@ -33,6 +33,10 @@
   overflow-x: scroll;
 }
 
+.cardsWrapper::-webkit-scrollbar {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .mainContainer {
     padding: 0 40px;
@@ -53,7 +57,7 @@
 
 @media (min-width: 1440px) {
   .mainContainer {
-    padding: 40px 40px;
+    padding: 40px 80px;
   }
 }
 

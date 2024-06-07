@@ -1,6 +1,6 @@
 import Arrow from '@/public/assets/images/icons/arrow.svg';
 import { BusinessProblemsData } from '@/src/utils/DataLayers/BusinessProblemsData';
-import { BusinessSolvingCard } from '../BusinessSolvingCard/BusinessSolvingCard';
+import { BusinessSolvingCard } from './BusinessSolvingCard/BusinessSolvingCard';
 
 export const BusinessSolving = () => {
   return (

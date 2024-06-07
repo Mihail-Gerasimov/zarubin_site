@@ -3,7 +3,7 @@
 import { IndustriesData } from '@/src/utils/DataLayers/IndustriesData';
 import Image from 'next/image';
 import { useState } from 'react';
-import { IndustriesCard } from '../IndustriesCard/IndustriesCard';
+import { IndustriesCard } from './IndustriesCard/IndustriesCard';
 
 export const Industries = () => {
   const [active, setActive] = useState(1);
