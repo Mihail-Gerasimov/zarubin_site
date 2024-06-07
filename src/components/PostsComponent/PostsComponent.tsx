@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { BlogCard } from '../BlogCard/BlogCard';
 import { Pagination } from '../Pagination/Pagination';
 
-interface Posts {
+export interface Posts {
   title: string;
   description: string;
   image: string | undefined;

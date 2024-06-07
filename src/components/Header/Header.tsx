@@ -8,8 +8,13 @@ import useMediaQuery from '@/src/utils/useMediaQuery';
 import { useEffect, useState } from 'react';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
 import { MainList } from '../NavList/MainList';
+// import { useParams } from 'next/navigation';
 
-export const Header = () => {
+interface Props {
+  dark?: boolean;
+}
+
+export const Header = ({ dark = true }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const isMobile = useMediaQuery('<desktop-l');
@@ -24,14 +29,20 @@ export const Header = () => {
   }, [isMobile]);
 
   return (
-    <header className='fixed top-0 z-20 flex h-[80px] w-full items-center bg-white px-[10px] tablet:px-[40px] desktop:px-[80px]'>
-      <Logo />
+    <header
+      className={`fixed top-0 z-20 flex h-[80px] w-full items-center ${dark ? 'bg-main-bg' : 'bg-white'} px-[10px] tablet:px-[40px] desktop:px-[80px]`}
+    >
+      <Logo dark={dark} />
       <nav className='mx-[auto] w-full'>
-        <MainList list={menuListLayer} />
+        <MainList list={menuListLayer} dark={dark} />
       </nav>
       <ContactUsBtn />
-      <MobileMenu isOpen={isOpen} onClick={() => setIsOpen(false)} />
-      <BurgerIcon isOpen={isOpen} setIsOpen={handleOpen} />
+      <MobileMenu
+        isOpen={isOpen}
+        onClick={() => setIsOpen(false)}
+        dark={dark}
+      />
+      <BurgerIcon isOpen={isOpen} setIsOpen={handleOpen} dark={dark} />
     </header>
   );
 };

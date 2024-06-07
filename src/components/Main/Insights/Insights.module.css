@@ -1,0 +1,68 @@
+.mainContainer {
+  padding: 40px 10px;
+  background-image: url(/assets/images/main/insight_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: 'Unbounded';
+  font-size: 45px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.arrowWrapper {
+  display: none;
+}
+
+.cardsWrapper {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  overflow-x: scroll;
+}
+
+.cardsWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .mainContainer {
+    padding: 0 40px;
+  }
+
+  .title {
+    line-height: 1.3;
+  }
+
+  .arrowWrapper {
+    display: block;
+  }
+
+  .cardsWrapper {
+    gap: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mainContainer {
+    padding: 40px 80px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .mainContainer {
+    padding: 40px 80px;
+  }
+}

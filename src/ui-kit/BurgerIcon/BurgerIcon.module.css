@@ -13,6 +13,13 @@
   height: 5px;
   width: 40px;
   transform: scale(1);
+}
+
+.burgerLight {
+  background-color: var(--primary);
+}
+
+.burgerDark {
   background-color: white;
 }
 
@@ -27,27 +34,57 @@
 .burger::after {
   top: -5px;
   width: 100%;
-  background-color: var(--text-dark);
+  /* background-color: var(--text-dark); */
 }
 
 .burger::before {
   bottom: -5px;
   right: 0;
   width: 80%;
+  /* background-color: var(--main-blue); */
+}
+
+.burgerLight::after {
+  background-color: white;
+}
+
+.burgerLight::before {
+  background-color: #7cffcd;
+}
+
+.burgerDark::after {
+  background-color: var(--primary);
+}
+
+.burgerDark::before {
   background-color: var(--main-blue);
 }
 
 .burger.active::before {
   bottom: 0;
   width: 100%;
-  background-color: var(--text-dark);
   transform: rotate(45deg) translate(0, 0);
 }
 
 .burger.active::after {
   top: 0;
-  background-color: var(--text-dark);
   transform: rotate(-45deg) translate(0, 0);
+}
+
+.burgerLight.active::after {
+  background-color: white;
+}
+
+.burgerLight.active::before {
+  background-color: white;
+}
+
+.burgerDark.active::after {
+  background-color: var(--primary);
+}
+
+.burgerDark.active::before {
+  background-color: var(--primary);
 }
 
 @media (min-width: 1440px) {
