@@ -1,8 +1,32 @@
-import Arrow from '@/public/assets/images/icons/arrow.svg';
+'use client';
+
+import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import { BusinessProblemsData } from '@/src/utils/DataLayers/BusinessProblemsData';
+import { useRef } from 'react';
+import styles from './BusinessSolving.module.css';
 import { BusinessSolvingCard } from './BusinessSolvingCard/BusinessSolvingCard';
 
 export const BusinessSolving = () => {
+  const parentRef = useRef<HTMLDivElement>(null);
+  const scrollStep = 688;
+
+  const nextSlide = () => {
+    if (!parentRef.current) return;
+    const { scrollLeft } = parentRef.current;
+    parentRef.current.scrollTo({
+      left: scrollLeft + scrollStep,
+      behavior: 'smooth',
+    });
+  };
+  const prevSlide = () => {
+    if (!parentRef.current) return;
+    const { scrollLeft } = parentRef.current;
+    parentRef.current.scrollTo({
+      left: scrollLeft - scrollStep,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div>
       <div className='flex items-start justify-between'>
@@ -10,15 +34,13 @@ export const BusinessSolving = () => {
           Solving business problems
         </h2>
         <div className='hidden items-center gap-[16px] tablet:flex'>
-          <button className='rounded-[6px] bg-main-blue'>
-            <Arrow className='h-[50px] w-[50px] rotate-[180deg] fill-white' />
-          </button>
-          <button className='rounded-[6px] bg-main-blue'>
-            <Arrow className='w-[50px]] h-[50px] fill-white' />
-          </button>
+          <NextPrevBtn nextPage={nextSlide} prevPage={prevSlide} />
         </div>
       </div>
-      <div className='hide-scrollbar mt-[40px] flex gap-[20px] overflow-scroll tablet:gap-[40px]'>
+      <div
+        className={`${styles.solvingList} hide-scrollbar mt-[40px] flex gap-[20px] overflow-scroll tablet:gap-[40px]`}
+        ref={parentRef}
+      >
         {BusinessProblemsData.map((item) => (
           <BusinessSolvingCard
             key={item.id}

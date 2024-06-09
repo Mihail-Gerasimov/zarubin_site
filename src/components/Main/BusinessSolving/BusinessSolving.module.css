@@ -1,0 +1,7 @@
+.solvingList {
+  scroll-snap-type: x proximity;
+}
+
+.solvingList > * {
+  scroll-snap-align: start;
+}
