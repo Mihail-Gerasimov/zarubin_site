@@ -1,6 +1,7 @@
 'use client';
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
+import { useRef } from 'react';
 import styles from './Insights.module.css';
 import { InsightsCard } from './InsightsCard/InsightsCard';
 
@@ -15,12 +16,24 @@ interface Props {
 }
 
 export const InsightsClient = ({ posts }: Props) => {
+  const parentRef = useRef<HTMLDivElement>(null);
+
   const nextBtn = () => {
-    console.log('next');
+    if (!parentRef.current) return;
+    const { scrollLeft } = parentRef.current;
+    parentRef.current.scrollTo({
+      left: scrollLeft + 452,
+      behavior: 'smooth',
+    });
   };
 
   const prevBtn = () => {
-    console.log('prev');
+    if (!parentRef.current) return;
+    const { scrollLeft } = parentRef.current;
+    parentRef.current.scrollTo({
+      left: scrollLeft - 452,
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -31,7 +44,7 @@ export const InsightsClient = ({ posts }: Props) => {
           <NextPrevBtn nextPage={nextBtn} prevPage={prevBtn} />
         </div>
       </div>
-      <div className={styles.cardsWrapper}>
+      <div className={styles.cardsWrapper} ref={parentRef}>
         {posts.slice(6).map((post, idx) => (
           <InsightsCard
             key={idx}
