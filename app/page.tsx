@@ -36,7 +36,10 @@ export default function Home() {
             <Industries />
           </div>
         </section>
-        <section id='business-problems' className='mt-[20px]'>
+        <section
+          id='business-problems'
+          className='mt-[40px] tablet:mt-[60px] desktop:mt-[80px]'
+        >
           <div className='px-[10px] tablet:px-[40px] desktop:px-[80px]'>
             <BusinessSolving />
           </div>

@@ -10,21 +10,18 @@ export const Hero = () => {
   return (
     <div className='px-[10px] tablet:px-[20px] desktop:pt-[60px]'>
       <div
-        className={`relative ${styles.heroContainer} flex flex-col gap-[60px] px-[20px] py-[40px] tablet:px-[40px] desktop:flex-row desktop:px-[60px] desktop:py-[145px]`}
-        // style={{
-        //   backgroundImage: 'url(/assets/images/main/hero_bg.png)',
-        // }}
+        className={`relative ${styles.heroContainer} flex flex-col gap-[60px] px-[20px] py-[40px] tablet:px-[40px] desktop:flex-row desktop:justify-between desktop:px-[60px] desktop:py-[145px]`}
       >
         <div className='z-[5] flex flex-col gap-[12px] tablet:gap-[24px] desktop:gap-[30px] desktop:py-[px]'>
-          <h1 className='desctop-hard:text-[100px] z-[5] font-unbound text-[28px] font-bold leading-[1.14] tablet:text-[60px]'>
+          <h1 className='desctop-hard:text-[100px] z-[5] font-unbound text-[28px] font-bold uppercase leading-[1.14] tablet:text-[60px] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px]'>
             Business solutions and expertise
           </h1>
           <p className='z-[5] font-proxima text-[28px] font-bold leading-[1.14] tablet:text-[36px]'>
             Digital business transformation
           </p>
           <Link
-            href='#'
-            className='z-[5] w-fit rounded-[6px] bg-[#7CFFCD] px-[32px] py-[13px] font-proxima text-[20px] font-bold leading-[1] text-text-dark'
+            href='/blog'
+            className='button-hover z-[5] w-fit rounded-[6px] bg-[#7CFFCD] px-[32px] py-[13px] font-proxima text-[20px] font-bold leading-[1] text-text-dark '
           >
             Go to Insights
           </Link>
@@ -37,7 +34,7 @@ export const Hero = () => {
             <p className='mt-[12px] font-proxima text-[20px] leading-[1.2]'>{`The stories of solving our clients' cases`}</p>
             <Link
               href='#'
-              className='mt-[40px] flex h-[30px] w-fit items-center justify-center gap-[10px] rounded-[6px] bg-main-blue px-[10px] font-proxima text-[18px] font-bold leading-[1.33] tablet:h-[50px]'
+              className='mt-[40px] flex h-[30px] w-fit items-center justify-center gap-[10px] rounded-[6px] bg-main-blue px-[10px] font-proxima text-[18px] font-bold leading-[1.33] hover:bg-main-blue-hover tablet:h-[50px]'
             >
               Go to solutions
               <LinkArrowIcon className='h-[18px] w-[18px]' />

@@ -30,7 +30,7 @@ export const Header = ({ dark = true }: Props) => {
 
   return (
     <header
-      className={`fixed top-0 z-20 flex h-[80px] w-full items-center ${dark ? 'bg-main-bg' : 'bg-white'} px-[10px] tablet:px-[40px] desktop:px-[80px]`}
+      className={`fixed top-0 z-50 flex h-[80px] w-full items-center ${dark ? 'bg-main-bg' : 'bg-white'} px-[10px] tablet:px-[40px] desktop:px-[80px]`}
     >
       <Logo dark={dark} />
       <nav className='mx-[auto] w-full'>

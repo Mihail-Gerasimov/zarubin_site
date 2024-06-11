@@ -8,6 +8,7 @@ interface Post {
   slug: string;
   date: string;
   tag: string | undefined;
+  downloadLink: string | undefined;
 }
 
 export const postsSorting = (posts: Post[]) => {
