@@ -1,23 +1,28 @@
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
+import Link from 'next/link';
 import styles from './InsightsCard.module.css';
 
 interface Props {
   title: string;
   tag: string | undefined;
   description: string;
-  downloadLink?: string;
+  downloadLink: string | undefined;
+  slug: string;
+  type: string | undefined | null;
 }
 
 export const InsightsCard = ({
   tag,
   title,
   description,
-  downloadLink = '/',
+  downloadLink,
+  slug,
+  type,
 }: Props) => {
   const tags = tag?.split(' ');
 
   return (
-    <div className={styles.cardContainer}>
+    <Link href={`/blog/${slug}`} className={styles.cardContainer}>
       {tags && (
         <div className={styles.tagWrapper}>
           {tags.map((item, idx) => (
@@ -29,11 +34,11 @@ export const InsightsCard = ({
       )}
       <h3 className={`${styles.title}`}>{title}</h3>
       <p className={styles.description}>{description}</p>
-      {tag === 'Management' && (
+      {type === 'Research' && downloadLink && (
         <div className='mt-[25px]'>
           <DownloadLink link={downloadLink} />
         </div>
       )}
-    </div>
+    </Link>
   );
 };

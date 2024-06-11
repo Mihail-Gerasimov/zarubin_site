@@ -53,6 +53,7 @@ const config: Config = {
         'main-beige': '#F7F7F7',
         'main-bg': '#00030C',
         'main-blue': '#013EDF',
+        'main-blue-hover': '#1858FD',
         'dark-blue': '#000A25',
         'main-gray': 'rgba(255, 255, 255, 0.30)',
         'main-disabled': '#DCDDEB',

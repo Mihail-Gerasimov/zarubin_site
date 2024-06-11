@@ -1,7 +1,7 @@
 .formWrapper {
   padding: 40px 20px;
   border-radius: 5px;
-  background-color: var(--dark-blue);
+  background-color: var(--second-blue);
 }
 
 .title {
@@ -30,22 +30,22 @@
 .input {
   width: 100%;
   padding-bottom: 8px;
-  font-size: 20px;
+  font-size: 16px;
   color: var(--main-white);
-  border-bottom: 1px solid #003cce;
-  background-color: var(--dark-blue);
+  border-bottom: 1px solid #0066ff;
+  background-color: var(--second-blue);
   resize: none;
 }
 
 .input::placeholder {
-  font-size: 26px;
+  font-size: 16px;
   line-height: 1.14;
   color: var(--main-white);
   opacity: 50%;
 }
 
 .input:focus {
-  background-color: var(--dark-blue);
+  background-color: var(--second-blue);
 }
 
 .formBtn {
@@ -62,6 +62,12 @@
   line-height: 1;
   color: var(--main-white);
   background-color: var(--main-blue);
+  transition: all 0.2s ease-in-out;
+}
+
+.formBtn:hover {
+  transform: scale(0.99);
+  background-color: var(--blue-hover);
 }
 
 .arrow {

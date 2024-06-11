@@ -15,7 +15,6 @@ export const FeedbackClient = () => {
   const mediaQuery = useMediaQuery('<tablet');
 
   const feedback = FeedbackData;
-  console.log(feedback[contentIndex]);
 
   const next = () => {
     if (fade) return;

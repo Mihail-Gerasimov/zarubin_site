@@ -2,13 +2,25 @@
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import { BusinessProblemsData } from '@/src/utils/DataLayers/BusinessProblemsData';
-import { useRef } from 'react';
+import useMediaQuery from '@/src/utils/useMediaQuery';
+import { useEffect, useRef, useState } from 'react';
 import styles from './BusinessSolving.module.css';
 import { BusinessSolvingCard } from './BusinessSolvingCard/BusinessSolvingCard';
 
 export const BusinessSolving = () => {
   const parentRef = useRef<HTMLDivElement>(null);
-  const scrollStep = 688;
+  const cardRef = useRef<HTMLDivElement>(null);
+  const mediaQuery = useMediaQuery('<tablet');
+  console.log(mediaQuery);
+
+  const [scrollStep, setScrollStep] = useState(320);
+
+  console.log(cardRef?.current?.scrollWidth);
+
+  useEffect(() => {
+    if (!cardRef.current) return;
+    setScrollStep(cardRef.current.scrollWidth);
+  }, []);
 
   const nextSlide = () => {
     if (!parentRef.current) return;
@@ -38,18 +50,19 @@ export const BusinessSolving = () => {
         </div>
       </div>
       <div
-        className={`${styles.solvingList} hide-scrollbar mt-[40px] flex gap-[20px] overflow-scroll tablet:gap-[40px]`}
+        className={`${styles.solvingList} hide-scrollbar mt-[40px] flex gap-[20px] tablet:gap-[40px]`}
         ref={parentRef}
       >
         {BusinessProblemsData.map((item) => (
-          <BusinessSolvingCard
-            key={item.id}
-            title={item.title}
-            tags={item.tags}
-            description={item.description}
-            link={item.link}
-            image={item.image}
-          />
+          <div ref={cardRef} key={item.id}>
+            <BusinessSolvingCard
+              title={item.title}
+              tags={item.tags}
+              description={item.description}
+              link={item.link}
+              image={item.image}
+            />
+          </div>
         ))}
       </div>
     </div>

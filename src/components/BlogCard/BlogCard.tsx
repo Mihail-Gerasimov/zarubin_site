@@ -1,5 +1,4 @@
 import { DefaultImage } from '@/src/ui-kit/DefaultImage/DefaultImage';
-import { BASE_URL } from '@/src/utils/alias';
 import { formattedDate } from '@/src/utils/formattedDate';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -19,10 +18,9 @@ interface Props {
 }
 
 export const BlogCard = ({ post }: Props) => {
-  const url = process.env.NODE_ENV === 'development' ? '' : BASE_URL;
+  // const url = process.env.NODE_ENV === 'development' ? '' : BASE_URL;
 
   const date = formattedDate(post.date);
-  // const date = post.date;
 
   return (
     <Link href={`/blog/${post.slug}`} className='w-full'>
@@ -30,7 +28,8 @@ export const BlogCard = ({ post }: Props) => {
         <div className='relative h-[150px] w-full overflow-hidden rounded-[12px] bg-main-blue/20 tablet:h-[300px] desktop:h-[378px]'>
           {post.image ? (
             <Image
-              src={`${url}${post.image}`}
+              // src={`${url}${post.image}`}
+              src={post.image}
               alt={`Image ${post.slug}`}
               width={300}
               height={128}
