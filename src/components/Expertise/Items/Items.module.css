@@ -1,0 +1,100 @@
+.mainContainer {
+  padding: 0 10px;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+  background-color: var(--dark-blue);
+  font-family: 'Proxima Nova';
+}
+
+.item:nth-child(2) {
+  display: none;
+  background-color: var(--second-blue);
+}
+
+.title {
+  position: relative;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.14;
+}
+
+.title::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 43px;
+  background-color: var(--main-white);
+  clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
+}
+
+.subList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tag {
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .mainContainer {
+    padding: 0 40px;
+  }
+
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item:nth-child(2) {
+    display: flex;
+  }
+
+  .title {
+    font-size: 26px;
+    line-height: 1;
+  }
+
+  .subList {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mainContainer {
+    padding: 0 80px;
+  }
+
+  .item {
+    padding-left: 40px;
+  }
+
+  .title {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+
+  .subList {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 24px;
+    line-height: 1.16;
+    white-space: nowrap;
+  }
+}
