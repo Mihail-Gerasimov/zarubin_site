@@ -18,7 +18,7 @@ export const BusinessSolvingCard = ({
   image,
 }: Props) => {
   return (
-    <div className='relative flex w-full min-w-[320px] flex-col rounded-[6px] bg-dark-blue p-[40px_20px] tablet:min-w-[688px] tablet:p-[40px_40px] desktop-big:min-w-[860px]'>
+    <div className='relative flex h-full w-full min-w-[320px] flex-col rounded-[6px] bg-dark-blue p-[40px_20px] tablet:min-w-[688px] tablet:p-[40px_40px] desktop:min-w-[590px] desktop-hard:min-w-[860px]'>
       <div className='z-10 flex h-full w-full flex-col'>
         <div className='flex items-center gap-[8px]'>
           {tags.map((tag, idx) => (
@@ -30,7 +30,7 @@ export const BusinessSolvingCard = ({
             </span>
           ))}
         </div>
-        <h3 className='mt-[58px] flex-1 font-proxima text-[28px] font-bold leading-[1.14] tablet:mt-[46px] tablet:text-[36px] desktop-big:mt-[56px] desktop-big:text-[36px]'>
+        <h3 className='mt-[58px] flex-1 font-proxima text-[28px] font-bold leading-[1.14] tablet:mt-[46px] tablet:text-[36px] desktop:text-[40px] desktop-big:mt-[56px]'>
           {title}
         </h3>
         <p className='mb-[32px] mt-[10px] flex-1 font-proxima text-[20px] leading-[1.2]'>
@@ -46,7 +46,7 @@ export const BusinessSolvingCard = ({
           width={300}
           height={300}
           alt='bg-image'
-          className='h-full w-[auto]'
+          className='h-full w-[auto] opacity-[30%]'
         />
       </div>
     </div>

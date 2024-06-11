@@ -11,14 +11,14 @@ export const NextPrevBtn = ({ prevPage, nextPage }: Props) => {
       <div className='flex items-center gap-[16px]'>
         <button
           type='button'
-          className='flex h-[50px] w-[50px] items-center justify-center rounded-[6px] bg-main-blue'
+          className='flex h-[50px] w-[50px] items-center justify-center rounded-[6px] bg-main-blue hover:bg-main-blue-hover'
           onClick={prevPage}
         >
           <Arrow className='rotate-[180deg] fill-white' />
         </button>
         <button
           type='button'
-          className='flex h-[50px] w-[50px] items-center justify-center rounded-[6px] bg-main-blue'
+          className='flex h-[50px] w-[50px] items-center justify-center rounded-[6px] bg-main-blue hover:bg-main-blue-hover'
           onClick={nextPage}
         >
           <Arrow className='fill-white' />

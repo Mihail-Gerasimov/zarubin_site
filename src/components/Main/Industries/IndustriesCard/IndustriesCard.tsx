@@ -19,7 +19,7 @@ export const IndustriesCard = ({ title, data, link }: Props) => {
 
   return (
     <div className='relative z-20 flex flex-col gap-[40px]'>
-      <h2 className='break-words font-unbound text-[70px] font-bold leading-[1] text-text-dark tablet:text-[90px] desktop:text-[100px]'>
+      <h2 className='break-words font-unbound text-[45px] font-bold uppercase leading-[1] text-text-dark tablet:w-[75%] tablet:text-[50px] laptop:w-[60%] desktop:w-[80%] desktop:text-[80px] desktop-hard:text-[100px]'>
         {title}
       </h2>
       <ul

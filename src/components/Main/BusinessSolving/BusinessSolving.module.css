@@ -1,5 +1,7 @@
 .solvingList {
-  scroll-snap-type: x proximity;
+  width: 100%;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
 }
 
 .solvingList > * {
