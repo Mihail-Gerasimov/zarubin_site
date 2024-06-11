@@ -1,10 +1,11 @@
+import anotherDmitry from '@/public/assets/images/expertise/another_Dmitry.png';
 import alexeyPhoto from '@/public/assets/images/main/feedbacks/alexey.png';
 import dmitryPhoto from '@/public/assets/images/main/feedbacks/dmitriy.png';
 import elenaPhoto from '@/public/assets/images/main/feedbacks/elena.png';
 import konstantinPhoto from '@/public/assets/images/main/feedbacks/konstantin.png';
 import sergeyPhoto from '@/public/assets/images/main/feedbacks/sergey.png';
 
-export const FeedbackData = [
+export const FeedbackDataMain = [
   {
     id: 1,
     name: 'Dmitriy',
@@ -44,5 +45,24 @@ export const FeedbackData = [
     image: konstantinPhoto,
     feedback:
       'Vitaly always takes a proactive position, he really helped the company to move from offline to online. He brought expertise from other industries to the sport and perfected it!',
+  },
+];
+
+export const FeedbackDataExtertise = [
+  {
+    id: 1,
+    name: 'Dmitriy',
+    job: 'Co-Founder Orbita.vc',
+    image: anotherDmitry,
+    feedback:
+      'Vitaly is a very motivated entrepreneur and technical director. He has the vision necessary for startups to make the most effective and quick decisions.',
+  },
+  {
+    id: 2,
+    name: 'Alexey',
+    job: 'Founder Grid Capital',
+    image: alexeyPhoto,
+    feedback:
+      'Vitaly and his team found us a technical director and conducted an audit of the project in 3 weeks. Quick response and fast decision-making are very important for startups!',
   },
 ];

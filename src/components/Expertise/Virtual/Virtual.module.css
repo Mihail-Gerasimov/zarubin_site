@@ -1,0 +1,26 @@
+/* .title {
+    font-family: 'Unbounded';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0, 1);
+    text-shadow: -1px -1px 0 #ffffff,
+        1px -1px 0 #ffffff,
+        -1px 1px 0 #ffffff,
+        1px 1px 0 #ffffff;
+    ;
+    opacity: 1;
+} */
+
+.descriptionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 1440px) {
+  .descriptionWrapper {
+    gap: 20px;
+  }
+}
