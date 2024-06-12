@@ -2,19 +2,21 @@
 
 import bgImage from '@/public/assets/images/main/group.png';
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
-import { FeedbackData } from '@/src/utils/DataLayers/FeedbackData';
+import { IFeedback } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import Image from 'next/image';
 import { useState } from 'react';
 import styles from './Feedback.module.css';
 import { FeedbackCard } from './FeedbackCard/FeedbackCard';
 
-export const FeedbackClient = () => {
+interface Props {
+  feedback: IFeedback[];
+}
+
+export const FeedbackClient = ({ feedback }: Props) => {
   const [contentIndex, setContentIndex] = useState(0);
   const [fade, setFade] = useState(false);
   const mediaQuery = useMediaQuery('<tablet');
-
-  const feedback = FeedbackData;
 
   const next = () => {
     if (fade) return;

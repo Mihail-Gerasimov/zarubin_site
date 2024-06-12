@@ -1,0 +1,11 @@
+.descriptionWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 1440px) {
+  .descriptionWrapper {
+    gap: 20px;
+  }
+}

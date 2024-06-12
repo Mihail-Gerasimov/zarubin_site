@@ -1,0 +1,29 @@
+.mainContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.dark {
+  background-color: var(--dark-blue);
+}
+
+.light {
+  background-color: var(--light-blue);
+}
+
+@media (min-width: 768px) {
+  .mainContainer {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mainContainer {
+    display: grid;
+    grid-template-columns: 42% 1fr;
+    grid-template-rows: auto auto;
+    gap: 0;
+  }
+}
