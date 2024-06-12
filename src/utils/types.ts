@@ -14,3 +14,11 @@ export interface IImage {
   width: number;
   blurDataURL?: string;
 }
+
+export interface IFeedback {
+  id: number;
+  name: string;
+  job: string;
+  image: IImage;
+  feedback: string;
+}

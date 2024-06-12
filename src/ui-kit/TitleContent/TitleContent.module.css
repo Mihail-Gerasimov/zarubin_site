@@ -1,0 +1,53 @@
+.mainContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.title {
+  font-family: 'Unbounded';
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.12;
+  text-transform: uppercase;
+}
+
+.title {
+  color: var(--primary);
+  text-shadow:
+    -1px -1px 0 #ffffff,
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
+  opacity: 0.2;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tag {
+  padding: 10px;
+  display: inline-block;
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+  line-height: 1.25;
+  background-color: var(--second-blue);
+}
+
+@media (min-width: 768px) {
+  .tag {
+    font-size: 24px;
+    line-height: 1.16;
+  }
+}
+
+@media (min-width: 1440px) {
+  .list {
+    flex-direction: column;
+  }
+}
