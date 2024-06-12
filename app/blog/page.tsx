@@ -6,7 +6,7 @@ export default function Blog() {
   const postMetadata = getPostMetadata('src/posts');
   const sortedPosts = postsSorting(postMetadata);
   return (
-    <div className='mt-[80px] w-full pt-[30px]'>
+    <div className='w-full pt-[30px]'>
       <div className='backImage flex w-full flex-col items-center gap-[20px] tablet:py-[31px] desktop:py-[48px]'>
         <h1 className='z-[5] font-unbound text-[45px] font-bold uppercase leading-[1] tablet:text-[60px] desktop:text-[90px]'>
           Insights

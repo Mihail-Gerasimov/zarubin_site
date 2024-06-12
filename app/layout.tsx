@@ -2,6 +2,8 @@ import { openGraphImage } from '@/src/utils/openGraphParams';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { Header } from '@/src/components/Header/Header';
+import { Footer } from '@/src/components/Footer/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -31,7 +33,11 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
       </head>
-      <body className={`${inter.className}`}>{children}</body>
+      <body className={`${inter.className} flex flex-col gap-[60px] bg-main-bg text-white`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

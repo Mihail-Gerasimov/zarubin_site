@@ -69,13 +69,13 @@ a {
 }
 
 @layer utilities {
-  body {
+  /* body {
     color: var(--text-dark);
   }
 
   main {
     color: var(--text-dark);
-  }
+  } */
 
   .article-description {
     font-size: 35px;
