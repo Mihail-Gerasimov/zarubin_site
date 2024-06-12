@@ -6,6 +6,7 @@ import styles from './Vacanices.module.css';
 import { VacanciesCard } from './VacanicesCard/VacanciesCard';
 import { VacanciesData } from '@/src/utils/DataLayers/VacanciesData';
 import classNames from 'classnames';
+import { twMerge } from 'tailwind-merge';
 
 export const Vacancies = () => {
   const parentRef = useRef<HTMLDivElement>(null);
@@ -100,10 +101,12 @@ const Tag = ({
   onClick?: (tag: string) => void;
 }) => (
   <button
-    className={classNames(
-      `flex h-[38px] items-center justify-center rounded-[2px] border border-[1px] border-solid border-white px-[10px] font-proxima font-bold uppercase`,
-      className,
-      { 'bg-white text-text-dark': selected },
+    className={twMerge(
+      classNames(
+        `flex h-[38px] items-center justify-center rounded-[2px] border border-[1px] border-solid border-white px-[10px] font-proxima font-bold uppercase opacity-80`,
+        className,
+        { 'bg-white text-text-dark opacity-100': selected },
+      ),
     )}
     onClick={() => onClick && onClick(children)}
     {...rest}

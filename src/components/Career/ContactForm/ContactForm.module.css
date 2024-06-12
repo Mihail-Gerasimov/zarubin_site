@@ -22,7 +22,7 @@
 .title {
   font-family: 'Unbounded';
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 900;
   line-height: 1.1;
   text-transform: uppercase;
 }
@@ -69,7 +69,6 @@
 
   .authorWrapper {
     flex-direction: row;
-    align-items: center;
   }
 
   .quote {
@@ -84,9 +83,7 @@
   }
 
   .subContent {
-    flex-direction: row;
     margin-top: auto;
-    align-items: center;
   }
 
   .formWrapper {
@@ -97,5 +94,6 @@
 @media (min-width: 1920px) {
   .subContent {
     flex-direction: row;
+    align-items: center;
   }
 }

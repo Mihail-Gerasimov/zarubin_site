@@ -30,25 +30,34 @@ export default async function CareerPage() {
           <Team />
         </Container>
       </Section>
-      <Section id='values' light>
-        <Container>
-          <Values />
-        </Container>
-      </Section>
-      <Section id='vacancies'>
-        <Container>
-          <Vacancies />
-        </Container>
-      </Section>
-      <Section
-        id='contacts'
-        className='py-[80px] tablet:py-[80px] desktop:py-[80px]'
-        light
-      >
-        <Container>
-          <ContactForm />
-        </Container>
-      </Section>
+      <div>
+        <Section
+          id='values'
+          className='py-[80px] tablet:py-[80px] desktop:py-[80px]'
+          light
+        >
+          <Container>
+            <Values />
+          </Container>
+        </Section>
+        <Section
+          id='vacancies'
+          className='bg-[linear-gradient(99.79deg,#000A25_14.95%,#00248B_92.57%)] py-[80px] tablet:py-[80px] desktop:py-[80px]'
+        >
+          <Container>
+            <Vacancies />
+          </Container>
+        </Section>
+        <Section
+          id='contacts'
+          className='py-[80px] tablet:py-[80px] desktop:py-[80px]'
+          light
+        >
+          <Container>
+            <ContactForm />
+          </Container>
+        </Section>
+      </div>
     </main>
   );
 }

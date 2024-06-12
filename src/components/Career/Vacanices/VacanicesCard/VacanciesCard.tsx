@@ -26,9 +26,11 @@ export const VacanciesCard = ({ title, description, link, tags }: Props) => {
           <h3 className='mt-[58px] flex-1 font-proxima text-[28px] font-bold leading-[1.14] tablet:mt-[46px] tablet:text-[36px] desktop:text-[40px] desktop-big:mt-[56px]'>
             {title}
           </h3>
-          <div className='mb-[32px] mt-[10px] flex-1 font-proxima text-[20px] leading-[1.2]'>
+          <div className='mb-[32px] mt-[10px] flex-1'>
             {description.split('\n').map((line, index) => (
-              <p key={index}>{line}</p>
+              <p key={index} className='font-proxima text-[20px] leading-[1.2]'>
+                {line}
+              </p>
             ))}
           </div>
           <div className='h-fit w-fit'>
