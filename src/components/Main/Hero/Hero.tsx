@@ -4,13 +4,12 @@ import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import { LinkArrow } from '@/src/ui-kit/LinkArrow/LinkArrow';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './Hero.module.css';
 
 export const Hero = () => {
   return (
-    <div className='px-[10px] tablet:px-[20px] desktop:pt-[60px]'>
+    <div className='px-[10px]'>
       <div
-        className={`relative ${styles.heroContainer} flex flex-col gap-[60px] px-[20px] py-[40px] tablet:px-[40px] desktop:flex-row desktop:justify-between desktop:px-[60px] desktop:py-[145px]`}
+        className={`relative flex flex-col gap-[40px] py-[40px] desktop:flex-row desktop:justify-between desktop:py-[145px]`}
       >
         <div className='z-[5] flex flex-col gap-[12px] tablet:gap-[24px] desktop:gap-[30px] desktop:py-[px]'>
           <h1 className='desctop-hard:text-[100px] z-[5] font-unbound text-[28px] font-bold uppercase leading-[1.14] tablet:text-[60px] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px]'>

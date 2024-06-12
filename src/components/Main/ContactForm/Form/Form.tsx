@@ -1,6 +1,5 @@
 'use client';
 
-import Arrow from '@/public/assets/images/icons/link_arrow.svg';
 import { useFormik } from 'formik';
 import styles from './Form.module.css';
 
@@ -19,10 +18,10 @@ export const Form = () => {
   });
 
   return (
-    <div className={styles.formWrapper}>
-      <h3 className={styles.title}>
+    <div className='w-full rounded-[12px] bg-[--second-blue] p-[40px]'>
+      <div className='font-unbound text-[32px] font-semibold leading-9 text-white'>
         Fill out the form and click the blue button to get in touch with you!
-      </h3>
+      </div>
       <form className={styles.form} onSubmit={formik.handleSubmit}>
         <label className={styles.label}>
           <input
@@ -69,7 +68,7 @@ export const Form = () => {
         </label>
         <button type='submit' className={styles.formBtn}>
           Blue button
-          <Arrow className={styles.arrow} />
+          {/* <Arrow className={styles.arrow} /> */}
         </button>
       </form>
     </div>

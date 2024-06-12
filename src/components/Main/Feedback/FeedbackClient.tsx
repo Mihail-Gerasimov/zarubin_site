@@ -1,10 +1,8 @@
 'use client';
 
-import bgImage from '@/public/assets/images/main/group.png';
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import { IFeedback } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
-import Image from 'next/image';
 import { useState } from 'react';
 import styles from './Feedback.module.css';
 import { FeedbackCard } from './FeedbackCard/FeedbackCard';
@@ -50,14 +48,6 @@ export const FeedbackClient = ({ feedback }: Props) => {
         indexNumber={contentIndex + 1}
         next={next}
         prev={prev}
-      />
-      <Image
-        src={bgImage}
-        width={200}
-        height={150}
-        alt='bg-image'
-        className={styles.bgImage}
-        unoptimized
       />
     </div>
   );
