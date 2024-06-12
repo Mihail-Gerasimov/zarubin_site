@@ -1,6 +1,9 @@
+import developmentImg from '@/public/assets/images/expertise/devrlopment.png';
 import { DescriptionContent } from '@/src/ui-kit/DescriptionContent/DescriptionContent';
 import { TitleContent } from '@/src/ui-kit/TitleContent/TitleContent';
+import Image from 'next/image';
 import { ComponentContainer } from '../../ComponentContainer/ComponentContainer';
+import styles from './CostumDevelopment.module.css';
 
 export const CostumDevelopment = () => {
   const tags = [
@@ -19,10 +22,18 @@ export const CostumDevelopment = () => {
   return (
     <ComponentContainer light={true}>
       <TitleContent title='Custon Development' tags={tags} />
-      <div>
+      <div className={styles.descriptionWrapper}>
         <DescriptionContent
           description={description.descr1}
           subDescription={description.descr2}
+        />
+        <Image
+          src={developmentImg}
+          width={300}
+          height={200}
+          alt='development'
+          unoptimized
+          className={styles.image}
         />
       </div>
     </ComponentContainer>

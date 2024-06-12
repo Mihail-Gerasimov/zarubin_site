@@ -1,5 +1,6 @@
 import { BusinessProcess } from '@/src/components/Expertise/BusinessProcess/BusinessProcess';
 import { CostumDevelopment } from '@/src/components/Expertise/CostumDevelopment/CostumDevelopment';
+import { ExpertiseTitle } from '@/src/components/Expertise/ExpertiseTitle/ExpertiseTitle';
 import { Items } from '@/src/components/Expertise/Items/Items';
 import { MobileApplications } from '@/src/components/Expertise/MobileApplications/MobileApplications';
 import { ProjectsRisks } from '@/src/components/Expertise/ProjectsRisks/ProjectsRisks';
@@ -21,11 +22,7 @@ export default function Expertise() {
       <Header />
       <main className='mt-[80px] bg-main-bg text-white'>
         <section id='title' className='pt-[40px]'>
-          <div className='px-[10px] tablet:px-[40px] desktop:px-[80px]'>
-            <h1 className='font-unbound text-[50px] font-bold uppercase leading-[1.16] tablet:text-[90px] desktop:text-[100px]'>
-              Expertise
-            </h1>
-          </div>
+          <ExpertiseTitle />
         </section>
         <section id='items' className='mt-[40px] desktop:mt-[80px]'>
           <Items />

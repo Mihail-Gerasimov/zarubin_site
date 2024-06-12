@@ -1,6 +1,8 @@
 import { DescriptionContent } from '@/src/ui-kit/DescriptionContent/DescriptionContent';
 import { TitleContent } from '@/src/ui-kit/TitleContent/TitleContent';
 import { ComponentContainer } from '../../ComponentContainer/ComponentContainer';
+import { BusinessItems } from './BusinessItems/BusinessItems';
+import styles from './BusinessProcess.module.css';
 
 export const BusinessProcess = () => {
   const tags = [
@@ -20,11 +22,12 @@ export const BusinessProcess = () => {
   return (
     <ComponentContainer>
       <TitleContent title='Business Process Management' tags={tags} />
-      <div>
+      <div className={styles.descriptionWrapper}>
         <DescriptionContent
           description={description.descr1}
           subDescription={description.descr2}
         />
+        <BusinessItems />
       </div>
     </ComponentContainer>
   );

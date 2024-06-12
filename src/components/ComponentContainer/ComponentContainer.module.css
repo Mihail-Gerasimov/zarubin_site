@@ -21,9 +21,9 @@
 
 @media (min-width: 1440px) {
   .mainContainer {
-    /* height: 740px; */
     display: grid;
     grid-template-columns: 42% 1fr;
+    grid-template-rows: auto auto;
     gap: 0;
   }
 }

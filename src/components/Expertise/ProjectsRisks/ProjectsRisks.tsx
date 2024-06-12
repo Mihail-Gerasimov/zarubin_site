@@ -1,6 +1,7 @@
 import { DescriptionContent } from '@/src/ui-kit/DescriptionContent/DescriptionContent';
 import { TitleContent } from '@/src/ui-kit/TitleContent/TitleContent';
 import { ComponentContainer } from '../../ComponentContainer/ComponentContainer';
+import { ProjectRiskImg } from './ProjectRiskImg/ProjectRiskImg';
 
 export const ProjectsRisks = () => {
   const tags = [
@@ -25,6 +26,7 @@ export const ProjectsRisks = () => {
           description={description.descr1}
           subDescription={description.descr2}
         />
+        <ProjectRiskImg />
       </div>
     </ComponentContainer>
   );
