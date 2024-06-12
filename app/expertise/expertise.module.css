@@ -4,16 +4,12 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
 
-@media (min-width: 768px) {
-  .contentContainer {
+  @media (min-width: 768px) {
     padding: 0 40px;
   }
-}
 
-@media (min-width: 1440px) {
-  .contentContainer {
+  @media (min-width: 1440px) {
     padding: 0 80px;
   }
 }

@@ -1,14 +1,14 @@
 import styles from './BusinessItems.module.css';
 
-export const BusinessItems = () => {
-  const businessItems = [
-    'Marketing',
-    'Development',
-    'Сonsistency',
-    'Digital',
-    'Business',
-  ];
+const businessItems = [
+  'Marketing',
+  'Development',
+  'Сonsistency',
+  'Digital',
+  'Business',
+];
 
+export const BusinessItems = () => {
   return (
     <div className={styles.mainContainer}>
       <ul className={styles.list}>

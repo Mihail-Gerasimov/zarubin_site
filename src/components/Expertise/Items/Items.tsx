@@ -1,42 +1,43 @@
 import styles from './Items.module.css';
 
+const expertiseData = [
+  {
+    id: 1,
+    title: 'IT Consulting',
+    items: [
+      'vCIO',
+      'Creating and configuring business processes',
+      'Completing projects',
+    ],
+  },
+  {
+    id: 2,
+    title: 'System analytics and development',
+    items: [
+      'Custom development',
+      'System integration',
+      'Scalable architecture',
+      'Mobile applications',
+    ],
+  },
+];
+
 export const Items = () => {
   return (
     <div className={styles.mainContainer}>
       <ul className={styles.list}>
-        <li className={styles.item}>
-          <h3 className={styles.title}>IT Consulting</h3>
-          <ul className={styles.subList}>
-            <li className={styles.subItem}>
-              <span className={styles.tag}>vCIO</span>
-            </li>
-            <li className={styles.subItem}>
-              <span className={styles.tag}>
-                Creating and configuring business processes
-              </span>
-            </li>
-            <li className={styles.subItem}>
-              <span className={styles.tag}>Completing projects</span>
-            </li>
-          </ul>
-        </li>
-        <li className={styles.item}>
-          <h3 className={styles.title}>System analytics and development</h3>
-          <ul className={styles.subList}>
-            <li className={styles.subItem}>
-              <span className={styles.tag}>Custom development</span>
-            </li>
-            <li className={styles.subItem}>
-              <span className={styles.tag}>System integration</span>
-            </li>
-            <li className={styles.subItem}>
-              <span className={styles.tag}>Scalable architecture</span>
-            </li>
-            <li className={styles.subItem}>
-              <span className={styles.tag}>Mobile applications</span>
-            </li>
-          </ul>
-        </li>
+        {expertiseData.map((expertise) => (
+          <li key={expertise.id} className={styles.item}>
+            <h3 className={styles.title}>{expertise.title}</h3>
+            <ul className={styles.subList}>
+              {expertise.items.map((item, idx) => (
+                <li key={idx} className={styles.subItem}>
+                  <span className={styles.tag}>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
       </ul>
     </div>
   );
