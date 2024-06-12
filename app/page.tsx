@@ -1,5 +1,3 @@
-import { Footer } from '@/src/components/Footer/Footer';
-import { Header } from '@/src/components/Header/Header';
 import { BusinessSolving } from '@/src/components/Main/BusinessSolving/BusinessSolving';
 import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 import { Expertise } from '@/src/components/Main/Expertise/Expertise';
@@ -14,8 +12,7 @@ import { Unlock } from '@/src/components/Main/Unlock/Unlock';
 export default function Home() {
   return (
     <>
-      <Header />
-      <main className='mt-[80px] bg-main-bg text-white'>
+      <main>
         <section id='hero'>
           <Hero />
         </section>
@@ -71,7 +68,6 @@ export default function Home() {
           <ContactForm />
         </section>
       </main>
-      <Footer />
     </>
   );
 }
