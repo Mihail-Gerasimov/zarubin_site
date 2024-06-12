@@ -19,7 +19,7 @@ export const Form = () => {
 
   return (
     <div className='w-full rounded-[12px] bg-[--second-blue] p-[40px]'>
-      <div className='font-unbound text-[32px] font-semibold leading-9 text-white'>
+      <div className='font-unbound text-[32px] font-semibold leading-[37px] text-white'>
         Fill out the form and click the blue button to get in touch with you!
       </div>
       <form className={styles.form} onSubmit={formik.handleSubmit}>
