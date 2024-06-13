@@ -1,6 +1,5 @@
 'use client';
 
-import Arrow from '@/public/assets/images/icons/link_arrow.svg';
 import { useFormik } from 'formik';
 import styles from './Form.module.css';
 import { useDropzone } from 'react-dropzone';
@@ -8,8 +7,15 @@ import { useCallback } from 'react';
 import { DropzoneIcon } from '@/src/components/svg/DropzoneIcon';
 import classNames from 'classnames';
 
+type Inputs = {
+  name: string;
+  email: string;
+  phone: string;
+  cv: File | null;
+};
+
 export const Form = () => {
-  const formik = useFormik({
+  const formik = useFormik<Inputs>({
     initialValues: {
       name: '',
       email: '',
@@ -77,14 +83,15 @@ export const Form = () => {
           {...getRootProps()}
         >
           <div className='flex items-center justify-between'>
-            <label className='text-[16px] text-[#8D94AD]'>Drop your CV</label>
+            <label className='text-[26px] text-[#8D94AD]'>
+              {formik.values.cv?.name || 'Drop your CV'}
+            </label>
             <DropzoneIcon />
           </div>
           <input {...getInputProps()} />
         </div>
         <button type='submit' className={styles.formBtn}>
           Blue button
-          <Arrow className={styles.arrow} />
         </button>
       </form>
     </div>

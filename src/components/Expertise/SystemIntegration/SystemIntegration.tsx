@@ -1,6 +1,7 @@
 import { DescriptionContent } from '@/src/ui-kit/DescriptionContent/DescriptionContent';
 import { TitleContent } from '@/src/ui-kit/TitleContent/TitleContent';
 import { ComponentContainer } from '../../ComponentContainer/ComponentContainer';
+import { SystemIntegrationCards } from './SystemIntegrationCards/SystemIntegrationCards';
 
 const tags = [
   'Seamless connectivity',
@@ -18,11 +19,14 @@ const description = {
 export const SystemIntegration = () => {
   return (
     <ComponentContainer light={true}>
-      <TitleContent title='System Integration' tags={tags} />
-      <DescriptionContent
-        description={description.descr1}
-        subDescription={description.descr2}
-      />
+      <TitleContent title='System Integration' tags={tags} light />
+      <div className='flex flex-col gap-[20px]'>
+        <DescriptionContent
+          description={description.descr1}
+          subDescription={description.descr2}
+        />
+        <SystemIntegrationCards />
+      </div>
     </ComponentContainer>
   );
 };

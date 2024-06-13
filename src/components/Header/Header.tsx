@@ -8,6 +8,7 @@ import useMediaQuery from '@/src/utils/useMediaQuery';
 import { useEffect, useState } from 'react';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
 import { MainList } from '../NavList/MainList';
+import { Container } from '../shared/Container/Container';
 // import { useParams } from 'next/navigation';
 
 interface Props {
@@ -30,19 +31,21 @@ export const Header = ({ dark = true }: Props) => {
 
   return (
     <header
-      className={`sticky top-0 z-50 flex h-[80px] w-full items-center ${dark ? 'bg-main-bg' : 'bg-white'} px-[10px] tablet:px-[40px] desktop:px-[80px]`}
+      className={`sticky top-0 z-50 mx-auto h-[80px] w-full ${dark ? 'bg-main-bg' : 'bg-white'}`}
     >
-      <Logo dark={dark} />
-      <nav className='mx-[auto] w-full'>
-        <MainList list={menuListLayer} dark={dark} />
-      </nav>
-      <ContactUsBtn />
-      <MobileMenu
-        isOpen={isOpen}
-        onClick={() => setIsOpen(false)}
-        dark={dark}
-      />
-      <BurgerIcon isOpen={isOpen} setIsOpen={handleOpen} dark={dark} />
+      <Container className='flex h-full items-center'>
+        <Logo dark={dark} />
+        <nav className='mx-[auto] w-full'>
+          <MainList list={menuListLayer} dark={dark} />
+        </nav>
+        <ContactUsBtn dark={dark} />
+        <MobileMenu
+          isOpen={isOpen}
+          onClick={() => setIsOpen(false)}
+          dark={dark}
+        />
+        <BurgerIcon isOpen={isOpen} setIsOpen={handleOpen} dark={dark} />
+      </Container>
     </header>
   );
 };

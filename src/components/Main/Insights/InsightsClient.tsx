@@ -4,6 +4,7 @@ import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import { useRef } from 'react';
 import styles from './Insights.module.css';
 import { InsightsCard } from './InsightsCard/InsightsCard';
+import { Container } from '../../shared/Container/Container';
 
 interface Post {
   title: string;
@@ -40,12 +41,14 @@ export const InsightsClient = ({ posts }: Props) => {
 
   return (
     <div className={styles.mainContainer}>
-      <div className={styles.titleWrapper}>
-        <h2 className={styles.title}>Insights</h2>
-        <div className={styles.arrowWrapper}>
-          <NextPrevBtn nextPage={nextBtn} prevPage={prevBtn} />
+      <Container>
+        <div className={styles.titleWrapper}>
+          <h2 className={styles.title}>Insights</h2>
+          <div className={styles.arrowWrapper}>
+            <NextPrevBtn nextPage={nextBtn} prevPage={prevBtn} />
+          </div>
         </div>
-      </div>
+      </Container>
       <div className={styles.cardsWrapper} ref={parentRef}>
         {posts.slice(6).map((post, idx) => (
           <InsightsCard

@@ -1,6 +1,8 @@
 import { DescriptionContent } from '@/src/ui-kit/DescriptionContent/DescriptionContent';
 import { TitleContent } from '@/src/ui-kit/TitleContent/TitleContent';
 import { ComponentContainer } from '../../ComponentContainer/ComponentContainer';
+import Image from 'next/image';
+import appImg from '@/public/assets/images/expertise/mobile_aplication.png';
 
 const tags = [
   'Increased customer engagement',
@@ -17,12 +19,15 @@ const description = {
 
 export const MobileApplications = () => {
   return (
-    <ComponentContainer>
-      <TitleContent title='Mobile Applications' tags={tags} />
-      <DescriptionContent
-        description={description.descr1}
-        subDescription={description.descr2}
-      />
+    <ComponentContainer light>
+      <TitleContent title='Mobile Applications' tags={tags} light />
+      <div className='flex flex-col gap-[20px]'>
+        <DescriptionContent
+          description={description.descr1}
+          subDescription={description.descr2}
+        />
+        <Image src={appImg} alt='Mobile Applications' />
+      </div>
     </ComponentContainer>
   );
 };

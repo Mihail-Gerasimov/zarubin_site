@@ -25,7 +25,7 @@ export const ExpertiseCard = ({
       className={`flex overflow-hidden bg-dark-blue ${isEven && 'flex-row-reverse'}`}
     >
       <div className='flex w-full flex-col gap-[40px] px-[20px] py-[36px] tablet:w-[50%] desktop:px-[60px] desktop:py-[34px]'>
-        <h3 className='font-unbound text-[24px] font-bold leading-[1.16] desktop:text-[38px]'>
+        <h3 className='font-unbound text-[24px] font-bold leading-[1.16] desktop:text-[38px] uppercase'>
           {title}
         </h3>
         <span className='block h-[1px] w-[98px] bg-white' />

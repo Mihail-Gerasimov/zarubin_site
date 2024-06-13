@@ -18,25 +18,27 @@ export const IndustriesCard = ({ title, data, link }: Props) => {
   const moreThanFour = data.length > 4;
 
   return (
-    <div className='relative z-20 flex flex-col gap-[40px]'>
-      <h2 className='break-words font-unbound text-[45px] font-bold uppercase leading-[1] text-text-dark tablet:w-[75%] tablet:text-[50px] laptop:w-[60%] desktop:w-[80%] desktop:text-[80px] desktop-hard:text-[100px]'>
-        {title}
-      </h2>
-      <ul
-        className={`flex flex-col gap-[20px] ${moreThanFour && 'tablet:grid tablet:grid-cols-2'}`}
-      >
-        {data.map((item) => (
-          <li key={item.id} className='flex items-center gap-[20px]'>
-            <TriangeIcon className='h-[18px] w-[18px]' />
-            <p className='relative font-proxima text-[20px] leading-[1.2] text-text-dark desktop:text-[28px]'>
-              {item.title}
-            </p>
-          </li>
-        ))}
-      </ul>
+    <div className='z-20 flex h-full flex-col justify-between gap-[40px]'>
+      <div className='z-20 flex flex-col gap-[40px]'>
+        <h2 className='break-words font-unbound text-[45px] font-bold uppercase leading-[1] text-text-dark tablet:w-[75%] tablet:text-[50px] laptop:w-[60%] desktop:w-[80%] desktop:text-[80px] desktop-hard:text-[100px]'>
+          {title}
+        </h2>
+        <ul
+          className={`flex flex-col gap-[20px] ${moreThanFour && 'tablet:grid tablet:grid-cols-2'}`}
+        >
+          {data.map((item) => (
+            <li key={item.id} className='flex items-center gap-[20px]'>
+              <TriangeIcon className='h-[18px] w-[18px]' />
+              <p className='relative font-proxima text-[20px] leading-[1.2] text-text-dark desktop:text-[28px]'>
+                {item.title}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
       <Link
         href={link}
-        className='flex w-fit items-center justify-center gap-[10px] rounded-[5px] bg-main-blue p-[13px_15px] font-proxima text-[20px] font-bold tablet:mt-[92px] tablet:h-[112px] tablet:min-w-[407px] tablet:text-[40px] desktop:mt-[20px]'
+        className='flex w-fit items-center justify-center gap-[10px] rounded-[5px] bg-main-blue p-[13px_15px] font-proxima text-[20px] font-bold text-white tablet:mt-[92px] tablet:h-[112px] tablet:min-w-[407px] tablet:text-[40px] desktop:mt-[20px]'
       >
         {`${btnTitle} solutions`}
         <Arrow className='h-[24px] w-[24px] tablet:h-[auto] tablet:w-[44px]' />

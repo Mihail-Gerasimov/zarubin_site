@@ -11,9 +11,13 @@ export const Section = ({
   return (
     <section
       className={twMerge(
-        classNames('py-[40px] tablet:py-[40px] desktop:py-[40px]', className, {
-          'bg-white text-dark': light,
-        }),
+        classNames(
+          'relative py-[40px] tablet:py-[60px] desktop:py-[80px]',
+          className,
+          {
+            'bg-white text-dark': light,
+          },
+        ),
       )}
       {...rest}
     >

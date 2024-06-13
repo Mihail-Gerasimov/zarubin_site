@@ -21,11 +21,12 @@ export const ProjectsRisks = () => {
   return (
     <ComponentContainer>
       <TitleContent title='Projects Risks Management' tags={tags} />
-      <div>
+      <div className='flex flex-col gap-[20px]'>
         <DescriptionContent
           description={description.descr1}
           subDescription={description.descr2}
         />
+
         <ProjectRiskImg />
       </div>
     </ComponentContainer>

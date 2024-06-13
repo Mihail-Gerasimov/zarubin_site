@@ -21,7 +21,7 @@ const description = {
 export const CostumDevelopment = () => {
   return (
     <ComponentContainer light={true}>
-      <TitleContent title='Custon Development' tags={tags} />
+      <TitleContent title='Custon Development' tags={tags} light />
       <div className={styles.descriptionWrapper}>
         <DescriptionContent
           description={description.descr1}
