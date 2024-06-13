@@ -7,6 +7,7 @@ import { VacanciesCard } from './VacanicesCard/VacanciesCard';
 import { VacanciesData } from '@/src/utils/DataLayers/VacanciesData';
 import classNames from 'classnames';
 import { twMerge } from 'tailwind-merge';
+import { Tag } from '../../shared/Tag/Tag';
 
 export const Vacancies = () => {
   const parentRef = useRef<HTMLDivElement>(null);
@@ -88,29 +89,3 @@ export const Vacancies = () => {
     </div>
   );
 };
-
-const Tag = ({
-  children,
-  selected,
-  className,
-  onClick,
-  ...rest
-}: Omit<HTMLAttributes<HTMLButtonElement>, 'children' | 'onClick'> & {
-  selected?: boolean;
-  children: string;
-  onClick?: (tag: string) => void;
-}) => (
-  <button
-    className={twMerge(
-      classNames(
-        `flex h-[38px] items-center justify-center rounded-[2px] border border-[1px] border-solid border-white px-[10px] font-proxima font-bold uppercase opacity-80`,
-        className,
-        { 'bg-white text-text-dark opacity-100': selected },
-      ),
-    )}
-    onClick={() => onClick && onClick(children)}
-    {...rest}
-  >
-    {children}
-  </button>
-);

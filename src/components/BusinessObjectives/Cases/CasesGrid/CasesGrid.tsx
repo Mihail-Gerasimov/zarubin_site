@@ -1,18 +1,52 @@
-import { CASES_DATA } from '@/src/utils/DataLayers/CasesData';
+import { CaseBgItemsSvg } from '@/src/components/svg/CaseBgItemsSvg';
+import { Case } from '@/src/utils/DataLayers/CasesData';
 
-export const CasesGrid = () => {
+export const CasesGrid = ({ cases }: { cases: Case[] }) => {
   return (
-    <div className='grid grid-cols-1 gap-[40px] tablet:grid-cols-2 desktop:grid-cols-3'>
-
-{/* {CASES_DATA.map((case) => )} */}
+    <div className='grid grid-cols-1 gap-[40px] tablet:grid-cols-2 desktop-big:grid-cols-3'>
+      {cases.map((item) => (
+        <CaseCard key={item.id} data={item} />
+      ))}
     </div>
   );
 };
 
-const CaseCard = ({case}: {case: (typeof CASES_DATA)[number]}) => {
-    return (
-        <div>
-            <div></div>
+const CaseCard = ({ data }: { data: Case }) => {
+  return (
+    <div className='relative min-h-[423px] overflow-hidden rounded-[23px] p-[40px] desktop-big:min-h-[623px]'>
+      <div className='absolute inset-0 -z-10 bg-[var(--dark-blue)]'>
+        <CaseBgItemsSvg />
+      </div>
+      <div className='z-10 flex h-full flex-col items-start justify-between'>
+        <div className='flex flex-col gap-[20px]'>
+          <div className='flex gap-[10px]'>
+            {data.tags.map((tag) => (
+              <div
+                key={tag}
+                className='inline-flex items-center justify-center rounded-[5px] bg-[rgba(255,255,255,0.3)] p-[10px] backdrop-blur-[20px]'
+              >
+                <div className='self-stretch text-center font-proxima text-[16px] font-bold uppercase leading-[18px] text-white desktop-big:text-[21px]'>
+                  #{tag}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className='font-unbound text-[22px] font-bold uppercase leading-[1.1] text-white desktop-big:text-[38px]'>
+            {data.title}
+          </div>
         </div>
-    )
-}
+
+        <div className='flex flex-col items-start gap-2'>
+          {data.industries.map((item) => (
+            <div
+              key={item}
+              className='inline-flex items-start justify-start gap-2.5 rounded-sm bg-white p-2.5 font-unbound text-[16px] font-bold uppercase leading-7 text-slate-900 desktop-big:text-[24px]'
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};

@@ -1,4 +1,6 @@
+import { Cases } from '@/src/components/BusinessObjectives/Cases/Cases';
 import { Hero } from '@/src/components/BusinessObjectives/Hero/Hero';
+import { Insights } from '@/src/components/Main/Insights/Insights';
 import { Container } from '@/src/components/shared/Container/Container';
 import { Section } from '@/src/components/shared/Section/Section';
 
@@ -9,6 +11,14 @@ export default async function BusinessObjectivesPage() {
         <Container>
           <Hero />
         </Container>
+      </Section>
+      <Section>
+        <Container>
+          <Cases />
+        </Container>
+      </Section>
+      <Section id='insights'>
+        <Insights />
       </Section>
     </main>
   );

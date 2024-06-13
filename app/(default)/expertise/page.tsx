@@ -15,15 +15,21 @@ import { FeedbackDataExtertise } from '@/src/utils/DataLayers/FeedbackData';
 import styles from './expertise.module.css';
 import { Section } from '@/src/components/shared/Section/Section';
 import { Container } from '@/src/components/shared/Container/Container';
+import { ExpertiseHeroBgSvg } from '@/src/components/svg/ExpertiseHeroBgSvg';
 
 export default function Expertise() {
   return (
     <>
-      <main className='mt-[80px] bg-main-bg text-white'>
-        <Section id='title'>
+      <main className='bg-main-bg text-white'>
+        <Section id='title' className='overflow-x-hidden overflow-y-hidden'>
           <Container>
             <ExpertiseTitle />
           </Container>
+          <div className='absolute inset-0 flex'>
+            <div className='absolute left-1/2 top-[70px] -translate-x-1/2 desktop:left-1/2 desktop:-translate-x-1/3'>
+              <ExpertiseHeroBgSvg />
+            </div>
+          </div>
         </Section>
         <Section id='items' className='pb-0 tablet:pb-0 desktop:pb-0'>
           <Container>
