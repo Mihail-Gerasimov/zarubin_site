@@ -1,0 +1,9 @@
+.solvingList {
+  width: 100%;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.solvingList > * {
+  scroll-snap-align: start;
+}

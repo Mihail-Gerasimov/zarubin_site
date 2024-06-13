@@ -3,7 +3,7 @@ import { ExpertiseData } from '@/src/utils/DataLayers/ExpertiseData';
 
 export const Expertise = () => {
   return (
-    <div className='px-[10px] tablet:px-[40px] tablet:pb-[40px] desktop:px-[80px] desktop:py-[35px]'>
+    <div>
       <h2 className='font-unbound text-[45px] font-bold uppercase leading-[1] tablet:text-[50px] tablet:leading-[1.3] desktop:text-[70px] desktop:leading-[1.1]'>
         Expertise and expirence
       </h2>

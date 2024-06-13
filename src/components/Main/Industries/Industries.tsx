@@ -4,14 +4,15 @@ import { IndustriesData } from '@/src/utils/DataLayers/IndustriesData';
 import Image from 'next/image';
 import { useState } from 'react';
 import { IndustriesCard } from './IndustriesCard/IndustriesCard';
+import { Container } from '../../shared/Container/Container';
 
 export const Industries = () => {
   const [active, setActive] = useState(1);
 
   const activeCard = IndustriesData.filter((item) => item.id === active);
   return (
-    <div className='relative z-0 flex flex-col gap-[40px] overflow-hidden bg-white px-[10px] pb-[20px] pt-[40px] tablet:px-[40px] tablet:pb-[100px] tablet:pt-[60px] desktop:gap-[80px] desktop:px-[80px]'>
-      <div className='hide-scrollbar z-20 overflow-scroll'>
+    <Container className='z-0 flex h-full flex-col gap-[40px] desktop:gap-[80px]'>
+      <div className='hide-scrollbar z-20 shrink-0 overflow-x-scroll'>
         <ul className='flex h-full items-start gap-[20px]'>
           {IndustriesData.map((item) => (
             <li key={item.id} className='flex flex-col gap-[8px]'>
@@ -37,13 +38,14 @@ export const Industries = () => {
           data={item.data}
         />
       ))}
-      <Image
-        src={IndustriesData[active - 1].image}
-        width={300}
-        height={300}
-        alt=''
-        className='absolute bottom-0 right-0 z-0 hidden h-[auto] w-[50%] opacity-[80%] tablet:block desktop:max-w-[30%]'
-      />
-    </div>
+      <div className='absolute bottom-0 right-0 z-0 hidden h-3/4 w-[50%] opacity-[80%] tablet:block desktop:max-w-[900px]'>
+        <Image
+          src={IndustriesData[active - 1].image}
+          alt=''
+          fill
+          className='object-contain object-bottom'
+        />
+      </div>
+    </Container>
   );
 };
