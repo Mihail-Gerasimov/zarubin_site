@@ -47,13 +47,13 @@ export const Footer = () => {
             <li>
               <Link
                 href='https://zarubin.co.uk/policy_en'
-                className='font-proxima text-[26px] leading-[1.1] text-white opacity-50'
+                className='font-proxima text-[16px] leading-[1.1] text-white opacity-50 desktop:text-[26px]'
               >
                 Privacy Policy
               </Link>
             </li>
             <li>
-              <span className='font-proxima text-[26px] leading-[1.1] text-white opacity-50'>
+              <span className='font-proxima text-[16px] leading-[1.1] text-white opacity-50 desktop:text-[26px]'>
                 &copy; Zarubin&Co
               </span>
             </li>

@@ -15,7 +15,7 @@ export const Breadcrumbs = ({ breadcrumbs }: { breadcrumbs: Breadcrumb[] }) => {
               {title}
             </Link>
           ) : (
-            <div className='text-[var(--main-gray)]' key={title}>
+            <div className='text-[var(--main-gray)] opacity-80' key={title}>
               {title}
             </div>
           )}

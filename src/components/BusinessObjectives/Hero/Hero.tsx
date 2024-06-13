@@ -10,7 +10,7 @@ export const Hero = () => {
     <div className='flex flex-col gap-[20px] break-words py-[60px]'>
       <Breadcrumbs breadcrumbs={BREADCRUMBS} />
       <h1 className='z-[5] font-unbound text-[50px] font-bold uppercase leading-[1.1] tablet:text-[60px] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px] desktop-hard:text-[100px]'>
-        Busines objectives
+        Business objectives
       </h1>
     </div>
   );
