@@ -43,7 +43,7 @@ export default function Expertise() {
             </div>
           </Container>
         </Section>
-        <Section id='insights' className='mt-[40px]'>
+        <Section id='insights'>
           <Insights />
         </Section>
         <Section>

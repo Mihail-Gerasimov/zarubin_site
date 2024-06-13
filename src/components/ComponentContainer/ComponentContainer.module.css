@@ -10,7 +10,7 @@
 }
 
 .light {
-  background-color: var(--light-blue);
+  background-color: var(--second-blue);
 }
 
 @media (min-width: 768px) {

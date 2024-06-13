@@ -53,9 +53,7 @@ export default function Home() {
           <Intelligence />
         </Section>
         <Section id='insights'>
-          <div>
-            <Insights />
-          </div>
+          <Insights />
         </Section>
         <Section id='clients'>
           <Container>
