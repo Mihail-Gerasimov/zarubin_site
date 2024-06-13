@@ -18,7 +18,7 @@ export default function Expertise() {
           <Container>
             <ExpertiseTitle />
           </Container>
-          <div className='absolute inset-0 flex'>
+          <div className='absolute inset-0 flex after:absolute after:inset-0 after:bg-gradient-to-t after:from-main-bg after:to-transparent'>
             <div className='absolute left-1/2 top-[70px] -translate-x-1/2 desktop:left-1/2 desktop:-translate-x-1/3'>
               <ExpertiseHeroBgSvg />
             </div>

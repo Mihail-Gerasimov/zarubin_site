@@ -33,7 +33,9 @@ export default function RootLayout({
       <head>
         <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
       </head>
-      <body className={`${inter.className} flex flex-col gap-[60px] bg-main-bg text-white`}>
+      <body
+        className={`${inter.className} flex flex-col gap-[60px] bg-main-bg text-white`}
+      >
         <Header />
         {children}
         <Footer />

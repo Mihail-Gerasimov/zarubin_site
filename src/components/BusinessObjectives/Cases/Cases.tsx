@@ -14,7 +14,7 @@ export const Cases = () => {
   );
   return (
     <div className='flex flex-col gap-[60px]'>
-      <div className='flex gap-2 overflow-x-scroll'>
+      <div className='hide-scrollbar flex gap-2 overflow-x-auto'>
         <Tag selected={selectedTag === 'All'} onClick={setSelectedTag}>
           All
         </Tag>
