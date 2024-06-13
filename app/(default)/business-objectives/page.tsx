@@ -2,6 +2,7 @@ import { Cases } from '@/src/components/BusinessObjectives/Cases/Cases';
 import { Hero } from '@/src/components/BusinessObjectives/Hero/Hero';
 import { Insights } from '@/src/components/Main/Insights/Insights';
 import { Container } from '@/src/components/shared/Container/Container';
+import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
 
 export default async function BusinessObjectivesPage() {
@@ -14,11 +15,15 @@ export default async function BusinessObjectivesPage() {
       </Section>
       <Section className='!pt-0'>
         <Container>
-          <Cases />
+          <ScrollAnimationWrapper showOnLoad>
+            <Cases />
+          </ScrollAnimationWrapper>
         </Container>
       </Section>
       <Section id='insights'>
-        <Insights />
+        <ScrollAnimationWrapper>
+          <Insights />
+        </ScrollAnimationWrapper>
       </Section>
     </main>
   );

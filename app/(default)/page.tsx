@@ -13,6 +13,7 @@ import { Section } from '@/src/components/shared/Section/Section';
 import heroBg from '@/public/assets/images/main/hero_bg.png';
 import Image from 'next/image';
 import bgImage from '@/public/assets/images/main/group.png';
+import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 
 export default function Home() {
   return (
@@ -29,7 +30,9 @@ export default function Home() {
         </Section>
         <Section id='expertise' className='overflow-hidden'>
           <Container>
-            <Expertise />
+            <ScrollAnimationWrapper showOnLoad>
+              <Expertise />
+            </ScrollAnimationWrapper>
           </Container>
         </Section>
         <Section
@@ -37,32 +40,56 @@ export default function Home() {
           className='flex h-screen max-h-[960px] flex-col justify-center overflow-hidden'
         >
           <Container>
-            <Unlock />
+            <ScrollAnimationWrapper>
+              <Unlock />
+            </ScrollAnimationWrapper>
+            <div className='absolute inset-0'>
+              <Image
+                src='/assets/images/main/group.png'
+                layout='fill'
+                objectFit='cover'
+                objectPosition='bottom'
+                alt=''
+                className='absolute bottom-0 right-0 opacity-[3%]'
+              />
+            </div>
           </Container>
         </Section>
         <Section id='industries' className='tablet:h-[828px]' light>
-          <Industries />
+          <ScrollAnimationWrapper>
+            <Industries />
+          </ScrollAnimationWrapper>
         </Section>
         <Section id='business-problems'>
-          <BusinessSolving />
+          <ScrollAnimationWrapper>
+            <BusinessSolving />
+          </ScrollAnimationWrapper>
         </Section>
         <Section
           id='business-intelligence'
           className='mt-[40px] tablet:mt-[60px] desktop:mt-[100px]'
         >
-          <Intelligence />
+          <ScrollAnimationWrapper>
+            <Intelligence />
+          </ScrollAnimationWrapper>
         </Section>
         <Section id='insights'>
-          <Insights />
+          <ScrollAnimationWrapper>
+            <Insights />
+          </ScrollAnimationWrapper>
         </Section>
         <Section id='clients'>
           <Container>
-            <TrustUs />
+            <ScrollAnimationWrapper>
+              <TrustUs />
+            </ScrollAnimationWrapper>
           </Container>
         </Section>
         <Section id='feedback'>
           <Container>
-            <Feedback />
+            <ScrollAnimationWrapper>
+              <Feedback />
+            </ScrollAnimationWrapper>
           </Container>
           <div className='absolute inset-0 bg-[linear-gradient(100deg,#000a25_14.95%,#00248b_92.57%)]'>
             <Image
@@ -78,7 +105,9 @@ export default function Home() {
           className='py-[40px] tablet:py-[80px] desktop:py-[80px]'
         >
           <Container>
-            <ContactForm />
+            <ScrollAnimationWrapper>
+              <ContactForm />
+            </ScrollAnimationWrapper>
           </Container>
         </Section>
       </main>

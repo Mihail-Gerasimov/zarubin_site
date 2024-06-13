@@ -1,12 +1,10 @@
 'use client';
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
-import { HTMLAttributes, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './Vacanices.module.css';
 import { VacanciesCard } from './VacanicesCard/VacanciesCard';
 import { VacanciesData } from '@/src/utils/DataLayers/VacanciesData';
-import classNames from 'classnames';
-import { twMerge } from 'tailwind-merge';
 import { Tag } from '../../shared/Tag/Tag';
 
 export const Vacancies = () => {

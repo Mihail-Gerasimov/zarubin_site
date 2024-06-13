@@ -7,6 +7,7 @@ import { Container } from '@/src/components/shared/Container/Container';
 import { Section } from '@/src/components/shared/Section/Section';
 import HeroBg from '@/public/assets/images/career/hero-bg.png';
 import Image from 'next/image';
+import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 
 export default async function CareerPage() {
   return (
@@ -27,7 +28,9 @@ export default async function CareerPage() {
       </Section>
       <Section id='team'>
         <Container>
-          <Team />
+          <ScrollAnimationWrapper showOnLoad>
+            <Team />
+          </ScrollAnimationWrapper>
         </Container>
       </Section>
       <div>
@@ -37,7 +40,9 @@ export default async function CareerPage() {
           light
         >
           <Container>
-            <Values />
+            <ScrollAnimationWrapper>
+              <Values />
+            </ScrollAnimationWrapper>
           </Container>
         </Section>
         <Section
@@ -45,7 +50,9 @@ export default async function CareerPage() {
           className='bg-[linear-gradient(99.79deg,#000A25_14.95%,#00248B_92.57%)] py-[80px] tablet:py-[80px] desktop:py-[80px]'
         >
           <Container>
-            <Vacancies />
+            <ScrollAnimationWrapper>
+              <Vacancies />
+            </ScrollAnimationWrapper>
           </Container>
         </Section>
         <Section
@@ -54,7 +61,9 @@ export default async function CareerPage() {
           light
         >
           <Container>
-            <ContactForm />
+            <ScrollAnimationWrapper>
+              <ContactForm />
+            </ScrollAnimationWrapper>
           </Container>
         </Section>
       </div>

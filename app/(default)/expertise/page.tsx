@@ -9,6 +9,7 @@ import { Container } from '@/src/components/shared/Container/Container';
 import { ClientExpertiseItems } from './ClientExpertiseItems';
 import { ExpertiseFeedbackBgSvg } from '@/src/components/svg/ExpertiseFeedbackgBgSvg';
 import { ExpertiseHeroBgSvg } from '@/src/components/svg/ExpertiseHeroBgSvg';
+import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 
 export default function Expertise() {
   return (
@@ -25,14 +26,20 @@ export default function Expertise() {
           </div>
         </Section>
         <Section id='virtual-cio' className='pt-0 tablet:pt-0 desktop:pt-0'>
-          <ClientExpertiseItems />
+          <ScrollAnimationWrapper showOnLoad>
+            <ClientExpertiseItems />
+          </ScrollAnimationWrapper>
         </Section>
         <Section id='insights'>
-          <Insights />
+          <ScrollAnimationWrapper>
+            <Insights />
+          </ScrollAnimationWrapper>
         </Section>
         <Section>
           <Container>
-            <TrustUs />
+            <ScrollAnimationWrapper>
+              <TrustUs />
+            </ScrollAnimationWrapper>
           </Container>
         </Section>
         <Section
@@ -40,7 +47,9 @@ export default function Expertise() {
           className='mt-[40px] tablet:mt-[60px] desktop:mt-[80px]'
         >
           <Container>
-            <FeedbackClient feedback={FeedbackDataExtertise} />
+            <ScrollAnimationWrapper>
+              <FeedbackClient feedback={FeedbackDataExtertise} />
+            </ScrollAnimationWrapper>
             <div className='absolute inset-0 bg-[linear-gradient(100deg,#000A25_14.95%,#00248B_92.57%)]'></div>
             <div className='absolute inset-0 max-tablet:-bottom-1/2'>
               <ExpertiseFeedbackBgSvg />
@@ -53,7 +62,9 @@ export default function Expertise() {
           className='py-[40px] tablet:py-[80px] desktop:py-[80px]'
         >
           <Container>
-            <ContactForm />
+            <ScrollAnimationWrapper>
+              <ContactForm />
+            </ScrollAnimationWrapper>
           </Container>
         </Section>
       </main>

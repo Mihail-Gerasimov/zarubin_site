@@ -7,7 +7,9 @@ const config: Config = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx,md}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './node_modules/tw-elements-react/dist/js/**/*.js',
   ],
+  safelist: ['animate-slide-in'],
   theme: {
     extend: {
       backgroundImage: {
@@ -79,7 +81,19 @@ const config: Config = {
       'desktop-big': '1800px',
       'desktop-hard': '1920px',
     },
+    keyframes: {
+      'slide-in': {
+        '0%': { transform: 'translateY(100px)', opacity: '0' },
+        '100%': { transform: 'translateY(0)', opacity: '100%' },
+      },
+    },
+    animation: {
+      'slide-in': 'slide-in 1s ease-in-out',
+    },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('tw-elements-react/dist/plugin.cjs'),
+  ],
 };
 export default config;
