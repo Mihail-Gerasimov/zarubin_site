@@ -15,7 +15,7 @@ export default function Expertise() {
     <>
       <main className='bg-main-bg text-white'>
         <Section id='title' className='overflow-x-hidden overflow-y-hidden'>
-          <Container>
+          <Container className='relative z-10'>
             <ExpertiseTitle />
           </Container>
           <div className='absolute inset-0 flex after:absolute after:inset-0 after:bg-gradient-to-t after:from-main-bg after:to-transparent'>

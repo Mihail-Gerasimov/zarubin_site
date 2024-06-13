@@ -22,14 +22,14 @@ export const ExpertiseCard = ({
 }: Props) => {
   return (
     <div
-      className={`flex overflow-hidden bg-dark-blue ${isEven && 'flex-row-reverse'}`}
+      className={`delay-300 group flex overflow-hidden bg-[linear-gradient(to_right,var(--dark-blue)_50%,white_50%)] bg-[length:200%_100%] transition-all duration-500 hover:bg-[position:-100%_0] hover:text-text-dark hover:delay-0 ${isEven && 'flex-row-reverse'}`}
     >
-      <div className='flex w-full flex-col gap-[40px] px-[20px] py-[36px] tablet:w-[50%] desktop:px-[60px] desktop:py-[34px]'>
-        <h3 className='font-unbound text-[24px] font-bold leading-[1.16] desktop:text-[38px] uppercase'>
+      <div className='relative flex w-full flex-col gap-[40px] px-[20px] py-[36px] tablet:w-[50%] desktop:px-[60px] desktop:py-[34px]'>
+        <h3 className='relative z-10 font-unbound text-[24px] font-bold uppercase leading-[1.16] desktop:text-[38px]'>
           {title}
         </h3>
-        <span className='block h-[1px] w-[98px] bg-white' />
-        <ul className='flex flex-col gap-[19px]'>
+        <span className='relative z-10 block h-[1px] w-[98px] bg-white' />
+        <ul className='relative z-10 flex flex-col gap-[19px]'>
           {subData.map((item) => (
             <li key={item.id} className='flex items-center gap-[19px]'>
               <TriangeIcon className='h-[18px] w-[18px]' />
@@ -39,6 +39,9 @@ export const ExpertiseCard = ({
             </li>
           ))}
         </ul>
+        <div className='brief-stroke absolute bottom-0 right-0 font-unbound text-[163px] font-bold uppercase leading-[0.7] text-white opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:delay-300'>
+          brief
+        </div>
       </div>
       <div className='relative hidden w-[50%] overflow-hidden tablet:block'>
         <Image
