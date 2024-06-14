@@ -1,6 +1,9 @@
 import { DescriptionContent } from '@/src/ui-kit/DescriptionContent/DescriptionContent';
 import { TitleContent } from '@/src/ui-kit/TitleContent/TitleContent';
 import { ComponentContainer } from '../../ComponentContainer/ComponentContainer';
+import bg from '@/public/assets/images/expertise/scalable.png';
+import Image from 'next/image';
+import { ExpertiseScalableObjectsSvg } from '../../svg/ExpertiseScalableObjectsSvg';
 
 const tags = [
   'Long-term sustainability',
@@ -17,12 +20,24 @@ const description = {
 
 export const ScalableArchitecture = () => {
   return (
-    <ComponentContainer light>
-      <TitleContent title='Scalable Architecture' tags={tags} />
-      <DescriptionContent
-        description={description.descr1}
-        subDescription={description.descr2}
-      />
+    <ComponentContainer light className='!flex flex-col !gap-[16px]'>
+      <div className='flex flex-col gap-[40px] desktop:grid desktop:grid-cols-[42%_1fr] desktop:gap-0'>
+        <TitleContent title='Scalable Architecture' tags={tags} light />
+        <div className='flex flex-col gap-[20px]'>
+          <DescriptionContent
+            description={description.descr1}
+            subDescription={description.descr2}
+          />
+        </div>
+      </div>
+      <div className='relative w-full desktop:h-[408px]'>
+        <ExpertiseScalableObjectsSvg />
+        <Image
+          src={bg}
+          alt=''
+          className='absolute inset-0 h-full object-cover object-center'
+        />
+      </div>
     </ComponentContainer>
   );
 };
