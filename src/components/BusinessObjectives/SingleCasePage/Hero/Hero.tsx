@@ -19,7 +19,7 @@ export const Hero = ({
     <div className='flex flex-col gap-[30px] pb-[60px]'>
       <div className='flex flex-col gap-[20px] break-words'>
         <Breadcrumbs breadcrumbs={BREADCRUMBS} />
-        <h1 className='z-[5] font-unbound text-[50px] font-bold uppercase leading-[1.1] tablet:text-[60px] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px] desktop-hard:text-[100px]'>
+        <h1 className='z-[5] font-unbound text-[40px] font-bold uppercase leading-[1.1] tablet:text-[60px] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px] desktop-hard:text-[100px]'>
           {title}
         </h1>
       </div>
@@ -29,7 +29,7 @@ export const Hero = ({
             key={industry}
             className='flex items-start justify-start gap-2.5 rounded-sm bg-white p-2.5'
           >
-            <div className='whitespace-nowrap font-unbound text-[24px] font-bold uppercase leading-7 text-text-dark'>
+            <div className='whitespace-wrap font-unbound text-[24px] font-bold uppercase leading-7 text-text-dark'>
               {industry}
             </div>
           </div>

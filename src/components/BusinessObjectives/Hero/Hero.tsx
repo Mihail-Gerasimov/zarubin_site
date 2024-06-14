@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <div className='flex flex-col gap-[20px] break-words pb-[60px]'>
       <Breadcrumbs breadcrumbs={BREADCRUMBS} />
-      <h1 className='z-[5] font-unbound text-[50px] font-bold uppercase leading-[1.1] tablet:text-[60px] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px] desktop-hard:text-[100px]'>
+      <h1 className='z-[5] font-unbound text-[40px] font-bold uppercase leading-[1.1] tablet:text-[60px] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px] desktop-hard:text-[100px]'>
         Business objectives
       </h1>
     </div>
