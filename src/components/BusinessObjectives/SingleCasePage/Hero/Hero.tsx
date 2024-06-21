@@ -6,14 +6,16 @@ import {
 export const Hero = ({
   title,
   industries,
+  tag,
 }: {
   title: string;
   industries: string[];
+  tag: string;
 }) => {
   const BREADCRUMBS: Breadcrumb[] = [
     { title: 'Main', link: '/' },
-    { title: 'Business objectives', link: '/business-objectives' },
-    { title },
+    { title: 'Solutions', link: '/solutions' },
+    { title: tag },
   ];
   return (
     <div className='flex flex-col gap-[30px] pb-[60px]'>

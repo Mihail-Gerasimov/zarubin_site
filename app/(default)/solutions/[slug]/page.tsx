@@ -9,6 +9,7 @@ import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationW
 import { Insights } from '@/src/components/Main/Insights/Insights';
 import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
 import { contentTrimming } from '@/src/utils/contentTrimming';
+import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 
 const getCaseContent = (slug: string) => {
   const folder = 'src/cases/';
@@ -49,7 +50,7 @@ export default async function CasePage(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const post = getCaseContent(slug);
 
-  const { industries, title } = post.data;
+  const { industries, title, tag } = post.data;
 
   const hashtagRegex = /#[A-Za-z_]+/g;
   const regexFont = /<font color='(.+?)'>(.+?)<\/font>/g;
@@ -80,10 +81,10 @@ export default async function CasePage(props: { params: { slug: string } }) {
     }));
 
   return (
-    <main className='flex flex-col gap-20 overflow-hidden'>
+    <main className='flex flex-col gap-[60px] overflow-hidden'>
       <Section id='hero' className='relative py-0 tablet:py-0 desktop:pb-0'>
         <Container>
-          <Hero title={title} industries={industries} />
+          <Hero title={title} tag={tag} industries={industries} />
         </Container>
       </Section>
       <Section light>
@@ -102,10 +103,21 @@ export default async function CasePage(props: { params: { slug: string } }) {
           ))}
         </Container>
       </Section>
-      <Section id='insights'>
+      <Section id='insights' className='py-0 tablet:py-0 desktop:py-0'>
         <ScrollAnimationWrapper>
           <Insights />
         </ScrollAnimationWrapper>
+      </Section>{' '}
+      <Section
+        id='contacts'
+        light
+        className='py-[40px] tablet:py-[80px] desktop:py-[80px]'
+      >
+        <Container>
+          <ScrollAnimationWrapper>
+            <ContactForm />
+          </ScrollAnimationWrapper>
+        </Container>
       </Section>
     </main>
   );

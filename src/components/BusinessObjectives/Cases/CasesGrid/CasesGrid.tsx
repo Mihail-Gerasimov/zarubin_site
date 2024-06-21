@@ -15,7 +15,7 @@ export const CasesGrid = ({ cases }: { cases: Case[] }) => {
 const CaseCard = ({ data }: { data: Case }) => {
   return (
     <Link
-      href={`/business-objectives/${data.slug}`}
+      href={`/solutions/${data.slug}`}
       className='relative min-h-[423px] overflow-hidden rounded-b-[5px] p-[40px] desktop-big:min-h-[623px]'
     >
       <div className='absolute inset-0 -z-10 bg-[var(--dark-blue)]'>
