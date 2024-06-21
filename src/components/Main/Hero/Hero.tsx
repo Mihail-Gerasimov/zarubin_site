@@ -1,7 +1,6 @@
 import LinkArrowIcon from '@/public/assets/images/icons/link_arrow.svg';
 import solutionBg from '@/public/assets/images/main/solution_bg.png';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
-import { LinkArrow } from '@/src/ui-kit/LinkArrow/LinkArrow';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -32,7 +31,7 @@ export const Hero = () => {
             </h3>
             <p className='mt-[12px] font-proxima text-[20px] leading-[1.2]'>{`The stories of solving our clients' cases`}</p>
             <Link
-              href='#'
+              href='/solutions'
               className='mt-[40px] flex h-[30px] w-fit items-center justify-center gap-[10px] rounded-[6px] bg-main-blue px-[10px] font-proxima text-[18px] font-bold leading-[1.33] hover:bg-main-blue-hover tablet:h-[50px]'
             >
               Go to solutions
@@ -57,11 +56,7 @@ export const Hero = () => {
               </p>
             </div>
             <div className='mt-[20px] flex flex-col gap-[25px] tablet:flex-row desktop:mt-[25px]'>
-              <DownloadLink link='/' />
-
-              <div className='h-[64px] w-[232px]'>
-                <LinkArrow title='Go to the research' link='/' />
-              </div>
+              <DownloadLink link='https://drive.google.com/file/d/1eXyUyvjlXv0i7gtawqK7D1jtEYGfC4nR/view' />
             </div>
           </div>
         </div>

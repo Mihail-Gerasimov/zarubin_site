@@ -23,6 +23,9 @@
     "react": "^18",
     "react-dom": "^18",
     "react-dropzone": "^14.2.3",
+    "react-indiana-drag-scroll": "^2.2.0",
+    "react-scroll-parallax": "^3.4.5",
+    "swiper": "^11.1.4",
     "tailwind-merge": "^2.3.0",
     "tw-elements-react": "^1.0.0-alpha-end"
   },

@@ -9,7 +9,7 @@ import { ScalableArchitecture } from '@/src/components/Expertise/ScalableArchite
 import { SystemIntegration } from '@/src/components/Expertise/SystemIntegration/SystemIntegration';
 import { Virtual } from '@/src/components/Expertise/Virtual/Virtual';
 import { Container } from '@/src/components/shared/Container/Container';
-import { useEffect, useRef, useState } from 'react';
+import { PropsWithChildren, useEffect, useRef, useState } from 'react';
 
 export function ClientExpertiseItems() {
   const ref = useRef<HTMLDivElement>(null);
@@ -22,48 +22,113 @@ export function ClientExpertiseItems() {
     }
   }, [ref]);
 
-  const anchorStyle = {
-    transform: `translateY(${-stickyPosition + 17}px)`,
-  };
-  const lastAnchorStyle = {
-    transform: `translateY(${-stickyPosition - 17}px)`,
-  };
-  const sectionStyle = { top: stickyPosition };
+  const anchorTranslate = -stickyPosition + 17;
+  const lastAnchorTranslate = -stickyPosition - 17;
+
   return (
     <>
       <Container className='top-[80px] desktop:sticky' ref={ref}>
         <Items />
       </Container>
-      <div id='vco' style={anchorStyle}></div>
       <Container className='flex flex-col gap-[17px]'>
-        <div className='desktop:sticky' style={sectionStyle}>
+        <AnchorSection
+          id='vco'
+          top={stickyPosition}
+          translateY={anchorTranslate}
+        >
           <Virtual />
-        </div>
-        <div id='business-process' style={anchorStyle}></div>
-        <div className='desktop:sticky' style={sectionStyle}>
+        </AnchorSection>
+        <AnchorSection
+          id='business-process'
+          top={stickyPosition}
+          translateY={anchorTranslate}
+        >
           <BusinessProcess />
-        </div>
-        <div id='risk-managment' style={anchorStyle}></div>
-        <div className='desktop:sticky' style={sectionStyle}>
+        </AnchorSection>
+        <AnchorSection
+          id='risk-managment'
+          top={stickyPosition}
+          translateY={anchorTranslate}
+        >
           <ProjectsRisks />
-        </div>
-        <div id='custom' style={anchorStyle}></div>
-        <div className='desktop:sticky' style={sectionStyle}>
+        </AnchorSection>
+        <AnchorSection
+          id='custom'
+          top={stickyPosition}
+          translateY={anchorTranslate}
+        >
           <CostumDevelopment />
-        </div>
-        <div id='integration' style={anchorStyle}></div>
-        <div className='desktop:sticky' style={sectionStyle}>
+        </AnchorSection>
+        <AnchorSection
+          id='integration'
+          top={stickyPosition}
+          translateY={anchorTranslate}
+        >
           <SystemIntegration />
-        </div>
-        <div id='architecture' style={anchorStyle}></div>
-        <div className='desktop:sticky' style={sectionStyle}>
+        </AnchorSection>
+        <AnchorSection
+          id='architecture'
+          top={stickyPosition}
+          translateY={anchorTranslate}
+        >
           <ScalableArchitecture />
-        </div>
-        <div id='mobile' style={lastAnchorStyle}></div>
-        <div className='desktop:sticky' style={sectionStyle}>
+        </AnchorSection>
+        <AnchorSection
+          id='mobile'
+          disableTransparency
+          top={stickyPosition}
+          translateY={lastAnchorTranslate}
+        >
           <MobileApplications />
-        </div>
+        </AnchorSection>
       </Container>
     </>
   );
 }
+
+const AnchorSection = ({
+  id,
+  translateY,
+  top,
+  disableTransparency,
+  children,
+}: PropsWithChildren<{
+  id: string;
+  translateY: number;
+  top: number;
+  disableTransparency?: boolean;
+}>) => {
+  const anchorRef = useRef<HTMLDivElement>(null);
+  const [opacity, setOpacity] = useState(1);
+
+  const handleScroll = () => {
+    const tresholdTop = -100;
+    const tresholdBottom = -700;
+    const top = anchorRef.current?.getBoundingClientRect().top ?? 0;
+    if (top >= tresholdTop || disableTransparency) setOpacity(1);
+    else if (top < tresholdBottom) setOpacity(0);
+    else setOpacity(1 + (top - tresholdTop) / (tresholdTop - tresholdBottom));
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  return (
+    <>
+      <div
+        id={id}
+        style={{
+          transform: `translateY(${translateY}px)`,
+        }}
+        ref={anchorRef}
+      ></div>
+      <div className='desktop:sticky' style={{ top, opacity }}>
+        {children}
+      </div>
+    </>
+  );
+};

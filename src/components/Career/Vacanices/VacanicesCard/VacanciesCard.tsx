@@ -10,7 +10,7 @@ interface Props {
 
 export const VacanciesCard = ({ title, description, link, tags }: Props) => {
   return (
-    <div className='relative flex h-[400px] h-full w-full min-w-[320px] flex-col rounded-[6px] bg-dark-blue p-[40px_20px] tablet:min-w-[688px] tablet:p-[40px_40px] desktop:min-w-[590px] desktop-hard:min-w-[860px]'>
+    <div className='relative flex h-[400px] h-full w-full flex-col rounded-[6px] bg-dark-blue p-[40px_20px] tablet:p-[40px_40px]'>
       <div className='z-10 flex h-full w-full flex-col justify-between'>
         <div className='flex items-center gap-[8px]'>
           {tags.map((tag, idx) => (

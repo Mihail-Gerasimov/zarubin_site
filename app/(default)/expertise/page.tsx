@@ -1,15 +1,16 @@
 import { ExpertiseTitle } from '@/src/components/Expertise/ExpertiseTitle/ExpertiseTitle';
 import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
-import { FeedbackClient } from '@/src/components/Main/Feedback/FeedbackClient';
 import { Insights } from '@/src/components/Main/Insights/Insights';
 import { TrustUs } from '@/src/components/Main/TrustUs/TrustUs';
-import { FeedbackDataExtertise } from '@/src/utils/DataLayers/FeedbackData';
 import { Section } from '@/src/components/shared/Section/Section';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ClientExpertiseItems } from './ClientExpertiseItems';
-import { ExpertiseFeedbackBgSvg } from '@/src/components/svg/ExpertiseFeedbackgBgSvg';
 import { ExpertiseHeroBgSvg } from '@/src/components/svg/ExpertiseHeroBgSvg';
+import bgImage from '@/public/assets/images/main/group.png';
+import insightBg from '@/public/assets/images/main/insight_bg.png';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
+import { Feedback } from '@/src/components/Main/Feedback/Feedback';
+import Image from 'next/image';
 
 export default function Expertise() {
   return (
@@ -34,6 +35,9 @@ export default function Expertise() {
           <ScrollAnimationWrapper>
             <Insights />
           </ScrollAnimationWrapper>
+          <div className='absolute inset-0'>
+            <Image src={insightBg} className='absolute inset-0' alt='' />
+          </div>
         </Section>
         <Section>
           <Container>
@@ -42,19 +46,19 @@ export default function Expertise() {
             </ScrollAnimationWrapper>
           </Container>
         </Section>
-        <Section
-          id='feedback'
-          className='mt-[40px] tablet:mt-[60px] desktop:mt-[80px]'
-        >
+        <Section id='feedback'>
           <Container>
-            <ScrollAnimationWrapper>
-              <FeedbackClient feedback={FeedbackDataExtertise} />
+            <ScrollAnimationWrapper className='relative z-10'>
+              <Feedback />
             </ScrollAnimationWrapper>
-            <div className='absolute inset-0 bg-[linear-gradient(100deg,#000A25_14.95%,#00248B_92.57%)]'></div>
-            <div className='absolute inset-0 max-tablet:-bottom-1/2'>
-              <ExpertiseFeedbackBgSvg />
-            </div>
           </Container>
+          <div className='absolute inset-0 bg-[linear-gradient(100deg,#000a25_14.95%,#00248b_92.57%)]'>
+            <Image
+              src={bgImage}
+              className='absolute inset-0 opacity-30 mix-blend-overlay'
+              alt=''
+            />
+          </div>
         </Section>
         <Section
           id='contacts'

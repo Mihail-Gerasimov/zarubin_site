@@ -9,7 +9,7 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/tw-elements-react/dist/js/**/*.js',
   ],
-  safelist: ['animate-slide-in'],
+  safelist: ['animate-slide-in', 'animate-fade-in', 'animate-fade-out'],
   theme: {
     extend: {
       backgroundImage: {
@@ -86,9 +86,15 @@ const config: Config = {
         '0%': { transform: 'translateY(100px)', opacity: '0' },
         '100%': { transform: 'translateY(0)', opacity: '100%' },
       },
+      fade: {
+        '0%': { opacity: '0' },
+        '100%': { opacity: '100%' },
+      },
     },
     animation: {
       'slide-in': 'slide-in 1s ease-in-out',
+      'fade-in': 'fade 1s ease-in-out',
+      'fade-out': 'fade 1s ease-in-out reverse',
     },
   },
   plugins: [

@@ -4,10 +4,15 @@ import { CasesData } from '@/src/utils/DataLayers/CasesData';
 import { CasesGrid } from './CasesGrid/CasesGrid';
 import { Tag } from '../../shared/Tag/Tag';
 import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 export const Cases = () => {
   const tags = new Set(CasesData.flatMap((item) => item.industries));
-  const [selectedTag, setSelectedTag] = useState('All');
+  const params = useSearchParams();
+  console.log(params.get('industry'));
+  const [selectedTag, setSelectedTag] = useState(
+    params.get('industry') || 'All',
+  );
 
   const filteredCasesData = CasesData.filter(
     (item) => selectedTag === 'All' || item.industries.includes(selectedTag),

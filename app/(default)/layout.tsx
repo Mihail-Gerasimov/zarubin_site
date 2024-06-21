@@ -2,6 +2,7 @@ import { openGraphImage } from '@/src/utils/openGraphParams';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '../globals.css';
+import 'swiper/css';
 import { Header } from '@/src/components/Header/Header';
 import { Footer } from '@/src/components/Footer/Footer';
 

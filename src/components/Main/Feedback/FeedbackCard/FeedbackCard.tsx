@@ -4,6 +4,7 @@ import useMediaQuery from '@/src/utils/useMediaQuery';
 import classNames from 'classnames';
 import Image from 'next/image';
 import styles from './FeedbackCard.module.css';
+import { useSwiper } from 'swiper/react';
 
 interface Data {
   id: number;
@@ -15,22 +16,13 @@ interface Data {
 
 interface Props {
   data: Data;
-  fade: boolean;
   length: number;
   indexNumber: number;
-  next: () => void;
-  prev: () => void;
 }
 
-export const FeedbackCard = ({
-  data,
-  fade,
-  length,
-  indexNumber,
-  next,
-  prev,
-}: Props) => {
+export const FeedbackCard = ({ data, length, indexNumber }: Props) => {
   const mediaQuery = useMediaQuery('<tablet');
+  const swiper = useSwiper();
   return (
     <div className={styles.cardContainer}>
       <div className={classNames(styles.mainContainer)}>
@@ -39,19 +31,10 @@ export const FeedbackCard = ({
           width={355}
           height={251}
           alt={data.name}
-          unoptimized
-          className={classNames(
-            styles.image,
-            fade ? styles.fadeOut : styles.fadeIn,
-          )}
+          className={styles.image}
         />
         <div className={styles.contentWrapper}>
-          <div
-            className={classNames(
-              styles.content,
-              fade ? styles.fadeOut : styles.fadeIn,
-            )}
-          >
+          <div className={styles.content}>
             <h3 className={styles.name}>{data.name}</h3>
             <span className={styles.job}>{data.job}</span>
             <p className={styles.description}>{data.feedback}</p>
@@ -62,7 +45,12 @@ export const FeedbackCard = ({
               <span className={styles.slash}>{` / `}</span>
               <span className={styles.length}>{length}</span>
             </div>
-            {mediaQuery && <NextPrevBtn nextPage={next} prevPage={prev} />}
+            {mediaQuery && (
+              <NextPrevBtn
+                nextPage={() => swiper.slideNext()}
+                prevPage={() => swiper.slidePrev()}
+              />
+            )}
           </div>
         </div>
       </div>

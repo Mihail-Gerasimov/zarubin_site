@@ -1,10 +1,12 @@
 'use client';
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
-import { useRef } from 'react';
+import { useState } from 'react';
 import styles from './Insights.module.css';
 import { InsightsCard } from './InsightsCard/InsightsCard';
 import { Container } from '../../shared/Container/Container';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import useMediaQuery from '@/src/utils/useMediaQuery';
 
 interface Post {
   title: string;
@@ -19,49 +21,42 @@ interface Props {
 }
 
 export const InsightsClient = ({ posts }: Props) => {
-  const parentRef = useRef<HTMLDivElement>(null);
-
-  const nextBtn = () => {
-    if (!parentRef.current) return;
-    const { scrollLeft } = parentRef.current;
-    parentRef.current.scrollTo({
-      left: scrollLeft + 452,
-      behavior: 'smooth',
-    });
-  };
-
-  const prevBtn = () => {
-    if (!parentRef.current) return;
-    const { scrollLeft } = parentRef.current;
-    parentRef.current.scrollTo({
-      left: scrollLeft - 452,
-      behavior: 'smooth',
-    });
-  };
+  const [swiper, setSwiper] = useState<SwiperClass | null>(null);
+  const mediaQuery = useMediaQuery('<desktop');
 
   return (
-    <div className={styles.mainContainer}>
+    <div className='relative z-10 flex flex-col gap-[40px]'>
       <Container>
         <div className={styles.titleWrapper}>
           <h2 className={styles.title}>Insights</h2>
           <div className={styles.arrowWrapper}>
-            <NextPrevBtn nextPage={nextBtn} prevPage={prevBtn} />
+            <NextPrevBtn
+              nextPage={() => swiper?.slideNext()}
+              prevPage={() => swiper?.slidePrev()}
+            />
           </div>
         </div>
       </Container>
-      <div className={styles.cardsWrapper} ref={parentRef}>
-        {posts.slice(6).map((post, idx) => (
-          <InsightsCard
-            key={idx}
-            title={post.title}
-            description={post.description}
-            tag={post.tag}
-            slug={post.slug}
-            type={post.type}
-            downloadLink={post.downloadLink}
-          />
-        ))}
-      </div>
+      <Container className='max-w-full'>
+        <Swiper
+          spaceBetween={40}
+          slidesPerView={mediaQuery ? 1.5 : 3}
+          onSwiper={setSwiper}
+        >
+          {posts.slice(0, 6).map((post, idx) => (
+            <SwiperSlide key={idx}>
+              <InsightsCard
+                title={post.title}
+                description={post.description}
+                tag={post.tag}
+                slug={post.slug}
+                type={post.type}
+                downloadLink={post.downloadLink}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </Container>
     </div>
   );
 };

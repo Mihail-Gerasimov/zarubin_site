@@ -10,7 +10,7 @@ type TeamCard = {
 
 const TEAM_CARDS: TeamCard[] = [
   {
-    title: 'Tons onf cases',
+    title: 'Tons of cases',
     description:
       'We have been researching and applying the best practices in the industries',
   },
