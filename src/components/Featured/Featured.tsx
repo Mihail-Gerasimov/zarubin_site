@@ -16,8 +16,8 @@ export const Featured = ({ slug, posts }: Props) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
 
   return (
-    <div className='flex flex-col gap-[40px] border-t border-text-dark'>
-      <div className='relative flex items-center justify-between pt-[20px] before:absolute before:left-0 before:top-0 before:h-[1px] before:w-full before:bg-text-gray'>
+    <div className='flex flex-col gap-[40px] border-t-[1px] border-text-dark'>
+      <div className='relative flex items-center justify-between border-text-dark pt-[20px] before:absolute before:left-0 before:top-0 before:h-[1px] before:w-full before:bg-text-gray'>
         {slug && (
           <p className='font-unbound text-[24px] font-bold uppercase'>
             Featured

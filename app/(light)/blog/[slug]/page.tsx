@@ -188,7 +188,7 @@ export default function MainBlogSlug(props: { params: { slug: string } }) {
           </Markdown>
         </article>
         <SocialFollow />
-        <div className='desktop:bp-0 relative z-[5] mt-[30px] pb-[20px]'>
+        <div className='desktop:bp-0 relative z-[5] mt-[60px] pb-[20px]'>
           <Featured slug={slug} posts={getAllPosts()} />
         </div>
       </div>
