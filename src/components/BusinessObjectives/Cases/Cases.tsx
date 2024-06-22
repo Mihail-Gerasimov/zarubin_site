@@ -1,16 +1,24 @@
 'use client';
 
-import { CasesData } from '@/src/utils/DataLayers/CasesData';
 import { CasesGrid } from './CasesGrid/CasesGrid';
 import { Tag } from '../../shared/Tag/Tag';
 import { useState } from 'react';
+import { Case } from '@/src/utils/getCaseMetadata';
 
-export const Cases = () => {
-  const tags = new Set(CasesData.flatMap((item) => item.industries));
+export const Cases = ({ cases }: { cases: Case[] }) => {
+  const tags = new Set(
+    cases.flatMap((item) =>
+      item.industries.map((industry) => industry.toLocaleLowerCase()),
+    ),
+  );
   const [selectedTag, setSelectedTag] = useState('All');
 
-  const filteredCasesData = CasesData.filter(
-    (item) => selectedTag === 'All' || item.industries.includes(selectedTag),
+  const filteredCasesData = cases.filter(
+    (item) =>
+      selectedTag === 'All' ||
+      item.industries
+        .map((industry) => industry.toLocaleLowerCase())
+        .includes(selectedTag),
   );
   return (
     <div className='flex flex-col gap-[60px]'>
