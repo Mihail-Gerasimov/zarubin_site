@@ -1,0 +1,111 @@
+.markdown {
+  width: 100%;
+  color: var(--text-dark);
+}
+
+.markdown h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.markdown h2 {
+  font-family: Unbounded;
+  display: flex;
+  align-items: center;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1.11;
+  text-transform: uppercase;
+}
+
+.authorImg {
+  margin: 0;
+  width: 40px;
+  height: auto;
+  border-radius: 100%;
+}
+
+.markdown > p > img {
+  opacity: 1;
+  width: 100%;
+}
+
+.markdown strong {
+  font-size: 16px;
+}
+
+.tagList {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.tagItem {
+  margin: 0;
+  padding: 0;
+}
+
+.tag {
+  padding: 6px 8px;
+  border-radius: 8px;
+  color: var(--main-white);
+  font-size: 12px;
+  background-color: #1a1621;
+}
+
+.tag::before {
+  content: '#';
+}
+
+@media (min-width: 768px) {
+  .markdown h1 {
+    font-size: 36px;
+  }
+
+  .markdown h2 {
+    font-size: 50px;
+  }
+
+  .research.markdown h2::before {
+    margin-right: 16px;
+  }
+
+  .authorImg {
+    width: 80px;
+  }
+
+  .markdown li,
+  .markdown p,
+  .markdown strong {
+    font-size: 21px;
+  }
+
+  .tag {
+    padding: 8px 12px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .markdown h1 {
+    font-size: 40px;
+  }
+
+  .markdown h2 {
+    font-size: 70px;
+  }
+
+  .research.markdown h2::before {
+    width: 100px;
+    margin-right: 20px;
+  }
+
+  .markdown li,
+  .markdown p,
+  .markdown strong {
+    font-size: 16px;
+  }
+}
