@@ -1,6 +1,6 @@
 ---
 title: 'We conducted a technical audit and a process audit in their IT part'
-industries: ['Oil', 'media & entertainment', 'business processes management']
+industries: ['oil', 'business processes management']
 tag: 'nis'
 ---
 

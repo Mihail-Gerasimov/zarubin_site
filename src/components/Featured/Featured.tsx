@@ -45,10 +45,11 @@ export const Featured = ({ slug, posts }: Props) => {
         slidesPerView={2}
         spaceBetween={40}
         className='max-w-full'
+        wrapperClass='items-stretch'
       >
         {posts.map((item) => (
-          <SwiperSlide key={item.slug}>
-            <Link href={`/blog/${item.slug}`} className='flex flex-1'>
+          <SwiperSlide key={item.slug} className='!h-auto'>
+            <Link href={`/blog/${item.slug}`} className='flex h-full flex-1'>
               <SmallBlogCard
                 tag={item.tag ? item.tag : ''}
                 title={item.title}

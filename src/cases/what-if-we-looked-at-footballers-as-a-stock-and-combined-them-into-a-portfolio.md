@@ -1,7 +1,7 @@
 ---
-title: 'In three weeks, we managed to set up the work process'
-industries: ['fin tech', 'retail', 'business processes management']
-tag: 'GRIDCAPITAL'
+title: 'What if we looked at footballers as a stock and combined them into a portfolio?'
+industries: ['sport & entertainment', 'custom development']
+tag: 'STOCKS.SOCCER'
 ---
 
 ## problem

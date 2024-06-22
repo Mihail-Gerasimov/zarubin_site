@@ -7,8 +7,10 @@ import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationW
 import { Section } from '@/src/components/shared/Section/Section';
 import Image from 'next/image';
 import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
+import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
 
 export default async function BusinessObjectivesPage() {
+  const casesMetadata = getCaseMetadata('src/cases');
   return (
     <main className='flex flex-col gap-20 overflow-hidden'>
       <Section id='hero' className='relative py-0 tablet:py-0 desktop:pb-0'>
@@ -19,7 +21,7 @@ export default async function BusinessObjectivesPage() {
       <Section className='!pt-0'>
         <Container>
           <ScrollAnimationWrapper showOnLoad>
-            <Cases />
+            <Cases cases={casesMetadata} />
           </ScrollAnimationWrapper>
         </Container>
       </Section>

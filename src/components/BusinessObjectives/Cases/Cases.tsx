@@ -3,15 +3,15 @@
 import { CasesGrid } from './CasesGrid/CasesGrid';
 import { Tag } from '../../shared/Tag/Tag';
 import { useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { Case } from '@/src/utils/getCaseMetadata';
 
-export const Cases = () => {
-  const tags = new Set(CasesData.flatMap((item) => item.industries));
-  const params = useSearchParams();
-  console.log(params.get('industry'));
-  const [selectedTag, setSelectedTag] = useState(
-    params.get('industry') || 'All',
+export const Cases = ({ cases }: { cases: Case[] }) => {
+  const tags = new Set(
+    cases.flatMap((item) =>
+      item.industries.map((industry) => industry.toLocaleLowerCase()),
+    ),
   );
+  const [selectedTag, setSelectedTag] = useState('All');
 
   const filteredCasesData = cases.filter(
     (item) =>

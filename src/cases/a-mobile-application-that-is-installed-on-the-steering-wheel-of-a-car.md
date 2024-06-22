@@ -1,7 +1,7 @@
 ---
-title: 'What if we looked at footballers as a stock and combined them into a portfolio?'
-industries: ['fantasy game', 'sport', 'custom development']
-tag: 'STOCKS.SOCCER'
+title: 'a mobile application that is installed on the steering wheel of a car'
+industries: ['automotive', 'custom development']
+tag: 'KAMAATOM'
 ---
 
 ## problem
