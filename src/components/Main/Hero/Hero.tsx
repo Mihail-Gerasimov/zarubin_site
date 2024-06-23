@@ -1,5 +1,5 @@
 import LinkArrowIcon from '@/public/assets/images/icons/link_arrow.svg';
-import solutionBg from '@/public/assets/images/main/solution_bg.png';
+import solutionBg from '@/public/assets/images/main/hero-solutions-bg.png';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -24,7 +24,7 @@ export const Hero = () => {
             Go to Insights
           </Link>
         </div>
-        <div className='z-[5] flex flex-col gap-[21px]'>
+        <div className='z-[5] flex flex-col gap-[21px] tablet:min-w-[539px]'>
           <div className='relative z-[5] overflow-hidden rounded-[5px] bg-gradient-to-br from-[#000A25] to-[#000A25]/60 bg-cover p-[20px]'>
             <h3 className='font-unbound text-[24px] font-bold uppercase leading-[1.16]'>
               Success Solutions
@@ -39,10 +39,9 @@ export const Hero = () => {
             </Link>
             <Image
               src={solutionBg}
-              width={200}
-              height={150}
+              fill
               alt='solution'
-              className='absolute bottom-0 right-0 z-[-1] w-full opacity-[50%] tablet:w-[50%]'
+              className='absolute inset-0 z-[-1] w-full object-cover'
             />
           </div>
           <div className='z-[5] rounded-[5px] bg-white p-[20px]'>

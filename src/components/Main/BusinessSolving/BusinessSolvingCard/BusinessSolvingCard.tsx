@@ -40,13 +40,12 @@ export const BusinessSolvingCard = ({
           <LinkArrow title='Go to the solution' link={link} />
         </div>
       </div>
-      <div className='absolute right-0 top-0 z-0 h-full w-[auto] overflow-hidden'>
+      <div className='absolute inset-0 z-0 h-full w-[auto] overflow-hidden'>
         <Image
           src={image}
-          width={300}
-          height={300}
+          fill
           alt='bg-image'
-          className='h-full w-[auto] opacity-[30%]'
+          className='h-full w-[auto] object-cover'
         />
       </div>
     </div>

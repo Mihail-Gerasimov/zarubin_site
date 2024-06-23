@@ -19,10 +19,12 @@ export const FeedbackClient = ({ feedback }: Props) => {
       <div className={styles.titleWrapper}>
         <h2 className={styles.title}>Feedback</h2>
 
-        <NextPrevBtn
-          nextPage={() => swiper?.slideNext()}
-          prevPage={() => swiper?.slidePrev()}
-        />
+        <div className='hidden tablet:block'>
+          <NextPrevBtn
+            nextPage={() => swiper?.slideNext()}
+            prevPage={() => swiper?.slidePrev()}
+          />
+        </div>
       </div>
       <Swiper onSwiper={setSwiper} className='max-w-full'>
         {feedback.map((item, index) => (
