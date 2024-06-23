@@ -8,7 +8,7 @@ export const IndustriesData = [
   {
     id: 1,
     title: 'Service improvement',
-    link: '/',
+    link: '/solutions?industry=service%20improvement',
     image: lampImg,
     data: [
       { id: 1, title: 'Service improvement' },
@@ -22,7 +22,7 @@ export const IndustriesData = [
   {
     id: 2,
     title: 'Media & Entertainment',
-    link: '/',
+    link: '/solutions?industry=media%20%26%20entertainment',
     image: cupImg,
     data: [
       { id: 1, title: 'Marketing' },
@@ -36,7 +36,7 @@ export const IndustriesData = [
   {
     id: 3,
     title: 'Car industry',
-    link: '/',
+    link: '/solutions?industry=car%20industry',
     image: carImg,
     data: [
       { id: 1, title: 'IT Consulting' },
@@ -48,7 +48,7 @@ export const IndustriesData = [
   {
     id: 4,
     title: 'Retail',
-    link: '/',
+    link: '/solutions?industry=retail',
     image: cartImg,
     data: [
       { id: 1, title: 'B2C Sales' },
@@ -62,7 +62,7 @@ export const IndustriesData = [
   {
     id: 5,
     title: 'Sport',
-    link: '/',
+    link: '/solutions?industry=sport',
     image: sportImg,
     data: [
       { id: 1, title: 'Marketing' },

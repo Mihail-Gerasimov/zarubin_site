@@ -1,41 +1,19 @@
 'use client';
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
-import { useEffect, useRef, useState } from 'react';
-import styles from './Vacanices.module.css';
+import { useState } from 'react';
 import { VacanciesCard } from './VacanicesCard/VacanciesCard';
 import { VacanciesData } from '@/src/utils/DataLayers/VacanciesData';
 import { Tag } from '../../shared/Tag/Tag';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import useMediaQuery from '@/src/utils/useMediaQuery';
 
 export const Vacancies = () => {
-  const parentRef = useRef<HTMLDivElement>(null);
-  const cardRef = useRef<HTMLDivElement>(null);
+  const [swiper, setSwiper] = useState<SwiperClass | null>(null);
 
-  const [scrollStep, setScrollStep] = useState(320);
+  const tablet = useMediaQuery('<desktop');
 
   const [selectedTag, setSelectedTag] = useState('All');
-
-  useEffect(() => {
-    if (!cardRef.current) return;
-    setScrollStep(cardRef.current.scrollWidth);
-  }, []);
-
-  const nextSlide = () => {
-    if (!parentRef.current) return;
-    const { scrollLeft } = parentRef.current;
-    parentRef.current.scrollTo({
-      left: scrollLeft + scrollStep,
-      behavior: 'smooth',
-    });
-  };
-  const prevSlide = () => {
-    if (!parentRef.current) return;
-    const { scrollLeft } = parentRef.current;
-    parentRef.current.scrollTo({
-      left: scrollLeft - scrollStep,
-      behavior: 'smooth',
-    });
-  };
 
   const tags = new Set(VacanciesData.flatMap((item) => item.tags));
 
@@ -50,7 +28,10 @@ export const Vacancies = () => {
           Active vacancies
         </h2>
         <div className='hidden items-center gap-[16px] tablet:flex'>
-          <NextPrevBtn nextPage={nextSlide} prevPage={prevSlide} />
+          <NextPrevBtn
+            nextPage={() => swiper?.slideNext()}
+            prevPage={() => swiper?.slidePrev()}
+          />
         </div>
       </div>
       <div>
@@ -69,21 +50,24 @@ export const Vacancies = () => {
           ))}
         </div>
       </div>
-      <div
-        className={`${styles.solvingList} hide-scrollbar mt-[40px] flex gap-[20px] tablet:gap-[40px]`}
-        ref={parentRef}
+      <Swiper
+        spaceBetween={20}
+        slidesPerView={tablet ? 1 : 2}
+        onSwiper={setSwiper}
+        className='max-w-full'
+        wrapperClass='items-stretch'
       >
         {filteredVacanicesData.map((item) => (
-          <div ref={cardRef} key={item.id}>
+          <SwiperSlide key={item.id} className='!h-auto'>
             <VacanciesCard
               title={item.title}
               tags={item.tags}
               description={item.description}
               link={item.link}
             />
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
     </div>
   );
 };

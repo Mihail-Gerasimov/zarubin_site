@@ -11,7 +11,6 @@
   margin: 0;
   padding: 0;
   outline: 0;
-  font-size: 14px;
   outline: none;
 }
 
@@ -32,6 +31,7 @@ a {
 
 :root {
   --bg-color: #090215;
+  font-size: 14px;
 }
 
 @layer base {
@@ -179,7 +179,7 @@ a {
 
   .stickyLink {
     position: sticky;
-    top: calc(100vh - 68px);
+    top: calc(50vh);
   }
 
   .manifesto-list {

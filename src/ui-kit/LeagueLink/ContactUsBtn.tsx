@@ -5,7 +5,7 @@ import { twMerge } from 'tailwind-merge';
 export const ContactUsBtn = ({ dark }: { dark: boolean }) => {
   return (
     <Link
-      href='#'
+      href='#contacts'
       className={twMerge(
         classNames(
           'font-proxima-reg hidden h-[46px] min-w-[162px] items-center justify-center rounded-[4px] font-proxima text-[20px] font-bold tablet:rounded-[8px] desktop:flex desktop:rounded-[6px]',

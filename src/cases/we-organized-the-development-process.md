@@ -1,6 +1,6 @@
 ---
 title: 'We organized the development process'
-industries: ['business', 'retail', 'custom development']
+industries: ['business', 'custom development']
 tag: 'LUXTODAY'
 ---
 

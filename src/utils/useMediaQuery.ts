@@ -3,11 +3,13 @@ import { useEffect, useState } from 'react';
 type Conditions = string | string[];
 
 export const breakpoints = {
-  phone: 480,
+  mobile: 320,
+  'mobile-big': 375,
   tablet: 768,
-  desktop: 960,
-  'desktop-m': 1280,
-  'desktop-l': 1440,
+  laptop: 1200,
+  desktop: 1440,
+  'desktop-big': 1800,
+  'desktop-hard': 1920,
 };
 
 const getOperator = (condition: string) =>

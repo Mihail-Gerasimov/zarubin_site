@@ -1,7 +1,6 @@
 import LinkArrowIcon from '@/public/assets/images/icons/link_arrow.svg';
-import solutionBg from '@/public/assets/images/main/solution_bg.png';
+import solutionBg from '@/public/assets/images/main/hero-solutions-bg.png';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
-import { LinkArrow } from '@/src/ui-kit/LinkArrow/LinkArrow';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -25,14 +24,14 @@ export const Hero = () => {
             Go to Insights
           </Link>
         </div>
-        <div className='z-[5] flex flex-col gap-[21px]'>
+        <div className='z-[5] flex flex-col gap-[21px] tablet:min-w-[539px]'>
           <div className='relative z-[5] overflow-hidden rounded-[5px] bg-gradient-to-br from-[#000A25] to-[#000A25]/60 bg-cover p-[20px]'>
             <h3 className='font-unbound text-[24px] font-bold uppercase leading-[1.16]'>
               Success Solutions
             </h3>
             <p className='mt-[12px] font-proxima text-[20px] leading-[1.2]'>{`The stories of solving our clients' cases`}</p>
             <Link
-              href='#'
+              href='/solutions'
               className='mt-[40px] flex h-[30px] w-fit items-center justify-center gap-[10px] rounded-[6px] bg-main-blue px-[10px] font-proxima text-[18px] font-bold leading-[1.33] hover:bg-main-blue-hover tablet:h-[50px]'
             >
               Go to solutions
@@ -40,10 +39,9 @@ export const Hero = () => {
             </Link>
             <Image
               src={solutionBg}
-              width={200}
-              height={150}
+              fill
               alt='solution'
-              className='absolute bottom-0 right-0 z-[-1] w-full opacity-[50%] tablet:w-[50%]'
+              className='absolute inset-0 z-[-1] w-full object-cover'
             />
           </div>
           <div className='z-[5] rounded-[5px] bg-white p-[20px]'>
@@ -57,11 +55,7 @@ export const Hero = () => {
               </p>
             </div>
             <div className='mt-[20px] flex flex-col gap-[25px] tablet:flex-row desktop:mt-[25px]'>
-              <DownloadLink link='/' />
-
-              <div className='h-[64px] w-[232px]'>
-                <LinkArrow title='Go to the research' link='/' />
-              </div>
+              <DownloadLink link='https://drive.google.com/file/d/1eXyUyvjlXv0i7gtawqK7D1jtEYGfC4nR/view' />
             </div>
           </div>
         </div>

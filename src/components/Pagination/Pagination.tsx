@@ -41,7 +41,7 @@ export const Pagination = ({
         <span
           className={`text-[18px] leading-[1.3] ${isPrevtDisable ? 'opacity-[100%]' : 'opacity-[40%]'}`}
         >
-          Prev
+          Back
         </span>
       </button>
       {

@@ -13,6 +13,7 @@ export const Expertise = () => {
             <ExpertiseCard
               isEven={item.id % 2 === 0}
               title={item.title}
+              link={item.link}
               subData={item.data}
               image={item.image}
             />

@@ -13,7 +13,9 @@ import { Section } from '@/src/components/shared/Section/Section';
 import heroBg from '@/public/assets/images/main/hero_bg.png';
 import Image from 'next/image';
 import bgImage from '@/public/assets/images/main/group.png';
+import insightBg from '@/public/assets/images/main/insight_bg.png';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
+import { ParallaxWrapper } from '@/src/components/shared/ParallaxWrapper/ParalaxWrapper';
 
 export default function Home() {
   return (
@@ -41,7 +43,9 @@ export default function Home() {
         >
           <Container>
             <ScrollAnimationWrapper>
-              <Unlock />
+              <ParallaxWrapper speed={-20}>
+                <Unlock />
+              </ParallaxWrapper>
             </ScrollAnimationWrapper>
             <div className='absolute inset-0'>
               <Image
@@ -55,7 +59,7 @@ export default function Home() {
             </div>
           </Container>
         </Section>
-        <Section id='industries' className='tablet:h-[828px]' light>
+        <Section id='industries' className='!pb-0 tablet:h-[828px]' light>
           <ScrollAnimationWrapper>
             <Industries />
           </ScrollAnimationWrapper>
@@ -77,6 +81,9 @@ export default function Home() {
           <ScrollAnimationWrapper>
             <Insights />
           </ScrollAnimationWrapper>
+          <div className='absolute inset-0'>
+            <Image src={insightBg} className='absolute inset-0' alt='' />
+          </div>
         </Section>
         <Section id='clients'>
           <Container>
@@ -87,7 +94,7 @@ export default function Home() {
         </Section>
         <Section id='feedback'>
           <Container>
-            <ScrollAnimationWrapper>
+            <ScrollAnimationWrapper className='relative z-10'>
               <Feedback />
             </ScrollAnimationWrapper>
           </Container>

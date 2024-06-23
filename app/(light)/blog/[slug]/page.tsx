@@ -15,6 +15,7 @@ import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
 import styles from './Post.module.css';
+import classNames from 'classnames';
 
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 
@@ -50,12 +51,11 @@ export async function generateMetadata({
   params: { slug: string };
 }) {
   const post = getPostContent(params.slug);
-  const id = params?.slug ? ' . ' + params?.slug : '';
   const title = post.data.title;
   const description = contentTrimming(post.data.description, 150);
 
   return {
-    title: `${id.replaceAll('_', ' ')}`,
+    title: post.data.title,
     description,
     openGraph: {
       images: [{ url: post.data.image }],
@@ -119,7 +119,7 @@ export default function MainBlogSlug(props: { params: { slug: string } }) {
     });
 
   return (
-    <div className='mainContainer mt-[80px] w-full px-[10px] pb-[30px] tablet:px-[40px] tablet:pb-[40px] desktop:pb-[60px]'>
+    <div className='mainContainer w-full px-[10px] pb-[30px] tablet:px-[40px] tablet:pb-[40px] desktop:pb-[60px]'>
       {type !== POST_TYPE.MANIFESTO && (
         <div
           className='absolute left-0 top-0 h-[150px] w-full bg-cover bg-center bg-no-repeat opacity-[40%] tablet:h-[302px] laptop:h-[342px]'
@@ -132,7 +132,13 @@ export default function MainBlogSlug(props: { params: { slug: string } }) {
       <BackLink linkName='/blog' />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div
-          className={`relative flex w-full items-center justify-center py-[30px] desktop:py-[60px] ${type === POST_TYPE.RESEARCH && 'tablet:py-[40px]'}`}
+          className={classNames(
+            `relative flex w-full items-center justify-center`,
+            {
+              'tablet:py-[40px]': type === POST_TYPE.RESEARCH,
+              'py-[30px] desktop:py-[60px]': type !== POST_TYPE.MANIFESTO,
+            },
+          )}
         >
           <span className='z-[5] rounded-[2px] bg-text-dark p-[10px] font-proxima text-[16px] text-white tablet:text-[20px]'>
             {type ? type : POST_TYPE.NOTES}

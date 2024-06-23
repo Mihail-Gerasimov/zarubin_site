@@ -1,7 +1,7 @@
 ---
-title: 'a mobile application that is installed on the steering wheel of a car'
-industries: ['service improvement', 'car industry', 'custom development']
-tag: 'KAMAATOM'
+title: 'In three weeks, we managed to set up the work process'
+industries: ['fin tech', 'business processes management']
+tag: 'GRIDCAPITAL'
 ---
 
 ## problem

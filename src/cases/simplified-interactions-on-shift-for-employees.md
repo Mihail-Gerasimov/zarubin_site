@@ -1,7 +1,7 @@
 ---
 title: 'Simplified interaction on shifts for employees'
 industries:
-  ['Service & Hospitality', 'Service improvement', 'Custom development']
+  ['Service & Hospitality', 'Custom development']
 tag: 'oasis'
 image: /assets/images/case/case-image-0.png
 description: 'Simplified interaction on shifts for employees'

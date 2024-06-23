@@ -18,7 +18,7 @@ export const BusinessSolvingCard = ({
   image,
 }: Props) => {
   return (
-    <div className='relative flex h-full w-full min-w-[320px] flex-col rounded-[6px] bg-dark-blue p-[40px_20px] tablet:min-w-[688px] tablet:p-[40px_40px] desktop:min-w-[590px] desktop-hard:min-w-[860px]'>
+    <div className='relative flex h-full w-full flex-col rounded-[6px] bg-dark-blue p-[40px_20px]'>
       <div className='z-10 flex h-full w-full flex-col'>
         <div className='flex items-center gap-[8px]'>
           {tags.map((tag, idx) => (
@@ -30,7 +30,7 @@ export const BusinessSolvingCard = ({
             </span>
           ))}
         </div>
-        <h3 className='mt-[58px] flex-1 font-proxima text-[28px] font-bold leading-[1.14] tablet:mt-[46px] tablet:text-[36px] desktop:text-[40px] desktop-big:mt-[56px]'>
+        <h3 className='mt-[58px] flex-1 font-proxima text-[28px] font-bold leading-[1.14] tablet:mt-[46px] laptop:text-[36px] desktop:text-[40px] desktop-big:mt-[56px]'>
           {title}
         </h3>
         <p className='mb-[32px] mt-[10px] flex-1 font-proxima text-[20px] leading-[1.2]'>
@@ -40,13 +40,12 @@ export const BusinessSolvingCard = ({
           <LinkArrow title='Go to the solution' link={link} />
         </div>
       </div>
-      <div className='absolute right-0 top-0 z-0 h-full w-[auto] overflow-hidden'>
+      <div className='absolute inset-0 z-0 h-full w-[auto] overflow-hidden'>
         <Image
           src={image}
-          width={300}
-          height={300}
+          fill
           alt='bg-image'
-          className='h-full w-[auto] opacity-[30%]'
+          className='h-full w-[auto] object-cover'
         />
       </div>
     </div>

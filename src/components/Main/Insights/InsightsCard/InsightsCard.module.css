@@ -3,7 +3,6 @@
   display: block;
   width: 100%;
   height: 100%;
-  min-width: 320px;
   min-height: 359px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -51,16 +50,9 @@
 @media (min-width: 768px) {
   .cardContainer {
     padding: 40px 40px;
-    min-width: 452px;
   }
 
   .title {
     font-size: 24px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .cardContainer {
-    min-width: 560px;
   }
 }

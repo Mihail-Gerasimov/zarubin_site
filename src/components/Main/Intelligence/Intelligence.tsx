@@ -1,18 +1,21 @@
 import Image from 'next/image';
 import { Container } from '../../shared/Container/Container';
+import { ParallaxWrapper } from '../../shared/ParallaxWrapper/ParalaxWrapper';
 
 export const Intelligence = () => {
   return (
     <div className='bussinesBg overflow-hidden text-right'>
-      <Container>
-        <div className='relative z-30'>
-          <h2 className='font-unbound text-[32px] font-bold uppercase leading-[1.1] tablet:text-[60px] tablet:leading-[1] desktop:text-[80px] desktop:leading-[1.22] desktop-hard:text-[90px]'>
-            Where Leadership Meets{' '}
-          </h2>
-          <h2 className='text-stroke font-unbound text-[32px] font-bold uppercase leading-[1.1] tablet:text-[60px] tablet:leading-[1] desktop:mb-[330px] desktop:text-[80px] desktop:leading-[1.22] desktop-hard:text-[90px]'>
-            Business Intelligence
-          </h2>
-        </div>
+      <Container className='relative z-10'>
+        <ParallaxWrapper speed={-20}>
+          <div className='flex h-[650px] flex-col justify-center'>
+            <h2 className='font-unbound text-[32px] font-bold uppercase leading-[1.1] tablet:text-[60px] tablet:leading-[1] desktop:text-[80px] desktop:leading-[1.22] desktop-hard:text-[90px]'>
+              Where Leadership Meets{' '}
+            </h2>
+            <h2 className='text-stroke font-unbound text-[32px] font-bold uppercase leading-[1.1] tablet:text-[60px] tablet:leading-[1] desktop:text-[80px] desktop:leading-[1.22] desktop-hard:text-[90px]'>
+              Business Intelligence
+            </h2>
+          </div>
+        </ParallaxWrapper>
       </Container>
       <Image
         width={400}

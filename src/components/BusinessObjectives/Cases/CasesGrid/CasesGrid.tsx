@@ -16,12 +16,12 @@ const CaseCard = ({ data }: { data: Case }) => {
   return (
     <Link
       href={`/solutions/${data.slug}`}
-      className='relative min-h-[423px] overflow-hidden rounded-b-[5px] p-[40px] desktop-big:min-h-[623px]'
+      className='group relative min-h-[423px] cursor-pointer overflow-hidden rounded-b-[5px] p-[40px] desktop-big:min-h-[623px]'
     >
-      <div className='absolute inset-0 -z-10 bg-[var(--dark-blue)]'>
+      <div className='absolute inset-0 -z-10 bg-[var(--dark-blue)] transition group-hover:scale-105 group-hover:bg-main-blue'>
         <CaseBgItemsSvg />
       </div>
-      <div className='z-10 flex h-full flex-col items-start justify-between'>
+      <div className='z-10 flex h-full flex-col items-start justify-between transition duration-1000 group-hover:scale-[1.01]'>
         <div className='flex flex-col gap-[20px]'>
           <div className='flex gap-[10px]'>
             <div className='inline-flex items-center justify-center rounded-[5px] bg-[rgba(255,255,255,0.3)] p-[10px] backdrop-blur-[20px]'>
