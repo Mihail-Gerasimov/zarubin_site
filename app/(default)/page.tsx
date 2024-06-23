@@ -59,7 +59,7 @@ export default function Home() {
             </div>
           </Container>
         </Section>
-        <Section id='industries' className='tablet:h-[828px]' light>
+        <Section id='industries' className='!pb-0 tablet:h-[828px]' light>
           <ScrollAnimationWrapper>
             <Industries />
           </ScrollAnimationWrapper>
