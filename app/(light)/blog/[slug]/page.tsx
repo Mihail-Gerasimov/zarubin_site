@@ -51,12 +51,11 @@ export async function generateMetadata({
   params: { slug: string };
 }) {
   const post = getPostContent(params.slug);
-  const id = params?.slug ? ' . ' + params?.slug : '';
   const title = post.data.title;
   const description = contentTrimming(post.data.description, 150);
 
   return {
-    title: `${id.replaceAll('_', ' ')}`,
+    title: post.data.title,
     description,
     openGraph: {
       images: [{ url: post.data.image }],
