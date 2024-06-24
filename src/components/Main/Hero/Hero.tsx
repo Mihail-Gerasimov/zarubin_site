@@ -29,7 +29,7 @@ export const Hero = () => {
             <h3 className='font-unbound text-[24px] font-bold uppercase leading-[1.16]'>
               Success Solutions
             </h3>
-            <p className='mt-[12px] font-proxima text-[20px] leading-[1.2]'>{`The stories of solving our clients' cases`}</p>
+            <p className='mt-[12px] font-proxima text-[20px] leading-[1.2] opacity-80'>{`The stories of solving our client's cases`}</p>
             <Link
               href='/solutions'
               className='mt-[40px] flex h-[30px] w-fit items-center justify-center gap-[10px] rounded-[6px] bg-main-blue px-[10px] font-proxima text-[18px] font-bold leading-[1.33] hover:bg-main-blue-hover tablet:h-[50px]'
