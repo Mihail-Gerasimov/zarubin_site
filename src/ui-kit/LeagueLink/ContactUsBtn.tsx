@@ -11,7 +11,7 @@ export const ContactUsBtn = ({ dark }: { dark: boolean }) => {
           'font-proxima-reg hidden h-[46px] min-w-[162px] items-center justify-center rounded-[4px] font-proxima text-[20px] font-bold tablet:rounded-[8px] desktop:flex desktop:rounded-[6px]',
           dark
             ? 'border-2 border-solid border-emerald-300'
-            : 'bg-main-blue text-white',
+            : 'bg-main-blue text-white hover:bg-main-blue-hover',
         ),
       )}
     >
