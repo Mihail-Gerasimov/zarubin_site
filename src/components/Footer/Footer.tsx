@@ -25,10 +25,10 @@ export const Footer = () => {
           </ul>
           <div className='flex flex-col gap-[12px]'>
             <Link
-              href='mailto:hello@digitalburo.tech'
+              href='mailto:vitaliy@zarubin.co.uk'
               className='font-proxima text-[26px] font-bold text-white'
             >
-              hello@digitalburo.tech
+              vitaliy@zarubin.co.uk
             </Link>
           </div>
         </div>

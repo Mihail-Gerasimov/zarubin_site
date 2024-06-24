@@ -27,7 +27,7 @@ export const ContractFormTemplate = ({
             </div>
           </div>
           <div className='font-proxima text-[32px] font-bold leading-9 text-slate-900'>
-            hello@digitalburo.tech
+            vitaliy@zarubin.co.uk
           </div>
         </div>
       </div>
