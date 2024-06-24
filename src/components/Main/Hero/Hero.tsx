@@ -14,7 +14,7 @@ export const Hero = () => {
           <h1 className='desctop-hard:text-[100px] z-[5] font-unbound text-[28px] font-bold uppercase leading-[1.14] tablet:text-[60px] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px]'>
             Business solutions and expertise
           </h1>
-          <p className='z-[5] font-proxima text-[28px] font-bold leading-[1.14] tablet:text-[36px]'>
+          <p className='z-[5] font-proxima text-[28px] font-bold leading-[1.14] text-[#D1D1D1] tablet:text-[36px]'>
             Digital business transformation
           </p>
           <Link
@@ -29,7 +29,7 @@ export const Hero = () => {
             <h3 className='font-unbound text-[24px] font-bold uppercase leading-[1.16]'>
               Success Solutions
             </h3>
-            <p className='mt-[12px] font-proxima text-[20px] leading-[1.2]'>{`The stories of solving our clients' cases`}</p>
+            <p className='mt-[12px] font-proxima text-[20px] leading-[1.2] opacity-80'>{`The stories of solving our client's cases`}</p>
             <Link
               href='/solutions'
               className='mt-[40px] flex h-[30px] w-fit items-center justify-center gap-[10px] rounded-[6px] bg-main-blue px-[10px] font-proxima text-[18px] font-bold leading-[1.33] hover:bg-main-blue-hover tablet:h-[50px]'
