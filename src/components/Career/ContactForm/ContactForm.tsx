@@ -28,8 +28,8 @@ export const ContactForm = () => {
               </span>
             </div>
           </div>
-          <Link href='mailto:hello@digitalburo.tech' className={styles.email}>
-            hello@digitalburo.tech
+          <Link href='mailto:vitaliy@zarubin.co.uk' className={styles.email}>
+            vitaliy@zarubin.co.uk
           </Link>
         </div>
       </div>

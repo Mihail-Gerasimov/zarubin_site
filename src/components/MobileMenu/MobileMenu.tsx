@@ -44,10 +44,10 @@ export const MobileMenu = ({ isOpen, onClick, dark = true }: Props) => {
           </Link>
           <div className='flex flex-col gap-[12px]'>
             <Link
-              href='mailto:hello@digitalburo.tech'
+              href='mailto:vitaliy@zarubin.co.uk'
               className={`${dark ? 'text-white' : 'text-main-black'} font-proxima text-[22px] font-bold leading-[1.1] tablet:text-[32px]`}
             >
-              hello@digitalburo.tech
+              vitaliy@zarubin.co.uk
             </Link>
           </div>
         </div>
