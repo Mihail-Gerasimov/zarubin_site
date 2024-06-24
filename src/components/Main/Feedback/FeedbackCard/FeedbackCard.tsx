@@ -28,6 +28,7 @@ export const FeedbackCard = ({ data, length, indexNumber }: Props) => {
       <div className={classNames(styles.mainContainer)}>
         <Image
           src={data.image}
+          quality={100}
           width={355}
           height={251}
           alt={data.name}
