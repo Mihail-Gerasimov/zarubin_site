@@ -23,7 +23,7 @@ export function ClientExpertiseItems() {
   }, [ref]);
 
   const anchorTranslate = -stickyPosition + 17;
-  const lastAnchorTranslate = -stickyPosition - 17;
+  const lastAnchorTranslate = -stickyPosition + 17;
 
   return (
     <>

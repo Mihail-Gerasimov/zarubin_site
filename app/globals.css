@@ -32,6 +32,7 @@ a {
 :root {
   --bg-color: #090215;
   font-size: 14px;
+  scroll-behavior: smooth;
 }
 
 @layer base {
