@@ -28,12 +28,11 @@ export const BlogCard = ({ post }: Props) => {
         <div className='relative h-[150px] w-full overflow-hidden rounded-[12px] bg-main-blue/20 tablet:h-[300px] desktop:h-[378px]'>
           {post.image ? (
             <Image
-              // src={`${url}${post.image}`}
               src={post.image}
               alt={`Image ${post.slug}`}
               width={300}
               height={128}
-              className='left-0 top-0 h-full w-full object-cover'
+              className='left-0 top-0 h-full w-full object-contain'
               unoptimized
             />
           ) : (
