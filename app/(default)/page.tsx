@@ -65,7 +65,7 @@ export default function Home() {
             />
           </div>
         </Section>
-        <Section id='industries' className='!pb-0 tablet:h-[828px]' light>
+        <Section id='industries' className='!pb-0' light>
           <ScrollAnimationWrapper>
             <Industries />
           </ScrollAnimationWrapper>
