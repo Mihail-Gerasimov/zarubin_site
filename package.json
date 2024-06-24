@@ -10,6 +10,7 @@
     "prettify": "prettier --write next.config.mjs '{app,src}/**/*.{js,jsx,ts,tsx,css}' && organize-imports-cli tsconfig.json"
   },
   "dependencies": {
+    "@react-input/mask": "^1.2.5",
     "@svgr/webpack": "^8.1.0",
     "@types/luxon": "^3.4.2",
     "classnames": "^2.5.1",

@@ -1,6 +1,7 @@
 'use client';
 
 import { useFormik } from 'formik';
+import { InputMask } from '@react-input/mask';
 import styles from './Form.module.css';
 
 export const Form = () => {
@@ -46,9 +47,13 @@ export const Form = () => {
           />
         </label>
         <label className={styles.label}>
-          <input
+          <InputMask
             type='tel'
             name='phone'
+            mask='____________________'
+            replacement={{
+              _: /[0-9]/,
+            }}
             value={formik.values.phone}
             placeholder='Phone'
             className={styles.input}
