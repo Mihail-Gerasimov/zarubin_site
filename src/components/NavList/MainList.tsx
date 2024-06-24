@@ -18,7 +18,7 @@ export const MainList = ({ list, dark = true }: Props) => {
         <li key={item.id}>
           <Link
             href={item.link}
-            className={`font-proxima text-[26px] leading-[1.87] ${dark ? 'text-white' : 'text-[black]'}`}
+            className={`font-proxima leading-[1.87] ${dark ? 'text-[26px] text-white' : 'text-[16px] text-[black]'}`}
           >
             {item.name}
           </Link>
