@@ -1,5 +1,4 @@
 import LightMainLogo from '@/public/assets/images/icons/second_logo.svg';
-import TelegramIcon from '@/public/assets/images/icons/telegram.svg';
 import { menuListLayer } from '@/src/utils/menuListLayer';
 import Link from 'next/link';
 import { Container } from '../shared/Container/Container';
@@ -12,7 +11,7 @@ export const Footer = () => {
           <Link href='/'>
             <LightMainLogo className='h-[54px] w-[auto] tablet:h-[71px] desktop:h-[60px]' />
           </Link>
-          <ul className='flex flex-col gap-[20px] tablet:flex-row'>
+          <ul className='flex flex-col gap-[20px] tablet:flex-row tablet:gap-[44px]'>
             {menuListLayer.map((item) => (
               <li key={item.id}>
                 <Link
@@ -31,14 +30,6 @@ export const Footer = () => {
             >
               hello@digitalburo.tech
             </Link>
-            <a
-              href='https://t.me/zarubin_vs'
-              target='_blank'
-              className='flex items-center gap-[12px] font-proxima text-[26px] text-white'
-            >
-              <TelegramIcon className='h-[auto] w-[30px]' />
-              Contact us
-            </a>
           </div>
         </div>
         <div className='w-full border-t-[2px] border-dark'>
