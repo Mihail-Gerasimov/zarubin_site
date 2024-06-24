@@ -11,7 +11,7 @@ export const Footer = () => {
           <Link href='/'>
             <LightMainLogo className='h-[54px] w-[auto] tablet:h-[71px] desktop:h-[60px]' />
           </Link>
-          <ul className='flex flex-col gap-[20px] tablet:flex-row'>
+          <ul className='flex flex-col gap-[20px] tablet:flex-row tablet:gap-[44px]'>
             {menuListLayer.map((item) => (
               <li key={item.id}>
                 <Link
