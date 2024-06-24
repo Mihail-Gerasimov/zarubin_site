@@ -14,6 +14,7 @@ import heroBg from '@/public/assets/images/main/hero_bg.png';
 import Image from 'next/image';
 import bgImage from '@/public/assets/images/main/group.png';
 import insightBg from '@/public/assets/images/main/insight_bg.png';
+import unlockBg from '@/public/assets/images/main/group.png';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { ParallaxWrapper } from '@/src/components/shared/ParallaxWrapper/ParalaxWrapper';
 
@@ -25,9 +26,14 @@ export default function Home() {
           <Container>
             <Hero />
           </Container>
-          <div className='absolute inset-2.5 h-full bg-[linear-gradient(to_top,var(--primary)_200px,var(--main-blue))] opacity-80 tablet:inset-[20px]'></div>
+          <div className='absolute inset-2.5 h-full bg-[linear-gradient(to_top,var(--primary)_200px,blue)] opacity-75 mix-blend-hard-light tablet:inset-[20px]'></div>
           <div className='absolute inset-2.5 -z-10 tablet:inset-[20px]'>
-            <Image src={heroBg} className='object-cover' fill alt='' />
+            <Image
+              src={heroBg}
+              className='object-cover object-top'
+              fill
+              alt=''
+            />
           </div>
         </Section>
         <Section id='expertise' className='overflow-hidden'>
@@ -47,17 +53,17 @@ export default function Home() {
                 <Unlock />
               </ParallaxWrapper>
             </ScrollAnimationWrapper>
-            <div className='absolute inset-0'>
-              <Image
-                src='/assets/images/main/group.png'
-                layout='fill'
-                objectFit='cover'
-                objectPosition='bottom'
-                alt=''
-                className='absolute bottom-0 right-0 opacity-[3%]'
-              />
-            </div>
           </Container>
+          <div className='absolute inset-0'>
+            <Image
+              src={unlockBg}
+              fill
+              objectFit='cover'
+              objectPosition='bottom'
+              alt=''
+              className='absolute bottom-0 right-0 object-cover opacity-[3%]'
+            />
+          </div>
         </Section>
         <Section id='industries' className='!pb-0 tablet:h-[828px]' light>
           <ScrollAnimationWrapper>

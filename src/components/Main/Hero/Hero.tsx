@@ -14,7 +14,7 @@ export const Hero = () => {
           <h1 className='desctop-hard:text-[100px] z-[5] font-unbound text-[28px] font-bold uppercase leading-[1.14] tablet:text-[60px] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px]'>
             Business solutions and expertise
           </h1>
-          <p className='z-[5] font-proxima text-[28px] font-bold leading-[1.14] tablet:text-[36px]'>
+          <p className='z-[5] font-proxima text-[28px] font-bold leading-[1.14] text-[#D1D1D1] tablet:text-[36px]'>
             Digital business transformation
           </p>
           <Link
