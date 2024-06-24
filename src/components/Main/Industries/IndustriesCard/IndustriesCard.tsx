@@ -24,12 +24,12 @@ export const IndustriesCard = ({ title, data, link }: Props) => {
           {title}
         </h2>
         <ul
-          className={`flex flex-col gap-[20px] ${moreThanFour && 'w-auto tablet:grid tablet:grid-cols-2'}`}
+          className={`flex flex-col gap-x-[40px] gap-y-[20px] ${moreThanFour && 'tablet:inline-grid tablet:grid-cols-[min-content,min-content]'}`}
         >
           {data.map((item) => (
             <li key={item.id} className='flex items-center gap-[20px]'>
               <TriangeIcon className='h-[18px] w-[18px]' />
-              <p className='relative font-proxima text-[20px] leading-[1.2] text-text-dark desktop:text-[28px]'>
+              <p className='relative text-nowrap font-proxima text-[20px] leading-[1.2] text-text-dark desktop:text-[28px]'>
                 {item.title}
               </p>
             </li>
