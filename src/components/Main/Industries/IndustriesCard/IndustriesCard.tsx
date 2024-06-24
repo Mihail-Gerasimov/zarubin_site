@@ -38,7 +38,7 @@ export const IndustriesCard = ({ title, data, link }: Props) => {
       </div>
       <Link
         href={link}
-        className='flex w-fit items-center justify-center gap-[10px] rounded-[5px] bg-main-blue p-[13px_15px] font-proxima text-[20px] font-bold text-white transition hover:bg-main-blue-hover tablet:mt-[92px] tablet:h-[112px] tablet:min-w-[407px] tablet:text-[40px] desktop:mt-[20px]'
+        className='ml-[5px] flex w-fit items-center justify-center gap-[10px] rounded-[5px] bg-main-blue p-[13px_15px] font-proxima text-[20px] font-bold text-white transition hover:bg-main-blue-hover tablet:mt-[92px] tablet:h-[112px] tablet:min-w-[407px] tablet:text-[40px] desktop:mt-[20px]'
       >
         {`${btnTitle} solutions`}
         <Arrow className='h-[24px] w-[24px] tablet:h-[auto] tablet:w-[44px]' />
