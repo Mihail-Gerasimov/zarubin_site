@@ -24,7 +24,7 @@ export const IndustriesCard = ({ title, data, link }: Props) => {
           {title}
         </h2>
         <ul
-          className={`flex flex-col gap-[20px] ${moreThanFour && 'tablet:grid tablet:grid-cols-2'}`}
+          className={`flex flex-col gap-[20px] ${moreThanFour && 'w-auto tablet:grid tablet:grid-cols-2'}`}
         >
           {data.map((item) => (
             <li key={item.id} className='flex items-center gap-[20px]'>
