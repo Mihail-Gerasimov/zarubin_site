@@ -12,7 +12,7 @@ import { Container } from '@/src/components/shared/Container/Container';
 import { Section } from '@/src/components/shared/Section/Section';
 import heroBg from '@/public/assets/images/main/hero_bg.png';
 import Image from 'next/image';
-import bgImage from '@/public/assets/images/main/group.png';
+import bgImage from '@/public/assets/images/main/reviewBg.png';
 import insightBg from '@/public/assets/images/main/insight_bg.png';
 import unlockBg from '@/public/assets/images/main/group.png';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
@@ -104,10 +104,12 @@ export default function Home() {
               <Feedback />
             </ScrollAnimationWrapper>
           </Container>
-          <div className='absolute inset-0 bg-[linear-gradient(100deg,#000a25_14.95%,#00248b_92.57%)]'>
+          <div className='absolute inset-0'>
             <Image
               src={bgImage}
-              className='absolute inset-0 opacity-30 mix-blend-overlay'
+              quality={100}
+              fill
+              className='absolute inset-0 object-cover'
               alt=''
             />
           </div>
