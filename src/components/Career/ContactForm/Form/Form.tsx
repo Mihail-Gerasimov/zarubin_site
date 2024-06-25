@@ -23,8 +23,25 @@ export const Form = () => {
       cv: null,
     },
     onSubmit: (values, { resetForm }) => {
-      console.log(values);
-      resetForm();
+      const formData = new FormData();
+      Object.keys(values).forEach((key) => {
+        if (typeof values[key as keyof typeof values] === 'string') {
+          formData.append(key, values[key as keyof typeof values] as string);
+        } else {
+          formData.append(key, values[key as keyof typeof values] as File);
+        }
+      });
+
+      return fetch('https://wild-term-a5e5.access-f8d.workers.dev/', {
+        method: 'POST',
+        body: formData,
+      }).then((response) => {
+        if (response.ok) {
+          resetForm();
+        } else {
+          console.log(response);
+        }
+      });
     },
   });
 
