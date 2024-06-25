@@ -13,8 +13,21 @@ export const Form = () => {
       details: '',
     },
     onSubmit: (values, { resetForm }) => {
-      console.log(values);
-      resetForm();
+      const formData = new FormData();
+      Object.keys(values).forEach((key) =>
+        formData.append(key, values[key as keyof typeof values]),
+      );
+
+      return fetch('https://wild-term-a5e5.access-f8d.workers.dev/', {
+        method: 'POST',
+        body: formData,
+      }).then((response) => {
+        if (response.ok) {
+          resetForm();
+        } else {
+          console.log(response);
+        }
+      });
     },
   });
 
