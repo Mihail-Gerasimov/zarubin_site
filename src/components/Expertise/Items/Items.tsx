@@ -35,7 +35,10 @@ export const Items = () => {
           <ul className={styles.subList}>
             {expertise.items.map((item, idx) => (
               <li key={idx} className={styles.subItem}>
-                <Link href={item.link} className={styles.tag}>
+                <Link
+                  href={item.link}
+                  className={`${styles.tag} hover:underline`}
+                >
                   {item.title}
                 </Link>
               </li>
