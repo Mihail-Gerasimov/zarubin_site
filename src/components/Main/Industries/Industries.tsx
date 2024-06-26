@@ -54,6 +54,7 @@ export const Industries = () => {
                 src={item.image}
                 alt=''
                 fill
+                priority
                 className='object-contain object-bottom'
               />
             </div>
