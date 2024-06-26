@@ -30,6 +30,7 @@ export default function Home() {
           <div className='absolute inset-2.5 -z-10 tablet:inset-[20px]'>
             <Image
               src={heroBg}
+              priority
               className='object-cover object-top'
               fill
               alt=''
