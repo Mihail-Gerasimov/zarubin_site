@@ -99,11 +99,9 @@ export default function Home() {
           </Container>
         </Section>
         <Section id='feedback'>
-          <Container>
-            <ScrollAnimationWrapper className='relative z-10'>
-              <Feedback />
-            </ScrollAnimationWrapper>
-          </Container>
+          <ScrollAnimationWrapper className='relative z-10'>
+            <Feedback />
+          </ScrollAnimationWrapper>
           <div className='absolute inset-0'>
             <Image
               src={bgImage}
