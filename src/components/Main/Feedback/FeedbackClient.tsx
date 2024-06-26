@@ -6,6 +6,7 @@ import { useState } from 'react';
 import styles from './Feedback.module.css';
 import { FeedbackCard } from './FeedbackCard/FeedbackCard';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import { Container } from '../../shared/Container/Container';
 
 interface Props {
   feedback: IFeedback[];
@@ -16,24 +17,28 @@ export const FeedbackClient = ({ feedback }: Props) => {
 
   return (
     <div className='flex flex-col gap-[30px]'>
-      <div className={styles.titleWrapper}>
-        <h2 className={styles.title}>Feedback</h2>
+      <Container>
+        <div className={styles.titleWrapper}>
+          <h2 className={styles.title}>Feedback</h2>
 
-        <div className='hidden tablet:block'>
-          <NextPrevBtn
-            nextPage={() => swiper?.slideNext()}
-            prevPage={() => swiper?.slidePrev()}
-          />
+          <div className='hidden tablet:block'>
+            <NextPrevBtn
+              nextPage={() => swiper?.slideNext()}
+              prevPage={() => swiper?.slidePrev()}
+            />
+          </div>
         </div>
-      </div>
+      </Container>
       <Swiper onSwiper={setSwiper} className='max-w-full'>
         {feedback.map((item, index) => (
           <SwiperSlide key={item.id}>
-            <FeedbackCard
-              data={item}
-              length={feedback.length}
-              indexNumber={index + 1}
-            />
+            <Container>
+              <FeedbackCard
+                data={item}
+                length={feedback.length}
+                indexNumber={index + 1}
+              />
+            </Container>
           </SwiperSlide>
         ))}
       </Swiper>
