@@ -12,23 +12,25 @@ export const Form = () => {
       phone: '',
       details: '',
     },
-    onSubmit: (values, { resetForm }) => {
+    onSubmit: async (values, { resetForm }) => {
       const formData = new FormData();
       Object.keys(values).forEach((key) =>
         formData.append(key, values[key as keyof typeof values]),
       );
 
-      return fetch('https://wild-term-a5e5.access-f8d.workers.dev/', {
-        method: 'POST',
-        body: formData,
-      }).then((response) => {
-        if (response.ok) {
-          resetForm();
-          alert('Thank you! We will contact you soon');
-        } else {
-          console.log(response);
-        }
-      });
+      const response = await fetch(
+        'https://wild-term-a5e5.access-f8d.workers.dev/',
+        {
+          method: 'POST',
+          body: formData,
+        },
+      ).then((r) => r.json());
+      if (!response.error) {
+        resetForm();
+        alert('Thank you! We will contact you soon');
+      } else {
+        console.log(response);
+      }
     },
   });
 
