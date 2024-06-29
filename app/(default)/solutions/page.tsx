@@ -8,6 +8,7 @@ import { Section } from '@/src/components/shared/Section/Section';
 import Image from 'next/image';
 import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
+import { Suspense } from 'react';
 
 export default async function BusinessObjectivesPage() {
   const casesMetadata = getCaseMetadata('src/cases');
@@ -20,9 +21,11 @@ export default async function BusinessObjectivesPage() {
       </Section>
       <Section className='!pt-0'>
         <Container>
-          <ScrollAnimationWrapper showOnLoad>
-            <Cases cases={casesMetadata} />
-          </ScrollAnimationWrapper>
+          <Suspense>
+            <ScrollAnimationWrapper showOnLoad>
+              <Cases cases={casesMetadata} />
+            </ScrollAnimationWrapper>
+          </Suspense>
         </Container>
       </Section>
       <Section id='insights'>
