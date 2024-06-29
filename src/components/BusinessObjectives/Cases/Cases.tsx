@@ -4,6 +4,7 @@ import { CasesGrid } from './CasesGrid/CasesGrid';
 import { Tag } from '../../shared/Tag/Tag';
 import { useState } from 'react';
 import { Case } from '@/src/utils/getCaseMetadata';
+import { useSearchParams } from 'next/navigation';
 
 export const Cases = ({ cases }: { cases: Case[] }) => {
   const tags = new Set(
@@ -11,7 +12,11 @@ export const Cases = ({ cases }: { cases: Case[] }) => {
       item.industries.map((industry) => industry.toLocaleLowerCase()),
     ),
   );
-  const [selectedTag, setSelectedTag] = useState('All');
+
+  const searchParams = useSearchParams();
+  const queryIndustry = searchParams.get('industry');
+
+  const [selectedTag, setSelectedTag] = useState(queryIndustry || 'All');
 
   const filteredCasesData = cases.filter(
     (item) =>
