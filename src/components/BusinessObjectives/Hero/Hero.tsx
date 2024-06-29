@@ -3,7 +3,6 @@ import { Breadcrumb, Breadcrumbs } from '../../shared/Breadcrumbs/Breadcrumbs';
 const BREADCRUMBS: Breadcrumb[] = [
   { title: 'Main', link: '/' },
   { title: 'Solutions' },
-  { title: 'Solutions' },
 ];
 
 export const Hero = () => {
