@@ -24,6 +24,7 @@ export const Form = () => {
       }).then((response) => {
         if (response.ok) {
           resetForm();
+          alert('Thank you! We will contact you soon');
         } else {
           console.log(response);
         }
