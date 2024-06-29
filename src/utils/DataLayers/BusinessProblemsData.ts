@@ -9,7 +9,7 @@ export const BusinessProblemsData = [
     description:
       'We conducted a technical audit and a process audit in their IT part',
     tags: ['Service', 'GridCapital'],
-    link: '#',
+    link: '/solutions/in-3-weeks-we-managed-to-set-up-work-process',
     image: imageOne,
   },
   {
@@ -18,7 +18,7 @@ export const BusinessProblemsData = [
     description:
       'We provided them with a mobile application to interact with employers',
     tags: ['SERVICE', 'OAZIS'],
-    link: '#',
+    link: '/solutions/simplified-interactions-on-shift-for-employees',
     image: imageTwo,
   },
   {
@@ -28,14 +28,14 @@ export const BusinessProblemsData = [
     description:
       'We conducted a technical audit and a process audit in their IT part',
     tags: ['OIL', 'NIS'],
-    link: '#',
+    link: '/solutions/we-conducted-a-technical-audit-and-process-audit-in-their-it-part',
     image: imageOne,
   },
   {
     id: 4,
     title: 'We put convenient chips on the steering wheel of the car',
     description:
-      'We have developed a mobile application that is installed on the steering wheel of a car',
+      '/solutions/a-mobile-application-that-is-installed-on-the-steering-wheel-of-a-car',
     tags: ['CAR', 'KAMAATOM'],
     link: '#',
     image: imageTwo,
