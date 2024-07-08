@@ -3,9 +3,9 @@ import { Header } from '@/src/components/Header/Header';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import 'swiper/css';
 import '../globals.css';
-import Script from 'next/script';
 
 const inter = Inter({ subsets: ['latin'] });
 
