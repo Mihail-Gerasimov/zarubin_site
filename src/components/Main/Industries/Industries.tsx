@@ -2,10 +2,10 @@
 
 import { IndustriesData } from '@/src/utils/DataLayers/IndustriesData';
 import Image from 'next/image';
-import { IndustriesCard } from './IndustriesCard/IndustriesCard';
-import { Container } from '../../shared/Container/Container';
-import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { useState } from 'react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import { Container } from '../../shared/Container/Container';
+import { IndustriesCard } from './IndustriesCard/IndustriesCard';
 
 export const Industries = () => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);

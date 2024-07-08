@@ -1,3 +1,7 @@
+import unlockBg from '@/public/assets/images/main/group.png';
+import heroBg from '@/public/assets/images/main/hero_bg.png';
+import insightBg from '@/public/assets/images/main/insight_bg.png';
+import bgImage from '@/public/assets/images/main/reviewBg.png';
 import { BusinessSolving } from '@/src/components/Main/BusinessSolving/BusinessSolving';
 import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 import { Expertise } from '@/src/components/Main/Expertise/Expertise';
@@ -9,14 +13,10 @@ import { Intelligence } from '@/src/components/Main/Intelligence/Intelligence';
 import { TrustUs } from '@/src/components/Main/TrustUs/TrustUs';
 import { Unlock } from '@/src/components/Main/Unlock/Unlock';
 import { Container } from '@/src/components/shared/Container/Container';
-import { Section } from '@/src/components/shared/Section/Section';
-import heroBg from '@/public/assets/images/main/hero_bg.png';
-import Image from 'next/image';
-import bgImage from '@/public/assets/images/main/reviewBg.png';
-import insightBg from '@/public/assets/images/main/insight_bg.png';
-import unlockBg from '@/public/assets/images/main/group.png';
-import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { ParallaxWrapper } from '@/src/components/shared/ParallaxWrapper/ParalaxWrapper';
+import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
+import { Section } from '@/src/components/shared/Section/Section';
+import Image from 'next/image';
 
 export default function Home() {
   return (

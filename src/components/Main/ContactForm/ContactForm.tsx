@@ -1,5 +1,5 @@
-import { Form } from './Form/Form';
 import { ContractFormTemplate } from '../../shared/ContactFormTemplate/ContractFormTemplate';
+import { Form } from './Form/Form';
 
 export const ContactForm = () => {
   return (

@@ -1,8 +1,8 @@
+import appImg from '@/public/assets/images/expertise/mobile_aplication.png';
 import { DescriptionContent } from '@/src/ui-kit/DescriptionContent/DescriptionContent';
 import { TitleContent } from '@/src/ui-kit/TitleContent/TitleContent';
-import { ComponentContainer } from '../../ComponentContainer/ComponentContainer';
 import Image from 'next/image';
-import appImg from '@/public/assets/images/expertise/mobile_aplication.png';
+import { ComponentContainer } from '../../ComponentContainer/ComponentContainer';
 
 const tags = [
   'Increased customer engagement',

@@ -3,10 +3,10 @@
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import { IFeedback } from '@/src/utils/types';
 import { useState } from 'react';
-import styles from './Feedback.module.css';
-import { FeedbackCard } from './FeedbackCard/FeedbackCard';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
+import styles from './Feedback.module.css';
+import { FeedbackCard } from './FeedbackCard/FeedbackCard';
 
 interface Props {
   feedback: IFeedback[];

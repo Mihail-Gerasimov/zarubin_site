@@ -1,6 +1,6 @@
 import {
-  Breadcrumb,
-  Breadcrumbs,
+    Breadcrumb,
+    Breadcrumbs
 } from '@/src/components/shared/Breadcrumbs/Breadcrumbs';
 
 export const Hero = ({
