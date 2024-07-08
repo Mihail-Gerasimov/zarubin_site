@@ -25,11 +25,32 @@ export const Form = () => {
           body: formData,
         },
       ).then((r) => r.json());
+
       if (!response.error) {
-        resetForm();
-        alert('Thank you! We will contact you soon');
+        const telegramResponse = await fetch(
+          'https://api.telegram.org/bot6992822983:AAHWVJuwqeVl5kscHuZwcPx5W-IPXJ7mpkk/sendMessage',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              chat_id: '199942509',
+              text: `
+              Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}\nDetails: ${values.details}
+            `,
+            }),
+          },
+        ).then((r) => r.json());
+
+        if (telegramResponse.ok) {
+          resetForm();
+          alert('Thank you! We will contact you soon');
+        } else {
+          console.error('Error sending message to Telegram:', telegramResponse);
+        }
       } else {
-        console.log(response);
+        console.error('Error sending form data:', response);
       }
     },
   });

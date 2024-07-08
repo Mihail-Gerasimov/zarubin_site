@@ -39,12 +39,37 @@ export const Form = () => {
           body: formData,
         },
       ).then((r) => r.json());
-
       if (!response.error) {
-        resetForm();
-        alert('Thank you! We will contact you soon');
+        const telegramFormData = new FormData();
+        telegramFormData.append('chat_id', '199942509');
+        telegramFormData.append(
+          'caption',
+          `Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}`,
+        );
+
+        if (values.cv) {
+          telegramFormData.append('document', values.cv, values.cv.name);
+        }
+
+        const telegramResponse = await fetch(
+          'https://api.telegram.org/bot6992822983:AAHWVJuwqeVl5kscHuZwcPx5W-IPXJ7mpkk/sendDocument',
+          {
+            method: 'POST',
+            body: telegramFormData,
+          },
+        ).then((r) => r.json());
+
+        if (telegramResponse.ok) {
+          resetForm();
+          alert('Thank you! We will contact you soon');
+        } else {
+          console.error(
+            'Error sending document to Telegram:',
+            telegramResponse,
+          );
+        }
       } else {
-        console.log(response);
+        // console.log(response);
       }
     },
   });
