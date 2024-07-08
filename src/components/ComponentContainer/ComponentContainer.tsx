@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
-import styles from './ComponentContainer.module.css';
 import { twMerge } from 'tailwind-merge';
+import styles from './ComponentContainer.module.css';
 
 interface Props {
   children: React.ReactNode;

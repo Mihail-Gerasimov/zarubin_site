@@ -1,12 +1,12 @@
 'use client';
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
-import { useState } from 'react';
-import { VacanciesCard } from './VacanicesCard/VacanciesCard';
 import { VacanciesData } from '@/src/utils/DataLayers/VacanciesData';
-import { Tag } from '../../shared/Tag/Tag';
-import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import useMediaQuery from '@/src/utils/useMediaQuery';
+import { useState } from 'react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import { Tag } from '../../shared/Tag/Tag';
+import { VacanciesCard } from './VacanicesCard/VacanciesCard';
 
 export const Vacancies = () => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);

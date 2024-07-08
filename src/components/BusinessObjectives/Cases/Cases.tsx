@@ -1,10 +1,10 @@
 'use client';
 
-import { CasesGrid } from './CasesGrid/CasesGrid';
-import { Tag } from '../../shared/Tag/Tag';
-import { useState } from 'react';
 import { Case } from '@/src/utils/getCaseMetadata';
 import { useSearchParams } from 'next/navigation';
+import { useState } from 'react';
+import { Tag } from '../../shared/Tag/Tag';
+import { CasesGrid } from './CasesGrid/CasesGrid';
 
 export const Cases = ({ cases }: { cases: Case[] }) => {
   const tags = new Set(

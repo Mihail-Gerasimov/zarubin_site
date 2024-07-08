@@ -3,8 +3,8 @@ import { IImage } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import classNames from 'classnames';
 import Image from 'next/image';
-import styles from './FeedbackCard.module.css';
 import { useSwiper } from 'swiper/react';
+import styles from './FeedbackCard.module.css';
 
 interface Data {
   id: number;

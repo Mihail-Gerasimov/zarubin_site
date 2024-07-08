@@ -1,7 +1,7 @@
 'use client';
 
-import { useFormik } from 'formik';
 import { InputMask } from '@react-input/mask';
+import { useFormik } from 'formik';
 import styles from './Form.module.css';
 
 export const Form = () => {

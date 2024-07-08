@@ -1,16 +1,16 @@
-import { ExpertiseTitle } from '@/src/components/Expertise/ExpertiseTitle/ExpertiseTitle';
-import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
-import { Insights } from '@/src/components/Main/Insights/Insights';
-import { TrustUs } from '@/src/components/Main/TrustUs/TrustUs';
-import { Section } from '@/src/components/shared/Section/Section';
-import { Container } from '@/src/components/shared/Container/Container';
-import { ClientExpertiseItems } from './ClientExpertiseItems';
-import { ExpertiseHeroBgSvg } from '@/src/components/svg/ExpertiseHeroBgSvg';
 import bgImage from '@/public/assets/images/main/group.png';
 import insightBg from '@/public/assets/images/main/insight_bg.png';
-import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
+import { ExpertiseTitle } from '@/src/components/Expertise/ExpertiseTitle/ExpertiseTitle';
+import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 import { Feedback } from '@/src/components/Main/Feedback/Feedback';
+import { Insights } from '@/src/components/Main/Insights/Insights';
+import { TrustUs } from '@/src/components/Main/TrustUs/TrustUs';
+import { Container } from '@/src/components/shared/Container/Container';
+import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
+import { Section } from '@/src/components/shared/Section/Section';
+import { ExpertiseHeroBgSvg } from '@/src/components/svg/ExpertiseHeroBgSvg';
 import Image from 'next/image';
+import { ClientExpertiseItems } from './ClientExpertiseItems';
 
 export default function Expertise() {
   return (

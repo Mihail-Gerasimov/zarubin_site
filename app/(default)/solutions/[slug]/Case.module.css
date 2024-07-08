@@ -9,6 +9,7 @@
 }
 
 .markdown h2 {
+  margin-bottom: 20px;
   font-family: Unbounded;
   display: flex;
   align-items: center;
@@ -32,6 +33,18 @@
 
 .markdown strong {
   font-size: 16px;
+}
+
+.markdown > ul {
+  padding-left: 10px;
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.markdown > ul > li > ul {
+  padding-left: 10px;
+  list-style: circle;
+  list-style-position: inside;
 }
 
 .tagList {

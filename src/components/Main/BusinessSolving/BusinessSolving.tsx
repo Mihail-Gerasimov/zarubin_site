@@ -4,9 +4,9 @@ import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import { BusinessProblemsData } from '@/src/utils/DataLayers/BusinessProblemsData';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import { useState } from 'react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
 import { BusinessSolvingCard } from './BusinessSolvingCard/BusinessSolvingCard';
-import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 
 export const BusinessSolving = () => {
   const [swiper, setSwiper] = useState<SwiperClass | null>();

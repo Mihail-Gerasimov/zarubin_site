@@ -1,12 +1,12 @@
 'use client';
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
+import useMediaQuery from '@/src/utils/useMediaQuery';
 import { useState } from 'react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import { Container } from '../../shared/Container/Container';
 import styles from './Insights.module.css';
 import { InsightsCard } from './InsightsCard/InsightsCard';
-import { Container } from '../../shared/Container/Container';
-import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
-import useMediaQuery from '@/src/utils/useMediaQuery';
 
 interface Post {
   title: string;

@@ -10,12 +10,12 @@ import { formattedDate } from '@/src/utils/formattedDate';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
 import { postsSorting } from '@/src/utils/postsSorting';
+import classNames from 'classnames';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
 import styles from './Post.module.css';
-import classNames from 'classnames';
 
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 

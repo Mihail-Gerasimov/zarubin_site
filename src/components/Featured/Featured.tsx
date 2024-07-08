@@ -4,8 +4,8 @@ import Arrow from '@/public/assets/images/icons/arrow.svg';
 import { Post } from '@/src/utils/types';
 import Link from 'next/link';
 import { useState } from 'react';
-import { SmallBlogCard } from '../BlogCard/SmallBlogCard';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import { SmallBlogCard } from '../BlogCard/SmallBlogCard';
 
 interface Props {
   slug?: string;

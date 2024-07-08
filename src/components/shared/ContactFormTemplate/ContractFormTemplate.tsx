@@ -1,6 +1,6 @@
+import author from '@/public/assets/images/main/author.png';
 import Image from 'next/image';
 import { PropsWithChildren, ReactNode } from 'react';
-import author from '@/public/assets/images/main/author.png';
 
 export const ContractFormTemplate = ({
   title,

@@ -1,8 +1,8 @@
+import bg from '@/public/assets/images/expertise/scalable.png';
 import { DescriptionContent } from '@/src/ui-kit/DescriptionContent/DescriptionContent';
 import { TitleContent } from '@/src/ui-kit/TitleContent/TitleContent';
-import { ComponentContainer } from '../../ComponentContainer/ComponentContainer';
-import bg from '@/public/assets/images/expertise/scalable.png';
 import Image from 'next/image';
+import { ComponentContainer } from '../../ComponentContainer/ComponentContainer';
 import { ExpertiseScalableObjectsSvg } from '../../svg/ExpertiseScalableObjectsSvg';
 
 const tags = [
