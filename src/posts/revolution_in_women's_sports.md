@@ -1,7 +1,7 @@
 ---
 title: "Revolution in Women's Sports with the Help of Artificial Intelligence 🚀⚽️"
 description: "On July 20, 2023, the 9th Women's World Football Championship kicked off. It's no secret that women's sports are on the path to a historic breakthrough."
-image: '/assets/images/post/womens_sport.jpg'
+image: '/assets/images/post/womens_sport.webp'
 date: '04-08-2023'
 type: 'Notes'
 tag: 'Sports'
@@ -37,7 +37,7 @@ It was precisely at FIFA-2023 that software was first used to detect attempts at
 
 But is it worth dividing the importance of technology based on any criteria? We think not, and here's why Artificial Intelligence is needed in women's sports.
 
-![women-football](/assets/images/postPicture/women_football.jpg)
+![women-football](/assets/images/postPicture/women_football.webp)
 
 # Innovations in Data Analysis and Preparation 🚀
 

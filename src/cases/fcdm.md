@@ -2,7 +2,7 @@
 title: 'How Design Transforms the Style of a Football Club'
 industries: ['Sports and Entertainment', 'Custom Development']
 tag: 'FCDM'
-images: ['/assets/images/case/fcdm-1.png', '/assets/images/case/fcdm-2.png']
+images: ['/assets/images/case/fcdm-1.webp', '/assets/images/case/fcdm-2.webp']
 ---
 
 ## About the Project

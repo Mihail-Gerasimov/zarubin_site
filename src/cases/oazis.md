@@ -3,11 +3,7 @@ title: 'Simplifiead Shift Mnagement for Employees'
 industries:
   ['Service and Hospitality', 'Quality Improvement', 'Custom Development']
 tag: 'OAZIS'
-images:
-  [
-    '/assets/images/case/oazis-image-0.png',
-    '/assets/images/case/oazis-image.png',
-  ]
+images: ['/assets/images/case/oazis-1.webp', '/assets/images/case/oazis-2.webp']
 ---
 
 ## About the Project

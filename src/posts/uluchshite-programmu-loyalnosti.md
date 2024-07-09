@@ -1,7 +1,7 @@
 ---
 title: 'Enhance Your Loyalty Program: The Power of Gamification'
 description: "The Bureau of Digital Technologies advocates for the transformative power of gamification in loyalty programs. Engaging and retaining people's attention can be achieved through three strategic pillars that play a crucial role in deep interaction."
-image: '/assets/images/post/uluchshite-programmu-loyalnosti.png'
+image: '/assets/images/post/uluchshite-programmu-loyalnosti.webp'
 date: '22-03-2024'
 type: 'Notes'
 tag: 'All'

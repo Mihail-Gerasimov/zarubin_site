@@ -1,4 +1,4 @@
-import author from '@/public/assets/images/main/author.png';
+import author from '@/public/assets/images/main/author.webp';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './ContactForm.module.css';

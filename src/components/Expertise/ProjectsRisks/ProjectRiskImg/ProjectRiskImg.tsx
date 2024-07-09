@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import img1 from '@/public/assets/images/expertise/project_risk_1.png';
-import img2 from '@/public/assets/images/expertise/project_risk_2.png';
+import img1 from '@/public/assets/images/expertise/project_risk_1.webp';
+import img2 from '@/public/assets/images/expertise/project_risk_2.webp';
 
 export const ProjectRiskImg = () => {
   return (

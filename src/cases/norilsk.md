@@ -3,7 +3,7 @@ title: 'Web Development for HC "Norilsk"'
 industries: ['Sports and Entertainment', 'Custom Development']
 tag: 'Norilsk'
 images:
-  ['/assets/images/case/norilsk-1.png', '/assets/images/case/norilsk-2.png']
+  ['/assets/images/case/norilsk-1.webp', '/assets/images/case/norilsk-2.webp']
 ---
 
 ## About the Project

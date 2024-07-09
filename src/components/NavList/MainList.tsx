@@ -15,7 +15,6 @@ interface List {
 
 export const MainList = ({ list, dark = true }: Props) => {
   const pathname = usePathname();
-  console.log(pathname);
   return (
     <ul className='hidden justify-center gap-[44px] desktop:flex'>
       {list.map((item) => (

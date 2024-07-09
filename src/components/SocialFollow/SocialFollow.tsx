@@ -20,7 +20,6 @@ const URL = BASE_URL;
 
 export const SocialFollow = ({ isRight = false }: Props) => {
   const pathName = usePathname();
-  console.log(SHARING.FACEBOOK_SHARE + pathName);
 
   return (
     <div

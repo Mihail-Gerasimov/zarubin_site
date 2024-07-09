@@ -1,7 +1,7 @@
 ---
 title: 'Interactive Platforms and Fan Engagement: New Approaches in the Sports Industry 🚀'
 description: 'Each year, the role of digital products in the sports sector becomes increasingly significant, offering new opportunities for athletes, managers, and fans alike.'
-image: '/assets/images/post/interactive_platform.jpg'
+image: '/assets/images/post/interactive_platform.webp'
 date: '03-08-2023'
 type: 'Notes'
 tag: 'Sports'
@@ -39,7 +39,7 @@ Before starting work on the project, we needed to understand the common goals pu
 
 Each of these points can be developed and digitized, implementing a coherent system into the website and app operations. 🌟
 
-![hockey](/assets/images/postPicture/interactive_hockey.jpg)
+![hockey](/assets/images/postPicture/interactive_hockey.webp)
 
 ## More About the Checklist
 

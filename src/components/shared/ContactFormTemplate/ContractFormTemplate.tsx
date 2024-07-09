@@ -1,4 +1,4 @@
-import author from '@/public/assets/images/main/author.png';
+import author from '@/public/assets/images/main/author.webp';
 import Image from 'next/image';
 import { PropsWithChildren, ReactNode } from 'react';
 
