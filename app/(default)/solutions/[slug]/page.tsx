@@ -51,11 +51,7 @@ export default async function CasePage(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const post = getCaseContent(slug);
 
-  console.log('POST', post);
-
   const { industries, title, tag, images } = post.data;
-
-  console.log(images);
 
   const imageList = images?.map((item: string, idx: number) => (
     <ScrollAnimationWrapper key={idx} showOnLoad={idx === 0}>

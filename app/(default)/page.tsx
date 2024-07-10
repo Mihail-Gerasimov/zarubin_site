@@ -1,5 +1,5 @@
 import unlockBg from '@/public/assets/images/main/group.png';
-import heroBg from '@/public/assets/images/main/hero_bg.png';
+import heroBg from '@/public/assets/images/main/hero_bg.webp';
 import insightBg from '@/public/assets/images/main/insight_bg.png';
 import bgImage from '@/public/assets/images/main/reviewBg.png';
 import { BusinessSolving } from '@/src/components/Main/BusinessSolving/BusinessSolving';

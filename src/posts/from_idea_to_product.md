@@ -1,7 +1,7 @@
 ---
 title: 'From Idea to Product: How Innovative Approaches in Custom Software Development Help Achieve Goals'
 description: 'Welcome to the world of custom software development! Creating a product from idea to implementation can be a lengthy and costly process.'
-image: '/assets/images/post/it_rocket.png'
+image: '/assets/images/post/it_rocket.webp'
 date: '14-05-2023'
 type: 'Notes'
 tag: 'IT'

@@ -2,7 +2,7 @@
 title: 'How the fashion industry depends on e-commerce stores'
 industries: ['Custom Development']
 tag: 'Наше Золото'
-images: ['/assets/images/case/nashe_zoloto-1.png']
+images: ['/assets/images/case/nashe_zoloto-1.webp']
 ---
 
 ## Problem

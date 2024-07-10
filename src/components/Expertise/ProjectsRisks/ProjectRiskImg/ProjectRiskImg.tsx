@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
-import img1 from '@/public/assets/images/expertise/project_risk_1.png';
-import img2 from '@/public/assets/images/expertise/project_risk_2.png';
+import img1 from '@/public/assets/images/expertise/project_risk_1.webp';
+import img2 from '@/public/assets/images/expertise/project_risk_2.webp';
 
 export const ProjectRiskImg = () => {
   return (
@@ -15,6 +15,7 @@ export const ProjectRiskImg = () => {
           fill
           className='absolute inset-0 object-cover'
           alt='Analyzing the current situation'
+          loading='lazy'
         />
       </div>
       <div className='after:to-[#FF 013EDF] relative flex flex-col justify-end p-[20px] p-[20px] after:absolute after:inset-0 after:bg-gradient-to-t after:from-[#013EDF]'>
@@ -26,6 +27,7 @@ export const ProjectRiskImg = () => {
           fill
           className='absolute inset-0 object-cover'
           alt='Making an action plan'
+          loading='lazy'
         />
       </div>
     </div>

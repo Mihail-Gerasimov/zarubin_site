@@ -2,7 +2,7 @@
 title: 'Within Three Weeks, We Managed to Establish a Working Process'
 industries: ['Financial Technology', 'Business Process Management']
 tag: 'Grid Capital'
-images: ['/assets/images/case/grid_capital-1.png']
+images: ['/assets/images/case/grid_capital-1.webp']
 ---
 
 ## Problem

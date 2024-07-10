@@ -1,5 +1,5 @@
-import expertise1 from '@/public/assets/images/main/expertise_1.png';
-import expertise2 from '@/public/assets/images/main/expertise_2.png';
+import expertise1 from '@/public/assets/images/main/expertise_1.webp';
+import expertise2 from '@/public/assets/images/main/expertise_2.webp';
 
 export const ExpertiseData = [
   {

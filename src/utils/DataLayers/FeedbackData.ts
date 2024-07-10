@@ -1,9 +1,9 @@
-import anotherDmitry from '@/public/assets/images/expertise/another_Dmitry.png';
-import alexeyPhoto from '@/public/assets/images/main/feedbacks/alexey.png';
-import dmitryPhoto from '@/public/assets/images/main/feedbacks/dmitriy.png';
-import elenaPhoto from '@/public/assets/images/main/feedbacks/elena.png';
-import konstantinPhoto from '@/public/assets/images/main/feedbacks/konstantin.png';
-import sergeyPhoto from '@/public/assets/images/main/feedbacks/sergey.png';
+import anotherDmitry from '@/public/assets/images/expertise/another_Dmitry.webp';
+import alexeyPhoto from '@/public/assets/images/main/feedbacks/alexey.webp';
+import dmitryPhoto from '@/public/assets/images/main/feedbacks/dmitriy.webp';
+import elenaPhoto from '@/public/assets/images/main/feedbacks/elena.webp';
+import konstantinPhoto from '@/public/assets/images/main/feedbacks/konstantin.webp';
+import sergeyPhoto from '@/public/assets/images/main/feedbacks/sergey.webp';
 
 export const FeedbackDataMain = [
   {

@@ -2,7 +2,7 @@
 title: 'Mobile Application Mounted on Car Steering Wheel'
 industries: ['Automotive Industry', 'Cars']
 tag: 'Kama'
-images: ['/assets/images/case/kama-1.png', '/assets/images/case/kama-2.png']
+images: ['/assets/images/case/kama-1.webp', '/assets/images/case/kama-2.webp']
 ---
 
 ## Problem

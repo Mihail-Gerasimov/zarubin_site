@@ -1,4 +1,4 @@
-import developmentImg from '@/public/assets/images/expertise/devrlopment.png';
+import developmentImg from '@/public/assets/images/expertise/devrlopment.webp';
 import { DescriptionContent } from '@/src/ui-kit/DescriptionContent/DescriptionContent';
 import { TitleContent } from '@/src/ui-kit/TitleContent/TitleContent';
 import Image from 'next/image';
