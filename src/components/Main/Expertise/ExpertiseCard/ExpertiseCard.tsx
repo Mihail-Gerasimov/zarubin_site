@@ -62,6 +62,7 @@ export const ExpertiseCard = ({
           objectPosition='center'
           alt={`image ${title}`}
           className='absolute left-0 top-0'
+          loading='lazy'
         />
       </div>
     </div>
