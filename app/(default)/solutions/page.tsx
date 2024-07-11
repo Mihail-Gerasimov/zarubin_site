@@ -1,13 +1,13 @@
-import insightBg from '@/public/assets/images/main/insight_bg.png';
 import { Cases } from '@/src/components/BusinessObjectives/Cases/Cases';
 import { Hero } from '@/src/components/BusinessObjectives/Hero/Hero';
-import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 import { Insights } from '@/src/components/Main/Insights/Insights';
+import insightBg from '@/public/assets/images/main/insight_bg.png';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
-import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
 import Image from 'next/image';
+import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
+import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
 import { Suspense } from 'react';
 
 export default async function BusinessObjectivesPage() {

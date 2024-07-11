@@ -1,16 +1,15 @@
 import { Hero } from '@/src/components/BusinessObjectives/SingleCasePage/Hero/Hero';
-import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
-import { Insights } from '@/src/components/Main/Insights/Insights';
 import { Container } from '@/src/components/shared/Container/Container';
-import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
-import { contentTrimming } from '@/src/utils/contentTrimming';
-import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
-import fs from 'fs';
 import matter from 'gray-matter';
+import fs from 'fs';
 import Markdown from 'markdown-to-jsx';
-import Image from 'next/image';
 import styles from './Case.module.css';
+import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
+import { Insights } from '@/src/components/Main/Insights/Insights';
+import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
+import { contentTrimming } from '@/src/utils/contentTrimming';
+import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 
 const getCaseContent = (slug: string) => {
   const folder = 'src/cases/';
@@ -51,21 +50,7 @@ export default async function CasePage(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const post = getCaseContent(slug);
 
-  const { industries, title, tag, images } = post.data;
-
-  const imageList = images?.map((item: string, idx: number) => (
-    <ScrollAnimationWrapper key={idx} showOnLoad={idx === 0}>
-      <Image
-        key={idx}
-        src={item}
-        width={200}
-        height={200}
-        alt='case'
-        unoptimized
-        className='h-[auto] w-full'
-      />
-    </ScrollAnimationWrapper>
-  ));
+  const { industries, title, tag } = post.data;
 
   const hashtagRegex = /#[A-Za-z_]+/g;
   const regexFont = /<font color='(.+?)'>(.+?)<\/font>/g;
@@ -104,22 +89,18 @@ export default async function CasePage(props: { params: { slug: string } }) {
       </Section>
       <Section light>
         <Container className='flex flex-col gap-[60px]'>
-          <div className='grid grid-cols-1 gap-[40px] desktop:grid-cols-2'>
-            <div className='flex flex-col gap-[60px]'>
-              {paragraphs.map((p, idx) => (
-                <ScrollAnimationWrapper key={idx} showOnLoad={idx === 0}>
-                  <Markdown
-                    className={`${styles.markdown} flex w-full flex-col font-proxima`}
-                  >
-                    {p.content}
-                  </Markdown>
-                </ScrollAnimationWrapper>
-              ))}
-            </div>
-            <div className='flex flex-col gap-[20px] desktop:gap-[40px]'>
-              {imageList}
-            </div>
-          </div>
+          {paragraphs.map((p, index) => (
+            <ScrollAnimationWrapper key={p.index} showOnLoad={index === 0}>
+              <div className='grid gap-[40px] desktop:grid-cols-2'>
+                <Markdown
+                  className={`${styles.markdown} flex w-full flex-col gap-[20px] font-proxima`}
+                >
+                  {p.content}
+                </Markdown>
+                <Markdown>{p.images}</Markdown>
+              </div>
+            </ScrollAnimationWrapper>
+          ))}
         </Container>
       </Section>
       <Section id='insights' className='py-0 tablet:py-0 desktop:py-0'>
