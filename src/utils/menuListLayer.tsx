@@ -3,5 +3,6 @@ export const menuListLayer = [
   { id: 2, name: 'Solutions', link: '/solutions' },
   { id: 3, name: 'Insights', link: '/blog' },
   { id: 4, name: 'Career', link: '/career' },
-  { id: 5, name: 'About', link: '#' },
+  { id: 5, name: 'Comparison', link: '/comparison' },
+  { id: 6, name: 'About', link: '#' },
 ];
