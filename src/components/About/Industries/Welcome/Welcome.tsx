@@ -13,7 +13,7 @@ export const Welcome = () => {
   const isDesktop = useMediaQuery('>=desktop');
 
   return (
-    <div className='relative mt-[46px] flex h-[316px] bg-white p-[20px_12px] tablet:mt-[88px] tablet:h-fit tablet:p-[74px_14px] desktop:p-[74px_28px]  desktop-big:p-[168px_238px_139px_0]'>
+    <div className='relative mt-[46px] flex h-[316px] bg-white p-[20px_12px] tablet:mt-[88px] tablet:h-fit tablet:p-[74px_14px] laptop:p-[74px_180px_74px_0] desktop:p-[120px_238px_120px_0]   desktop-big:p-[168px_238px_139px_0]'>
       <Image
         src={
           isDesktop
@@ -28,7 +28,7 @@ export const Welcome = () => {
         alt='founder'
         className={styles.image}
       />
-      <div className='ml-[150px] flex flex-col justify-center gap-[12px] tablet:ml-[291px] tablet:gap-[28px] desktop:ml-[600px] desktop:max-w-[867px]'>
+      <div className='ml-[150px] flex flex-col justify-center gap-[12px] tablet:ml-[291px] tablet:gap-[28px] desktop:ml-[auto] desktop:max-w-[867px]'>
         {' '}
         <h2 className='font-unbound text-[22px] font-bold uppercase leading-[1] text-main-blue tablet:text-[32px] tablet:leading-[1.1] desktop-big:text-[44px]'>
           I am glad to welcome you! <br />{' '}
