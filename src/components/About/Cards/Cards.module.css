@@ -1,0 +1,95 @@
+.cardWrapper {
+  padding: 20px;
+  position: relative;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  background: url('/assets/images/about/bg_hero.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cardWrapper::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    var(--primary) 10%,
+    rgba(0, 0, 255, 0) 60%
+  );
+  z-index: 3;
+}
+
+.image {
+  position: absolute;
+}
+
+.teamImage {
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  height: auto;
+  z-index: 2;
+}
+
+.tvImage {
+  width: 261px;
+  height: auto;
+  left: 50%;
+  bottom: 27px;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 600px) {
+  .cardWrapper {
+    height: 330px;
+  }
+
+  .teamImage {
+    bottom: -120px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cardWrapper {
+    height: 360px;
+  }
+
+  .tvImage {
+    width: 373px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cardWrapper {
+    padding: 40px;
+    width: 100%;
+  }
+
+  .teamImage {
+    bottom: 0;
+  }
+
+  .tvImage {
+    width: 320px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .cardWrapper {
+    height: 480px;
+  }
+
+  .tvImage {
+    width: 411px;
+  }
+}

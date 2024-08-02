@@ -1,0 +1,50 @@
+.imageBox {
+  position: relative;
+  width: 100%;
+  max-width: 150px;
+  height: 316px;
+}
+
+.image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.description {
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--text-dark);
+}
+
+/* 'font-proxima text-[16px] leading-[1.25] text-text-dark tablet:text-[20px]' */
+
+@media (min-width: 768px) {
+  .image {
+    width: 291px;
+    height: auto;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .image {
+    width: 600px;
+    height: auto;
+  }
+
+  .description {
+    width: 490px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .image {
+    width: 782px;
+    height: auto;
+  }
+}

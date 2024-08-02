@@ -1,0 +1,130 @@
+.joinWrapper {
+  position: relative;
+  width: 121px;
+  height: 96px;
+  text-align: end;
+  display: flex;
+  align-items: end;
+  padding-bottom: 16px;
+}
+
+.joinWrapper::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  width: 109px;
+  height: 96px;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  background-color: var(--second-blue);
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+
+.joinWrapper:hover::after {
+  background-color: var(--blue-hover);
+}
+
+.swiperWrapper {
+  padding: 0;
+  width: 100%;
+}
+
+.imageBox {
+  position: relative;
+  width: 306px;
+  height: 370px;
+  background-color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.imageBox::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    var(--bg-color) 0%,
+    rgba(0, 0, 255, 0) 60%
+  );
+  z-index: 4;
+}
+
+.imageBox::after {
+  position: absolute;
+  content: '';
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/images/about/bg_team_card.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  opacity: 0.1;
+  z-index: 2;
+}
+
+.imageBox:hover {
+  background: url('/assets/images/about/hover.png');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.imageBox:hover .image {
+  transform: scale(110%);
+  bottom: -20px;
+}
+
+.image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 3;
+  transition: all 0.3s ease-in-out;
+}
+
+.item {
+  width: 306px !important;
+}
+
+.mainSwiper {
+  width: 100%;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+@media (min-width: 1440px) {
+  .joinWrapper {
+    width: 200px;
+    height: 139;
+    padding-left: 27px;
+    padding-bottom: 29px;
+    text-align: start;
+  }
+
+  .joinWrapper::after {
+    width: 158px;
+    height: 139px;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    right: auto;
+    left: 0;
+  }
+
+  .item {
+    width: 410px !important;
+  }
+
+  .imageBox {
+    width: 410px;
+    height: 462px;
+  }
+}

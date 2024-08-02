@@ -1,11 +1,11 @@
+import HeroBg from '@/public/assets/images/career/hero-bg.png';
 import { ContactForm } from '@/src/components/Comparison/ContactForm/ContactForm';
 import { Hero } from '@/src/components/Comparison/Hero/Hero';
-import { Container } from '@/src/components/shared/Container/Container';
-import { Section } from '@/src/components/shared/Section/Section';
-import HeroBg from '@/public/assets/images/career/hero-bg.png';
-import Image from 'next/image';
-import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import Table from '@/src/components/Comparison/Table';
+import { Container } from '@/src/components/shared/Container/Container';
+import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
+import { Section } from '@/src/components/shared/Section/Section';
+import Image from 'next/image';
 
 export default async function ComparisonPage() {
   return (

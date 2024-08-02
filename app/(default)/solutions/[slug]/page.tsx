@@ -1,15 +1,15 @@
 import { Hero } from '@/src/components/BusinessObjectives/SingleCasePage/Hero/Hero';
+import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
+import { Insights } from '@/src/components/Main/Insights/Insights';
 import { Container } from '@/src/components/shared/Container/Container';
+import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
-import matter from 'gray-matter';
+import { contentTrimming } from '@/src/utils/contentTrimming';
+import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
 import fs from 'fs';
+import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
 import styles from './Case.module.css';
-import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
-import { Insights } from '@/src/components/Main/Insights/Insights';
-import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
-import { contentTrimming } from '@/src/utils/contentTrimming';
-import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 
 const getCaseContent = (slug: string) => {
   const folder = 'src/cases/';

@@ -16,7 +16,7 @@ export const Hero = () => {
         <br />
         Zarubin&Co
       </h1>
-      <p className='z-[5] font-proxima text-[12px] font-normal leading-[1.2] tablet:text-[16px] desktop:text-[20px] desktop-hard:text-[100px] desktop-hard:text-[24px] max-w-[900px]  '>
+      <p className='z-[5] max-w-[900px] font-proxima text-[12px] font-normal leading-[1.2] tablet:text-[16px] desktop:text-[20px] desktop-hard:text-[100px] desktop-hard:text-[24px]  '>
         Zarubin & Co is an excellent alternative to a traditional development
         studio and, even more so, to freelancers. We are often asked about the
         differences in approaches. Below is a comparative table.
