@@ -1,13 +1,13 @@
+import HeroBg from '@/public/assets/images/career/hero-bg.png';
 import { ContactForm } from '@/src/components/Career/ContactForm/ContactForm';
 import { Hero } from '@/src/components/Career/Hero/Hero';
 import { Team } from '@/src/components/Career/Team/Team';
 import { Vacancies } from '@/src/components/Career/Vacanices/Vacancies';
 import { Values } from '@/src/components/Career/Values/Values';
 import { Container } from '@/src/components/shared/Container/Container';
-import { Section } from '@/src/components/shared/Section/Section';
-import HeroBg from '@/public/assets/images/career/hero-bg.png';
-import Image from 'next/image';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
+import { Section } from '@/src/components/shared/Section/Section';
+import Image from 'next/image';
 
 export default async function CareerPage() {
   return (

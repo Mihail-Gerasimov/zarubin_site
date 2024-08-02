@@ -1,11 +1,11 @@
 'use client';
 
-import { useFormik } from 'formik';
-import styles from './Form.module.css';
-import { useDropzone } from 'react-dropzone';
-import { useCallback } from 'react';
 import { DropzoneIcon } from '@/src/components/svg/DropzoneIcon';
 import classNames from 'classnames';
+import { useFormik } from 'formik';
+import { useCallback } from 'react';
+import { useDropzone } from 'react-dropzone';
+import styles from './Form.module.css';
 
 type Inputs = {
   name: string;

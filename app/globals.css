@@ -36,13 +36,13 @@ a {
 }
 
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active{
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: #ffffff;
-    transition: background-color 5000s ease-in-out 0s;
-    box-shadow: inset 0 0 20px 20px #23232329;
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #23232329;
 }
 
 @layer base {
@@ -176,12 +176,6 @@ input:-webkit-autofill:active{
     }
   }
 
-  @media (min-width: 1440px) {
-    .mainContainer {
-      /* background: linear-gradient(rgba(0, 0, 0, 0) 0%, var(--main-white) 500px); */
-    }
-  }
-
   .paginationBtn {
     padding: 12px 8px;
     border-radius: 8px;
@@ -203,7 +197,6 @@ input:-webkit-autofill:active{
 
   @media (min-width: 768px) {
     .card-width {
-      /* min-width: calc(100% - 20px) */
       min-width: 100%;
     }
   }

@@ -78,6 +78,7 @@ const config: Config = {
       tablet: '768px',
       laptop: '1200px',
       desktop: '1440px',
+      'desktop-light': '1600px',
       'desktop-big': '1800px',
       'desktop-hard': '1920px',
     },

@@ -8,7 +8,7 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Tag } from '../../shared/Tag/Tag';
 import { VacanciesCard } from './VacanicesCard/VacanciesCard';
 
-export const Vacancies = () => {
+export const Vacancies = ({ withFilter = true, cardLink = true }) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
 
   const tablet = useMediaQuery('<desktop');
@@ -35,20 +35,22 @@ export const Vacancies = () => {
         </div>
       </div>
       <div>
-        <div className='flex gap-[14px]'>
-          <Tag selected={selectedTag === 'All'} onClick={setSelectedTag}>
-            All
-          </Tag>
-          {[...tags].map((item) => (
-            <Tag
-              selected={selectedTag === item}
-              key={item}
-              onClick={setSelectedTag}
-            >
-              {item}
+        {withFilter && (
+          <div className='flex gap-[14px]'>
+            <Tag selected={selectedTag === 'All'} onClick={setSelectedTag}>
+              All
             </Tag>
-          ))}
-        </div>
+            {[...tags].map((item) => (
+              <Tag
+                selected={selectedTag === item}
+                key={item}
+                onClick={setSelectedTag}
+              >
+                {item}
+              </Tag>
+            ))}
+          </div>
+        )}
       </div>
       <Swiper
         spaceBetween={20}
@@ -64,6 +66,7 @@ export const Vacancies = () => {
               tags={item.tags}
               description={item.description}
               link={item.link}
+              cardLink={cardLink}
             />
           </SwiperSlide>
         ))}

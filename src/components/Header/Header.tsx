@@ -9,7 +9,6 @@ import { useEffect, useState } from 'react';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
 import { MainList } from '../NavList/MainList';
 import { Container } from '../shared/Container/Container';
-// import { useParams } from 'next/navigation';
 
 interface Props {
   dark?: boolean;

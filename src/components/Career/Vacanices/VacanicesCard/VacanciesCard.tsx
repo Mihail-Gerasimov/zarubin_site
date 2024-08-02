@@ -1,14 +1,20 @@
 import { VacanciesCardTriangle } from '@/src/components/svg/VacanciesCardTriangle';
 import { LinkArrow } from '@/src/ui-kit/LinkArrow/LinkArrow';
-
 interface Props {
   title: string;
   description: string;
   link: string;
   tags: string[];
+  cardLink?: boolean;
 }
 
-export const VacanciesCard = ({ title, description, link, tags }: Props) => {
+export const VacanciesCard = ({
+  title,
+  description,
+  link,
+  tags,
+  cardLink = true,
+}: Props) => {
   return (
     <div className='relative flex h-[400px] h-full w-full flex-col rounded-[6px] bg-dark-blue p-[40px_20px] tablet:p-[40px_40px]'>
       <div className='z-10 flex h-full w-full flex-col justify-between'>
@@ -33,9 +39,11 @@ export const VacanciesCard = ({ title, description, link, tags }: Props) => {
               </p>
             ))}
           </div>
-          <div className='h-fit w-fit'>
-            <LinkArrow title='More' link={link} />
-          </div>
+          {cardLink && (
+            <div className='h-fit w-fit'>
+              <LinkArrow title='More' link={link} />
+            </div>
+          )}
         </div>
       </div>
       <div className='absolute right-4 top-4 w-[116px] tablet:w-[220px] desktop:w-[291px]'>
