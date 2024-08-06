@@ -1,4 +1,5 @@
 import { Breadcrumb, Breadcrumbs } from '../../shared/Breadcrumbs/Breadcrumbs';
+import styles from './Hero.module.css';
 
 const BREADCRUMBS: Breadcrumb[] = [
   { title: 'Main', link: '/' },
@@ -7,9 +8,11 @@ const BREADCRUMBS: Breadcrumb[] = [
 
 export const Hero = () => {
   return (
-    <div className='flex flex-col gap-[20px] break-words pb-[60px]'>
+    <div
+      className={`${styles.mainContainer} flex flex-col gap-[20px] break-words pb-[60px]`}
+    >
       <Breadcrumbs breadcrumbs={BREADCRUMBS} />
-      <h1 className='z-[5] font-unbound text-[50px] font-bold uppercase leading-[1.14] tablet:text-[60px] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px] desktop-hard:text-[100px]'>
+      <h1 className='z-[5] font-unbound text-[50px] font-bold uppercase leading-[1.14] tablet:text-[60px] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px]'>
         Become a part
         <br />
         <span className='text-stroke text-[50px] tablet:text-[60px] desktop:text-[80px] desktop:leading-[1.22] desktop-hard:text-[100px]'>
