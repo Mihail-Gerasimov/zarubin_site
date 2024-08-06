@@ -1,5 +1,5 @@
-import expertise1 from '@/public/assets/images/main/expertise_1.webp';
-import expertise2 from '@/public/assets/images/main/expertise_2.webp';
+import expertise1 from '@/public/assets/images/main/analytic.webp';
+import expertise2 from '@/public/assets/images/main/consulting.webp';
 
 export const ExpertiseData = [
   {
