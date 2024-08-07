@@ -2,6 +2,7 @@
 import HeroBg from '@/public/assets/images/career/hero_banner.png';
 import { ContactForm } from '@/src/components/Career/ContactForm/ContactForm';
 import { Hero } from '@/src/components/Career/Hero/Hero';
+import { Internship } from '@/src/components/Career/Internship/Internship';
 import { Team } from '@/src/components/Career/Team/Team';
 import { Vacancies } from '@/src/components/Career/Vacanices/Vacancies';
 import { Values } from '@/src/components/Career/Values/Values';
@@ -10,7 +11,6 @@ import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationW
 import { Section } from '@/src/components/shared/Section/Section';
 import Image from 'next/image';
 import styles from './Career.module.css';
-import { Internship } from '@/src/components/Career/Internship/Internship';
 
 export default async function CareerPage() {
   return (

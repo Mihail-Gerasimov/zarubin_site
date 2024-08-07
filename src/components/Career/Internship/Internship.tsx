@@ -1,8 +1,8 @@
-import { LinkArrow } from '@/src/ui-kit/LinkArrow/LinkArrow';
-import styles from './Internship.module.css';
-import classNames from 'classnames';
 import teamImage from '@/public/assets/images/about/card_remote.png';
+import { LinkArrow } from '@/src/ui-kit/LinkArrow/LinkArrow';
+import classNames from 'classnames';
 import Image from 'next/image';
+import styles from './Internship.module.css';
 
 export const Internship = () => {
   return (
