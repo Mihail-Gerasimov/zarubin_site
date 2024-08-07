@@ -4,7 +4,7 @@
   scroll-snap-type: x mandatory;
 }
 
-.solvingList>* {
+.solvingList > * {
   scroll-snap-align: start;
 }
 
@@ -14,15 +14,13 @@
   row-gap: 20px;
 }
 
-/* Убедитесь, что SwiperSlide элементы занимают все пространство ячейки */
 .vacanciesGrid .swiper-slide {
   width: 100%;
   height: auto;
 }
 
-@media (min-width:1440px) {
+@media (min-width: 1440px) {
   .vacanciesGrid {
     grid-template-columns: repeat(2, 1fr);
-
   }
 }

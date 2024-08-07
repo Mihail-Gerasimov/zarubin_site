@@ -6,8 +6,8 @@ import useMediaQuery from '@/src/utils/useMediaQuery';
 import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Tag } from '../../shared/Tag/Tag';
-import { VacanciesCard } from './VacanicesCard/VacanciesCard';
 import styles from './Vacanices.module.css';
+import { VacanciesCard } from './VacanicesCard/VacanciesCard';
 
 export const Vacancies = ({
   withFilter = true,

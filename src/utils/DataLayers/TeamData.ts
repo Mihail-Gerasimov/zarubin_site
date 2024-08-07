@@ -1,16 +1,16 @@
 import clerkImg from '@/public/assets/images/about/team/clerk.webp';
 import cooImg from '@/public/assets/images/about/team/coo.webp';
 import designerkImg from '@/public/assets/images/about/team/designer.webp';
-import faunderImg from '@/public/assets/images/about/team/founder.webp';
-import phpDevImg from '@/public/assets/images/about/team/php_developer.webp';
-import frontDevImg from '@/public/assets/images/about/team/frontend_developer.webp';
 import flutterDevImg from '@/public/assets/images/about/team/flutter_developer.webp';
-import salesManagerImg from '@/public/assets/images/about/team/sales_manager.webp';
+import faunderImg from '@/public/assets/images/about/team/founder.webp';
+import frontDevImg from '@/public/assets/images/about/team/frontend_developer.webp';
+import phpDevImg from '@/public/assets/images/about/team/php_developer.webp';
+import phpLaravelDevImg from '@/public/assets/images/about/team/php_laravel_developer.webp';
 import projectAdminImg from '@/public/assets/images/about/team/project_administrator.webp';
 import projectManagerImg from '@/public/assets/images/about/team/project_manager.webp';
-import phpLaravelDevImg from '@/public/assets/images/about/team/php_laravel_developer.webp';
-import uiUxDesignerImg from '@/public/assets/images/about/team/uiux_designer.webp';
+import salesManagerImg from '@/public/assets/images/about/team/sales_manager.webp';
 import techLidJsImg from '@/public/assets/images/about/team/tech_lead_js.webp';
+import uiUxDesignerImg from '@/public/assets/images/about/team/uiux_designer.webp';
 
 import { StaticImageData } from 'next/image';
 

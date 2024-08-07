@@ -1,22 +1,21 @@
 'use client';
 
-// import carImage from '@/public/assets/images/main/auto.png';
 import carImage from '@/public/assets/images/about/car.webp';
-import carImageActive from '@/public/assets/images/about/car_active.webp';
-import sportImage from '@/public/assets/images/about/sport.webp';
-import sportImageActive from '@/public/assets/images/about/sport_active.webp';
 import retailImage from '@/public/assets/images/about/cart.webp';
 import retailImageActive from '@/public/assets/images/about/cart_active.webp';
+import carImageActive from '@/public/assets/images/about/car_active.webp';
 import mediaImage from '@/public/assets/images/about/cup.webp';
 import mediaImageActive from '@/public/assets/images/about/cup_active.webp';
 import serviceImage from '@/public/assets/images/about/lamp.webp';
 import serviceImageActive from '@/public/assets/images/about/lamp_active.webp';
+import sportImage from '@/public/assets/images/about/sport.webp';
+import sportImageActive from '@/public/assets/images/about/sport_active.webp';
 import { StaticImageData } from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import styles from './Industries.module.css';
 import { IndustriesCard } from './IndustriesCard/IndustriesCard';
 import { Welcome } from './Welcome/Welcome';
-import Link from 'next/link';
 
 export interface IIndustries {
   id: number;
