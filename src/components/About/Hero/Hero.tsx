@@ -12,7 +12,7 @@ export const Hero = () => {
       <div className='z-[5]'>
         <Breadcrumbs breadcrumbs={BREADCRUMBS} />
         <h1 className={styles.title}>
-          About <span className={`${styles.titleSpan} text-stroke`}>us</span>
+          About <span className={`white-stroke`}>us</span>
         </h1>
       </div>
       <div className={styles.handbookWrapper}>
@@ -21,7 +21,11 @@ export const Hero = () => {
           A guide to help you understand the intricacies of our work
         </p>
         <div className={styles.linkBox}>
-          <LinkArrow title='Go to the HandBook' link='#' />
+          <LinkArrow
+            target='_blank'
+            title='Go to the HandBook'
+            link='https://drive.google.com/file/d/1M3qPsWPJAUPYu3_z80EvnKNeEPJGgxLI/view'
+          />
         </div>
       </div>
     </div>

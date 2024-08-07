@@ -27,14 +27,16 @@ export const CostumDevelopment = () => {
           description={description.descr1}
           subDescription={description.descr2}
         />
-        <Image
-          src={developmentImg}
-          width={300}
-          height={200}
-          alt='development'
-          unoptimized
-          className={styles.image}
-        />
+        <div className={styles.imageBox}>
+          <Image
+            src={developmentImg}
+            width={300}
+            height={200}
+            alt='development'
+            unoptimized
+            className={styles.image}
+          />
+        </div>
       </div>
     </ComponentContainer>
   );

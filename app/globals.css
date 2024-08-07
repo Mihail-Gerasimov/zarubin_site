@@ -83,6 +83,11 @@ input:-webkit-autofill:active {
     font-size: 35px;
   }
 
+  .white-stroke {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px var(--main-white);
+  }
+
   .text-stroke {
     color: var(--primary);
     text-shadow:

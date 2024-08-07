@@ -1,11 +1,17 @@
 'use client';
 
-import carImage from '@/public/assets/images/main/auto.png';
-import sportImage from '@/public/assets/images/main/bassketball.png';
-import retailImage from '@/public/assets/images/main/cart.png';
-import mediaImage from '@/public/assets/images/main/cup.png';
-import serviceImage from '@/public/assets/images/main/lamp.png';
+import carImage from '@/public/assets/images/about/car.webp';
+import retailImage from '@/public/assets/images/about/cart.webp';
+import retailImageActive from '@/public/assets/images/about/cart_active.webp';
+import carImageActive from '@/public/assets/images/about/car_active.webp';
+import mediaImage from '@/public/assets/images/about/cup.webp';
+import mediaImageActive from '@/public/assets/images/about/cup_active.webp';
+import serviceImage from '@/public/assets/images/about/lamp.webp';
+import serviceImageActive from '@/public/assets/images/about/lamp_active.webp';
+import sportImage from '@/public/assets/images/about/sport.webp';
+import sportImageActive from '@/public/assets/images/about/sport_active.webp';
 import { StaticImageData } from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import styles from './Industries.module.css';
 import { IndustriesCard } from './IndustriesCard/IndustriesCard';
@@ -17,6 +23,7 @@ export interface IIndustries {
   description: string;
   link: string;
   image: StaticImageData;
+  activeImage: StaticImageData;
 }
 
 const INDUSTRIES: IIndustries[] = [
@@ -24,36 +31,41 @@ const INDUSTRIES: IIndustries[] = [
     id: 1,
     title: 'Car',
     description: 'digital products for Retail',
-    link: '#',
+    link: '/expertise',
     image: carImage,
+    activeImage: carImageActive,
   },
   {
     id: 2,
     title: 'Service',
     description: 'digital products for Service improvement',
-    link: '#',
+    link: '/expertise',
     image: serviceImage,
+    activeImage: serviceImageActive,
   },
   {
     id: 3,
     title: 'Media',
     description: 'digital products for Car industry',
-    link: '#',
+    link: '/expertise',
     image: mediaImage,
+    activeImage: mediaImageActive,
   },
   {
     id: 4,
     title: 'Retail',
     description: 'digital products for MEDIA & Entertainment',
-    link: '#',
+    link: '/expertise',
     image: retailImage,
+    activeImage: retailImageActive,
   },
   {
     id: 5,
     title: 'Sport',
     description: 'digital products for sports business',
-    link: '#',
+    link: '/expertise',
     image: sportImage,
+    activeImage: sportImageActive,
   },
 ];
 
@@ -70,13 +82,14 @@ export const Industries = () => {
             Our expertise covers all industries. We have the most experience in
             the sports, FMCG, E-commerce industries
           </p>
-          <div
+          <Link
+            href='/expertise'
             className={`${styles.allIndustries} mt-[156px] hidden w-[240px] p-[54px_0_29px_27px] desktop:block`}
           >
-            <h3 className='font-unbound text-[24px] font-bold uppercase leading-[1.16] '>
+            <p className='font-unbound text-[24px] font-bold uppercase leading-[1.16] '>
               All industries
-            </h3>
-          </div>
+            </p>
+          </Link>
         </div>
         <div
           className={`${''} relative mb-[500px] mt-[40px] h-fit laptop:mb-[650px] desktop:mt-[60px] desktop:w-fit desktop-hard:mb-[900px]`}

@@ -15,7 +15,7 @@ interface Data {
 }
 
 export const IndustriesCard = ({ data, activeId, setActiveId }: Data) => {
-  const { description, title, link, id, image } = data;
+  const { description, title, link, id, image, activeImage } = data;
   const topValue = id === 1 ? 0 : (id - 1) * 60;
   const isDesktop = useMediaQuery('>=desktop');
 
@@ -49,11 +49,11 @@ export const IndustriesCard = ({ data, activeId, setActiveId }: Data) => {
         </h2>
         <div className='absolute bottom-0 right-0 z-0 h-3/4 w-[70%] opacity-[80%] tablet:block desktop:right-[-20%] desktop:w-[90%] desktop:max-w-[900px]'>
           <Image
-            src={image}
+            src={activeId === id ? activeImage : image}
             alt=''
             fill
             priority
-            className='object-contain object-bottom'
+            className='object-contain object-right desktop:object-bottom'
           />
         </div>
       </div>

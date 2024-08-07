@@ -6,9 +6,14 @@ import useMediaQuery from '@/src/utils/useMediaQuery';
 import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Tag } from '../../shared/Tag/Tag';
+import styles from './Vacanices.module.css';
 import { VacanciesCard } from './VacanicesCard/VacanciesCard';
 
-export const Vacancies = ({ withFilter = true, cardLink = true }) => {
+export const Vacancies = ({
+  withFilter = true,
+  cardLink = true,
+  withRowsBtn = true,
+}) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
 
   const tablet = useMediaQuery('<desktop');
@@ -27,12 +32,14 @@ export const Vacancies = ({ withFilter = true, cardLink = true }) => {
         <h2 className='font-unbound text-[45px] font-bold uppercase leading-[1] tablet:text-[50px] tablet:leading-[1.3] desktop:text-[70px] desktop:leading-[1.1]'>
           Active vacancies
         </h2>
-        <div className='hidden items-center gap-[16px] tablet:flex'>
-          <NextPrevBtn
-            nextPage={() => swiper?.slideNext()}
-            prevPage={() => swiper?.slidePrev()}
-          />
-        </div>
+        {withRowsBtn && (
+          <div className='hidden items-center gap-[16px] tablet:flex'>
+            <NextPrevBtn
+              nextPage={() => swiper?.slideNext()}
+              prevPage={() => swiper?.slidePrev()}
+            />
+          </div>
+        )}
       </div>
       <div>
         {withFilter && (
@@ -52,25 +59,41 @@ export const Vacancies = ({ withFilter = true, cardLink = true }) => {
           </div>
         )}
       </div>
-      <Swiper
-        spaceBetween={20}
-        slidesPerView={tablet ? 1 : 2}
-        onSwiper={setSwiper}
-        className='max-w-full'
-        wrapperClass='items-stretch'
-      >
-        {filteredVacanicesData.map((item) => (
-          <SwiperSlide key={item.id} className='!h-auto'>
-            <VacanciesCard
-              title={item.title}
-              tags={item.tags}
-              description={item.description}
-              link={item.link}
-              cardLink={cardLink}
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      {filteredVacanicesData.length <= 4 ? (
+        <div className={`max-w-full gap-[20px] ${styles.vacanciesGrid}`}>
+          {filteredVacanicesData.map((item) => (
+            <div key={item.id} className='vacancy-card'>
+              <VacanciesCard
+                title={item.title}
+                tags={item.tags}
+                description={item.description}
+                link={item.link}
+                cardLink={cardLink}
+              />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <Swiper
+          spaceBetween={20}
+          slidesPerView={tablet ? 1 : 2}
+          onSwiper={setSwiper}
+          className='max-w-full'
+          wrapperClass={`items-stretch ${styles.vacanciesGrid}`}
+        >
+          {filteredVacanicesData.map((item) => (
+            <SwiperSlide key={item.id} className='!h-auto'>
+              <VacanciesCard
+                title={item.title}
+                tags={item.tags}
+                description={item.description}
+                link={item.link}
+                cardLink={cardLink}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </div>
   );
 };

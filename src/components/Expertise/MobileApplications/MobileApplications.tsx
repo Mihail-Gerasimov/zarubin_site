@@ -3,6 +3,7 @@ import { DescriptionContent } from '@/src/ui-kit/DescriptionContent/DescriptionC
 import { TitleContent } from '@/src/ui-kit/TitleContent/TitleContent';
 import Image from 'next/image';
 import { ComponentContainer } from '../../ComponentContainer/ComponentContainer';
+import styles from './MobileApplication.module.css';
 
 const tags = [
   'Increased customer engagement',
@@ -26,7 +27,9 @@ export const MobileApplications = () => {
           description={description.descr1}
           subDescription={description.descr2}
         />
-        <Image src={appImg} alt='Mobile Applications' />
+        <div className={styles.imageBox}>
+          <Image src={appImg} alt='Mobile Applications' />
+        </div>
       </div>
     </ComponentContainer>
   );

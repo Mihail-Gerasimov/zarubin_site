@@ -29,6 +29,11 @@
   z-index: 5;
 }
 
+.titleSpan {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--main-white);
+}
+
 .handbookWrapper {
   margin-top: 40px;
   padding: 20px;
@@ -65,7 +70,6 @@
 .linkBox {
   width: fit-content;
   height: 26px;
-  display: none;
 }
 
 @media (min-width: 768px) {

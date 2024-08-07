@@ -1,4 +1,4 @@
-import HeroBg from '@/public/assets/images/career/hero-bg.png';
+import HeroBg from '@/public/assets/images/comparison/hero_banner.webp';
 import { ContactForm } from '@/src/components/Comparison/ContactForm/ContactForm';
 import { Hero } from '@/src/components/Comparison/Hero/Hero';
 import Table from '@/src/components/Comparison/Table';
@@ -6,21 +6,23 @@ import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
 import Image from 'next/image';
+import styles from './Comparison.module.css';
 
 export default async function ComparisonPage() {
   return (
     <main className='flex flex-col gap-20 overflow-hidden'>
-      <Section id='hero' className='relative'>
+      <Section id='hero' className={`${styles.heroContainer} relative`}>
         <Container>
           <Hero />
         </Container>
         <div className='absolute inset-0 -z-10'>
           <Image
-            className='absolute right-0 max-w-[1030px] max-tablet:right-1/2 max-tablet:translate-x-1/2'
             src={HeroBg}
+            priority
             alt=''
-            width={1030}
-            height={560}
+            objectPosition='top'
+            objectFit='cover'
+            layout='fill'
           />
         </div>
       </Section>

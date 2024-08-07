@@ -4,18 +4,20 @@ export default function Table() {
       <div className='w-screen overflow-auto tablet:w-full'>
         <table>
           <thead className='border-b border-b-white '>
-            <th className='px-[20px] py-[27.5px] text-start font-unbound text-[16px] font-bold leading-[1.2] tablet:text-[22px] desktop:text-[28px]'>
-              Designing
-            </th>
-            <th className='px-[20px] py-[27.5px] text-start font-proxima text-[18px] font-bold leading-[1.2] tablet:text-[20px] desktop:text-[36px]'>
-              Freelancers/Indians
-            </th>
-            <th className='px-[20px] py-[27.5px] text-start font-proxima text-[18px] font-bold leading-[1.2] text-[#013EDF] tablet:text-[20px] desktop:text-[36px]'>
-              Zarubin & Co
-            </th>
-            <th className='px-[20px] py-[27.5px] text-start font-proxima text-[18px] font-bold leading-[1.2] tablet:text-[20px] desktop:text-[36px]'>
-              Development Studio
-            </th>
+            <tr>
+              <th className='px-[20px] py-[27.5px] text-start font-unbound text-[16px] font-bold leading-[1.2] tablet:text-[22px] desktop:text-[28px]'>
+                Designing
+              </th>
+              <th className='px-[20px] py-[27.5px] text-start font-proxima text-[18px] font-bold leading-[1.2] tablet:text-[20px] desktop:text-[36px]'>
+                Freelancers/Indians
+              </th>
+              <th className='px-[20px] py-[27.5px] text-start font-proxima text-[18px] font-bold leading-[1.2] text-[#013EDF] tablet:text-[20px] desktop:text-[36px]'>
+                Zarubin & Co
+              </th>
+              <th className='px-[20px] py-[27.5px] text-start font-proxima text-[18px] font-bold leading-[1.2] tablet:text-[20px] desktop:text-[36px]'>
+                Development Studio
+              </th>
+            </tr>
           </thead>
           <tbody>
             <tr>
@@ -94,9 +96,11 @@ export default function Table() {
       <div className='w-screen overflow-auto tablet:w-full'>
         <table className='w-full'>
           <thead className='border-b border-b-white '>
-            <th className='px-[20px] py-[27.5px] pt-[67.5px] text-start font-unbound text-[16px] font-bold leading-[1.2] tablet:text-[22px] desktop:text-[28px]'>
-              Development
-            </th>
+            <tr>
+              <th className='px-[20px] py-[27.5px] pt-[67.5px] text-start font-unbound text-[16px] font-bold leading-[1.2] tablet:text-[22px] desktop:text-[28px]'>
+                Development
+              </th>
+            </tr>
           </thead>
           <tbody>
             <tr>
@@ -134,9 +138,11 @@ export default function Table() {
       <div className='w-screen overflow-auto tablet:w-full'>
         <table className='w-full'>
           <thead className='border-b border-b-white '>
-            <th className='px-[20px] py-[27.5px] pt-[67.5px] text-start font-unbound text-[16px] font-bold leading-[1.2] tablet:text-[22px] desktop:text-[28px]'>
-              Testing
-            </th>
+            <tr>
+              <th className='px-[20px] py-[27.5px] pt-[67.5px] text-start font-unbound text-[16px] font-bold leading-[1.2] tablet:text-[22px] desktop:text-[28px]'>
+                Testing
+              </th>
+            </tr>
           </thead>
           <tbody>
             <tr>
@@ -173,9 +179,11 @@ export default function Table() {
       <div className='w-screen overflow-auto tablet:w-full'>
         <table className='w-full'>
           <thead className='border-b border-b-white '>
-            <th className='px-[20px] py-[27.5px] pt-[67.5px] text-start font-unbound text-[16px] font-bold leading-[1.2] tablet:text-[22px] desktop:text-[28px]'>
-              Support and Maintenance
-            </th>
+            <tr>
+              <th className='px-[20px] py-[27.5px] pt-[67.5px] text-start font-unbound text-[16px] font-bold leading-[1.2] tablet:text-[22px] desktop:text-[28px]'>
+                Support and Maintenance
+              </th>
+            </tr>
           </thead>
           <tbody>
             <tr>
@@ -212,9 +220,11 @@ export default function Table() {
       <div className='w-screen overflow-auto tablet:w-full'>
         <table className='w-full'>
           <thead className='border-b border-b-white '>
-            <th className='px-[20px] py-[27.5px] pt-[67.5px] text-start font-unbound text-[16px] font-bold leading-[1.2] tablet:text-[22px] desktop:text-[28px]'>
-              Project Management
-            </th>
+            <tr>
+              <th className='px-[20px] py-[27.5px] pt-[67.5px] text-start font-unbound text-[16px] font-bold leading-[1.2] tablet:text-[22px] desktop:text-[28px]'>
+                Project Management
+              </th>
+            </tr>
           </thead>
           <tbody>
             <tr>
@@ -265,9 +275,11 @@ export default function Table() {
       <div className='w-screen overflow-auto tablet:w-full'>
         <table className='w-full'>
           <thead className='border-b border-b-white '>
-            <th className='px-[20px] py-[27.5px] pt-[67.5px] text-start font-unbound text-[16px] font-bold leading-[1.2] tablet:text-[22px] desktop:text-[28px]'>
-              Total
-            </th>
+            <tr>
+              <th className='px-[20px] py-[27.5px] pt-[67.5px] text-start font-unbound text-[16px] font-bold leading-[1.2] tablet:text-[22px] desktop:text-[28px]'>
+                Total
+              </th>
+            </tr>
           </thead>
           <tbody>
             <tr>

@@ -1,4 +1,5 @@
-import HeroBg from '@/public/assets/images/career/hero-bg.png';
+// import HeroBg from '@/public/assets/images/career/hero-bg.png';
+import HeroBg from '@/public/assets/images/career/hero_banner.png';
 import { ContactForm } from '@/src/components/Career/ContactForm/ContactForm';
 import { Hero } from '@/src/components/Career/Hero/Hero';
 import { Team } from '@/src/components/Career/Team/Team';
@@ -8,23 +9,28 @@ import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
 import Image from 'next/image';
+import styles from './Career.module.css';
 
 export default async function CareerPage() {
   return (
     <main className='flex flex-col gap-20 overflow-hidden'>
-      <Section id='hero' className='relative'>
-        <Container>
+      <Section
+        id='hero'
+        className={`${styles.heroContainer} relative tablet:px-0`}
+      >
+        <Container className='px-0'>
           <Hero />
+          <div className='absolute inset-0 -z-10'>
+            <Image
+              src={HeroBg}
+              priority
+              alt=''
+              objectPosition='top'
+              objectFit='cover'
+              layout='fill'
+            />
+          </div>
         </Container>
-        <div className='absolute inset-0 -z-10'>
-          <Image
-            className='absolute right-0 max-w-[1030px] max-tablet:right-1/2 max-tablet:translate-x-1/2'
-            src={HeroBg}
-            alt=''
-            width={1030}
-            height={560}
-          />
-        </div>
       </Section>
       <Section id='team'>
         <Container>
@@ -51,7 +57,7 @@ export default async function CareerPage() {
         >
           <Container>
             <ScrollAnimationWrapper>
-              <Vacancies />
+              <Vacancies withRowsBtn={false} />
             </ScrollAnimationWrapper>
           </Container>
         </Section>
