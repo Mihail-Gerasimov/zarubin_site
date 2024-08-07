@@ -1,8 +1,8 @@
 'use client';
 
 import founderImg from '@/public/assets/images/about/vitaly.webp';
-import founderMImg from '@/public/assets/images/about/vitaly_m.png';
-import founderTImg from '@/public/assets/images/about/vitaly_t.png';
+import founderMImg from '@/public/assets/images/about/vitaly_m.webp';
+import founderTImg from '@/public/assets/images/about/vitaly_t.webp';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import Image from 'next/image';
 import styles from './Welcome.module.css';

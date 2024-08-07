@@ -52,6 +52,10 @@
   .contentWrapper {
     padding: 40px;
   }
+
+  .mainContainer {
+    max-width: 688px;
+  }
 }
 
 @media (min-width: 1440px) {
