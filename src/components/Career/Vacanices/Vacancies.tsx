@@ -13,6 +13,7 @@ export const Vacancies = ({
   withFilter = true,
   cardLink = true,
   withRowsBtn = true,
+  isSwipe = true,
 }) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
 
@@ -59,7 +60,7 @@ export const Vacancies = ({
           </div>
         )}
       </div>
-      {filteredVacanicesData.length <= 4 ? (
+      {!isSwipe ? (
         <div className={`max-w-full gap-[20px] ${styles.vacanciesGrid}`}>
           {filteredVacanicesData.map((item) => (
             <div key={item.id} className='vacancy-card'>
@@ -79,7 +80,7 @@ export const Vacancies = ({
           slidesPerView={tablet ? 1 : 2}
           onSwiper={setSwiper}
           className='max-w-full'
-          wrapperClass={`items-stretch ${styles.vacanciesGrid}`}
+          wrapperClass={`items-stretch `}
         >
           {filteredVacanicesData.map((item) => (
             <SwiperSlide key={item.id} className='!h-auto'>

@@ -10,6 +10,7 @@ import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationW
 import { Section } from '@/src/components/shared/Section/Section';
 import Image from 'next/image';
 import styles from './Career.module.css';
+import { Internship } from '@/src/components/Career/Internship/Internship';
 
 export default async function CareerPage() {
   return (
@@ -39,7 +40,7 @@ export default async function CareerPage() {
           </ScrollAnimationWrapper>
         </Container>
       </Section>
-      <div>
+      <div className='flex flex-col-reverse'>
         <Section
           id='values'
           className='py-[80px] tablet:py-[80px] desktop:py-[80px]'
@@ -57,22 +58,27 @@ export default async function CareerPage() {
         >
           <Container>
             <ScrollAnimationWrapper>
-              <Vacancies withRowsBtn={false} />
-            </ScrollAnimationWrapper>
-          </Container>
-        </Section>
-        <Section
-          id='contacts'
-          className='py-[80px] tablet:py-[80px] desktop:py-[80px]'
-          light
-        >
-          <Container>
-            <ScrollAnimationWrapper>
-              <ContactForm />
+              <Vacancies withRowsBtn={false} isSwipe={false} />
             </ScrollAnimationWrapper>
           </Container>
         </Section>
       </div>
+      <Section>
+        <Container>
+          <Internship />
+        </Container>
+      </Section>
+      <Section
+        id='contacts'
+        className='py-[80px] tablet:py-[80px] desktop:py-[80px]'
+        light
+      >
+        <Container>
+          <ScrollAnimationWrapper>
+            <ContactForm />
+          </ScrollAnimationWrapper>
+        </Container>
+      </Section>
     </main>
   );
 }
