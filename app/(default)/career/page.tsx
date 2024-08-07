@@ -57,7 +57,7 @@ export default async function CareerPage() {
         >
           <Container>
             <ScrollAnimationWrapper>
-              <Vacancies />
+              <Vacancies withRowsBtn={false} />
             </ScrollAnimationWrapper>
           </Container>
         </Section>

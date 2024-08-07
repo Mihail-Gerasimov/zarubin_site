@@ -16,7 +16,7 @@ export const VacanciesCard = ({
   cardLink = true,
 }: Props) => {
   return (
-    <div className='relative flex h-[400px] h-full w-full flex-col rounded-[6px] bg-dark-blue p-[40px_20px] tablet:p-[40px_40px]'>
+    <div className='relative flex h-full w-full flex-col rounded-[6px] bg-dark-blue p-[40px_20px] tablet:p-[40px_40px]'>
       <div className='z-10 flex h-full w-full flex-col justify-between'>
         <div className='flex items-center gap-[8px]'>
           {tags.map((tag, idx) => (
