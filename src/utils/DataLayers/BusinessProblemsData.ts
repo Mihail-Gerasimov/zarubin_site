@@ -1,5 +1,5 @@
-import imageOne from '@/public/assets/images/main/bussiness_1.png';
-import imageTwo from '@/public/assets/images/main/bussines_2.png';
+import imageOne from '@/public/assets/images/main/bussiness_1.webp';
+import imageTwo from '@/public/assets/images/main/bussines_2.webp';
 
 export const BusinessProblemsData = [
   {

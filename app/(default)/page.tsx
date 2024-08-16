@@ -1,7 +1,7 @@
-import unlockBg from '@/public/assets/images/main/group.png';
+import unlockBg from '@/public/assets/images/main/group.webp';
 import heroBg from '@/public/assets/images/main/hero_bg.webp';
-import insightBg from '@/public/assets/images/main/insight_bg.png';
-import bgImage from '@/public/assets/images/main/reviewBg.png';
+import insightBg from '@/public/assets/images/main/insight_bg.webp';
+import bgImage from '@/public/assets/images/main/reviewBg.webp';
 import { BusinessSolving } from '@/src/components/Main/BusinessSolving/BusinessSolving';
 import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 import { Expertise } from '@/src/components/Main/Expertise/Expertise';
@@ -89,7 +89,12 @@ export default function Home() {
             <Insights />
           </ScrollAnimationWrapper>
           <div className='absolute inset-0'>
-            <Image src={insightBg} className='absolute inset-0' alt='' />
+            <Image
+              src={insightBg}
+              sizes='cover'
+              className='absolute inset-0'
+              alt='building'
+            />
           </div>
         </Section>
         <Section id='clients'>
@@ -109,7 +114,7 @@ export default function Home() {
               quality={100}
               fill
               className='absolute inset-0 object-cover'
-              alt=''
+              alt='background'
             />
           </div>
         </Section>

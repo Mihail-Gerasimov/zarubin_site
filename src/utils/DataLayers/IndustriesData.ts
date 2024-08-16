@@ -1,8 +1,8 @@
-import carImg from '@/public/assets/images/main/auto.png';
-import sportImg from '@/public/assets/images/main/bassketball.png';
-import cartImg from '@/public/assets/images/main/cart.png';
-import cupImg from '@/public/assets/images/main/cup.png';
-import lampImg from '@/public/assets/images/main/lamp.png';
+import carImg from '@/public/assets/images/main/auto.webp';
+import sportImg from '@/public/assets/images/main/bassketball.webp';
+import cartImg from '@/public/assets/images/main/cart.webp';
+import cupImg from '@/public/assets/images/main/cup.webp';
+import lampImg from '@/public/assets/images/main/lamp.webp';
 
 export const IndustriesData = [
   {
