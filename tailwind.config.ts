@@ -77,6 +77,7 @@ const config: Config = {
       'mobile-big': '375px',
       tablet: '768px',
       laptop: '1200px',
+      'laptop-big': '1280',
       desktop: '1440px',
       'desktop-light': '1600px',
       'desktop-big': '1800px',
