@@ -34,14 +34,12 @@
 .burger::after {
   top: -5px;
   width: 100%;
-  /* background-color: var(--text-dark); */
 }
 
 .burger::before {
   bottom: -5px;
   right: 0;
   width: 80%;
-  /* background-color: var(--main-blue); */
 }
 
 .burgerLight::after {
@@ -87,7 +85,7 @@
   background-color: var(--primary);
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1280px) {
   .burgerWrapper {
     display: none;
   }
