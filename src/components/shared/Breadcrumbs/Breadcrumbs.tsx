@@ -7,7 +7,7 @@ export type Breadcrumb = {
 
 export const Breadcrumbs = ({ breadcrumbs }: { breadcrumbs: Breadcrumb[] }) => {
   return (
-    <div className='flex flex-wrap items-center gap-x-[20px] gap-y-[10px] font-proxima text-[20px] text-white'>
+    <div className='z-10 flex flex-wrap items-center gap-x-[20px] gap-y-[10px] font-proxima text-[20px] text-white'>
       {breadcrumbs.map(({ title, link }, index) => (
         <>
           {index !== 0 && <>/</>}
