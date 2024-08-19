@@ -1,6 +1,6 @@
-import missionImg from '@/public/assets/images/about/card_mission.png';
-import nonesenseImg from '@/public/assets/images/about/card_nonsense.png';
-import remoteImg from '@/public/assets/images/about/card_remote.png';
+import missionImg from '@/public/assets/images/about/card/card_mission.webp';
+import nonesenseImg from '@/public/assets/images/about/card/card_nonsense.webp';
+import remoteImg from '@/public/assets/images/about/card/card_remote.webp';
 import { StaticImageData } from 'next/image';
 
 interface ICard {

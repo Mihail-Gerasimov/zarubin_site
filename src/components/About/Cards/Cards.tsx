@@ -16,10 +16,10 @@ export const Cards = () => {
           </p>
           <Image
             src={item.image}
-            width={150}
-            height={120}
+            width={320}
+            height={270}
             alt={item.tag}
-            quality={100}
+            quality={80}
             className={classNames(
               styles.image,
               item.id % 2 == 0 ? styles.teamImage : styles.tvImage,

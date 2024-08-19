@@ -1,5 +1,5 @@
 import LinkArrowIcon from '@/public/assets/images/icons/link_arrow.svg';
-import solutionBg from '@/public/assets/images/main/hero-solutions-bg.png';
+import solutionBg from '@/public/assets/images/main/hero-solutions-bg.webp';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import Image from 'next/image';
 import Link from 'next/link';

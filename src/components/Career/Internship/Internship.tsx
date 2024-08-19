@@ -1,4 +1,4 @@
-import teamImage from '@/public/assets/images/about/card_remote.png';
+import teamImage from '@/public/assets/images/about/card/card_remote.webp';
 import { LinkArrow } from '@/src/ui-kit/LinkArrow/LinkArrow';
 import classNames from 'classnames';
 import Image from 'next/image';

@@ -28,9 +28,9 @@ export const FeedbackCard = ({ data, length, indexNumber }: Props) => {
       <div className={classNames(styles.mainContainer)}>
         <Image
           src={data.image}
-          quality={100}
-          width={355}
-          height={251}
+          quality={80}
+          width={560}
+          height={485}
           alt={data.name}
           className={styles.image}
           priority

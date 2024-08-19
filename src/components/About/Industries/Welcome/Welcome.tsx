@@ -22,9 +22,9 @@ export const Welcome = () => {
               ? founderMImg
               : founderTImg
         }
-        width={150}
-        height={361}
-        quality={100}
+        width={600}
+        height={500}
+        quality={80}
         alt='founder'
         className={styles.image}
       />
