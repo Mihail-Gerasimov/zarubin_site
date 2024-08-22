@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title:
     'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
   description: 'Case studies, research and experience in detail',
-  metadataBase: new URL('https://blog.zarubin.co.uk/'),
+  metadataBase: new URL('https://www.zarubin.co.uk/blog/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
