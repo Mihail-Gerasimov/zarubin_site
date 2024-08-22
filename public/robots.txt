@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.zarubin.co.uk/
+
+# Sitemaps
+Sitemap: https://www.zarubin.co.uk/sitemap.xml
