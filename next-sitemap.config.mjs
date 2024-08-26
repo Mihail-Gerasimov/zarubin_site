@@ -34,6 +34,16 @@ const config = {
 
         return allPaths
     },
+
+    exclude: ['/assets/*', '/_next/*', '/tpost/*'],
+    robotsTxtOptions: {
+        policies: [
+            { userAgent: '*', allow: '/' },
+            { userAgent: '*', disallow: '/assets/*' },
+            { userAgent: '*', disallow: '/_next/*' },
+            { userAgent: '*', disallow: '/tpost/*' },
+        ],
+    },
 }
 
 export default config

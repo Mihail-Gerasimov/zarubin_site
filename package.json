@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "knip": "knip",
     "prettify": "prettier --write next.config.mjs '{app,src}/**/*.{js,jsx,ts,tsx,css}' && organize-imports-cli tsconfig.json"
   },
   "dependencies": {
@@ -34,7 +35,7 @@
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.12",
-    "@types/node": "^20",
+    "@types/node": "^20.16.1",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
@@ -44,9 +45,10 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.34.1",
+    "knip": "^5.27.4",
     "postcss": "^8",
     "prettier": "^3.2.5",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5.5.4"
   }
 }

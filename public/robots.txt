@@ -2,6 +2,18 @@
 User-agent: *
 Allow: /
 
+# *
+User-agent: *
+Disallow: /assets/*
+
+# *
+User-agent: *
+Disallow: /_next/*
+
+# *
+User-agent: *
+Disallow: /tpost/*
+
 # Host
 Host: https://www.zarubin.co.uk/
 
