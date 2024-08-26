@@ -28,7 +28,7 @@ export const Welcome = () => {
         alt='founder'
         className={styles.image}
       />
-      <div className='ml-[150px] flex flex-col justify-center gap-[12px] tablet:ml-[291px] tablet:gap-[28px] desktop:ml-[auto] desktop:max-w-[867px]'>
+      <div className='ml-[135px] flex flex-col justify-center gap-[12px] tablet:ml-[291px] tablet:gap-[28px] desktop:ml-[auto] desktop:max-w-[867px]'>
         {' '}
         <h2 className='font-unbound text-[22px] font-bold uppercase leading-[1] text-main-blue tablet:text-[32px] tablet:leading-[1.1] desktop-big:text-[44px]'>
           I am glad to welcome you! <br />{' '}
