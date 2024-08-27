@@ -3,7 +3,6 @@ import { ContactForm } from '@/src/components/Comparison/ContactForm/ContactForm
 import { Hero } from '@/src/components/Comparison/Hero/Hero';
 import Table from '@/src/components/Comparison/Table';
 import { Container } from '@/src/components/shared/Container/Container';
-import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
 import Image from 'next/image';
 import styles from './Comparison.module.css';
@@ -36,9 +35,7 @@ export default async function ComparisonPage() {
           light
         >
           <Container>
-            <ScrollAnimationWrapper>
-              <ContactForm />
-            </ScrollAnimationWrapper>
+            <ContactForm />
           </Container>
         </Section>
       </div>

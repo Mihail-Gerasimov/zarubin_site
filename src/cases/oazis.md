@@ -1,5 +1,5 @@
 ---
-title: 'Simplifiead Shift Mnagement for Employees'
+title: 'Simplified interaction on shifts for employees'
 industries:
   ['Service and Hospitality', 'Quality Improvement', 'Custom Development']
 tag: 'OAZIS'

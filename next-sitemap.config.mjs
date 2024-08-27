@@ -18,6 +18,7 @@ const config = {
 
         const dynamicPages = [
             '/blog',
+            '/solutions'
         ]
         const allPaths = [
             ...staticPages.map(loc => ({
@@ -28,7 +29,7 @@ const config = {
             ...dynamicPages.map(loc => ({
                 loc,
                 changefreq: 'daily',
-                priority: loc === '/blog' ? 0.8 : 0.7,
+                priority: loc === '/blog' || loc === '/solutions' ? 0.8 : 0.7,
             })),
         ]
 

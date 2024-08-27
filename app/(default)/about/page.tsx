@@ -80,9 +80,7 @@ export default function About() {
           light
         >
           <Container>
-            <ScrollAnimationWrapper>
-              <ContactForm />
-            </ScrollAnimationWrapper>
+            <ContactForm />
           </Container>
         </Section>
       </div>

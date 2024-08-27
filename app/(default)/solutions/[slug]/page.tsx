@@ -9,6 +9,7 @@ import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
+import Image from 'next/image';
 import styles from './Case.module.css';
 
 const getCaseContent = (slug: string) => {
@@ -50,7 +51,9 @@ export default async function CasePage(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const post = getCaseContent(slug);
 
-  const { industries, title, tag } = post.data;
+  const { industries, title, tag, images } = post.data;
+
+  console.log('IMG', images);
 
   const hashtagRegex = /#[A-Za-z_]+/g;
   const regexFont = /<font color='(.+?)'>(.+?)<\/font>/g;
@@ -63,8 +66,8 @@ export default async function CasePage(props: { params: { slug: string } }) {
       .map((hashtag) => {
         const tag = hashtag.split('#');
         return `<li class="${styles.tagItem}">
-    <span class="${styles.tag}">${tag[1]}</span>
-  </li>`;
+                  <span class="${styles.tag}">${tag[1]}</span>
+                </li>`;
       })
       .join('');
 
@@ -80,6 +83,10 @@ export default async function CasePage(props: { params: { slug: string } }) {
       content: '## ' + p.replace(regexImage, '').replace(/(^[ \t]*\n)/gm, ''),
     }));
 
+  // console.log('POSTS', allPosts);
+
+  // console.log('IMAGES', paragraphs);
+
   return (
     <main className='flex flex-col gap-[60px] overflow-hidden'>
       <Section id='hero' className='relative py-0 tablet:py-0 desktop:pb-0'>
@@ -88,19 +95,34 @@ export default async function CasePage(props: { params: { slug: string } }) {
         </Container>
       </Section>
       <Section light>
-        <Container className='flex flex-col gap-[60px]'>
-          {paragraphs.map((p, index) => (
-            <ScrollAnimationWrapper key={p.index} showOnLoad={index === 0}>
-              <div className='grid gap-[40px] desktop:grid-cols-2'>
+        <Container className='grid grid-cols-1 gap-[40px] desktop:grid-cols-2'>
+          <div className='flex flex-col gap-[60px]'>
+            {paragraphs.map((p, index) => (
+              <ScrollAnimationWrapper key={index} showOnLoad={index === 0}>
+                {/* <div className='grid gap-[40px] desktop:grid-cols-1'> */}
+                {/* <div className='grid gap-[40px]'> */}
                 <Markdown
                   className={`${styles.markdown} flex w-full flex-col gap-[20px] font-proxima`}
                 >
                   {p.content}
                 </Markdown>
-                <Markdown>{p.images}</Markdown>
-              </div>
-            </ScrollAnimationWrapper>
-          ))}
+                {/* </div> */}
+              </ScrollAnimationWrapper>
+            ))}
+          </div>
+          <div className='flex flex-col gap-[40px]'>
+            {images.map((image: string, idx: number) => (
+              <Image
+                key={idx}
+                src={image}
+                width={700}
+                height={900}
+                quality={80}
+                alt={``}
+                className='h-[auto] w-full'
+              />
+            ))}
+          </div>
         </Container>
       </Section>
       <Section id='insights' className='py-0 tablet:py-0 desktop:py-0'>
@@ -114,9 +136,7 @@ export default async function CasePage(props: { params: { slug: string } }) {
         className='py-[40px] tablet:py-[80px] desktop:py-[80px]'
       >
         <Container>
-          <ScrollAnimationWrapper>
-            <ContactForm />
-          </ScrollAnimationWrapper>
+          <ContactForm />
         </Container>
       </Section>
     </main>
