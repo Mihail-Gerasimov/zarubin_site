@@ -1,0 +1,42 @@
+.mainContainer {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.title {
+  font-family: 'Unbounded';
+  font-size: 30px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sublist {
+  margin-top: 10px;
+}
+
+.item {
+  font-family: 'Proxima Nova';
+  font-size: 18px;
+}
+
+.listTitle {
+  font-weight: 700;
+  color: var(--main-blue);
+}
+
+.link {
+  text-decoration: underline;
+  color: var(--main-blue);
+}
+
+@media (min-width: 768px) {
+  .mainContainer {
+    padding: 0 40px;
+  }
+}

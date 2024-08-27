@@ -20,8 +20,6 @@
   color: var(--text-dark);
 }
 
-/* 'font-proxima text-[16px] leading-[1.25] text-text-dark tablet:text-[20px]' */
-
 @media (min-width: 768px) {
   .image {
     width: 291px;
