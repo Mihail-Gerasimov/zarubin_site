@@ -1,58 +1,42 @@
 .mainContainer {
-    padding: 40px;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .title {
-    font-family: 'Unbounded';
-    font-size: 30px;
+  font-family: 'Unbounded';
+  font-size: 30px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sublist {
+  margin-top: 10px;
 }
 
 .item {
-    font-family: 'Proxima Nova';
-    font-size: 18px;
+  font-family: 'Proxima Nova';
+  font-size: 18px;
 }
 
 .listTitle {
-    font-weight: 700;
-    color: var(--main-blue);
-}
-
-.description {
-    display: flex;
-    flex-direction: row;
+  font-weight: 700;
+  color: var(--main-blue);
 }
 
 .link {
-    text-decoration: underline;
-    color: var(--main-blue);
+  text-decoration: underline;
+  color: var(--main-blue);
 }
 
-/* .list {
-    list-style: decimal;
-    list-style-type: decimal;
+@media (min-width: 768px) {
+  .mainContainer {
+    padding: 0 40px;
+  }
 }
-
-.list ol {
-    list-style-type: decimal;
-} */
-
-/* .list {
-    list-style-type: decimal;
-    padding-left: 20px;
-  }
-  
-  .list ol {
-    list-style-type: decimal;
-    padding-left: 20px;
-  }
-  
-  .list ol ol {
-    list-style-type: decimal;
-    padding-left: 20px;
-    counter-reset: item;
-  }
-  
-  .list ol li {
-    display: list-item;
-    counter-increment: item;
-  } */
