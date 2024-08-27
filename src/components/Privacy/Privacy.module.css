@@ -1,0 +1,58 @@
+.mainContainer {
+    padding: 40px;
+}
+
+.title {
+    font-family: 'Unbounded';
+    font-size: 30px;
+}
+
+.item {
+    font-family: 'Proxima Nova';
+    font-size: 18px;
+}
+
+.listTitle {
+    font-weight: 700;
+    color: var(--main-blue);
+}
+
+.description {
+    display: flex;
+    flex-direction: row;
+}
+
+.link {
+    text-decoration: underline;
+    color: var(--main-blue);
+}
+
+/* .list {
+    list-style: decimal;
+    list-style-type: decimal;
+}
+
+.list ol {
+    list-style-type: decimal;
+} */
+
+/* .list {
+    list-style-type: decimal;
+    padding-left: 20px;
+  }
+  
+  .list ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+  }
+  
+  .list ol ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    counter-reset: item;
+  }
+  
+  .list ol li {
+    display: list-item;
+    counter-increment: item;
+  } */
