@@ -34,6 +34,18 @@ export default function RootLayout({
     <html lang='en'>
       <head>
         <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
+        <Script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=G-FXGP2J4QFD'
+        ></Script>
+        <Script id='google-analytics' strategy='afterInteractive'>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FXGP2J4QFD');
+          `}
+        </Script>
       </head>
       <body
         className={`${inter.className} flex flex-col gap-[60px] bg-white text-text-dark`}
