@@ -7,6 +7,7 @@ export default function NotFoundPage() {
   return (
     <html lang='en'>
       <head>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
       </head>
       <body className='flex flex-col gap-[60px] bg-main-bg text-white'>

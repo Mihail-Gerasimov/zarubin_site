@@ -2,7 +2,9 @@
 title: 'What if we view football players as stocks and combine them into portfolios?'
 industries: ['Sports and Entertainment', 'Custom Development']
 tag: 'STOCKS SOCCER'
-bannerImage: '/assets/images/case/stock-socker-case.webp'
+instruments: ['ruby', 'react', 'figma']
+logo: '/assets/images/case/svg/stocksSoccer.svg'
+bannerImage: '/assets/images/case/banner/stock-socker-case.webp'
 images: ['/assets/images/case/stocks_soccer-1.webp']
 ---
 
@@ -23,12 +25,14 @@ Clubs struggle because fans at the latter two levels rarely engage in referral p
 
 ## Scope of Work
 
-- Creation of a fan engagement system similar to fantasy sports, incorporating a referral program for sports clubs and a white-label model to increase fan engagement beyond current levels.
-- Designed and developed a clickable prototype in Figma.
-- Developed backend and multiple versions of a pilot web application.
-- The system itself was conceptualized as a white-label implementation of specific engagement mechanics, featuring:
-  - Quizzes
-  - Competitions between players
-  - Onboarding processes
+- Creation of a <strong>fan engagement system</strong> similar to fantasy sports, incorporating a referral program for sports clubs and a white-label model to increase fan engagement beyond current levels.
+- Designed and developed a <strong>clickable prototype</strong> in Figma.
+- Developed backend and multiple versions of a <strong>pilot web application</strong>.
 
-This approach aimed to enhance fan interaction and retention through interactive and competitive elements tailored to sports club environments.
+<p>The system itself was conceptualized as a white-label implementation of specific engagement mechanics, featuring:</p>
+
+- Quizzes
+- Competitions between players
+- Onboarding processes
+
+<p>This approach aimed to enhance fan interaction and retention through interactive and competitive elements tailored to sports club environments.</p>

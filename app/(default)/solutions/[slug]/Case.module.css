@@ -32,12 +32,17 @@
 
 .markdown strong {
   font-size: 16px;
+  color: var(--main-blue);
 }
 
 .markdown > ul {
   list-style-type: disc;
   list-style-position: inside;
 }
+
+/* .markdown>strong {
+  color: var(--primary-blue);
+} */
 
 .tagList {
   margin: 0;

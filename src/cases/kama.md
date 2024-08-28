@@ -2,7 +2,9 @@
 title: 'Mobile Application Mounted on Car Steering Wheel'
 industries: ['Automotive Industry', 'Cars']
 tag: 'Kama'
-bannerImage: '/assets/images/case/kamaatom-case.webp'
+instruments: ['flutter']
+logo: '/assets/images/case/svg/atom.svg'
+bannerImage: '/assets/images/case/banner/atom-case.webp'
 images: ['/assets/images/case/kama-1.webp', '/assets/images/case/kama-2.webp']
 ---
 
@@ -12,12 +14,17 @@ The release of new cars always involves numerous UX/UI and A/B tests. Consequent
 
 ## Scope of Work
 
-- Development of a test stand on which tests, UX/UI solutions, and hypotheses are verified.
-- Creation of tablet applications for iPad and Android, which are mounted on the steering wheel and used to conduct various tests, such as:
-  - Changing the display when turning the steering wheel
+<p>
+<strong>Development of a test stand</strong> on which tests, <strong>UX/UI solutions</strong>, and hypotheses are verified.
+Creation of <strong>tablet applications</strong> for iPad and Android, which are mounted on the steering wheel and used to conduct various tests, such as:
+</p>
+
+- Changing the display when turning the steering wheel
 - Development of an interface that allows changing colors, fonts, and UX/UI elements during testing, adjusting screen backlight with changes in daylight, etc.
-- Creation of several key elements of the multimedia entertainment system:
-  - Development of a media player
-  - Development of navigation maps
-  - Development of an instrument panel
-  - Interface elements for launching third-party applications within the system
+
+  <br/>Creation of several key elements of the multimedia entertainment system:
+
+- Development of a media player
+- Development of navigation maps
+- Development of an instrument panel
+- Interface elements for launching third-party applications within the system

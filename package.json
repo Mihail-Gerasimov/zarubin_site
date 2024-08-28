@@ -9,6 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "knip": "knip",
+    "generate-sitemap": "next-sitemap --config next-sitemap.config.mjs",
     "prettify": "prettier --write next.config.mjs '{app,src}/**/*.{js,jsx,ts,tsx,css}' && organize-imports-cli tsconfig.json"
   },
   "dependencies": {

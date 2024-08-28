@@ -2,7 +2,9 @@
 title: 'Within Three Weeks, We Managed to Establish a Working Process'
 industries: ['Financial Technology', 'Business Process Management']
 tag: 'Grid Capital'
-bannerImage: '/assets/images/case/gridcapital-case.webp'
+instruments: []
+logo: '/assets/images/case/svg/grid-capital.svg'
+bannerImage: '/assets/images/case/banner/gridcapital-case.webp'
 images: ['/assets/images/case/grid_capital-1.webp']
 ---
 
@@ -15,8 +17,12 @@ Grid Capital faced an issue where the previous team had been working on developm
 - IT audit
 - Audit of business processes
 - The work included a brief overview of activities concerning back-end, front-end, backlog creation, etc.
-- The audit was based on completed and pending tasks in the backlog. As part of the solution:
-  - A technical director was identified for the company
-  - Current repositories with the latest working version were restored
-  - A task list was compiled to bring the project to completion
-  - Within the allocated budget, a small development team was assembled to finalize the project
+
+<p>
+The audit was based on completed and pending tasks in the backlog. As part of the solution:
+</p>
+
+- A technical director was identified for the company
+- Current repositories with the latest working version were restored
+- A task list was compiled to bring the project to completion
+- Within the allocated budget, a small development team was assembled to finalize the project
