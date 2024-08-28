@@ -3,6 +3,7 @@
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css';
@@ -33,11 +34,11 @@ export const TeamClient = ({ team }: ITeamProps) => {
             20+ <span className='hidden tablet:block'>PEOPLE</span>
           </p>
         </div>
-        <div className={styles.joinWrapper}>
-          <p className='font-unbound text-[18px] font-bold uppercase leading-[1.1]'>
+        <Link href='#contscts' className={styles.joinWrapper}>
+          <span className='font-unbound text-[18px] font-bold uppercase leading-[1.1]'>
             Join our team
-          </p>
-        </div>
+          </span>
+        </Link>
       </div>
       <div className='flex flex-col gap-[60px] desktop:w-[900px] desktop-light:w-[1100px] desktop-big:w-[1200px]'>
         <div className='hidden items-end justify-end desktop:flex'>

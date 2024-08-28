@@ -2,6 +2,7 @@
 title: 'Digital Transformation from 7 Disparate Websites to a Unified System'
 industries: ['Sports and Entertainment', 'Custom Development']
 tag: 'Avangard'
+bannerImage: '/assets/images/case/kamaatom-case.webp'
 images: ['/assets/images/case/avangard-1.webp']
 ---
 

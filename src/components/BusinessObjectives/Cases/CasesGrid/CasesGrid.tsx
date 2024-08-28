@@ -46,6 +46,7 @@ const CaseCard = ({ data }: { data: Case }) => {
           ))}
         </div>
       </div>
+      {/* <Image src={data.bannerImage} fill alt={data.slug} className='z-[-2]' /> */}
     </Link>
   );
 };

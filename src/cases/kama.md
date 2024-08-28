@@ -2,6 +2,7 @@
 title: 'Mobile Application Mounted on Car Steering Wheel'
 industries: ['Automotive Industry', 'Cars']
 tag: 'Kama'
+bannerImage: '/assets/images/case/kamaatom-case.webp'
 images: ['/assets/images/case/kama-1.webp', '/assets/images/case/kama-2.webp']
 ---
 

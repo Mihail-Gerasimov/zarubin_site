@@ -11,7 +11,7 @@ import { VacanciesCard } from './VacanicesCard/VacanciesCard';
 
 export const Vacancies = ({
   withFilter = true,
-  cardLink = true,
+  cardLink = false,
   withRowsBtn = true,
   isSwipe = true,
 }) => {

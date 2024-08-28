@@ -9,7 +9,5 @@ export const Team = () => {
 
   const team = getAllTeam();
 
-  console.log(getAllTeam());
-
   return <TeamClient team={team} />;
 };
