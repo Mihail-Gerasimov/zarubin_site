@@ -10,16 +10,20 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
+import NotFoundPage from '../not-found';
 import styles from './Case.module.css';
 
 const getCaseContent = (slug: string) => {
   const folder = 'src/cases/';
   const file = folder + `${slug}.md`;
-  const content = fs.readFileSync(file, 'utf8');
 
-  const matterResult = matter(content);
-
-  return matterResult;
+  try {
+    const content = fs.readFileSync(file, 'utf8');
+    const matterResult = matter(content);
+    return matterResult;
+  } catch (error) {
+    return null;
+  }
 };
 
 export const generateStaticParams = async () => {
@@ -33,6 +37,13 @@ export async function generateMetadata({
   params: { slug: string };
 }) {
   const post = getCaseContent(params.slug);
+
+  if (!post) {
+    return {
+      title: 'Page Not Found',
+      description: 'This page does not exist',
+    };
+  }
   const title = post.data.title;
   const description = contentTrimming(post.data.description, 150);
 
@@ -51,9 +62,11 @@ export default async function CasePage(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const post = getCaseContent(slug);
 
-  const { industries, title, tag, images } = post.data;
+  if (!post) {
+    return <NotFoundPage slug={slug} />;
+  }
 
-  console.log('IMG', images);
+  const { industries, title, tag, images } = post.data;
 
   const hashtagRegex = /#[A-Za-z_]+/g;
   const regexFont = /<font color='(.+?)'>(.+?)<\/font>/g;
@@ -83,10 +96,6 @@ export default async function CasePage(props: { params: { slug: string } }) {
       content: '## ' + p.replace(regexImage, '').replace(/(^[ \t]*\n)/gm, ''),
     }));
 
-  // console.log('POSTS', allPosts);
-
-  // console.log('IMAGES', paragraphs);
-
   return (
     <main className='flex flex-col gap-[60px] overflow-hidden'>
       <Section id='hero' className='relative py-0 tablet:py-0 desktop:pb-0'>
@@ -99,8 +108,6 @@ export default async function CasePage(props: { params: { slug: string } }) {
           <div className='flex flex-col gap-[60px]'>
             {paragraphs.map((p, index) => (
               <ScrollAnimationWrapper key={index} showOnLoad={index === 0}>
-                {/* <div className='grid gap-[40px] desktop:grid-cols-1'> */}
-                {/* <div className='grid gap-[40px]'> */}
                 <Markdown
                   className={`${styles.markdown} flex w-full flex-col gap-[20px] font-proxima`}
                 >
@@ -118,7 +125,7 @@ export default async function CasePage(props: { params: { slug: string } }) {
                 width={700}
                 height={900}
                 quality={80}
-                alt={``}
+                alt={`${slug} project image`}
                 className='h-[auto] w-full'
               />
             ))}

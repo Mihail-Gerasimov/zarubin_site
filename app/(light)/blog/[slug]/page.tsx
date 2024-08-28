@@ -15,6 +15,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
+import NotFoundPage from '../not-found';
 import styles from './Post.module.css';
 
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
@@ -28,11 +29,14 @@ const POST_TYPE = {
 const getPostContent = (slug: string) => {
   const folder = 'src/posts/';
   const file = folder + `${slug}.md`;
-  const content = fs.readFileSync(file, 'utf8');
 
-  const matterResult = matter(content);
-
-  return matterResult;
+  try {
+    const content = fs.readFileSync(file, 'utf8');
+    const matterResult = matter(content);
+    return matterResult;
+  } catch (error) {
+    return null;
+  }
 };
 
 const getAllPosts = () => {
@@ -51,6 +55,13 @@ export async function generateMetadata({
   params: { slug: string };
 }) {
   const post = getPostContent(params.slug);
+
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'This post does not exist',
+    };
+  }
   const title = post.data.title;
   const description = contentTrimming(post.data.description, 150);
 
@@ -68,6 +79,11 @@ export async function generateMetadata({
 export default function MainBlogSlug(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const post = getPostContent(slug);
+
+  if (!post) {
+    return <NotFoundPage slug={slug} />;
+  }
+
   const date = formattedDate(post.data.date);
 
   const {
