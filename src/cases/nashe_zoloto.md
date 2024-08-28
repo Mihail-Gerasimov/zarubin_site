@@ -2,7 +2,9 @@
 title: 'How the fashion industry depends on e-commerce stores'
 industries: ['Custom Development']
 tag: 'Наше Золото'
-bannerImage: '/assets/images/case/kamaatom-case.webp'
+instruments: ['flutter', 'figma']
+logo: '/assets/images/case/svg/nasheZoloto.svg'
+bannerImage: '/assets/images/case/banner/nashe-zoloto-case.webp'
 images: ['/assets/images/case/nashe_zoloto-1.webp']
 ---
 
@@ -24,4 +26,4 @@ Development of a mobile application for e-commerce in the fashion industry style
 
 ## Mobile Application
 
-The mobile app utilizes over 80 screens in various states, focusing on Customer Journey Mapping (CJM). It starts with customers not needing to log in; they simply create a list of items and can place an order without prepayment. A manager directly contacts the customer to confirm the order, with payment processed automatically via a payment link code.
+The <strong>mobile app</strong> utilizes over 80 screens in various states, focusing on Customer Journey Mapping <strong>(CJM)</strong>. It starts with customers not needing to log in; they simply create a list of items and can place an order without prepayment. A manager directly contacts the customer to confirm the order, with payment processed automatically via a payment link code.

@@ -1,11 +1,11 @@
 ---
-title: 'Digital Transformation from 7 Disparate Websites to a Unified System'
-industries: ['Sports and Entertainment', 'Custom Development']
-tag: 'Avangard'
-instruments: ['php', 'react']
-logo: '/assets/images/case/svg/avangard.svg'
-bannerImage: '/assets/images/case/banner/avangard-case.webp'
-images: ['/assets/images/case/avangard-1.webp']
+title: 'We organized the development process'
+industries: ['Business', 'Custom Development']
+tag: 'Lux Today'
+instruments: []
+logo: '/assets/images/case/svg/luxToday.svg'
+bannerImage: '/assets/images/case/banner/luxtoday-case.webp'
+images: ['/assets/images/case/luxtoday-1.webp']
 ---
 
 ## About the Project

@@ -5,6 +5,10 @@ import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
 import { contentTrimming } from '@/src/utils/contentTrimming';
+import {
+    InstrumentIcons,
+    InstrumentIconsType
+} from '@/src/utils/DataLayers/InstrumentsIcon';
 import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
 import fs from 'fs';
 import matter from 'gray-matter';
@@ -45,15 +49,14 @@ export async function generateMetadata({
     };
   }
   const title = post.data.title;
-  const description = contentTrimming(post.data.description, 150);
+  const description = contentTrimming(post.data.title, 150);
 
   return {
-    title: title,
+    title: post.data.title,
     description,
     openGraph: {
-      images: [{ url: post.data.image }],
-      title: title,
-      description,
+      images: [{ url: post.data.bannerImage }],
+      title: `${title}`,
     },
   };
 }
@@ -66,7 +69,25 @@ export default async function CasePage(props: { params: { slug: string } }) {
     return <NotFoundPage slug={slug} />;
   }
 
-  const { industries, title, tag, images } = post.data;
+  const { industries, title, tag, images, instruments } = post.data;
+
+  const Instruments = ({
+    instruments,
+  }: {
+    instruments: (keyof InstrumentIconsType)[];
+  }) => {
+    return (
+      <div className='flex gap-4'>
+        {instruments.map((item) => {
+          const IconComponent = InstrumentIcons[item];
+          if (!IconComponent) {
+            return null;
+          }
+          return <IconComponent key={item} width={60} height={60} />;
+        })}
+      </div>
+    );
+  };
 
   const hashtagRegex = /#[A-Za-z_]+/g;
   const regexFont = /<font color='(.+?)'>(.+?)<\/font>/g;
@@ -113,9 +134,13 @@ export default async function CasePage(props: { params: { slug: string } }) {
                 >
                   {p.content}
                 </Markdown>
-                {/* </div> */}
               </ScrollAnimationWrapper>
             ))}
+            <ScrollAnimationWrapper>
+              <div>
+                <Instruments instruments={instruments} />
+              </div>
+            </ScrollAnimationWrapper>
           </div>
           <div className='flex flex-col gap-[40px]'>
             {images.map((image: string, idx: number) => (

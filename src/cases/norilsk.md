@@ -2,7 +2,9 @@
 title: 'Web Development for HC "Norilsk"'
 industries: ['Sports and Entertainment', 'Custom Development']
 tag: 'Norilsk'
-bannerImage: '/assets/images/case/kamaatom-case.webp'
+instruments: ['php', 'react', 'figma']
+logo: '/assets/images/case/svg/norilsk.svg'
+bannerImage: '/assets/images/case/banner/norilsk-case.webp'
 images:
   ['/assets/images/case/norilsk-1.webp', '/assets/images/case/norilsk-2.webp']
 ---
@@ -17,9 +19,9 @@ There was insufficient user awareness, a lack of notifications about upcoming ma
 
 ## Scope of Work
 
-- Development of a responsive website for three resolutions: desktop, tablet, and mobile
+- Development of a <strong>responsive website</strong> for three resolutions: desktop, tablet, and mobile
 - Prototyping of screens, including: Home, Matches, Calendar, Standings, News, and Shop pages
-- Creation of UX/UI design
+- Creation of <strong>UX/UI design</strong>
 - Preparation of layouts
 - CMS setup
-- Preparation of monthly content: information about coaches, players, transfers, major announcements, and match comments. Content upload to the website.
+- <strong>Preparation of monthly content:</strong> information about coaches, players, transfers, major announcements, and match comments. Content upload to the website.
