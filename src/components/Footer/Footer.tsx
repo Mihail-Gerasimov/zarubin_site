@@ -16,7 +16,7 @@ export const Footer = () => {
               <li key={item.id}>
                 <Link
                   href={item.link}
-                  className='whitespace-nowrap font-proxima text-[16px] leading-[1.87] text-white'
+                  className='whitespace-nowrap border-main-blue font-proxima text-[16px] leading-[1.87] text-white hover:border-b-[2px]'
                 >
                   {item.name}
                 </Link>

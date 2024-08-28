@@ -6,6 +6,7 @@ export interface Case {
   title: string;
   tag: string;
   slug: string;
+  bannerImage: string;
 }
 
 export const getCaseMetadata = (basePath: string) => {
@@ -21,6 +22,7 @@ export const getCaseMetadata = (basePath: string) => {
       industries: matterResult.data.industries,
       tag: matterResult.data.tag,
       slug: filename.replace('.md', ''),
+      bannerImage: matterResult.data.bannerImage,
     };
   });
 

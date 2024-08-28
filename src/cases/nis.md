@@ -2,6 +2,7 @@
 title: 'We Conducted a Technical and Process Audit in Their IT Department'
 industries: ['Oil', 'Business Process Management']
 tag: 'NIS'
+bannerImage: '/assets/images/case/nis-case.webp'
 images: ['/assets/images/case/nis-1.webp']
 ---
 

@@ -42,9 +42,7 @@ export default async function BusinessObjectivesPage() {
         className='py-[40px] tablet:py-[80px] desktop:py-[80px]'
       >
         <Container>
-          <ScrollAnimationWrapper>
-            <ContactForm />
-          </ScrollAnimationWrapper>
+          <ContactForm />
         </Container>
       </Section>
     </main>

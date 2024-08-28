@@ -2,6 +2,7 @@
 title: 'What if we view football players as stocks and combine them into portfolios?'
 industries: ['Sports and Entertainment', 'Custom Development']
 tag: 'STOCKS SOCCER'
+bannerImage: '/assets/images/case/stock-socker-case.webp'
 images: ['/assets/images/case/stocks_soccer-1.webp']
 ---
 

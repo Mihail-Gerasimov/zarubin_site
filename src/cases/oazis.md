@@ -1,8 +1,9 @@
 ---
-title: 'Simplifiead Shift Mnagement for Employees'
+title: 'Simplified interaction on shifts for employees'
 industries:
   ['Service and Hospitality', 'Quality Improvement', 'Custom Development']
 tag: 'OAZIS'
+bannerImage: '/assets/images/case/oasis-case.webp'
 images: ['/assets/images/case/oazis-1.webp', '/assets/images/case/oazis-2.webp']
 ---
 

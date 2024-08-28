@@ -74,9 +74,7 @@ export default async function CareerPage() {
         light
       >
         <Container>
-          <ScrollAnimationWrapper>
-            <ContactForm />
-          </ScrollAnimationWrapper>
+          <ContactForm />
         </Container>
       </Section>
     </main>
