@@ -1,5 +1,6 @@
 ---
 title: 'Digital Transformation from 7 Disparate Websites to a Unified System'
+description: "The hockey club has a large vertical structure, starting with a children's academy, youth team, women's team, senior team, and a team from the Continental Hockey League."
 industries: ['Sports and Entertainment', 'Custom Development']
 tag: 'Avangard'
 instruments: ['php', 'react']

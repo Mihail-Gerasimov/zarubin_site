@@ -1,5 +1,6 @@
 ---
 title: 'Simplified interaction on shifts for employees'
+description: 'The goal of the project was to integrate all social services for shift workers into a mobile application.'
 industries:
   ['Service and Hospitality', 'Quality Improvement', 'Custom Development']
 tag: 'OAZIS'

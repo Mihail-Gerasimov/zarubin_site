@@ -13,23 +13,33 @@ const config = {
             '/career',
             '/comparison',
             '/expertise',
+            '/blog',
             '/solutions',
+            '/solutions/avangard',
+            '/solutions/fcdm',
+            '/solutions/grid_capital',
+            '/solutions/kama',
+            '/solutions/nashe_zoloto',
+            '/solutions/nis',
+            '/solutions/norilsk',
+            '/solutions/oazis',
+            '/solutions/stocks_soccer',
+            '/solutions/t_bank',
         ]
 
         const dynamicPages = [
             '/blog',
-            '/solutions'
         ]
         const allPaths = [
             ...staticPages.map(loc => ({
                 loc,
                 changefreq: 'daily',
-                priority: 0.8,
+                priority: 1.0,
             })),
             ...dynamicPages.map(loc => ({
                 loc,
                 changefreq: 'daily',
-                priority: loc === '/blog' || loc === '/solutions' ? 0.8 : 0.7,
+                priority: 0.8,
             })),
         ]
 

@@ -1,5 +1,6 @@
 ---
 title: 'We Conducted a Technical and Process Audit in Their IT Department'
+description: 'The key IT system, within which the business process was to be built, was called "On Our Way." As part of the loyalty program, users stop at a gas station, order food, and receive cashback on their card.'
 industries: ['Oil', 'Business Process Management']
 tag: 'NIS'
 instruments: []

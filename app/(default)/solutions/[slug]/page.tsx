@@ -49,14 +49,15 @@ export async function generateMetadata({
     };
   }
   const title = post.data.title;
-  const description = contentTrimming(post.data.title, 150);
+  const description = contentTrimming(post.data.description, 150);
 
   return {
-    title: post.data.title,
+    title,
     description,
     openGraph: {
       images: [{ url: post.data.bannerImage }],
-      title: `${title}`,
+      title,
+      description,
     },
   };
 }

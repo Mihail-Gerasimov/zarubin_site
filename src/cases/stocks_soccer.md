@@ -1,5 +1,6 @@
 ---
 title: 'What if we view football players as stocks and combine them into portfolios?'
+description: 'We have tournament and player screens. The system retrieves data from TransferMarket, which stores information about player values and portfolios, and displays it on the front end.'
 industries: ['Sports and Entertainment', 'Custom Development']
 tag: 'STOCKS SOCCER'
 instruments: ['ruby', 'react', 'figma']

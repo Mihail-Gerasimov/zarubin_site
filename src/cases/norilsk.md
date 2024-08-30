@@ -1,5 +1,6 @@
 ---
 title: 'Web Development for HC "Norilsk"'
+description: 'The Norilsk Hockey Club competes in the VHL division. They have a coaching staff, active players, and fans.'
 industries: ['Sports and Entertainment', 'Custom Development']
 tag: 'Norilsk'
 instruments: ['php', 'react', 'figma']
