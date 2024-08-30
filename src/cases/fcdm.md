@@ -1,5 +1,6 @@
 ---
 title: 'How Design Transforms the Style of a Football Club'
+description: 'Like any leading football club, the goal of FCDM is to attract not only fans but also sponsors.'
 industries: ['Sports and Entertainment', 'Custom Development']
 tag: 'FCDM'
 instruments: ['figma']

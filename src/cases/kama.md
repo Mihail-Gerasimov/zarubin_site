@@ -1,5 +1,6 @@
 ---
 title: 'Mobile Application Mounted on Car Steering Wheel'
+description: 'The release of new cars always involves numerous UX/UI and A/B tests. Consequently, to conduct these tests, it is necessary to create a car simulator through which testers can verify various hypotheses.'
 industries: ['Automotive Industry', 'Cars']
 tag: 'Kama'
 instruments: ['flutter']

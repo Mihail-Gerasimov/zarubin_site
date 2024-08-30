@@ -1,5 +1,6 @@
 ---
 title: 'How the fashion industry depends on e-commerce stores'
+description: 'An overwhelming shift of e-commerce into online platforms has eliminated offline boutiques entirely.'
 industries: ['Custom Development']
 tag: 'Наше Золото'
 instruments: ['flutter', 'figma']

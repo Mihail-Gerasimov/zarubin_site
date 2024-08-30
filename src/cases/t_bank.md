@@ -1,5 +1,6 @@
 ---
 title: 'Street football and brand development'
+description: 'The project to develop the website for Street Football League on the Tilda platform with ticketing system integration has become a successful example of how to effectively combine sporting events with business goals.'
 industries: ['Sport & EntertainmentOil', 'Custom Development']
 tag: 't-bank'
 instruments: ['tilda', 'php', 'react']
@@ -10,12 +11,12 @@ images: ['/assets/images/case/tbank-1.webp', '/assets/images/case/tbank-2.webp']
 
 ## About the Project
 
-- Increase the popularity of street football: provide an attractive and convenient space for engaging with active participants and spectators.
-- Attract new clients for T-Bank: create opportunities to integrate the bank's services with the project, offering exclusive deals and events for users.
+The project to develop the website for Street Football League on the Tilda platform with ticketing system integration has become a successful example of how to effectively combine sporting events with business goals. The new website not only improved the user experience but also helped achieve T-Bank's marketing objectives. In the future, continued work on the site and its features could include adding new integrations and functions to further enhance audience engagement.
 
 ## Main Goals
 
-The lack of a loyalty program. Insufficient user awareness, lack of notifications about upcoming matches, no internal team comments, no announcements of club events, etc.
+- Increase the popularity of street football: provide an attractive and convenient space for engaging with active participants and spectators.
+- Attract new clients for T-Bank: create opportunities to integrate the bank's services with the project, offering exclusive deals and events for users.
 
 ## Scope of Work
 
