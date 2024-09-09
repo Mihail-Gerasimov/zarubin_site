@@ -49,7 +49,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${inter.className} flex flex-col gap-[60px] bg-white text-text-dark`}
+        className={`${inter.className} flex flex-col bg-white text-text-dark`}
       >
         <Header dark={false} />
         {children}

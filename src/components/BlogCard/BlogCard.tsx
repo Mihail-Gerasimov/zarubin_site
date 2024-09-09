@@ -18,8 +18,6 @@ interface Props {
 }
 
 export const BlogCard = ({ post }: Props) => {
-  // const url = process.env.NODE_ENV === 'development' ? '' : BASE_URL;
-
   const date = formattedDate(post.date);
 
   return (
@@ -30,10 +28,10 @@ export const BlogCard = ({ post }: Props) => {
             <Image
               src={post.image}
               alt={`Image ${post.slug}`}
-              width={300}
-              height={128}
-              className='left-0 top-0 h-full w-full object-contain'
-              unoptimized
+              width={876}
+              height={378}
+              className='left-0 top-0 h-full w-full object-cover'
+              quality={80}
             />
           ) : (
             <DefaultImage type={post.type} />

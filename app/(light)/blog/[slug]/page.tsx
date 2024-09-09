@@ -65,12 +65,16 @@ export async function generateMetadata({
   const title = post.data.title;
   const description = contentTrimming(post.data.description, 150);
 
+  const imageUrl = post.data.image
+    ? post.data.image
+    : `/assets/images/banner/default_logo.png`;
+
   return {
-    title: post.data.title,
+    title,
     description,
     openGraph: {
-      images: [{ url: post.data.image }],
-      title: `${title}`,
+      images: [{ url: imageUrl }],
+      title,
       description,
     },
   };

@@ -34,7 +34,7 @@ export const TeamClient = ({ team }: ITeamProps) => {
             20+ <span className='hidden tablet:block'>PEOPLE</span>
           </p>
         </div>
-        <Link href='#contscts' className={styles.joinWrapper}>
+        <Link href='#contacts' className={styles.joinWrapper}>
           <span className='font-unbound text-[18px] font-bold uppercase leading-[1.1]'>
             Join our team
           </span>

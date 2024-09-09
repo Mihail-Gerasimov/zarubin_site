@@ -4,7 +4,8 @@ description: 'We have tournament and player screens. The system retrieves data f
 industries: ['Sports and Entertainment', 'Custom Development']
 tag: 'STOCKS SOCCER'
 instruments: ['ruby', 'react', 'figma']
-logo: '/assets/images/case/svg/stocksSoccer.svg'
+# logo: '/assets/images/case/svg/stocksSoccer.svg'
+logo: '/assets/images/case/stocks-soccer.png'
 bannerImage: '/assets/images/case/banner/stock-socker-case.webp'
 images: ['/assets/images/case/stocks_soccer-1.webp']
 ---
