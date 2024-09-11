@@ -8,6 +8,7 @@ export interface Case {
   tag: string;
   slug: string;
   logo: string;
+  logo_hover: string | null | undefined;
   instruments: string[] | [];
   bannerImage: string;
 }
@@ -28,6 +29,7 @@ export const getCaseMetadata = (basePath: string) => {
       slug: filename.replace('.md', ''),
       bannerImage: matterResult.data.bannerImage,
       logo: matterResult.data.logo,
+      logo_hover: matterResult.data.logo_hover,
       instruments: matterResult.data.instruments,
     };
   });

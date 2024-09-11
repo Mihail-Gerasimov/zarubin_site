@@ -10,7 +10,7 @@ bannerImage: '/assets/images/case/banner/oasis-case.webp'
 images: ['/assets/images/case/oazis-1.webp', '/assets/images/case/oazis-2.webp']
 ---
 
-## About the Project
+## About
 
 The goal of the project was to integrate all social services for shift workers into a mobile application. Additionally, it aimed to provide management capabilities for services at the management site. Consequently, the project was divided into two parts: a mobile application for shift workers and the development of an administrative panel for management site employees.
 

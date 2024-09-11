@@ -18,8 +18,7 @@ export const BusinessSolvingSlider = ({ data }: IData) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>();
   const mobile = useMediaQuery('<tablet');
 
-  const sliceData = data.slice(0, 4);
-  console.log('sliceData', sliceData);
+  const sliceData = [...data].slice(0, 4);
 
   const nextSlide = () => {
     if (swiper) swiper.slideNext();
@@ -47,7 +46,7 @@ export const BusinessSolvingSlider = ({ data }: IData) => {
           onSwiper={setSwiper}
           wrapperClass='items-stretch'
         >
-          {data.map((item, idx) => (
+          {sliceData.map((item, idx) => (
             <SwiperSlide className='!h-auto' key={item.slug}>
               <BusinessSolvingCard
                 title={item.title}

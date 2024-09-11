@@ -4,13 +4,12 @@ description: 'We have tournament and player screens. The system retrieves data f
 industries: ['Sports and Entertainment', 'Custom Development']
 tag: 'STOCKS SOCCER'
 instruments: ['ruby', 'react', 'figma']
-# logo: '/assets/images/case/svg/stocksSoccer.svg'
-logo: '/assets/images/case/stocks-soccer.png'
+logo: '/assets/images/case/svg/stocksSoccer.svg'
 bannerImage: '/assets/images/case/banner/stock-socker-case.webp'
 images: ['/assets/images/case/stocks_soccer-1.webp']
 ---
 
-## About the Project
+## About
 
 We have tournament and player screens. The system retrieves data from TransferMarket, which stores information about player values and portfolios, and displays it on the front end. Users are required to build player portfolios and compete against each other based on these portfolios. After assembling a portfolio, users can make substitutions on each match day, thereby changing the value of their portfolio.
 

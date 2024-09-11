@@ -9,7 +9,7 @@ bannerImage: '/assets/images/case/banner/t-bank-case.webp'
 images: ['/assets/images/case/tbank-1.webp', '/assets/images/case/tbank-2.webp']
 ---
 
-## About the Project
+## About
 
 The project to develop the website for Street Football League on the Tilda platform with ticketing system integration has become a successful example of how to effectively combine sporting events with business goals. The new website not only improved the user experience but also helped achieve T-Bank's marketing objectives. In the future, continued work on the site and its features could include adding new integrations and functions to further enhance audience engagement.
 
