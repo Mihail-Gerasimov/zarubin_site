@@ -1,6 +1,9 @@
+'use client';
+
 import { Case } from '@/src/utils/getCaseMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
 import styles from './Cases.module.css';
 
 export const CasesGrid = ({ cases }: { cases: Case[] }) => {
@@ -14,6 +17,17 @@ export const CasesGrid = ({ cases }: { cases: Case[] }) => {
 };
 
 const CaseCard = ({ data }: { data: Case }) => {
+  const [logo, setLogo] = useState(data.logo);
+
+  const handleMouseEnter = () => {
+    if (!data.logo_hover) return;
+    setLogo(data.logo_hover);
+  };
+
+  const handleMouseLeave = () => {
+    setLogo(data.logo);
+  };
+
   return (
     <Link
       href={`/solutions/${data.slug}`}
@@ -24,6 +38,8 @@ const CaseCard = ({ data }: { data: Case }) => {
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
       }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div
         className={`${styles.contentContainer} relative z-30 flex h-full w-full flex-col justify-between`}
@@ -32,7 +48,7 @@ const CaseCard = ({ data }: { data: Case }) => {
           <div className='flex items-center justify-between'>
             <div className='h-[35px] w-[auto]'>
               <Image
-                src={data.logo}
+                src={logo}
                 alt={`${data.tag} logo`}
                 height={35}
                 width={120}

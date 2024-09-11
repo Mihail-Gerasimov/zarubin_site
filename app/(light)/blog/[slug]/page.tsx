@@ -101,7 +101,7 @@ export default function MainBlogSlug(props: { params: { slug: string } }) {
   } = post.data;
   const image = post.data.image
     ? post.data.image
-    : '/assets/images/banner/default_logo.png';
+    : '/assets/images/banner/default_img.webp';
 
   const hashtagRegex = /#[A-Za-z_]+/g;
   const regexFont = /<font color='(.+?)'>(.+?)<\/font>/g;

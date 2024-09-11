@@ -5,11 +5,12 @@ industries: ['Sports and Entertainment', 'Custom Development']
 tag: 'FCDM'
 instruments: ['figma']
 logo: '/assets/images/case/svg/dinamika.svg'
+logo_hover: '/assets/images/case/svg/dinamika_hover.svg'
 bannerImage: '/assets/images/case/banner/dinamika-case.webp'
 images: ['/assets/images/case/fcdm-1.webp', '/assets/images/case/fcdm-2.webp']
 ---
 
-## About the Project
+## About
 
 Like any leading football club, the goal of FCDM is to attract not only fans but also sponsors. To attract sponsors, it's essential to create product lines that harmonize with both the main brand of the football club "Dynamo" and potential partners interested in collaborating.
 

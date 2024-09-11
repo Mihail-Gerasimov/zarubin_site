@@ -10,7 +10,7 @@ images:
   ['/assets/images/case/norilsk-1.webp', '/assets/images/case/norilsk-2.webp']
 ---
 
-## About the Project
+## About
 
 The Norilsk Hockey Club competes in the VHL division. They have a coaching staff, active players, and fans.
 
