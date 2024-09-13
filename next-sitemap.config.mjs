@@ -25,6 +25,7 @@ const config = {
             '/solutions/oazis',
             '/solutions/stocks_soccer',
             '/solutions/t_bank',
+            '/solutions/lux_today',
         ]
 
         const dynamicPages = [
