@@ -34,16 +34,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // const logoUrl =
-  //   'https://www.zarubin.co.uk/assets/images/info/default_logo.png';
-
-  // const structuredData = {
-  //   '@context': 'https://schema.org',
-  //   '@type': 'Organization',
-  //   url: 'https://www.zarubin.co.uk',
-  //   logo: logoUrl,
-  // };
-
   return (
     <html lang='en'>
       <head>
