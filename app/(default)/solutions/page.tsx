@@ -7,8 +7,28 @@ import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
 import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
+import { openGraphImage } from '@/src/utils/openGraphParams';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import { Suspense } from 'react';
+
+export const metadata: Metadata = {
+  title: 'Zarubin & Co - Solutions and cases',
+  description: 'Case studies, research and experience in detail',
+  metadataBase: new URL('https://www.zarubin.co.uk/'),
+  icons: {
+    icon: '/assets/images/info/main_meta.png',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Zarubin & Co',
+    ...openGraphImage,
+    title: 'Zarubin & Co - Solutions and cases | Zarubin & Co',
+    description:
+      'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
+  },
+};
 
 export default async function BusinessObjectivesPage() {
   const casesMetadata = getCaseMetadata('src/cases');
