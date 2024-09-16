@@ -4,6 +4,7 @@ import { openGraphImage } from '@/src/utils/openGraphParams';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
+import React from 'react';
 import 'swiper/css';
 import '../globals.css';
 
@@ -18,10 +19,13 @@ export const metadata: Metadata = {
     icon: '/assets/images/info/main_meta.png',
   },
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Zarubin & Co',
     ...openGraphImage,
-    title:
+    title: 'Ultimative IT Decelopment mobile & web apps | Zarubin & Co',
+    description:
       'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
-    description: 'Read. Think. Grow.',
   },
 };
 

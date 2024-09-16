@@ -10,6 +10,7 @@ import {
     InstrumentIconsType
 } from '@/src/utils/DataLayers/InstrumentsIcon';
 import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
+import { openGraphImage } from '@/src/utils/openGraphParams';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
@@ -52,11 +53,14 @@ export async function generateMetadata({
   const description = contentTrimming(post.data.description, 150);
 
   return {
-    title,
+    title: `Zarubin & Co - ${title}`,
     description,
     openGraph: {
-      images: [{ url: post.data.bannerImage }],
-      title,
+      type: 'website',
+      locale: 'en_US',
+      siteName: 'Zarubin & Co',
+      ...openGraphImage,
+      title: `Zarubin & Co - ${title}`,
       description,
     },
   };
