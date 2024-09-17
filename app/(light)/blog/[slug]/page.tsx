@@ -67,7 +67,6 @@ export async function generateMetadata({
   const title = post.data.title;
   const description = contentTrimming(post.data.description, 150);
 
-  const imageUrl = post.data.image ? post.data.image : openGraphImage;
   const publishedDateISO = DateTime.fromFormat(
     post.data.date,
     'dd-MM-yyyy',
@@ -80,7 +79,7 @@ export async function generateMetadata({
       type: 'article',
       locale: 'en_US',
       siteName: 'Zarubin & Co',
-      ...imageUrl,
+      ...openGraphImage,
       title: `Zarubin & Co - ${title}`,
       description,
       article: {
