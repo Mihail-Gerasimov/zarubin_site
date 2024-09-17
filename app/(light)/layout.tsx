@@ -13,11 +13,14 @@ export const metadata: Metadata = {
   title:
     'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
   description: 'Case studies, research and experience in detail',
-  metadataBase: new URL('https://www.zarubin.co.uk/blog/'),
+  metadataBase: new URL('https://www.zarubin.co.uk'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Zarubin & Co',
     ...openGraphImage,
     title:
       'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
@@ -52,7 +55,7 @@ export default function RootLayout({
         className={`${inter.className} flex flex-col bg-white text-text-dark`}
       >
         <Header dark={false} />
-        {children}
+        <main>{children}</main>
         <Footer />
         <Script id='replain'>
           {`window.replainSettings = { id: '07c36061-dbc9-4cb8-85cb-9e69876b9d34' };
