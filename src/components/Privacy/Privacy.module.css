@@ -1,5 +1,5 @@
 .mainContainer {
-  padding: 0 20px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -37,6 +37,6 @@
 
 @media (min-width: 768px) {
   .mainContainer {
-    padding: 0 40px;
+    padding: 40px;
   }
 }

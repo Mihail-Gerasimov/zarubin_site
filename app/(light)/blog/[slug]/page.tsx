@@ -9,10 +9,12 @@ import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
+import { openGraphImage } from '@/src/utils/openGraphParams';
 import { postsSorting } from '@/src/utils/postsSorting';
 import classNames from 'classnames';
 import fs from 'fs';
 import matter from 'gray-matter';
+import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
 import NotFoundPage from '../not-found';
@@ -65,17 +67,27 @@ export async function generateMetadata({
   const title = post.data.title;
   const description = contentTrimming(post.data.description, 150);
 
-  const imageUrl = post.data.image
-    ? post.data.image
-    : `/assets/images/banner/default_logo.png`;
+  const imageUrl = post.data.image ? post.data.image : openGraphImage;
+  const publishedDateISO = DateTime.fromFormat(
+    post.data.date,
+    'dd-MM-yyyy',
+  ).toISO();
 
   return {
-    title,
+    title: `Zarubin & Co - ${title}`,
     description,
     openGraph: {
-      images: [{ url: imageUrl }],
-      title,
+      type: 'article',
+      locale: 'en_US',
+      siteName: 'Zarubin & Co',
+      ...imageUrl,
+      title: `Zarubin & Co - ${title}`,
       description,
+      article: {
+        publishedTime: publishedDateISO,
+        modifiedTime: publishedDateISO,
+        AuthorInfo: post.data.authorImage ? [post.data.authorImage] : null,
+      },
     },
   };
 }
