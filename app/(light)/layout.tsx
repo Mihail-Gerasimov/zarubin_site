@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Zarubin & Co',
     ...openGraphImage,
-    title:
+    title: 'Ultimative IT Development mobile & web apps | Zarubin & Co',
+    description:
       'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
-    description: 'Read. Think. Grow.',
   },
 };
 
