@@ -13,7 +13,7 @@ import Image from 'next/image';
 import { Suspense } from 'react';
 
 export const metadata: Metadata = {
-  title: 'Zarubin & Co - Solutions and cases',
+  title: 'Bright Byte - Solutions and cases',
   description: 'Case studies, research and experience in detail',
   metadataBase: new URL('https://www.thebrightbyte.com/'),
   icons: {
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Zarubin & Co',
+    siteName: 'Bright Byte',
     ...openGraphImage,
-    title: 'Zarubin & Co - Solutions and cases | Zarubin & Co',
+    title: 'Bright Byte - Solutions and cases | Bright Byte',
     description:
       'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
   },

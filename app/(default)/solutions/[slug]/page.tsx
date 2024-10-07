@@ -6,8 +6,8 @@ import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationW
 import { Section } from '@/src/components/shared/Section/Section';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import {
-    InstrumentIcons,
-    InstrumentIconsType
+  InstrumentIcons,
+  InstrumentIconsType,
 } from '@/src/utils/DataLayers/InstrumentsIcon';
 import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
@@ -53,14 +53,14 @@ export async function generateMetadata({
   const description = contentTrimming(post.data.description, 150);
 
   return {
-    title: `Zarubin & Co - ${title}`,
+    title: `Bright Byte - ${title}`,
     description,
     openGraph: {
       type: 'website',
       locale: 'en_US',
-      siteName: 'Zarubin & Co',
+      siteName: 'Bright Byte',
       ...openGraphImage,
-      title: `Zarubin & Co - ${title}`,
+      title: `Bright Byte - ${title}`,
       description,
     },
   };

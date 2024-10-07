@@ -73,14 +73,14 @@ export async function generateMetadata({
   ).toISO();
 
   return {
-    title: `Zarubin & Co - ${title}`,
+    title: `Bright Byte - ${title}`,
     description,
     openGraph: {
       type: 'article',
       locale: 'en_US',
-      siteName: 'Zarubin & Co',
+      siteName: 'Bright Byte',
       ...openGraphImage,
-      title: `Zarubin & Co - ${title}`,
+      title: `Bright Byte - ${title}`,
       description,
       article: {
         publishedTime: publishedDateISO,
