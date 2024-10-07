@@ -1,5 +1,5 @@
 const config = {
-    siteUrl: 'https://www.zarubin.co.uk/',
+    siteUrl: 'https://www.thebrightbyte.com/',
     generateSitemap: true,
     generateIndexSitemap: true,
     generateRobotsTxt: true,

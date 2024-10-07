@@ -15,7 +15,7 @@ User-agent: *
 Disallow: /tpost/*
 
 # Host
-Host: https://www.zarubin.co.uk/
+Host: https://www.thebrightbyte.com/
 
 # Sitemaps
-Sitemap: https://www.zarubin.co.uk/sitemap.xml
+Sitemap: https://www.thebrightbyte.com/sitemap.xml

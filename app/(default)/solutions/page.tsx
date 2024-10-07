@@ -15,7 +15,7 @@ import { Suspense } from 'react';
 export const metadata: Metadata = {
   title: 'Zarubin & Co - Solutions and cases',
   description: 'Case studies, research and experience in detail',
-  metadataBase: new URL('https://www.zarubin.co.uk/'),
+  metadataBase: new URL('https://www.thebrightbyte.com/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
