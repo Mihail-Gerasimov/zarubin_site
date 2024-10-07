@@ -6,8 +6,8 @@ import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationW
 import { Section } from '@/src/components/shared/Section/Section';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import {
-  InstrumentIcons,
-  InstrumentIconsType,
+    InstrumentIcons,
+    InstrumentIconsType
 } from '@/src/utils/DataLayers/InstrumentsIcon';
 import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
