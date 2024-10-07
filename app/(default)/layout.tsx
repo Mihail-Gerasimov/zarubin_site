@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Zarubin & Co',
+    siteName: 'Bright Byte',
     ...openGraphImage,
-    title: 'Ultimative IT Development mobile & web apps | Zarubin & Co',
+    title: 'Ultimative IT Development mobile & web apps | Bright Byte',
     description:
       'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
   },
