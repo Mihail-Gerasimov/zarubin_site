@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title:
-    'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
+    'Bright Byte is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
   description: 'Case studies, research and experience in detail',
   metadataBase: new URL('https://www.thebrightbyte.com/'),
   icons: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title: 'Ultimative IT Development mobile & web apps | Bright Byte',
     description:
-      'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
+      'Bright Byte is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
   },
 };
 

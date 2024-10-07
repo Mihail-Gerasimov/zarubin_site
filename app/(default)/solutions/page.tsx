@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title: 'Bright Byte - Solutions and cases | Bright Byte',
     description:
-      'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
+      'Bright Byte is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
   },
 };
 
