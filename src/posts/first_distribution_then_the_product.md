@@ -1,9 +1,9 @@
 ---
 title: '§ 5. First Distribution, Then the Product'
 description: 'Ideas do not emerge in a vacuum. In large companies, there is an approach called "gemba.'
-image: '/assets/images/post/manifesto/manifesto_5.png'
+image: ''
 date: '14-03-2024'
-type: 'Manifesto'
+type: 'Notes'
 tag: 'Management'
 authorName: ''
 authorImage: ''
