@@ -9,8 +9,31 @@ import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
 import { ExpertiseHeroBgSvg } from '@/src/components/svg/ExpertiseHeroBgSvg';
+import { openGraphImage } from '@/src/utils/openGraphParams';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import { ClientExpertiseItems } from './ClientExpertiseItems';
+
+export const metadata: Metadata = {
+  title:
+    'Bright Byte - Expertise in systems integration, mobile applications: Leading IT Expertise',
+  description:
+    "Unleash transformative digital solutions across sports, entertainment, fintech, and beyond with Bright Byte's proven track record of innovation.",
+  metadataBase: new URL('https://www.thebrightbyte.com/'),
+  icons: {
+    icon: '/assets/images/info/main_meta.png',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Bright Byte',
+    ...openGraphImage,
+    title:
+      'Bright Byte - Expertise in systems integration, mobile applications: Leading IT Expertise | Bright Byte',
+    description:
+      "Unleash transformative digital solutions across sports, entertainment, fintech, and beyond with Bright Byte's proven track record of innovation.",
+  },
+};
 
 export default function Expertise() {
   return (

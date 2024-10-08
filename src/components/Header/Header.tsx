@@ -36,7 +36,7 @@ export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
 
   return (
     <header
-      className={`sticky top-0 z-50 mx-auto h-[80px] w-full ${dark ? 'bg-main-bg' : 'bg-white'}`}
+      className={`sticky top-0 z-50 mx-auto h-[100px] w-full ${dark ? 'bg-main-bg' : 'bg-white'}`}
     >
       <Container className='flex h-full items-center'>
         <Logo dark={dark} />

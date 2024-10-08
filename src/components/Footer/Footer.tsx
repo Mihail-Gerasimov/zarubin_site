@@ -1,4 +1,4 @@
-import LightMainLogo from '@/public/assets/images/icons/second_logo.svg';
+import LightMainLogo from '@/public/assets/images/icons/light_logo.svg';
 import { menuListLayer } from '@/src/utils/menuListLayer';
 import Link from 'next/link';
 import { Container } from '../shared/Container/Container';
@@ -25,10 +25,10 @@ export const Footer = () => {
           </ul>
           <div className='flex flex-col gap-[12px]'>
             <Link
-              href='mailto:vitaliy@zarubin.co.uk'
+              href='mailto:access@thebrightbyte.com'
               className='font-proxima text-[26px] font-bold text-white'
             >
-              vitaliy@zarubin.co.uk
+              access@thebrightbyte.com
             </Link>
           </div>
         </div>
