@@ -1,5 +1,6 @@
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
+import { getExpertiseList } from '@/src/utils/expertiseMenu';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -12,22 +13,24 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title:
-    'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
+    'Bright Byte is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
   description: 'Case studies, research and experience in detail',
-  metadataBase: new URL('https://www.zarubin.co.uk/'),
+  metadataBase: new URL('https://www.thebrightbyte.com/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Zarubin & Co',
+    siteName: 'Bright Byte',
     ...openGraphImage,
-    title: 'Ultimative IT Development mobile & web apps | Zarubin & Co',
+    title: 'Ultimative IT Development mobile & web apps | Bright Byte',
     description:
-      'Zarubin & Company is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
+      'Bright Byte is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
   },
 };
+
+const testList = getExpertiseList();
 
 export default function RootLayout({
   children,
@@ -55,7 +58,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} flex flex-col gap-[60px] bg-main-bg text-white`}
       >
-        <Header />
+        <Header expertiseSubmenu={testList} />
         {children}
         <Footer />
         <Script id='replain'>

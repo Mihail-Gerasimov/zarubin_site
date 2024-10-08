@@ -53,14 +53,14 @@ export async function generateMetadata({
   const description = contentTrimming(post.data.description, 150);
 
   return {
-    title: `Zarubin & Co - ${title}`,
+    title: `Bright Byte - ${title}`,
     description,
     openGraph: {
       type: 'website',
       locale: 'en_US',
-      siteName: 'Zarubin & Co',
+      siteName: 'Bright Byte',
       ...openGraphImage,
-      title: `Zarubin & Co - ${title}`,
+      title: `Bright Byte - ${title}`,
       description,
     },
   };

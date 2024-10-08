@@ -55,7 +55,7 @@ export const FeedbackDataMain = [
     job: 'CEO IGFT',
     image: vasiliyPhoto,
     feedback:
-      "We have been working with Vitaliy for two years, during which time we have actively developed our project. The team is always results-driven and takes a proactive approach, anticipating potential challenges and addressing them promptly. Since we work with a complex IT system, it's crucial for us that all components are perfectly fine-tuned. Zarubin & Co impresses with their attention to detail: the team provides comprehensive API documentation, every new feature is meticulously described in a dedicated document, and they constantly offer suggestions for improvement. At the same time, they help us avoid unnecessary actions if our plans go beyond what is required.",
+      "We have been working with Vitaliy for two years, during which time we have actively developed our project. The team is always results-driven and takes a proactive approach, anticipating potential challenges and addressing them promptly. Since we work with a complex IT system, it's crucial for us that all components are perfectly fine-tuned. Bright Byte impresses with their attention to detail: the team provides comprehensive API documentation, every new feature is meticulously described in a dedicated document, and they constantly offer suggestions for improvement. At the same time, they help us avoid unnecessary actions if our plans go beyond what is required.",
   },
   {
     id: 7,
