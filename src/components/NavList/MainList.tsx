@@ -22,22 +22,22 @@ interface Submenu {
 export const MainList = ({
   list,
   dark = true,
-  expertiseSubmenu = [],
+  // expertiseSubmenu = [],
 }: Props) => {
   const pathname = usePathname();
 
-  const formatMenuItem = (menuItem: string) => {
-    const newMenuItem = menuItem
-      .split('_')
-      .map((item) => item.charAt(0).toUpperCase() + item.slice(1))
-      .join(' ');
-    return newMenuItem;
-  };
+  // const formatMenuItem = (menuItem: string) => {
+  //   const newMenuItem = menuItem
+  //     .split('_')
+  //     .map((item) => item.charAt(0).toUpperCase() + item.slice(1))
+  //     .join(' ');
+  //   return newMenuItem;
+  // };
 
-  const finalLink = (str: string) => {
-    const splitStr = str.split('.');
-    return splitStr[0];
-  };
+  // const finalLink = (str: string) => {
+  //   const splitStr = str.split('.');
+  //   return splitStr[0];
+  // };
 
   return (
     <ul className='hidden justify-center gap-[44px] laptop-big:flex'>
@@ -58,7 +58,7 @@ export const MainList = ({
             {item.name}
           </Link>
 
-          {item.name.toLowerCase() === 'expertise' && (
+          {/* {item.name.toLowerCase() === 'expertise' && (
             <div className='invisible absolute flex w-full gap-[20px] rounded-[4px] bg-black p-[5px] transition-all duration-200 ease-in-out group-hover:visible'>
               {expertiseSubmenu.map((item) => (
                 <div key={item.name} className='p-[5px] text-white'>
@@ -77,7 +77,7 @@ export const MainList = ({
                 </div>
               ))}
             </div>
-          )}
+          )} */}
         </li>
       ))}
     </ul>
