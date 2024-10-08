@@ -12,9 +12,15 @@ import { Container } from '../shared/Container/Container';
 
 interface Props {
   dark?: boolean;
+  expertiseSubmenu?: Submenu[];
 }
 
-export const Header = ({ dark = true }: Props) => {
+interface Submenu {
+  name: string;
+  folderItems: { nameItem: string; link: string }[];
+}
+
+export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const isMobile = useMediaQuery('<desktop-l');
@@ -35,7 +41,11 @@ export const Header = ({ dark = true }: Props) => {
       <Container className='flex h-full items-center'>
         <Logo dark={dark} />
         <nav className='mx-[auto] w-full'>
-          <MainList list={menuListLayer} dark={dark} />
+          <MainList
+            list={menuListLayer}
+            dark={dark}
+            expertiseSubmenu={expertiseSubmenu}
+          />
         </nav>
         <ContactUsBtn dark={dark} />
         <MobileMenu

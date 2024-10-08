@@ -1,5 +1,6 @@
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
+import { getExpertiseList } from '@/src/utils/expertiseMenu';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -29,6 +30,8 @@ export const metadata: Metadata = {
   },
 };
 
+const testList = getExpertiseList();
+
 export default function RootLayout({
   children,
 }: {
@@ -55,7 +58,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} flex flex-col gap-[60px] bg-main-bg text-white`}
       >
-        <Header />
+        <Header expertiseSubmenu={testList} />
         {children}
         <Footer />
         <Script id='replain'>

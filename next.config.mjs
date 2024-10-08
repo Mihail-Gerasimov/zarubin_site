@@ -28,6 +28,21 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/(.*)',
+        destination: 'https://www.thebrightbyte.com/:path*',
+        permanent: true,
+        has: [
+          {
+            type: 'host',
+            value: 'thebrightbyte.com',
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

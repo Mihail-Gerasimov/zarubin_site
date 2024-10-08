@@ -4,6 +4,26 @@ Allow: /
 
 # *
 User-agent: *
+Allow: /*.js
+
+# *
+User-agent: *
+Allow: /*.css
+
+# *
+User-agent: *
+Allow: /*.gif
+
+# *
+User-agent: *
+Allow: /*.jpg
+
+# *
+User-agent: *
+Allow: /*.png
+
+# *
+User-agent: *
 Disallow: /assets/*
 
 # *
@@ -13,6 +33,74 @@ Disallow: /_next/*
 # *
 User-agent: *
 Disallow: /tpost/*
+
+# *
+User-agent: *
+Disallow: */&
+
+# *
+User-agent: *
+Disallow: /*?
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Allow: /*.js
+
+# Googlebot
+User-agent: Googlebot
+Allow: /*.css
+
+# Googlebot
+User-agent: Googlebot
+Allow: /*.gif
+
+# Googlebot
+User-agent: Googlebot
+Allow: /*.jpg
+
+# Googlebot
+User-agent: Googlebot
+Allow: /*.png
+
+# Googlebot
+User-agent: Googlebot
+Disallow: /assets/*
+
+# Googlebot
+User-agent: Googlebot
+Disallow: /_next/*
+
+# Googlebot
+User-agent: Googlebot
+Disallow: /tpost/*
+
+# Googlebot
+User-agent: Googlebot
+Disallow: */&
+
+# Googlebot
+User-agent: Googlebot
+Disallow: /*?
+
+# RookeeBot
+User-agent: RookeeBot
+Disallow: /
+
+# Twitterbot
+User-agent: Twitterbot
+Allow: /
+
+# Facebot
+User-agent: Facebot
+Allow: /
+
+# facebookexternalhit
+User-agent: facebookexternalhit
+Allow: /
 
 # Host
 Host: https://www.thebrightbyte.com/
