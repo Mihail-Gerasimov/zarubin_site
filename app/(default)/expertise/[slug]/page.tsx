@@ -10,7 +10,34 @@ import matter from 'gray-matter';
 import Markdown from 'markdown-to-jsx';
 import path from 'path';
 
+type Slug = {
+  slug: string;
+};
+
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
+
+export async function generateStaticParams(): Promise<Slug[]> {
+  const folder: string = 'src/expertise/';
+  const slugs: Slug[] = [];
+
+  function findMarkdownFiles(dir: string): void {
+    const files: string[] = fs.readdirSync(dir);
+    for (const file of files) {
+      const filePath: string = path.join(dir, file);
+      const stat: fs.Stats = fs.statSync(filePath);
+      if (stat.isDirectory()) {
+        findMarkdownFiles(filePath);
+      } else if (file.endsWith('.md')) {
+        const slug: string = file.replace('.md', '');
+        slugs.push({ slug });
+      }
+    }
+  }
+
+  findMarkdownFiles(folder);
+
+  return slugs;
+}
 
 const findMarkdownFile = (dir: string, slug: string): string | null => {
   const files = fs.readdirSync(dir);
