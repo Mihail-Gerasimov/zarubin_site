@@ -1,3 +1,6 @@
+## Редактирование markdown 
+https://dillinger.io
+
 ## Инструкция по добавлению поста:
 
 1.  Для загрузки поста необходимо зайти в репозиторий https://github.com/DgtlBureau/soccer_blog, перейти по следующим директориям : src/posts
