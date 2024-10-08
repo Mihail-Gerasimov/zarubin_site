@@ -13,8 +13,10 @@ import Image from 'next/image';
 import { Suspense } from 'react';
 
 export const metadata: Metadata = {
-  title: 'Bright Byte - Solutions and cases',
-  description: 'Case studies, research and experience in detail',
+  title:
+    "Propel Your Business Forward with Bright Byte's Bespoke IT Solutions ",
+  description:
+    "Elevate growth and operational efficiency with our tailored IT strategies, engineered to address your unique business challenges in today's fast-paced digital ecosystem.",
   metadataBase: new URL('https://www.thebrightbyte.com/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
@@ -24,9 +26,10 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Bright Byte',
     ...openGraphImage,
-    title: 'Bright Byte - Solutions and cases | Bright Byte',
+    title:
+      "Propel Your Business Forward with Bright Byte's Bespoke IT Solutions  | Bright Byte",
     description:
-      'Bright Byte is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
+      "Elevate growth and operational efficiency with our tailored IT strategies, engineered to address your unique business challenges in today's fast-paced digital ecosystem.",
   },
 };
 

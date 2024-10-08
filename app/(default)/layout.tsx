@@ -56,7 +56,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${inter.className} flex flex-col gap-[60px] bg-main-bg text-white`}
+        className={`${inter.className} flex flex-col bg-main-bg text-white`}
       >
         <Header expertiseSubmenu={testList} />
         {children}

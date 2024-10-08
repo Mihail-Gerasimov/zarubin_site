@@ -535,8 +535,11 @@ export const Privacy = () => {
                 {`8.2. The Operator processes the User's personal data only if
                 they are filled in and/or sent by the User independently through
                 special forms located on the website`}{' '}
-                <Link className={styles.link} href='https://www.zarubin.co.uk'>
-                  https://www.zarubin.co.uk
+                <Link
+                  className={styles.link}
+                  href='https://www.thebrightbyte.com'
+                >
+                  https://www.thebrightbyte.com
                 </Link>{' '}
                 {`or
                 sent to the Operator via e-mail. By filling out the appropriate

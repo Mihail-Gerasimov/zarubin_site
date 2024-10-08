@@ -1,3 +1,6 @@
+import fs from 'fs'
+import path from 'path'
+
 const config = {
     siteUrl: 'https://www.thebrightbyte.com/',
     generateSitemap: true,
@@ -28,11 +31,39 @@ const config = {
             '/solutions/lux_today',
         ]
 
+        const getAllMarkdownFiles = (dirPath, arrayOfFiles = []) => {
+            const files = fs.readdirSync(dirPath)
+
+            files.forEach((file) => {
+                const filePath = path.join(dirPath, file)
+                if (fs.statSync(filePath).isDirectory()) {
+                    arrayOfFiles = getAllMarkdownFiles(filePath, arrayOfFiles)
+                } else if (file.endsWith('.md')) {
+                    arrayOfFiles.push(filePath)
+                }
+            })
+
+            return arrayOfFiles
+        }
+
+        const expertiseDir = path.join(process.cwd(), 'src/expertise')
+        const expertiseFiles = getAllMarkdownFiles(expertiseDir)
+
+        const dynamicExpertisePages = expertiseFiles.map((file) => {
+            const fileName = path.basename(file, '.md')
+            return `/expertise/${fileName}`
+        })
+
         const dynamicPages = [
             '/blog',
         ]
         const allPaths = [
             ...staticPages.map(loc => ({
+                loc,
+                changefreq: 'daily',
+                priority: 1.0,
+            })),
+            ...dynamicExpertisePages.map(loc => ({
                 loc,
                 changefreq: 'daily',
                 priority: 1.0,

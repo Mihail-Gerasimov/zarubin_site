@@ -1,9 +1,9 @@
 ---
 title: '§ 3. How a Python Developer Becomes a Software Engineer'
 description: 'We have all encountered job titles like "Software Engineers," "Category V Specialists," and other engineering-specific titles.'
-image: '/assets/images/post/manifesto/manifesto_3.png'
+image: ''
 date: '14-03-2024'
-type: 'Manifesto'
+type: 'Notes'
 tag: 'Management'
 authorName: ''
 authorImage: ''

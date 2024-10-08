@@ -160,7 +160,7 @@ export default function MainBlogSlug(props: { params: { slug: string } }) {
           }}
         ></div>
       )}
-      <BackLink linkName='/blog' />
+      <BackLink linkName='blog' />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div
           className={classNames(

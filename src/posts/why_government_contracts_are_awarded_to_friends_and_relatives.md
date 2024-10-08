@@ -1,9 +1,9 @@
 ---
 title: '§ 4. Why Government Contracts Are Awarded to Friends and Relatives'
 description: 'We are all familiar with situations where a large company is serviced by a smaller one, headed by a friend or relative.'
-image: '/assets/images/post/manifesto/manifesto_4.png'
+image: ''
 date: '14-03-2024'
-type: 'Manifesto'
+type: 'Notes'
 tag: 'Management'
 authorName: ''
 authorImage: ''
