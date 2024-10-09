@@ -14,7 +14,7 @@ export const Hero = () => {
           Freelancers, Custom Development,
         </span>
         <br />
-        Zarubin&Co
+        Bright Byte
       </h1>
       <p className='z-[5] max-w-[900px] font-proxima text-[12px] font-normal leading-[1.2] tablet:text-[16px] desktop:text-[20px] desktop-hard:text-[100px] desktop-hard:text-[24px]  '>
         Bright Byte is an excellent alternative to a traditional development
