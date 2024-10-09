@@ -1,4 +1,3 @@
-import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import React from 'react';
 import 'swiper/css';
@@ -9,8 +8,6 @@ import { Header } from '@/src/components/Header/Header';
 import { getExpertiseList } from '@/src/utils/expertiseMenu';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import type { Metadata } from 'next';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title:
@@ -74,9 +71,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body
-        className={`${inter.className} flex flex-col bg-main-bg text-white`}
-      >
+      <body className='flex flex-col bg-main-bg text-white'>
         <Header expertiseSubmenu={testList} />
         {children}
         <Footer />
