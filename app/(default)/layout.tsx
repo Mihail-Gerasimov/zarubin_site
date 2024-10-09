@@ -1,13 +1,14 @@
-import { Footer } from '@/src/components/Footer/Footer';
-import { Header } from '@/src/components/Header/Header';
-import { getExpertiseList } from '@/src/utils/expertiseMenu';
-import { openGraphImage } from '@/src/utils/openGraphParams';
-import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import React from 'react';
 import 'swiper/css';
 import '../globals.css';
+
+import { Footer } from '@/src/components/Footer/Footer';
+import { Header } from '@/src/components/Header/Header';
+import { getExpertiseList } from '@/src/utils/expertiseMenu';
+import { openGraphImage } from '@/src/utils/openGraphParams';
+import type { Metadata } from 'next';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -42,6 +43,24 @@ export default function RootLayout({
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
+        <style>
+          {`* {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+              }
+
+            :root {
+              --bg-color: #090215;
+              font-size: 14px;
+              scroll-behavior: smooth;
+            }
+  
+            h1,h2,h3,h4,h5,h6,ul,ol,li,p,a {
+              margin: 0;
+              padding: 0;
+        }`}
+        </style>
         <Script
           async
           src='https://www.googletagmanager.com/gtag/js?id=G-FXGP2J4QFD'
