@@ -47,18 +47,20 @@ export const Featured = ({ slug, posts }: Props) => {
         className='max-w-full'
         wrapperClass='items-stretch'
       >
-        {posts.map((item) => (
-          <SwiperSlide key={item.slug} className='!h-auto'>
-            <Link href={`/blog/${item.slug}`} className='flex h-full flex-1'>
-              <SmallBlogCard
-                tag={item.tag ? item.tag : ''}
-                title={item.title}
-                description={item.description}
-                date={item.date}
-              />
-            </Link>
-          </SwiperSlide>
-        ))}
+        {posts
+          .filter((post) => post.slug !== slug)
+          .map((item) => (
+            <SwiperSlide key={item.slug} className='!h-auto'>
+              <Link href={`/blog/${item.slug}`} className='flex h-full flex-1'>
+                <SmallBlogCard
+                  tag={item.tag ? item.tag : ''}
+                  title={item.title}
+                  description={item.description}
+                  date={item.date}
+                />
+              </Link>
+            </SwiperSlide>
+          ))}
       </Swiper>
     </div>
   );

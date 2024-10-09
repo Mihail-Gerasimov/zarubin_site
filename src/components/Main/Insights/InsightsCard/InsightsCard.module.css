@@ -9,6 +9,13 @@
   background-color: var(--main-white);
 }
 
+.tagWrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 .tag {
   display: inline-block;
   padding: 10px;

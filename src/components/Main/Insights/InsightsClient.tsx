@@ -25,7 +25,7 @@ export const InsightsClient = ({ posts }: Props) => {
   const mediaQuery = useMediaQuery('<desktop');
 
   return (
-    <div className='relative z-10 flex flex-col gap-[40px]'>
+    <div className='h-600 relative z-10 flex flex-col gap-[40px] pb-20'>
       <Container>
         <div className={styles.titleWrapper}>
           <h2 className={styles.title}>Insights</h2>
