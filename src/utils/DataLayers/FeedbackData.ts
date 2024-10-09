@@ -39,7 +39,7 @@ export const FeedbackDataMain = [
     job: 'General Product Manager Go',
     image: elenaPhoto,
     feedback:
-      'The guys from Zarubin&Co helped to pack the idea into the final product. They provided professional assistance at all stages and were all about achieving results!',
+      'The guys from Bright Byte helped to pack the idea into the final product. They provided professional assistance at all stages and were all about achieving results!',
   },
   {
     id: 5,

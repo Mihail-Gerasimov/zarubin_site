@@ -27,8 +27,7 @@ export const metadata: Metadata = {
       'Bright Byte is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
   },
 };
-
-const testList = getExpertiseList();
+const expertiseSubMenu = getExpertiseList();
 
 export default function RootLayout({
   children,
@@ -72,7 +71,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body className='flex flex-col bg-main-bg text-white'>
-        <Header expertiseSubmenu={testList} />
+        <Header expertiseSubmenu={expertiseSubMenu} />
         {children}
         <Footer />
         <Script id='replain'>

@@ -83,13 +83,7 @@ export default function ExpertiseCase(props: { params: { slug: string } }) {
 
   const date = formattedDate(expertiseCaseContent.data.date);
 
-  const {
-    // type,
-    // tag,
-    title,
-    authorName,
-    authorImage,
-  } = expertiseCaseContent.data;
+  const { authorName, authorImage } = expertiseCaseContent.data;
 
   const image = expertiseCaseContent.data.image
     ? expertiseCaseContent.data.image
@@ -144,14 +138,14 @@ export default function ExpertiseCase(props: { params: { slug: string } }) {
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div className='relative flex w-full items-center justify-center'></div>
         <div className='mt-[200px]'>
-          <h1
+          {/* <h1
             className={`font-proxima text-[28px] font-bold leading-[1.1] text-text-dark `}
           >
             {title}
-          </h1>
+          </h1> */}
         </div>
         <div
-          className={`'mb-[10px] mt-[20px] flex flex-col tablet:mt-[20px] tablet:flex-row tablet:justify-between desktop:mb-[40px] desktop:mt-[20px]`}
+          className={`'mb-[10px] mt-[200px] flex flex-col tablet:mt-[20px] tablet:flex-row tablet:justify-between desktop:mb-[40px] desktop:mt-[20px]`}
         >
           {authorImage && (
             <AuthorInfo image={authorImage} name={authorName} date={date} />
