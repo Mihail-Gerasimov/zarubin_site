@@ -41,7 +41,9 @@ export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
   }, [isMobile]);
 
   return (
-    <header className={`sticky top-0 z-50 mx-auto h-[100px] w-full `}>
+    <header
+      className={`sticky top-0 z-50 mx-auto h-[100px] w-full ${dark ? 'bg-main-bg' : 'bg-white'}`}
+    >
       <Container
         className={`relative flex h-full items-center overflow-hidden ${dark ? 'bg-main-bg' : 'bg-white'}`}
       >
