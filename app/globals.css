@@ -4,33 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol,
-li,
-p,
-a {
-  margin: 0;
-  padding: 0;
-}
-
-:root {
-  --bg-color: #090215;
-  font-size: 14px;
-  scroll-behavior: smooth;
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -54,25 +27,6 @@ input:-webkit-autofill:active {
     font-weight: 700;
     src: url(/fonts/proxima-nova/ProximaNovaBold.woff) format('woff');
     font-display: swap;
-  }
-}
-
-@layer components {
-  body {
-    --primary: #00030c;
-    --bg-color: #010c2c;
-    --second-bg-color: #f7f7f7;
-    --text-color: #94a3b8;
-    --main-gray: #dcddeb;
-    --text-dark: #010c2c;
-    --accent-col: #a854fd;
-    --main-white: #ffffff;
-    --main-blue: #013edf;
-    --dark-blue: #000a25;
-    --second-blue: #001450;
-    --light-blue: #00248b;
-    --blue-hover: #1858fd;
-    --pagination-col: #eceffa;
   }
 }
 
@@ -125,6 +79,23 @@ input:-webkit-autofill:active {
 }
 
 @layer components {
+  body {
+    --primary: #00030c;
+    --bg-color: #010c2c;
+    --second-bg-color: #f7f7f7;
+    --text-color: #94a3b8;
+    --main-gray: #dcddeb;
+    --text-dark: #010c2c;
+    --accent-col: #a854fd;
+    --main-white: #ffffff;
+    --main-blue: #013edf;
+    --dark-blue: #000a25;
+    --second-blue: #001450;
+    --light-blue: #00248b;
+    --blue-hover: #1858fd;
+    --pagination-col: #eceffa;
+  }
+
   .backImage {
     overflow: hidden;
     position: relative;

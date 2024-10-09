@@ -28,13 +28,7 @@ export default function Home() {
           </Container>
           <div className='absolute inset-2.5 h-full bg-[linear-gradient(to_top,var(--primary)_200px,blue)] opacity-75 mix-blend-hard-light tablet:inset-[20px]'></div>
           <div className='absolute inset-2.5 -z-10 tablet:inset-[20px]'>
-            <Image
-              src={heroBg}
-              priority
-              className='object-cover object-top'
-              fill
-              alt=''
-            />
+            <Image src={heroBg} priority className='object-cover' fill alt='' />
           </div>
         </Section>
         <Section id='expertise' className='overflow-hidden'>
