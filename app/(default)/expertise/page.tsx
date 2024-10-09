@@ -58,7 +58,11 @@ export default function Expertise() {
           <Insights />
         </ScrollAnimationWrapper>
         <div className='absolute inset-0'>
-          <Image src={insightBg} className='absolute inset-0' alt='' />
+          <Image
+            src={insightBg}
+            className='absolute inset-0 min-h-[600px]'
+            alt=''
+          />
         </div>
       </Section>
       <Section>

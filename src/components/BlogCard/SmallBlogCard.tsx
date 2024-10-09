@@ -9,13 +9,21 @@ interface Props {
 
 export const SmallBlogCard = ({ tag, title, description, date }: Props) => {
   const formatDate = formattedDate(date);
+  const tags = tag?.split(' ');
 
   return (
     <div className='flex flex-col items-start justify-between gap-[24px] rounded-[12px] bg-main-beige px-[40px] py-[40px]'>
       <div className='flex flex-col items-start gap-[24px]'>
-        <span className='rounded-[2px] bg-white px-[10px]  py-[10px] font-proxima text-[20px] leading-[1.2]'>
-          {tag}
-        </span>
+        <ul className='flex gap-[12px]'>
+          {tags.map((tag) => (
+            <li
+              key={tag}
+              className='rounded-[5px] bg-white px-[10px]  py-[10px] font-proxima text-[20px] leading-[1.2]'
+            >
+              {tag}
+            </li>
+          ))}
+        </ul>
         <h2 className='line-clamp-3 font-proxima text-[22px] font-bold leading-[1.1] text-text-dark tablet:text-[26px] desktop:text-[36px]'>
           {title}
         </h2>
