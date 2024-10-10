@@ -1,43 +1,17 @@
 import NotFoundPage from '@/app/not-found';
 import { SocialFollow } from '@/src/components/SocialFollow/SocialFollow';
-import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
 import { BackLink } from '@/src/ui-kit/BackLink/BackLink';
 import { BASE_URL } from '@/src/utils/alias';
-import { formattedDate } from '@/src/utils/formattedDate';
+import { contentTrimming } from '@/src/utils/contentTrimming';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
+import { openGraphImage } from '@/src/utils/openGraphParams';
 import fs from 'fs';
 import matter from 'gray-matter';
+import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
 import path from 'path';
 
-type Slug = {
-  slug: string;
-};
-
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
-
-export async function generateStaticParams(): Promise<Slug[]> {
-  const folder: string = 'src/expertise/';
-  const slugs: Slug[] = [];
-
-  function findMarkdownFiles(dir: string): void {
-    const files: string[] = fs.readdirSync(dir);
-    for (const file of files) {
-      const filePath: string = path.join(dir, file);
-      const stat: fs.Stats = fs.statSync(filePath);
-      if (stat.isDirectory()) {
-        findMarkdownFiles(filePath);
-      } else if (file.endsWith('.md')) {
-        const slug: string = file.replace('.md', '');
-        slugs.push({ slug });
-      }
-    }
-  }
-
-  findMarkdownFiles(folder);
-
-  return slugs;
-}
 
 const findMarkdownFile = (dir: string, slug: string): string | null => {
   const files = fs.readdirSync(dir);
@@ -73,6 +47,46 @@ const getPostContent = (slug: string) => {
   }
 };
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const post = getPostContent(params.slug);
+
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'This post does not exist',
+    };
+  }
+  const title = contentTrimming(post.data.title, 110);
+  const description = contentTrimming(post.data.description, 160);
+
+  const publishedDateISO = DateTime.fromFormat(
+    post.data.date,
+    'dd-MM-yyyy',
+  ).toISO();
+
+  return {
+    title: `Bright Byte - ${title}`,
+    description,
+    openGraph: {
+      type: 'article',
+      locale: 'en_US',
+      siteName: 'Bright Byte',
+      ...openGraphImage,
+      title: `Bright Byte - ${title}`,
+      description,
+      article: {
+        publishedTime: publishedDateISO,
+        modifiedTime: publishedDateISO,
+        AuthorInfo: post.data.authorImage ? [post.data.authorImage] : null,
+      },
+    },
+  };
+}
+
 export default function ExpertiseCase(props: { params: { slug: string } }) {
   const slug = props.params.slug;
   const expertiseCaseContent = getPostContent(slug);
@@ -80,10 +94,6 @@ export default function ExpertiseCase(props: { params: { slug: string } }) {
   if (!expertiseCaseContent) {
     return <NotFoundPage />;
   }
-
-  const date = formattedDate(expertiseCaseContent.data.date);
-
-  const { authorName, authorImage } = expertiseCaseContent.data;
 
   const image = expertiseCaseContent.data.image
     ? expertiseCaseContent.data.image
@@ -137,20 +147,10 @@ export default function ExpertiseCase(props: { params: { slug: string } }) {
       <BackLink linkName='expertise' />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div className='relative flex w-full items-center justify-center'></div>
-        <div className='mt-[200px]'>
-          {/* <h1
-            className={`font-proxima text-[28px] font-bold leading-[1.1] text-text-dark `}
-          >
-            {title}
-          </h1> */}
-        </div>
+        <div className='mt-[200px]'></div>
         <div
           className={`'mb-[10px] mt-[200px] flex flex-col tablet:mt-[20px] tablet:flex-row tablet:justify-between desktop:mb-[40px] desktop:mt-[20px]`}
-        >
-          {authorImage && (
-            <AuthorInfo image={authorImage} name={authorName} date={date} />
-          )}
-        </div>
+        ></div>
         <article
           className={`prose w-full max-w-[100%] pb-[30px] text-white prose-p:text-[16px] prose-p:text-text-dark/80 prose-li:text-[16px] prose-li:text-text-dark/80 tablet:pb-[40px] desktop:pb-[60px]`}
         >
