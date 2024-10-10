@@ -10,13 +10,19 @@ import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
+import { contentTrimming } from '@/src/utils/contentTrimming';
+import { pageMetadata } from '@/src/utils/metadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { Metadata } from 'next';
 
+const title = contentTrimming(pageMetadata.about.title, 105);
+const description = contentTrimming(pageMetadata.about.description, 155);
+
+const ogTitle = contentTrimming(pageMetadata.about.title, 90);
+
 export const metadata: Metadata = {
-  title: 'Bright Byte: Architects of Digital Transformation.',
-  description:
-    "Dive into our story of relentless innovation. Learn how Bright Byte's visionary approach to IT solutions is redefining business success in the digital age",
+  title,
+  description,
   metadataBase: new URL('https://www.thebrightbyte.com/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
@@ -26,9 +32,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Bright Byte',
     ...openGraphImage,
-    title: 'Bright Byte: Architects of Digital Transformation | Bright Byte',
-    description:
-      "Dive into our story of relentless innovation. Learn how Bright Byte's visionary approach to IT solutions is redefining business success in the digital age",
+    title: `${ogTitle} | Bright Byte`,
+    description,
   },
 };
 

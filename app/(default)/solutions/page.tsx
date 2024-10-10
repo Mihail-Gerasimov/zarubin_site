@@ -6,17 +6,22 @@ import { Insights } from '@/src/components/Main/Insights/Insights';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
+import { contentTrimming } from '@/src/utils/contentTrimming';
 import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
+import { pageMetadata } from '@/src/utils/metadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Suspense } from 'react';
 
+const title = contentTrimming(pageMetadata.solutions.title, 105);
+const description = contentTrimming(pageMetadata.solutions.description, 155);
+
+const ogTitle = contentTrimming(pageMetadata.solutions.title, 90);
+
 export const metadata: Metadata = {
-  title:
-    "Propel Your Business Forward with Bright Byte's Bespoke IT Solutions ",
-  description:
-    "Elevate growth and operational efficiency with our tailored IT strategies, engineered to address your unique business challenges in today's fast-paced digital ecosystem.",
+  title,
+  description,
   metadataBase: new URL('https://www.thebrightbyte.com/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
@@ -26,10 +31,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Bright Byte',
     ...openGraphImage,
-    title:
-      "Propel Your Business Forward with Bright Byte's Bespoke IT Solutions  | Bright Byte",
-    description:
-      "Elevate growth and operational efficiency with our tailored IT strategies, engineered to address your unique business challenges in today's fast-paced digital ecosystem.",
+    title: `${ogTitle}  | Bright Byte`,
+    description,
   },
 };
 

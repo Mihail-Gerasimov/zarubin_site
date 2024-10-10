@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'IT'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 The responsibilities of Project Managers and Product Managers are often confused. Let's clarify once and for all who is who, how they work, and where they intersect.

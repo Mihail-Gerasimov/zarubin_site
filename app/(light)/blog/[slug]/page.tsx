@@ -5,6 +5,7 @@ import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
 import { BackLink } from '@/src/ui-kit/BackLink/BackLink';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import { BASE_URL } from '@/src/utils/alias';
+import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
@@ -64,8 +65,11 @@ export async function generateMetadata({
       description: 'This post does not exist',
     };
   }
-  const title = post.data.title;
-  const description = contentTrimming(post.data.description, 150);
+
+  const cleanTitle = cleanMetaTitle(post.data.title);
+
+  const title = contentTrimming(cleanTitle, 105);
+  const description = contentTrimming(post.data.description, 155);
 
   const publishedDateISO = DateTime.fromFormat(
     post.data.date,

@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'IT'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 First of all, it is important to define what each term means:

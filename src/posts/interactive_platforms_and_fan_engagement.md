@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'Sports'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 Each year, the role of digital products in the sports sector becomes increasingly significant, offering new opportunities for athletes, managers, and fans alike. In our best practices checklist for improving key metrics of sports clubs, we focus on analyzing tools for better website and app performance.

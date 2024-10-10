@@ -49,8 +49,8 @@ export async function generateMetadata({
       description: 'This page does not exist',
     };
   }
-  const title = post.data.title;
-  const description = contentTrimming(post.data.description, 150);
+  const title = contentTrimming(post.data.title, 90);
+  const description = contentTrimming(post.data.description, 155);
 
   return {
     title: `Bright Byte - ${title}`,

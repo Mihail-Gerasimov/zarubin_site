@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'IT'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 Almost all online education platforms have launched their programming courses. They promise, of course, a long and happy life, knowledge of languages, and the caring support of a mentor who will be proud of you no matter what. Let's figure out how this happens in reality, what the "righteous path of a true developer" is, and whether you will be hired or not.

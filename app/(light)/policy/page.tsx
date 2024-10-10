@@ -1,12 +1,20 @@
 import { Privacy } from '@/src/components/Privacy/Privacy';
+import { contentTrimming } from '@/src/utils/contentTrimming';
+import { pageMetadata } from '@/src/utils/metadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { Metadata } from 'next';
 
+const title = contentTrimming(pageMetadata.privacyPolicy.title, 105);
+const description = contentTrimming(
+  pageMetadata.privacyPolicy.description,
+  155,
+);
+
+const ogTitle = contentTrimming(pageMetadata.privacyPolicy.title, 90);
+
 export const metadata: Metadata = {
-  title:
-    "Safeguarding Your Digital Future: Bright Byte's Ironclad Privacy Policy ",
-  description:
-    'Experience peace of mind with our unwavering commitment to data protection. Explore how we ensure your information remains secure while complying with global privacy standards.',
+  title,
+  description,
   metadataBase: new URL('https://www.thebrightbyte.com/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
@@ -16,10 +24,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Bright Byte',
     ...openGraphImage,
-    title:
-      "Safeguarding Your Digital Future: Bright Byte's Ironclad Privacy Policy | Bright Byte",
-    description:
-      ' Experience peace of mind with our unwavering commitment to data protection. Explore how we ensure your information remains secure while complying with global privacy standards.',
+    title: `${ogTitle} | Bright Byte`,
+    description,
   },
 };
 

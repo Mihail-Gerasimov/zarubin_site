@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'Management'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 As I enter the 15th year of my professional journey, reflecting on my experiences feels both nostalgic and enlightening. I began my career in university as a Pascal programmer, creating textures for OpenGL. Over time, I delved into languages like C#, Objective-C, Swift, and Node.js. My career has afforded me the opportunity to work from both client and developer perspectives, giving me a comprehensive understanding of how to launch IT projects successfully.

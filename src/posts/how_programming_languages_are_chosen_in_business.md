@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'Management'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 In the world of development, there are many programming languages, and their number is constantly growing. For the web, some use more reliable and time-tested languages like Java, C#, and PHP. Modern developers are already experimenting with Go and even Flutter for web development. Mobile development has its own set of languages. The choice of a specific language depends on the nature of the task and the preferences of the developer. How do you determine which technology stack to choose?

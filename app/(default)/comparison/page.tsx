@@ -9,10 +9,17 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import styles from './Comparison.module.css';
 
+import { contentTrimming } from '@/src/utils/contentTrimming';
+import { pageMetadata } from '@/src/utils/metadata';
+
+const title = contentTrimming(pageMetadata.comparison.title, 105);
+const description = contentTrimming(pageMetadata.comparison.description, 155);
+
+const ogTitle = contentTrimming(pageMetadata.comparison.title, 90);
+
 export const metadata: Metadata = {
-  title: 'Bright Byte vs. The Rest: Unparalleled IT Solutions Comparison',
-  description:
-    'Discover why industry leaders choose Bright Byte. Compare our cutting-edge IT services and witness firsthand how our expertise translates into superior business results.',
+  title,
+  description,
   metadataBase: new URL('https://www.thebrightbyte.com/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
@@ -22,10 +29,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Bright Byte',
     ...openGraphImage,
-    title:
-      'Bright Byte vs. The Rest: Unparalleled IT Solutions Comparison | Bright Byte',
-    description:
-      'Discover why industry leaders choose Bright Byte. Compare our cutting-edge IT services and witness firsthand how our expertise translates into superior business results.',
+    title: `${ogTitle} | Bright Byte`,
+    description,
   },
 };
 

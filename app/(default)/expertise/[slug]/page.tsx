@@ -2,6 +2,7 @@ import NotFoundPage from '@/app/not-found';
 import { SocialFollow } from '@/src/components/SocialFollow/SocialFollow';
 import { BackLink } from '@/src/ui-kit/BackLink/BackLink';
 import { BASE_URL } from '@/src/utils/alias';
+import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
@@ -87,8 +88,11 @@ export async function generateMetadata({
       description: 'This post does not exist',
     };
   }
-  const title = contentTrimming(post.data.title, 110);
-  const description = contentTrimming(post.data.description, 160);
+
+  const cleanTitle = cleanMetaTitle(post.data.title);
+
+  const title = contentTrimming(cleanTitle, 105);
+  const description = contentTrimming(post.data.description, 155);
 
   const publishedDateISO = DateTime.fromFormat(
     post.data.date,

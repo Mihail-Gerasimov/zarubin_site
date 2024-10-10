@@ -5,9 +5,6 @@ image: '/assets/images/expertise/it_service/uipath_vs_zapier-banner.webp'
 date: '08-10-2024'
 type: 'It Service'
 tag: ''
-authorName: ''
-authorImage: ''
-downloadLink: ''
 ---
 
 ## UIPath vs Zapier Integration Service: Integrate RPA Deeply

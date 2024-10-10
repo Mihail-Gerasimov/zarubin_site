@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'IT'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 How does this mysterious system work, why is it not a panacea for business, and how do you know if you need it or not? Today we will talk about CRM—its types, goals, and an old-school analog.
