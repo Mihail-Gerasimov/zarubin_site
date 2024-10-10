@@ -7,12 +7,14 @@ interface Props {
 
 export const BackLink = ({ linkName }: Props) => {
   return (
-    <Link
-      href={`/${linkName}`}
-      className='stickyLink z-[5] ml-[33px] hidden w-fit items-center gap-[10px] font-proxima text-[20px] font-bold text-text-dark desktop:flex'
-    >
-      <Back className='w-[24px]' />
-      Back to {linkName}
-    </Link>
+    <div className='absolute flex !h-full min-h-screen w-fit items-end'>
+      <Link
+        href={`/${linkName}`}
+        className='sticky bottom-4 left-0 z-[5] h-fit w-fit items-center gap-[10px] font-proxima text-[20px] font-bold text-text-dark desktop:flex'
+      >
+        <Back className='w-[24px]' />
+        Back to {linkName}
+      </Link>
+    </div>
   );
 };

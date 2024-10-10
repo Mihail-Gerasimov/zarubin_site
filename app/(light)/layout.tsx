@@ -58,7 +58,7 @@ export default function RootLayout({
         className={`${inter.className} flex flex-col bg-white text-text-dark`}
       >
         <Header dark={false} expertiseSubmenu={testList} />
-        <main>{children}</main>
+        <main className='relative'>{children}</main>
         <Footer />
         <Script id='replain'>
           {`window.replainSettings = { id: '07c36061-dbc9-4cb8-85cb-9e69876b9d34' };
