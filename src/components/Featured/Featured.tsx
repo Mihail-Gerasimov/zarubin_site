@@ -2,11 +2,11 @@
 
 import Arrow from '@/public/assets/images/icons/arrow.svg';
 import { Post } from '@/src/utils/types';
+import useMediaQuery from '@/src/utils/useMediaQuery';
 import Link from 'next/link';
 import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { SmallBlogCard } from '../BlogCard/SmallBlogCard';
-import useMediaQuery from '@/src/utils/useMediaQuery';
 
 interface Props {
   slug?: string;
