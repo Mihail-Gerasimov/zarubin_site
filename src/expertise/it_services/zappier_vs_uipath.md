@@ -7,7 +7,6 @@ type: 'It Service'
 tag: ''
 authorName: ''
 authorImage: ''
-downloadLink: ''
 ---
 
 ## UIPath vs Zapier Integration Service: Integrate RPA Deeply

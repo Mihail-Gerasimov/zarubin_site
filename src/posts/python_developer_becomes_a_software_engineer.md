@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'Management'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 We have all encountered job titles like "Software Engineers," "Category V Specialists," and other engineering-specific titles. Many developers wonder why a position listed as an iOS developer on hh.ru suddenly changes its title upon employment. There are several reasons for this, and to understand them, we need to explore how these positions come to be.

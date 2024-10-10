@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'All'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 The Bright Byte advocates for the transformative power of gamification in loyalty programs. Engaging and retaining people's attention can be achieved through three strategic pillars that play a crucial role in deep interaction. They are as follows:

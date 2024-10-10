@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'Management'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 We are all familiar with situations where a large company is serviced by a smaller one, headed by a friend or relative. Let's not discuss the moral aspect of this issue but rather its origins. The nature of such behavior by the decision-maker is quite simple and is based on trust. In custom development and large-scale production of anything, there are risks, including the risk of non-delivery. It is believed that if you have a recommendation or know the person, an invisible leverage over the contractor is created. This is because you know and trust this person. If you don't believe this, look at the audience of any "infopreneur" and how they warm up their audience.

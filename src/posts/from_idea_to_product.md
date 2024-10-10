@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'IT'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 Welcome to the world of custom development! Turning an idea into a product can be a lengthy and costly process. However, with the use of innovative approaches in development, it can become an exciting journey to success. We employ Agile methodologies, modern tools like YouTrack, and CI/CD setups on our servers.

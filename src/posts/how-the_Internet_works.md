@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'Management'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 I enjoy asking the following question during interviews:

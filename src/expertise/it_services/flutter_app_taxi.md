@@ -7,7 +7,6 @@ type: 'It Service'
 tag: 'Flutter, B2B, Cloud-based App, AWS'
 authorName: ''
 authorImage: ''
-downloadLink: ''
 ---
 
 # Custom Taxi App Development on Flutter: Scalable Solutions for B2C and B2B Markets OR uber-clone
@@ -44,6 +43,7 @@ Cloud architecture on AWS:
 - Auto-scaling enabled.
 - Database: Amazon RDS with automated backups.
 ```
+
 By implementing scalable solutions, you can support seamless business growth, ensuring that your taxi app can handle hundreds of thousands—or even millions—of active users without disruption.
 
 ![uber app](https://i.imgur.com/r6hZtg3.jpg)

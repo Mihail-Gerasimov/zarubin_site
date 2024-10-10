@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'Sports'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 On July 20, 2023, the 9th Women's World Football Championship kicked off. It's no secret that women's sports are on the path to a historic breakthrough. The role of Artificial Intelligence (AI) is becoming pivotal in creating new opportunities and achieving grandiose results for women's sports. The use of AI opens up new perspectives and brings a breath of fresh air, ushering in change.

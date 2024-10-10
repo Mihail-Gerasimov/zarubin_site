@@ -7,7 +7,6 @@ type: 'Notes'
 tag: 'Management'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-downloadLink: ''
 ---
 
 Ideas do not emerge in a vacuum. In large companies, there is an approach called "gemba." This involves sending all employees to the frontline (e.g., a gas station) to immerse themselves in the company's operations. This helps office workers understand the issues faced by frontline workers, allowing them to discard unnecessary ideas and focus on those that address customer pain points. This is because new ideas often arise at the intersection of different fields.
