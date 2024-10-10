@@ -172,11 +172,6 @@ input:-webkit-autofill:active {
     background-color: var(--pagination-col);
   }
 
-  .stickyLink {
-    position: sticky;
-    top: calc(50vh);
-  }
-
   .manifesto-list {
     @apply prose-p:m-[0] prose-ol:flex prose-ol:flex-col prose-ol:gap-[40px] prose-li:m-0 prose-li:pl-[20px] tablet:prose-li:pl-[40px];
   }
