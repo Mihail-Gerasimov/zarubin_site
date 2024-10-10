@@ -10,7 +10,6 @@ authorImage: ''
 downloadLink: ''
 ---
 
-![uber app](https://i.imgur.com/r6hZtg3.jpg)
 # Custom Taxi App Development on Flutter: Scalable Solutions for B2C and B2B Markets OR uber-clone
 
 In today’s competitive ride-hailing landscape, developing a **robust** taxi application goes beyond just creating a basic app. At **Bright Byte**, we take pride in crafting **scalable** taxi apps on **Flutter** that cater to both **drivers** and **passengers**, complete with a **back-end system** for operators and administrators.
@@ -46,6 +45,8 @@ Cloud architecture on AWS:
 - Database: Amazon RDS with automated backups.
 ```
 By implementing scalable solutions, you can support seamless business growth, ensuring that your taxi app can handle hundreds of thousands—or even millions—of active users without disruption.
+
+![uber app](https://i.imgur.com/r6hZtg3.jpg)
 
 ## Feedback Systems to Manage Incidents
 
