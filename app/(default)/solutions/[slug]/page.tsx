@@ -6,8 +6,8 @@ import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationW
 import { Section } from '@/src/components/shared/Section/Section';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import {
-    InstrumentIcons,
-    InstrumentIconsType
+  InstrumentIcons,
+  InstrumentIconsType,
 } from '@/src/utils/DataLayers/InstrumentsIcon';
 import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
@@ -49,8 +49,8 @@ export async function generateMetadata({
       description: 'This page does not exist',
     };
   }
-  const title = post.data.title;
-  const description = contentTrimming(post.data.description, 150);
+  const title = contentTrimming(post.data.title, 90);
+  const description = contentTrimming(post.data.description, 155);
 
   return {
     title: `Bright Byte - ${title}`,

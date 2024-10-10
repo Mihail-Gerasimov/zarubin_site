@@ -13,12 +13,17 @@ import { openGraphImage } from '@/src/utils/openGraphParams';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { ClientExpertiseItems } from './ClientExpertiseItems';
+import { pageMetadata } from '@/src/utils/metadata';
+import { contentTrimming } from '@/src/utils/contentTrimming';
+
+const title = contentTrimming(pageMetadata.expertise.title, 105);
+const description = contentTrimming(pageMetadata.expertise.description, 155);
+
+const ogTitle = contentTrimming(pageMetadata.expertise.title, 90);
 
 export const metadata: Metadata = {
-  title:
-    'Bright Byte - Expertise in systems integration, mobile applications: Leading IT Expertise',
-  description:
-    "Unleash transformative digital solutions across sports, entertainment, fintech, and beyond with Bright Byte's proven track record of innovation.",
+  title,
+  description,
   metadataBase: new URL('https://www.thebrightbyte.com/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
@@ -28,10 +33,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Bright Byte',
     ...openGraphImage,
-    title:
-      'Bright Byte - Expertise in systems integration, mobile applications: Leading IT Expertise | Bright Byte',
-    description:
-      "Unleash transformative digital solutions across sports, entertainment, fintech, and beyond with Bright Byte's proven track record of innovation.",
+    title: `${ogTitle} | Bright Byte`,
+    description,
   },
 };
 

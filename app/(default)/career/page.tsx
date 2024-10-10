@@ -13,11 +13,17 @@ import { openGraphImage } from '@/src/utils/openGraphParams';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import styles from './Career.module.css';
+import { pageMetadata } from '@/src/utils/metadata';
+import { contentTrimming } from '@/src/utils/contentTrimming';
+
+const title = contentTrimming(pageMetadata.career.title, 105);
+const description = contentTrimming(pageMetadata.career.description, 155);
+
+const ogTitle = contentTrimming(pageMetadata.career.title, 90);
 
 export const metadata: Metadata = {
-  title: "Shape Tomorrow's Technology: Exciting IT Careers at Bright Byte",
-  description:
-    "Dive into our story of relentless innovation. Learn how Bright Byte's visionary approach to IT solutions is redefining business success in the digital age",
+  title,
+  description,
   metadataBase: new URL('https://www.thebrightbyte.com/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
@@ -27,10 +33,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'Bright Byte',
     ...openGraphImage,
-    title:
-      "Shape Tomorrow's Technology: Exciting IT Careers at Bright Byte | Bright Byte",
-    description:
-      'Embark on a rewarding journey in digital innovation. Join our dynamic team of tech visionaries and play a pivotal role in revolutionizing the IT landscape',
+    title: `${ogTitle} | Bright Byte`,
+    description,
   },
 };
 

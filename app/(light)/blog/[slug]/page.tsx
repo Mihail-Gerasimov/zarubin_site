@@ -19,6 +19,7 @@ import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
 import NotFoundPage from '../not-found';
 import styles from './Post.module.css';
+import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 
@@ -64,8 +65,11 @@ export async function generateMetadata({
       description: 'This post does not exist',
     };
   }
-  const title = post.data.title;
-  const description = contentTrimming(post.data.description, 150);
+
+  const cleanTitle = cleanMetaTitle(post.data.title);
+
+  const title = contentTrimming(cleanTitle, 105);
+  const description = contentTrimming(post.data.description, 155);
 
   const publishedDateISO = DateTime.fromFormat(
     post.data.date,
