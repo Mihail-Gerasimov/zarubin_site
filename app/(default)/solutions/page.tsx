@@ -6,13 +6,13 @@ import { Insights } from '@/src/components/Main/Insights/Insights';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
+import { contentTrimming } from '@/src/utils/contentTrimming';
 import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
+import { pageMetadata } from '@/src/utils/metadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Suspense } from 'react';
-import { pageMetadata } from '@/src/utils/metadata';
-import { contentTrimming } from '@/src/utils/contentTrimming';
 
 const title = contentTrimming(pageMetadata.solutions.title, 105);
 const description = contentTrimming(pageMetadata.solutions.description, 155);

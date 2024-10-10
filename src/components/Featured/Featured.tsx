@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { SmallBlogCard } from '../BlogCard/SmallBlogCard';
+import useMediaQuery from '@/src/utils/useMediaQuery';
 
 interface Props {
   slug?: string;
@@ -14,6 +15,8 @@ interface Props {
 
 export const Featured = ({ slug, posts }: Props) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
+
+  const isMobile = useMediaQuery('<tablet');
 
   return (
     <div className='flex flex-col gap-[40px] border-t-[1px] border-text-dark'>
@@ -42,7 +45,7 @@ export const Featured = ({ slug, posts }: Props) => {
       </div>
       <Swiper
         onSwiper={setSwiper}
-        slidesPerView={2}
+        slidesPerView={isMobile ? 1 : 2}
         spaceBetween={40}
         className='max-w-full'
         wrapperClass='items-stretch'

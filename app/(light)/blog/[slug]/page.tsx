@@ -5,6 +5,7 @@ import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
 import { BackLink } from '@/src/ui-kit/BackLink/BackLink';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import { BASE_URL } from '@/src/utils/alias';
+import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
@@ -19,7 +20,6 @@ import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
 import NotFoundPage from '../not-found';
 import styles from './Post.module.css';
-import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 

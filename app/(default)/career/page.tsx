@@ -9,12 +9,12 @@ import { Values } from '@/src/components/Career/Values/Values';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
+import { contentTrimming } from '@/src/utils/contentTrimming';
+import { pageMetadata } from '@/src/utils/metadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import styles from './Career.module.css';
-import { pageMetadata } from '@/src/utils/metadata';
-import { contentTrimming } from '@/src/utils/contentTrimming';
 
 const title = contentTrimming(pageMetadata.career.title, 105);
 const description = contentTrimming(pageMetadata.career.description, 155);

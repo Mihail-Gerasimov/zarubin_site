@@ -9,12 +9,12 @@ import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
 import { ExpertiseHeroBgSvg } from '@/src/components/svg/ExpertiseHeroBgSvg';
+import { contentTrimming } from '@/src/utils/contentTrimming';
+import { pageMetadata } from '@/src/utils/metadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { ClientExpertiseItems } from './ClientExpertiseItems';
-import { pageMetadata } from '@/src/utils/metadata';
-import { contentTrimming } from '@/src/utils/contentTrimming';
 
 const title = contentTrimming(pageMetadata.expertise.title, 105);
 const description = contentTrimming(pageMetadata.expertise.description, 155);

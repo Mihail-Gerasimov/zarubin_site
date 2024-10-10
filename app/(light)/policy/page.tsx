@@ -1,8 +1,8 @@
 import { Privacy } from '@/src/components/Privacy/Privacy';
+import { contentTrimming } from '@/src/utils/contentTrimming';
+import { pageMetadata } from '@/src/utils/metadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { Metadata } from 'next';
-import { pageMetadata } from '@/src/utils/metadata';
-import { contentTrimming } from '@/src/utils/contentTrimming';
 
 const title = contentTrimming(pageMetadata.privacyPolicy.title, 105);
 const description = contentTrimming(

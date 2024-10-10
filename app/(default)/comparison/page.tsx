@@ -9,8 +9,8 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import styles from './Comparison.module.css';
 
-import { pageMetadata } from '@/src/utils/metadata';
 import { contentTrimming } from '@/src/utils/contentTrimming';
+import { pageMetadata } from '@/src/utils/metadata';
 
 const title = contentTrimming(pageMetadata.comparison.title, 105);
 const description = contentTrimming(pageMetadata.comparison.description, 155);

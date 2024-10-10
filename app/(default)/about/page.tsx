@@ -10,10 +10,10 @@ import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
+import { contentTrimming } from '@/src/utils/contentTrimming';
+import { pageMetadata } from '@/src/utils/metadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { Metadata } from 'next';
-import { pageMetadata } from '@/src/utils/metadata';
-import { contentTrimming } from '@/src/utils/contentTrimming';
 
 const title = contentTrimming(pageMetadata.about.title, 105);
 const description = contentTrimming(pageMetadata.about.description, 155);
