@@ -5,8 +5,8 @@ image: ''
 date: '13-03-2023'
 type: 'Notes'
 tag: 'Management'
-authorName: ''
-authorImage: ''
+authorName: 'Vitaliy Zarubin'
+authorImage: '/assets/images/author/avatar.png'
 downloadLink: ''
 ---
 
