@@ -2,7 +2,6 @@
 
 import { InputMask } from '@react-input/mask';
 import { useFormik } from 'formik';
-import styles from './Form.module.css';
 
 export const Form = () => {
   const formik = useFormik({
@@ -60,57 +59,54 @@ export const Form = () => {
       <div className='font-unbound text-[32px] font-semibold leading-[37px] text-white'>
         Fill out the form and click the blue button to get in touch with you!
       </div>
-      <form className={styles.form} onSubmit={formik.handleSubmit}>
-        <label className={styles.label}>
-          <input
-            type='text'
-            name='name'
-            placeholder='Name'
-            value={formik.values.name}
-            required
-            className={styles.input}
-            onChange={formik.handleChange}
-          />
-        </label>
-        <label className={styles.label}>
-          <input
-            type='email'
-            name='email'
-            value={formik.values.email}
-            placeholder='E-mail'
-            className={styles.input}
-            required
-            onChange={formik.handleChange}
-          />
-        </label>
-        <label className={styles.label}>
-          <InputMask
-            type='tel'
-            name='phone'
-            mask='____________________'
-            replacement={{
-              _: /[0-9]/,
-            }}
-            value={formik.values.phone}
-            placeholder='Phone'
-            className={styles.input}
-            required
-            onChange={formik.handleChange}
-          />
-        </label>
-        <label className={styles.label}>
-          <textarea
-            name='details'
-            value={formik.values.details}
-            placeholder='Project details'
-            className={styles.input}
-            onChange={formik.handleChange}
-            required
-          />
-        </label>
-        <button type='submit' className={styles.formBtn}>
+      <form
+        className='mt-[49px] flex-col space-y-[45px] overflow-hidden'
+        onSubmit={formik.handleSubmit}
+      >
+        <input
+          type='text'
+          name='name'
+          placeholder='Name'
+          value={formik.values.name}
+          required
+          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-2xl text-white placeholder-opacity-50 outline-none focus:bg-blue-950'
+          onChange={formik.handleChange}
+        />
+        <input
+          type='email'
+          name='email'
+          value={formik.values.email}
+          placeholder='E-mail'
+          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-2xl text-white placeholder-opacity-50 outline-none focus:bg-blue-950'
+          required
+          onChange={formik.handleChange}
+        />
+        <InputMask
+          type='tel'
+          name='phone'
+          mask='____________________'
+          replacement={{
+            _: /[0-9]/,
+          }}
+          value={formik.values.phone}
+          placeholder='Phone'
+          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-2xl text-white placeholder-opacity-50 outline-none focus:bg-blue-950'
+          required
+          onChange={formik.handleChange}
+        />
+        <textarea
+          name='details'
+          value={formik.values.details}
+          placeholder='Project details'
+          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-2xl text-white placeholder-opacity-50 outline-none focus:bg-blue-950'
+          onChange={formik.handleChange}
+          required
+        />
+        <button
+          type='submit'
+          className='w-full transform rounded-[6px] bg-blue-700 px-[15px] py-[13px] text-xl font-bold text-white transition duration-200 ease-in-out hover:scale-[0.99] hover:bg-blue-500'
+        >
           Blue button
-          {/* <Arrow className={styles.arrow} /> */}
         </button>
       </form>
     </div>

@@ -33,7 +33,7 @@ export const FeedbackCard = ({ data, length, indexNumber }: Props) => {
           height={485}
           alt={data.name}
           className={styles.image}
-          priority
+          loading='lazy'
         />
         <div className={styles.contentWrapper}>
           <div className={styles.content}>
