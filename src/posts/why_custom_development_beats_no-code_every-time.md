@@ -2,7 +2,7 @@
 title: 'Why custom development beats no-code every time'
 description: 'Bright Byte specializes in custom taxi app development on Flutter. We provide scalable and tailored solutions, focusing on cloud-based infrastructure, business processes, and long-term support for B2B and B2C markets'
 image: ''
-date: '08-10-2024'
+date: '09-10-2024'
 type: 'Notes'
 tag: 'Custom development, No-Code, B2B, Mobile'
 authorName: 'Vitaliy Zarubin'
