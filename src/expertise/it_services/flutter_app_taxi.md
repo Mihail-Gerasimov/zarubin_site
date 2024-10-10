@@ -5,8 +5,6 @@ image: ''
 date: '08-10-2024'
 type: 'It Service'
 tag: 'Flutter, B2B, Cloud-based App, AWS'
-authorName: ''
-authorImage: ''
 ---
 
 # Custom Taxi App Development on Flutter: Scalable Solutions for B2C and B2B Markets OR uber-clone

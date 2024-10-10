@@ -5,8 +5,6 @@ image: '/assets/images/expertise/it_service/generative-ai-services-hero-banner.w
 date: '08-10-2024'
 type: 'It Service'
 tag: 'AI, ChatGPT, Claude, CoPilot'
-authorName: ''
-authorImage: ''
 ---
 
 # AI Tools for Development: A Review of Claude, ChatGPT, and Other AI Solutions
