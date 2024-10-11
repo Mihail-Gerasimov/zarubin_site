@@ -30,7 +30,7 @@ export const ExpertiseSubMenu = ({
   };
 
   return (
-    <div className='mx-[auto] flex w-full items-stretch justify-center gap-[40px] px-[60px] py-[10px]'>
+    <div className='mx-auto my-0 flex w-full max-w-[900px] items-stretch gap-[40px] px-[60px] py-[10px]'>
       {expertiseSubMenu.map((item) => (
         <div
           key={item.name}
