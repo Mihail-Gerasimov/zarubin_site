@@ -3,6 +3,8 @@
 import { InputMask } from '@react-input/mask';
 import { useFormik } from 'formik';
 
+console.log(process.env);
+
 export const Form = () => {
   const formik = useFormik({
     initialValues: {
@@ -17,39 +19,35 @@ export const Form = () => {
         formData.append(key, values[key as keyof typeof values]),
       );
 
-      const response = await fetch(
-        'https://wild-term-a5e5.access-f8d.workers.dev/',
+      await fetch('https://wild-term-a5e5.access-f8d.workers.dev/', {
+        method: 'POST',
+        body: formData,
+      }).then((r) => r.json());
+
+      // if (response.error) {
+      //   console.error('Error sending form data:', response);
+      // }
+      const telegramResponse = await fetch(
+        'https://api.telegram.org/bot6992822983:AAHWVJuwqeVl5kscHuZwcPx5W-IPXJ7mpkk/sendMessage',
         {
           method: 'POST',
-          body: formData,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            chat_id: '199942509',
+            text: `
+              Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}\nDetails: ${values.details}
+            `,
+          }),
         },
       ).then((r) => r.json());
 
-      if (!response.error) {
-        const telegramResponse = await fetch(
-          'https://api.telegram.org/bot6992822983:AAHWVJuwqeVl5kscHuZwcPx5W-IPXJ7mpkk/sendMessage',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              chat_id: '199942509',
-              text: `
-              Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}\nDetails: ${values.details}
-            `,
-            }),
-          },
-        ).then((r) => r.json());
-
-        if (telegramResponse.ok) {
-          resetForm();
-          alert('Thank you! We will contact you soon');
-        } else {
-          console.error('Error sending message to Telegram:', telegramResponse);
-        }
+      if (telegramResponse.ok) {
+        resetForm();
+        alert('Thank you! We will contact you soon');
       } else {
-        console.error('Error sending form data:', response);
+        console.error('Error sending message to Telegram:', telegramResponse);
       }
     },
   });
