@@ -60,7 +60,7 @@ export const MainList = ({
               className='h-fit w-fit'
             >
               <Arrow
-                className={`h-[auto] w-[25px]  transition-transform duration-300 ease-in-out hover:fill-main-blue ${dark ? 'fill-white' : 'fill-main-bg'} ${activeSubmenu ? '-rotate-90' : 'rotate-90'}`}
+                className={`h-[auto] w-[25px]  transition-transform duration-300 ease-in-out hover:fill-main-blue ${dark ? 'fill-white' : 'fill-main-bg'} ${activeSubmenu ? '-rotate-[-90deg]' : '-rotate-30'}`}
               />
             </button>
           )}
