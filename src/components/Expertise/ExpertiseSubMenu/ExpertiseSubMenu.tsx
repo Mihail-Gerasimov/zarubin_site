@@ -34,7 +34,7 @@ export const ExpertiseSubMenu = ({
       {expertiseSubMenu.map((item) => (
         <div
           key={item.name}
-          className={`flex flex-col border-white p-[5px] first:border-r-[1px] first:pr-[40px] ${dark ? 'text-white' : 'text-main-bg'}`}
+          className={`flex flex-col border-neutral-700 p-[5px] first:border-r-[1px] first:pr-[40px] ${dark ? 'text-white' : 'text-main-bg'}`}
         >
           <p className='h-fit flex-1 font-unbound text-[22px] font-bold uppercase'>
             {formatMenuItem(item.name)}
