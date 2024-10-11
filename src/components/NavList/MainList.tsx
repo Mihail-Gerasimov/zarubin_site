@@ -8,6 +8,7 @@ interface Props {
   dark?: boolean;
   activeSubmenu: boolean;
   toggleSubmenu: () => void;
+  onMenuItemHover: (isActive: boolean) => void;
 }
 
 interface List {
@@ -19,8 +20,9 @@ interface List {
 export const MainList = ({
   list,
   dark = true,
-  toggleSubmenu,
   activeSubmenu,
+  toggleSubmenu,
+  onMenuItemHover,
 }: Props) => {
   const pathname = usePathname();
 
@@ -28,6 +30,11 @@ export const MainList = ({
     <ul className='hidden justify-center gap-[44px] laptop-big:flex'>
       {list.map((item) => (
         <li
+          onMouseEnter={
+            item.name.toLowerCase() === 'expertise'
+              ? () => onMenuItemHover(true)
+              : undefined
+          }
           key={item.id}
           className='flex items-center justify-center gap-[10px]'
         >
