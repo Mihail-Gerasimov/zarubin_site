@@ -22,11 +22,15 @@ interface Submenu {
 }
 
 export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const [activeSubmenu, setActiveSubmenu] = useState(false);
 
   const toggleSubmenu = () => {
     setActiveSubmenu(!activeSubmenu);
+  };
+
+  const handleChangeActiveMenu = (isActive: boolean) => {
+    setActiveSubmenu(isActive);
   };
 
   const isMobile = useMediaQuery('<desktop-l');
@@ -42,6 +46,7 @@ export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
 
   return (
     <header
+      onMouseLeave={() => handleChangeActiveMenu(false)}
       className={`sticky top-0 z-50 mx-auto h-[100px] w-full ${dark ? 'bg-main-bg' : 'bg-white'}`}
     >
       <Container
@@ -54,6 +59,7 @@ export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
             dark={dark}
             activeSubmenu={activeSubmenu}
             toggleSubmenu={toggleSubmenu}
+            onMenuItemHover={handleChangeActiveMenu}
           />
         </nav>
         <ContactUsBtn dark={dark} />
