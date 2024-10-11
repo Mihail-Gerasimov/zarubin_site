@@ -4,7 +4,7 @@ description: "There's an old saying: Appetite comes with eating. This is especia
 image: ''
 date: '07-10-2024'
 type: 'Notes'
-tag: 'Product Management Business'
+tag: 'Product, Management, Business'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---

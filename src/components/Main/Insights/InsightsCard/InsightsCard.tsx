@@ -19,7 +19,7 @@ export const InsightsCard = ({
   slug,
   type,
 }: Props) => {
-  const tags = tag?.split(' ');
+  const tags = tag?.split(',');
 
   return (
     <Link href={`/blog/${slug}`} className={styles.cardContainer}>
