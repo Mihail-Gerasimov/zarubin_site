@@ -3,7 +3,7 @@ title: 'Top 10 Information Security practices'
 description: 'Discover the top 10 key considerations for ensuring information security in custom digital product development. Learn about secure infrastructure, data encryption, and more'
 image: ''
 date: '12-10-2024'
-type: 'It Service'
+type: 'Notes'
 tag: 'Data security, Infrastructure, Mobile App encryption, GDPR'
 
 ---
