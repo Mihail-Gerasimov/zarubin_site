@@ -1,8 +1,8 @@
 ---
 title: 'Information security in products'
 description: 'Learn the key aspects of information security in custom digital product development. From secure infrastructure to password management and encryption.'
-image: '/assets/images/expertise/it_service/generative-ai-services-hero-banner.webp'
-date: '08-10-2024'
+image: ''
+date: '12-10-2024'
 type: 'It Service'
 tag: 'Data security, Infrastructure, Mobile App encryption'
 
