@@ -1,7 +1,7 @@
 ---
 title: 'We Were Hacked'
 description: 'How to defend from cyber attack'
-image: '/assets/images/post/we_were_hacked'
+image: '/assets/images/post/we_were_hacked.png'
 date: '13-10-2024'
 type: 'Notes'
 tag: 'Hackers here'
