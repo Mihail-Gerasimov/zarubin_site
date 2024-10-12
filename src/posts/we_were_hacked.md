@@ -5,6 +5,8 @@ image: '/assets/images/post/we_were_hacked.png'
 date: '13-10-2024'
 type: 'Notes'
 tag: 'Hackers here'
+authorName: 'Vitaliy Zarubin'
+authorImage: '/assets/images/author/avatar.png'
 
 ---
 
