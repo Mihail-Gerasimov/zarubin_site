@@ -5,6 +5,8 @@ image: ''
 date: '12-10-2024'
 type: 'Notes'
 tag: 'Data security, Infrastructure, Mobile App encryption, GDPR'
+authorName: 'Vitaliy Zarubin'
+authorImage: '/assets/images/author/avatar.png'
 
 ---
 
