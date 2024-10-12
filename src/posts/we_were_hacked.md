@@ -1,10 +1,10 @@
 ---
-title: 'We Were Hacked'
-description: 'How to defend from cyber attack'
+title: 'We are H*cked'
+description: 'Discover how our game project server was hacked, the steps we took to recover, and the key lessons for securing digital infrastructure.'
 image: '/assets/images/post/we_were_hacked.png'
 date: '13-10-2024'
 type: 'Notes'
-tag: 'Hackers here'
+tag: 'Hackers here, cyber attack recovery, server hacking, data protection'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 
