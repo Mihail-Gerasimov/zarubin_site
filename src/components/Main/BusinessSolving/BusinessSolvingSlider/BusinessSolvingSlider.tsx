@@ -16,7 +16,11 @@ interface IData {
 
 export const BusinessSolvingSlider = ({ data }: IData) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>();
+
   const mobile = useMediaQuery('<tablet');
+  const tablet = useMediaQuery('<laptop');
+  const isStilTablet = useMediaQuery('>mobile');
+  const isTablet = tablet === isStilTablet;
 
   const sliceData = [...data].slice(0, 4);
 
@@ -41,8 +45,8 @@ export const BusinessSolvingSlider = ({ data }: IData) => {
       </Container>
       <Container className='max-w-full'>
         <Swiper
-          spaceBetween={40}
-          slidesPerView={mobile ? 1 : 2}
+          spaceBetween={mobile ? 20 : 40}
+          slidesPerView={mobile ? 1.1 : isTablet ? 1 : 2}
           onSwiper={setSwiper}
           wrapperClass='items-stretch'
         >
