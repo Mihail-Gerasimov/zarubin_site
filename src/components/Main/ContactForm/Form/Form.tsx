@@ -1,5 +1,6 @@
 'use client';
 
+import { sendEmail } from '@/src/utils/sendEmail';
 import { InputMask } from '@react-input/mask';
 import { useFormik } from 'formik';
 
@@ -12,44 +13,30 @@ export const Form = () => {
       details: '',
     },
     onSubmit: async (values, { resetForm }) => {
-      const formData = new FormData();
-      Object.keys(values).forEach((key) =>
-        formData.append(key, values[key as keyof typeof values]),
-      );
+      await sendEmail(values.name, values.email, values.phone, values.details);
+      resetForm();
 
-      const response = await fetch(
-        'https://wild-term-a5e5.access-f8d.workers.dev/',
+      const telegramResponse = await fetch(
+        'https://api.telegram.org/bot6992822983:AAHWVJuwqeVl5kscHuZwcPx5W-IPXJ7mpkk/sendMessage',
         {
           method: 'POST',
-          body: formData,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            chat_id: '199942509',
+            text: `
+              Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}\nDetails: ${values.details}
+            `,
+          }),
         },
       ).then((r) => r.json());
 
-      if (!response.error) {
-        const telegramResponse = await fetch(
-          'https://api.telegram.org/bot6992822983:AAHWVJuwqeVl5kscHuZwcPx5W-IPXJ7mpkk/sendMessage',
-          {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              chat_id: '199942509',
-              text: `
-              Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}\nDetails: ${values.details}
-            `,
-            }),
-          },
-        ).then((r) => r.json());
-
-        if (telegramResponse.ok) {
-          resetForm();
-          alert('Thank you! We will contact you soon');
-        } else {
-          console.error('Error sending message to Telegram:', telegramResponse);
-        }
+      if (telegramResponse.ok) {
+        resetForm();
+        alert('Thank you! We will contact you soon');
       } else {
-        console.error('Error sending form data:', response);
+        console.error('Error sending message to Telegram:', telegramResponse);
       }
     },
   });

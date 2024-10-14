@@ -1,6 +1,7 @@
 'use client';
 
 import { DropzoneIcon } from '@/src/components/svg/DropzoneIcon';
+import { sendEmail } from '@/src/utils/sendEmail';
 import classNames from 'classnames';
 import { useFormik } from 'formik';
 import { useCallback } from 'react';
@@ -23,53 +24,33 @@ export const Form = () => {
       cv: null,
     },
     onSubmit: async (values, { resetForm }) => {
-      const formData = new FormData();
-      Object.keys(values).forEach((key) => {
-        if (typeof values[key as keyof typeof values] === 'string') {
-          formData.append(key, values[key as keyof typeof values] as string);
-        } else {
-          formData.append(key, values[key as keyof typeof values] as File);
-        }
-      });
+      await sendEmail(values.name, values.email, values.phone, '');
+      resetForm();
 
-      const response = await fetch(
-        'https://wild-term-a5e5.access-f8d.workers.dev/',
+      const telegramFormData = new FormData();
+      telegramFormData.append('chat_id', '199942509');
+      telegramFormData.append(
+        'caption',
+        `Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}`,
+      );
+
+      if (values.cv) {
+        telegramFormData.append('document', values.cv, values.cv.name);
+      }
+
+      const telegramResponse = await fetch(
+        'https://api.telegram.org/bot6992822983:AAHWVJuwqeVl5kscHuZwcPx5W-IPXJ7mpkk/sendDocument',
         {
           method: 'POST',
-          body: formData,
+          body: telegramFormData,
         },
       ).then((r) => r.json());
-      if (!response.error) {
-        const telegramFormData = new FormData();
-        telegramFormData.append('chat_id', '199942509');
-        telegramFormData.append(
-          'caption',
-          `Name: ${values.name}\nEmail: ${values.email}\nPhone: ${values.phone}`,
-        );
 
-        if (values.cv) {
-          telegramFormData.append('document', values.cv, values.cv.name);
-        }
-
-        const telegramResponse = await fetch(
-          'https://api.telegram.org/bot6992822983:AAHWVJuwqeVl5kscHuZwcPx5W-IPXJ7mpkk/sendDocument',
-          {
-            method: 'POST',
-            body: telegramFormData,
-          },
-        ).then((r) => r.json());
-
-        if (telegramResponse.ok) {
-          resetForm();
-          alert('Thank you! We will contact you soon');
-        } else {
-          console.error(
-            'Error sending document to Telegram:',
-            telegramResponse,
-          );
-        }
+      if (telegramResponse.ok) {
+        resetForm();
+        alert('Thank you! We will contact you soon');
       } else {
-        // console.log(response);
+        console.error('Error sending document to Telegram:', telegramResponse);
       }
     },
   });
