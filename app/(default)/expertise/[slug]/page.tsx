@@ -103,6 +103,9 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: {
+      canonical: `https://www.thebrightbyte.com/expertise/${slug}`,
+    },
     openGraph: {
       type: 'article',
       locale: 'en_US',

@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
+  alternates: {
+    canonical: 'https://www.thebrightbyte.com/solutions',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
