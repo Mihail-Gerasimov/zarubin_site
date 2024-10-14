@@ -1,7 +1,7 @@
 ---
 title: 'Should You Hire Graduates from Online Schools in IT?'
 description: 'Almost all online education platforms have launched their programming courses. They promise, of course, a long and happy life, knowledge of languages, and the caring support of a mentor who will be proud of you no matter what. Let''s figure out how this happens in reality, what the "righteous path of a true developer" is, and whether you will be hired or not.'
-image: '/assets/images/post/note/rabotu-v-it-vipuskni.png'
+image: '/assets/images/post/rabotu-v-it-vipuskni.webp'
 date: '30-03-2023'
 type: 'Notes'
 tag: 'IT'

@@ -1,7 +1,7 @@
 ---
 title: 'Cross-Platform vs Native'
 description: 'First of all, it is important to define what each term means'
-image: '/assets/images/post/note/kross-platforma.jpeg'
+image: '/assets/images/post/kross-platforma.webp'
 date: '04-04-2023'
 type: 'Notes'
 tag: 'IT'

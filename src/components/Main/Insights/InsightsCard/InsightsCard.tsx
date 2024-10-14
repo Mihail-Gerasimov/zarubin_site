@@ -27,23 +27,21 @@ export const InsightsCard = ({
 
   return (
     <Link href={`/blog/${slug}`} className='flex h-full flex-col'>
-      <div className='relative w-full overflow-hidden'>
+      <div className='relative aspect-[16/9] w-full overflow-hidden'>
         {image ? (
           <Image
             src={image}
             alt={title}
-            width={500}
-            height={300}
-            className='h-[auto] w-full'
+            fill
+            className='w-full object-cover object-center'
             quality={80}
           />
         ) : (
           <Image
             src={defaultImg}
             alt={title}
-            width={500}
-            height={300}
-            className='h-[auto] w-full'
+            fill
+            className='w-full object-cover object-center'
             quality={80}
           />
         )}

@@ -1,7 +1,7 @@
 ---
 title: '§ 2. How the Internet Works'
 description: 'This question is designed to understand how a person thinks.'
-image: '/assets/images/post/womens_sport.webp'
+image: ''
 date: '21-03-2024'
 type: 'Notes'
 tag: 'Management'

@@ -19,6 +19,7 @@ interface Props {
 
 export const BlogCard = ({ post }: Props) => {
   const date = formattedDate(post.date);
+  const tags = post.tag?.split(',');
 
   return (
     <Link href={`/blog/${post.slug}`} className='w-full'>
@@ -28,9 +29,8 @@ export const BlogCard = ({ post }: Props) => {
             <Image
               src={post.image}
               alt={`Image ${post.slug}`}
-              width={876}
-              height={378}
-              className='left-0 top-0 h-full w-full object-cover'
+              fill
+              className='w-full object-cover object-center'
               quality={80}
             />
           ) : (
@@ -38,11 +38,17 @@ export const BlogCard = ({ post }: Props) => {
           )}
         </div>
         <div className='flex flex-col items-start gap-[24px] rounded-[12px] bg-main-beige p-[14px_16px_16px] tablet:gap-[24px] tablet:p-[40px_24px_24px] desktop:p-[40px]'>
-          {post.tag && (
-            <span className='rounded-[2px] bg-white p-[10px] font-proxima text-[20px]'>
-              {post.tag}
-            </span>
-          )}
+          <div className='flex flex-wrap gap-[12px]'>
+            {post.tag?.length !== 0 &&
+              tags?.map((item) => (
+                <span
+                  key={item}
+                  className='rounded-[2px] bg-white p-[10px] font-proxima text-[20px]'
+                >
+                  {item}
+                </span>
+              ))}
+          </div>
           <h3 className='font-proxima text-[28px] font-bold leading-[1.14] tablet:text-[36px] tablet:leading-[1.1] desktop:text-[40px]'>
             {post.title}
           </h3>
