@@ -25,10 +25,8 @@ export const ExpertiseCard = ({
   isEven = false,
 }: Props) => {
   return (
-    <div
-      className={`group flex overflow-hidden bg-[linear-gradient(to_right,var(--dark-blue)_50%,white_50%)] bg-[length:200%_100%] transition-all delay-300 duration-500 hover:bg-[position:-100%_0] hover:text-text-dark hover:delay-0 ${isEven && 'flex-row-reverse'}`}
-    >
-      <div className='relative flex w-full flex-col gap-[40px] px-[20px] py-[36px] tablet:w-[50%] desktop:px-[60px] desktop:py-[34px]'>
+    <div className={`flex overflow-hidden ${isEven && 'flex-row-reverse'}`}>
+      <div className='group relative flex w-full flex-col gap-[40px] bg-[linear-gradient(to_right,var(--dark-blue)_50%,white_50%)] bg-[length:200%_100%] px-[20px] py-[36px] transition-all duration-500 hover:bg-[position:-100%_0] hover:text-text-dark tablet:w-[50%] desktop:px-[60px] desktop:py-[34px]'>
         <Link href={link} className='hover:underline'>
           <h3 className='relative z-10 font-unbound text-[24px] font-bold uppercase leading-[1.16] desktop:text-[38px]'>
             {title}
