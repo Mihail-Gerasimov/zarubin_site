@@ -1,7 +1,7 @@
 ---
 title: 'Project Manager vs. Product Manager'
 description: "The responsibilities of Project Managers and Product Managers are often confused. Let's clarify once and for all who is who, how they work, and where they intersect."
-image: '/assets/images/post/note/project-vs-product.jpeg'
+image: '/assets/images/post/project-vs-product.webp'
 date: '04-04-2023'
 type: 'Notes'
 tag: 'IT'

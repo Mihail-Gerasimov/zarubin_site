@@ -1,7 +1,7 @@
 ---
 title: 'How to Choose a CRM?'
 description: 'How does this mysterious system work, why is it not a panacea for business, and how do you know if you need it or not? Today we will talk about CRM—its types, goals, and an old-school analog.'
-image: '/assets/images/post/note/vibrat-crm.jpeg'
+image: '/assets/images/post/crm.webp'
 date: '30-03-2023'
 type: 'Notes'
 tag: 'IT'
