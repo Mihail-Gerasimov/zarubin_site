@@ -8,16 +8,16 @@ import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationW
 import { Section } from '@/src/components/shared/Section/Section';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
-import { pageMetadata } from '@/src/utils/metadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
+import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { Suspense } from 'react';
 
 const title = contentTrimming(pageMetadata.solutions.title, 105);
 const description = contentTrimming(pageMetadata.solutions.description, 155);
-
 const ogTitle = contentTrimming(pageMetadata.solutions.title, 90);
+const keywords = pageMetadata.solutions.keywords;
 
 export const metadata: Metadata = {
   title,
@@ -29,11 +29,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Bright Byte',
+    siteName: 'BrightByte.com',
     ...openGraphImage,
-    title: `${ogTitle}  | Bright Byte`,
+    title: ogTitle,
     description,
+    url: 'https://www.thebrightbyte.com/solutions',
   },
+  keywords,
 };
 
 export default async function BusinessObjectivesPage() {

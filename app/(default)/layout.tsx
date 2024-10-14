@@ -20,11 +20,12 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Bright Byte',
+    siteName: 'BrightByte.com',
     ...openGraphImage,
     title: 'Ultimative IT Development mobile & web apps | Bright Byte',
     description:
       'Bright Byte is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
+    url: 'https://www.thebrightbyte.com',
   },
 };
 const expertiseSubMenu = getExpertiseList();

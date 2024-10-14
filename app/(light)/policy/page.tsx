@@ -1,7 +1,7 @@
 import { Privacy } from '@/src/components/Privacy/Privacy';
 import { contentTrimming } from '@/src/utils/contentTrimming';
-import { pageMetadata } from '@/src/utils/metadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
+import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Metadata } from 'next';
 
 const title = contentTrimming(pageMetadata.privacyPolicy.title, 105);
@@ -9,8 +9,8 @@ const description = contentTrimming(
   pageMetadata.privacyPolicy.description,
   155,
 );
-
 const ogTitle = contentTrimming(pageMetadata.privacyPolicy.title, 90);
+const keywords = pageMetadata.privacyPolicy.keywords;
 
 export const metadata: Metadata = {
   title,
@@ -22,11 +22,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Bright Byte',
+    siteName: 'BrightByte.com',
     ...openGraphImage,
-    title: `${ogTitle} | Bright Byte`,
+    title: ogTitle,
     description,
+    url: 'https://www.thebrightbyte.com/policy',
   },
+  keywords,
 };
 
 export default function PrivacyPage() {
