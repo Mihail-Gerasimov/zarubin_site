@@ -51,17 +51,22 @@ export async function generateMetadata({
   }
   const title = contentTrimming(post.data.title, 90);
   const description = contentTrimming(post.data.description, 155);
+  const slug = params.slug;
 
   return {
-    title: `Bright Byte - ${title}`,
+    title,
     description,
+    alternates: {
+      canonical: `https://www.thebrightbyte.com/solutions/${slug}`,
+    },
     openGraph: {
       type: 'website',
       locale: 'en_US',
-      siteName: 'Bright Byte',
+      siteName: 'BrightByte.com',
       ...openGraphImage,
-      title: `Bright Byte - ${title}`,
+      title,
       description,
+      url: `https://www.thebrightbyte.com/solutions/${slug}`,
     },
   };
 }

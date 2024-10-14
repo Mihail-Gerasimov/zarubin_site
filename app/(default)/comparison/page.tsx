@@ -10,12 +10,12 @@ import Image from 'next/image';
 import styles from './Comparison.module.css';
 
 import { contentTrimming } from '@/src/utils/contentTrimming';
-import { pageMetadata } from '@/src/utils/metadata';
+import { pageMetadata } from '@/src/utils/pageMetadata';
 
 const title = contentTrimming(pageMetadata.comparison.title, 105);
 const description = contentTrimming(pageMetadata.comparison.description, 155);
-
 const ogTitle = contentTrimming(pageMetadata.comparison.title, 90);
+const keywords = pageMetadata.comparison.keywords;
 
 export const metadata: Metadata = {
   title,
@@ -24,14 +24,19 @@ export const metadata: Metadata = {
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
+  alternates: {
+    canonical: 'https://www.thebrightbyte.com/comparison',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Bright Byte',
+    siteName: 'BrightByte.com',
     ...openGraphImage,
-    title: `${ogTitle} | Bright Byte`,
+    title: ogTitle,
     description,
+    url: 'https://www.thebrightbyte.com/comparison',
   },
+  keywords,
 };
 
 export default async function ComparisonPage() {

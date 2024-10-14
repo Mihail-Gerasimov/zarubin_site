@@ -10,16 +10,16 @@ import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
 import { contentTrimming } from '@/src/utils/contentTrimming';
-import { pageMetadata } from '@/src/utils/metadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
+import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import styles from './Career.module.css';
 
 const title = contentTrimming(pageMetadata.career.title, 105);
 const description = contentTrimming(pageMetadata.career.description, 155);
-
 const ogTitle = contentTrimming(pageMetadata.career.title, 90);
+const keywords = pageMetadata.career.keywords;
 
 export const metadata: Metadata = {
   title,
@@ -28,14 +28,19 @@ export const metadata: Metadata = {
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
+  alternates: {
+    canonical: 'https://www.thebrightbyte.com/career',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Bright Byte',
+    siteName: 'BrightByte.com',
     ...openGraphImage,
-    title: `${ogTitle} | Bright Byte`,
+    title: ogTitle,
     description,
+    url: 'https://www.thebrightbyte.com/career',
   },
+  keywords,
 };
 
 export default async function CareerPage() {

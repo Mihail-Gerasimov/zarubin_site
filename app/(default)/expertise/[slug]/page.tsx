@@ -90,6 +90,7 @@ export async function generateMetadata({
   }
 
   const cleanTitle = cleanMetaTitle(post.data.title);
+  const slug = params.slug || '';
 
   const title = contentTrimming(cleanTitle, 105);
   const description = contentTrimming(post.data.description, 155);
@@ -100,15 +101,19 @@ export async function generateMetadata({
   ).toISO();
 
   return {
-    title: `Bright Byte - ${title}`,
+    title,
     description,
+    alternates: {
+      canonical: `https://www.thebrightbyte.com/expertise/${slug}`,
+    },
     openGraph: {
       type: 'article',
       locale: 'en_US',
-      siteName: 'Bright Byte',
+      siteName: 'BrightByte.com',
       ...openGraphImage,
-      title: `Bright Byte - ${title}`,
+      title,
       description,
+      url: `https://www.thebrightbyte.com/expertise/${slug}`,
       article: {
         publishedTime: publishedDateISO,
         modifiedTime: publishedDateISO,

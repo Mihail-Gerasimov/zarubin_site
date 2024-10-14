@@ -17,14 +17,18 @@ export const metadata: Metadata = {
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
+  alternates: {
+    canonical: 'https://www.thebrightbyte.com',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Bright Byte',
+    siteName: 'BrightByte.com',
     ...openGraphImage,
     title: 'Ultimative IT Development mobile & web apps | Bright Byte',
     description:
       'Bright Byte is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
+    url: 'https://www.thebrightbyte.com',
   },
 };
 const expertiseSubMenu = getExpertiseList();

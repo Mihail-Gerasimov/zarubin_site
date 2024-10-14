@@ -10,16 +10,16 @@ import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationW
 import { Section } from '@/src/components/shared/Section/Section';
 import { ExpertiseHeroBgSvg } from '@/src/components/svg/ExpertiseHeroBgSvg';
 import { contentTrimming } from '@/src/utils/contentTrimming';
-import { pageMetadata } from '@/src/utils/metadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
+import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import { ClientExpertiseItems } from './ClientExpertiseItems';
 
 const title = contentTrimming(pageMetadata.expertise.title, 105);
 const description = contentTrimming(pageMetadata.expertise.description, 155);
-
 const ogTitle = contentTrimming(pageMetadata.expertise.title, 90);
+const keywords = pageMetadata.expertise.keywords;
 
 export const metadata: Metadata = {
   title,
@@ -28,14 +28,19 @@ export const metadata: Metadata = {
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
+  alternates: {
+    canonical: 'https://www.thebrightbyte.com/expertise',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Bright Byte',
+    siteName: 'BrightByte.com',
     ...openGraphImage,
-    title: `${ogTitle} | Bright Byte`,
+    title: ogTitle,
     description,
+    url: 'https://www.thebrightbyte.com/expertise',
   },
+  keywords,
 };
 
 export default function Expertise() {

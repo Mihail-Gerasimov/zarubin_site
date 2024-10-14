@@ -77,15 +77,19 @@ export async function generateMetadata({
   ).toISO();
 
   return {
-    title: `Bright Byte - ${title}`,
+    title,
     description,
+    alternates: {
+      canonical: `https://www.thebrightbyte.com/blog/${params.slug}`,
+    },
     openGraph: {
       type: 'article',
       locale: 'en_US',
-      siteName: 'Bright Byte',
+      siteName: 'BrightByte.com',
       ...openGraphImage,
-      title: `Bright Byte - ${title}`,
+      title,
       description,
+      url: `https://www.thebrightbyte.com/blog/${params.slug}`,
       article: {
         publishedTime: publishedDateISO,
         modifiedTime: publishedDateISO,

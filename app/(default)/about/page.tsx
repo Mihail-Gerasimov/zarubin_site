@@ -11,14 +11,14 @@ import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
 import { contentTrimming } from '@/src/utils/contentTrimming';
-import { pageMetadata } from '@/src/utils/metadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
+import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Metadata } from 'next';
 
 const title = contentTrimming(pageMetadata.about.title, 105);
 const description = contentTrimming(pageMetadata.about.description, 155);
-
 const ogTitle = contentTrimming(pageMetadata.about.title, 90);
+const keywords = pageMetadata.about.keywords;
 
 export const metadata: Metadata = {
   title,
@@ -27,14 +27,19 @@ export const metadata: Metadata = {
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
+  alternates: {
+    canonical: 'https://www.thebrightbyte.com/about',
+  },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    siteName: 'Bright Byte',
+    siteName: 'BrightByte.com',
     ...openGraphImage,
-    title: `${ogTitle} | Bright Byte`,
+    title: ogTitle,
     description,
+    url: 'https://www.thebrightbyte.com/about',
   },
+  keywords,
 };
 
 export default function About() {
