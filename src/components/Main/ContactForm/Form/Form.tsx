@@ -1,9 +1,8 @@
 'use client';
 
+import { sendEmail } from '@/src/utils/sendEmail';
 import { InputMask } from '@react-input/mask';
 import { useFormik } from 'formik';
-
-console.log(process.env);
 
 export const Form = () => {
   const formik = useFormik({
@@ -14,19 +13,9 @@ export const Form = () => {
       details: '',
     },
     onSubmit: async (values, { resetForm }) => {
-      const formData = new FormData();
-      Object.keys(values).forEach((key) =>
-        formData.append(key, values[key as keyof typeof values]),
-      );
+      await sendEmail(values.name, values.email, values.phone, values.details);
+      resetForm();
 
-      await fetch('https://wild-term-a5e5.access-f8d.workers.dev/', {
-        method: 'POST',
-        body: formData,
-      }).then((r) => r.json());
-
-      // if (response.error) {
-      //   console.error('Error sending form data:', response);
-      // }
       const telegramResponse = await fetch(
         'https://api.telegram.org/bot6992822983:AAHWVJuwqeVl5kscHuZwcPx5W-IPXJ7mpkk/sendMessage',
         {

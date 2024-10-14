@@ -1,6 +1,7 @@
 'use client';
 
 import { DropzoneIcon } from '@/src/components/svg/DropzoneIcon';
+import { sendEmail } from '@/src/utils/sendEmail';
 import classNames from 'classnames';
 import { useFormik } from 'formik';
 import { useCallback } from 'react';
@@ -23,19 +24,8 @@ export const Form = () => {
       cv: null,
     },
     onSubmit: async (values, { resetForm }) => {
-      const formData = new FormData();
-      Object.keys(values).forEach((key) => {
-        if (typeof values[key as keyof typeof values] === 'string') {
-          formData.append(key, values[key as keyof typeof values] as string);
-        } else {
-          formData.append(key, values[key as keyof typeof values] as File);
-        }
-      });
-
-      await fetch('https://wild-term-a5e5.access-f8d.workers.dev/', {
-        method: 'POST',
-        body: formData,
-      }).then((r) => r.json());
+      await sendEmail(values.name, values.email, values.phone, '');
+      resetForm();
 
       const telegramFormData = new FormData();
       telegramFormData.append('chat_id', '199942509');
