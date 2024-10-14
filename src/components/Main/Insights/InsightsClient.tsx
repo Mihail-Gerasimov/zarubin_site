@@ -15,6 +15,7 @@ interface Post {
   downloadLink: string | undefined;
   slug: string;
   type: string | undefined | null;
+  image: string | undefined | null;
 }
 interface Props {
   posts: Post[];
@@ -22,7 +23,11 @@ interface Props {
 
 export const InsightsClient = ({ posts }: Props) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
-  const mediaQuery = useMediaQuery('<desktop');
+
+  const mobile = useMediaQuery('<tablet');
+  const tablet = useMediaQuery('<laptop');
+  const isStilTablet = useMediaQuery('>mobile');
+  const isTablet = tablet === isStilTablet;
 
   return (
     <div className='h-600 relative z-10 flex flex-col gap-[40px] pb-20'>
@@ -37,10 +42,10 @@ export const InsightsClient = ({ posts }: Props) => {
           </div>
         </div>
       </Container>
-      <Container className='max-w-full'>
+      <Container className='flex max-w-full p-0 pl-[10px] tablet:p-0 tablet:pl-[40px] laptop:px-[40px] desktop-big:px-[80px]'>
         <Swiper
-          spaceBetween={40}
-          slidesPerView={mediaQuery ? 1.5 : 3}
+          spaceBetween={mobile ? 20 : 40}
+          slidesPerView={mobile ? 1.13 : isTablet ? 1.56 : 3}
           onSwiper={setSwiper}
         >
           {posts.slice(0, 6).map((post, idx) => (
@@ -51,6 +56,7 @@ export const InsightsClient = ({ posts }: Props) => {
                 tag={post.tag}
                 slug={post.slug}
                 type={post.type}
+                image={post.image}
                 downloadLink={post.downloadLink}
               />
             </SwiperSlide>

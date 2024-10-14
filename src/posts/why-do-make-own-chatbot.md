@@ -1,7 +1,7 @@
 ---
 title: 'Why Do Companies Develop Their Own Chatbots on Telegram?'
 description: "A chatbot on Telegram is no longer just a geeky story but a full-fledged service. With numerous features, a ready audience, and ease of use, let's find out how chatbots outperform mobile apps, their core algorithm, and how to create them."
-image: '/assets/images/post/note/razrabativayut-sobstvenn.jpeg'
+image: '/assets/images/post/razrabativayut-sobstvenn.webp'
 date: '04-04-2023'
 type: 'Notes'
 tag: 'IT'

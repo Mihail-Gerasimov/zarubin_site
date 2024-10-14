@@ -1,5 +1,5 @@
 ---
-title: 'Interactive Platforms and Fan Engagement: New Approaches in the Sports Industry 🚀'
+title: 'Interactive Platforms and Fan Engagement: New Approaches in the Sports Industry'
 description: 'Each year, the role of digital products in the sports sector becomes increasingly significant, offering new opportunities for athletes, managers, and fans alike.'
 image: '/assets/images/post/interactive_platform.webp'
 date: '03-08-2023'
