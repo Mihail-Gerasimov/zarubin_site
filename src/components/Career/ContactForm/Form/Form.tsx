@@ -1,12 +1,12 @@
 'use client';
 
 import { DropzoneIcon } from '@/src/components/svg/DropzoneIcon';
+import { sendEmail } from '@/src/utils/sendEmail';
 import classNames from 'classnames';
 import { useFormik } from 'formik';
 import { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import styles from './Form.module.css';
-import { sendEmail } from '@/src/utils/sendEmail';
 
 type Inputs = {
   name: string;
@@ -24,7 +24,7 @@ export const Form = () => {
       cv: null,
     },
     onSubmit: async (values, { resetForm }) => {
-      await sendEmail(values.name, values.email, values.phone, values.cv);
+      await sendEmail(values.name, values.email, values.phone, '');
       resetForm();
 
       const telegramFormData = new FormData();
