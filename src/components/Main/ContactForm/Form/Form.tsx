@@ -44,9 +44,9 @@ export const Form = () => {
   return (
     <div
       id='contact-form'
-      className='w-full scroll-mt-[100px] rounded-[12px] bg-[--second-blue] p-[40px]'
+      className='w-full scroll-mt-[100px] rounded-[12px] bg-[--second-blue] px-[20px] py-[40px] mobile-big:px-[40px] mobile-big:py-[40px]'
     >
-      <div className='font-unbound text-[32px] font-semibold leading-[37px] text-white'>
+      <div className='font-unbound text-[22px] font-semibold leading-[22px] text-white mobile-big:text-[32px] mobile-big:leading-[37px]'>
         Fill out the form and click the blue button to get in touch with you!
       </div>
       <form
@@ -59,7 +59,7 @@ export const Form = () => {
           placeholder='Name'
           value={formik.values.name}
           required
-          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-2xl text-white placeholder-opacity-50 outline-none focus:bg-blue-950'
+          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-base text-white placeholder-gray-500 placeholder-opacity-50 outline-none focus:bg-blue-950 mobile-big:text-2xl mobile-big:text-2xl'
           onChange={formik.handleChange}
         />
         <input
@@ -67,7 +67,7 @@ export const Form = () => {
           name='email'
           value={formik.values.email}
           placeholder='E-mail'
-          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-2xl text-white placeholder-opacity-50 outline-none focus:bg-blue-950'
+          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-base text-white placeholder-gray-500 placeholder-opacity-50 outline-none focus:bg-blue-950 mobile-big:text-2xl'
           required
           onChange={formik.handleChange}
         />
@@ -80,7 +80,7 @@ export const Form = () => {
           }}
           value={formik.values.phone}
           placeholder='Phone'
-          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-2xl text-white placeholder-opacity-50 outline-none focus:bg-blue-950'
+          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-base text-white placeholder-gray-500 placeholder-opacity-50 outline-none focus:bg-blue-950 mobile-big:text-2xl'
           required
           onChange={formik.handleChange}
         />
@@ -88,7 +88,7 @@ export const Form = () => {
           name='details'
           value={formik.values.details}
           placeholder='Project details'
-          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-2xl text-white placeholder-opacity-50 outline-none focus:bg-blue-950'
+          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-base text-white placeholder-gray-500 placeholder-opacity-50 outline-none focus:bg-blue-950 mobile-big:text-2xl'
           onChange={formik.handleChange}
           required
         />
