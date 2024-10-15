@@ -76,7 +76,7 @@ export const Form = () => {
             placeholder='Name'
             value={formik.values.name}
             required
-            className={styles.input}
+            className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-base text-white placeholder-gray-500 placeholder-opacity-50 outline-none focus:bg-blue-950 mobile-big:text-2xl'
             onChange={formik.handleChange}
           />
         </label>
@@ -86,7 +86,7 @@ export const Form = () => {
             name='email'
             value={formik.values.email}
             placeholder='E-mail'
-            className={styles.input}
+            className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-base text-white placeholder-gray-500 placeholder-opacity-50 outline-none focus:bg-blue-950 mobile-big:text-2xl'
             required
             onChange={formik.handleChange}
           />
@@ -97,7 +97,7 @@ export const Form = () => {
             name='phone'
             value={formik.values.phone}
             placeholder='Phone'
-            className={styles.input}
+            className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-base text-white placeholder-gray-500 placeholder-opacity-50 outline-none focus:bg-blue-950 mobile-big:text-2xl'
             required
             onChange={formik.handleChange}
           />
@@ -110,7 +110,9 @@ export const Form = () => {
           {...getRootProps()}
         >
           <div className='flex items-center justify-between'>
-            <label className='text-[26px] text-[#8D94AD]'>
+            <label
+              className={`${formik.values.cv?.name ? 'text-white ' : 'text-gray-500 opacity-50'} text-base mobile-big:text-2xl`}
+            >
               {formik.values.cv?.name || 'Drop your CV'}
             </label>
             <DropzoneIcon />

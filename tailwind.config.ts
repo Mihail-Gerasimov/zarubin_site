@@ -74,7 +74,7 @@ const config: Config = {
     },
     screens: {
       mobile: '320px',
-      'mobile-big': '375px',
+      'mobile-big': '568px',
       tablet: '768px',
       laptop: '1200px',
       'laptop-big': '1280px',
