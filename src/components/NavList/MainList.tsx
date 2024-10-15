@@ -41,16 +41,19 @@ export const MainList = ({
           <Link
             href={item.link}
             className={classNames(
-              `relative border-solid border-main-blue font-proxima leading-[1.87] hover:border-b-[2px]`,
+              `group relative border-b-[2px] border-transparent font-proxima leading-[1.87]`,
               dark
                 ? 'text-[16px] text-white desktop:text-[16px]'
                 : 'text-[16px] text-[black]',
               {
-                'border-b-[2px]': pathname.startsWith(item.link),
+                'border-b-[2px] !border-main-blue': pathname.startsWith(
+                  item.link,
+                ),
               },
             )}
           >
             {item.name}
+            <div className='absolute h-[2px] w-0 bg-main-blue transition-all duration-200 group-hover:w-full' />
           </Link>
 
           {item.name.toLowerCase() === 'expertise' && (
