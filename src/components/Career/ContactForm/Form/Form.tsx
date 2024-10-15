@@ -64,7 +64,7 @@ export const Form = () => {
   });
 
   return (
-    <div className={styles.formWrapper}>
+    <div id='contact-form' className={styles.formWrapper}>
       <h3 className={styles.title}>
         Fill out the form and click the blue button to get in touch with you!
       </h3>

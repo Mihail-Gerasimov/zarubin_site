@@ -27,6 +27,13 @@ export const MobileMenu = ({
 }: Props) => {
   const [isOpenSubMenu, setIsOpenSubmenu] = useState(isOpen);
 
+  const onContactLinkClick = () => {
+    onClick();
+    document.getElementById('contact-form')?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div
       className={classNames(
@@ -53,7 +60,7 @@ export const MobileMenu = ({
                     <button
                       type='button'
                       onClick={() => setIsOpenSubmenu(!isOpenSubMenu)}
-                      className={`${isOpenSubMenu ? 'bg-gray-500' : 'bg-gray-900'} h-fit w-fit rounded-md transition-colors`}
+                      className={`${isOpenSubMenu ? (dark ? 'bg-gray-500' : 'bg-gray-300') : dark ? 'bg-gray-900' : 'bg-gray-100'} h-fit w-fit rounded-md transition-colors`}
                     >
                       <Arrow
                         className={`h-[auto] w-[25px] transition-transform duration-300 ease-in-out ${dark ? 'fill-white' : 'fill-main-bg'} ${isOpenSubMenu ? '-rotate-[-90deg]' : 'rotate-30'}`}
@@ -68,6 +75,7 @@ export const MobileMenu = ({
                     <ExpertiseMobileSubMenu
                       expertiseSubMenu={expertiseSubMenu}
                       onMenuClose={onClick}
+                      dark={dark}
                     />
                   </div>
                 )}
@@ -77,7 +85,8 @@ export const MobileMenu = ({
         </div>
         <div className={styles.contactWrapper}>
           <Link
-            href=''
+            href='#contact-form'
+            onClick={onContactLinkClick}
             className={`${styles.contactBtn} ${dark ? styles.dark : styles.light} font-proxima text-[20px] font-bold leading-[1]`}
           >
             Contact us
