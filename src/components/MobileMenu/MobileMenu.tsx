@@ -30,7 +30,7 @@ export const MobileMenu = ({
   return (
     <div
       className={classNames(
-        styles.menuWeapper,
+        styles.menuWrapper,
         dark ? styles.dark : styles.light,
         isOpen && styles.active,
       )}
@@ -41,7 +41,7 @@ export const MobileMenu = ({
           <ul className={styles.menuList}>
             {menuListLayer.map((item) => (
               <li key={item.id} className='flex flex-col'>
-                <div className='flex items-center gap-[10px]'>
+                <div className='w-100 flex items-center justify-between gap-[10px]'>
                   <Link
                     href={item.link}
                     className={`${styles.menuLink} ${dark ? styles.dark : styles.light} font-proxima`}
@@ -53,17 +53,17 @@ export const MobileMenu = ({
                     <button
                       type='button'
                       onClick={() => setIsOpenSubmenu(!isOpenSubMenu)}
-                      className='h-fit w-fit'
+                      className={`${isOpenSubMenu ? 'bg-gray-500' : 'bg-gray-900'} h-fit w-fit rounded-md transition-colors`}
                     >
                       <Arrow
-                        className={`h-[auto] w-[25px]  transition-transform duration-300 ease-in-out hover:fill-main-blue ${dark ? 'fill-white' : 'fill-main-bg'} ${isOpenSubMenu ? '-rotate-[-90deg]' : 'rotate-30'}`}
+                        className={`h-[auto] w-[25px] transition-transform duration-300 ease-in-out ${dark ? 'fill-white' : 'fill-main-bg'} ${isOpenSubMenu ? '-rotate-[-90deg]' : 'rotate-30'}`}
                       />
                     </button>
                   )}
                 </div>
                 {item.name.toLowerCase() === 'expertise' && (
                   <div
-                    className={`${isOpenSubMenu ? 'max-h-full opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out`}
+                    className={`${isOpenSubMenu ? 'max-h-full opacity-100' : 'max-h-0 opacity-0'} overflow-hidden pl-[20px] transition-all duration-300 ease-in-out`}
                   >
                     <ExpertiseMobileSubMenu
                       expertiseSubMenu={expertiseSubMenu}

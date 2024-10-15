@@ -22,7 +22,7 @@ interface Submenu {
 }
 
 export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(false);
 
   const toggleSubmenu = () => {
