@@ -2,7 +2,7 @@
 
 import { IndustriesData } from '@/src/utils/DataLayers/IndustriesData';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
@@ -11,28 +11,13 @@ import { IndustriesCard } from './IndustriesCard/IndustriesCard';
 export const Industries = () => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const liRefs = useRef<(HTMLLIElement | null)[]>([]);
-
-  useEffect(() => {
-    liRefs.current[selectedIndex]?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center',
-    });
-  }, [selectedIndex]);
 
   return (
     <Container className='z-0 flex h-full flex-col gap-[40px] desktop:gap-[80px] desktop-hard:px-[80px]'>
       <div className='hide-scrollbar z-20 shrink-0 overflow-x-scroll'>
         <ul className='flex h-full items-start gap-[20px] pt-[5px] tablet:justify-between'>
           {IndustriesData.map((item, index) => (
-            <li
-              key={item.id}
-              ref={(el) => {
-                liRefs.current[index] = el;
-              }}
-              className='group flex w-fit flex-col gap-[8px]'
-            >
+            <li key={item.id} className='group flex w-fit flex-col gap-[8px]'>
               <div
                 className={`w-[156px] rounded-full bg-main-disabled tablet:w-[216px] desktop-hard:w-[336px]  ${index === selectedIndex ? 'h-[4px]' : 'h-[2px] group-hover:bg-main-bg/70'}`}
               >
