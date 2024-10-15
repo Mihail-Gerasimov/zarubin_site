@@ -32,10 +32,7 @@ export const ExpertiseMobileSubMenu = ({
   return (
     <div className='mx-[auto] flex w-full flex-col justify-around border-b-[1px] border-gray-800 py-[10px] pl-[20px]'>
       {expertiseSubMenu.map((item) => (
-        <div
-          key={item.name}
-          className={`${dark ? 'text-white' : 'text-main-bg'}`}
-        >
+        <div key={item.name} className={dark ? 'text-white' : 'text-main-bg'}>
           <p className='flex whitespace-nowrap font-unbound text-[16px] font-bold uppercase'>
             {formatMenuItem(item.name)}
           </p>
