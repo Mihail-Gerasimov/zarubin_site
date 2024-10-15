@@ -63,7 +63,7 @@ export const MobileMenu = ({
                 </div>
                 {item.name.toLowerCase() === 'expertise' && (
                   <div
-                    className={`${isOpenSubMenu ? 'max-h-full opacity-100' : 'max-h-0 opacity-0'} overflow-hidden pl-[20px] transition-all duration-300 ease-in-out`}
+                    className={`${isOpenSubMenu ? 'max-h-full opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out`}
                   >
                     <ExpertiseMobileSubMenu
                       expertiseSubMenu={expertiseSubMenu}

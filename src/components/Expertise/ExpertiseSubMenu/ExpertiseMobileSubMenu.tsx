@@ -30,7 +30,7 @@ export const ExpertiseMobileSubMenu = ({
   };
 
   return (
-    <div className='mx-[auto] flex w-full flex-col justify-around py-[10px]'>
+    <div className='mx-[auto] flex w-full flex-col justify-around border-b-[1px] border-gray-800 py-[10px] pl-[20px]'>
       {expertiseSubMenu.map((item) => (
         <div
           key={item.name}
