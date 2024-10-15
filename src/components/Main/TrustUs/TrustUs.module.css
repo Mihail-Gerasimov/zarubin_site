@@ -1,3 +1,9 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .title {
   font-family: 'Unbounded';
   font-size: 45px;
@@ -69,10 +75,15 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .mainContainer {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
 @media (min-width: 1440px) {
   .mainContainer {
-    display: flex;
-    align-items: center;
     gap: 52px;
   }
 
@@ -89,5 +100,6 @@
 @media (min-width: 1920px) {
   .title {
     font-size: 70px;
+    line-height: 1.1;
   }
 }

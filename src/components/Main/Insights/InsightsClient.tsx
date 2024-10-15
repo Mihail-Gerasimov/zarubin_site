@@ -31,7 +31,7 @@ export const InsightsClient = ({ posts }: Props) => {
 
   return (
     <div className='h-600 relative z-10 flex flex-col gap-[40px] pb-20'>
-      <Container>
+      <Container className='desktop-hard:px-[80px]'>
         <div className={styles.titleWrapper}>
           <h2 className={styles.title}>Insights</h2>
           <div className={styles.arrowWrapper}>

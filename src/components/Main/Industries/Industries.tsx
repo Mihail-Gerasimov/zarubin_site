@@ -11,7 +11,7 @@ export const Industries = () => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
   return (
-    <Container className='z-0 flex h-full flex-col gap-[40px] desktop:gap-[80px]'>
+    <Container className='z-0 flex h-full flex-col gap-[40px] desktop:gap-[80px] desktop-hard:px-[80px]'>
       <div className='hide-scrollbar z-20 shrink-0 overflow-x-scroll'>
         <ul className='flex h-full items-start gap-[20px]'>
           {IndustriesData.map((item, index) => (
