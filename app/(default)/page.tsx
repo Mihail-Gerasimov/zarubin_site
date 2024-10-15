@@ -32,7 +32,7 @@ export default function Home() {
           </div>
         </Section>
         <Section id='expertise' className='overflow-hidden'>
-          <Container>
+          <Container className='desktop-hard:px-[80px]'>
             <ScrollAnimationWrapper showOnLoad>
               <Expertise />
             </ScrollAnimationWrapper>
@@ -42,9 +42,9 @@ export default function Home() {
           id='unlock'
           className='flex h-screen max-h-[960px] flex-col justify-center overflow-hidden'
         >
-          <Container>
+          <Container className='desktop-hard:px-[80px]'>
             <ScrollAnimationWrapper>
-              <ParallaxWrapper speed={-20}>
+              <ParallaxWrapper speed={-10}>
                 <Unlock />
               </ParallaxWrapper>
             </ScrollAnimationWrapper>
@@ -92,7 +92,7 @@ export default function Home() {
           </div>
         </Section>
         <Section id='clients'>
-          <Container>
+          <Container className='desktop-hard:px-[80px]'>
             <ScrollAnimationWrapper>
               <TrustUs />
             </ScrollAnimationWrapper>
