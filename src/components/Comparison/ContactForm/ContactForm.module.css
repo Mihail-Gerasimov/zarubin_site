@@ -3,6 +3,7 @@
   justify-content: space-between;
   flex-direction: column;
   color: var(--text-dark);
+  gap: 72px;
   background-color: var(--main-white);
 }
 
