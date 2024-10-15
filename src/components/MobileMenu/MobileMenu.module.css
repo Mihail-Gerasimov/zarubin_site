@@ -1,4 +1,4 @@
-.menuWeapper {
+.menuWrapper {
   padding: 22px 10px 60px;
   position: fixed;
   top: 0;
@@ -31,10 +31,15 @@
   z-index: 35;
 }
 
+.listWrapper {
+  width: 100%;
+}
+
 .menuList {
   padding-top: 40px;
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 20px;
 }
 
