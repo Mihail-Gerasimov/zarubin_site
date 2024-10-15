@@ -2,6 +2,7 @@
   padding: 40px 20px;
   border-radius: 5px;
   background-color: var(--second-blue);
+  scroll-margin-top: 100px;
 }
 
 .title {

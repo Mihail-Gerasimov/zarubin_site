@@ -42,7 +42,10 @@ export const Form = () => {
   });
 
   return (
-    <div className='w-full rounded-[12px] bg-[--second-blue] p-[40px]'>
+    <div
+      id='contact-form'
+      className='w-full scroll-mt-[100px] rounded-[12px] bg-[--second-blue] p-[40px]'
+    >
       <div className='font-unbound text-[32px] font-semibold leading-[37px] text-white'>
         Fill out the form and click the blue button to get in touch with you!
       </div>
