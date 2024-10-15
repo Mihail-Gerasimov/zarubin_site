@@ -29,9 +29,9 @@ export const MobileMenu = ({
 
   const onContactLinkClick = () => {
     onClick();
-    document
-      .getElementById('contact-form')
-      ?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('contact-form')?.scrollIntoView({
+      behavior: 'smooth',
+    });
   };
 
   return (

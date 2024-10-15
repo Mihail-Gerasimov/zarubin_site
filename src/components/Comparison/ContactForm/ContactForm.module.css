@@ -2,7 +2,6 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 72px;
   color: var(--text-dark);
   background-color: var(--main-white);
 }
