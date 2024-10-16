@@ -2,7 +2,7 @@
 
 import { IndustriesData } from '@/src/utils/DataLayers/IndustriesData';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
@@ -11,11 +11,32 @@ import { IndustriesCard } from './IndustriesCard/IndustriesCard';
 export const Industries = () => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const navRefList = useRef<HTMLUListElement | null>(null);
+
+  useEffect(() => {
+    if (navRefList.current && selectedIndex !== null) {
+      const listItems = navRefList.current.querySelectorAll('li');
+      if (listItems.length > selectedIndex) {
+        const selectedItem = listItems[selectedIndex];
+        const scrollPosition =
+          selectedItem.offsetLeft -
+          navRefList.current.clientWidth / 2 +
+          selectedItem.clientWidth / 2;
+        navRefList.current.scrollTo({
+          left: scrollPosition,
+          behavior: 'smooth',
+        });
+      }
+    }
+  }, [selectedIndex]);
 
   return (
     <Container className='z-0 flex h-full flex-col gap-[40px] desktop:gap-[80px] desktop-hard:px-[80px]'>
       <div className='hide-scrollbar z-20 shrink-0 overflow-x-scroll'>
-        <ul className='flex h-full items-start gap-[20px] pt-[5px] tablet:justify-between'>
+        <ul
+          ref={navRefList}
+          className='hide-scrollbar flex h-full items-start gap-[20px] overflow-auto pt-[5px] tablet:justify-between'
+        >
           {IndustriesData.map((item, index) => (
             <li key={item.id} className='group flex w-fit flex-col gap-[8px]'>
               <div
