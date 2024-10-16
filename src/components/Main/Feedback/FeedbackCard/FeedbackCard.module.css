@@ -10,7 +10,6 @@
   transition: opacity 0.5s;
 }
 
-.content,
 .image {
   transition: opacity 0.5s;
 }

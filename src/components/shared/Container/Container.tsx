@@ -11,7 +11,7 @@ export const Container = forwardRef<
       ref={ref}
       className={twMerge(
         classNames(
-          'mx-auto px-[10px] tablet:container tablet:px-[20px] desktop:px-[40px]',
+          'mobile-big:py[20px] mx-auto px-[10px] tablet:container tablet:px-[20px] desktop:px-[20px]',
           className,
         ),
       )}
