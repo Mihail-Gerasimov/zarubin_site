@@ -62,9 +62,6 @@ const config = {
             return `/blog/${fileName}`
         })
 
-        // const dynamicPages = [
-        //     '/blog',
-        // ]
         const allPaths = [
             ...staticPages.map(loc => ({
                 loc,
@@ -76,11 +73,6 @@ const config = {
                 changefreq: 'daily',
                 priority: 1.0,
             })),
-            // ...dynamicPages.map(loc => ({
-            //     loc,
-            //     changefreq: 'daily',
-            //     priority: 0.8,
-            // })),
             ...dynamicBlogPages.map(loc => ({
                 loc,
                 changefreq: 'daily',
