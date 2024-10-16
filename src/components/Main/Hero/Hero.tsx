@@ -6,15 +6,15 @@ import Link from 'next/link';
 
 export const Hero = () => {
   return (
-    <div className='px-[10px]'>
+    <div className='px-[10px] desktop-hard:px-[40px]'>
       <div
         className={`relative flex flex-col gap-[40px] py-[40px] desktop:flex-row desktop:justify-between desktop:py-[145px]`}
       >
-        <div className='z-[5] flex flex-col gap-[12px] tablet:gap-[24px] desktop:gap-[30px] desktop:py-[px]'>
-          <h1 className='desctop-hard:text-[100px] z-[5] font-unbound text-[28px] font-bold uppercase leading-[1.14] tablet:text-[60px] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px]'>
+        <div className='z-[5] flex flex-col gap-[12px] tablet:gap-[24px] desktop:gap-[30px]'>
+          <h1 className='z-[5] font-unbound text-[28px] font-bold uppercase leading-[1.14] tablet:text-[60px] tablet:leading-[1.1] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px]'>
             Business solutions and expertise
           </h1>
-          <p className='z-[5] font-proxima text-[28px] font-bold leading-[1.14] text-[#D1D1D1] tablet:text-[36px]'>
+          <p className='z-[5] font-proxima text-[28px] font-bold leading-[1.14] text-[#D1D1D1] tablet:text-[36px] tablet:leading-[1.1] desktop-hard:text-[40px]'>
             Digital business transformation
           </p>
           <Link
@@ -46,7 +46,7 @@ export const Hero = () => {
           </div>
           <div className='z-[5] rounded-[5px] bg-white p-[20px]'>
             <div className='max-w-[500px]'>
-              <h3 className='font-unbound text-[24px] font-bold uppercase leading-[1.16] text-text-dark tablet:text-[22px] tablet:leading-[1.1]'>
+              <h3 className='font-unbound text-[24px] font-bold uppercase leading-[1.16] text-text-dark tablet:text-[22px] tablet:leading-[1.2] desktop-hard:text-[24px] desktop-hard:leading-[1.16]'>
                 Top 15 Best Practices for Improving Metrics in Sports
               </h3>
               <p className='mt-[12px] font-proxima text-[20px] leading-[1.2] text-text-dark desktop:mt-[19px]'>

@@ -8,10 +8,10 @@ export const Intelligence = () => {
       <Container className='relative z-10'>
         <ParallaxWrapper speed={-20}>
           <div className='flex h-[650px] flex-col justify-center'>
-            <h2 className='font-unbound text-[32px] font-bold uppercase leading-[1.1] tablet:text-[60px] tablet:leading-[1] desktop:text-[80px] desktop:leading-[1.22] desktop-hard:text-[90px]'>
+            <h2 className='font-unbound text-[32px] font-bold uppercase leading-[1.12] tablet:text-[60px] tablet:leading-[1.1] desktop:text-[70px] desktop:leading-[1.22] desktop-hard:text-[90px]'>
               Where Leadership Meets{' '}
             </h2>
-            <h2 className='text-stroke font-unbound text-[32px] font-bold uppercase leading-[1.1] tablet:text-[60px] tablet:leading-[1] desktop:text-[80px] desktop:leading-[1.22] desktop-hard:text-[90px]'>
+            <h2 className='text-stroke font-unbound text-[32px] font-bold uppercase leading-[1.12] tablet:text-[60px] tablet:leading-[1.1] desktop:text-[70px] desktop:leading-[1.22] desktop-hard:text-[90px]'>
               Business Intelligence
             </h2>
           </div>

@@ -17,7 +17,7 @@ export const FeedbackClient = ({ feedback }: Props) => {
 
   return (
     <div className='flex flex-col gap-[30px]'>
-      <Container>
+      <Container className='desktop-hard:px-[80px]'>
         <div className={styles.titleWrapper}>
           <h2 className={styles.title}>Feedback</h2>
 
@@ -32,7 +32,7 @@ export const FeedbackClient = ({ feedback }: Props) => {
       <Swiper onSwiper={setSwiper} className='max-w-full'>
         {feedback.map((item, index) => (
           <SwiperSlide key={item.id}>
-            <Container>
+            <Container className='desktop-hard:px-[80px]'>
               <FeedbackCard
                 data={item}
                 length={feedback.length}

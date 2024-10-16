@@ -33,7 +33,7 @@ export const BusinessSolvingSlider = ({ data }: IData) => {
 
   return (
     <div className='flex flex-col gap-[40px]'>
-      <Container>
+      <Container className='desktop-hard:px-[80px]'>
         <div className='flex items-start justify-between'>
           <h2 className='font-unbound text-[45px] font-bold uppercase leading-[1] tablet:text-[50px] tablet:leading-[1.3] desktop:text-[70px] desktop:leading-[1.1]'>
             Solving business problems
@@ -43,7 +43,7 @@ export const BusinessSolvingSlider = ({ data }: IData) => {
           </div>
         </div>
       </Container>
-      <Container className='max-w-full'>
+      <Container className='max-w-full desktop-hard:px-[80px]'>
         <Swiper
           spaceBetween={mobile ? 20 : 40}
           slidesPerView={mobile ? 1.1 : isTablet ? 1 : 2}

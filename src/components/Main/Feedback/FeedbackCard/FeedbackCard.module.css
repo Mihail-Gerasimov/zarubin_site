@@ -103,6 +103,18 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .mainContainer {
+    flex-direction: row;
+  }
+
+  .image {
+    box-sizing: border-box;
+    width: auto;
+    height: 485px;
+  }
+}
+
 @media (min-width: 1440px) {
   .mainContainer {
     flex-direction: row;
