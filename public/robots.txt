@@ -36,6 +36,26 @@ Disallow: /tpost/*
 
 # *
 User-agent: *
+Disallow: /products/*
+
+# *
+User-agent: *
+Disallow: /services/*
+
+# *
+User-agent: *
+Disallow: /search/*
+
+# *
+User-agent: *
+Disallow: /lander/*
+
+# *
+User-agent: *
+Disallow: /collections/*
+
+# *
+User-agent: *
 Disallow: */&
 
 # *
@@ -77,6 +97,26 @@ Disallow: /_next/*
 # Googlebot
 User-agent: Googlebot
 Disallow: /tpost/*
+
+# Googlebot
+User-agent: Googlebot
+Disallow: /products/*
+
+# Googlebot
+User-agent: Googlebot
+Disallow: /services/*
+
+# Googlebot
+User-agent: Googlebot
+Disallow: /search/*
+
+# Googlebot
+User-agent: Googlebot
+Disallow: /lander/*
+
+# Googlebot
+User-agent: Googlebot
+Disallow: /collections/*
 
 # Googlebot
 User-agent: Googlebot
