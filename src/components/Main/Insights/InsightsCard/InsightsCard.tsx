@@ -2,7 +2,6 @@ import defaultImg from '@/public/assets/images/banner/default_insights.webp';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './InsightsCard.module.css';
 
 interface Props {
   title: string;
@@ -46,18 +45,25 @@ export const InsightsCard = ({
           />
         )}
       </div>
-      <div className={`${styles.cardContainer}`}>
+      <div className='flex h-full min-h-[359px] w-full flex-1 flex-col items-stretch rounded-b-[5px] bg-white px-[20px] py-[40px] tablet:px-[40px]'>
         {tags && (
-          <div className={styles.tagWrapper}>
+          <div className='flex flex-wrap items-center gap-[12px]'>
             {tags.map((item, idx) => (
-              <span key={idx} className={styles.tag}>
+              <span
+                key={idx}
+                className='block w-fit rounded-[5px] bg-gray-200 p-[10px] font-proxima text-[21px] font-bold uppercase leading-none text-text-dark'
+              >
                 {item}
               </span>
             ))}
           </div>
         )}
-        <h3 className={`${styles.title}`}>{title}</h3>
-        <p className={styles.description}>{description}</p>
+        <h3 className='mt-[25px] line-clamp-3 overflow-hidden font-unbound text-[22px] font-bold uppercase leading-[1] text-text-dark tablet:text-[24px] tablet:leading-[1.16]'>
+          {title}
+        </h3>
+        <p className='mt-[19px] line-clamp-3 overflow-hidden font-proxima text-[16px] leading-[1.25] text-text-dark tablet:text-[20px]'>
+          {description}
+        </p>
         {type === 'Research' && downloadLink && (
           <div className='mt-[25px]'>
             <DownloadLink link={downloadLink} />

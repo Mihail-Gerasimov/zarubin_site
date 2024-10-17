@@ -1,8 +1,0 @@
-.solvingList {
-  overflow: auto;
-  scroll-snap-type: x mandatory;
-}
-
-.solvingList > * {
-  scroll-snap-align: start;
-}

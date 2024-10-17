@@ -5,7 +5,6 @@ import useMediaQuery from '@/src/utils/useMediaQuery';
 import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
-import styles from './Insights.module.css';
 import { InsightsCard } from './InsightsCard/InsightsCard';
 
 interface Post {
@@ -32,9 +31,11 @@ export const InsightsClient = ({ posts }: Props) => {
   return (
     <div className='h-600 relative z-10 flex flex-col gap-[40px] pb-20'>
       <Container className='desktop-hard:px-[80px]'>
-        <div className={styles.titleWrapper}>
-          <h2 className={styles.title}>Insights</h2>
-          <div className={styles.arrowWrapper}>
+        <div className='flex items-center justify-between'>
+          <h2 className='font-unbound text-[45px] font-bold uppercase tablet:text-[70px] desktop-hard:text-[80px]'>
+            Insights
+          </h2>
+          <div className='hidden tablet:block'>
             <NextPrevBtn
               nextPage={() => swiper?.slideNext()}
               prevPage={() => swiper?.slidePrev()}
