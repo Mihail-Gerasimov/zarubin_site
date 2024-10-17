@@ -5,7 +5,6 @@ import { IFeedback } from '@/src/utils/types';
 import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
-import styles from './Feedback.module.css';
 import { FeedbackCard } from './FeedbackCard/FeedbackCard';
 
 interface Props {
@@ -18,8 +17,10 @@ export const FeedbackClient = ({ feedback }: Props) => {
   return (
     <div className='flex flex-col gap-[30px]'>
       <Container className='desktop-hard:px-[80px]'>
-        <div className={styles.titleWrapper}>
-          <h2 className={styles.title}>Feedback</h2>
+        <div className='relative flex w-full items-center justify-between'>
+          <h2 className='font-unbound text-[45px] font-bold uppercase'>
+            Feedback
+          </h2>
 
           <div className='hidden tablet:block'>
             <NextPrevBtn
