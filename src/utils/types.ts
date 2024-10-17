@@ -21,4 +21,6 @@ export interface IFeedback {
   job: string;
   image: IImage;
   feedback: string;
+  logo: IImage;
+  date: string;
 }

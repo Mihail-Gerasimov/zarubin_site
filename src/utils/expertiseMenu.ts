@@ -9,6 +9,11 @@ export const formatMenuItem = (menuItem: string) => {
   return newMenuItem;
 };
 
+export const finalLink = (str: string) => {
+  const splitStr = str.split('.');
+  return splitStr[0];
+};
+
 export const getExpertiseList = () => {
   const folder = 'src/expertise';
   const directories = fs
