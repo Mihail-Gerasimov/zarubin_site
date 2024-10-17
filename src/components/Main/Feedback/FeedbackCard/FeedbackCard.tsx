@@ -1,10 +1,5 @@
-import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import { IImage } from '@/src/utils/types';
-import useMediaQuery from '@/src/utils/useMediaQuery';
-import classNames from 'classnames';
 import Image from 'next/image';
-import { useSwiper } from 'swiper/react';
-import styles from './FeedbackCard.module.css';
 
 interface Data {
   id: number;
@@ -12,6 +7,8 @@ interface Data {
   job: string;
   image: IImage;
   feedback: string;
+  logo: IImage;
+  date: string;
 }
 
 interface Props {
@@ -20,41 +17,44 @@ interface Props {
   indexNumber: number;
 }
 
-export const FeedbackCard = ({ data, length, indexNumber }: Props) => {
-  const mediaQuery = useMediaQuery('<tablet');
-  const swiper = useSwiper();
+export const FeedbackCard = ({ data }: Props) => {
   return (
-    <div className={styles.cardContainer}>
-      <div className={classNames(styles.mainContainer)}>
-        <Image
-          src={data.image}
-          quality={80}
-          width={560}
-          height={485}
-          alt={data.name}
-          className={styles.image}
-          loading='lazy'
-        />
-        <div className={styles.contentWrapper}>
-          <div className={styles.content}>
-            <h3 className={styles.name}>{data.name}</h3>
-            <span className={styles.job}>{data.job}</span>
-            <p className={styles.description}>{data.feedback}</p>
-          </div>
-          <div className={styles.cardNavigation}>
-            <div className={styles.positionWrapper}>
-              <span className={styles.position}>{indexNumber}</span>
-              <span className={styles.slash}>{` / `}</span>
-              <span className={styles.length}>{length}</span>
+    <div className='flex h-full flex-col justify-between gap-[10px] rounded-t-[5px] bg-white px-[10px] py-[20px] mobile-big:px-[20px] mobile-big:py-[20px] tablet:p-[40px]'>
+      <div>
+        <div className='flex gap-[20px] tablet:gap-[40px]'>
+          <Image
+            src={data.image}
+            quality={80}
+            alt={data.name}
+            className='h-[86px] w-[86px] rounded-full object-cover transition-opacity duration-500 mobile-big:h-[168px] mobile-big:w-[168px]'
+            loading='lazy'
+          />
+          <div className='relative flex-col justify-between gap-[75px] tablet:pt-[25px]'>
+            <div className='transition-opacity duration-500'>
+              <h3 className='font-proxima text-[28px] font-bold text-text-dark mobile-big:text-[40px]'>
+                {data.name}
+              </h3>
+              <span className='font-proxima text-[16px] text-text-dark mobile-big:text-[20px] tablet:text-[24px]'>
+                {data.job}
+              </span>
             </div>
-            {mediaQuery && (
-              <NextPrevBtn
-                nextPage={() => swiper.slideNext()}
-                prevPage={() => swiper.slidePrev()}
-              />
-            )}
           </div>
         </div>
+        <p className='mt-[40px] font-proxima text-[16px] leading-[24px] text-text-dark mobile-big:text-[20px]'>
+          {data.feedback}
+        </p>
+      </div>
+      <div className='flex items-center justify-between'>
+        <Image
+          src={data.logo}
+          quality={80}
+          alt='Logo'
+          className='max-h-[50px] w-fit'
+          loading='lazy'
+        />
+        <span className='font-proxima text-text-dark opacity-50 mobile-big:text-[16px] tablet:text-[20px]'>
+          {data.date}
+        </span>
       </div>
     </div>
   );

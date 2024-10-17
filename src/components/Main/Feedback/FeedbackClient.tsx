@@ -29,10 +29,19 @@ export const FeedbackClient = ({ feedback }: Props) => {
           </div>
         </div>
       </Container>
-      <Swiper onSwiper={setSwiper} className='max-w-full'>
+      <Swiper
+        breakpoints={{
+          1440: {
+            slidesPerView: 2.3,
+          },
+        }}
+        slidesPerView={1.3}
+        onSwiper={setSwiper}
+        className='max-w-full'
+      >
         {feedback.map((item, index) => (
-          <SwiperSlide key={item.id}>
-            <Container className='desktop-hard:px-[80px]'>
+          <SwiperSlide key={item.id} className='!h-auto'>
+            <Container className='h-full desktop-hard:px-[80px]'>
               <FeedbackCard
                 data={item}
                 length={feedback.length}

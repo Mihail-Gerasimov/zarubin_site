@@ -49,7 +49,7 @@ const config: Config = {
         manrope: ['Manrope'],
         bebas: ['Bebas Neue', 'sans-serif'],
         unbound: ['Unbounded'],
-        proxima: ['Proxima Nova'],
+        proxima: ['Proxima\\ Nova'],
       },
       colors: {
         'main-beige': '#F7F7F7',
