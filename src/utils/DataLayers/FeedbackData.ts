@@ -9,9 +9,11 @@ import vasiliyPhoto from '@/public/assets/images/main/feedbacks/vasiliy.webp';
 import vitaliyPhoto from '@/public/assets/images/main/feedbacks/vitaliy.webp';
 
 import avangard from '@/public/assets/images/clients/avangard.png';
+import dinamo from '@/public/assets/images/clients/dinamo.png';
 import gc from '@/public/assets/images/clients/gc.png';
 import oazis from '@/public/assets/images/clients/oazis.png';
 import orbita from '@/public/assets/images/clients/orbita-dark.png';
+import sports from '@/public/assets/images/clients/sports.png';
 import tractor from '@/public/assets/images/clients/tractor.png';
 
 export const FeedbackDataMain = [
@@ -50,7 +52,7 @@ export const FeedbackDataMain = [
     name: 'Elena',
     job: 'General Product Manager Go',
     image: elenaPhoto,
-    logo: orbita,
+    logo: dinamo,
     date: '12.10.2022',
     feedback:
       'The guys from Bright Byte helped to pack the idea into the final product. They provided professional assistance at all stages and were all about achieving results!',
@@ -80,7 +82,7 @@ export const FeedbackDataMain = [
     name: 'John Cushma',
     job: 'Entrepreneur, 21sports',
     image: johnPhoto,
-    logo: orbita,
+    logo: sports,
     date: '12.10.2022',
     feedback:
       "We are working on a sports publication website with a relatively simple tech stack that involves integrations. Previous developers consistently delivered an incomplete product full of bugs and were unresponsive when issues were pointed out. Vitaliy's team has shown a high level of professionalism, adhering to a clear business process and a systematic approach at every stage. I highly recommend working with them.",

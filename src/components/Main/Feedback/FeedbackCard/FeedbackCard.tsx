@@ -19,9 +19,9 @@ interface Props {
 
 export const FeedbackCard = ({ data }: Props) => {
   return (
-    <div className='flex h-full flex-col justify-between gap-[10px] rounded-t-[5px] bg-white px-[10px] py-[20px] mobile-big:px-[40px] mobile-big:py-[20px] tablet:p-[40px]'>
+    <div className='flex h-full flex-col justify-between gap-[10px] rounded-t-[5px] bg-white px-[10px] py-[20px] mobile-big:px-[20px] mobile-big:py-[20px] tablet:p-[40px]'>
       <div>
-        <div className='flex gap-[20px] mobile-big:gap-[40px]'>
+        <div className='flex gap-[20px] tablet:gap-[40px]'>
           <Image
             src={data.image}
             quality={80}
