@@ -16,7 +16,7 @@ export const FooterNavMenu = () => {
         >
           <Link
             href={item.link}
-            className='group relative border-b-[2px] border-transparent font-proxima text-[16px] leading-[1.87] tablet:text-[18px]'
+            className='group relative border-b-[2px] border-transparent font-proxima text-[16px] leading-[1.87] text-white tablet:text-[18px]'
           >
             {item.name}
             <div
