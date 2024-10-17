@@ -18,17 +18,17 @@ const config = {
             '/expertise',
             '/blog',
             '/solutions',
-            '/solutions/avangard',
-            '/solutions/fcdm',
-            '/solutions/grid_capital',
-            '/solutions/kama',
-            '/solutions/nashe_zoloto',
-            '/solutions/nis',
-            '/solutions/norilsk',
-            '/solutions/oazis',
-            '/solutions/stocks_soccer',
-            '/solutions/t_bank',
-            '/solutions/lux_today',
+            // '/solutions/avangard',
+            // '/solutions/fcdm',
+            // '/solutions/grid_capital',
+            // '/solutions/kama',
+            // '/solutions/nashe_zoloto',
+            // '/solutions/nis',
+            // '/solutions/norilsk',
+            // '/solutions/oazis',
+            // '/solutions/stocks_soccer',
+            // '/solutions/t_bank',
+            // '/solutions/lux_today',
         ]
 
         const getAllMarkdownFiles = (dirPath, arrayOfFiles = []) => {
@@ -62,6 +62,14 @@ const config = {
             return `/blog/${fileName}`
         })
 
+        const solutionsDir = path.join(process.cwd(), 'src/cases')
+        const solutionsFiles = getAllMarkdownFiles(solutionsDir)
+
+        const dynamicSolutionsPages = solutionsFiles.map((file) => {
+            const fileName = path.basename(file, '.md')
+            return `/solutions/${fileName}`
+        })
+
         const allPaths = [
             ...staticPages.map(loc => ({
                 loc,
@@ -78,12 +86,17 @@ const config = {
                 changefreq: 'daily',
                 priority: 0.8,
             })),
+            ...dynamicSolutionsPages.map(loc => ({
+                loc,
+                changefreq: 'daily',
+                priority: 0.8,
+            })),
         ]
 
         return allPaths
     },
 
-    exclude: ['/assets/*', '/_next/*', '/tpost/*'],
+    exclude: ['/assets/*', '/_next/*', '/tpost/*', '/products/*', '/services/*', '/search/*', '/lander/*', '/collections/*'],
     robotsTxtOptions: {
         policies: [
             { userAgent: '*', allow: '/' },
@@ -95,6 +108,11 @@ const config = {
             { userAgent: '*', disallow: '/assets/*' },
             { userAgent: '*', disallow: '/_next/*' },
             { userAgent: '*', disallow: '/tpost/*' },
+            { userAgent: '*', disallow: '/products/*' },
+            { userAgent: '*', disallow: '/services/*' },
+            { userAgent: '*', disallow: '/search/*' },
+            { userAgent: '*', disallow: '/lander/*' },
+            { userAgent: '*', disallow: '/collections/*' },
             { userAgent: '*', disallow: '*/&' },
             { userAgent: '*', disallow: '/*?' },
             { userAgent: 'Googlebot', allow: '/' },
@@ -106,6 +124,11 @@ const config = {
             { userAgent: 'Googlebot', disallow: '/assets/*' },
             { userAgent: 'Googlebot', disallow: '/_next/*' },
             { userAgent: 'Googlebot', disallow: '/tpost/*' },
+            { userAgent: 'Googlebot', disallow: '/products/*' },
+            { userAgent: 'Googlebot', disallow: '/services/*' },
+            { userAgent: 'Googlebot', disallow: '/search/*' },
+            { userAgent: 'Googlebot', disallow: '/lander/*' },
+            { userAgent: 'Googlebot', disallow: '/collections/*' },
             { userAgent: 'Googlebot', disallow: '*/&' },
             { userAgent: 'Googlebot', disallow: '/*?' },
             { userAgent: 'RookeeBot', disallow: '/' },
