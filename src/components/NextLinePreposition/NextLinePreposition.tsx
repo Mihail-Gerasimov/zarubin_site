@@ -24,6 +24,11 @@ export const NextLinePreposition = ({ text, tag, className }: IPreposition) => {
     'as',
     'it',
     'of',
+    'from',
+    'with',
+    'on',
+    'not',
+    'are',
   ];
 
   const regex = new RegExp(`\\s(${prepositions.join('|')})\\s`, 'gi');
