@@ -29,6 +29,7 @@ export const NextLinePreposition = ({ text, tag, className }: IPreposition) => {
     'on',
     'not',
     'are',
+    'an',
   ];
 
   const regex = new RegExp(`\\s(${prepositions.join('|')})\\s`, 'gi');
