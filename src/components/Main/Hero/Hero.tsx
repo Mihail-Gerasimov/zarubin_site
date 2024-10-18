@@ -3,6 +3,8 @@ import solutionBg from '@/public/assets/images/main/hero-solutions-bg.webp';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import Image from 'next/image';
 import Link from 'next/link';
+import React from 'react';
+import { NextLinePreposition } from '../../NextLinePreposition/NextLinePreposition';
 
 export const Hero = () => {
   return (
@@ -11,9 +13,11 @@ export const Hero = () => {
         className={`relative flex flex-col gap-[40px] py-[40px] desktop:flex-row desktop:justify-between desktop:py-[145px]`}
       >
         <div className='z-[5] flex flex-col gap-[12px] tablet:gap-[24px] desktop:gap-[30px]'>
-          <h1 className='z-[5] font-unbound text-[28px] font-bold uppercase leading-[1.14] tablet:text-[60px] tablet:leading-[1.1] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px]'>
-            Business solutions and expertise
-          </h1>
+          <NextLinePreposition
+            tag='h1'
+            text='Business solutions and expertise'
+            className='z-[5] break-words font-unbound text-[28px] font-bold uppercase leading-[1.14] tablet:text-[60px] tablet:leading-[1.1] desktop:text-[80px] desktop:font-black desktop-hard:text-[100px]'
+          />
           <p className='z-[5] font-proxima text-[28px] font-bold leading-[1.14] text-[#D1D1D1] tablet:text-[36px] tablet:leading-[1.1] desktop-hard:text-[40px]'>
             Digital business transformation
           </p>
@@ -46,13 +50,16 @@ export const Hero = () => {
           </div>
           <div className='z-[5] rounded-[5px] bg-white p-[20px]'>
             <div className='max-w-[500px]'>
-              <h3 className='font-unbound text-[24px] font-bold uppercase leading-[1.16] text-text-dark tablet:text-[22px] tablet:leading-[1.2] desktop-hard:text-[24px] desktop-hard:leading-[1.16]'>
-                Top 15 Best Practices for Improving Metrics in Sports
-              </h3>
-              <p className='mt-[12px] font-proxima text-[20px] leading-[1.2] text-text-dark desktop:mt-[19px]'>
-                Implement it in order to increase metrics and change the
-                attitude of the audience to the brand
-              </p>
+              <NextLinePreposition
+                tag='h3'
+                text='Top 15 Best Practices for Improving Metrics in Sports'
+                className='font-unbound text-[24px] font-bold uppercase leading-[1.16] text-text-dark tablet:text-[22px] tablet:leading-[1.2] desktop-hard:text-[24px] desktop-hard:leading-[1.16]'
+              />
+              <NextLinePreposition
+                tag='p'
+                text='Implement it in order to increase metrics and change the attitude of the audience to the brand'
+                className='mt-[12px] font-proxima text-[20px] leading-[1.2] text-text-dark desktop:mt-[19px]'
+              />
             </div>
             <div className='mt-[20px] flex flex-col gap-[25px] tablet:flex-row desktop:mt-[25px]'>
               <DownloadLink link='https://drive.google.com/file/d/1eXyUyvjlXv0i7gtawqK7D1jtEYGfC4nR/view' />

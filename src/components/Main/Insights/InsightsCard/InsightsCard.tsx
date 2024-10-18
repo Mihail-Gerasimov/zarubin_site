@@ -1,4 +1,5 @@
 import defaultImg from '@/public/assets/images/banner/default_insights.webp';
+import { NextLinePreposition } from '@/src/components/NextLinePreposition/NextLinePreposition';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -61,9 +62,14 @@ export const InsightsCard = ({
         <h3 className='mt-[25px] line-clamp-3 overflow-hidden font-unbound text-[22px] font-bold uppercase leading-[1] text-text-dark tablet:text-[24px] tablet:leading-[1.16]'>
           {title}
         </h3>
-        <p className='mt-[19px] line-clamp-3 overflow-hidden font-proxima text-[16px] leading-[1.25] text-text-dark tablet:text-[20px]'>
+        {/* <p className='mt-[19px] line-clamp-3 overflow-hidden font-proxima text-[16px] leading-[1.25] text-text-dark tablet:text-[20px]'>
           {description}
-        </p>
+        </p> */}
+        <NextLinePreposition
+          tag='p'
+          text={description}
+          className='mt-[19px] line-clamp-3 overflow-hidden font-proxima text-[16px] leading-[1.25] text-text-dark tablet:text-[20px]'
+        />
         {type === 'Research' && downloadLink && (
           <div className='mt-[25px]'>
             <DownloadLink link={downloadLink} />
