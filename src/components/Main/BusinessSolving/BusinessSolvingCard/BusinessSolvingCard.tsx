@@ -48,6 +48,7 @@ export const BusinessSolvingCard = ({
         <Image
           src={image}
           fill
+          sizes='100%'
           alt='bg-image'
           className='h-full w-[auto] object-cover'
         />

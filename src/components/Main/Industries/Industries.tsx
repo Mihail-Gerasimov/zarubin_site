@@ -83,6 +83,7 @@ export const Industries = () => {
                 src={item.image}
                 alt=''
                 fill
+                sizes='40%'
                 priority
                 className='object-contain object-bottom'
               />

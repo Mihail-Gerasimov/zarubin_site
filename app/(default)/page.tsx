@@ -53,8 +53,8 @@ export default function Home() {
             <Image
               src={unlockBg}
               fill
-              objectFit='cover'
-              objectPosition='bottom'
+              placeholder='blur'
+              sizes='100%'
               alt=''
               className='absolute bottom-0 right-0 object-cover opacity-[3%]'
             />
@@ -107,6 +107,7 @@ export default function Home() {
               src={bgImage}
               quality={100}
               fill
+              sizes='100%'
               className='absolute inset-0 object-cover'
               alt='background'
             />

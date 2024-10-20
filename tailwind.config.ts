@@ -12,7 +12,18 @@ const config: Config = {
   safelist: ['animate-slide-in', 'animate-fade-in', 'animate-fade-out'],
   theme: {
     extend: {
+      animation: {
+        scroll: 'scroll 10s linear infinite',
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
       backgroundImage: {
+        'radial-primary':
+          'radial-gradient(circle, rgba(0, 0, 0, 0), var(--primary) 80%)',
         'mobile-banner': "url('/assets/images/banner/mobile_main_banner.png')",
         'tablet-banner': "url('/assets/images/banner/tablet_main_banner.png')",
         'desktop-banner':

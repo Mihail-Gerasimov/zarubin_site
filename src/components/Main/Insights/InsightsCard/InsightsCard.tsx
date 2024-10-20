@@ -31,16 +31,18 @@ export const InsightsCard = ({
           <Image
             src={image}
             alt={title}
-            fill
-            className='w-full object-cover object-center'
+            width={450}
+            height={250}
+            className='h-full w-full object-cover object-center'
             quality={80}
           />
         ) : (
           <Image
             src={defaultImg}
             alt={title}
-            fill
-            className='w-full object-cover object-center'
+            width={450}
+            height={250}
+            className='h-full w-full object-cover object-center'
             quality={80}
           />
         )}

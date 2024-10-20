@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { imageData } from './imageData';
-import styles from './TrustUs.module.css';
 
 export const TrustUs = () => {
   return (
@@ -8,17 +7,17 @@ export const TrustUs = () => {
       <h2 className='whitespace-nowrap font-unbound text-[45px] font-bold uppercase leading-none desktop-hard:text-[70px] desktop-hard:leading-[1.1]'>
         Trust us
       </h2>
-      <div className={styles.listWrapper}>
-        <div className={styles.list}>
+      <div className='relative w-full overflow-hidden'>
+        <div className='bg-radial-primary absolute left-0 top-0 z-[2] h-full w-full' />
+        <div className='animate-scroll flex w-[200%] items-center pl-[30px]'>
           <div className='flex h-[50px] w-full justify-around desktop:h-[92px] desktop-hard:text-[70px]'>
             {imageData.map((item) => (
               <Image
                 key={item.id}
                 src={item.image}
-                width={150}
-                height={50}
+                height={70}
                 alt={item.alt}
-                className='h-full w-auto'
+                className='w-auto'
               />
             ))}
           </div>
@@ -26,11 +25,10 @@ export const TrustUs = () => {
             {imageData.map((item) => (
               <Image
                 key={item.id}
+                height={70}
                 src={item.image}
-                width={150}
-                height={50}
                 alt={item.alt}
-                className='h-full w-auto'
+                className='w-auto'
               />
             ))}
           </div>
