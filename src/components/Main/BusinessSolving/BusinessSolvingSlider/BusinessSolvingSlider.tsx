@@ -6,13 +6,21 @@ import { Container } from '@/src/components/shared/Container/Container';
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import { Case } from '@/src/utils/getCaseMetadata';
 import useMediaQuery from '@/src/utils/useMediaQuery';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import { SwiperClass } from 'swiper/react';
 import { BusinessSolvingCard } from '../BusinessSolvingCard/BusinessSolvingCard';
 
 interface IData {
   data: Case[];
 }
+
+const DynamicSwiper = dynamic(() =>
+  import('swiper/react').then((mod) => mod.Swiper),
+);
+const DynamicSwiperSlide = dynamic(() =>
+  import('swiper/react').then((mod) => mod.SwiperSlide),
+);
 
 export const BusinessSolvingSlider = ({ data }: IData) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>();
@@ -44,14 +52,14 @@ export const BusinessSolvingSlider = ({ data }: IData) => {
         </div>
       </Container>
       <Container className='max-w-full desktop-hard:px-[80px]'>
-        <Swiper
+        <DynamicSwiper
           spaceBetween={mobile ? 20 : 40}
           slidesPerView={mobile ? 1.1 : isTablet ? 1 : 2}
           onSwiper={setSwiper}
           wrapperClass='items-stretch'
         >
           {sliceData.map((item, idx) => (
-            <SwiperSlide className='!h-auto' key={item.slug}>
+            <DynamicSwiperSlide className='!h-auto' key={item.slug}>
               <BusinessSolvingCard
                 title={item.title}
                 industries={item.industries}
@@ -60,9 +68,9 @@ export const BusinessSolvingSlider = ({ data }: IData) => {
                 link={`solutions/${item.slug}`}
                 image={idx % 2 !== 0 ? imageTwo : imageOne}
               />
-            </SwiperSlide>
+            </DynamicSwiperSlide>
           ))}
-        </Swiper>
+        </DynamicSwiper>
       </Container>
     </div>
   );

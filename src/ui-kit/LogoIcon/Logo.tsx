@@ -10,7 +10,7 @@ interface Props {
 
 export const Logo = ({ dark = true }: Props) => {
   return (
-    <a href='/'>
+    <a aria-label='Go to the main page' href='/'>
       {dark ? (
         <LightLogoIcon className='h-[40px] w-[auto] tablet:h-[62px]' />
       ) : (

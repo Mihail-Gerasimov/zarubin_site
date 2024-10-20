@@ -1,5 +1,6 @@
 import { IFeedback } from '@/src/utils/types';
-import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import dynamic from 'next/dynamic';
+import { SwiperClass } from 'swiper/react';
 import { Container } from '../../../shared/Container/Container';
 import { FeedbackCard } from '../FeedbackCard/FeedbackCard';
 
@@ -8,9 +9,16 @@ interface IFeedbackSwiper {
   setSwiper: (swiper: SwiperClass) => void;
 }
 
+const DynamicSwiper = dynamic(() =>
+  import('swiper/react').then((mod) => mod.Swiper),
+);
+const DynamicSwiperSlide = dynamic(() =>
+  import('swiper/react').then((mod) => mod.SwiperSlide),
+);
+
 const FeedbackSwiper = ({ feedback, setSwiper }: IFeedbackSwiper) => {
   return (
-    <Swiper
+    <DynamicSwiper
       breakpoints={{
         1440: {
           slidesPerView: 2.3,
@@ -21,7 +29,7 @@ const FeedbackSwiper = ({ feedback, setSwiper }: IFeedbackSwiper) => {
       className='max-w-full'
     >
       {feedback.map((item, index) => (
-        <SwiperSlide key={item.id} className='!h-auto'>
+        <DynamicSwiperSlide key={item.id} className='!h-auto'>
           <Container className='h-full desktop-hard:px-[80px]'>
             <FeedbackCard
               data={item}
@@ -29,9 +37,9 @@ const FeedbackSwiper = ({ feedback, setSwiper }: IFeedbackSwiper) => {
               indexNumber={index + 1}
             />
           </Container>
-        </SwiperSlide>
+        </DynamicSwiperSlide>
       ))}
-    </Swiper>
+    </DynamicSwiper>
   );
 };
 

@@ -5,11 +5,17 @@ import { ContactUsBtn } from '@/src/ui-kit/LeagueLink/ContactUsBtn';
 import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
 import { menuListLayer } from '@/src/utils/menuListLayer';
 import useMediaQuery from '@/src/utils/useMediaQuery';
+import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
-import { ExpertiseSubMenu } from '../Expertise/ExpertiseSubMenu/ExpertiseSubMenu';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
 import { MainList } from '../NavList/MainList';
 import { Container } from '../shared/Container/Container';
+
+const DynamicExpertiseMenu = dynamic(() =>
+  import('../Expertise/ExpertiseSubMenu/ExpertiseSubMenu').then(
+    (mod) => mod.ExpertiseSubMenu,
+  ),
+);
 
 interface Props {
   dark?: boolean;
@@ -77,7 +83,7 @@ export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
           activeSubmenu ? 'translate-y-0' : '-translate-y-full'
         }`}
       >
-        <ExpertiseSubMenu
+        <DynamicExpertiseMenu
           toggleSubmenu={toggleSubmenu}
           expertiseSubMenu={expertiseSubmenu}
           dark={dark}

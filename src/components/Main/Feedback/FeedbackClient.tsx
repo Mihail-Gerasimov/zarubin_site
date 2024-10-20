@@ -2,7 +2,8 @@
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import { IFeedback } from '@/src/utils/types';
-import { lazy, Suspense, useState } from 'react';
+import dynamic from 'next/dynamic';
+import { Suspense, useState } from 'react';
 import { SwiperClass } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
 
@@ -10,7 +11,7 @@ interface Props {
   feedback: IFeedback[];
 }
 
-const LazyFeedbackSwiper = lazy(
+const LazyFeedbackSwiper = dynamic(
   () => import('./FeedbackSwiper/FeedbackSwiper'),
 );
 

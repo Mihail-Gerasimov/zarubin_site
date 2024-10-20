@@ -5,18 +5,30 @@ import bgImage from '@/public/assets/images/main/reviewBg.webp';
 import { BusinessSolving } from '@/src/components/Main/BusinessSolving/BusinessSolving';
 import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 import { Expertise } from '@/src/components/Main/Expertise/Expertise';
-import { Feedback } from '@/src/components/Main/Feedback/Feedback';
 import { Hero } from '@/src/components/Main/Hero/Hero';
-import { Industries } from '@/src/components/Main/Industries/Industries';
-import { Insights } from '@/src/components/Main/Insights/Insights';
 import { Intelligence } from '@/src/components/Main/Intelligence/Intelligence';
-import { TrustUs } from '@/src/components/Main/TrustUs/TrustUs';
 import { Unlock } from '@/src/components/Main/Unlock/Unlock';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ParallaxWrapper } from '@/src/components/shared/ParallaxWrapper/ParalaxWrapper';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
+
+const DynamicInsights = dynamic(() =>
+  import('@/src/components/Main/Insights/Insights').then((mod) => mod.Insights),
+);
+const DynamicIndustries = dynamic(() =>
+  import('@/src/components/Main/Industries/Industries').then(
+    (mod) => mod.Industries,
+  ),
+);
+const DynamicFeedback = dynamic(() =>
+  import('@/src/components/Main/Feedback/Feedback').then((mod) => mod.Feedback),
+);
+const DynamicTrustUs = dynamic(() =>
+  import('@/src/components/Main/TrustUs/TrustUs').then((mod) => mod.TrustUs),
+);
 
 export default function Home() {
   return (
@@ -35,6 +47,7 @@ export default function Home() {
               sizes='100vw'
               fill
               alt='Hero'
+              quality={30}
             />
           </div>
         </Section>
@@ -64,12 +77,13 @@ export default function Home() {
               sizes='100vw'
               alt=''
               className='absolute bottom-0 right-0 object-cover opacity-[3%]'
+              priority
             />
           </div>
         </Section>
         <Section id='industries' className='!pb-0' light>
           <ScrollAnimationWrapper>
-            <Industries />
+            <DynamicIndustries />
           </ScrollAnimationWrapper>
         </Section>
         <Section id='business-problems'>
@@ -87,7 +101,7 @@ export default function Home() {
         </Section>
         <Section id='insights'>
           <ScrollAnimationWrapper>
-            <Insights />
+            <DynamicInsights />
           </ScrollAnimationWrapper>
           <div className='absolute inset-0'>
             <Image
@@ -102,13 +116,13 @@ export default function Home() {
         <Section id='clients'>
           <Container className='desktop-hard:px-[80px]'>
             <ScrollAnimationWrapper>
-              <TrustUs />
+              <DynamicTrustUs />
             </ScrollAnimationWrapper>
           </Container>
         </Section>
         <Section id='feedback'>
           <ScrollAnimationWrapper className='relative z-10'>
-            <Feedback />
+            <DynamicFeedback />
           </ScrollAnimationWrapper>
           <div className='absolute inset-0'>
             <Image
