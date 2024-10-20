@@ -60,6 +60,7 @@ export const MobileMenu = ({
                     <button
                       type='button'
                       onClick={() => setIsOpenSubmenu(!isOpenSubMenu)}
+                      aria-label='Open expertise submenu'
                       className={`${isOpenSubMenu ? (dark ? 'bg-gray-500' : 'bg-gray-300') : dark ? 'bg-gray-900' : 'bg-gray-100'} h-fit w-fit rounded-md transition-colors`}
                     >
                       <Arrow

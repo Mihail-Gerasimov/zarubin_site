@@ -4,7 +4,8 @@ import { ParallaxWrapper } from '../../shared/ParallaxWrapper/ParalaxWrapper';
 
 export const Intelligence = () => {
   return (
-    <div className='bussinesBg overflow-hidden text-right'>
+    <div className='relative overflow-hidden text-right'>
+      <div className='absolute left-0 top-0 z-[5] h-full w-full bg-linear-shadow'></div>
       <Container className='relative z-10'>
         <ParallaxWrapper speed={-20}>
           <div className='flex h-[650px] flex-col justify-center'>

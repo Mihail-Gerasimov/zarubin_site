@@ -13,7 +13,7 @@ export const Footer = () => {
       <Container className='flex flex-col gap-[40px] tablet:gap-[40px] desktop:gap-[88px]'>
         <div className='flex w-full flex-col gap-[24px] tablet:gap-[60px] laptop:flex-row-reverse laptop:justify-between desktop:justify-between'>
           <div className='flex flex-col laptop:mt-[49px] laptop:items-end laptop:gap-[51px]'>
-            <Link href='/' className=''>
+            <Link aria-label='Go to the main page' href='/'>
               <LightMainLogo className='h-[54px] w-[auto] tablet:h-[71px] desktop:h-[60px]' />
             </Link>
             <Link

@@ -19,16 +19,16 @@ export const Hero = () => {
           </p>
           <Link
             href='/blog'
-            className='button-hover z-[5] w-fit rounded-[6px] bg-[#7CFFCD] px-[32px] py-[13px] font-proxima text-[20px] font-bold leading-[1] text-text-dark '
+            className='z-[5] w-fit rounded-[6px] bg-[#7CFFCD] px-[32px] py-[13px] font-proxima text-[20px] font-bold leading-[1] text-text-dark shadow-button transition-all duration-200 ease-in-out hover:scale-[0.99] hover:bg-[#a6ffdd] hover:shadow-none '
           >
             Go to Insights
           </Link>
         </div>
         <div className='z-[5] flex flex-col gap-[21px] tablet:min-w-[539px]'>
           <div className='relative z-[5] overflow-hidden rounded-[5px] bg-gradient-to-br from-[#000A25] to-[#000A25]/60 bg-cover p-[20px]'>
-            <h3 className='font-unbound text-[24px] font-bold uppercase leading-[1.16]'>
+            <h2 className='font-unbound text-[24px] font-bold uppercase leading-[1.16]'>
               Success Solutions
-            </h3>
+            </h2>
             <p className='mt-[12px] font-proxima text-[20px] leading-[1.2] opacity-80'>{`The stories of solving our client's cases`}</p>
             <Link
               href='/solutions'
@@ -43,6 +43,7 @@ export const Hero = () => {
               sizes='(min-width: 1440px) 539px, (min-width: 1200px) 100vw, (min-width: 790px) 100vw'
               alt='solution'
               className='absolute inset-0 z-[-1] w-full object-cover'
+              priority
             />
           </div>
           <div className='z-[5] rounded-[5px] bg-white p-[20px]'>

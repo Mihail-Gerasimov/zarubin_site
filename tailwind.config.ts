@@ -12,6 +12,9 @@ const config: Config = {
   safelist: ['animate-slide-in', 'animate-fade-in', 'animate-fade-out'],
   theme: {
     extend: {
+      boxShadow: {
+        button: '0px 1px 1px #a6ffdd',
+      },
       animation: {
         scroll: 'scroll 10s linear infinite',
       },
@@ -22,6 +25,8 @@ const config: Config = {
         },
       },
       backgroundImage: {
+        'linear-shadow':
+          'linear-gradient(175deg,rgba(1, 12, 44, 0) -3.51%,#00030c 85.29%)',
         'radial-primary':
           'radial-gradient(circle, rgba(0, 0, 0, 0), var(--primary) 80%)',
         'mobile-banner': "url('/assets/images/banner/mobile_main_banner.png')",
@@ -57,10 +62,10 @@ const config: Config = {
         },
       }),
       fontFamily: {
-        manrope: ['Manrope'],
+        manrope: ['Manrope', 'sans-serif'],
         bebas: ['Bebas Neue', 'sans-serif'],
-        unbound: ['Unbounded'],
-        proxima: ['Proxima\\ Nova'],
+        unbound: ['Unbounded', 'sans-serif'],
+        proxima: ['Proxima\\ Nova', 'sans-serif'],
       },
       colors: {
         'main-beige': '#F7F7F7',
