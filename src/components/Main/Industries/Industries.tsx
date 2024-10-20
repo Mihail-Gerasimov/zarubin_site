@@ -83,7 +83,8 @@ export const Industries = () => {
                 src={item.image}
                 alt=''
                 fill
-                priority
+                sizes='(min-width: 1440px) 880px, (min-width: 1200px) 620px, (min-width: 768px) 364vw, 0'
+                loading='lazy'
                 className='object-contain object-bottom'
               />
             </div>

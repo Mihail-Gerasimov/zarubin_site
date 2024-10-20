@@ -40,6 +40,7 @@ export const Hero = () => {
             <Image
               src={solutionBg}
               fill
+              sizes='(min-width: 1440px) 539px, (min-width: 1200px) 100vw, (min-width: 790px) 100vw'
               alt='solution'
               className='absolute inset-0 z-[-1] w-full object-cover'
             />

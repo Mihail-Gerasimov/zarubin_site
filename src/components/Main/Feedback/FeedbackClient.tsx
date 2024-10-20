@@ -2,14 +2,17 @@
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import { IFeedback } from '@/src/utils/types';
-import { useState } from 'react';
-import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import { lazy, Suspense, useState } from 'react';
+import { SwiperClass } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
-import { FeedbackCard } from './FeedbackCard/FeedbackCard';
 
 interface Props {
   feedback: IFeedback[];
 }
+
+const LazyFeedbackSwiper = lazy(
+  () => import('./FeedbackSwiper/FeedbackSwiper'),
+);
 
 export const FeedbackClient = ({ feedback }: Props) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
@@ -30,28 +33,9 @@ export const FeedbackClient = ({ feedback }: Props) => {
           </div>
         </div>
       </Container>
-      <Swiper
-        breakpoints={{
-          1440: {
-            slidesPerView: 2.3,
-          },
-        }}
-        slidesPerView={1.3}
-        onSwiper={setSwiper}
-        className='max-w-full'
-      >
-        {feedback.map((item, index) => (
-          <SwiperSlide key={item.id} className='!h-auto'>
-            <Container className='h-full desktop-hard:px-[80px]'>
-              <FeedbackCard
-                data={item}
-                length={feedback.length}
-                indexNumber={index + 1}
-              />
-            </Container>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <Suspense fallback={<div></div>}>
+        <LazyFeedbackSwiper setSwiper={setSwiper} feedback={feedback} />
+      </Suspense>
     </div>
   );
 };

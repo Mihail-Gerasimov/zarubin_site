@@ -48,8 +48,10 @@ export const BusinessSolvingCard = ({
         <Image
           src={image}
           fill
+          sizes='(min-width: 1800px) 860px, (min-width: 1600px) 760px, (min-width: 1440px) 680px, (min-width: 1280px) 600px, (min-width: 1200px) 560px, (min-width: 768px) 728px, 90vw'
           alt='bg-image'
-          className='h-full w-[auto] object-cover'
+          className='h-full w-auto object-cover'
+          loading='lazy'
         />
       </div>
     </div>

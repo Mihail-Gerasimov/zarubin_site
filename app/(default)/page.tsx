@@ -28,7 +28,14 @@ export default function Home() {
           </Container>
           <div className='absolute inset-2.5 h-full bg-[linear-gradient(to_top,var(--primary)_200px,blue)] opacity-75 mix-blend-hard-light tablet:inset-[20px]'></div>
           <div className='absolute inset-2.5 -z-10 tablet:inset-[20px]'>
-            <Image src={heroBg} priority className='object-cover' fill alt='' />
+            <Image
+              src={heroBg}
+              priority
+              className='object-cover'
+              sizes='100vw'
+              fill
+              alt='Hero'
+            />
           </div>
         </Section>
         <Section id='expertise' className='overflow-hidden'>
@@ -53,8 +60,8 @@ export default function Home() {
             <Image
               src={unlockBg}
               fill
-              objectFit='cover'
-              objectPosition='bottom'
+              placeholder='blur'
+              sizes='100vw'
               alt=''
               className='absolute bottom-0 right-0 object-cover opacity-[3%]'
             />
@@ -85,9 +92,10 @@ export default function Home() {
           <div className='absolute inset-0'>
             <Image
               src={insightBg}
-              sizes='cover'
+              sizes='100vw'
               className='absolute inset-0'
               alt='building'
+              loading='lazy'
             />
           </div>
         </Section>
@@ -107,8 +115,10 @@ export default function Home() {
               src={bgImage}
               quality={100}
               fill
+              sizes='100vw'
               className='absolute inset-0 object-cover'
               alt='background'
+              loading='lazy'
             />
           </div>
         </Section>

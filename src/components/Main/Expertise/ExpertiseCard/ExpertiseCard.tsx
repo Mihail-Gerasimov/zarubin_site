@@ -55,11 +55,10 @@ export const ExpertiseCard = ({
       <div className='relative hidden w-[50%] overflow-hidden tablet:block'>
         <Image
           src={image}
-          layout='fill'
-          objectFit='cover'
-          objectPosition='center'
+          fill
+          sizes='100%'
           alt={`image ${title}`}
-          className='absolute left-0 top-0'
+          className='absolute left-0 top-0 object-cover'
           loading='lazy'
         />
       </div>
