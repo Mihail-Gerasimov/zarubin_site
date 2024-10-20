@@ -2,7 +2,7 @@
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import { IFeedback } from '@/src/utils/types';
-import { useState, lazy, Suspense } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { SwiperClass } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
 

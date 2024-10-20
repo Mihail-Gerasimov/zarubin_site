@@ -8,8 +8,8 @@ export const TrustUs = () => {
         Trust us
       </h2>
       <div className='relative w-full overflow-hidden'>
-        <div className='bg-radial-primary absolute left-0 top-0 z-[2] h-full w-full' />
-        <div className='animate-scroll flex w-[200%] items-center pl-[30px]'>
+        <div className='absolute left-0 top-0 z-[2] h-full w-full bg-radial-primary' />
+        <div className='flex w-[200%] animate-scroll items-center pl-[30px]'>
           <div className='flex h-[50px] w-full justify-around desktop:h-[92px] desktop-hard:text-[70px]'>
             {imageData.map((item) => (
               <Image

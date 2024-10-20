@@ -1,8 +1,7 @@
-import React from 'react';
-import { FeedbackCard } from '../FeedbackCard/FeedbackCard';
+import { IFeedback } from '@/src/utils/types';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../../shared/Container/Container';
-import { IFeedback } from '@/src/utils/types';
+import { FeedbackCard } from '../FeedbackCard/FeedbackCard';
 
 interface IFeedbackSwiper {
   feedback: IFeedback[];
