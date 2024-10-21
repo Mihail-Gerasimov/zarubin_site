@@ -1,5 +1,5 @@
 import { IFeedback } from '@/src/utils/types';
-import { SwiperClass, Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../../shared/Container/Container';
 import { FeedbackCard } from '../FeedbackCard/FeedbackCard';
 

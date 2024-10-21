@@ -1,11 +1,11 @@
 'use client';
 
+import { NextLinePreposition } from '@/src/components/NextLinePreposition/NextLinePreposition';
 import { Case } from '@/src/utils/getCaseMetadata';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import styles from './Cases.module.css';
-import { NextLinePreposition } from '@/src/components/NextLinePreposition/NextLinePreposition';
 
 export const CasesGrid = ({ cases }: { cases: Case[] }) => {
   return (

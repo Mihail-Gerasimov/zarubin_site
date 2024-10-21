@@ -1,7 +1,7 @@
 'use client';
 import classNames from 'classnames';
-import { TeamCardTriangle } from '../../svg/TeamCardTriangle';
 import { NextLinePreposition } from '../../NextLinePreposition/NextLinePreposition';
+import { TeamCardTriangle } from '../../svg/TeamCardTriangle';
 
 type TeamCard = {
   title: string;

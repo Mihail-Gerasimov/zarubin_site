@@ -3,9 +3,9 @@
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import { useState } from 'react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
 import { InsightsCard } from './InsightsCard/InsightsCard';
-import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 
 interface Post {
   title: string;

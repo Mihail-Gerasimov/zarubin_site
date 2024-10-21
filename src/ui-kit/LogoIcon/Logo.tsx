@@ -1,5 +1,5 @@
-import LogoIcon from '@/public/assets/images/icons/logo_white.svg';
 import LightLogoIcon from '@/public/assets/images/icons/logo_dark.svg';
+import LogoIcon from '@/public/assets/images/icons/logo_white.svg';
 
 interface Props {
   dark?: boolean;

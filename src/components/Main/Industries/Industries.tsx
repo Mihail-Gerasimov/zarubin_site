@@ -4,7 +4,7 @@ import { IndustriesData } from '@/src/utils/DataLayers/IndustriesData';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { Autoplay } from 'swiper/modules';
-import { SwiperClass, SwiperSlide, Swiper } from 'swiper/react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
 import { IndustriesCard } from './IndustriesCard/IndustriesCard';
 
