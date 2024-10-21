@@ -1,3 +1,4 @@
+import { NextLinePreposition } from '@/src/components/NextLinePreposition/NextLinePreposition';
 import { LinkArrow } from '@/src/ui-kit/LinkArrow/LinkArrow';
 import { IImage } from '@/src/utils/types';
 import Image from 'next/image';
@@ -25,21 +26,25 @@ export const BusinessSolvingCard = ({
     <div className='relative flex h-full w-full flex-col rounded-[6px] bg-dark-blue p-[40px_20px]'>
       <div className='z-10 flex h-full w-full flex-col'>
         <div className='flex flex-wrap items-center gap-[8px]'>
-          <span
+          <NextLinePreposition
+            tag='span'
+            text={industries[0]}
             className={`flex max-w-fit items-center justify-start rounded-[5px] bg-white p-[10px] font-proxima text-[18px] font-bold uppercase leading-[0.8] text-text-dark laptop:text-[21px] [&:nth-child(even)]:bg-main-gray [&:nth-child(even)]:text-white `}
-          >
-            {industries[0]}
-          </span>
+          />
           <span className='flex items-center justify-start rounded-[5px] bg-main-gray p-[10px] font-proxima text-[18px] font-bold uppercase leading-[0.8] text-white laptop:text-[21px]'>
             #{joinTag}
           </span>
         </div>
-        <h3 className='mt-[58px] flex-1 font-proxima text-[28px] font-bold leading-[1.14] tablet:mt-[46px] laptop:text-[36px] desktop:text-[40px] desktop-big:mt-[56px]'>
-          {title}
-        </h3>
-        <p className='mb-[32px] mt-[10px] flex-1 font-proxima text-[20px] leading-[1.2]'>
-          {description}
-        </p>
+        <NextLinePreposition
+          tag='h3'
+          text={title}
+          className='mt-[58px] flex-1 font-proxima text-[28px] font-bold leading-[1.14] tablet:mt-[46px] laptop:text-[36px] desktop:text-[40px] desktop-big:mt-[56px]'
+        />
+        <NextLinePreposition
+          tag='p'
+          text={description}
+          className='mb-[32px] mt-[10px] flex-1 font-proxima text-[20px] leading-[1.2]'
+        />
         <div className='h-fit w-fit'>
           <LinkArrow title='Go to the solution' link={link} />
         </div>

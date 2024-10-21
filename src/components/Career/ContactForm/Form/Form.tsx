@@ -7,6 +7,7 @@ import { useFormik } from 'formik';
 import { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import styles from './Form.module.css';
+import { NextLinePreposition } from '@/src/components/NextLinePreposition/NextLinePreposition';
 
 type Inputs = {
   name: string;
@@ -65,9 +66,11 @@ export const Form = () => {
 
   return (
     <div id='contact-form' className={styles.formWrapper}>
-      <h3 className={styles.title}>
-        Fill out the form and click the blue button to get in touch with you!
-      </h3>
+      <NextLinePreposition
+        tag='h3'
+        text='Fill out the form and click the blue button to get in touch with you!'
+        className={styles.title}
+      />
       <form className={styles.form} onSubmit={formik.handleSubmit}>
         <label className={styles.label}>
           <input

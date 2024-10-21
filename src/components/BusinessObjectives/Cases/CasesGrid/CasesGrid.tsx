@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import styles from './Cases.module.css';
+import { NextLinePreposition } from '@/src/components/NextLinePreposition/NextLinePreposition';
 
 export const CasesGrid = ({ cases }: { cases: Case[] }) => {
   return (
@@ -61,9 +62,11 @@ const CaseCard = ({ data }: { data: Case }) => {
               {data.tag}
             </span>
           </div>
-          <h2 className='font-unbound text-[22px] font-bold uppercase leading-[1.15] text-white desktop-big:text-[38px]'>
-            {data.title}
-          </h2>
+          <NextLinePreposition
+            tag='h2'
+            text={data.title}
+            className='font-unbound text-[22px] font-bold uppercase leading-[1.15] text-white desktop-big:text-[38px]'
+          />
         </div>
         <div className='flex flex-col gap-[8px]'>
           {data.industries.map((item, idx) => (

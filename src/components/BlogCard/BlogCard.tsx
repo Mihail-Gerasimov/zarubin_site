@@ -2,6 +2,7 @@ import { DefaultImage } from '@/src/ui-kit/DefaultImage/DefaultImage';
 import { formattedDate } from '@/src/utils/formattedDate';
 import Image from 'next/image';
 import Link from 'next/link';
+import { NextLinePreposition } from '../NextLinePreposition/NextLinePreposition';
 
 interface Data {
   title: string;
@@ -49,9 +50,11 @@ export const BlogCard = ({ post }: Props) => {
                 </span>
               ))}
           </div>
-          <h3 className='font-proxima text-[28px] font-bold leading-[1.14] tablet:text-[36px] tablet:leading-[1.1] desktop:text-[40px]'>
-            {post.title}
-          </h3>
+          <NextLinePreposition
+            tag='h3'
+            text={post.title}
+            className='font-proxima text-[28px] font-bold leading-[1.14] tablet:text-[36px] tablet:leading-[1.1] desktop:text-[40px]'
+          />
           <p className='line-clamp-2 overflow-hidden font-proxima text-[20px] opacity-[70%]'>
             {post.description}
           </p>

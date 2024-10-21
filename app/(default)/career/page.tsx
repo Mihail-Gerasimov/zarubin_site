@@ -50,7 +50,7 @@ export default async function CareerPage() {
         id='hero'
         className={`${styles.heroContainer} relative tablet:px-0`}
       >
-        <Container className='px-0'>
+        <Container>
           <Hero />
           <div className='absolute inset-0 -z-10'>
             <Image

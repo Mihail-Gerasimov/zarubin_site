@@ -1,8 +1,5 @@
-import LogoIcon from '@/public/assets/images/icons/dark_logo.svg';
-import LightLogoIcon from '@/public/assets/images/icons/light_logo.svg';
-// import { BASE_URL } from '@/src/utils/alias';
-
-// const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '/';
+import LogoIcon from '@/public/assets/images/icons/logo_white.svg';
+import LightLogoIcon from '@/public/assets/images/icons/logo_dark.svg';
 
 interface Props {
   dark?: boolean;

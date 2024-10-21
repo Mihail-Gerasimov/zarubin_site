@@ -1,10 +1,20 @@
+import { NextLinePreposition } from '../../NextLinePreposition/NextLinePreposition';
+
 export const Insights = () => {
   return (
     <div className='flex flex-col gap-[20px] tablet:gap-[40px] desktop:gap-[60px]'>
       <div className='desktop:px-[80px]'>
-        <h2 className='font-unbound text-[32px] font-bold uppercase leading-[1.1] tablet:text-[50px] tablet:leading-[1.3] desktop:text-[70px] desktop:leading-[1.1]'>
-          We are a team of experienced professionals{' '}
-          <span className='text-stroke'>charged with results</span>
+        <h2 className='font-unbound text-[32px] font-bold uppercase leading-[1.1] tablet:text-[50px] tablet:leading-[1.3] desktop:text-[55px] desktop:leading-[1.1] desktop-light:text-[60px] desktop-hard:text-[70px]'>
+          <NextLinePreposition
+            tag='span'
+            text='We are a team of experienced professionals'
+            className=''
+          />{' '}
+          <NextLinePreposition
+            tag='span'
+            text='charged with results'
+            className='text-stroke'
+          />
         </h2>
       </div>
       <div className='bg-main-blue p-[40px_20px] desktop:p-[60px_80px]'>

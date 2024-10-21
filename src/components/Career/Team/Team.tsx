@@ -1,6 +1,7 @@
 'use client';
 import classNames from 'classnames';
 import { TeamCardTriangle } from '../../svg/TeamCardTriangle';
+import { NextLinePreposition } from '../../NextLinePreposition/NextLinePreposition';
 
 type TeamCard = {
   title: string;
@@ -29,9 +30,11 @@ const TEAM_CARDS: TeamCard[] = [
 export const Team = () => {
   return (
     <div className='flex flex-col gap-[60px]'>
-      <h2 className='break-words font-unbound text-[45px] font-bold uppercase leading-[1] tablet:text-[50px] tablet:leading-[1.3] desktop:text-[70px] desktop:leading-[1.1]'>
-        a team of experienced pro`s, charged with results
-      </h2>
+      <NextLinePreposition
+        tag='h2'
+        text='a team of experienced pro`s, charged with results'
+        className='break-words font-unbound text-[32px] font-bold uppercase leading-[1] mobile-big:text-[45px] tablet:text-[50px] tablet:leading-[1.3] desktop:text-[70px] desktop:leading-[1.1]'
+      />
       <div className='grid grid-cols-1 gap-10 desktop:grid-cols-3'>
         {TEAM_CARDS.map((teamCard) => (
           <TeamCard key={teamCard.title} data={teamCard} />
@@ -49,17 +52,19 @@ const TeamCard = ({ data }: { data: TeamCard }) => {
         data.alt ? 'relative bg-white text-dark' : 'bg-[--second-blue]',
       )}
     >
-      <h4 className='font-unbound text-[32px] font-bold uppercase tablet:text-[44px]'>
-        {data.title}
-      </h4>
-
-      <p
+      <NextLinePreposition
+        tag='h4'
+        text={data.title}
+        className='font-unbound text-[32px] font-bold uppercase tablet:text-[44px]'
+      />
+      <NextLinePreposition
+        tag='p'
+        text={data.description}
         className={classNames('font-proxima text-[20px] leading-[1.2]', {
           'max-w-[75%]': data.alt,
         })}
-      >
-        {data.description}
-      </p>
+      />
+
       {data.alt && (
         <div className='absolute bottom-4 right-4 hidden w-[100px] tablet:block desktop:w-[181px]'>
           <TeamCardTriangle />

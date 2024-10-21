@@ -1,5 +1,6 @@
 'use client';
 
+import { NextLinePreposition } from '@/src/components/NextLinePreposition/NextLinePreposition';
 import { sendEmail } from '@/src/utils/sendEmail';
 import { InputMask } from '@react-input/mask';
 import { useFormik } from 'formik';
@@ -46,9 +47,11 @@ export const Form = () => {
       id='contact-form'
       className='w-full scroll-mt-[100px] rounded-[12px] bg-[--second-blue] px-[20px] py-[40px] mobile-big:px-[40px] mobile-big:py-[40px]'
     >
-      <div className='font-unbound text-[22px] font-semibold leading-[22px] text-white mobile-big:text-[32px] mobile-big:leading-[37px]'>
-        Fill out the form and click the blue button to get in touch with you!
-      </div>
+      <NextLinePreposition
+        tag='p'
+        text='Fill out the form and click the blue button to get in touch with you!'
+        className='font-unbound text-[22px] font-semibold leading-[22px] text-white mobile-big:text-[32px] mobile-big:leading-[37px]'
+      />
       <form
         className='mt-[49px] flex-col space-y-[45px] overflow-hidden'
         onSubmit={formik.handleSubmit}
