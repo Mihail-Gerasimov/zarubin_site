@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface IPreposition {
   text: string;
   tag: keyof JSX.IntrinsicElements;
   className: string;
+  children?: ReactNode;
 }
 
 export const NextLinePreposition = ({ text, tag, className }: IPreposition) => {

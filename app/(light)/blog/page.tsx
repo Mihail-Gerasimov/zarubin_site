@@ -1,3 +1,4 @@
+import { NextLinePreposition } from '@/src/components/NextLinePreposition/NextLinePreposition';
 import { PostsComponent } from '@/src/components/PostsComponent/PostsComponent';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import { postsSorting } from '@/src/utils/postsSorting';
@@ -11,9 +12,11 @@ export default function Blog() {
         <h1 className='z-[5] font-unbound text-[45px] font-bold uppercase leading-[1] tablet:text-[60px] desktop:text-[90px]'>
           Insights
         </h1>
-        <p className='z-[5] px-[70px] text-center font-proxima text-[20px] leading-[1.2] text-[#00030C]'>
-          Case studies, research and experience in detail
-        </p>
+        <NextLinePreposition
+          tag='p'
+          text='Case studies, research and experience in detail'
+          className='z-[5] px-[70px] text-center font-proxima text-[20px] leading-[1.2] text-[#00030C]'
+        />
       </div>
       <div className='px-[10px] tablet:px-[40px]'>
         <PostsComponent posts={sortedPosts} />
