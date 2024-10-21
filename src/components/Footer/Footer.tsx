@@ -1,4 +1,4 @@
-import LightMainLogo from '@/public/assets/images/icons/light_logo.svg';
+import LightMainLogo from '@/public/assets/images/icons/logo_dark.svg';
 import { getExpertiseList } from '@/src/utils/expertiseMenu';
 import Link from 'next/link';
 import { Container } from '../shared/Container/Container';
@@ -14,7 +14,7 @@ export const Footer = () => {
         <div className='flex w-full flex-col gap-[24px] tablet:gap-[60px] laptop:flex-row-reverse laptop:justify-between desktop:justify-between'>
           <div className='flex flex-col laptop:mt-[49px] laptop:items-end laptop:gap-[51px]'>
             <Link aria-label='Go to the main page' href='/'>
-              <LightMainLogo className='h-[54px] w-[auto] tablet:h-[71px] desktop:h-[60px]' />
+              <LightMainLogo className='h-[31px] w-[auto] tablet:h-[53px] desktop:h-[70px]' />
             </Link>
             <Link
               href='mailto:access@thebrightbyte.com'
