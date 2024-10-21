@@ -1,20 +1,12 @@
 'use client';
 
 import { IndustriesData } from '@/src/utils/DataLayers/IndustriesData';
-import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { Autoplay } from 'swiper/modules';
-import { SwiperClass } from 'swiper/react';
+import { SwiperClass, SwiperSlide, Swiper } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
 import { IndustriesCard } from './IndustriesCard/IndustriesCard';
-
-const DynamicSwiper = dynamic(() =>
-  import('swiper/react').then((mod) => mod.Swiper),
-);
-const DynamicSwiperSlide = dynamic(() =>
-  import('swiper/react').then((mod) => mod.SwiperSlide),
-);
 
 export const Industries = () => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
@@ -67,7 +59,7 @@ export const Industries = () => {
           ))}
         </ul>
       </div>
-      <DynamicSwiper
+      <Swiper
         className='max-w-full overflow-y-visible'
         onSwiper={setSwiper}
         onSlideChange={(swiper) => setSelectedIndex(swiper.activeIndex)}
@@ -76,7 +68,7 @@ export const Industries = () => {
         autoplay={{ delay: 4000 }}
       >
         {IndustriesData.map((item) => (
-          <DynamicSwiperSlide
+          <SwiperSlide
             key={item.id}
             className='!h-auto pb-[40px] tablet:pb-[60px] desktop:pb-[80px]'
           >
@@ -96,9 +88,9 @@ export const Industries = () => {
                 className='object-contain object-bottom'
               />
             </div>
-          </DynamicSwiperSlide>
+          </SwiperSlide>
         ))}
-      </DynamicSwiper>
+      </Swiper>
     </Container>
   );
 };

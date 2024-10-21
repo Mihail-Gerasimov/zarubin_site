@@ -2,11 +2,10 @@
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import useMediaQuery from '@/src/utils/useMediaQuery';
-import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import { SwiperClass } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
 import { InsightsCard } from './InsightsCard/InsightsCard';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 
 interface Post {
   title: string;
@@ -20,13 +19,6 @@ interface Post {
 interface Props {
   posts: Post[];
 }
-
-const DynamicSwiper = dynamic(() =>
-  import('swiper/react').then((mod) => mod.Swiper),
-);
-const DynamicSwiperSlide = dynamic(() =>
-  import('swiper/react').then((mod) => mod.SwiperSlide),
-);
 
 export const InsightsClient = ({ posts }: Props) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
@@ -52,13 +44,13 @@ export const InsightsClient = ({ posts }: Props) => {
         </div>
       </Container>
       <Container className='flex max-w-full p-0 pl-[10px] tablet:p-0 tablet:pl-[40px] laptop:px-[40px] desktop-big:px-[80px]'>
-        <DynamicSwiper
+        <Swiper
           spaceBetween={mobile ? 20 : 40}
           slidesPerView={mobile ? 1.13 : isTablet ? 1.56 : 3}
           onSwiper={setSwiper}
         >
           {posts.slice(0, 6).map((post, idx) => (
-            <DynamicSwiperSlide key={idx}>
+            <SwiperSlide key={idx}>
               <InsightsCard
                 title={post.title}
                 description={post.description}
@@ -68,9 +60,9 @@ export const InsightsClient = ({ posts }: Props) => {
                 image={post.image}
                 downloadLink={post.downloadLink}
               />
-            </DynamicSwiperSlide>
+            </SwiperSlide>
           ))}
-        </DynamicSwiper>
+        </Swiper>
       </Container>
     </div>
   );
