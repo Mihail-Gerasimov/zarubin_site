@@ -3,7 +3,6 @@ import solutionBg from '@/public/assets/images/main/hero-solutions-bg.webp';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import { NextLinePreposition } from '../../NextLinePreposition/NextLinePreposition';
 
 export const Hero = () => {

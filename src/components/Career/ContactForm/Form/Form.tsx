@@ -1,5 +1,6 @@
 'use client';
 
+import { NextLinePreposition } from '@/src/components/NextLinePreposition/NextLinePreposition';
 import { DropzoneIcon } from '@/src/components/svg/DropzoneIcon';
 import { sendEmail } from '@/src/utils/sendEmail';
 import classNames from 'classnames';
@@ -7,7 +8,6 @@ import { useFormik } from 'formik';
 import { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import styles from './Form.module.css';
-import { NextLinePreposition } from '@/src/components/NextLinePreposition/NextLinePreposition';
 
 type Inputs = {
   name: string;
