@@ -39,7 +39,7 @@ export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
     setActiveSubmenu(isActive);
   };
 
-  const isMobile = useMediaQuery('<desktop-l');
+  const isMobile = useMediaQuery('<laptop-big');
 
   const handleOpen = () => {
     setIsOpen((prev) => !prev);
@@ -69,13 +69,17 @@ export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
           />
         </nav>
         <ContactUsBtn dark={dark} />
-        <MobileMenu
-          isOpen={isOpen}
-          onClick={() => setIsOpen(false)}
-          dark={dark}
-          expertiseSubMenu={expertiseSubmenu}
-        />
-        <BurgerIcon isOpen={isOpen} setIsOpen={handleOpen} dark={dark} />
+        {isMobile && (
+          <>
+            <MobileMenu
+              isOpen={isOpen}
+              onClick={() => setIsOpen(false)}
+              dark={dark}
+              expertiseSubMenu={expertiseSubmenu}
+            />
+            <BurgerIcon isOpen={isOpen} setIsOpen={handleOpen} dark={dark} />
+          </>
+        )}
       </Container>
 
       <div

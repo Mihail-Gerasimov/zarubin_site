@@ -81,7 +81,7 @@ export const Industries = () => {
             <div className='absolute bottom-0 right-0 z-0 hidden h-3/4 w-[50%] opacity-[80%] tablet:block desktop:max-w-[900px]'>
               <Image
                 src={item.image}
-                alt=''
+                alt={`${item.title} image`}
                 fill
                 sizes='(min-width: 1440px) 880px, (min-width: 1200px) 620px, (min-width: 768px) 364vw, 0'
                 loading='lazy'

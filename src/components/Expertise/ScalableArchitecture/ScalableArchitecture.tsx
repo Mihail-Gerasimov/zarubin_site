@@ -34,7 +34,7 @@ export const ScalableArchitecture = () => {
         <ExpertiseScalableObjectsSvg />
         <Image
           src={bg}
-          alt=''
+          alt='background image'
           className='absolute inset-0 h-full object-cover object-center'
         />
       </div>

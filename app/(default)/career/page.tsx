@@ -56,7 +56,7 @@ export default async function CareerPage() {
             <Image
               src={HeroBg}
               priority
-              alt=''
+              alt='background image'
               objectPosition='top'
               objectFit='cover'
               layout='fill'

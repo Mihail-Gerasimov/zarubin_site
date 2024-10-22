@@ -34,6 +34,7 @@ export const SocialFollow = ({ isRight = false }: Props) => {
         <li>
           <a
             href={`${SHARING.FACEBOOK_SHARE + URL + pathName}`}
+            rel='noopener'
             target='_blank'
             className='z-[20]'
           >
@@ -41,13 +42,18 @@ export const SocialFollow = ({ isRight = false }: Props) => {
           </a>
         </li>
         <li>
-          <a href={`${SHARING.TWITTER + URL + pathName}`} target='_blank'>
+          <a
+            href={`${SHARING.TWITTER + URL + pathName}`}
+            target='_blank'
+            rel='noopener'
+          >
             <Twitter className='w-[24px]' />
           </a>
         </li>
         <li>
           <a
             href={`${SHARING.LINKEDIN_SHARE + URL + pathName}`}
+            rel='noopener'
             target='_blank'
           >
             <Linkedin className='w-[24px]' />

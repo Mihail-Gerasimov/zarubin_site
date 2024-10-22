@@ -64,7 +64,11 @@ export default async function BusinessObjectivesPage() {
           <Insights />
         </ScrollAnimationWrapper>
         <div className='absolute inset-0'>
-          <Image src={insightBg} className='absolute inset-0' alt='' />
+          <Image
+            src={insightBg}
+            className='absolute inset-0'
+            alt='background image'
+          />
         </div>
       </Section>
       <Section
