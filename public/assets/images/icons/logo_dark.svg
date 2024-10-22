@@ -23,7 +23,7 @@
 <rect x="418.053" y="7.66388" width="10.947" height="10.947" fill="#FFDC83"/>
 <defs>
 <linearGradient id="paint0_linear_783_1392" x1="46.0001" y1="1.38786" x2="46.0001" y2="93.2918" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFCC47"/>
+<stop offset='0' stop-color="#FFCC47"/>
 <stop offset="0.441534" stop-color="#D31900"/>
 <stop offset="0.663625" stop-color="#9747FF"/>
 </linearGradient>

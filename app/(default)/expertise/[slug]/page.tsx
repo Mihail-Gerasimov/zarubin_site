@@ -124,8 +124,9 @@ export async function generateMetadata({
 }
 
 export default function ExpertiseCase(props: { params: { slug: string } }) {
-  const slug = props.params.slug;
+  const { slug } = props.params;
   const expertiseCaseContent = getPostContent(slug);
+  const readingTime = expertiseCaseContent?.data.readingTime;
 
   if (!expertiseCaseContent) {
     return <NotFoundPage />;
@@ -187,8 +188,13 @@ export default function ExpertiseCase(props: { params: { slug: string } }) {
         <div
           className={`'mb-[10px] mt-[200px] flex flex-col tablet:mt-[20px] tablet:flex-row tablet:justify-between desktop:mb-[40px] desktop:mt-[20px]`}
         ></div>
+        {readingTime && (
+          <span className='block text-[16px] text-text-dark opacity-[50%]'>
+            Reading time: {readingTime}
+          </span>
+        )}
         <article
-          className={`prose w-full max-w-[100%] pb-[30px] text-white prose-p:text-[16px] prose-p:text-text-dark/80 prose-li:text-[16px] prose-li:text-text-dark/80 tablet:pb-[40px] desktop:pb-[60px]`}
+          className={`prose mt-[20px] w-full max-w-[100%] pb-[30px] text-white prose-p:text-[16px] prose-p:text-text-dark/80 prose-li:text-[16px] prose-li:text-text-dark/80 tablet:pb-[40px] desktop:pb-[60px]`}
         >
           <Markdown className={` z-20 w-full font-proxima`}>
             {allPosts}

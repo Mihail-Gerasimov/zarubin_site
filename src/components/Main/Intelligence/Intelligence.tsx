@@ -22,7 +22,7 @@ export const Intelligence = () => {
         width={400}
         height={300}
         src='/assets/images/main/bussines_bg.webp'
-        alt=''
+        alt='background image'
         className='absolute right-[64px] top-[18px] h-[auto] w-[436px] tablet:right-0 tablet:top-[23px] tablet:w-full desktop:left-[-100px] desktop:h-[728px] desktop:w-[auto]'
       />
     </div>

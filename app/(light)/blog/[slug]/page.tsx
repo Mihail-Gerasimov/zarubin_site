@@ -190,12 +190,12 @@ export default function MainBlogSlug(props: { params: { slug: string } }) {
             className='absolute z-[1] h-[4px] w-full'
           />
         </div>
-        {type === POST_TYPE.RESEARCH && (
-          <span className='mb-[20px] hidden font-proxima text-[16px] leading-[1.25] text-text-dark opacity-[50%] desktop:block'>
-            Reading time: {readingTime}
-          </span>
-        )}
         <div className='mt-[60px]'>
+          {readingTime && (
+            <span className='mb-[10px] block font-proxima text-[16px] leading-[1.25] text-text-dark opacity-[50%]'>
+              Reading time: {readingTime}
+            </span>
+          )}
           <h1
             className={`font-proxima text-[28px] font-bold leading-[1.1] text-text-dark ${type === POST_TYPE.MANIFESTO && 'mb-[40px] tablet:mb-[40px] desktop:mb-[60px]'} `}
           >

@@ -75,7 +75,7 @@ export default function Home() {
               fill
               placeholder='blur'
               sizes='100vw'
-              alt=''
+              alt='background image'
               className='absolute bottom-0 right-0 object-cover opacity-[3%]'
               priority
             />

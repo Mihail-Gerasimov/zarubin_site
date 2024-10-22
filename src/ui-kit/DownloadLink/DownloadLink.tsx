@@ -10,6 +10,7 @@ export const DownloadLink = ({ link }: Props) => {
     <Link
       href={link}
       download
+      rel='noopener'
       target='_blank'
       className='flex items-start gap-[12px] rounded-[5px] bg-main-bg p-[10px] transition hover:bg-main-blue-hover'
     >

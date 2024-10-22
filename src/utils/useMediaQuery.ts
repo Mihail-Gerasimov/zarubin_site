@@ -7,6 +7,7 @@ export const breakpoints = {
   'mobile-big': 375,
   tablet: 768,
   laptop: 1200,
+  'laptop-big': 1280,
   desktop: 1440,
   'desktop-big': 1800,
   'desktop-hard': 1920,

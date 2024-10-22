@@ -69,7 +69,7 @@ export default function Expertise() {
           <Image
             src={insightBg}
             className='absolute inset-0 min-h-[600px]'
-            alt=''
+            alt='background image'
           />
         </div>
       </Section>
@@ -90,7 +90,7 @@ export default function Expertise() {
           <Image
             src={bgImage}
             className='absolute inset-0 opacity-30 mix-blend-overlay'
-            alt=''
+            alt='background image'
           />
         </div>
       </Section>

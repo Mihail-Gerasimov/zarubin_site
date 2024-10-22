@@ -24,7 +24,7 @@
 <rect x="446.053" y="18.6639" width="10.947" height="10.947" fill="#FFDC83"/>
 <defs>
 <linearGradient id="paint0_linear_773_2" x1="74.0001" y1="12.3879" x2="74.0001" y2="104.292" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFCC47"/>
+<stop offset='0' stop-color="#FFCC47"/>
 <stop offset="0.441534" stop-color="#D31900"/>
 <stop offset="0.663625" stop-color="#9747FF"/>
 </linearGradient>

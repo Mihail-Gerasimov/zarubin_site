@@ -1,13 +1,12 @@
-import Script from 'next/script';
-import React from 'react';
-import 'swiper/css';
-import '../globals.css';
-
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
 import { getExpertiseList } from '@/src/utils/expertiseMenu';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import type { Metadata } from 'next';
+import Script from 'next/script';
+import React from 'react';
+import 'swiper/css';
+import '../globals.css';
 
 export const metadata: Metadata = {
   title:
@@ -43,6 +42,10 @@ export default function RootLayout({
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
+        <meta
+          name='next-size-adjust'
+          content='width=device-width, initial-scale=1.0'
+        />
         <style>
           {`* {
                 box-sizing: border-box;
