@@ -8,7 +8,7 @@ export const FooterNavMenu = () => {
   const pathname = usePathname();
 
   return (
-    <ul className='flex flex-col gap-[12px] tablet:flex-row laptop:w-[240px] laptop:flex-col'>
+    <ul className='flex w-[165px] flex-col gap-[12px] laptop:w-[215px] desktop:w-[240px]'>
       {menuListLayer.map((item) => (
         <li
           key={item.id}
@@ -16,7 +16,7 @@ export const FooterNavMenu = () => {
         >
           <Link
             href={item.link}
-            className='group relative border-b-[2px] border-transparent font-proxima text-[16px] leading-[1.87] text-white tablet:text-[18px]'
+            className='group relative border-b-[2px] border-transparent font-proxima text-[16px] leading-[1.87] text-white desktop:leading-[1.2]'
           >
             {item.name}
             <div
