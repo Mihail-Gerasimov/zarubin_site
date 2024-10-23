@@ -1,4 +1,4 @@
-import LightMainLogo from '@/public/assets/images/icons/logo_dark.svg';
+import LightMainLogo from '@/public/assets/images/icons/footer_logo_dark.svg';
 import { getExpertiseList } from '@/src/utils/expertiseMenu';
 import Link from 'next/link';
 import { Container } from '../shared/Container/Container';
