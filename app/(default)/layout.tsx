@@ -2,7 +2,9 @@ import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
 import { getExpertiseList } from '@/src/utils/expertiseMenu';
 import { openGraphImage } from '@/src/utils/openGraphParams';
+import classNames from 'classnames';
 import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 import Script from 'next/script';
 import React from 'react';
 import 'swiper/css';
@@ -32,20 +34,56 @@ export const metadata: Metadata = {
 };
 const expertiseSubMenu = getExpertiseList();
 
+const Unbound = localFont({
+  src: [
+    {
+      path: '../../public/fonts/unbounded/Unbounded-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/unbounded/Unbounded-Black.ttf',
+      weight: '900',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/unbounded/Unbounded-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-unbound',
+  adjustFontFallback: false,
+});
+
+const Proxima = localFont({
+  src: [
+    {
+      path: '../../public/fonts/proxima-nova/proxima_nova_regular.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/proxima-nova/proxima_nova_bold.woff',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-proxima',
+  adjustFontFallback: false,
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const bodyClassname = classNames(Unbound.variable, Proxima.variable);
   return (
     <html lang='en'>
       <head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
-        <meta
-          name='next-size-adjust'
-          content='width=device-width, initial-scale=1.0'
-        />
         <style>
           {`* {
                 box-sizing: border-box;
@@ -77,7 +115,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className='flex flex-col bg-main-bg text-white'>
+      <body className={`flex flex-col bg-main-bg text-white ${bodyClassname}`}>
         <Header expertiseSubmenu={expertiseSubMenu} />
         {children}
         <Footer />

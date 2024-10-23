@@ -2,13 +2,12 @@ import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
 import { getExpertiseList } from '@/src/utils/expertiseMenu';
 import { openGraphImage } from '@/src/utils/openGraphParams';
+import classNames from 'classnames';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import localFont from 'next/font/local';
 import Script from 'next/script';
 import 'swiper/css';
 import '../globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title:
@@ -35,11 +34,51 @@ export const metadata: Metadata = {
 
 const testList = getExpertiseList();
 
+const Unbound = localFont({
+  src: [
+    {
+      path: '../../public/fonts/unbounded/Unbounded-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/unbounded/Unbounded-Black.ttf',
+      weight: '900',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/unbounded/Unbounded-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-unbound',
+  adjustFontFallback: false,
+});
+
+const Proxima = localFont({
+  src: [
+    {
+      path: '../../public/fonts/proxima-nova/proxima_nova_regular.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/proxima-nova/proxima_nova_bold.woff',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-proxima',
+  adjustFontFallback: false,
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const bodyClassname = classNames(Unbound.variable, Proxima.variable);
   return (
     <html lang='en'>
       <head>
@@ -63,7 +102,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${inter.className} flex flex-col bg-white text-text-dark`}
+        className={`${bodyClassname} flex flex-col bg-white text-text-dark`}
       >
         <Header dark={false} expertiseSubmenu={testList} />
         <main className='relative'>{children}</main>
