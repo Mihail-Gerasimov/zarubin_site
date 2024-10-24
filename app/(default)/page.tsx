@@ -2,12 +2,10 @@ import unlockBg from '@/public/assets/images/main/group.webp';
 import heroBg from '@/public/assets/images/main/hero_bg.webp';
 import insightBg from '@/public/assets/images/main/insight_bg.webp';
 import bgImage from '@/public/assets/images/main/reviewBg.webp';
-import { BusinessSolving } from '@/src/components/Main/BusinessSolving/BusinessSolving';
 import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 import { Expertise } from '@/src/components/Main/Expertise/Expertise';
 import { Hero } from '@/src/components/Main/Hero/Hero';
 import { Intelligence } from '@/src/components/Main/Intelligence/Intelligence';
-import { Unlock } from '@/src/components/Main/Unlock/Unlock';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ParallaxWrapper } from '@/src/components/shared/ParallaxWrapper/ParalaxWrapper';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
@@ -28,6 +26,15 @@ const DynamicFeedback = dynamic(() =>
 );
 const DynamicTrustUs = dynamic(() =>
   import('@/src/components/Main/TrustUs/TrustUs').then((mod) => mod.TrustUs),
+);
+
+const DynamicBusinessSolving = dynamic(() =>
+  import('@/src/components/Main/BusinessSolving/BusinessSolving').then(
+    (mod) => mod.BusinessSolving,
+  ),
+);
+const DynamicUnlock = dynamic(() =>
+  import('@/src/components/Main/Unlock/Unlock').then((mod) => mod.Unlock),
 );
 
 export default function Home() {
@@ -65,7 +72,7 @@ export default function Home() {
           <Container className='desktop-hard:px-[80px]'>
             <ScrollAnimationWrapper>
               <ParallaxWrapper speed={-10}>
-                <Unlock />
+                <DynamicUnlock />
               </ParallaxWrapper>
             </ScrollAnimationWrapper>
           </Container>
@@ -88,7 +95,7 @@ export default function Home() {
         </Section>
         <Section id='business-problems'>
           <ScrollAnimationWrapper>
-            <BusinessSolving />
+            <DynamicBusinessSolving />
           </ScrollAnimationWrapper>
         </Section>
         <Section

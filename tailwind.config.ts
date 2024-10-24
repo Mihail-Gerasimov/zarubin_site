@@ -17,11 +17,17 @@ const config: Config = {
       },
       animation: {
         scroll: 'scroll 10s linear infinite',
+        changeAfterBgColor: 'changeAfterBgColor 0.5s ease-in-out forwards',
       },
       keyframes: {
         scroll: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        changeAfterBgColor: {
+          '0%': { backgroundColor: 'rgba(255, 255, 255, 0.3)' },
+          '50%': { backgroundColor: 'white' },
+          '100%': { backgroundColor: 'rgba(255, 255, 255, 0.3)' },
         },
       },
       backgroundImage: {

@@ -2,7 +2,6 @@ import insightBg from '@/public/assets/images/main/insight_bg.png';
 import { Cases } from '@/src/components/BusinessObjectives/Cases/Cases';
 import { Hero } from '@/src/components/BusinessObjectives/Hero/Hero';
 import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
-import { Insights } from '@/src/components/Main/Insights/Insights';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
@@ -11,8 +10,13 @@ import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { Suspense } from 'react';
+
+const DynamicInsights = dynamic(() =>
+  import('@/src/components/Main/Insights/Insights').then((mod) => mod.Insights),
+);
 
 const title = contentTrimming(pageMetadata.solutions.title, 105);
 const description = contentTrimming(pageMetadata.solutions.description, 155);
@@ -53,15 +57,13 @@ export default async function BusinessObjectivesPage() {
       <Section className='!pt-0'>
         <Container>
           <Suspense>
-            <ScrollAnimationWrapper showOnLoad>
-              <Cases cases={casesMetadata} />
-            </ScrollAnimationWrapper>
+            <Cases cases={casesMetadata} />
           </Suspense>
         </Container>
       </Section>
       <Section id='insights'>
         <ScrollAnimationWrapper>
-          <Insights />
+          <DynamicInsights />
         </ScrollAnimationWrapper>
         <div className='absolute inset-0'>
           <Image
