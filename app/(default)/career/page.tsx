@@ -4,8 +4,6 @@ import { ContactForm } from '@/src/components/Career/ContactForm/ContactForm';
 import { Hero } from '@/src/components/Career/Hero/Hero';
 import { Internship } from '@/src/components/Career/Internship/Internship';
 import { Team } from '@/src/components/Career/Team/Team';
-import { Vacancies } from '@/src/components/Career/Vacanices/Vacancies';
-import { Values } from '@/src/components/Career/Values/Values';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
@@ -13,8 +11,18 @@ import { contentTrimming } from '@/src/utils/contentTrimming';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import styles from './Career.module.css';
+
+const DynamicValues = dynamic(() =>
+  import('@/src/components/Career/Values/Values').then((mod) => mod.Values),
+);
+const DynamicVacancies = dynamic(() =>
+  import('@/src/components/Career/Vacanices/Vacancies').then(
+    (mod) => mod.Vacancies,
+  ),
+);
 
 const title = contentTrimming(pageMetadata.career.title, 105);
 const description = contentTrimming(pageMetadata.career.description, 155);
@@ -79,7 +87,7 @@ export default async function CareerPage() {
         >
           <Container>
             <ScrollAnimationWrapper>
-              <Values />
+              <DynamicValues />
             </ScrollAnimationWrapper>
           </Container>
         </Section>
@@ -89,7 +97,7 @@ export default async function CareerPage() {
         >
           <Container>
             <ScrollAnimationWrapper>
-              <Vacancies withRowsBtn={false} isSwipe={false} />
+              <DynamicVacancies withRowsBtn={false} isSwipe={false} />
             </ScrollAnimationWrapper>
           </Container>
         </Section>

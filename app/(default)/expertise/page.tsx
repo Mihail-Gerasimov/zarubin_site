@@ -2,9 +2,6 @@ import bgImage from '@/public/assets/images/main/group.png';
 import insightBg from '@/public/assets/images/main/insight_bg.png';
 import { ExpertiseTitle } from '@/src/components/Expertise/ExpertiseTitle/ExpertiseTitle';
 import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
-import { Feedback } from '@/src/components/Main/Feedback/Feedback';
-import { Insights } from '@/src/components/Main/Insights/Insights';
-import { TrustUs } from '@/src/components/Main/TrustUs/TrustUs';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
@@ -13,8 +10,19 @@ import { contentTrimming } from '@/src/utils/contentTrimming';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { ClientExpertiseItems } from './ClientExpertiseItems';
+
+const DynamicInsights = dynamic(() =>
+  import('@/src/components/Main/Insights/Insights').then((mod) => mod.Insights),
+);
+const DynamicTrustUs = dynamic(() =>
+  import('@/src/components/Main/TrustUs/TrustUs').then((mod) => mod.TrustUs),
+);
+const DynamicFeedback = dynamic(() =>
+  import('@/src/components/Main/Feedback/Feedback').then((mod) => mod.Feedback),
+);
 
 const title = contentTrimming(pageMetadata.expertise.title, 105);
 const description = contentTrimming(pageMetadata.expertise.description, 155);
@@ -63,7 +71,7 @@ export default function Expertise() {
       </Section>
       <Section id='insights'>
         <ScrollAnimationWrapper>
-          <Insights />
+          <DynamicInsights />
         </ScrollAnimationWrapper>
         <div className='absolute inset-0'>
           <Image
@@ -76,14 +84,14 @@ export default function Expertise() {
       <Section>
         <Container>
           <ScrollAnimationWrapper>
-            <TrustUs />
+            <DynamicTrustUs />
           </ScrollAnimationWrapper>
         </Container>
       </Section>
       <Section id='feedback'>
         <Container>
           <ScrollAnimationWrapper className='relative z-10'>
-            <Feedback />
+            <DynamicFeedback />
           </ScrollAnimationWrapper>
         </Container>
         <div className='absolute inset-0 bg-[linear-gradient(100deg,#000a25_14.95%,#00248b_92.57%)]'>

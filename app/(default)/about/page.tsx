@@ -1,11 +1,4 @@
-import { Cards } from '@/src/components/About/Cards/Cards';
 import { Hero } from '@/src/components/About/Hero/Hero';
-import { Industries } from '@/src/components/About/Industries/Industries';
-import { Insights } from '@/src/components/About/Insights/Insights';
-import { Team } from '@/src/components/About/Team/Team';
-import { Technology } from '@/src/components/About/Technology/Technology';
-import { Direction } from '@/src/components/About/Vacancy/Direction/Direction';
-import { Vacancy } from '@/src/components/About/Vacancy/Vacancy';
 import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
@@ -14,6 +7,37 @@ import { contentTrimming } from '@/src/utils/contentTrimming';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Metadata } from 'next';
+import dynamic from 'next/dynamic';
+
+const DynamicInsights = dynamic(() =>
+  import('@/src/components/About/Insights/Insights').then(
+    (mod) => mod.Insights,
+  ),
+);
+const DynamicIndustries = dynamic(() =>
+  import('@/src/components/About/Industries/Industries').then(
+    (mod) => mod.Industries,
+  ),
+);
+const DynamicTeam = dynamic(() =>
+  import('@/src/components/About/Team/Team').then((mod) => mod.Team),
+);
+const DynamicCards = dynamic(() =>
+  import('@/src/components/About/Cards/Cards').then((mod) => mod.Cards),
+);
+const DynamicTechnology = dynamic(() =>
+  import('@/src/components/About/Technology/Technology').then(
+    (mod) => mod.Technology,
+  ),
+);
+const DynamicDirection = dynamic(() =>
+  import('@/src/components/About/Vacancy/Direction/Direction').then(
+    (mod) => mod.Direction,
+  ),
+);
+const DynamicVacancy = dynamic(() =>
+  import('@/src/components/About/Vacancy/Vacancy').then((mod) => mod.Vacancy),
+);
 
 const title = contentTrimming(pageMetadata.about.title, 105);
 const description = contentTrimming(pageMetadata.about.description, 155);
@@ -46,44 +70,40 @@ export default function About() {
   return (
     <main className='flex flex-col gap-[60px] overflow-hidden'>
       <Section id='hero' className='py-0 tablet:py-0 desktop:py-0'>
-        <ScrollAnimationWrapper showOnLoad>
-          <Container className='desktop:px-[20px]'>
-            <Hero />
-          </Container>
-        </ScrollAnimationWrapper>
+        <Container className='desktop:px-[20px]'>
+          <Hero />
+        </Container>
       </Section>
       <Section id='insights' className='py-0 tablet:py-0 desktop:py-0'>
-        <ScrollAnimationWrapper>
-          <Container className='tablet:px-[40px] desktop:px-0'>
-            <Insights />
-          </Container>
-        </ScrollAnimationWrapper>
+        <Container className='tablet:px-[40px] desktop:px-0'>
+          <DynamicInsights />
+        </Container>
       </Section>
       <Section id='industries' className='py-0 tablet:py-0 desktop:py-0'>
         <ScrollAnimationWrapper>
           <Container className='tablet:px-[40px] desktop:px-0'>
-            <Industries />
+            <DynamicIndustries />
           </Container>
         </ScrollAnimationWrapper>
       </Section>
       <Section id='team'>
         <ScrollAnimationWrapper>
           <Container>
-            <Team />
+            <DynamicTeam />
           </Container>
         </ScrollAnimationWrapper>
       </Section>
       <Section id='cards' className='py-0 tablet:py-0 desktop:py-0'>
         <ScrollAnimationWrapper>
           <Container className='tablet:px-[40px]'>
-            <Cards />
+            <DynamicCards />
           </Container>
         </ScrollAnimationWrapper>
       </Section>
       <Section id='technologies' className='py-0 tablet:py-0 desktop:py-0'>
         <ScrollAnimationWrapper>
           <Container>
-            <Technology />
+            <DynamicTechnology />
           </Container>
         </ScrollAnimationWrapper>
       </Section>
@@ -91,7 +111,7 @@ export default function About() {
         <Section id='vacancy' className='tablet:pt-[0]'>
           <ScrollAnimationWrapper>
             <Container>
-              <Direction />
+              <DynamicDirection />
             </Container>
           </ScrollAnimationWrapper>
         </Section>
@@ -101,7 +121,7 @@ export default function About() {
         >
           <ScrollAnimationWrapper>
             <Container>
-              <Vacancy />
+              <DynamicVacancy />
             </Container>
           </ScrollAnimationWrapper>
         </Section>

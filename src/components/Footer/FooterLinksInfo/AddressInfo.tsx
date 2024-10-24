@@ -11,7 +11,7 @@ export const AddressInfo = () => {
           href='tel:+13055282091'
           className='text-[16px] leading-[1.25] desktop:text-[20px] desktop:leading-[1.2]'
         >
-          {'+1 (305) 528 2091'}
+          {'+1-305-528-2091'}
         </Link>
       </div>
       <div className='flex flex-col gap-[12px] font-proxima'>

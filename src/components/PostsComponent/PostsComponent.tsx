@@ -1,8 +1,12 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import { BlogCard } from '../BlogCard/BlogCard';
 import { Pagination } from '../Pagination/Pagination';
+
+const DynamicBlogCard = dynamic(() =>
+  import('../BlogCard/BlogCard').then((mod) => mod.BlogCard),
+);
 
 export interface Posts {
   title: string;
@@ -44,7 +48,7 @@ export const PostsComponent = ({ posts }: Props) => {
   return (
     <div className='mx-auto flex max-w-[876px] flex-col items-center gap-[40px] pb-[24px] pt-[30px] tablet:pb-[40px] tablet:pt-[60px] desktop:pb-[60px]'>
       {currentPosts.map((post, idx) => (
-        <BlogCard key={idx} post={post} />
+        <DynamicBlogCard key={idx} post={post} />
       ))}
       {isPaginationVisible && (
         <Pagination
