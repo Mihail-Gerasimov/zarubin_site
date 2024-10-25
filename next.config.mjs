@@ -32,7 +32,7 @@ const nextConfig = {
     return [
       {
         source: '/(.*)',
-        destination: 'https://www.thebrightbyte.com/:path*',
+        destination: 'https://thebrightbyte.com/:path*',
         permanent: true,
         has: [
           {

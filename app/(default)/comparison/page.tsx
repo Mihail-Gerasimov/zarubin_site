@@ -20,12 +20,12 @@ const keywords = pageMetadata.comparison.keywords;
 export const metadata: Metadata = {
   title,
   description,
-  metadataBase: new URL('https://www.thebrightbyte.com/'),
+  metadataBase: new URL('https://thebrightbyte.com/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: 'https://www.thebrightbyte.com/comparison',
+    canonical: 'https://thebrightbyte.com/comparison',
   },
   openGraph: {
     type: 'website',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title: ogTitle,
     description,
-    url: 'https://www.thebrightbyte.com/comparison',
+    url: 'https://thebrightbyte.com/comparison',
   },
   keywords,
 };

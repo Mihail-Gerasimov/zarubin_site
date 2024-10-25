@@ -57,7 +57,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `https://www.thebrightbyte.com/solutions/${slug}`,
+      canonical: `https://thebrightbyte.com/solutions/${slug}`,
     },
     openGraph: {
       type: 'website',
@@ -66,7 +66,7 @@ export async function generateMetadata({
       ...openGraphImage,
       title,
       description,
-      url: `https://www.thebrightbyte.com/solutions/${slug}`,
+      url: `https://thebrightbyte.com/solutions/${slug}`,
     },
   };
 }

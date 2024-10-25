@@ -104,7 +104,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `https://www.thebrightbyte.com/expertise/${slug}`,
+      canonical: `https://thebrightbyte.com/expertise/${slug}`,
     },
     openGraph: {
       type: 'article',
@@ -113,7 +113,7 @@ export async function generateMetadata({
       ...openGraphImage,
       title,
       description,
-      url: `https://www.thebrightbyte.com/expertise/${slug}`,
+      url: `https://thebrightbyte.com/expertise/${slug}`,
       article: {
         publishedTime: publishedDateISO,
         modifiedTime: publishedDateISO,
