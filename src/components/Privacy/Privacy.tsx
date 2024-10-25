@@ -32,7 +32,7 @@ export const Privacy = () => {
                 data (hereinafter referred to as the Policy) applies to all
                 information that the Operator can receive about website visitors `}
                 <Link className={styles.link} href={'/'}>
-                  https://www.thebrightbyte.com/
+                  https://thebrightbyte.com/
                 </Link>
               </p>
             </li>
@@ -62,7 +62,7 @@ export const Privacy = () => {
                 well as computer programs and databases that ensure their
                 availability on the Internet at a network address{' '}
                 <Link className={styles.link} href={'/'}>
-                  https://www.thebrightbyte.com/
+                  https://thebrightbyte.com/
                 </Link>
               </p>
             </li>
@@ -107,7 +107,7 @@ export const Privacy = () => {
                 2.8. Personal data – any information related directly or
                 indirectly to a specific or identifiable User of the Website{' '}
                 <Link className={styles.link} href={'/'}>
-                  https://www.thebrightbyte.com/
+                  https://thebrightbyte.com/
                 </Link>
               </p>
             </li>
@@ -126,7 +126,7 @@ export const Privacy = () => {
               <p className='description'>
                 2.10. User – any visitor to the website{' '}
                 <Link className={styles.link} href={'/'}>
-                  https://www.thebrightbyte.com/
+                  https://thebrightbyte.com/
                 </Link>
               </p>
             </li>
@@ -535,11 +535,8 @@ export const Privacy = () => {
                 {`8.2. The Operator processes the User's personal data only if
                 they are filled in and/or sent by the User independently through
                 special forms located on the website`}{' '}
-                <Link
-                  className={styles.link}
-                  href='https://www.thebrightbyte.com'
-                >
-                  https://www.thebrightbyte.com
+                <Link className={styles.link} href='https://thebrightbyte.com'>
+                  https://thebrightbyte.com
                 </Link>{' '}
                 {`or
                 sent to the Operator via e-mail. By filling out the appropriate
@@ -813,9 +810,9 @@ export const Privacy = () => {
                 the Internet at{' '}
                 <Link
                   className={styles.link}
-                  href='https://www.thebrightbyte.com/policy'
+                  href='https://thebrightbyte.com/policy'
                 >
-                  https://www.thebrightbyte.com/policy
+                  https://thebrightbyte.com/policy
                 </Link>
                 .
               </p>

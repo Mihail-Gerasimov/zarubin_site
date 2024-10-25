@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://www.thebrightbyte.com/';
+export const BASE_URL = 'https://thebrightbyte.com/';

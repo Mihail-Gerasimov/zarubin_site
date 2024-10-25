@@ -47,12 +47,12 @@ const keywords = pageMetadata.about.keywords;
 export const metadata: Metadata = {
   title,
   description,
-  metadataBase: new URL('https://www.thebrightbyte.com/'),
+  metadataBase: new URL('https://thebrightbyte.com/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: 'https://www.thebrightbyte.com/about',
+    canonical: 'https://thebrightbyte.com/about',
   },
   openGraph: {
     type: 'website',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title: ogTitle,
     description,
-    url: 'https://www.thebrightbyte.com/about',
+    url: 'https://thebrightbyte.com/about',
   },
   keywords,
 };

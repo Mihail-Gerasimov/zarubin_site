@@ -1,4 +1,3 @@
-// import HeroBg from '@/public/assets/images/career/hero-bg.png';
 import HeroBg from '@/public/assets/images/career/hero_banner.png';
 import { ContactForm } from '@/src/components/Career/ContactForm/ContactForm';
 import { Hero } from '@/src/components/Career/Hero/Hero';
@@ -32,12 +31,12 @@ const keywords = pageMetadata.career.keywords;
 export const metadata: Metadata = {
   title,
   description,
-  metadataBase: new URL('https://www.thebrightbyte.com/'),
+  metadataBase: new URL('https://thebrightbyte.com/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: 'https://www.thebrightbyte.com/career',
+    canonical: 'https://thebrightbyte.com/career',
   },
   openGraph: {
     type: 'website',
@@ -46,7 +45,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title: ogTitle,
     description,
-    url: 'https://www.thebrightbyte.com/career',
+    url: 'https://thebrightbyte.com/career',
   },
   keywords,
 };
