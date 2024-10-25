@@ -2,9 +2,9 @@ import fs from 'fs'
 import path from 'path'
 
 const config = {
-    siteUrl: 'https://www.thebrightbyte.com/',
+    siteUrl: 'https://thebrightbyte.com/',
     generateSitemap: true,
-    generateIndexSitemap: false,
+    generateIndexSitemap: true,
     generateRobotsTxt: true,
     changefreq: 'daily',
     priority: 1.0,
@@ -137,7 +137,7 @@ const config = {
             { userAgent: 'facebookexternalhit', allow: '/' },
         ],
         additionalSitemaps: [
-            'https://www.thebrightbyte.com/sitemap.xml',
+            'https://thebrightbyte.com/sitemap.xml',
         ],
     },
 }
