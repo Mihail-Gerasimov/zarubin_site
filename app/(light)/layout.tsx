@@ -13,12 +13,12 @@ export const metadata: Metadata = {
   title:
     'Bright Byte is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
   description: 'Case studies, research and experience in detail',
-  metadataBase: new URL('https://www.thebrightbyte.com'),
+  metadataBase: new URL('https://thebrightbyte.com'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: 'https://www.thebrightbyte.com/blog',
+    canonical: 'https://thebrightbyte.com/blog',
   },
   openGraph: {
     type: 'website',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: 'Ultimative IT Development mobile & web apps | Bright Byte',
     description:
       'Bright Byte is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
-    url: 'https://www.thebrightbyte.com',
+    url: 'https://thebrightbyte.com',
   },
 };
 
