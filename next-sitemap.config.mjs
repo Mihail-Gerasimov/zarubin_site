@@ -4,7 +4,7 @@ import path from 'path'
 const config = {
     siteUrl: 'https://thebrightbyte.com/',
     generateSitemap: true,
-    generateIndexSitemap: true,
+    generateIndexSitemap: false,
     generateRobotsTxt: true,
     changefreq: 'daily',
     priority: 1.0,
@@ -12,23 +12,13 @@ const config = {
     additionalPaths: async () => {
 
         const staticPages = [
+            '/',
             '/about',
             '/career',
             '/comparison',
             '/expertise',
             '/blog',
             '/solutions',
-            // '/solutions/avangard',
-            // '/solutions/fcdm',
-            // '/solutions/grid_capital',
-            // '/solutions/kama',
-            // '/solutions/nashe_zoloto',
-            // '/solutions/nis',
-            // '/solutions/norilsk',
-            // '/solutions/oazis',
-            // '/solutions/stocks_soccer',
-            // '/solutions/t_bank',
-            // '/solutions/lux_today',
         ]
 
         const getAllMarkdownFiles = (dirPath, arrayOfFiles = []) => {
