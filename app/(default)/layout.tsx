@@ -12,8 +12,8 @@ import '../globals.css';
 
 export const metadata: Metadata = {
   title:
-    'Bright Byte is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
-  description: 'Case studies, research and experience in detail',
+    'Bright Byte is a sports and entertainment custom software development studio in Miami',
+  description: 'Bright Byte is a Florida-based IT consulting firm specialising in business process and systems integration.',
   metadataBase: new URL('https://thebrightbyte.com/'),
   icons: {
     icon: '/assets/images/info/main_meta.png',
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'BrightByte.com',
     ...openGraphImage,
-    title: 'Ultimative IT Development mobile & web apps | Bright Byte',
+    title: 'Bright Byte is a sports and entertainment custom software development studio in Miami',
     description:
-      'Bright Byte is a consulting agency specializing in innovation in development and system integration. We use modern and cost-effective solutions for complex challenges.',
+      'Bright Byte is a Florida-based IT consulting firm specialising in business process and systems integration.',
     url: 'https://thebrightbyte.com',
   },
 };
