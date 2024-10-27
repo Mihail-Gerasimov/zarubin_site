@@ -3,7 +3,7 @@ import path from 'path';
 
 export const formatMenuItem = (menuItem: string) => {
   const newMenuItem = menuItem
-    .split('_')
+    .split('-')
     .map((item) => item.charAt(0).toUpperCase() + item.slice(1))
     .join(' ');
   return newMenuItem;

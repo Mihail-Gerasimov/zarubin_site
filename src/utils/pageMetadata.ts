@@ -1,4 +1,15 @@
 export const pageMetadata = {
+  main: {
+    title:
+      'Bright Byte is a sports and entertainment custom software development studio in Miami',
+    description:
+      'Bright Byte is a Florida-based IT consulting firm specialising in business process and systems integration.',
+    keywords: [
+      'IT Services',
+      'Custom software development',
+      'Miami development studio',
+    ],
+  },
   expertise: {
     title:
       'Bright Byte - Expertise in systems integration, mobile applications: Leading IT Expertise',
@@ -35,7 +46,7 @@ export const pageMetadata = {
   },
   insights: {
     title:
-      "Navigate the Future: Bright Byte's Cutting-Edge Digital Transformation Insights",
+      "Navigate the future: Bright Byte's cutting-edge insights on digital transformation",
     description:
       'Gain a competitive edge with our expert analysis, breaking industry news, and visionary thought leadership on emerging technology trends and digital innovation.',
     keywords: [

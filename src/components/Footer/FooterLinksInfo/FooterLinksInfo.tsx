@@ -6,7 +6,7 @@ import { AddressInfo } from './AddressInfo';
 export const FooterLinksInfo = () => {
   return (
     <div className='flex justify-between laptop:flex-col'>
-      <div className='flex flex-col'>
+      <div className='flex flex-col text-white'>
         <Link aria-label='Go to the main page' href='/'>
           <LightMainLogo className='h-[54px] w-[auto] tablet:h-[80px] desktop:h-[92px]' />
         </Link>

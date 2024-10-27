@@ -1,37 +1,13 @@
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
 import { getExpertiseList } from '@/src/utils/expertiseMenu';
-import { openGraphImage } from '@/src/utils/openGraphParams';
 import classNames from 'classnames';
-import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Script from 'next/script';
 import React from 'react';
 import 'swiper/css';
 import '../globals.css';
 
-export const metadata: Metadata = {
-  title:
-    'Bright Byte is a sports and entertainment custom software development studio in Miami',
-  description: 'Bright Byte is a Florida-based IT consulting firm specialising in business process and systems integration.',
-  metadataBase: new URL('https://thebrightbyte.com/'),
-  icons: {
-    icon: '/assets/images/info/main_meta.png',
-  },
-  alternates: {
-    canonical: 'https://thebrightbyte.com',
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'BrightByte.com',
-    ...openGraphImage,
-    title: 'Bright Byte is a sports and entertainment custom software development studio in Miami',
-    description:
-      'Bright Byte is a Florida-based IT consulting firm specialising in business process and systems integration.',
-    url: 'https://thebrightbyte.com',
-  },
-};
 const expertiseSubMenu = getExpertiseList();
 
 const Unbound = localFont({

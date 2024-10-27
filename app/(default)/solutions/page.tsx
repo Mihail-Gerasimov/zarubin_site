@@ -18,9 +18,8 @@ const DynamicInsights = dynamic(() =>
   import('@/src/components/Main/Insights/Insights').then((mod) => mod.Insights),
 );
 
-const title = contentTrimming(pageMetadata.solutions.title, 105);
+const title = pageMetadata.solutions.title;
 const description = contentTrimming(pageMetadata.solutions.description, 155);
-const ogTitle = contentTrimming(pageMetadata.solutions.title, 90);
 const keywords = pageMetadata.solutions.keywords;
 
 export const metadata: Metadata = {
@@ -38,7 +37,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'BrightByte.com',
     ...openGraphImage,
-    title: ogTitle,
+    title,
     description,
     url: 'https://thebrightbyte.com/solutions',
   },

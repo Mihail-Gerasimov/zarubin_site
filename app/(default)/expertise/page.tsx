@@ -24,9 +24,8 @@ const DynamicFeedback = dynamic(() =>
   import('@/src/components/Main/Feedback/Feedback').then((mod) => mod.Feedback),
 );
 
-const title = contentTrimming(pageMetadata.expertise.title, 105);
+const title = pageMetadata.expertise.title;
 const description = contentTrimming(pageMetadata.expertise.description, 155);
-const ogTitle = contentTrimming(pageMetadata.expertise.title, 90);
 const keywords = pageMetadata.expertise.keywords;
 
 export const metadata: Metadata = {
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'BrightByte.com',
     ...openGraphImage,
-    title: ogTitle,
+    title,
     description,
     url: 'https://thebrightbyte.com/expertise',
   },

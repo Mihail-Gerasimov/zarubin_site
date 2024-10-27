@@ -1,36 +1,11 @@
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
 import { getExpertiseList } from '@/src/utils/expertiseMenu';
-import { openGraphImage } from '@/src/utils/openGraphParams';
 import classNames from 'classnames';
-import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Script from 'next/script';
 import 'swiper/css';
 import '../globals.css';
-
-export const metadata: Metadata = {
-  title:
-    'Navigate the future: Bright Byte cutting-edge insights on digital transformation ',
-  description: 'Gain a competitive edge with our expert analysis, breaking industry news, and visionary thought leadership on emerging technology trends and digital innovation.',
-  metadataBase: new URL('https://thebrightbyte.com'),
-  icons: {
-    icon: '/assets/images/info/main_meta.png',
-  },
-  alternates: {
-    canonical: 'https://thebrightbyte.com/blog',
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'BrightByte.com',
-    ...openGraphImage,
-    title: 'Navigate the future: Bright Byte cutting-edge insights on digital transformation ',
-    description:
-      'Gain a competitive edge with our expert analysis, breaking industry news, and visionary thought leadership on emerging technology trends and digital innovation.',
-    url: 'https://thebrightbyte.com',
-  },
-};
 
 const testList = getExpertiseList();
 
