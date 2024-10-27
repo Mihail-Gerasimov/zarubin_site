@@ -23,9 +23,8 @@ const DynamicVacancies = dynamic(() =>
   ),
 );
 
-const title = contentTrimming(pageMetadata.career.title, 105);
+const title = pageMetadata.career.title;
 const description = contentTrimming(pageMetadata.career.description, 155);
-const ogTitle = contentTrimming(pageMetadata.career.title, 90);
 const keywords = pageMetadata.career.keywords;
 
 export const metadata: Metadata = {
@@ -43,7 +42,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'BrightByte.com',
     ...openGraphImage,
-    title: ogTitle,
+    title,
     description,
     url: 'https://thebrightbyte.com/career',
   },

@@ -92,7 +92,7 @@ export async function generateMetadata({
   const cleanTitle = cleanMetaTitle(post.data.title);
   const slug = params.slug || '';
 
-  const title = contentTrimming(cleanTitle, 105);
+  const title = contentTrimming(cleanTitle, 85);
   const description = contentTrimming(post.data.description, 155);
 
   const publishedDateISO = DateTime.fromFormat(

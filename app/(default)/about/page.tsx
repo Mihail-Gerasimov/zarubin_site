@@ -39,9 +39,8 @@ const DynamicVacancy = dynamic(() =>
   import('@/src/components/About/Vacancy/Vacancy').then((mod) => mod.Vacancy),
 );
 
-const title = contentTrimming(pageMetadata.about.title, 105);
+const title = pageMetadata.about.title;
 const description = contentTrimming(pageMetadata.about.description, 155);
-const ogTitle = contentTrimming(pageMetadata.about.title, 90);
 const keywords = pageMetadata.about.keywords;
 
 export const metadata: Metadata = {
@@ -59,7 +58,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'BrightByte.com',
     ...openGraphImage,
-    title: ogTitle,
+    title,
     description,
     url: 'https://thebrightbyte.com/about',
   },

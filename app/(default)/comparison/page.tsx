@@ -12,9 +12,8 @@ import styles from './Comparison.module.css';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 
-const title = contentTrimming(pageMetadata.comparison.title, 105);
+const title = pageMetadata.comparison.title;
 const description = contentTrimming(pageMetadata.comparison.description, 155);
-const ogTitle = contentTrimming(pageMetadata.comparison.title, 90);
 const keywords = pageMetadata.comparison.keywords;
 
 export const metadata: Metadata = {
@@ -32,7 +31,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     siteName: 'BrightByte.com',
     ...openGraphImage,
-    title: ogTitle,
+    title: title,
     description,
     url: 'https://thebrightbyte.com/comparison',
   },

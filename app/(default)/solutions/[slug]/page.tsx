@@ -49,7 +49,7 @@ export async function generateMetadata({
       description: 'This page does not exist',
     };
   }
-  const title = contentTrimming(post.data.title, 90);
+  const title = contentTrimming(post.data.title, 85);
   const description = contentTrimming(post.data.description, 155);
   const slug = params.slug;
 
