@@ -24,7 +24,6 @@ It consists of a chatbot and AI assistant that helps developers with natural lan
 - **Token-based access**: 
 One thing to note about Claude is that it operates on a token-based system. In this system, each request or task requires a certain number of tokens. Tokens are a measure for usage and are consumed based on the length and complexity of the task. For instance, if you were to generate one line of codes, you may require anywhere from **10 to 50 tokens**, depending on the complexity of the request.
 
-
 Here are some of Claude’s key strengths:
 **Natural Language Processing (NLP)** tasks
 **Automating routine coding tasks**
@@ -32,18 +31,17 @@ Here are some of Claude’s key strengths:
 **Assisting in brainstorming sessions** by generating code snippets
 Claude AI allows developers to automate routine coding tasks without sacrificing code quality — all while benefiting from **natural language interaction** that adapts to their specific needs. It has superior context management, and user-friendly features, and is ethically sound. It’s seamless integration also makes it an ideal choice for any developer. 
 
-
 ### Token Usage in AI Tools
 Most modern AI tools, including Claude and ChatGPT, rely on **token-based systems** to measure and manage usage. Token usage refers to how LLM models process and generate code by breaking down its input into smaller units called tokens. Tokens are chunks of text or code, and every interaction with the AI consumes tokens. Here’s a breakdown of typical token usage: 
-
 
 - **Simple text response**: ~5-10 tokens
 - **Generating one line of code**: ~10-50 tokens
 - **Complete function generation**: ~100-300 tokens, depending on complexity
 - **Longer text responses or complex algorithms**: 500+ tokens
 For example, using Claude or ChatGPT to generate a full function might require several hundred tokens, while smaller, simpler requests like a single line of code or debugging help would require fewer.
+
 ### ChatGPT: Revolutionizing Code Generation and Debugging
- **ChatGPT** by **OpenAI** is an invaluable resource in modern software development, and is one of, if not the most well-known AI tool today. It was initially created as a conversational model, but has now evolved into a **powerful assistant for developers**. 
+**ChatGPT** by **OpenAI** is an invaluable resource in modern software development, and is one of, if not the most well-known AI tool today. It was initially created as a conversational model, but has now evolved into a **powerful assistant for developers**. 
 Known for its advanced natural language processing capabilities, it can understand and analyze code, allowing users to ask specific questions about syntax, functions, or error messages, which it can address with explanations and solutions. You can expect that this not only helps in identifying syntax errors and bugs but also solves coding problems in a way that streamlines the debugging process. 
 Any developer should rely on Chat GPT for the following use cases: 
  **Code generation**: ChatGPT generates code snippets in multiple programming languages based on natural language prompts.
@@ -53,9 +51,8 @@ The ease **ChatGPT** brings into software development means developers can now s
 ### Companies Using AI Tools
 You may not know this, but some of your favorite companies are already catching the AI bug! 
 Some top tech companies are already enabling their developers with integrated AI solutions like **Claude**, **ChatGPT**, and **GitHub Copilot** into their development pipelines. 
+
 For example:
-
-
 **Microsoft**: Following the company’s investment in OpenAI, Microsoft has brought on **GitHub Copilot** into its development stack to offer AI-assisted coding in **Visual Studio**.
 **Stripe**: Uses AI to assist developers with API usage, helping them integrate payment systems faster and more efficiently.
 **GitHub**: GitHub Copilot leverages advanced AI to offer intelligent code suggestions within the development environment, helping developers write code faster and with fewer errors by understanding project context
