@@ -1,5 +1,4 @@
-# *
-User-agent: *
+User-Agent: *
 Allow: /
 Allow: /*.js
 Allow: /*.css
@@ -17,7 +16,6 @@ Disallow: /collections/*
 Disallow: */&
 Disallow: /*?
 
-# Googlebot
 User-agent: Googlebot
 Allow: /
 Allow: /*.js
@@ -36,24 +34,8 @@ Disallow: /collections/*
 Disallow: */&
 Disallow: /*?
 
-# RookeeBot
 User-agent: RookeeBot
 Disallow: /
 
-# Twitterbot
-User-agent: Twitterbot
-Allow: /
-
-# Facebot
-User-agent: Facebot
-Allow: /
-
-# facebookexternalhit
-User-agent: facebookexternalhit
-Allow: /
-
-# Host
 Host: https://thebrightbyte.com/
-
-# Sitemaps
 Sitemap: https://thebrightbyte.com/sitemap.xml
