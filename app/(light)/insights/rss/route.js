@@ -28,7 +28,9 @@ export async function GET() {
     })
   })
 
-  return new Response(feed.xml({ indent: true }), {
+  const xmlWithXSL = `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/rss-stylesheet.xsl"?>\n${feed.xml({ indent: true })}`
+
+  return new Response(xmlWithXSL, {
     headers: { 'Content-Type': 'application/rss+xml; charset=utf-8' },
   })
 }
