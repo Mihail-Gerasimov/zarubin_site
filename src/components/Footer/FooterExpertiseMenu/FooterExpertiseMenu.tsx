@@ -1,4 +1,5 @@
 import { finalLink, formatMenuItem } from '@/src/utils/expertiseMenu';
+import { formatMenuTitle } from '@/src/utils/formattedMenuItem';
 import Link from 'next/link';
 
 interface IProps {
@@ -16,7 +17,7 @@ export const FooterExpertiseMenu = ({ expertiseMenu }: IProps) => {
       {expertiseMenu.map((item) => (
         <div key={item.name}>
           <p className='font-unbound text-[16px] font-bold uppercase leading-[1.2] text-white tablet:h-[30px] tablet:text-[18px] desktop:text-[24px]'>
-            {formatMenuItem(item.name)}
+            {formatMenuTitle(item.name)}
           </p>
           <ul className='mt-[20px] flex flex-col gap-[24px] tablet:mt-[10px] tablet:gap-[20px] desktop:mt-[40px]'>
             {item.folderItems.map((el) => (

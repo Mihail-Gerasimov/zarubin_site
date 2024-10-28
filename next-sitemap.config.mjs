@@ -17,8 +17,10 @@ const config = {
             '/career',
             '/comparison',
             '/expertise',
-            '/blog',
+            '/insights',
             '/solutions',
+            '/policy'
+
         ]
 
         const getAllMarkdownFiles = (dirPath, arrayOfFiles = []) => {
@@ -49,7 +51,7 @@ const config = {
 
         const dynamicBlogPages = blogFiles.map((file) => {
             const fileName = path.basename(file, '.md')
-            return `/blog/${fileName}`
+            return `/insights/${fileName}`
         })
 
         const solutionsDir = path.join(process.cwd(), 'src/cases')
@@ -88,44 +90,6 @@ const config = {
 
     exclude: ['/assets/*', '/_next/*', '/tpost/*', '/products/*', '/services/*', '/search/*', '/lander/*', '/collections/*'],
     robotsTxtOptions: {
-        // policies: [
-        //     { userAgent: '*', allow: '/' },
-        //     { userAgent: '*', allow: '/*.js' },
-        //     { userAgent: '*', allow: '/*.css' },
-        //     { userAgent: '*', allow: '/*.gif' },
-        //     { userAgent: '*', allow: '/*.jpg' },
-        //     { userAgent: '*', allow: '/*.png' },
-        //     { userAgent: '*', disallow: '/assets/*' },
-        //     { userAgent: '*', disallow: '/_next/*' },
-        //     { userAgent: '*', disallow: '/tpost/*' },
-        //     { userAgent: '*', disallow: '/products/*' },
-        //     { userAgent: '*', disallow: '/services/*' },
-        //     { userAgent: '*', disallow: '/search/*' },
-        //     { userAgent: '*', disallow: '/lander/*' },
-        //     { userAgent: '*', disallow: '/collections/*' },
-        //     { userAgent: '*', disallow: '*/&' },
-        //     { userAgent: '*', disallow: '/*?' },
-        //     { userAgent: 'Googlebot', allow: '/' },
-        //     { userAgent: 'Googlebot', allow: '/*.js' },
-        //     { userAgent: 'Googlebot', allow: '/*.css' },
-        //     { userAgent: 'Googlebot', allow: '/*.gif' },
-        //     { userAgent: 'Googlebot', allow: '/*.jpg' },
-        //     { userAgent: 'Googlebot', allow: '/*.png' },
-        //     { userAgent: 'Googlebot', disallow: '/assets/*' },
-        //     { userAgent: 'Googlebot', disallow: '/_next/*' },
-        //     { userAgent: 'Googlebot', disallow: '/tpost/*' },
-        //     { userAgent: 'Googlebot', disallow: '/products/*' },
-        //     { userAgent: 'Googlebot', disallow: '/services/*' },
-        //     { userAgent: 'Googlebot', disallow: '/search/*' },
-        //     { userAgent: 'Googlebot', disallow: '/lander/*' },
-        //     { userAgent: 'Googlebot', disallow: '/collections/*' },
-        //     { userAgent: 'Googlebot', disallow: '*/&' },
-        //     { userAgent: 'Googlebot', disallow: '/*?' },
-        //     { userAgent: 'RookeeBot', disallow: '/' },
-        //     { userAgent: 'Twitterbot', allow: '/' },
-        //     { userAgent: 'Facebot', allow: '/' },
-        //     { userAgent: 'facebookexternalhit', allow: '/' },
-        // ],
         policies: [
             {
                 userAgent: '*',

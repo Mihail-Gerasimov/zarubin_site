@@ -7,6 +7,7 @@ export interface Case {
   title: string;
   description: string;
   readingTime: string | null | undefined;
+  date: string | null | undefined;
   tag: string;
   slug: string;
   logo: string;
@@ -42,6 +43,7 @@ export const getExpertiseMetadata = (basePath: string): Case[] => {
       industries: matterResult.data.industries,
       tag: matterResult.data.tag,
       readingTime: matterResult.data.readingTime,
+      date: matterResult.data.date,
       slug: path.basename(filePath, '.md'),
       bannerImage: matterResult.data.bannerImage,
       logo: matterResult.data.logo,

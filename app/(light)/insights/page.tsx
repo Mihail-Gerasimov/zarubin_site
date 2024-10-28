@@ -19,7 +19,15 @@ export const metadata: Metadata = {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: 'https://thebrightbyte.com/blog',
+    canonical: new URL('https://thebrightbyte.com/insights'),
+    types: {
+      'application/rss+xml': [
+        {
+          title: 'Bright Byte Insights',
+          url: 'https://thebrightbyte.com/insights/rss',
+        },
+      ],
+    },
   },
   openGraph: {
     type: 'website',
@@ -28,7 +36,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title,
     description,
-    url: 'https://thebrightbyte.com/blog',
+    url: 'https://thebrightbyte.com/insights',
   },
   keywords,
 };

@@ -54,7 +54,10 @@ export const Featured = ({ slug, posts }: Props) => {
           .filter((post) => post.slug !== slug)
           .map((item) => (
             <SwiperSlide key={item.slug} className='!h-auto'>
-              <Link href={`/blog/${item.slug}`} className='flex h-full flex-1'>
+              <Link
+                href={`/insights/${item.slug}`}
+                className='flex h-full flex-1'
+              >
                 <SmallBlogCard
                   tag={item.tag ? item.tag : ''}
                   title={item.title}

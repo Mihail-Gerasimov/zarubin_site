@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: 'https://thebrightbyte.com/policy',
+    canonical: new URL('https://thebrightbyte.com/policy'),
   },
   openGraph: {
     type: 'website',
