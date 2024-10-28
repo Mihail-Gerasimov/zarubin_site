@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: 'https://thebrightbyte.com/career',
+    canonical: new URL('https://thebrightbyte.com/career'),
   },
   openGraph: {
     type: 'website',

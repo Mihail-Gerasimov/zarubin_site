@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: 'https://thebrightbyte.com',
+    canonical: new URL('https://thebrightbyte.com'),
   },
   openGraph: {
     type: 'website',

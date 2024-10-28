@@ -17,6 +17,10 @@ interface PostMetadata {
 
 export const getPostMetadata = (basePath: string) => {
   const folder = basePath + '/';
+  if (!fs.existsSync(basePath)) {
+    console.warn(`Directory ${basePath} does not exist.`);
+    return [];
+  }
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith('.md'));
 

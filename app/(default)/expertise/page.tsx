@@ -36,7 +36,15 @@ export const metadata: Metadata = {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: 'https://thebrightbyte.com/expertise',
+    canonical: new URL('https://thebrightbyte.com/expertise'),
+    types: {
+      'application/rss+xml': [
+        {
+          title: 'Bright Byte Expertise',
+          url: 'https://thebrightbyte.com/expertise/rss',
+        },
+      ],
+    },
   },
   openGraph: {
     type: 'website',

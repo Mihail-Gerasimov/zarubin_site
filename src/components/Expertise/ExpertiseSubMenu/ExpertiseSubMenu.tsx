@@ -1,3 +1,4 @@
+import { formatMenuItem, formatMenuTitle } from '@/src/utils/formattedMenuItem';
 import Link from 'next/link';
 
 interface IExpertiseProps {
@@ -10,14 +11,6 @@ interface Submenu {
   name: string;
   folderItems: { nameItem: string; link: string }[];
 }
-
-const formatMenuItem = (menuItem: string) => {
-  const newMenuItem = menuItem
-    .split('-')
-    .map((item) => item.charAt(0).toUpperCase() + item.slice(1))
-    .join(' ');
-  return newMenuItem;
-};
 
 export const ExpertiseSubMenu = ({
   dark = true,
@@ -37,7 +30,7 @@ export const ExpertiseSubMenu = ({
           className={`flex flex-col p-[5px] ${dark ? 'text-white' : 'text-main-bg'}`}
         >
           <p className='flex-1 font-unbound text-[22px] font-bold uppercase'>
-            {formatMenuItem(item.name)}
+            {formatMenuTitle(item.name)}
           </p>
           <div className='mt-[40px] flex-1'>
             <ul className='grid grid-flow-col grid-rows-4 gap-x-[40px] gap-y-[20px]'>

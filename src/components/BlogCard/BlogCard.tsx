@@ -23,7 +23,7 @@ export const BlogCard = ({ post }: Props) => {
   const tags = post.tag?.split(',');
 
   return (
-    <Link href={`/blog/${post.slug}`} className='w-full'>
+    <Link href={`/insights/${post.slug}`} className='w-full'>
       <div className='flex w-full flex-col gap-[8px]'>
         <div className='relative h-[150px] w-full overflow-hidden rounded-[12px] bg-main-blue/20 tablet:h-[300px] desktop:h-[378px]'>
           {post.image ? (

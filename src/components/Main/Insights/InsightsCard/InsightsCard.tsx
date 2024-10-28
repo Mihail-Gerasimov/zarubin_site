@@ -26,7 +26,7 @@ export const InsightsCard = ({
   const tags = tag?.split(',');
 
   return (
-    <Link href={`/blog/${slug}`} className='flex h-full flex-col'>
+    <Link href={`/insights/${slug}`} className='flex h-full flex-col'>
       <div className='relative aspect-[16/9] w-full overflow-hidden'>
         {image ? (
           <Image
