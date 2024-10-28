@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 const expertises = getExpertiseMetadata('src/expertise');
 
 export async function GET() {
-  const rss = `<?xml version=1.0 encoding="UTF-8" ? 
+  const rss = `<?xml version=1.0 encoding="UTF-8" ?>
     <rss version="2.0>"
     <channel>
     <title>Bright Byte Expertise</title>
