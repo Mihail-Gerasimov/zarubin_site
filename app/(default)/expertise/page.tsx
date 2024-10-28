@@ -35,6 +35,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
+
   alternates: {
     canonical: new URL('https://thebrightbyte.com/expertise'),
     types: {
