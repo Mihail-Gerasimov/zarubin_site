@@ -1,8 +1,8 @@
-import { getPostMetadata } from '@/src/utils/getPostMetadata'
-import { DateTime } from 'luxon'
-import RSS from 'rss'
+import { getPostMetadata } from '@/src/utils/getPostMetadata';
+import { DateTime } from 'luxon';
+import RSS from 'rss';
 
-const allInsights = getPostMetadata('src/posts')
+const allInsights = getPostMetadata('src/posts');
 
 export async function GET() {
   const feed = new RSS({
@@ -13,22 +13,24 @@ export async function GET() {
     copyright: `${new Date().getFullYear()} Bright Byte Insights`,
     language: 'en-us',
     pubDate: new Date().toUTCString(),
-  })
+  });
 
   allInsights.forEach((insight) => {
     const formattedDate = insight.date
       ? DateTime.fromFormat(insight.date, 'yyyy-MM-dd').toRFC2822()
-      : null
+      : null;
     feed.item({
       title: String(insight.title),
       description: String(insight.description),
       guid: `https://thebrightbyte.com/insights/${insight.slug}`,
       url: `https://thebrightbyte.com/insights/${insight.slug}`,
       date: formattedDate,
-    })
-  })
+    });
+  });
 
-  return new Response(feed.xml({ indent: true }), {
+  const xmlWithXSL = `<?xml version="1.0" encoding="UTF-8"?>\n<?xml-stylesheet type="text/xsl" href="/rss-stylesheet.xsl"?>\n${feed.xml({ indent: true })}`;
+
+  return new Response(xmlWithXSL, {
     headers: { 'Content-Type': 'application/rss+xml; charset=utf-8' },
-  })
+  });
 }
