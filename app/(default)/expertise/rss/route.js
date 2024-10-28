@@ -1,4 +1,5 @@
 import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
+import { DateTime } from 'luxon';
 import { NextResponse } from 'next/server';
 import RSS from 'rss';
 
@@ -7,25 +8,28 @@ const allExpertise = getExpertiseMetadata('src/expertise');
 export async function GET() {
   const feed = new RSS({
     title: 'Bright Byte Expertise',
-    description: 'Latest insights from Bright Byte',
+    description: 'Latest expertise from Bright Byte',
     site_url: 'https://thebrightbyte.com',
-    feed_url: `https://thebrightbyte.com/expertise/feed.xml`,
+    feed_url: `https://thebrightbyte.com/expertise/rss`,
     copyright: `${new Date().getFullYear()} Bright Byte Expertise`,
     language: 'en-us',
-    pubDate: new Date(),
+    pubDate: new Date().toUTCString(),
   });
 
   allExpertise.forEach((expertise) => {
+    const formattedDate = expertise.date
+      ? DateTime.fromFormat(expertise.date, 'yyyy-MM-dd').toRFC2822()
+      : null;
     feed.item({
-      title: expertise.title,
-      description: expertise.description,
+      title: String(expertise.title),
+      description: String(expertise.description),
       guid: `https://thebrightbyte.com/expertise/${expertise.slug}`,
       url: `https://thebrightbyte.com/expertise/${expertise.slug}`,
-      date: expertise.date ? expertise.date : null,
+      date: formattedDate,
     });
   });
 
-  return new NextResponse(feed.xml(), {
+  return new NextResponse(feed.xml({ indent: true }), {
     headers: { 'Content-Type': 'application/rss+xml; charset=utf-8' },
   });
 }
