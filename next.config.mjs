@@ -41,6 +41,16 @@ const nextConfig = {
           },
         ],
       },
+      {
+        source: '/blog',
+        destination: '/insights',
+        permanent: true,
+      },
+      {
+        source: '/blog/:slug',
+        destination: '/insights/:slug',
+        permanent: true,
+      },
     ];
   },
 };
