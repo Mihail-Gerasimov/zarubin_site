@@ -8,7 +8,6 @@ tag: 'sports recognition systems, data tracking, event detection, automated spor
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
-# 5 Challenges in Sports Recognition Systems I Wish I Knew Before Starting
 
 The evolution of **sports recognition systems** has been rapid, transforming from basic image recognition to real-time event detection. Just a few years ago, identifying a simple banner in a crowded sports field was a feat; today, these systems can analyze entire plays in real time across sports like football, basketball, and even hockey. But the journey to automated sports recognition isn't without its hurdles. Here are five challenges that I believe every developer and sports analyst should be aware of before diving into the complex world of sports recognition.
 
