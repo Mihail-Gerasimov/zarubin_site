@@ -44,6 +44,7 @@ export const metadata: Metadata = {
 export default function Blog() {
   const postMetadata = getPostMetadata('src/posts');
   const sortedPosts = postsSorting(postMetadata);
+
   return (
     <div className='w-full pt-[30px]'>
       <div className='backImage flex w-full flex-col items-center gap-[20px] tablet:py-[31px] desktop:py-[48px]'>
