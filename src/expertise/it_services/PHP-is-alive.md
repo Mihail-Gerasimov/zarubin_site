@@ -1,5 +1,5 @@
 ---
-title: 'PHP is still alive: How it's evolving'
+title: 'PHP is still alive: How it is evolving'
 description: 'PHP is still alive and thriving in 2024. Discover how this programming language is evolving to stay relevant in web development and beyond.'
 image: ''
 date: '28-10-2024'
