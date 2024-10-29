@@ -16,6 +16,14 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: new URL('https://thebrightbyte.com'),
+    types: {
+      'application/rss+xml': [
+        {
+          title: 'Bright Byte Expertise and Insights',
+          url: 'https://thebrightbyte.com/rss',
+        },
+      ],
+    },
   },
   openGraph: {
     type: 'website',

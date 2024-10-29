@@ -4,8 +4,20 @@ import { DateTime } from 'luxon';
 import { NextResponse } from 'next/server';
 import RSS from 'rss';
 
-const expertiseData = getExpertiseMetadata('src/expertise');
-const insightsData = getPostMetadata('src/posts');
+const expertises = getExpertiseMetadata('src/expertise');
+const insights = getPostMetadata('src/posts');
+const expertiseData = expertises.map((item) => {
+  return {
+    dirName: 'expertise',
+    ...item,
+  };
+});
+const insightsData = insights.map((item) => {
+  return {
+    dirName: 'insights',
+    ...item,
+  };
+});
 const allData = [...expertiseData, ...insightsData];
 
 export async function GET() {
@@ -26,8 +38,8 @@ export async function GET() {
     feed.item({
       title: item.title,
       description: item.description,
-      url: `https://thebrightbyte.com/insights/${item.slug}`,
-      guid: `https://thebrightbyte.com/insights/${item.slug}`,
+      url: `https://thebrightbyte.com/${item.dirName}/${item.slug}`,
+      guid: `https://thebrightbyte.com/${item.dirName}/${item.slug}`,
       date: formattedDate,
     });
   });
