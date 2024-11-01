@@ -6,6 +6,7 @@ Allow: /*.css
 Allow: /*.gif
 Allow: /*.jpg
 Allow: /*.png
+Allow: /*.webp
 Disallow: /assets/*
 Disallow: /_next/*
 Disallow: /tpost/*
@@ -25,6 +26,7 @@ Allow: /*.css
 Allow: /*.gif
 Allow: /*.jpg
 Allow: /*.png
+Allow: /*.webp
 Disallow: /assets/*
 Disallow: /_next/*
 Disallow: /tpost/*

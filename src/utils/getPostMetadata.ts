@@ -7,6 +7,7 @@ interface PostMetadata {
   image: string | undefined;
   slug: string;
   date: string;
+  category: string;
   type: string | undefined | null;
   tag: string | undefined;
   authorName: string;
@@ -39,6 +40,7 @@ export const getPostMetadata = (basePath: string) => {
       authorImage: matterResult.data.authorImage,
       downloadLink: matterResult.data.downloadLink,
       readingTime: matterResult.data.readingTime,
+      category: matterResult.data.category,
     };
   });
 

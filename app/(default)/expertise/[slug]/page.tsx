@@ -4,6 +4,7 @@ import { BackLink } from '@/src/ui-kit/BackLink/BackLink';
 import { BASE_URL } from '@/src/utils/alias';
 import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
+import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import fs from 'fs';
@@ -19,26 +20,8 @@ type Slug = {
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 
 export async function generateStaticParams(): Promise<Slug[]> {
-  const folder: string = 'src/expertise/';
-  const slugs: Slug[] = [];
-
-  function findMarkdownFiles(dir: string): void {
-    const files: string[] = fs.readdirSync(dir);
-    for (const file of files) {
-      const filePath: string = path.join(dir, file);
-      const stat: fs.Stats = fs.statSync(filePath);
-      if (stat.isDirectory()) {
-        findMarkdownFiles(filePath);
-      } else if (file.endsWith('.md')) {
-        const slug: string = file.replace('.md', '');
-        slugs.push({ slug });
-      }
-    }
-  }
-
-  findMarkdownFiles(folder);
-
-  return slugs;
+  const expertises = getExpertiseMetadata();
+  return expertises.map((post) => ({ slug: post.slug }));
 }
 
 const findMarkdownFile = (dir: string, slug: string): string | null => {
@@ -91,6 +74,8 @@ export async function generateMetadata({
 
   const cleanTitle = cleanMetaTitle(post.data.title);
   const slug = params.slug || '';
+  const { tag } = post.data;
+  const keywords = tag.split(',');
 
   const title = contentTrimming(cleanTitle, 85);
   const description = contentTrimming(post.data.description, 155);
@@ -120,32 +105,30 @@ export async function generateMetadata({
         AuthorInfo: post.data.authorImage ? [post.data.authorImage] : null,
       },
     },
+    keywords,
   };
 }
 
 export default function ExpertiseCase(props: { params: { slug: string } }) {
   const { slug } = props.params;
-  const expertiseCaseContent = getPostContent(slug);
-  const readingTime = expertiseCaseContent?.data.readingTime;
+  const post = getPostContent(slug);
 
-  if (!expertiseCaseContent) {
+  if (!post) {
     return <NotFoundPage />;
   }
 
-  const image = expertiseCaseContent.data.image
-    ? expertiseCaseContent.data.image
-    : '/assets/images/banner/default_img.webp';
+  const { image = '/assets/images/banner/default_img.webp', readingTime } =
+    post.data;
 
   const hashtagRegex = /#[A-Za-z_]+/g;
   const regexFont = /<font color='(.+?)'>(.+?)<\/font>/g;
 
   const ideaRegx = /\[\[(.*?)\]\]/g;
-  const ideaMatches = expertiseCaseContent.content.match(ideaRegx);
+  const ideaMatches = post.content.match(ideaRegx);
 
-  const extractedHashtags =
-    expertiseCaseContent.content.match(hashtagRegex) ?? [];
+  const extractedHashtags = post.content.match(hashtagRegex) ?? [];
 
-  const allPosts = expertiseCaseContent.content
+  const allPosts = post.content
     .replace(regexFont, () => {
       const tags = extractedHashtags
         .map((hashtag) => {
@@ -164,7 +147,7 @@ export default function ExpertiseCase(props: { params: { slug: string } }) {
         return '';
       }
       let matches;
-      while ((matches = ideaRegx.exec(expertiseCaseContent.content)) !== null) {
+      while ((matches = ideaRegx.exec(post.content)) !== null) {
         const content = matches[1];
         return ideaMarking(content);
       }

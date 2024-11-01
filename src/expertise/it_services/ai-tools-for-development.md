@@ -3,8 +3,12 @@ title: 'AI Tools for development'
 description: 'Discover the top AI tools for developers like Claude, ChatGPT, GitHub Copilot, and Tabnine. Enhance your software development process with AI-driven code generation and debugging.'
 image: '/assets/images/expertise/it_service/generative-ai-services-hero-banner.webp'
 date: '08-10-2024'
-type: 'It Service'
+readingTime: ''
+category: 'Expertise'
+sub_category: 'It Service'
 tag: 'AI, ChatGPT, Claude, CoPilot'
+authorName: 'Vitaliy Zarubin'
+authorImage: '/assets/images/author/avatar.png'
 ---
 
 # AI Tools for Development: A Review of Claude, ChatGPT, and Other AI Solutions
