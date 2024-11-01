@@ -3,8 +3,12 @@ title: 'Retail food service application'
 description: 'Find out how Bright Byte developed a bespoke shift management and food ordering system, integrating food service and payment into one seamless solution.'
 image: ''
 date: '13-10-2024'
-type: 'It Service'
+readingTime: ''
+category: 'Expertise'
+sub_category: 'It Service'
 tag: 'Retail, Delivery, To Go, Mobile App'
+authorName: 'Vitaliy Zarubin'
+authorImage: '/assets/images/author/avatar.png'
 ---
 
 # Organise retail food service with bespoke software solutions

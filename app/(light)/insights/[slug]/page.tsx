@@ -1,4 +1,3 @@
-import line from '@/public/assets/images/png/line.png';
 import { Featured } from '@/src/components/Featured/Featured';
 import { SocialFollow } from '@/src/components/SocialFollow/SocialFollow';
 import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
@@ -12,22 +11,14 @@ import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { postsSorting } from '@/src/utils/postsSorting';
-import classNames from 'classnames';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
-import Image from 'next/image';
 import NotFoundPage from '../not-found';
 import styles from './Post.module.css';
 
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
-
-const POST_TYPE = {
-  NOTES: 'Notes',
-  RESEARCH: 'Research',
-  MANIFESTO: 'Manifesto',
-};
 
 const getPostContent = (slug: string) => {
   const folder = 'src/posts/';
@@ -67,6 +58,8 @@ export async function generateMetadata({
   }
 
   const cleanTitle = cleanMetaTitle(post.data.title);
+  const { tag } = post.data;
+  const keywords = tag.split(',');
 
   const title = contentTrimming(cleanTitle, 105);
   const description = contentTrimming(post.data.description, 155);
@@ -96,6 +89,7 @@ export async function generateMetadata({
         AuthorInfo: post.data.authorImage ? [post.data.authorImage] : null,
       },
     },
+    keywords,
   };
 }
 
@@ -109,15 +103,8 @@ export default function MainBlogSlug(props: { params: { slug: string } }) {
 
   const date = formattedDate(post.data.date);
 
-  const {
-    type,
-    tag,
-    title,
-    authorName,
-    authorImage,
-    downloadLink,
-    readingTime,
-  } = post.data;
+  const { tag, title, authorName, authorImage, downloadLink, readingTime } =
+    post.data;
   const image = post.data.image
     ? post.data.image
     : '/assets/images/banner/default_img.webp';
@@ -159,45 +146,24 @@ export default function MainBlogSlug(props: { params: { slug: string } }) {
 
   return (
     <div className='mainContainer relative w-full px-[10px] pb-[30px] tablet:px-[40px] tablet:pb-[40px] desktop:pb-[60px]'>
-      {type !== POST_TYPE.MANIFESTO && (
-        <div
-          className='absolute left-0 top-0 h-[150px] w-full bg-cover bg-center bg-no-repeat opacity-[40%] tablet:h-[302px] laptop:h-[342px]'
-          style={{
-            backgroundImage: `url(${URL + image})`,
-            zIndex: '-1',
-          }}
-        ></div>
-      )}
+      <div
+        className='absolute left-0 top-0 h-[150px] w-full bg-cover bg-center bg-no-repeat opacity-[40%] tablet:h-[302px] laptop:h-[342px]'
+        style={{
+          backgroundImage: `url(${URL + image})`,
+          zIndex: '-1',
+        }}
+      ></div>
       <BackLink linkName='blog' />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
-        <div
-          className={classNames(
-            `relative flex w-full items-center justify-center`,
-            {
-              'tablet:py-[40px]': type === POST_TYPE.RESEARCH,
-              'py-[30px] desktop:py-[60px]': type !== POST_TYPE.MANIFESTO,
-            },
-          )}
-        >
-          <span className='z-[5] rounded-[2px] bg-text-dark p-[10px] font-proxima text-[16px] text-white tablet:text-[20px]'>
-            {type ? type : POST_TYPE.NOTES}
-          </span>
-          <Image
-            src={line}
-            width={300}
-            height={400}
-            alt='line'
-            className='absolute z-[1] h-[4px] w-full'
-          />
-        </div>
-        <div className='mt-[60px]'>
+        <div className='relative flex w-full items-center justify-center'></div>
+        <div className='mt-[200px]'>
           {readingTime && (
             <span className='mb-[10px] block font-proxima text-[16px] leading-[1.25] text-text-dark opacity-[50%]'>
               Reading time: {readingTime}
             </span>
           )}
           <h1
-            className={`font-proxima text-[28px] font-bold leading-[1.1] text-text-dark ${type === POST_TYPE.MANIFESTO && 'mb-[40px] tablet:mb-[40px] desktop:mb-[60px]'} `}
+            className={`font-proxima text-[28px] font-bold leading-[1.1] text-text-dark`}
           >
             {title}
           </h1>
@@ -205,26 +171,17 @@ export default function MainBlogSlug(props: { params: { slug: string } }) {
             {downloadLink && tag === 'Research' && (
               <DownloadLink link={downloadLink} />
             )}
-            {type !== POST_TYPE.MANIFESTO && (
-              <div
-                className={`flex flex-col tablet:mt-[20px] tablet:flex-row tablet:justify-between ${type === POST_TYPE.NOTES && 'mb-[10px] mt-[20px] tablet:mt-[40px] desktop:mb-[40px] desktop:mt-[20px]'}`}
-              >
-                <AuthorInfo image={authorImage} name={authorName} date={date} />
-                {type === POST_TYPE.RESEARCH && (
-                  <div className='mt-[20px] py-[12px] tablet:ml-[auto] tablet:mt-0 tablet:p-[0]'>
-                    <SocialFollow isRight />
-                  </div>
-                )}
-              </div>
-            )}
+            <div
+              className={`mb-[10px] mt-[20px] flex flex-col tablet:mt-[40px] tablet:flex-row tablet:justify-between desktop:mb-[40px] desktop:mt-[20px]`}
+            >
+              <AuthorInfo image={authorImage} name={authorName} date={date} />
+            </div>
           </div>
         </div>
         <article
-          className={`prose prose-p:text-[16px] ${type === POST_TYPE.MANIFESTO && 'manifesto-list'} w-full max-w-[100%] pb-[30px] text-white prose-p:text-text-dark/80 prose-li:text-[16px] prose-li:text-text-dark/80 tablet:pb-[40px] desktop:pb-[60px]`}
+          className={`prose w-full max-w-[100%] pb-[30px] text-white prose-p:text-[16px] prose-p:text-text-dark/80 prose-li:text-[16px] prose-li:text-text-dark/80 tablet:pb-[40px] desktop:pb-[60px]`}
         >
-          <Markdown
-            className={`${styles.markdown} ${type === POST_TYPE.RESEARCH && styles.research} z-20 w-full font-proxima`}
-          >
+          <Markdown className={`${styles.markdown} z-20 w-full font-proxima`}>
             {allPosts}
           </Markdown>
         </article>

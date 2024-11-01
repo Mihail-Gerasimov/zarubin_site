@@ -8,6 +8,7 @@ export interface Case {
   description: string;
   readingTime: string | null | undefined;
   date: string | null | undefined;
+  category: string;
   tag: string;
   slug: string;
   logo: string;
@@ -31,8 +32,8 @@ const getMarkdownFiles = (dir: string): string[] => {
   return results;
 };
 
-export const getExpertiseMetadata = (basePath: string): Case[] => {
-  const markdownFiles = getMarkdownFiles(basePath);
+export const getExpertiseMetadata = (): Case[] => {
+  const markdownFiles = getMarkdownFiles('src/expertise');
 
   const posts = markdownFiles.map((filePath): Case => {
     const fileContent = fs.readFileSync(filePath, 'utf8');
@@ -44,6 +45,7 @@ export const getExpertiseMetadata = (basePath: string): Case[] => {
       tag: matterResult.data.tag,
       readingTime: matterResult.data.readingTime,
       date: matterResult.data.date,
+      category: matterResult.data.category,
       slug: path.basename(filePath, '.md'),
       bannerImage: matterResult.data.bannerImage,
       logo: matterResult.data.logo,
