@@ -5,7 +5,7 @@ image: '/assets/images/expertise/it_service/generative-ai-services-hero-banner.w
 date: '08-10-2024'
 readingTime: ''
 category: 'Expertise'
-sub_category: 'It Service'
+subCategory: 'It Service'
 tag: 'AI, ChatGPT, Claude, CoPilot'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'

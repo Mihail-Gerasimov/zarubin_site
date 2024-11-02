@@ -12,8 +12,9 @@ interface Post {
   description: string;
   tag: string | undefined;
   downloadLink: string | undefined;
+  category: string;
   slug: string;
-  type: string | undefined | null;
+  subCategory: string | undefined | null;
   image: string | undefined | null;
 }
 interface Props {
@@ -56,7 +57,7 @@ export const InsightsClient = ({ posts }: Props) => {
                 description={post.description}
                 tag={post.tag}
                 slug={post.slug}
-                type={post.type}
+                subCategory={post.subCategory}
                 image={post.image}
                 downloadLink={post.downloadLink}
               />
