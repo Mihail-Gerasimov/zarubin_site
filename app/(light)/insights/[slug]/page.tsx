@@ -1,8 +1,8 @@
 import { Featured } from '@/src/components/Featured/Featured';
 import { SocialFollow } from '@/src/components/SocialFollow/SocialFollow';
 import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
-import { BackLink } from '@/src/ui-kit/BackLink/BackLink';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
+import { GoBackLink } from '@/src/ui-kit/GoBackLink/GoBackLink';
 import { BASE_URL } from '@/src/utils/alias';
 import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
@@ -153,7 +153,8 @@ export default function MainBlogSlug(props: { params: { slug: string } }) {
           zIndex: '-1',
         }}
       ></div>
-      <BackLink linkName='expertise' />
+      {/* <BackLink linkName='insights' /> */}
+      <GoBackLink />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div className='relative flex w-full items-center justify-center'></div>
         <div className='mt-[200px]'>

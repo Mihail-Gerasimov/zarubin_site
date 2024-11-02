@@ -1,6 +1,6 @@
 import NotFoundPage from '@/app/not-found';
 import { SocialFollow } from '@/src/components/SocialFollow/SocialFollow';
-import { BackLink } from '@/src/ui-kit/BackLink/BackLink';
+import { GoBackLink } from '@/src/ui-kit/GoBackLink/GoBackLink';
 import { BASE_URL } from '@/src/utils/alias';
 import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
@@ -164,7 +164,7 @@ export default function ExpertiseCase(props: { params: { slug: string } }) {
           zIndex: '-1',
         }}
       ></div>
-      <BackLink linkName='expertise' />
+      <GoBackLink />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div className='relative flex w-full items-center justify-center'></div>
         <div className='mt-[200px]'></div>
