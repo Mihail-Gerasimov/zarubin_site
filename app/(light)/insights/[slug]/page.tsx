@@ -153,7 +153,7 @@ export default function MainBlogSlug(props: { params: { slug: string } }) {
           zIndex: '-1',
         }}
       ></div>
-      <BackLink linkName='blog' />
+      <BackLink linkName='expertise' />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div className='relative flex w-full items-center justify-center'></div>
         <div className='mt-[200px]'>

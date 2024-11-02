@@ -8,7 +8,7 @@ interface PostMetadata {
   slug: string;
   date: string;
   category: string;
-  type: string | undefined | null;
+  subCategory: string | undefined | null;
   tag: string | undefined;
   authorName: string;
   authorImage: string;
@@ -34,13 +34,13 @@ export const getPostMetadata = (basePath: string) => {
       image: matterResult.data.image,
       slug: filename.replace('.md', ''),
       date: matterResult.data.date,
-      type: matterResult.data.type,
       tag: matterResult.data.tag,
       authorName: matterResult.data.authorName,
       authorImage: matterResult.data.authorImage,
       downloadLink: matterResult.data.downloadLink,
       readingTime: matterResult.data.readingTime,
       category: matterResult.data.category,
+      subCategory: matterResult.data.category,
     };
   });
 

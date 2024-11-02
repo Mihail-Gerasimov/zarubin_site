@@ -5,16 +5,18 @@ image: '/assets/images/expertise/it_service/generative-ai-services-hero-banner.w
 date: '01-11-2024'
 readingTime: '5 minutes'
 category: 'Expertise'
-sub_category: 'It Service'
+subCategory: 'It Service'
 tag: 'Rates, Sports, IT Consultancy, risk management, quality vs cost, AI, Copilot'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
-# Custom Software Development Rates by Country 
+
+# Custom Software Development Rates by Country
 
 In the world of software development, the temptation to go for cheaper solutions is a constant challenge, especially for companies trying to manage tight budgets. However, data shows that cutting costs often comes at a high price: **more than 50% of IT projects fail or experience significant problems** due to factors such as inadequate skills, misaligned expectations or technical debt that accumulates over time. In this article, I'll outline why hiring low-cost developers can be risky and explore the factors that make it difficult to balance cost, quality and speed.
 
 ![Software development rates](https://imgur.com/RqkpJbr.jpg)
+
 ## The Iron Triangle: Cost, Quality and Speed
 
 The concept of the **Iron Triangle** is a well-known principle in project management, which states that there are three primary constraints in any project: **cost, quality and speed**. You can only realistically optimise for two of these factors at a time:
@@ -26,6 +28,7 @@ The concept of the **Iron Triangle** is a well-known principle in project manage
 This concept is crucial to understanding why **cheap developers often lead to project failure**. When companies prioritise low cost above all else, they often sacrifice either quality or speed, and sometimes both. In software development, compromising on quality can mean missed deadlines, technical debt and even the potential need to redo entire projects.
 
 ## Delivery is delayed or over budget
+
 According to the Chaos Report, 52% of projects are either late or over budget. The average across all companies is 189% of the original cost estimate. The average cost overrun is 178% for large companies, 182% for medium companies and 214% for small companies. The average time overrun is 222% of the original estimate. For large companies the average is 230%, for medium companies 202% and for small companies 239%.
 
 In addition to poor scope management, poor time and budget estimation contributes to these problems. Teams fail to account for external factors, dependencies and obstacles. Another major and very common cause is changing the scope once the project is underway.
@@ -49,9 +52,10 @@ For instance, if a development firm is hired to build a **real-time sports data 
 
 ## Average Developer Rates by Country
 
-The cost of hiring developers varies significantly by country. Western Europe and North America typically have the highest rates due to demand and cost of living, while countries in Eastern Europe and Asia offer more competitive pricing. 
+The cost of hiring developers varies significantly by country. Western Europe and North America typically have the highest rates due to demand and cost of living, while countries in Eastern Europe and Asia offer more competitive pricing.
 
 For example:
+
 - In **Western Europe** and **North America**, hiring a developer can cost anywhere from **$50 to $150 per hour** for mid-level to senior talent.
 - **Eastern Europe** offers lower rates, typically between **$20 and $70 per hour**, depending on the developer's experience level.
 - **Asia** (particularly India and the Philippines) provides some of the most affordable rates, generally ranging from **$10 to $30 per hour**.
@@ -75,6 +79,7 @@ After evaluating the market and understanding industry standards, we recommend t
 These rates provide a reasonable balance between cost and quality, ensuring that you get the right expertise for your project's requirements without compromising on reliability or performance.
 
 ![Outcomes of project](https://imgur.com/SOScv2C.jpg)
+
 ## Risk 3: Hidden Costs of "Cheap" Development
 
 Though the initial price tag of hiring cheaper developers may seem appealing, **hidden costs often emerge down the line**. Some common hidden costs include:
@@ -93,7 +98,7 @@ When developing an IT system for a niche like sports, experience and industry-sp
 - **User Experience for Athletes and Coaches**: Designing an intuitive interface that meets the needs of different user types is key for adoption and usage.
 - **Compliance and Data Security**: Sports platforms often deal with sensitive player data, requiring strict data privacy measures and regulatory compliance.
 
-Without this knowledge, the development process becomes guesswork, leading to costly errors and potential project failure. A cheap development team without experience in sports IT may overlook critical elements, compromising the platform’s functionality, security, and usability. [ For more details look here](https://thebrightbyte.com/expertise/How-sports-analytics-works). 
+Without this knowledge, the development process becomes guesswork, leading to costly errors and potential project failure. A cheap development team without experience in sports IT may overlook critical elements, compromising the platform’s functionality, security, and usability. [ For more details look here](https://thebrightbyte.com/expertise/How-sports-analytics-works).
 
 ## The Impact of AI Copilot and Anthropic on Developer Rates and Quality
 

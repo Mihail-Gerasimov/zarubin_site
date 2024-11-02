@@ -10,7 +10,7 @@ interface Props {
   description: string;
   downloadLink: string | undefined;
   slug: string;
-  type: string | undefined | null;
+  subCategory: string | undefined | null;
   image: string | undefined | null;
 }
 
@@ -20,7 +20,7 @@ export const InsightsCard = ({
   description,
   downloadLink,
   slug,
-  type,
+  subCategory,
   image,
 }: Props) => {
   const tags = tag?.split(',');
@@ -71,7 +71,7 @@ export const InsightsCard = ({
           text={description}
           className='mt-[19px] line-clamp-3 overflow-hidden font-proxima text-[16px] leading-[1.25] text-text-dark tablet:text-[20px]'
         />
-        {type === 'Research' && downloadLink && (
+        {subCategory === 'Research' && downloadLink && (
           <div className='mt-[25px]'>
             <DownloadLink link={downloadLink} />
           </div>
