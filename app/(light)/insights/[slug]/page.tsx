@@ -82,7 +82,7 @@ export async function generateMetadata({
       ...openGraphImage,
       title,
       description,
-      url: `https://thebrightbyte.com/blog/${params.slug}`,
+      url: `https://thebrightbyte.com/insights/${params.slug}`,
       article: {
         publishedTime: publishedDateISO,
         modifiedTime: publishedDateISO,

@@ -100,7 +100,8 @@ const config = {
                     '/*.gif',
                     '/*.jpg',
                     '/*.png',
-                    '/*.webp'
+                    '/*.webp',
+                    '/*.md'
                 ],
                 disallow: [
                     '/assets/*',
@@ -124,7 +125,8 @@ const config = {
                     '/*.gif',
                     '/*.jpg',
                     '/*.png',
-                    '/*.webp'
+                    '/*.webp',
+                    '/*.md'
                 ],
                 disallow: [
                     '/assets/*',

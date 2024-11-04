@@ -7,6 +7,7 @@ Allow: /*.gif
 Allow: /*.jpg
 Allow: /*.png
 Allow: /*.webp
+Allow: /*.md
 Disallow: /assets/*
 Disallow: /_next/*
 Disallow: /tpost/*
@@ -27,6 +28,7 @@ Allow: /*.gif
 Allow: /*.jpg
 Allow: /*.png
 Allow: /*.webp
+Allow: /*.md
 Disallow: /assets/*
 Disallow: /_next/*
 Disallow: /tpost/*
