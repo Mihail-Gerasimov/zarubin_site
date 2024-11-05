@@ -5,8 +5,8 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.svg$/i,
       use: ['@svgr/webpack'],
-    })
-    return config
+    });
+    return config;
   },
   experimental: {
     turbo: {
@@ -34,7 +34,7 @@ const nextConfig = {
         source: '/:path*/',
         destination: '/:path*',
       },
-    ]
+    ];
   },
   async redirects() {
     return [
@@ -59,8 +59,8 @@ const nextConfig = {
         destination: '/insights/:slug',
         permanent: true,
       },
-    ]
+    ];
   },
-}
+};
 
-export default nextConfig
+export default nextConfig;

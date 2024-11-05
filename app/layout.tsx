@@ -39,9 +39,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
+  params,
   children,
 }: {
+  params: string;
   children: React.ReactNode;
 }) {
+  console.log('PARAMS', params);
+
   return children;
 }
