@@ -28,6 +28,14 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/:path*/*',
+        destination: '/:path*',
+      },
+    ];
+  },
   async redirects() {
     return [
       {
@@ -49,11 +57,6 @@ const nextConfig = {
       {
         source: '/blog/:slug',
         destination: '/insights/:slug',
-        permanent: true,
-      },
-      {
-        source: '/:path*/',
-        destination: '/:path*',
         permanent: true,
       },
     ];
