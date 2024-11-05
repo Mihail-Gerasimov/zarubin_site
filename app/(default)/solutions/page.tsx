@@ -5,6 +5,7 @@ import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
+import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
@@ -25,12 +26,12 @@ const keywords = pageMetadata.solutions.keywords;
 export const metadata: Metadata = {
   title,
   description,
-  metadataBase: new URL('https://thebrightbyte.com/'),
+  metadataBase: new URL(BASE_URL),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL('https://thebrightbyte.com/solutions'),
+    canonical: new URL(`${BASE_URL}/solutions`),
   },
   openGraph: {
     type: 'website',
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title,
     description,
-    url: 'https://thebrightbyte.com/solutions',
+    url: `${BASE_URL}/solutions`,
   },
   keywords,
 };

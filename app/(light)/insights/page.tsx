@@ -1,5 +1,6 @@
 import { NextLinePreposition } from '@/src/components/NextLinePreposition/NextLinePreposition';
 import { PostsComponent } from '@/src/components/PostsComponent/PostsComponent';
+import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
@@ -14,17 +15,17 @@ const keywords = pageMetadata.insights.keywords;
 export const metadata: Metadata = {
   title,
   description,
-  metadataBase: new URL('https://thebrightbyte.com'),
+  metadataBase: new URL(BASE_URL),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL('https://thebrightbyte.com/insights'),
+    canonical: new URL(`${BASE_URL}/insights`),
     types: {
       'application/rss+xml': [
         {
           title: 'Bright Byte Insights',
-          url: 'https://thebrightbyte.com/insights/rss',
+          url: `${BASE_URL}/insights/rss`,
         },
       ],
     },
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title,
     description,
-    url: 'https://thebrightbyte.com/insights',
+    url: `${BASE_URL}/insights`,
   },
   keywords,
 };

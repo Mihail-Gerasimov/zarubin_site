@@ -57,7 +57,7 @@ User-agent: facebookexternalhit
 Allow: /
 
 # Host
-Host: https://thebrightbyte.com/
+Host: https://thebrightbyte.com
 
 # Sitemaps
 Sitemap: https://thebrightbyte.com/sitemap.xml

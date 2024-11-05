@@ -1,3 +1,4 @@
+import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
@@ -10,17 +11,17 @@ const keywords = pageMetadata.main.keywords;
 export const metadata: Metadata = {
   title,
   description,
-  metadataBase: new URL('https://thebrightbyte.com/'),
+  metadataBase: new URL(BASE_URL),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL('https://thebrightbyte.com'),
+    canonical: new URL(BASE_URL),
     types: {
       'application/rss+xml': [
         {
           title: 'Bright Byte Expertise and Insights',
-          url: 'https://thebrightbyte.com/rss',
+          url: `${BASE_URL}/rss`,
         },
       ],
     },
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title,
     description,
-    url: 'https://thebrightbyte.com',
+    url: BASE_URL,
   },
   keywords,
 };

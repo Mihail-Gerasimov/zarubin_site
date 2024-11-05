@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 const config = {
-    siteUrl: 'https://thebrightbyte.com/',
+    siteUrl: 'https://thebrightbyte.com',
     generateSitemap: true,
     generateIndexSitemap: false,
     generateRobotsTxt: true,

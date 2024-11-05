@@ -9,6 +9,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import styles from './Comparison.module.css';
 
+import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 
@@ -19,12 +20,12 @@ const keywords = pageMetadata.comparison.keywords;
 export const metadata: Metadata = {
   title,
   description,
-  metadataBase: new URL('https://thebrightbyte.com/'),
+  metadataBase: new URL(BASE_URL),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL('https://thebrightbyte.com/comparison'),
+    canonical: new URL(`${BASE_URL}/comparison`),
   },
   openGraph: {
     type: 'website',
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title: title,
     description,
-    url: 'https://thebrightbyte.com/comparison',
+    url: `${BASE_URL}/comparison`,
   },
   keywords,
 };
