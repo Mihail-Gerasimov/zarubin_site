@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { BASE_URL } from '../alias';
 
 export const getAllInsights = () => {
   const InsightsDirectory = path.join(process.cwd(), 'src/posts');
@@ -12,7 +13,7 @@ export const getAllInsights = () => {
       title,
       date,
       description,
-      link: `https://thebrightbyte.com/insights/${filename.replace('.md', '')}`,
+      link: `${BASE_URL}/insights/${filename.replace('.md', '')}`,
     };
   });
 };

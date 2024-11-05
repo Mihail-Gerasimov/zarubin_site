@@ -51,6 +51,11 @@ const nextConfig = {
         destination: '/insights/:slug',
         permanent: true,
       },
+      {
+        source: '/:path*/',
+        destination: '/:path*',
+        permanent: true,
+      },
     ];
   },
 };

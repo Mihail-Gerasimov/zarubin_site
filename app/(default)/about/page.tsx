@@ -3,6 +3,7 @@ import { ContactForm } from '@/src/components/Main/ContactForm/ContactForm';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
+import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
@@ -46,12 +47,12 @@ const keywords = pageMetadata.about.keywords;
 export const metadata: Metadata = {
   title,
   description,
-  metadataBase: new URL('https://thebrightbyte.com/'),
+  metadataBase: new URL(BASE_URL),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL('https://thebrightbyte.com/about'),
+    canonical: new URL(`${BASE_URL}/about`),
   },
   openGraph: {
     type: 'website',
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title,
     description,
-    url: 'https://thebrightbyte.com/about',
+    url: `${BASE_URL}/about`,
   },
   keywords,
 };

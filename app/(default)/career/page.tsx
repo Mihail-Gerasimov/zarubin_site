@@ -6,6 +6,7 @@ import { Team } from '@/src/components/Career/Team/Team';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
+import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
@@ -30,12 +31,12 @@ const keywords = pageMetadata.career.keywords;
 export const metadata: Metadata = {
   title,
   description,
-  metadataBase: new URL('https://thebrightbyte.com/'),
+  metadataBase: new URL(BASE_URL),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL('https://thebrightbyte.com/career'),
+    canonical: new URL(`${BASE_URL}/career`),
   },
   openGraph: {
     type: 'website',
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title,
     description,
-    url: 'https://thebrightbyte.com/career',
+    url: `${BASE_URL}/career`,
   },
   keywords,
 };

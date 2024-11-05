@@ -4,6 +4,7 @@ import { Insights } from '@/src/components/Main/Insights/Insights';
 import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
+import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import {
     InstrumentIcons,
@@ -57,7 +58,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `https://thebrightbyte.com/solutions/${slug}`,
+      canonical: `${BASE_URL}/solutions/${slug}`,
     },
     openGraph: {
       type: 'website',
@@ -66,7 +67,7 @@ export async function generateMetadata({
       ...openGraphImage,
       title,
       description,
-      url: `https://thebrightbyte.com/solutions/${slug}`,
+      url: `${BASE_URL}/solutions/${slug}`,
     },
   };
 }

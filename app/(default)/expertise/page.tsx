@@ -6,6 +6,7 @@ import { Container } from '@/src/components/shared/Container/Container';
 import { ScrollAnimationWrapper } from '@/src/components/shared/ScrollAminationWrapper/ScrollAnimationWrapper';
 import { Section } from '@/src/components/shared/Section/Section';
 import { ExpertiseHeroBgSvg } from '@/src/components/svg/ExpertiseHeroBgSvg';
+import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
@@ -31,17 +32,17 @@ const keywords = pageMetadata.expertise.keywords;
 export const metadata: Metadata = {
   title,
   description,
-  metadataBase: new URL('https://thebrightbyte.com/'),
+  metadataBase: new URL(BASE_URL),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL('https://thebrightbyte.com/expertise'),
+    canonical: new URL(`${BASE_URL}/expertise`),
     types: {
       'application/rss+xml': [
         {
           title: 'Bright Byte Expertise',
-          url: 'https://thebrightbyte.com/expertise/rss',
+          url: `${BASE_URL}/expertise/rss`,
         },
       ],
     },
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title,
     description,
-    url: 'https://thebrightbyte.com/expertise',
+    url: `${BASE_URL}/expertise`,
   },
   keywords,
 };
