@@ -29,7 +29,6 @@
 .tag {
   padding: 10px;
   width: fit-content;
-  font-family: 'Proxima Nova';
   font-size: 21px;
   font-weight: 700;
   line-height: 1;
@@ -41,7 +40,6 @@
 
 .description {
   margin-top: auto;
-  font-family: 'Proxima Nova';
   font-size: 28px;
   font-weight: 700;
   line-height: 1.14;

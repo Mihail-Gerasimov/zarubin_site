@@ -24,7 +24,9 @@ export const TechnologyCard = ({ data }: Props) => {
       >
         {data.title}
       </h3>
-      <p className={styles.cardDescription}>{data.description}</p>
+      <p className={`${styles.cardDescription} font-proxima`}>
+        {data.description}
+      </p>
     </div>
   );
 };

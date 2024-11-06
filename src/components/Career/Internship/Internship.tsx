@@ -27,7 +27,9 @@ export const Internship = () => {
               <h3 className={classNames(styles.title, styles.blackTitle)}>
                 Look at the vacancies
               </h3>
-              <span className={styles.tag}>#WeAreAlwaysInSearch</span>
+              <span className={`${styles.tag} font-proxima`}>
+                #WeAreAlwaysInSearch
+              </span>
             </div>
           </li>
           <li className={styles.numItem}>
@@ -36,7 +38,9 @@ export const Internship = () => {
               <h3 className={classNames(styles.title, styles.blackTitle)}>
                 Read our articles
               </h3>
-              <span className={styles.tag}>#DevelopingSportsEntertainment</span>
+              <span className={`${styles.tag} font-proxima`}>
+                #DevelopingSportsEntertainment
+              </span>
             </div>
           </li>
           <li className={styles.numItem}>
@@ -45,7 +49,9 @@ export const Internship = () => {
               <h3 className={classNames(styles.title, styles.blackTitle)}>
                 Send a CV
               </h3>
-              <span className={styles.tag}>#EveryGoldPiece</span>
+              <span className={`${styles.tag} font-proxima`}>
+                #EveryGoldPiece
+              </span>
             </div>
           </li>
         </ul>

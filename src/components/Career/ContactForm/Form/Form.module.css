@@ -27,16 +27,6 @@
   align-items: flex-start;
 }
 
-.input {
-  width: 100%;
-  padding-bottom: 8px;
-  font-size: 26px;
-  color: var(--main-white);
-  border-bottom: 1px solid #0066ff;
-  background-color: var(--second-blue);
-  resize: none;
-}
-
 .input::placeholder {
   font-size: 26px;
   line-height: 1.14;
@@ -55,7 +45,6 @@
   align-items: center;
   justify-content: center;
   border-radius: 6px;
-  font-family: 'Proxima nova';
   font-size: 20px;
   font-weight: 700;
   line-height: 1;
