@@ -14,7 +14,7 @@ export const BusinessItems = () => {
       <ul className={styles.list}>
         {businessItems.map((item, idx) => (
           <li key={idx} className={styles.item}>
-            <p className={styles.meaning}>{item}</p>
+            <p className={`${styles.meaning} font-proxima`}>{item}</p>
           </li>
         ))}
       </ul>

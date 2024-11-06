@@ -23,7 +23,7 @@ export const TitleContent = ({ title, tags, light }: Props) => {
           <li key={idx} className={styles.item}>
             <span
               className={classNames(
-                styles.tag,
+                'inline-block p-[10px] font-proxima text-[16px] leading-[1.25] tablet:text-[24px] tablet:leading-[1.16] ',
                 light ? 'bg-[var(--light-blue)]' : 'bg-[var(--second-blue)]',
               )}
             >

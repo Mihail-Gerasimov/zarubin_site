@@ -9,7 +9,6 @@
   flex-direction: column;
   gap: 54px;
   background-color: var(--dark-blue);
-  font-family: 'Proxima Nova';
 }
 
 .item:nth-child(2) {
