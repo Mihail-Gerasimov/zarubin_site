@@ -34,7 +34,7 @@ const getMarkdownFiles = (dir: string): string[] => {
 export const getExpertiseMetadata = (): Case[] => {
   const markdownFiles = getMarkdownFiles('src/expertise');
 
-  const posts = markdownFiles.map((filePath): Case => {
+  const posts = markdownFiles.map((filePath: string): Case => {
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const matterResult = matter(fileContent);
     return {
