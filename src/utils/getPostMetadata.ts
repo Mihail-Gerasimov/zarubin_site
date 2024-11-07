@@ -18,7 +18,7 @@ interface PostMetadata {
 
 export const getPostMetadata = (basePath: string) => {
   const folder = basePath + '/';
-  if (!fs.existsSync(basePath)) {
+  if (!fs.existsSync(folder)) {
     console.warn(`Directory ${basePath} does not exist.`);
     return [];
   }
