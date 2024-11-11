@@ -19,7 +19,8 @@ const config = {
             '/expertise',
             '/insights',
             '/solutions',
-            '/policy'
+            '/policy',
+            '/investments'
 
         ]
 
