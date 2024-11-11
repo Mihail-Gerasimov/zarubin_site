@@ -21,7 +21,7 @@ export const initialData: IInitialValue[] = [
     id: 'idea',
     question: 'Describe your idea?',
     required: false,
-    type: 'input',
+    type: 'textarea',
     data: [
       {
         id: 'idea',

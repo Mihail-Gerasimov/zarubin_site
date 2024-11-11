@@ -1,89 +1,134 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useRef } from 'react';
 import { generateNewInitialValue, IInitialValue } from '../briefData';
 import { useFormik } from 'formik';
 import { validate } from '@/src/utils/validate/validate';
-
-interface FormikValues {
-  values: { [key: string]: string };
-  errors: { [key: string]: string };
-  touched: { [key: string]: boolean };
-}
+import { useQuestion } from '../../Contexts/QuestionContext';
+import { TestNextBackButton } from '../NextBackButton/TestNextBackButton';
 
 interface IAnotherProps {
   data: IInitialValue;
-  onChange: (idx: string, value: string) => void;
+  onChange?: (idx: string, value: string) => void;
+  onClick: () => void;
+  nextClick: () => void;
 }
 
-export const TestQuestionComponent = ({ data, onChange }: IAnotherProps) => {
+export const TestQuestionComponent = ({
+  data,
+  onClick,
+  nextClick,
+}: IAnotherProps) => {
   const initialValues = generateNewInitialValue(data);
+  const { data: contextValue, handleChangeData } = useQuestion();
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const formik = useFormik({
     initialValues,
     validate,
     onSubmit: (values) => {
-      console.log(values);
+      console.log('Submitted values:', values);
+      nextClick();
     },
     enableReinitialize: true,
   });
 
   const handleChange = (id: string, value: string) => {
+    handleTextAreaResize();
     formik.setFieldValue(id, value);
     formik.setFieldTouched(id, true);
+    handleChangeData(id, value);
   };
 
+  const handleTextAreaResize = () => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto';
+      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+    }
+    return;
+  };
+
+  useEffect(() => {
+    if (!textareaRef.current) return;
+    handleTextAreaResize();
+  }, [data]);
+
   return (
-    <form className='flex w-full flex-col'>
-      <h2 className='mb-[40px] text-center font-unbound text-[22px] font-bold uppercase leading-[1.1] tablet:text-[28px]'>
-        {data.question}
-      </h2>
-      <div className='flex w-full flex-col gap-[20px]'>
-        {data.data.map((item, idx) => (
-          <React.Fragment key={idx}>
-            {item.label && (
-              <label
-                form={item.id}
-                className='font-proxima text-[16px] text-text-dark/50'
-              >
-                {item.label}
-              </label>
-            )}
-            {data.type === 'input' ? (
-              <div>
+    <div className='w-full'>
+      <form onSubmit={formik.handleSubmit} className='flex w-full flex-col'>
+        <h2 className='mb-[40px] text-center font-unbound text-[22px] font-bold uppercase leading-[1.1] tablet:text-[28px]'>
+          {data.question}
+        </h2>
+        <div className='flex w-full flex-col gap-[20px]'>
+          {data.data.map((item, idx) => (
+            <React.Fragment key={idx}>
+              {item.label && (
+                <label
+                  form={item.id}
+                  className='font-proxima text-[16px] text-text-dark/50'
+                >
+                  {item.label}
+                  {item.required && item.label ? (
+                    <span className='text-main-blue-hover'>*</span>
+                  ) : null}
+                </label>
+              )}
+              {data.type === 'input' ? (
+                <div>
+                  <input
+                    type={data.type ? data.type : 'input'}
+                    placeholder={`${item.placeholder}${item.required && !item.label ? '*' : ''}`}
+                    id={item.id}
+                    name={item.id}
+                    value={contextValue[item.id]}
+                    onBlur={formik.handleBlur}
+                    onChange={(e) => {
+                      handleChange(item.id, e.target.value);
+                    }}
+                    className='w-full border-b-[1px] border-main-blue-hover pb-[8px] text-[16px] outline-none'
+                  />
+                  {formik.errors[item.id] && formik.touched[item.id] && (
+                    <div className='mt-1 text-[10px] text-red-500'>
+                      {formik.errors[item.id]}
+                    </div>
+                  )}
+                </div>
+              ) : data.type === 'textarea' ? (
+                <div>
+                  <textarea
+                    ref={textareaRef}
+                    id={item.id}
+                    name={item.id}
+                    value={contextValue[item.id]}
+                    onChange={(e) => {
+                      handleChange(item.id, e.target.value);
+                    }}
+                    className='h-[auto] w-full resize-none overflow-hidden border-b-[1px] border-main-blue-hover pb-[8px] text-[16px] outline-none'
+                  />
+                  {formik.errors[item.id] && formik.touched[item.id] && (
+                    <div className='mt-1 text-[10px] text-red-500'>
+                      {formik.errors[item.id]}
+                    </div>
+                  )}
+                </div>
+              ) : (
                 <input
-                  type={data.type ? data.type : 'input'}
-                  required={item.required}
-                  placeholder={item.placeholder}
+                  type='button'
                   id={item.id}
                   name={item.id}
-                  value={formik.values[item.id]}
-                  onChange={(e) => {
-                    console.log(item.id);
-                    handleChange(item.id, e.target.value);
+                  value={item.answer}
+                  onClick={(e: React.MouseEvent<HTMLInputElement>) => {
+                    const target = e.target as HTMLInputElement;
+                    handleChange(item.id, target.value);
                   }}
-                  className='w-full border-b-[1px] border-main-blue-hover pb-[8px] text-[16px] outline-none'
+                  className={`${item.answer === contextValue[item.id] ? 'border-main-blue' : 'border-main-blue/20'} block w-full cursor-pointer rounded-[6px] border-[1px] py-[13px] duration-300 hover:border-main-blue-hover`}
                 />
-                {formik.errors[item.id] && formik.touched[item.id] && (
-                  <div className='mt-1 text-[10px] text-red-500'>
-                    {formik.errors[item.id]}
-                  </div>
-                )}
-              </div>
-            ) : (
-              <input
-                type='button'
-                id={item.id}
-                name={item.id}
-                value={item.answer}
-                onClick={(e: React.MouseEvent<HTMLInputElement>) => {
-                  const target = e.target as HTMLInputElement;
-                  handleChange(item.id, target.value);
-                }}
-                className={`${item.answer === formik.values[item.id] ? 'border-main-blue' : 'border-main-blue/20'} block w-full cursor-pointer rounded-[6px] border-[1px] py-[13px] duration-300 hover:border-main-blue-hover`}
-              />
-            )}
-          </React.Fragment>
-        ))}
-      </div>
-    </form>
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+        <TestNextBackButton onClick={onClick} />
+      </form>
+    </div>
   );
 };

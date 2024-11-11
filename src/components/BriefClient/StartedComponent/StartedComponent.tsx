@@ -1,4 +1,8 @@
-export const StartedComponent = () => {
+interface IStartProps {
+  onClick: () => void;
+}
+
+export const StartedComponent = ({ onClick }: IStartProps) => {
   return (
     <div className='flex flex-col items-center gap-[20px] text-text-dark'>
       <h1 className='text-center font-unbound text-[28px] font-bold uppercase leading-[1.14] tablet:text-[38px] tablet:leading-[1.1] desktop:text-[44px]'>
@@ -9,6 +13,14 @@ export const StartedComponent = () => {
           "Get your 100% FREE no-obligation 40-minutes app blueprint creation session ($1,000 value) and we'll show you our proprietary product development blueprint - to not only turn your idea into real-shipped app, but bring it to the market successfully."
         }
       </p>
+
+      <button
+        type='button'
+        onClick={onClick}
+        className='rounded-[6px] bg-main-blue p-[13px_32px] text-[20px] leading-[1] text-white duration-300 hover:bg-main-blue-hover'
+      >
+        Get Started
+      </button>
     </div>
   );
 };

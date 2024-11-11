@@ -1,16 +1,15 @@
 'use client';
 
 import { useFormik } from 'formik';
-import { useState } from 'react';
 import { StartedComponent } from './StartedComponent/StartedComponent';
 import { NextBackButton } from './NextBackButton/NextBackButton';
-import { QuestionComponent } from './QuestionComponent/QuestionComponent';
 import { initialData, initialFormikValue } from './briefData';
 import { validate } from '@/src/utils/validate/validate';
 import { TestQuestionComponent } from './QuestionComponent/TestQuestionQomponent';
+import { useQuestion } from '../Contexts/QuestionContext';
 
 export const BriefClient = () => {
-  const [step, setStep] = useState(0);
+  const { page: pageInfo, handleSetPage } = useQuestion();
 
   const formik = useFormik({
     initialValues: initialFormikValue,
@@ -21,15 +20,15 @@ export const BriefClient = () => {
   });
 
   const handleBack = () => {
-    if (step === 0) return;
-    setStep(step - 1);
+    if (pageInfo === 0) return;
+    handleSetPage(pageInfo - 1);
   };
 
   const handleNext = () => {
-    if (step === initialData.length) {
+    if (pageInfo === initialData.length) {
       return formik.handleSubmit();
     }
-    setStep(step + 1);
+    handleSetPage(pageInfo + 1);
   };
 
   const handleChange = (id: string, value: string) => {
@@ -39,27 +38,23 @@ export const BriefClient = () => {
 
   return (
     <div className='mx-[auto] flex w-full max-w-[860px] flex-col items-center desktop:text-[28px] desktop:leading-[1.14]'>
-      {step !== 0 && (
+      {pageInfo !== 0 && (
         <div className='mb-[20px] flex font-unbound text-[24px] font-bold leading-[1.16] text-main-blue-hover'>
-          <span>{step}</span>
+          <span>{pageInfo}</span>
           <span>{'/'}</span>
           <span>{initialData.length}</span>
         </div>
       )}
-      {step !== 0 && (
+      {pageInfo !== 0 && (
         <>
           <TestQuestionComponent
-            data={initialData[step - 1]}
-            onChange={handleChange}
+            data={initialData[pageInfo - 1]}
+            onClick={handleBack}
+            nextClick={handleNext}
           />
         </>
       )}
-      {step === 0 && <StartedComponent />}
-      <NextBackButton
-        step={step}
-        nextClick={handleNext}
-        backClick={handleBack}
-      />
+      {pageInfo === 0 && <StartedComponent onClick={handleNext} />}
     </div>
   );
 };
