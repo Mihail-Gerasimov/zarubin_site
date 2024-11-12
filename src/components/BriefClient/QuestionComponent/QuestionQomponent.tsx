@@ -6,6 +6,7 @@ import { useFormik } from 'formik';
 import { validate } from '@/src/utils/validate/validate';
 import { useQuestion } from '../../Contexts/QuestionContext';
 import { TestNextBackButton } from '../NextBackButton/TestNextBackButton';
+import { CalendarClient } from '../../CalendarClient/CalendarClient';
 
 interface IAnotherProps {
   data: IInitialValue;
@@ -14,13 +15,17 @@ interface IAnotherProps {
   nextClick: () => void;
 }
 
-export const TestQuestionComponent = ({
+export const QuestionComponent = ({
   data,
   onClick,
   nextClick,
 }: IAnotherProps) => {
   const initialValues = generateNewInitialValue(data);
-  const { data: contextValue, handleChangeData } = useQuestion();
+  const {
+    data: contextValue,
+    handleChangeData,
+    page: pageInfo,
+  } = useQuestion();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   const formik = useFormik({
@@ -111,6 +116,10 @@ export const TestQuestionComponent = ({
                     </div>
                   )}
                 </div>
+              ) : data.type === 'date' ? (
+                <div>
+                  <CalendarClient onClick={() => handleChange} />
+                </div>
               ) : (
                 <input
                   type='button'
@@ -127,7 +136,7 @@ export const TestQuestionComponent = ({
             </React.Fragment>
           ))}
         </div>
-        <TestNextBackButton onClick={onClick} />
+        <TestNextBackButton onClick={onClick} pageInfo={pageInfo} />
       </form>
     </div>
   );

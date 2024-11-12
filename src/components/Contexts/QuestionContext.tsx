@@ -51,27 +51,6 @@ export const QuestionProvider = ({
     }));
   };
 
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     localStorage.setItem('questionInfo', JSON.stringify(data));
-  //   }
-  // }, [data]);
-
-  // useEffect(() => {
-  //   // if (typeof window !== 'undefined') {
-  //   const storageData = localStorage.getItem('questionInfo');
-  //   if (storageData) {
-  //     setData(JSON.parse(storageData));
-  //   } else {
-  //     setData(initialFormikValue);
-  //   }
-
-  //   // const storagePage = localStorage.getItem('pageInfo');
-  //   // if (storagePage) {
-  //   //   setPage(JSON.parse(storagePage));
-  //   // }
-  // }, []);
-
   useEffect(() => {
     localStorage.setItem('questionInfo', JSON.stringify(data));
   }, [data]);

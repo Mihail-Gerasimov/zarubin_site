@@ -2,9 +2,10 @@ import Back from '@/public/assets/images/icons/back.svg';
 
 interface IButton {
   onClick: () => void;
+  pageInfo: number;
 }
 
-export const TestNextBackButton = ({ onClick }: IButton) => {
+export const TestNextBackButton = ({ onClick, pageInfo }: IButton) => {
   return (
     <div
       className={`mt-[40px] flex w-full items-center justify-between font-proxima text-[20px] font-bold leading-[1]`}
@@ -22,7 +23,7 @@ export const TestNextBackButton = ({ onClick }: IButton) => {
         type='submit'
         className='rounded-[6px] bg-main-blue p-[13px_32px] text-[20px] leading-[1] text-white duration-300 hover:bg-main-blue-hover'
       >
-        Next
+        {pageInfo}
       </button>
     </div>
   );

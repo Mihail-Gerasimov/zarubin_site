@@ -152,6 +152,21 @@ export const initialData: IInitialValue[] = [
       },
     ],
   },
+  {
+    id: 'date',
+    question: 'Select a date and time for the strategic session',
+    type: 'date',
+    required: true,
+    data: [
+      {
+        id: 'date',
+        label: '',
+        placeholder: '',
+        answer: '',
+        required: true,
+      },
+    ],
+  },
 ];
 
 export const generateInitialValues = (data: IInitialValue[]) => {

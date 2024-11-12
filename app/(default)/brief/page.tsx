@@ -1,6 +1,4 @@
 import { BriefClient } from '@/src/components/BriefClient/BriefClient';
-import { BriefComponent } from '@/src/components/BriefClient/BriefComponent';
-import { PageProvoder } from '@/src/components/Contexts/PageContext';
 import { QuestionProvider } from '@/src/components/Contexts/QuestionContext';
 import { Container } from '@/src/components/shared/Container/Container';
 import { Section } from '@/src/components/shared/Section/Section';
@@ -13,7 +11,6 @@ export default function Brief() {
           <QuestionProvider>
             <BriefClient />
           </QuestionProvider>
-          {/* <BriefComponent /> */}
         </Container>
       </Section>
     </main>

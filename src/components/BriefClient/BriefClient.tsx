@@ -5,11 +5,15 @@ import { StartedComponent } from './StartedComponent/StartedComponent';
 import { NextBackButton } from './NextBackButton/NextBackButton';
 import { initialData, initialFormikValue } from './briefData';
 import { validate } from '@/src/utils/validate/validate';
-import { TestQuestionComponent } from './QuestionComponent/TestQuestionQomponent';
+import { QuestionComponent } from './QuestionComponent/QuestionQomponent';
 import { useQuestion } from '../Contexts/QuestionContext';
+import { useState } from 'react';
+import 'react-calendar/dist/Calendar.css';
+import { DateTime } from 'luxon';
 
 export const BriefClient = () => {
   const { page: pageInfo, handleSetPage } = useQuestion();
+  const [selectedDate, selectDate] = useState(DateTime.now());
 
   const formik = useFormik({
     initialValues: initialFormikValue,
@@ -47,7 +51,7 @@ export const BriefClient = () => {
       )}
       {pageInfo !== 0 && (
         <>
-          <TestQuestionComponent
+          <QuestionComponent
             data={initialData[pageInfo - 1]}
             onClick={handleBack}
             nextClick={handleNext}
