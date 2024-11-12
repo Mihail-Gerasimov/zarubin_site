@@ -4,7 +4,7 @@ import { Breadcrumb, Breadcrumbs } from '../../shared/Breadcrumbs/Breadcrumbs';
 
 const BREADCRUMBS: Breadcrumb[] = [
   { title: 'Main', link: '/' },
-  { title: 'New products' },
+  { title: 'Investments' },
 ];
 
 interface IProducts {
