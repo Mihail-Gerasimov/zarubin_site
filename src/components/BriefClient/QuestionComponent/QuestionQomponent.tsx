@@ -1,7 +1,11 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import { generateNewInitialValue, IInitialValue } from '../briefData';
+import {
+  generateNewInitialValue,
+  IInitialValue,
+  initialData,
+} from '../briefData';
 import { useFormik } from 'formik';
 import { validate } from '@/src/utils/validate/validate';
 import { useQuestion } from '../../Contexts/QuestionContext';
@@ -27,6 +31,7 @@ export const QuestionComponent = ({
     page: pageInfo,
   } = useQuestion();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const length = initialData.length;
 
   const formik = useFormik({
     initialValues,
@@ -117,9 +122,7 @@ export const QuestionComponent = ({
                   )}
                 </div>
               ) : data.type === 'date' ? (
-                <div>
-                  <CalendarClient onClick={() => handleChange} />
-                </div>
+                <CalendarClient onClick={() => handleChange} />
               ) : (
                 <input
                   type='button'
@@ -136,7 +139,11 @@ export const QuestionComponent = ({
             </React.Fragment>
           ))}
         </div>
-        <TestNextBackButton onClick={onClick} pageInfo={pageInfo} />
+        <TestNextBackButton
+          onClick={onClick}
+          pageInfo={pageInfo}
+          length={length}
+        />
       </form>
     </div>
   );
