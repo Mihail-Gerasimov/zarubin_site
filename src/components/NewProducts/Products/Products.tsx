@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Breadcrumb, Breadcrumbs } from '../../shared/Breadcrumbs/Breadcrumbs';
 
 const BREADCRUMBS: Breadcrumb[] = [
@@ -31,7 +30,13 @@ export const Products = ({ products }: IProducts) => {
 
       <div className='grid grid-cols-1 gap-[40px] tablet:grid-cols-2'>
         {products.map((item) => (
-          <Link href={item.link} key={item.name} className='overflow-hidden'>
+          <a
+            href={item.link}
+            rel='noopener'
+            target='_blank'
+            key={item.name}
+            className='overflow-hidden'
+          >
             <Image
               key={item.name}
               src={item.image}
@@ -41,7 +46,7 @@ export const Products = ({ products }: IProducts) => {
               height={448}
               className='h-[auto] w-full'
             />
-          </Link>
+          </a>
         ))}
       </div>
     </div>

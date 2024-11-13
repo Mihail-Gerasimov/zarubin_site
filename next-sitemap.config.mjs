@@ -114,7 +114,10 @@ const config = {
                     '/lander/*',
                     '/collections/*',
                     '*/&',
-                    '/*?'
+                    '/*?',
+                    '*?pr_prod_strat=',
+                    '*?target_origin=',
+                    '/account/'
                 ]
             },
             {
@@ -139,7 +142,10 @@ const config = {
                     '/lander/*',
                     '/collections/*',
                     '*/&',
-                    '/*?'
+                    '/*?',
+                    '*?pr_prod_strat=',
+                    '*?target_origin=',
+                    '/account/'
                 ]
             },
             { userAgent: 'RookeeBot', disallow: '/' },
