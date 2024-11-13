@@ -79,7 +79,7 @@ export default function RootLayout({
       <body
         className={`${bodyClassname} flex flex-col bg-white text-text-dark`}
       >
-        <Header dark={false} expertiseSubmenu={testList} />
+        <Header expertiseSubmenu={testList} />
         <main className='relative'>{children}</main>
         <Footer />
         <Script id='replain'>
