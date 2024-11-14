@@ -1,5 +1,5 @@
+import { DateTime } from 'luxon';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Breadcrumb, Breadcrumbs } from '../../shared/Breadcrumbs/Breadcrumbs';
 
 const BREADCRUMBS: Breadcrumb[] = [
@@ -8,10 +8,22 @@ const BREADCRUMBS: Breadcrumb[] = [
 ];
 
 interface IProducts {
-  products: { name: string; image: string; link: string; slug: string }[];
+  products: {
+    name: string;
+    image: string;
+    link: string;
+    slug: string;
+    date: string;
+  }[];
 }
 
 export const Products = ({ products }: IProducts) => {
+  const sortedProducts = [...products].sort(
+    (a, b) =>
+      DateTime.fromFormat(b.date, 'dd-MM-yyyy').toMillis() -
+      DateTime.fromFormat(a.date, 'dd-MM-yyyy').toMillis(),
+  );
+
   return (
     <div className='flex flex-col gap-[40px] tablet:gap-[60px]'>
       <div className='desktop:py-[65px]'>
@@ -30,8 +42,14 @@ export const Products = ({ products }: IProducts) => {
       </div>
 
       <div className='grid grid-cols-1 gap-[40px] tablet:grid-cols-2'>
-        {products.map((item) => (
-          <Link href={item.link} key={item.name} className='overflow-hidden'>
+        {sortedProducts.map((item) => (
+          <a
+            href={item.link}
+            rel='noopener'
+            target='_blank'
+            key={item.name}
+            className='overflow-hidden'
+          >
             <Image
               key={item.name}
               src={item.image}
@@ -41,7 +59,7 @@ export const Products = ({ products }: IProducts) => {
               height={448}
               className='h-[auto] w-full'
             />
-          </Link>
+          </a>
         ))}
       </div>
     </div>

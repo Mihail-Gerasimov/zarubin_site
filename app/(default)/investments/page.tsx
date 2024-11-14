@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL(`${BASE_URL}/our_products`),
+    canonical: new URL(`${BASE_URL}/investments`),
   },
   openGraph: {
     type: 'website',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title,
     description,
-    url: `${BASE_URL}/our_products`,
+    url: `${BASE_URL}/investments`,
   },
   keywords,
 };
