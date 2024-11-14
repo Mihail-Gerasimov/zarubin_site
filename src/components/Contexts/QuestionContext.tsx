@@ -12,6 +12,8 @@ interface IQuestionContext {
   page: number;
   handleSetPage: (value: number) => void;
   handleChangeData: (name: string, value: string) => void;
+  handleClearData: () => void;
+  handleClearPage: () => void;
 }
 
 const QuestionContext = createContext<IQuestionContext>({
@@ -19,6 +21,8 @@ const QuestionContext = createContext<IQuestionContext>({
   page: 0,
   handleSetPage: () => {},
   handleChangeData: () => {},
+  handleClearData: () => {},
+  handleClearPage: () => {},
 });
 export const useQuestion = () => useContext(QuestionContext);
 
@@ -51,6 +55,14 @@ export const QuestionProvider = ({
     }));
   };
 
+  const handleClearData = () => {
+    localStorage.removeItem('questionInfo');
+  };
+
+  const handleClearPage = () => {
+    localStorage.removeItem('pageInfo');
+  };
+
   useEffect(() => {
     localStorage.setItem('questionInfo', JSON.stringify(data));
   }, [data]);
@@ -65,7 +77,14 @@ export const QuestionProvider = ({
 
   return (
     <QuestionContext.Provider
-      value={{ page, data, handleSetPage, handleChangeData }}
+      value={{
+        page,
+        data,
+        handleSetPage,
+        handleChangeData,
+        handleClearData,
+        handleClearPage,
+      }}
     >
       {children}
     </QuestionContext.Provider>

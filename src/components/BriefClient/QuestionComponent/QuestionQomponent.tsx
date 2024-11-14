@@ -36,8 +36,7 @@ export const QuestionComponent = ({
   const formik = useFormik({
     initialValues,
     validate,
-    onSubmit: (values) => {
-      console.log('Submitted values:', values);
+    onSubmit: () => {
       nextClick();
     },
     enableReinitialize: true,
@@ -91,7 +90,6 @@ export const QuestionComponent = ({
                     id={item.id}
                     name={item.id}
                     value={contextValue[item.id]}
-                    // onBlur={formik.handleBlur}
                     onChange={(e) => {
                       handleChange(item.id, e.target.value);
                     }}

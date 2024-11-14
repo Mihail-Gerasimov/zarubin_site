@@ -62,7 +62,7 @@ export const Form = () => {
           placeholder='Name'
           value={formik.values.name}
           required
-          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-base text-white placeholder-gray-500 placeholder-opacity-50 outline-none focus:bg-blue-950 mobile-big:text-2xl mobile-big:text-2xl'
+          className='w-full resize-none border-b border-blue-600 bg-transparent pb-2 text-base text-white placeholder-gray-500 placeholder-opacity-50 outline-none focus:bg-blue-950 mobile-big:text-2xl'
           onChange={formik.handleChange}
         />
         <input

@@ -3,14 +3,13 @@ export const sendBrief = async (
   objective: string,
   obstacles: string,
   budget: string,
-  date: string,
   name: string,
   company_name: string,
   about_business: string,
   email: string,
 ) => {
   try {
-    const response = await fetch('/api/send', {
+    const response = await fetch('/api/briefsend', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -24,7 +23,6 @@ export const sendBrief = async (
         about_business,
         name,
         email,
-        date,
       }),
     });
     console.log('Email sent successfully:', await response.json());
