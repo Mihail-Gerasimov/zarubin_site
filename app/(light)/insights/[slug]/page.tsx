@@ -157,7 +157,7 @@ export default function MainBlogSlug(props: { params: { slug: string } }) {
       <GoBackLink />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div className='relative flex w-full items-center justify-center'></div>
-        <div className='mt-[200px]'>
+        <div className='mt-[100px]'>
           {readingTime && (
             <span className='mb-[10px] block font-proxima text-[16px] leading-[1.25] text-text-dark opacity-[50%]'>
               Reading time: {readingTime}
