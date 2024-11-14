@@ -18,9 +18,6 @@ Disallow: /lander/*
 Disallow: /collections/*
 Disallow: */&
 Disallow: /*?
-Disallow: *?pr_prod_strat=
-Disallow: *?target_origin=
-Disallow: /account/
 
 # Googlebot
 User-agent: Googlebot

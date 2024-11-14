@@ -1,5 +1,4 @@
 import NotFoundPage from '@/app/not-found';
-import { Featured } from '@/src/components/Featured/Featured';
 import { SocialFollow } from '@/src/components/SocialFollow/SocialFollow';
 import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
@@ -9,10 +8,8 @@ import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
 import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
-import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
-import { postsSorting } from '@/src/utils/postsSorting';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { DateTime } from 'luxon';
@@ -116,11 +113,6 @@ export async function generateMetadata({
   };
 }
 
-const getAllPosts = () => {
-  const postMetadata = getPostMetadata('src/posts');
-  return postsSorting(postMetadata);
-};
-
 export default function ExpertiseCase(props: { params: { slug: string } }) {
   const { slug } = props.params;
   const post = getPostContent(slug);
@@ -219,9 +211,6 @@ export default function ExpertiseCase(props: { params: { slug: string } }) {
           </Markdown>
         </article>
         <SocialFollow />
-        <div className='desktop:bp-0 relative z-[5] mt-[60px] pb-[20px]'>
-          <Featured slug={slug} posts={getAllPosts()} />
-        </div>
       </div>
     </div>
   );
