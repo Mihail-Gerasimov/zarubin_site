@@ -3,11 +3,12 @@ title: 'We are H*cked'
 description: 'Discover how our game project server was hacked, the steps we took to recover, and the key lessons for securing digital infrastructure.'
 image: '/assets/images/post/we_were_hacked.png'
 date: '13-10-2024'
-type: 'Notes'
+readingTime: ''
+category: 'Insights'
+subCategory: 'Notes'
 tag: 'Hackers here, cyber attack recovery, server hacking, data protection'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
-
 ---
 
 # The nightmare of a server breach: How our game project almost crashed
@@ -49,7 +50,7 @@ Our server was configured with three containers: **sail**, **MySQL** and **Redis
 
 ## The breach: How they got in
 
-We checked the SSH access logs. No one had accessed the server via SSH. Our **root password** was complex enough to deter brute force attacks. 
+We checked the SSH access logs. No one had accessed the server via SSH. Our **root password** was complex enough to deter brute force attacks.
 
 But there was a bigger problem. The **Laravel application logs** were empty at the time of the attack. This indicated that the hackers had wiped them clean after gaining access, leaving no trace of their movements.
 
@@ -59,10 +60,10 @@ With the **Redis** and **Sail** ports open, the attackers found a way in, exploi
 
 We went into **emergency recovery mode**. The first priority was to **secure the system**. Here's what we did:
 
-1. **Changed all passwords: Every password, from service accounts to containers, was updated to use complex, strong passwords.
-2. **Shut down external access: We immediately shut down all external access to the Redis and Sail containers. No more exposed ports. Everything locked down.
-3. **Set up automatic backups: We set up daily backups with a 5 day retention. That way, even if we were attacked again, we wouldn't lose everything.
-4. **Migrated to a new server: We didn't want to take any chances with a possible backdoor. We migrated everything to a **new server** with an updated, hardened configuration.
+1. \*\*Changed all passwords: Every password, from service accounts to containers, was updated to use complex, strong passwords.
+2. \*\*Shut down external access: We immediately shut down all external access to the Redis and Sail containers. No more exposed ports. Everything locked down.
+3. \*\*Set up automatic backups: We set up daily backups with a 5 day retention. That way, even if we were attacked again, we wouldn't lose everything.
+4. **Migrated to a new server: We didn't want to take any chances with a possible backdoor. We migrated everything to a **new server\*\* with an updated, hardened configuration.
 
 ## Lessons learned: Protecting ourselves going forward
 

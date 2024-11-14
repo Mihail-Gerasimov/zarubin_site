@@ -28,6 +28,14 @@ const nextConfig = {
       },
     ],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/:path*/',
+        destination: '/:path*',
+      },
+    ];
+  },
   async redirects() {
     return [
       {

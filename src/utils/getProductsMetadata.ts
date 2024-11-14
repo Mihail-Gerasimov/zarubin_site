@@ -5,6 +5,7 @@ export interface Product {
   name: string;
   image: string;
   link: string;
+  date: string;
   slug: string;
 }
 
@@ -20,6 +21,7 @@ export const getProductsMetadata = (basePath: string) => {
       name: matterResult.data.name,
       image: matterResult.data.image,
       link: matterResult.data.link,
+      date: matterResult.data.date,
       slug: filename.replace('.md', ''),
     };
   });

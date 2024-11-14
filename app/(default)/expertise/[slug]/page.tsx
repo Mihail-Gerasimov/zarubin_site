@@ -1,9 +1,13 @@
 import NotFoundPage from '@/app/not-found';
 import { SocialFollow } from '@/src/components/SocialFollow/SocialFollow';
-import { BackLink } from '@/src/ui-kit/BackLink/BackLink';
+import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
+import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
+import { GoBackLink } from '@/src/ui-kit/GoBackLink/GoBackLink';
 import { BASE_URL } from '@/src/utils/alias';
 import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
+import { formattedDate } from '@/src/utils/formattedDate';
+import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import fs from 'fs';
@@ -11,6 +15,7 @@ import matter from 'gray-matter';
 import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
 import path from 'path';
+import styles from './Post.module.css';
 
 type Slug = {
   slug: string;
@@ -19,26 +24,8 @@ type Slug = {
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 
 export async function generateStaticParams(): Promise<Slug[]> {
-  const folder: string = 'src/expertise/';
-  const slugs: Slug[] = [];
-
-  function findMarkdownFiles(dir: string): void {
-    const files: string[] = fs.readdirSync(dir);
-    for (const file of files) {
-      const filePath: string = path.join(dir, file);
-      const stat: fs.Stats = fs.statSync(filePath);
-      if (stat.isDirectory()) {
-        findMarkdownFiles(filePath);
-      } else if (file.endsWith('.md')) {
-        const slug: string = file.replace('.md', '');
-        slugs.push({ slug });
-      }
-    }
-  }
-
-  findMarkdownFiles(folder);
-
-  return slugs;
+  const expertises = getExpertiseMetadata();
+  return expertises.map((post) => ({ slug: post.slug }));
 }
 
 const findMarkdownFile = (dir: string, slug: string): string | null => {
@@ -91,6 +78,8 @@ export async function generateMetadata({
 
   const cleanTitle = cleanMetaTitle(post.data.title);
   const slug = params.slug || '';
+  const { tag } = post.data;
+  const keywords = tag.split(',');
 
   const title = contentTrimming(cleanTitle, 85);
   const description = contentTrimming(post.data.description, 155);
@@ -104,7 +93,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `https://thebrightbyte.com/expertise/${slug}`,
+      canonical: `${BASE_URL}/expertise/${slug}`,
     },
     openGraph: {
       type: 'article',
@@ -113,39 +102,44 @@ export async function generateMetadata({
       ...openGraphImage,
       title,
       description,
-      url: `https://thebrightbyte.com/expertise/${slug}`,
+      url: `${BASE_URL}/expertise/${slug}`,
       article: {
         publishedTime: publishedDateISO,
         modifiedTime: publishedDateISO,
         AuthorInfo: post.data.authorImage ? [post.data.authorImage] : null,
       },
     },
+    keywords,
   };
 }
 
 export default function ExpertiseCase(props: { params: { slug: string } }) {
   const { slug } = props.params;
-  const expertiseCaseContent = getPostContent(slug);
-  const readingTime = expertiseCaseContent?.data.readingTime;
+  const post = getPostContent(slug);
 
-  if (!expertiseCaseContent) {
+  if (!post) {
     return <NotFoundPage />;
   }
+  const date = formattedDate(post.data.date);
 
-  const image = expertiseCaseContent.data.image
-    ? expertiseCaseContent.data.image
+  const { tag, title, authorName, authorImage, downloadLink, readingTime } =
+    post.data;
+  const image = post.data.image
+    ? post.data.image
     : '/assets/images/banner/default_img.webp';
+
+  // const { image = '/assets/images/banner/default_img.webp', readingTime } =
+  //   post.data;
 
   const hashtagRegex = /#[A-Za-z_]+/g;
   const regexFont = /<font color='(.+?)'>(.+?)<\/font>/g;
 
   const ideaRegx = /\[\[(.*?)\]\]/g;
-  const ideaMatches = expertiseCaseContent.content.match(ideaRegx);
+  const ideaMatches = post.content.match(ideaRegx);
 
-  const extractedHashtags =
-    expertiseCaseContent.content.match(hashtagRegex) ?? [];
+  const extractedHashtags = post.content.match(hashtagRegex) ?? [];
 
-  const allPosts = expertiseCaseContent.content
+  const allPosts = post.content
     .replace(regexFont, () => {
       const tags = extractedHashtags
         .map((hashtag) => {
@@ -164,13 +158,15 @@ export default function ExpertiseCase(props: { params: { slug: string } }) {
         return '';
       }
       let matches;
-      while ((matches = ideaRegx.exec(expertiseCaseContent.content)) !== null) {
+      while ((matches = ideaRegx.exec(post.content)) !== null) {
         const content = matches[1];
         return ideaMarking(content);
       }
 
       return '';
     });
+
+  console.log(readingTime);
 
   return (
     <div className='mainContainer w-full px-[10px] pb-[30px] tablet:px-[40px] tablet:pb-[40px] desktop:pb-[60px]'>
@@ -181,22 +177,36 @@ export default function ExpertiseCase(props: { params: { slug: string } }) {
           zIndex: '-1',
         }}
       ></div>
-      <BackLink linkName='expertise' />
+      {/* <BackLink linkName='insights' /> */}
+      <GoBackLink />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div className='relative flex w-full items-center justify-center'></div>
-        <div className='mt-[200px]'></div>
-        <div
-          className={`'mb-[10px] mt-[200px] flex flex-col tablet:mt-[20px] tablet:flex-row tablet:justify-between desktop:mb-[40px] desktop:mt-[20px]`}
-        ></div>
-        {readingTime && (
-          <span className='block text-[16px] text-text-dark opacity-[50%]'>
-            Reading time: {readingTime}
-          </span>
-        )}
+        <div className='mt-[60px]'>
+          {readingTime && (
+            <span className='mb-[10px] block font-proxima text-[16px] leading-[1.25] text-text-dark opacity-[50%]'>
+              Reading time: {readingTime}
+            </span>
+          )}
+          <h1
+            className={`font-proxima text-[28px] font-bold leading-[1.1] text-text-dark`}
+          >
+            {title}
+          </h1>
+          <div className='flex flex-col tablet:flex-col-reverse'>
+            {downloadLink && tag === 'Research' && (
+              <DownloadLink link={downloadLink} />
+            )}
+            <div
+              className={`mb-[10px] mt-[20px] flex flex-col tablet:mt-[40px] tablet:flex-row tablet:justify-between desktop:mb-[40px] desktop:mt-[20px]`}
+            >
+              <AuthorInfo image={authorImage} name={authorName} date={date} />
+            </div>
+          </div>
+        </div>
         <article
-          className={`prose mt-[20px] w-full max-w-[100%] pb-[30px] text-white prose-p:text-[16px] prose-p:text-text-dark/80 prose-li:text-[16px] prose-li:text-text-dark/80 tablet:pb-[40px] desktop:pb-[60px]`}
+          className={`prose w-full max-w-[100%] pb-[30px] text-white prose-p:text-[16px] prose-p:text-text-dark/80 prose-li:text-[16px] prose-li:text-text-dark/80 tablet:pb-[40px] desktop:pb-[60px]`}
         >
-          <Markdown className={` z-20 w-full font-proxima`}>
+          <Markdown className={`${styles.markdown} z-20 w-full font-proxima`}>
             {allPosts}
           </Markdown>
         </article>

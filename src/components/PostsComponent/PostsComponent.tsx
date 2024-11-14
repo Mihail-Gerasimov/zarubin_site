@@ -12,7 +12,7 @@ export interface Posts {
   title: string;
   description: string;
   image: string | undefined;
-  type: string | null | undefined;
+  subCategory: string | null | undefined;
   slug: string;
   date: string;
   tag: string | undefined;

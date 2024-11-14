@@ -111,4 +111,12 @@ export const pageMetadata = {
       'Cases',
     ],
   },
+  investments: {
+    title:
+      'Bright Byte invests in development, we invest in products, technology and organisation.',
+    description:
+      ' From Miami to Luxembourg and San Marino, our initiatives are driving progress and community growth.',
+    keywords:
+      'Investments, Sports Market, Miami Investments, Government Relations',
+  },
 };

@@ -28,9 +28,9 @@ const expertiseData = [
 
 export const Items = () => {
   return (
-    <ul className={styles.list}>
+    <ul className='grid grid-cols-2'>
       {expertiseData.map((expertise) => (
-        <li key={expertise.id} className={styles.item}>
+        <li key={expertise.id} className={`${styles.item} font-proxima`}>
           <h3 className={styles.title}>{expertise.title}</h3>
           <ul className={styles.subList}>
             {expertise.items.map((item, idx) => (

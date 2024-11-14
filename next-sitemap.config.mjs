@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 const config = {
-    siteUrl: 'https://thebrightbyte.com/',
+    siteUrl: 'https://thebrightbyte.com',
     generateSitemap: true,
     generateIndexSitemap: false,
     generateRobotsTxt: true,
@@ -19,7 +19,8 @@ const config = {
             '/expertise',
             '/insights',
             '/solutions',
-            '/policy'
+            '/policy',
+            '/investments'
 
         ]
 
@@ -99,7 +100,9 @@ const config = {
                     '/*.css',
                     '/*.gif',
                     '/*.jpg',
-                    '/*.png'
+                    '/*.png',
+                    '/*.webp',
+                    '/*.md'
                 ],
                 disallow: [
                     '/assets/*',
@@ -111,7 +114,10 @@ const config = {
                     '/lander/*',
                     '/collections/*',
                     '*/&',
-                    '/*?'
+                    '/*?',
+                    '*?pr_prod_strat=',
+                    '*?target_origin=',
+                    '/account/'
                 ]
             },
             {
@@ -122,7 +128,9 @@ const config = {
                     '/*.css',
                     '/*.gif',
                     '/*.jpg',
-                    '/*.png'
+                    '/*.png',
+                    '/*.webp',
+                    '/*.md'
                 ],
                 disallow: [
                     '/assets/*',
@@ -134,7 +142,10 @@ const config = {
                     '/lander/*',
                     '/collections/*',
                     '*/&',
-                    '/*?'
+                    '/*?',
+                    '*?pr_prod_strat=',
+                    '*?target_origin=',
+                    '/account/'
                 ]
             },
             { userAgent: 'RookeeBot', disallow: '/' },

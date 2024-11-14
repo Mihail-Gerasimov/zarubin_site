@@ -3,7 +3,9 @@ title: "Revolution in Women's Sports with the Help of Artificial Intelligence"
 description: "On July 20, 2023, the 9th Women's World Football Championship kicked off. It's no secret that women's sports are on the path to a historic breakthrough."
 image: '/assets/images/post/womens_sport.webp'
 date: '04-08-2023'
-type: 'Notes'
+readingTime: ''
+category: 'Insights'
+subCategory: 'Notes'
 tag: 'Sports'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'

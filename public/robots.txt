@@ -6,6 +6,8 @@ Allow: /*.css
 Allow: /*.gif
 Allow: /*.jpg
 Allow: /*.png
+Allow: /*.webp
+Allow: /*.md
 Disallow: /assets/*
 Disallow: /_next/*
 Disallow: /tpost/*
@@ -16,6 +18,9 @@ Disallow: /lander/*
 Disallow: /collections/*
 Disallow: */&
 Disallow: /*?
+Disallow: *?pr_prod_strat=
+Disallow: *?target_origin=
+Disallow: /account/
 
 # Googlebot
 User-agent: Googlebot
@@ -25,6 +30,8 @@ Allow: /*.css
 Allow: /*.gif
 Allow: /*.jpg
 Allow: /*.png
+Allow: /*.webp
+Allow: /*.md
 Disallow: /assets/*
 Disallow: /_next/*
 Disallow: /tpost/*
@@ -35,6 +42,9 @@ Disallow: /lander/*
 Disallow: /collections/*
 Disallow: */&
 Disallow: /*?
+Disallow: *?pr_prod_strat=
+Disallow: *?target_origin=
+Disallow: /account/
 
 # RookeeBot
 User-agent: RookeeBot
@@ -53,7 +63,7 @@ User-agent: facebookexternalhit
 Allow: /
 
 # Host
-Host: https://thebrightbyte.com/
+Host: https://thebrightbyte.com
 
 # Sitemaps
 Sitemap: https://thebrightbyte.com/sitemap.xml

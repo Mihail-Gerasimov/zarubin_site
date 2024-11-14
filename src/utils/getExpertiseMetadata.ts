@@ -3,17 +3,17 @@ import matter from 'gray-matter';
 import path from 'path';
 
 export interface Case {
-  industries: string[];
   title: string;
   description: string;
   readingTime: string | null | undefined;
   date: string | null | undefined;
+  category: string;
+  subCategory: string | undefined | null;
   tag: string;
   slug: string;
-  logo: string;
-  logo_hover: string | null | undefined;
-  instruments: string[] | [];
-  bannerImage: string;
+  image: string;
+  authorName: string;
+  authorImage: string;
 }
 
 const getMarkdownFiles = (dir: string): string[] => {
@@ -31,24 +31,24 @@ const getMarkdownFiles = (dir: string): string[] => {
   return results;
 };
 
-export const getExpertiseMetadata = (basePath: string): Case[] => {
-  const markdownFiles = getMarkdownFiles(basePath);
+export const getExpertiseMetadata = (): Case[] => {
+  const markdownFiles = getMarkdownFiles('src/expertise');
 
-  const posts = markdownFiles.map((filePath): Case => {
+  const posts = markdownFiles.map((filePath: string): Case => {
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const matterResult = matter(fileContent);
     return {
       title: matterResult.data.title,
       description: matterResult.data.description,
-      industries: matterResult.data.industries,
       tag: matterResult.data.tag,
       readingTime: matterResult.data.readingTime,
       date: matterResult.data.date,
+      category: matterResult.data.category,
+      subCategory: matterResult.data.subCategory,
       slug: path.basename(filePath, '.md'),
-      bannerImage: matterResult.data.bannerImage,
-      logo: matterResult.data.logo,
-      logo_hover: matterResult.data.logo_hover,
-      instruments: matterResult.data.instruments,
+      image: matterResult.data.image,
+      authorName: matterResult.data.authorName,
+      authorImage: matterResult.data.authorImage,
     };
   });
 

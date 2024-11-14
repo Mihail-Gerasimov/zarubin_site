@@ -1,4 +1,5 @@
 import { Privacy } from '@/src/components/Privacy/Privacy';
+import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
@@ -14,12 +15,12 @@ const keywords = pageMetadata.privacyPolicy.keywords;
 export const metadata: Metadata = {
   title,
   description,
-  metadataBase: new URL('https://thebrightbyte.com/'),
+  metadataBase: new URL(BASE_URL),
   icons: {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL('https://thebrightbyte.com/policy'),
+    canonical: new URL(`${BASE_URL}/policy`),
   },
   openGraph: {
     type: 'website',
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title,
     description,
-    url: 'https://thebrightbyte.com/policy',
+    url: `${BASE_URL}/policy`,
   },
   keywords,
 };

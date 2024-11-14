@@ -3,8 +3,12 @@ title: 'UIPath vs Zapier integration service'
 description: 'Explore the differences between UIPath and Zapier in-depth. Learn how Bright Byte helps businesses streamline workflows with expert automation services for scalable success'
 image: '/assets/images/expertise/it_service/uipath_vs_zapier-banner.webp'
 date: '08-10-2024'
-type: 'It Service'
+readingTime: ''
+category: 'Expertise'
+subCategory: 'It Service'
 tag: ''
+authorName: 'Vitaliy Zarubin'
+authorImage: '/assets/images/author/avatar.png'
 ---
 
 ## UIPath vs Zapier Integration Service: Integrate RPA Deeply
