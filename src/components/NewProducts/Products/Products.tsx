@@ -4,7 +4,7 @@ import { Breadcrumb, Breadcrumbs } from '../../shared/Breadcrumbs/Breadcrumbs';
 
 const BREADCRUMBS: Breadcrumb[] = [
   { title: 'Main', link: '/' },
-  { title: 'New products' },
+  { title: 'Investments' },
 ];
 
 interface IProducts {
@@ -17,10 +17,15 @@ export const Products = ({ products }: IProducts) => {
       <div className='desktop:py-[65px]'>
         <Breadcrumbs light breadcrumbs={BREADCRUMBS} />
         <h1 className='mt-[20px] font-unbound text-[32px] font-bold uppercase leading-[1.1] text-text-dark tablet:text-[60px] desktop:text-[80px] desktop:font-black desktop-big:text-[100px]'>
-          Our new products
+          Investments
         </h1>
         <p className='mt-[21px] font-proxima text-[16px] leading-[1.25] text-text-dark tablet:mt-[24px] tablet:text-[20px] desktop:mt-[20px]'>
-          We develop our own ideas and turn them into tools
+          At Bright Byte, our portfolio includes innovative projects in sports
+          and niche industries, crafted in collaboration with top companies and
+          forward-thinking investors. From Miami to Luxembourg and San Marino,
+          our initiatives are driving progress and community growth. Every
+          project we undertake is focused on creating value and fostering a
+          positive societal impact.
         </p>
       </div>
 
