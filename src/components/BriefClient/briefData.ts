@@ -19,13 +19,14 @@ export interface IInitialValue {
 export const initialData: IInitialValue[] = [
   {
     id: 'idea',
-    question: 'Describe your idea?',
+    question: 'Describe your idea',
     required: false,
     type: 'textarea',
     data: [
       {
         id: 'idea',
-        label: 'Breafly',
+        type: 'textarea',
+        label: 'Briefly',
         placeholder: '',
         answer: '',
         required: false,
@@ -40,6 +41,7 @@ export const initialData: IInitialValue[] = [
     data: [
       {
         id: 'objective',
+        type: 'input',
         label: '',
         placeholder: 'Describe the main objectives',
         answer: '',
@@ -48,13 +50,14 @@ export const initialData: IInitialValue[] = [
     ],
   },
   {
-    id: 'obstacles',
+    id: 'obstacle',
     question: 'WHAT IS THE MAIN OBSTACLES TO BUILD the app for your business?',
-    type: 'input',
+    type: 'textarea',
     required: true,
     data: [
       {
-        id: 'obstacles',
+        id: 'obstacle',
+        type: 'textarea',
         label: 'Briefly introduce your biggest obstacle',
         placeholder: '',
         answer: '',
@@ -71,6 +74,7 @@ export const initialData: IInitialValue[] = [
     data: [
       {
         id: 'budget',
+        type: 'button',
         label: '',
         placeholder: '',
         answer: 'USD 5,000 USD 10,000',
@@ -78,6 +82,7 @@ export const initialData: IInitialValue[] = [
       },
       {
         id: 'budget',
+        type: 'button',
         label: '',
         placeholder: '',
         answer: 'USD 10,000 to USD 25,000',
@@ -85,6 +90,7 @@ export const initialData: IInitialValue[] = [
       },
       {
         id: 'budget',
+        type: 'button',
         label: '',
         placeholder: '',
         answer: 'USD 25,000 to USD 50,000',
@@ -92,6 +98,7 @@ export const initialData: IInitialValue[] = [
       },
       {
         id: 'budget',
+        type: 'button',
         label: '',
         placeholder: '',
         answer: 'USD 50,000 to USD 100,000',
@@ -99,6 +106,7 @@ export const initialData: IInitialValue[] = [
       },
       {
         id: 'budget',
+        type: 'button',
         label: '',
         placeholder: '',
         answer: 'USD 100,000 to USD 500,000',
@@ -106,6 +114,7 @@ export const initialData: IInitialValue[] = [
       },
       {
         id: 'budget',
+        type: 'button',
         label: '',
         placeholder: '',
         answer: 'USD 500,000 or more',
@@ -122,13 +131,15 @@ export const initialData: IInitialValue[] = [
     data: [
       {
         id: 'name',
+        type: 'input',
         label: '',
         placeholder: 'Name',
         answer: '',
-        required: false,
+        required: true,
       },
       {
         id: 'company_name',
+        type: 'input',
         label: '',
         placeholder: 'Company name',
         answer: '',
@@ -136,19 +147,19 @@ export const initialData: IInitialValue[] = [
       },
       {
         id: 'about_business',
-        label: 'Briefly introduce about your Business',
         type: 'textarea',
+        label: 'Briefly introduce about your Business',
         placeholder: '',
         answer: '',
         required: true,
       },
       {
         id: 'email',
+        type: 'input',
         label: '',
-        type: 'email',
         placeholder: 'https://companyname.com',
         answer: '',
-        required: true,
+        required: false,
       },
     ],
   },
@@ -160,6 +171,7 @@ export const initialData: IInitialValue[] = [
     data: [
       {
         id: 'date',
+        type: 'date',
         label: '',
         placeholder: '',
         answer: '',
