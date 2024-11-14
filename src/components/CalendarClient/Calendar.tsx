@@ -1,12 +1,12 @@
 // import { DateTime } from 'luxon';
-import { DateTime } from 'luxon';
-import { createNewDate } from './createNewDate';
-import { createWeeks } from './createWeeks';
-import { useEffect, useState } from 'react';
-import { getDays } from './getDays';
 import CalendarArrow from '@/public/assets/images/icons/calendar-arrow.svg';
 import Watches from '@/public/assets/images/icons/watches.svg';
+import { DateTime } from 'luxon';
+import { useEffect, useState } from 'react';
 import { CalendarDayComponent } from './CalendarDayComponent';
+import { createNewDate } from './createNewDate';
+import { createWeeks } from './createWeeks';
+import { getDays } from './getDays';
 import { getTimeZone } from './getTimeZone';
 import { TimeSelect } from './TimeSelect';
 

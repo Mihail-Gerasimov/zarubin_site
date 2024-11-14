@@ -1,6 +1,6 @@
 'use client';
 
-import { useContext, createContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 interface IPageContext {
   page: number;

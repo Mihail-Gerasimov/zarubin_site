@@ -1,11 +1,11 @@
 'use client';
 
+import { sendBrief } from '@/src/utils/sendBrief';
 import { useFormik } from 'formik';
-import { StartedComponent } from './StartedComponent/StartedComponent';
+import { useQuestion } from '../Contexts/QuestionContext';
 import { initialData } from './briefData';
 import { QuestionComponent } from './QuestionComponent/QuestionQomponent';
-import { useQuestion } from '../Contexts/QuestionContext';
-import { sendBrief } from '@/src/utils/sendBrief';
+import { StartedComponent } from './StartedComponent/StartedComponent';
 import { ThanksComponent } from './ThanksComponent/ThanksComponent';
 
 export const BriefClient = () => {

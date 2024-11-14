@@ -1,7 +1,7 @@
 'use client';
 
-import { useQuestion } from '../../Contexts/QuestionContext';
 import { useRouter } from 'next/navigation';
+import { useQuestion } from '../../Contexts/QuestionContext';
 
 export const ThanksComponent = () => {
   const { handleClearPage, handleClearData } = useQuestion();

@@ -1,7 +1,7 @@
-import { DateTime } from 'luxon';
-import { CalendarContent } from './CalendarContent';
 import calendarImage from '@/public/assets/images/brief/calendar.webp';
+import { DateTime } from 'luxon';
 import Image from 'next/image';
+import { CalendarContent } from './CalendarContent';
 
 interface ICalendarProps {
   onClick: (name: string, value: DateTime) => void;
