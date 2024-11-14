@@ -91,7 +91,7 @@ export const QuestionComponent = ({
                     id={item.id}
                     name={item.id}
                     value={contextValue[item.id]}
-                    onBlur={formik.handleBlur}
+                    // onBlur={formik.handleBlur}
                     onChange={(e) => {
                       handleChange(item.id, e.target.value);
                     }}
@@ -110,6 +110,7 @@ export const QuestionComponent = ({
                     id={item.id}
                     name={item.id}
                     value={contextValue[item.id]}
+                    onBlur={formik.handleBlur}
                     onChange={(e) => {
                       handleChange(item.id, e.target.value);
                     }}
