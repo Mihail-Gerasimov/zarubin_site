@@ -18,7 +18,7 @@ export const SmallBlogCard = ({ tag, title, description, date }: Props) => {
           {tags.map((tag) => (
             <li
               key={tag}
-              className='flex items-center rounded-[5px] bg-white px-[10px]  py-[10px] font-proxima text-[20px] leading-[1.2]'
+              className='flex items-center rounded-[5px] bg-white px-[10px] py-[10px] font-proxima text-[20px] capitalize leading-[1.2] text-[#000]'
             >
               {tag}
             </li>
