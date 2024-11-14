@@ -40,7 +40,6 @@ export const Products = ({ products }: IProducts) => {
           positive societal impact.
         </p>
       </div>
-
       <div className='grid grid-cols-1 gap-[40px] tablet:grid-cols-2'>
         {sortedProducts.map((item) => (
           <a
