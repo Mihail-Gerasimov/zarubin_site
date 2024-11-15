@@ -166,8 +166,6 @@ export default function ExpertiseCase(props: { params: { slug: string } }) {
       return '';
     });
 
-  console.log(readingTime);
-
   return (
     <div className='mainContainer w-full px-[10px] pb-[30px] tablet:px-[40px] tablet:pb-[40px] desktop:pb-[60px]'>
       <div
