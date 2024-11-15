@@ -122,7 +122,7 @@ export const QuestionComponent = ({
                   )}
                 </div>
               ) : item.type === 'date' ? (
-                <CalendarClient onClick={() => handleChange} />
+                <CalendarClient />
               ) : (
                 <input
                   type='button'

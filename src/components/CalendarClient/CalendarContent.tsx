@@ -4,14 +4,14 @@ import Image from 'next/image';
 export const CalendarContent = () => {
   return (
     <div className='flex h-full gap-[20px] font-proxima laptop-big:max-w-[306px] laptop-big:flex-col laptop-big:justify-between'>
-      <div className='flex w-full flex-col py-[10px] tablet:py-[55px] laptop-big:p-0'>
+      <div className='flex w-full flex-col items-center py-[10px] tablet:py-[55px] laptop-big:p-0'>
         <h3 className='text-center text-[20px] font-bold leading-[1] text-text-dark'>
           40-Minute Blueprint Creation Session
         </h3>
         <p className='mt-[8px] text-center text-[16px] leading-[1.2] text-text-dark'>
           Please make sure you choose the appropriate time zone for you.
         </p>
-        <p className='mt-[40px] text-center text-[16px] font-bold leading-[1.2] text-main-blue-hover'>
+        <p className='mt-[40px] max-w-[180px] text-center text-[16px] font-bold leading-[1.2] text-main-blue-hover'>
           {"But please do not book if you're unwilling to"}
         </p>
       </div>
