@@ -1,10 +1,17 @@
 import { formatMenuItem, formatMenuTitle } from '@/src/utils/formattedMenuItem';
+import { Case } from '@/src/utils/getExpertiseMetadata';
 import Link from 'next/link';
+import { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { ExpertiseMenuCard } from '../ExpertiseMenuCard/ExpertiseMenuCard';
+import Arrow from '@/public/assets/images/icons/arrow.svg';
+import { Container } from '../../shared/Container/Container';
 
 interface IExpertiseProps {
   expertiseSubMenu: Submenu[];
   toggleSubmenu: () => void;
   dark?: boolean;
+  expertiseMetadata: Case[];
 }
 
 interface Submenu {
@@ -16,42 +23,122 @@ export const ExpertiseSubMenu = ({
   dark = true,
   expertiseSubMenu,
   toggleSubmenu,
+  expertiseMetadata,
 }: IExpertiseProps) => {
+  const [isItemActive, setIsItemActive] = useState(() => {
+    const result = expertiseSubMenu.map((item, idx) => ({
+      [item.name]: idx === 0,
+    }));
+    return Object.assign({}, ...result);
+  });
+
+  const handleSetActiveItem = (itemName: string) => {
+    setIsItemActive((prevItems) =>
+      Object.keys(prevItems).reduce(
+        (acc, key) => {
+          acc[key] = key === itemName;
+          return acc;
+        },
+        {} as Record<string, boolean>,
+      ),
+    );
+  };
+
   const finalLink = (str: string) => {
     const splitStr = str.split('.');
     return splitStr[0];
   };
 
   return (
-    <div className='mx-auto my-0 flex w-full max-w-[900px] items-stretch gap-[40px] px-[60px] py-[10px]'>
-      {expertiseSubMenu.map((item) => (
-        <div
-          key={item.name}
-          className={`flex flex-col p-[5px] ${dark ? 'text-white' : 'text-main-bg'}`}
-        >
-          <p className='flex-1 font-unbound text-[22px] font-bold uppercase'>
-            {formatMenuTitle(item.name)}
-          </p>
-          <div className='mt-[40px] flex-1'>
-            <ul className='grid grid-flow-col grid-rows-4 gap-x-[40px] gap-y-[20px]'>
-              {item.folderItems.map((el) => (
-                <li
-                  key={el.nameItem}
-                  className={`w-fit font-proxima leading-[1.87]`}
-                >
-                  <Link
-                    onClick={toggleSubmenu}
-                    className='relative border-b-[2px] border-solid border-transparent py-[5px] font-proxima text-[16px] hover:border-main-blue'
-                    href={`/expertise/${finalLink(el.nameItem)}`}
+    <div className='mx-auto my-0 flex w-full items-stretch gap-[40px] p-[40px]'>
+      <div className='w-[464px]'>
+        {expertiseSubMenu.map((item) => (
+          <div
+            key={item.name}
+            className={`flex flex-col p-[5px] ${dark ? 'text-white' : 'text-main-bg'}`}
+          >
+            <button
+              type='button'
+              onClick={() => handleSetActiveItem(item.name)}
+              className='flex w-full flex-1 items-center justify-between text-left font-proxima text-[20px] font-bold'
+            >
+              {formatMenuTitle(item.name)}
+              <Arrow
+                className={`h-[auto] w-[25px]  fill-white transition-transform duration-300 ease-in-out ${isItemActive[item.name] ? '-rotate-[-90deg]' : '-rotate-30'}`}
+              />
+            </button>
+            <div
+              className={`relative flex w-[464px] transform gap-x-[40px] gap-y-[20px] overflow-hidden bg-dark-blue p-[20] transition-all duration-300 ease-in-out ${isItemActive[item.name] ? 'visible h-full' : 'hidden h-0'}`}
+            >
+              <ul className='flex flex-col gap-[12px]'>
+                <style jsx>{`
+                  ul::before {
+                    content: '';
+                    position: absolute;
+                    top: 20px; /* отступ сверху */
+                    bottom: 20px; /* отступ снизу */
+                    left: 50%; /* центрирование по горизонтали */
+                    width: 1px; /* ширина линии */
+                    background-color: #001450; /* цвет разделителя */
+                    transform: translateX(-50%); /* для центрирования линии */
+                  }
+                `}</style>
+                {item.folderItems.slice(0, 7).map((el) => (
+                  <li key={el.nameItem}>
+                    <Link
+                      onClick={toggleSubmenu}
+                      className='relative border-b-[2px] border-solid border-transparent py-[5px] font-proxima text-[16px] leading-[1.1] hover:border-main-blue'
+                      href={`/expertise/${finalLink(el.nameItem)}`}
+                    >
+                      {formatMenuItem(finalLink(el.nameItem))}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <ul>
+                {item.folderItems.slice(7).map((el) => (
+                  <li
+                    key={el.nameItem}
+                    className={`w-full font-proxima leading-[1.87]`}
                   >
-                    {formatMenuItem(finalLink(el.nameItem))}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                    <Link
+                      onClick={toggleSubmenu}
+                      className='relative border-b-[2px] border-solid border-transparent py-[5px] font-proxima text-[16px] hover:border-main-blue'
+                      href={`/expertise/${finalLink(el.nameItem)}`}
+                    >
+                      {formatMenuItem(finalLink(el.nameItem))}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+        ))}
+      </div>
+      <div className='flex w-[630px] flex-col'>
+        <div className='flex items-center justify-between'>
+          <p className='font-unbound text-[20px] font-bold uppercase leading-[1.4]'>
+            The latest expertise
+          </p>
+          <Link href='/'>All articles</Link>
         </div>
-      ))}
+        <div className='mx-0 flex w-full px-0'>
+          <Swiper spaceBetween={40} slidesPerView={2}>
+            {expertiseMetadata.slice(0, 2).map((post, idx) => (
+              <SwiperSlide key={idx}>
+                <ExpertiseMenuCard
+                  title={post.title}
+                  description={post.description}
+                  tag={post.tag}
+                  slug={post.slug}
+                  subCategory={post.subCategory}
+                  image={post.image}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
     </div>
   );
 };

@@ -7,8 +7,10 @@ import Script from 'next/script';
 import React from 'react';
 import 'swiper/css';
 import '../globals.css';
+import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
 
 const expertiseSubMenu = getExpertiseList();
+const expertiseMetadata = getExpertiseMetadata();
 
 const Unbound = localFont({
   src: [
@@ -92,7 +94,10 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`flex flex-col bg-main-bg text-white ${bodyClassname}`}>
-        <Header expertiseSubmenu={expertiseSubMenu} />
+        <Header
+          expertiseSubmenu={expertiseSubMenu}
+          expertiseMetadata={expertiseMetadata}
+        />
         {children}
         <Footer />
         <Script id='replain'>

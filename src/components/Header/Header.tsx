@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
 import { MainList } from '../NavList/MainList';
 import { Container } from '../shared/Container/Container';
+import { Case } from '@/src/utils/getExpertiseMetadata';
 
 const DynamicExpertiseMenu = dynamic(() =>
   import('../Expertise/ExpertiseSubMenu/ExpertiseSubMenu').then(
@@ -20,6 +21,7 @@ const DynamicExpertiseMenu = dynamic(() =>
 interface Props {
   dark?: boolean;
   expertiseSubmenu?: Submenu[];
+  expertiseMetadata: Case[];
 }
 
 interface Submenu {
@@ -27,7 +29,11 @@ interface Submenu {
   folderItems: { nameItem: string; link: string }[];
 }
 
-export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
+export const Header = ({
+  dark = true,
+  expertiseSubmenu = [],
+  expertiseMetadata = [],
+}: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(false);
 
@@ -59,7 +65,7 @@ export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
         className={`relative flex h-full items-center overflow-hidden ${dark ? 'bg-main-bg' : 'bg-white'}`}
       >
         <Logo dark={dark} />
-        <nav className='mx-[auto] w-full'>
+        <nav className='mx-[auto] w-fit'>
           <MainList
             list={menuListLayer}
             dark={dark}
@@ -83,13 +89,14 @@ export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
       </Container>
 
       <div
-        className={`relative z-[-1] w-full transform px-[20px] transition-all duration-300 ease-in-out ${dark ? 'bg-main-bg' : 'bg-white'} ${
+        className={`relative z-[-1] mx-[auto] w-fit transform px-[20px] transition-all duration-300 ease-in-out ${dark ? 'bg-main-bg' : 'bg-white'} ${
           activeSubmenu ? 'translate-y-0' : '-translate-y-full'
-        }`}
+        } translate-y-0`}
       >
         <DynamicExpertiseMenu
           toggleSubmenu={toggleSubmenu}
           expertiseSubMenu={expertiseSubmenu}
+          expertiseMetadata={expertiseMetadata}
           dark={dark}
         />
       </div>

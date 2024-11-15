@@ -33,7 +33,7 @@ export const MainList = ({
           onMouseEnter={
             item.name.toLowerCase() === 'expertise'
               ? () => onMenuItemHover(true)
-              : undefined
+              : () => onMenuItemHover(false)
           }
           key={item.id}
           className='flex items-center justify-center gap-[10px]'
