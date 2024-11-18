@@ -15,8 +15,8 @@ const BREAKPOINTS = {
   tablet: 768,
   laptop_small: 1200,
   laptop: 1280,
-  desctop: 1440,
-  desctop_big: 1920,
+  desktop: 1440,
+  desktop_big: 1920,
 };
 
 const descrFontSize = 16;
@@ -64,17 +64,17 @@ export const ExpertiseCard = ({ data }: IData) => {
       ) {
         setWindowSize(BREAKPOINTS.laptop_small);
       } else if (
-        windowWidth < BREAKPOINTS.desctop &&
+        windowWidth < BREAKPOINTS.desktop &&
         windowWidth >= BREAKPOINTS.laptop
       ) {
         setWindowSize(BREAKPOINTS.laptop);
       } else if (
-        windowWidth < BREAKPOINTS.desctop_big &&
-        windowWidth >= BREAKPOINTS.desctop
+        windowWidth < BREAKPOINTS.desktop_big &&
+        windowWidth >= BREAKPOINTS.desktop
       ) {
-        setWindowSize(BREAKPOINTS.desctop);
+        setWindowSize(BREAKPOINTS.desktop);
       } else {
-        setWindowSize(BREAKPOINTS.desctop_big);
+        setWindowSize(BREAKPOINTS.desktop_big);
       }
     };
 
