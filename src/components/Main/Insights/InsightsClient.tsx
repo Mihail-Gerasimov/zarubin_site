@@ -6,17 +6,8 @@ import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
 import { InsightsCard } from './InsightsCard/InsightsCard';
+import { Post } from '@/src/utils/types';
 
-interface Post {
-  title: string;
-  description: string;
-  tag: string | undefined;
-  downloadLink: string | undefined;
-  category: string;
-  slug: string;
-  subCategory: string | undefined | null;
-  image: string | undefined | null;
-}
 interface Props {
   posts: Post[];
 }
