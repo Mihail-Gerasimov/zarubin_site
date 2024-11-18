@@ -32,13 +32,17 @@ export const QuestionProvider = ({
   children: React.ReactNode;
 }) => {
   const [data, setData] = useState<IContextData>(() => {
-    const storageData = localStorage.getItem('questionInfo');
-    return storageData ? JSON.parse(storageData) : initialFormikValue;
+    if (typeof window !== 'undefined') {
+      const storageData = localStorage.getItem('questionInfo');
+      return storageData ? JSON.parse(storageData) : initialFormikValue;
+    }
   });
 
   const [page, setPage] = useState(() => {
-    const storagePage = localStorage.getItem('pageInfo');
-    return storagePage ? JSON.parse(storagePage) : 0;
+    if (typeof window !== 'undefined') {
+      const storagePage = localStorage.getItem('pageInfo');
+      return storagePage ? JSON.parse(storagePage) : 0;
+    }
   });
 
   const handleSetPage = (value: number) => {
