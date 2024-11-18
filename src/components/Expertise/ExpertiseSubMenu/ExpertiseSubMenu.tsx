@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { ExpertiseMenuCard } from '../ExpertiseMenuCard/ExpertiseMenuCard';
 import Arrow from '@/public/assets/images/icons/arrow.svg';
 import { Container } from '../../shared/Container/Container';
+import { postsSorting } from '@/src/utils/postsSorting';
+import { DateTime } from 'luxon';
 
 interface IExpertiseProps {
   expertiseSubMenu: Submenu[];
@@ -31,6 +33,17 @@ export const ExpertiseSubMenu = ({
     }));
     return Object.assign({}, ...result);
   });
+
+  // const sortedExpertiseData = expertiseMetadata.sort((a,b)=>{
+  //   if(!a&&!b)return 0
+  //   const dateA = DateTime.fromFormat(a.date, 'dd-MM-yyyy');
+  //   const dateB = DateTime.fromFormat(b.date, 'dd-MM-yyyy');
+  //   if (dateA > dateB) return -1;
+  //   if (dateA < dateB) return 1;
+  //   return 0;
+  // })
+
+  // const sortedExpertiseData=postsSorting(expertiseMetadata)
 
   const handleSetActiveItem = (itemName: string) => {
     setIsItemActive((prevItems) =>
@@ -115,12 +128,17 @@ export const ExpertiseSubMenu = ({
           </div>
         ))}
       </div>
-      <div className='flex w-[630px] flex-col'>
+      <div className='flex w-[630px] flex-col gap-[20px]'>
         <div className='flex items-center justify-between'>
           <p className='font-unbound text-[20px] font-bold uppercase leading-[1.4]'>
             The latest expertise
           </p>
-          <Link href='/'>All articles</Link>
+          <Link
+            href='/expertise'
+            className='font-proxima text-[20px] font-bold leading-[1] text-main-blue'
+          >
+            All articles
+          </Link>
         </div>
         <div className='mx-0 flex w-full px-0'>
           <Swiper spaceBetween={40} slidesPerView={2}>
