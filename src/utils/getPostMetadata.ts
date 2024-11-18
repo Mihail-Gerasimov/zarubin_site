@@ -1,20 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
-
-interface PostMetadata {
-  title: string;
-  description: string;
-  image: string | undefined;
-  slug: string;
-  date: string;
-  category: string;
-  subCategory: string | undefined | null;
-  tag: string | undefined;
-  authorName: string;
-  authorImage: string;
-  downloadLink: string | undefined;
-  readingTime: string | undefined | null;
-}
+import { Post } from './types';
 
 export const getPostMetadata = (basePath: string) => {
   const folder = basePath + '/';
@@ -25,7 +11,7 @@ export const getPostMetadata = (basePath: string) => {
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith('.md'));
 
-  const posts = markdownPosts.map((filename): PostMetadata => {
+  const posts = markdownPosts.map((filename): Post => {
     const fileContent = fs.readFileSync(`${basePath}/${filename}`, 'utf8');
     const matterResult = matter(fileContent);
     return {

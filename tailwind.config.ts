@@ -92,6 +92,7 @@ const config: Config = {
         'black-bg': '#111111',
         'light-bg': '#1E293B',
         'btn-col': '#ECEFFA',
+        'card-bg': '#F5F5F5',
       },
     },
     screens: {

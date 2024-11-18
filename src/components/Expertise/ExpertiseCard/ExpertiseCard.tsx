@@ -1,0 +1,118 @@
+'use client';
+
+import defaultImg from '@/public/assets/images/banner/default_insights.webp';
+import { Post } from '@/src/utils/types';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useRef, useState } from 'react';
+
+interface IData {
+  data: Post;
+}
+
+export const ExpertiseCard = ({ data }: IData) => {
+  const { title, description, slug, image } = data;
+  const descrFontSize = 16;
+  const descrLineHeight = 1.25;
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const titleRef = useRef<HTMLHeadingElement | null>(null);
+
+  const [descrLine, setDescrLine] = useState(0);
+  const [windowSize, setWindowSize] = useState<number | undefined>(undefined);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize(window.innerWidth);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (titleRef.current && containerRef.current) {
+      const line = getLine({
+        container: containerRef.current,
+        title: titleRef.current,
+      });
+      setDescrLine(line);
+    }
+  }, [windowSize]);
+
+  const getLine = ({
+    container,
+    title,
+  }: {
+    container: HTMLDivElement | null;
+    title: HTMLHeadingElement | null;
+  }) => {
+    if (!container || !title) return 0;
+
+    const totalContentHeight = container.offsetHeight;
+    const totalTitleHeight = title.offsetHeight;
+    const difference = totalContentHeight - totalTitleHeight - 40;
+
+    if (difference < descrFontSize * descrLineHeight) return 0;
+
+    const line = Math.floor(difference / (descrFontSize * descrLineHeight));
+
+    return line;
+  };
+
+  return (
+    <Link
+      href={`/expertise/${slug}`}
+      className='flex h-full flex-col rounded-[5px] bg-card-bg'
+    >
+      <div className='relative aspect-[16/9] w-full overflow-hidden rounded-tl-[5px] rounded-tr-[5px]'>
+        {image ? (
+          <Image
+            src={image}
+            alt={title || 'post image'}
+            width={450}
+            height={250}
+            className='h-full w-full object-cover object-center'
+            quality={80}
+          />
+        ) : (
+          <Image
+            src={defaultImg}
+            alt={title}
+            width={450}
+            height={250}
+            className='h-full w-full object-cover object-center'
+            quality={80}
+          />
+        )}
+      </div>
+      <div
+        ref={containerRef}
+        className='flex h-full max-h-[160px] min-h-[160px] w-full flex-1 flex-col overflow-hidden rounded-b-[5px] px-[10px] py-[20px] tablet:px-[20px]'
+      >
+        <h3
+          ref={titleRef}
+          className='overflow-hidden font-unbound text-[18px] font-bold uppercase leading-[1.3] text-text-dark tablet:text-[18px] tablet:leading-[1.4] desktop:text-[20px]'
+        >
+          {title}
+        </h3>
+        {!!descrLine && (
+          <p
+            className={`mt-[auto] text-[16px] leading-[1.25]`}
+            style={{
+              overflow: 'hidden',
+              display: '-webkit-box',
+              WebkitLineClamp: descrLine,
+              WebkitBoxOrient: 'vertical',
+            }}
+          >
+            {description}
+          </p>
+        )}
+      </div>
+    </Link>
+  );
+};
