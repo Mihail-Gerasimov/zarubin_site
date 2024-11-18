@@ -26,6 +26,7 @@
     "organize-imports-cli": "^0.10.0",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "react": "^18",
+    "react-calendar": "^5.1.0",
     "react-dom": "^18",
     "react-dropzone": "^14.2.3",
     "react-indiana-drag-scroll": "^2.2.0",

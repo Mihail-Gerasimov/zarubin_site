@@ -20,6 +20,20 @@
   font-weight: 900;
 }
 
+@font-face {
+  font-family: Proxima Nova;
+  font-weight: 400;
+  src: url(/fonts/proxima-nova/proxima_nova_regular.woff) format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Proxima Nova;
+  font-weight: 700;
+  src: url(/fonts/proxima-nova/ProximaNovaBold.woff) format('woff');
+  font-display: swap;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -29,22 +43,6 @@ input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
   box-shadow: inset 0 0 20px 20px #23232329;
 }
-
-/* @layer base {
-  @font-face {
-    font-family: Proxima Nova;
-    font-weight: 400;
-    src: url(/fonts/proxima-nova/proxima_nova_regular.woff) format('woff');
-    font-display: swap;
-  }
-
-  @font-face {
-    font-family: Proxima Nova;
-    font-weight: 700;
-    src: url(/fonts/proxima-nova/ProximaNovaBold.woff) format('woff');
-    font-display: swap;
-  }
-} */
 
 @layer utilities {
   .white-stroke {
@@ -76,6 +74,24 @@ input:-webkit-autofill:active {
 
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #ccc transparent; /* Firefox */
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
   }
 }
 
