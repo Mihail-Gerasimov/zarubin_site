@@ -10,10 +10,37 @@ interface IData {
   data: Post;
 }
 
+const BREAKPOINTS = {
+  mobile: 375,
+  tablet: 768,
+  laptop_small: 1200,
+  laptop: 1280,
+  desctop: 1440,
+  desctop_big: 1920,
+};
+
+const descrFontSize = 16;
+const descrLineHeight = 1.25;
+
+const getLine = (
+  container: HTMLDivElement | null,
+  title: HTMLHeadingElement | null,
+) => {
+  if (!container || !title) return 0;
+
+  const totalContentHeight = container.offsetHeight;
+  const totalTitleHeight = title.offsetHeight;
+  const difference = totalContentHeight - totalTitleHeight - 40;
+
+  if (difference < descrFontSize * descrLineHeight) return 0;
+
+  const line = Math.floor(difference / (descrFontSize * descrLineHeight));
+
+  return line;
+};
+
 export const ExpertiseCard = ({ data }: IData) => {
   const { title, description, slug, image } = data;
-  const descrFontSize = 16;
-  const descrLineHeight = 1.25;
   const containerRef = useRef<HTMLDivElement | null>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
 
@@ -22,7 +49,33 @@ export const ExpertiseCard = ({ data }: IData) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setWindowSize(window.innerWidth);
+      const windowWidth = window.innerWidth;
+
+      if (windowWidth > 0 && windowWidth < BREAKPOINTS.tablet) {
+        setWindowSize(BREAKPOINTS.mobile);
+      } else if (
+        windowWidth < BREAKPOINTS.laptop_small &&
+        windowWidth >= BREAKPOINTS.tablet
+      ) {
+        setWindowSize(BREAKPOINTS.tablet);
+      } else if (
+        windowWidth < BREAKPOINTS.laptop &&
+        windowWidth >= BREAKPOINTS.laptop_small
+      ) {
+        setWindowSize(BREAKPOINTS.laptop_small);
+      } else if (
+        windowWidth < BREAKPOINTS.desctop &&
+        windowWidth >= BREAKPOINTS.laptop
+      ) {
+        setWindowSize(BREAKPOINTS.laptop);
+      } else if (
+        windowWidth < BREAKPOINTS.desctop_big &&
+        windowWidth >= BREAKPOINTS.desctop
+      ) {
+        setWindowSize(BREAKPOINTS.desctop);
+      } else {
+        setWindowSize(BREAKPOINTS.desctop_big);
+      }
     };
 
     handleResize();
@@ -35,33 +88,10 @@ export const ExpertiseCard = ({ data }: IData) => {
 
   useEffect(() => {
     if (titleRef.current && containerRef.current) {
-      const line = getLine({
-        container: containerRef.current,
-        title: titleRef.current,
-      });
+      const line = getLine(containerRef.current, titleRef.current);
       setDescrLine(line);
     }
   }, [windowSize]);
-
-  const getLine = ({
-    container,
-    title,
-  }: {
-    container: HTMLDivElement | null;
-    title: HTMLHeadingElement | null;
-  }) => {
-    if (!container || !title) return 0;
-
-    const totalContentHeight = container.offsetHeight;
-    const totalTitleHeight = title.offsetHeight;
-    const difference = totalContentHeight - totalTitleHeight - 40;
-
-    if (difference < descrFontSize * descrLineHeight) return 0;
-
-    const line = Math.floor(difference / (descrFontSize * descrLineHeight));
-
-    return line;
-  };
 
   return (
     <Link
@@ -69,25 +99,14 @@ export const ExpertiseCard = ({ data }: IData) => {
       className='flex h-full flex-col rounded-[5px] bg-card-bg'
     >
       <div className='relative aspect-[16/9] w-full overflow-hidden rounded-tl-[5px] rounded-tr-[5px]'>
-        {image ? (
-          <Image
-            src={image}
-            alt={title || 'post image'}
-            width={450}
-            height={250}
-            className='h-full w-full object-cover object-center'
-            quality={80}
-          />
-        ) : (
-          <Image
-            src={defaultImg}
-            alt={title}
-            width={450}
-            height={250}
-            className='h-full w-full object-cover object-center'
-            quality={80}
-          />
-        )}
+        <Image
+          src={image || defaultImg}
+          alt={title || 'post image'}
+          width={450}
+          height={250}
+          className='h-full w-full object-cover object-center'
+          quality={80}
+        />
       </div>
       <div
         ref={containerRef}
