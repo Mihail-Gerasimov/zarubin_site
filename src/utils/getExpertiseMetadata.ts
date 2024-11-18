@@ -1,6 +1,7 @@
 import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
+import { Post } from './types';
 
 export interface Case {
   title: string;
@@ -31,10 +32,10 @@ const getMarkdownFiles = (dir: string): string[] => {
   return results;
 };
 
-export const getExpertiseMetadata = (): Case[] => {
+export const getExpertiseMetadata = (): Post[] => {
   const markdownFiles = getMarkdownFiles('src/expertise');
 
-  const posts = markdownFiles.map((filePath: string): Case => {
+  const posts = markdownFiles.map((filePath: string): Post => {
     const fileContent = fs.readFileSync(filePath, 'utf8');
     const matterResult = matter(fileContent);
     return {

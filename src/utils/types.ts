@@ -1,12 +1,16 @@
 export interface Post {
   slug: string;
   title: string;
+  description: string;
   image: string | undefined;
   category: string;
   subCategory: string | null | undefined;
-  description: string;
   date: string;
   tag: string | undefined;
+  readingTime: string | null | undefined;
+  authorName: string;
+  authorImage: string;
+  downloadLink?: string | undefined;
 }
 
 export interface IImage {
