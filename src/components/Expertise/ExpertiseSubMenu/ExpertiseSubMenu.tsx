@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ExpertiseMenuCard } from '../ExpertiseMenuCard/ExpertiseMenuCard';
 import Arrow from '@/public/assets/images/icons/arrow.svg';
+import LinkArrow from '@/public/assets/images/icons/link_arrow.svg';
 import { Container } from '../../shared/Container/Container';
 import { postsSorting } from '@/src/utils/postsSorting';
 import { DateTime } from 'luxon';
@@ -135,9 +136,10 @@ export const ExpertiseSubMenu = ({
           </p>
           <Link
             href='/expertise'
-            className='font-proxima text-[20px] font-bold leading-[1] text-main-blue'
+            className='flex items-center gap-[10px] font-proxima text-[20px] font-bold leading-[1] text-main-blue'
           >
             All articles
+            <LinkArrow className='h-[auto] w-[24px] fill-main-blue' />
           </Link>
         </div>
         <div className='mx-0 flex w-full px-0'>
