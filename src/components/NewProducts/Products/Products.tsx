@@ -1,7 +1,7 @@
+import { IProduct } from '@/src/utils/types';
 import { DateTime } from 'luxon';
 import Image from 'next/image';
 import { Breadcrumb, Breadcrumbs } from '../../shared/Breadcrumbs/Breadcrumbs';
-import { IProduct } from '@/src/utils/types';
 
 const BREADCRUMBS: Breadcrumb[] = [
   { title: 'Main', link: '/' },

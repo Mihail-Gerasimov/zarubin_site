@@ -1,9 +1,9 @@
-import Link from 'next/link';
 import {
-  formatLink,
-  formatMenuItem,
-  formatMenuTitle,
+    formatLink,
+    formatMenuItem,
+    formatMenuTitle
 } from '@/src/utils/formattedMenuItem';
+import Link from 'next/link';
 
 interface IProps {
   data: Submenu[];

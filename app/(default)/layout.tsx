@@ -1,13 +1,13 @@
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
 import { getExpertiseList } from '@/src/utils/expertiseMenu';
+import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
 import classNames from 'classnames';
 import localFont from 'next/font/local';
 import Script from 'next/script';
 import React from 'react';
 import 'swiper/css';
 import '../globals.css';
-import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
 
 const expertiseSubMenu = getExpertiseList();
 const expertiseMetadata = getExpertiseMetadata();

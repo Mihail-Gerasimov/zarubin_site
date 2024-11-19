@@ -1,9 +1,9 @@
+import LinkArrow from '@/public/assets/images/icons/link_arrow.svg';
+import { Post } from '@/src/utils/types';
+import useMediaQuery from '@/src/utils/useMediaQuery';
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ExpertiseMenuCard } from '../../ExpertiseMenuCard/ExpertiseMenuCard';
-import { Post } from '@/src/utils/types';
-import LinkArrow from '@/public/assets/images/icons/link_arrow.svg';
-import useMediaQuery from '@/src/utils/useMediaQuery';
 
 interface IData {
   data: Post[];

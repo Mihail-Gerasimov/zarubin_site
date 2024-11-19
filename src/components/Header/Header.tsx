@@ -4,13 +4,13 @@ import { BurgerIcon } from '@/src/ui-kit/BurgerIcon/BurgerIcon';
 import { ContactUsBtn } from '@/src/ui-kit/LeagueLink/ContactUsBtn';
 import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
 import { menuListLayer } from '@/src/utils/menuListLayer';
+import { Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
 import { MainList } from '../NavList/MainList';
 import { Container } from '../shared/Container/Container';
-import { Post } from '@/src/utils/types';
 
 const DynamicExpertiseMenu = dynamic(() =>
   import('../Expertise/ExpertiseSubMenu/ExpertiseSubMenu').then(

@@ -1,14 +1,14 @@
+import Arrow from '@/public/assets/images/icons/arrow.svg';
 import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
 import { menuListLayer } from '@/src/utils/menuListLayer';
+import { Post } from '@/src/utils/types';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useState } from 'react';
-import styles from './MobileMenu.module.css';
-import { Post } from '@/src/utils/types';
 import { ExpertiseSubmenuArticles } from '../Expertise/ExpertiseSubMenu/ExpertiseSubmenuArticles/ExpertiseSubMenuArticles';
 import { ExpertiseSubMenuList } from '../Expertise/ExpertiseSubMenu/ExpertiseSubmenuArticles/ExpertiseSubMenuList';
 import { ContactWrapper } from './ContactWrapper/ContactWrapper';
-import Arrow from '@/public/assets/images/icons/arrow.svg';
+import styles from './MobileMenu.module.css';
 
 interface Props {
   isOpen: boolean;
