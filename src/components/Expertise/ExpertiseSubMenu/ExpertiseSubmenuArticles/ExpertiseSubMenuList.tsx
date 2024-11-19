@@ -1,7 +1,7 @@
 import {
-    formatLink,
-    formatMenuItem,
-    formatMenuTitle
+  formatLink,
+  formatMenuItem,
+  formatMenuTitle,
 } from '@/src/utils/formattedMenuItem';
 import Link from 'next/link';
 
@@ -36,7 +36,7 @@ export const ExpertiseSubMenuList = ({ data, onClick }: IProps) => {
                   >
                     <Link
                       className='relative border-b-[2px] border-solid border-transparent py-[5px] font-proxima text-[16px] leading-[1.1] hover:border-main-blue'
-                      href={`/expertise/${formatLink(el.link)}`}
+                      href={`/expertise${formatLink(el.link)}`}
                     >
                       {formatMenuItem(formatLink(el.nameItem))}
                     </Link>
