@@ -42,6 +42,7 @@ export const Header = ({
   };
 
   const handleChangeActiveMenu = (isActive: boolean) => {
+    // console.log('123');
     setActiveSubmenu(isActive);
   };
 
@@ -55,6 +56,19 @@ export const Header = ({
     if (isMobile) return;
     setIsOpen(false);
   }, [isMobile]);
+
+  useEffect(() => {
+    console.log('333');
+    if (activeSubmenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [activeSubmenu]);
 
   return (
     <header
@@ -70,7 +84,7 @@ export const Header = ({
             list={menuListLayer}
             dark={dark}
             activeSubmenu={activeSubmenu}
-            toggleSubmenu={toggleSubmenu}
+            // toggleSubmenu={toggleSubmenu}
             onMenuItemHover={handleChangeActiveMenu}
           />
         </nav>
@@ -91,7 +105,7 @@ export const Header = ({
       <div
         className={`relative z-[-1] mx-[auto] w-fit transform px-[20px] transition-all duration-300 ease-in-out ${dark ? 'bg-main-bg' : 'bg-white'} ${
           activeSubmenu ? 'translate-y-0' : '-translate-y-full'
-        } translate-y-0`}
+        }`}
       >
         <DynamicExpertiseMenu
           toggleSubmenu={toggleSubmenu}

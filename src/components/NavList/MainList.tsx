@@ -7,7 +7,7 @@ interface Props {
   list: List[];
   dark?: boolean;
   activeSubmenu: boolean;
-  toggleSubmenu: () => void;
+  // toggleSubmenu: () => void;
   onMenuItemHover: (isActive: boolean) => void;
 }
 
@@ -21,7 +21,7 @@ export const MainList = ({
   list,
   dark = true,
   activeSubmenu,
-  toggleSubmenu,
+  // toggleSubmenu,
   onMenuItemHover,
 }: Props) => {
   const pathname = usePathname();
@@ -59,7 +59,7 @@ export const MainList = ({
           {item.name.toLowerCase() === 'expertise' && (
             <button
               type='button'
-              onClick={toggleSubmenu}
+              // onClick={toggleSubmenu}
               className='h-fit w-fit'
             >
               <Arrow

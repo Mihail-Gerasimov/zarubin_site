@@ -78,27 +78,20 @@ export const ExpertiseSubMenu = ({
             >
               {formatMenuTitle(item.name)}
               <Arrow
-                className={`h-[auto] w-[25px]  fill-white transition-transform duration-300 ease-in-out ${isItemActive[item.name] ? '-rotate-[-90deg]' : '-rotate-30'}`}
+                className={`h-[auto] w-[25px] transform fill-white transition-all duration-300 ease-in-out ${isItemActive[item.name] ? '-rotate-[-90deg]' : '-rotate-30'}`}
               />
             </button>
             <div
-              className={`relative flex w-[464px] transform gap-x-[40px] gap-y-[20px] overflow-hidden bg-dark-blue p-[20] transition-all duration-300 ease-in-out ${isItemActive[item.name] ? 'visible h-full' : 'hidden h-0'}`}
+              className={`relative flex w-[464px] transform gap-x-[20px] gap-y-[20px] overflow-hidden bg-dark-blue px-[20px] transition-all ${isItemActive[item.name] ? 'max-h-[240px] py-[20px] duration-500' : 'h-0 p-0 duration-0'}`}
             >
-              <ul className='flex flex-col gap-[12px]'>
-                <style jsx>{`
-                  ul::before {
-                    content: '';
-                    position: absolute;
-                    top: 20px; /* отступ сверху */
-                    bottom: 20px; /* отступ снизу */
-                    left: 50%; /* центрирование по горизонтали */
-                    width: 1px; /* ширина линии */
-                    background-color: #001450; /* цвет разделителя */
-                    transform: translateX(-50%); /* для центрирования линии */
-                  }
-                `}</style>
-                {item.folderItems.slice(0, 7).map((el) => (
-                  <li key={el.nameItem}>
+              <ul
+                className={`grid grid-cols-2 gap-[12px] transition-all ease-in-out ${isItemActive[item.name] ? 'h-full duration-500' : 'h-0 duration-0'}`}
+              >
+                {item.folderItems.slice(0, 6).map((el) => (
+                  <li
+                    key={el.nameItem}
+                    className='w-full font-proxima leading-[1.87]'
+                  >
                     <Link
                       onClick={toggleSubmenu}
                       className='relative border-b-[2px] border-solid border-transparent py-[5px] font-proxima text-[16px] leading-[1.1] hover:border-main-blue'
@@ -109,7 +102,7 @@ export const ExpertiseSubMenu = ({
                   </li>
                 ))}
               </ul>
-              <ul>
+              {/* <ul>
                 {item.folderItems.slice(7).map((el) => (
                   <li
                     key={el.nameItem}
@@ -124,7 +117,7 @@ export const ExpertiseSubMenu = ({
                     </Link>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
             </div>
           </div>
         ))}
