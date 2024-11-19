@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
 import { MainList } from '../NavList/MainList';
 import { Container } from '../shared/Container/Container';
-import { Case } from '@/src/utils/getExpertiseMetadata';
+import { Post } from '@/src/utils/types';
 
 const DynamicExpertiseMenu = dynamic(() =>
   import('../Expertise/ExpertiseSubMenu/ExpertiseSubMenu').then(
@@ -21,7 +21,7 @@ const DynamicExpertiseMenu = dynamic(() =>
 interface Props {
   dark?: boolean;
   expertiseSubmenu?: Submenu[];
-  expertiseMetadata: Case[];
+  expertiseMetadata: Post[];
 }
 
 interface Submenu {
@@ -37,12 +37,7 @@ export const Header = ({
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(false);
 
-  const toggleSubmenu = () => {
-    setActiveSubmenu(!activeSubmenu);
-  };
-
   const handleChangeActiveMenu = (isActive: boolean) => {
-    // console.log('123');
     setActiveSubmenu(isActive);
   };
 
@@ -58,8 +53,7 @@ export const Header = ({
   }, [isMobile]);
 
   useEffect(() => {
-    console.log('333');
-    if (activeSubmenu) {
+    if (activeSubmenu || isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
@@ -68,7 +62,7 @@ export const Header = ({
     return () => {
       document.body.style.overflow = 'auto';
     };
-  }, [activeSubmenu]);
+  }, [activeSubmenu, isOpen]);
 
   return (
     <header
@@ -84,7 +78,6 @@ export const Header = ({
             list={menuListLayer}
             dark={dark}
             activeSubmenu={activeSubmenu}
-            // toggleSubmenu={toggleSubmenu}
             onMenuItemHover={handleChangeActiveMenu}
           />
         </nav>
@@ -96,6 +89,7 @@ export const Header = ({
               onClick={() => setIsOpen(false)}
               dark={dark}
               expertiseSubMenu={expertiseSubmenu}
+              data={expertiseMetadata}
             />
             <BurgerIcon isOpen={isOpen} setIsOpen={handleOpen} dark={dark} />
           </>
@@ -105,13 +99,12 @@ export const Header = ({
       <div
         className={`relative z-[-1] mx-[auto] w-fit transform px-[20px] transition-all duration-300 ease-in-out ${dark ? 'bg-main-bg' : 'bg-white'} ${
           activeSubmenu ? 'translate-y-0' : '-translate-y-full'
-        }`}
+        } ${isMobile ? 'hidden' : 'visible'}`}
       >
         <DynamicExpertiseMenu
-          toggleSubmenu={toggleSubmenu}
+          onClick={handleOpen}
           expertiseSubMenu={expertiseSubmenu}
           expertiseMetadata={expertiseMetadata}
-          dark={dark}
         />
       </div>
     </header>

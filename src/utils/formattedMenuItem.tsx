@@ -13,3 +13,8 @@ export const formatMenuTitle = (menuItem: string) => {
     .join(' ');
   return newMenuItem;
 };
+
+export const formatLink = (str: string) => {
+  const splitStr = str.split('.');
+  return splitStr[0];
+};

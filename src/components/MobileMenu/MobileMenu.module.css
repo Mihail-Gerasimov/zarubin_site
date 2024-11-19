@@ -4,6 +4,7 @@
   top: 0;
   left: -100%;
   width: 100%;
+  height: 100%;
   bottom: 0;
   background-color: var(--main-white);
   opacity: 0;
@@ -25,11 +26,13 @@
 }
 
 .content {
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: start;
   z-index: 35;
+  overflow: auto;
 }
 
 .listWrapper {
