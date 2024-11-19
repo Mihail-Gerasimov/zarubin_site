@@ -71,7 +71,7 @@ const config: Config = {
         manrope: ['Manrope', 'sans-serif'],
         bebas: ['Bebas Neue', 'sans-serif'],
         unbound: ['Unbounded', 'sans-serif'],
-        proxima: ['Proxima\\ Nova', 'sans-serif'],
+        proxima: ['Proxima Nova', 'sans-serif'],
       },
       colors: {
         'main-beige': '#F7F7F7',
@@ -92,6 +92,7 @@ const config: Config = {
         'black-bg': '#111111',
         'light-bg': '#1E293B',
         'btn-col': '#ECEFFA',
+        'card-bg': '#F5F5F5',
       },
     },
     screens: {
