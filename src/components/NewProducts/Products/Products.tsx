@@ -42,7 +42,7 @@ export const Products = ({ products }: IProducts) => {
             rel='noopener'
             target={item.open ? '_blank' : undefined}
             key={item.name}
-            className={`relative overflow-hidden`}
+            className={`overflow-hidden`}
           >
             <Image
               key={item.name}
