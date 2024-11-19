@@ -8,7 +8,7 @@ import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Metadata } from 'next';
 
-const products = getProductsMetadata('src/products');
+const products = getProductsMetadata();
 
 const title = pageMetadata.investments.title;
 const description = pageMetadata.investments.title;
