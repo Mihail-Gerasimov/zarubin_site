@@ -9,6 +9,7 @@ interface Props {
   slug: string;
   subCategory: string | undefined | null;
   image: string | undefined | null;
+  onClick: () => void;
 }
 
 export const ExpertiseMenuCard = ({
@@ -16,9 +17,14 @@ export const ExpertiseMenuCard = ({
   description,
   slug,
   image,
+  onClick,
 }: Props) => {
   return (
-    <Link href={`/expertise/${slug}`} className='flex w-full flex-1 flex-col'>
+    <Link
+      href={`/expertise/${slug}`}
+      onClick={onClick}
+      className='flex w-full flex-1 flex-col'
+    >
       <div className='overflow-hiddenn relative aspect-[16/9] w-full'>
         <Image
           src={image ?? defaultImg}

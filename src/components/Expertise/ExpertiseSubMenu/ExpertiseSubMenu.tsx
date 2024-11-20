@@ -23,7 +23,10 @@ export const ExpertiseSubMenu = ({
       <ExpertiseSubMenuList data={expertiseSubMenu} onClick={onClick} />
       <div className='flex w-[630px] flex-col gap-[20px]'>
         <div className='mx-0 flex w-full px-0'>
-          <ExpertiseSubmenuArticles data={expertiseMetadata} />
+          <ExpertiseSubmenuArticles
+            data={expertiseMetadata}
+            onClick={onClick}
+          />
         </div>
       </div>
     </div>

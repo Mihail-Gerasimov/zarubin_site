@@ -6,7 +6,7 @@ export const ContactWrapper = ({ onClick }: { onClick: () => void }) => {
       <Link
         href='/brief'
         onClick={onClick}
-        className={`flex w-fit items-center justify-center rounded-[6px] border-[1px] border-[#7cffcd] p-[14px_32px] font-proxima text-[20px] font-bold leading-[1]`}
+        className={`flex w-fit items-center justify-center rounded-[6px] border-[1px] border-[#7cffcd] p-[14px_32px] font-proxima text-[20px] font-bold leading-[1] text-white`}
       >
         Free strategy session
       </Link>

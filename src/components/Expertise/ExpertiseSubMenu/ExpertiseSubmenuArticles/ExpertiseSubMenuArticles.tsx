@@ -7,16 +7,17 @@ import { ExpertiseMenuCard } from '../../ExpertiseMenuCard/ExpertiseMenuCard';
 
 interface IData {
   data: Post[];
+  onClick: () => void;
 }
 
-export const ExpertiseSubmenuArticles = ({ data }: IData) => {
+export const ExpertiseSubmenuArticles = ({ data, onClick }: IData) => {
   const isMobile = useMediaQuery('<tablet');
   const isTablen = useMediaQuery('<laptop');
 
   return (
     <div className='flex w-full flex-col gap-[20px]'>
       <div className='flex items-center justify-between'>
-        <p className='font-unbound text-[20px] font-bold uppercase leading-[1.4]'>
+        <p className='font-unbound text-[20px] font-bold uppercase leading-[1.4] text-white'>
           The latest expertise
         </p>
         <Link
@@ -41,6 +42,7 @@ export const ExpertiseSubmenuArticles = ({ data }: IData) => {
                 slug={post.slug}
                 subCategory={post.subCategory}
                 image={post.image}
+                onClick={onClick}
               />
             </SwiperSlide>
           ))}

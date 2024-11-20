@@ -4,7 +4,7 @@ import { menuListLayer } from '@/src/utils/menuListLayer';
 import { Post } from '@/src/utils/types';
 import classNames from 'classnames';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ExpertiseSubmenuArticles } from '../Expertise/ExpertiseSubMenu/ExpertiseSubmenuArticles/ExpertiseSubMenuArticles';
 import { ExpertiseSubMenuList } from '../Expertise/ExpertiseSubMenu/ExpertiseSubmenuArticles/ExpertiseSubMenuList';
 import { ContactWrapper } from './ContactWrapper/ContactWrapper';
@@ -31,6 +31,19 @@ export const MobileMenu = ({
   data,
 }: Props) => {
   const [isOpenExpertiseSubMenu, setIsOpenexpertiseSubmenu] = useState(isOpen);
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsOpenexpertiseSubmenu(false);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isOpen]);
 
   return (
     <div
@@ -82,14 +95,14 @@ export const MobileMenu = ({
             <button
               type='button'
               onClick={() => setIsOpenexpertiseSubmenu(false)}
-              className='flex items-center gap-[12px] font-unbound text-[18px] font-bold uppercase tablet:text-[20px]'
+              className='flex items-center gap-[12px] font-unbound text-[18px] font-bold uppercase text-white tablet:text-[20px]'
             >
               <Arrow className='h-[26px] w-[26px] rotate-[180deg] fill-white' />
               Expertise
             </button>
             <ExpertiseSubMenuList data={expertiseSubMenu} onClick={onClick} />
           </div>
-          <ExpertiseSubmenuArticles data={data} />
+          <ExpertiseSubmenuArticles data={data} onClick={onClick} />
           <div className='mt-[40px]'>
             <ContactWrapper onClick={onClick} />
           </div>

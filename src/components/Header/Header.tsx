@@ -53,7 +53,7 @@ export const Header = ({
   }, [isMobile]);
 
   useEffect(() => {
-    if (activeSubmenu || isOpen) {
+    if (activeSubmenu) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'auto';
@@ -62,7 +62,7 @@ export const Header = ({
     return () => {
       document.body.style.overflow = 'auto';
     };
-  }, [activeSubmenu, isOpen]);
+  }, [activeSubmenu]);
 
   return (
     <header
@@ -102,7 +102,7 @@ export const Header = ({
         } ${isMobile ? 'hidden' : 'visible'}`}
       >
         <DynamicExpertiseMenu
-          onClick={handleOpen}
+          onClick={() => handleChangeActiveMenu(false)}
           expertiseSubMenu={expertiseSubmenu}
           expertiseMetadata={expertiseMetadata}
         />
