@@ -1,3 +1,4 @@
+import { IProduct } from '@/src/utils/types';
 import { DateTime } from 'luxon';
 import Image from 'next/image';
 import { Breadcrumb, Breadcrumbs } from '../../shared/Breadcrumbs/Breadcrumbs';
@@ -9,6 +10,7 @@ const BREADCRUMBS: Breadcrumb[] = [
 ];
 
 interface IProducts {
+  products: IProduct[];
   products: IProduct[];
 }
 

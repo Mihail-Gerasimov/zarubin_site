@@ -7,7 +7,6 @@ interface Props {
   list: List[];
   dark?: boolean;
   activeSubmenu: boolean;
-  toggleSubmenu: () => void;
   onMenuItemHover: (isActive: boolean) => void;
 }
 
@@ -21,7 +20,6 @@ export const MainList = ({
   list,
   dark = true,
   activeSubmenu,
-  toggleSubmenu,
   onMenuItemHover,
 }: Props) => {
   const pathname = usePathname();
@@ -33,7 +31,7 @@ export const MainList = ({
           onMouseEnter={
             item.name.toLowerCase() === 'expertise'
               ? () => onMenuItemHover(true)
-              : undefined
+              : () => onMenuItemHover(false)
           }
           key={item.id}
           className='flex items-center justify-center gap-[10px]'
@@ -57,15 +55,11 @@ export const MainList = ({
           </Link>
 
           {item.name.toLowerCase() === 'expertise' && (
-            <button
-              type='button'
-              onClick={toggleSubmenu}
-              className='h-fit w-fit'
-            >
+            <div className='h-fit w-fit'>
               <Arrow
                 className={`h-[auto] w-[25px]  transition-transform duration-300 ease-in-out hover:fill-main-blue ${dark ? 'fill-white' : 'fill-main-bg'} ${activeSubmenu ? '-rotate-[-90deg]' : '-rotate-30'}`}
               />
-            </button>
+            </div>
           )}
         </li>
       ))}
