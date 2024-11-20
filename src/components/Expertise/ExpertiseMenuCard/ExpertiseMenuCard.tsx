@@ -27,8 +27,8 @@ export const ExpertiseMenuCard = ({
     >
       <div className='overflow-hiddenn relative aspect-[16/9] w-full'>
         <Image
-          src={image ?? defaultImg}
-          alt={title ?? 'post image'}
+          src={image || defaultImg}
+          alt={title || 'post image'}
           width={450}
           height={250}
           className='h-full w-full object-cover object-center'

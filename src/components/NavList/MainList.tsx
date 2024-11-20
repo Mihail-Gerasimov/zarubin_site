@@ -55,11 +55,11 @@ export const MainList = ({
           </Link>
 
           {item.name.toLowerCase() === 'expertise' && (
-            <button type='button' className='h-fit w-fit'>
+            <div className='h-fit w-fit'>
               <Arrow
                 className={`h-[auto] w-[25px]  transition-transform duration-300 ease-in-out hover:fill-main-blue ${dark ? 'fill-white' : 'fill-main-bg'} ${activeSubmenu ? '-rotate-[-90deg]' : '-rotate-30'}`}
               />
-            </button>
+            </div>
           )}
         </li>
       ))}
