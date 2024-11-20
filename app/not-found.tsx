@@ -1,9 +1,9 @@
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
 import { NotFound } from '@/src/components/NotFound/NotFound';
-import './globals.css';
 import { getExpertiseList } from '@/src/utils/expertiseMenu';
 import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
+import './globals.css';
 
 const expertiseSubMenu = getExpertiseList();
 const expertiseMetadata = getExpertiseMetadata();
