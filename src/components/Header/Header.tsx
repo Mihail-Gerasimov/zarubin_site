@@ -52,18 +52,6 @@ export const Header = ({
     setIsOpen(false);
   }, [isMobile]);
 
-  useEffect(() => {
-    if (activeSubmenu) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
-
-    return () => {
-      document.body.style.overflow = 'auto';
-    };
-  }, [activeSubmenu]);
-
   return (
     <header
       onMouseLeave={() => handleChangeActiveMenu(false)}

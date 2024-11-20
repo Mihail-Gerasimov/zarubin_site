@@ -58,7 +58,7 @@ export const MobileMenu = ({
       </div>
       <div className={`${styles.content}`}>
         <div
-          className={`w-full duration-300 ${isOpenExpertiseSubMenu ? 'opacity-0' : 'opacity-1'}`}
+          className={`mb-[40px] w-full duration-300 ${isOpenExpertiseSubMenu ? 'opacity-0' : 'opacity-1'}`}
         >
           <ul className={styles.menuList}>
             {menuListLayer.map((item) => (
@@ -100,7 +100,9 @@ export const MobileMenu = ({
               <Arrow className='h-[26px] w-[26px] rotate-[180deg] fill-white' />
               Expertise
             </button>
-            <ExpertiseSubMenuList data={expertiseSubMenu} onClick={onClick} />
+            <div className='mt-[24px]'>
+              <ExpertiseSubMenuList data={expertiseSubMenu} onClick={onClick} />
+            </div>
           </div>
           <ExpertiseSubmenuArticles data={data} onClick={onClick} />
           <div className='mt-[40px]'>

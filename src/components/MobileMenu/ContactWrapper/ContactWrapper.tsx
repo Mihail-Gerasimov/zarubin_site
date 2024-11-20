@@ -12,7 +12,7 @@ export const ContactWrapper = ({ onClick }: { onClick: () => void }) => {
       </Link>
       <Link
         href='mailto:access@thebrightbyte.com '
-        className={`font-proxima text-[22px] font-bold leading-[1.1] text-white tablet:text-[32px]`}
+        className={`font-proxima text-[18px] font-bold leading-[1.1] text-white`}
       >
         access@thebrightbyte.com
       </Link>

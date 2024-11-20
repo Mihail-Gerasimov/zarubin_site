@@ -1,7 +1,5 @@
-import LinkArrow from '@/public/assets/images/icons/link_arrow.svg';
 import { Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
-import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ExpertiseMenuCard } from '../../ExpertiseMenuCard/ExpertiseMenuCard';
 
@@ -16,17 +14,10 @@ export const ExpertiseSubmenuArticles = ({ data, onClick }: IData) => {
 
   return (
     <div className='flex w-full flex-col gap-[20px]'>
-      <div className='flex items-center justify-between'>
+      <div className='group flex items-center justify-between'>
         <p className='font-unbound text-[20px] font-bold uppercase leading-[1.4] text-white'>
           The latest expertise
         </p>
-        <Link
-          href='/expertise'
-          className='flex items-center gap-[10px] whitespace-nowrap font-proxima text-[20px] font-bold leading-[1] text-main-blue'
-        >
-          All articles
-          <LinkArrow className='h-[auto] w-[24px] fill-main-blue' />
-        </Link>
       </div>
       <div className='mx-0 flex w-full px-0'>
         <Swiper
