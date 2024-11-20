@@ -1,8 +1,8 @@
 import LinkArrow from '@/public/assets/images/icons/link_arrow.svg';
 import {
-    formatLink,
-    formatMenuItem,
-    formatMenuTitle
+  formatLink,
+  formatMenuItem,
+  formatMenuTitle,
 } from '@/src/utils/formattedMenuItem';
 import Link from 'next/link';
 
@@ -52,9 +52,9 @@ export const ExpertiseSubMenuList = ({ data, onClick }: IProps) => {
             </div>
             <Link
               href='/expertise'
-              className='mt-[12px] flex items-center gap-[10px] whitespace-nowrap font-proxima text-[20px] font-bold leading-[1] text-main-blue group-hover:text-main-blue-hover laptop-big:mt-[20px]'
+              className='group mt-[12px] flex items-center gap-[10px] whitespace-nowrap font-proxima text-[20px] font-bold leading-[1] text-main-blue hover:text-main-blue-hover laptop-big:mt-[20px]'
             >
-              go to Expertise
+              Go to Expertise
               <LinkArrow className='h-[auto] w-[24px] fill-main-blue group-hover:fill-main-blue-hover' />
             </Link>
           </div>
