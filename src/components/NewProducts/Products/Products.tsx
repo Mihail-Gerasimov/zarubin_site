@@ -38,11 +38,11 @@ export const Products = ({ products }: IProducts) => {
       <div className='grid grid-cols-1 gap-[40px] tablet:grid-cols-2'>
         {sortedProducts.map((item) => (
           <a
+            key={item.name}
             href={item.open ? item.link : undefined}
             rel='noopener'
             target={item.open ? '_blank' : undefined}
-            key={item.name}
-            className={`overflow-hidden`}
+            className={`relative overflow-hidden`}
           >
             <Image
               key={item.name}
@@ -51,8 +51,13 @@ export const Products = ({ products }: IProducts) => {
               quality={80}
               width={850}
               height={448}
-              className={`h-[auto] w-full ${item.open ? 'grayscale-0' : 'grayscale'}`}
+              className={`h-[auto] w-full ${item.open ? 'grayscale-0' : 'blur-[5px] grayscale'}`}
             />
+            {!item.open && (
+              <span className='absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] font-unbound text-[32px] font-bold uppercase text-main-blue desktop:text-[46px]'>
+                Closed
+              </span>
+            )}
           </a>
         ))}
       </div>
