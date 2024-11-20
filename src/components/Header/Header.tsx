@@ -20,7 +20,7 @@ const DynamicExpertiseMenu = dynamic(() =>
 
 interface Props {
   dark?: boolean;
-  expertiseSubmenu?: Submenu[];
+  expertiseSubmenu: Submenu[];
   expertiseMetadata: Post[];
 }
 

@@ -2,6 +2,11 @@ import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
 import { NotFound } from '@/src/components/NotFound/NotFound';
 import './globals.css';
+import { getExpertiseList } from '@/src/utils/expertiseMenu';
+import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
+
+const expertiseSubMenu = getExpertiseList();
+const expertiseMetadata = getExpertiseMetadata();
 
 export default function NotFoundPage() {
   return (
@@ -11,7 +16,10 @@ export default function NotFoundPage() {
         <link rel='icon' href='/assets/images/icons/favicon.svg' sizes='any' />
       </head>
       <body className='flex flex-col gap-[60px] bg-main-bg text-white'>
-        <Header />
+        <Header
+          expertiseMetadata={expertiseMetadata}
+          expertiseSubmenu={expertiseSubMenu}
+        />
         <main>
           <NotFound />
         </main>
