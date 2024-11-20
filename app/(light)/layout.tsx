@@ -1,13 +1,15 @@
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
 import { getExpertiseList } from '@/src/utils/expertiseMenu';
+import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
 import classNames from 'classnames';
 import localFont from 'next/font/local';
 import Script from 'next/script';
 import 'swiper/css';
 import '../globals.css';
 
-const testList = getExpertiseList();
+const expertiseSubMenu = getExpertiseList();
+const expertiseMetadata = getExpertiseMetadata();
 
 const Unbound = localFont({
   src: [
@@ -79,7 +81,10 @@ export default function RootLayout({
       <body
         className={`${bodyClassname} flex flex-col bg-white text-text-dark`}
       >
-        <Header expertiseSubmenu={testList} />
+        <Header
+          expertiseSubmenu={expertiseSubMenu}
+          expertiseMetadata={expertiseMetadata}
+        />
         <main className='relative'>{children}</main>
         <Footer />
         <Script id='replain'>

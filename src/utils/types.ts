@@ -29,3 +29,12 @@ export interface IFeedback {
   logo: IImage;
   date: string;
 }
+
+export interface IProduct {
+  name: string;
+  image: string;
+  link: string;
+  slug: string;
+  open: boolean;
+  date: string;
+}

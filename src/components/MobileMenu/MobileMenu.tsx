@@ -1,10 +1,13 @@
 import Arrow from '@/public/assets/images/icons/arrow.svg';
 import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
 import { menuListLayer } from '@/src/utils/menuListLayer';
+import { Post } from '@/src/utils/types';
 import classNames from 'classnames';
 import Link from 'next/link';
-import { useState } from 'react';
-import { ExpertiseMobileSubMenu } from '../Expertise/ExpertiseSubMenu/ExpertiseMobileSubMenu';
+import { useEffect, useState } from 'react';
+import { ExpertiseSubmenuArticles } from '../Expertise/ExpertiseSubMenu/ExpertiseSubmenuArticles/ExpertiseSubMenuArticles';
+import { ExpertiseSubMenuList } from '../Expertise/ExpertiseSubMenu/ExpertiseSubmenuArticles/ExpertiseSubMenuList';
+import { ContactWrapper } from './ContactWrapper/ContactWrapper';
 import styles from './MobileMenu.module.css';
 
 interface Props {
@@ -12,6 +15,7 @@ interface Props {
   onClick: () => void;
   dark?: boolean;
   expertiseSubMenu: Submenu[];
+  data: Post[];
 }
 
 interface Submenu {
@@ -24,15 +28,22 @@ export const MobileMenu = ({
   onClick,
   dark = true,
   expertiseSubMenu,
+  data,
 }: Props) => {
-  const [isOpenSubMenu, setIsOpenSubmenu] = useState(isOpen);
+  const [isOpenExpertiseSubMenu, setIsOpenexpertiseSubmenu] = useState(isOpen);
 
-  const onContactLinkClick = () => {
-    onClick();
-    document.getElementById('contact-form')?.scrollIntoView({
-      behavior: 'smooth',
-    });
-  };
+  useEffect(() => {
+    if (isOpen) {
+      setIsOpenexpertiseSubmenu(false);
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isOpen]);
 
   return (
     <div
@@ -42,64 +53,64 @@ export const MobileMenu = ({
         isOpen && styles.active,
       )}
     >
-      <Logo dark={dark} />
-      <div className={styles.content}>
-        <div className={styles.listWrapper}>
+      <div className='pb-[20px]'>
+        <Logo dark={dark} />
+      </div>
+      <div className={`${styles.content}`}>
+        <div
+          className={`mb-[40px] w-full duration-300 ${isOpenExpertiseSubMenu ? 'opacity-0' : 'opacity-1'}`}
+        >
           <ul className={styles.menuList}>
             {menuListLayer.map((item) => (
               <li key={item.id} className='flex flex-col'>
                 <div className='w-100 flex items-center justify-between gap-[10px]'>
-                  <Link
-                    href={item.link}
-                    className={`${styles.menuLink} ${dark ? styles.dark : styles.light} font-proxima`}
-                    onClick={onClick}
-                  >
-                    {item.name}
-                  </Link>
-                  {item.name.toLowerCase() === 'expertise' && (
+                  {item.name.toLowerCase() !== 'expertise' ? (
+                    <Link
+                      href={item.link}
+                      className={`${styles.menuLink} ${dark ? styles.dark : styles.light} font-proxima`}
+                      onClick={onClick}
+                    >
+                      {item.name}
+                    </Link>
+                  ) : (
                     <button
                       type='button'
-                      onClick={() => setIsOpenSubmenu(!isOpenSubMenu)}
-                      aria-label='Open expertise submenu'
-                      className={`${isOpenSubMenu ? (dark ? 'bg-gray-500' : 'bg-gray-300') : dark ? 'bg-gray-900' : 'bg-gray-100'} h-fit w-fit rounded-md transition-colors`}
+                      onClick={() =>
+                        setIsOpenexpertiseSubmenu(!isOpenExpertiseSubMenu)
+                      }
+                      className={`${styles.menuLink} ${dark ? styles.dark : styles.light} font-proxima`}
                     >
-                      <Arrow
-                        className={`h-[auto] w-[25px] transition-transform duration-300 ease-in-out ${dark ? 'fill-white' : 'fill-main-bg'} ${isOpenSubMenu ? '-rotate-[-90deg]' : 'rotate-30'}`}
-                      />
+                      {item.name}
                     </button>
                   )}
                 </div>
-                {item.name.toLowerCase() === 'expertise' && (
-                  <div
-                    className={`${isOpenSubMenu ? 'max-h-full opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-300 ease-in-out`}
-                  >
-                    <ExpertiseMobileSubMenu
-                      expertiseSubMenu={expertiseSubMenu}
-                      onMenuClose={onClick}
-                      dark={dark}
-                    />
-                  </div>
-                )}
               </li>
             ))}
           </ul>
         </div>
-        <div className={styles.contactWrapper}>
-          <Link
-            href='#contact-form'
-            onClick={onContactLinkClick}
-            className={`${styles.contactBtn} ${dark ? styles.dark : styles.light} font-proxima text-[20px] font-bold leading-[1]`}
-          >
-            Contact us
-          </Link>
-          <div className='flex flex-col gap-[12px]'>
-            <Link
-              href='mailto:access@thebrightbyte.com '
-              className={`${dark ? 'text-white' : 'text-main-black'} font-proxima text-[22px] font-bold leading-[1.1] tablet:text-[32px]`}
+        <div
+          className={`absolute top-[40px] flex w-full flex-col gap-[24px] overflow-auto bg-main-bg pb-[60px] duration-300 tablet:gap-[40px] ${isOpenExpertiseSubMenu ? 'left-0' : 'left-[-100%]'}`}
+        >
+          <div>
+            <button
+              type='button'
+              onClick={() => setIsOpenexpertiseSubmenu(false)}
+              className='flex items-center gap-[12px] font-unbound text-[18px] font-bold uppercase text-white tablet:text-[20px]'
             >
-              access@thebrightbyte.com
-            </Link>
+              <Arrow className='h-[26px] w-[26px] rotate-[180deg] fill-white' />
+              Expertise
+            </button>
+            <div className='mt-[24px]'>
+              <ExpertiseSubMenuList data={expertiseSubMenu} onClick={onClick} />
+            </div>
           </div>
+          <ExpertiseSubmenuArticles data={data} onClick={onClick} />
+          <div className='mt-[40px]'>
+            <ContactWrapper onClick={onClick} />
+          </div>
+        </div>
+        <div className='mt-[auto] pb-[40px]'>
+          <ContactWrapper onClick={onClick} />
         </div>
       </div>
     </div>

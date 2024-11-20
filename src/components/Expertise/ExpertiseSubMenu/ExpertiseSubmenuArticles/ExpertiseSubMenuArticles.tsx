@@ -1,0 +1,44 @@
+import { Post } from '@/src/utils/types';
+import useMediaQuery from '@/src/utils/useMediaQuery';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { ExpertiseMenuCard } from '../../ExpertiseMenuCard/ExpertiseMenuCard';
+
+interface IData {
+  data: Post[];
+  onClick: () => void;
+}
+
+export const ExpertiseSubmenuArticles = ({ data, onClick }: IData) => {
+  const isMobile = useMediaQuery('<tablet');
+  const isTablen = useMediaQuery('<laptop');
+
+  return (
+    <div className='flex w-full flex-col gap-[20px]'>
+      <div className='group flex items-center justify-between'>
+        <p className='font-unbound text-[20px] font-bold uppercase leading-[1.4] text-white'>
+          The latest expertise
+        </p>
+      </div>
+      <div className='mx-0 flex w-full px-0'>
+        <Swiper
+          spaceBetween={isMobile ? 20 : 40}
+          slidesPerView={isMobile ? 1.2 : isTablen && !isMobile ? 1.5 : 2}
+        >
+          {data.slice(0, 2).map((post, idx) => (
+            <SwiperSlide key={idx} className='w-full'>
+              <ExpertiseMenuCard
+                title={post.title}
+                description={post.description}
+                tag={post.tag}
+                slug={post.slug}
+                subCategory={post.subCategory}
+                image={post.image}
+                onClick={onClick}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </div>
+  );
+};

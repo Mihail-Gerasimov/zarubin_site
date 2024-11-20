@@ -4,6 +4,7 @@ import { BurgerIcon } from '@/src/ui-kit/BurgerIcon/BurgerIcon';
 import { ContactUsBtn } from '@/src/ui-kit/LeagueLink/ContactUsBtn';
 import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
 import { menuListLayer } from '@/src/utils/menuListLayer';
+import { Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
@@ -19,7 +20,8 @@ const DynamicExpertiseMenu = dynamic(() =>
 
 interface Props {
   dark?: boolean;
-  expertiseSubmenu?: Submenu[];
+  expertiseSubmenu: Submenu[];
+  expertiseMetadata: Post[];
 }
 
 interface Submenu {
@@ -27,13 +29,13 @@ interface Submenu {
   folderItems: { nameItem: string; link: string }[];
 }
 
-export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
+export const Header = ({
+  dark = true,
+  expertiseSubmenu = [],
+  expertiseMetadata = [],
+}: Props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState(false);
-
-  const toggleSubmenu = () => {
-    setActiveSubmenu(!activeSubmenu);
-  };
 
   const handleChangeActiveMenu = (isActive: boolean) => {
     setActiveSubmenu(isActive);
@@ -59,12 +61,11 @@ export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
         className={`relative flex h-full items-center overflow-hidden ${dark ? 'bg-main-bg' : 'bg-white'}`}
       >
         <Logo dark={dark} />
-        <nav className='mx-[auto] w-full'>
+        <nav className='mx-[auto] w-fit'>
           <MainList
             list={menuListLayer}
             dark={dark}
             activeSubmenu={activeSubmenu}
-            toggleSubmenu={toggleSubmenu}
             onMenuItemHover={handleChangeActiveMenu}
           />
         </nav>
@@ -76,6 +77,7 @@ export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
               onClick={() => setIsOpen(false)}
               dark={dark}
               expertiseSubMenu={expertiseSubmenu}
+              data={expertiseMetadata}
             />
             <BurgerIcon isOpen={isOpen} setIsOpen={handleOpen} dark={dark} />
           </>
@@ -83,14 +85,14 @@ export const Header = ({ dark = true, expertiseSubmenu = [] }: Props) => {
       </Container>
 
       <div
-        className={`relative z-[-1] w-full transform px-[20px] transition-all duration-300 ease-in-out ${dark ? 'bg-main-bg' : 'bg-white'} ${
+        className={`relative z-[-1] mx-[auto] w-fit transform px-[20px] transition-all duration-300 ease-in-out ${dark ? 'bg-main-bg' : 'bg-white'} ${
           activeSubmenu ? 'translate-y-0' : '-translate-y-full'
-        }`}
+        } ${isMobile ? 'hidden' : 'visible'}`}
       >
         <DynamicExpertiseMenu
-          toggleSubmenu={toggleSubmenu}
+          onClick={() => handleChangeActiveMenu(false)}
           expertiseSubMenu={expertiseSubmenu}
-          dark={dark}
+          expertiseMetadata={expertiseMetadata}
         />
       </div>
     </header>

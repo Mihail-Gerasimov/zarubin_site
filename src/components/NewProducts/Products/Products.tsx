@@ -1,3 +1,4 @@
+import { IProduct } from '@/src/utils/types';
 import { DateTime } from 'luxon';
 import Image from 'next/image';
 import { Breadcrumb, Breadcrumbs } from '../../shared/Breadcrumbs/Breadcrumbs';
@@ -8,13 +9,7 @@ const BREADCRUMBS: Breadcrumb[] = [
 ];
 
 interface IProducts {
-  products: {
-    name: string;
-    image: string;
-    link: string;
-    slug: string;
-    date: string;
-  }[];
+  products: IProduct[];
 }
 
 export const Products = ({ products }: IProducts) => {
@@ -43,11 +38,11 @@ export const Products = ({ products }: IProducts) => {
       <div className='grid grid-cols-1 gap-[40px] tablet:grid-cols-2'>
         {sortedProducts.map((item) => (
           <a
-            href={item.link}
+            href={item.open ? item.link : undefined}
             rel='noopener'
-            target='_blank'
+            target={item.open ? '_blank' : undefined}
             key={item.name}
-            className='overflow-hidden'
+            className={`relative overflow-hidden`}
           >
             <Image
               key={item.name}
@@ -56,7 +51,7 @@ export const Products = ({ products }: IProducts) => {
               quality={80}
               width={850}
               height={448}
-              className='h-[auto] w-full'
+              className={`h-[auto] w-full ${item.open ? 'grayscale-0' : 'grayscale'}`}
             />
           </a>
         ))}
