@@ -1,7 +1,7 @@
 export const sendBrief = async (
   idea: string,
   objective: string,
-  obstacles: string,
+  obstacle: string,
   budget: string,
   name: string,
   company_name: string,
@@ -17,7 +17,7 @@ export const sendBrief = async (
       body: JSON.stringify({
         idea,
         objective,
-        obstacles,
+        obstacle,
         budget,
         company_name,
         about_business,
@@ -27,6 +27,6 @@ export const sendBrief = async (
     });
     console.log('Email sent successfully:', await response.json());
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
