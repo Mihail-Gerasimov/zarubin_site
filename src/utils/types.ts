@@ -38,3 +38,14 @@ export interface IProduct {
   open: boolean;
   date: string;
 }
+
+export interface ISubmenuData {
+  nameItem: string;
+  link: string;
+  date: string;
+}
+
+export interface ISubmenu {
+  name: string;
+  folderItems: ISubmenuData[];
+}

@@ -1,16 +1,11 @@
-import { Post } from '@/src/utils/types';
+import { ISubmenu, Post } from '@/src/utils/types';
 import { ExpertiseSubmenuArticles } from './ExpertiseSubmenuArticles/ExpertiseSubMenuArticles';
 import { ExpertiseSubMenuList } from './ExpertiseSubmenuArticles/ExpertiseSubMenuList';
 
 interface IExpertiseProps {
-  expertiseSubMenu: Submenu[];
+  expertiseSubMenu: ISubmenu[];
   onClick: () => void;
   expertiseMetadata: Post[];
-}
-
-interface Submenu {
-  name: string;
-  folderItems: { nameItem: string; link: string }[];
 }
 
 export const ExpertiseSubMenu = ({

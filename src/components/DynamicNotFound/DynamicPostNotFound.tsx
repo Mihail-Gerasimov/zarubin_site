@@ -11,7 +11,7 @@ export const DynamicPostNotFound = ({ slug }: { slug: string }) => {
       </p>
       <p className='text-[18px] tablet:text-[24px] desktop:text-[28px]'>
         Back to{' '}
-        <Link className='underline hover:text-main-blue' href={'/blog'}>
+        <Link className='underline hover:text-main-blue' href={'/insights'}>
           insights
         </Link>
       </p>

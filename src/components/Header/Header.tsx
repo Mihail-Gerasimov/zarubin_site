@@ -26,7 +26,7 @@ interface Props {
 
 interface Submenu {
   name: string;
-  folderItems: { nameItem: string; link: string }[];
+  folderItems: { nameItem: string; link: string; date: string }[];
 }
 
 export const Header = ({
