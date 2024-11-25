@@ -89,8 +89,6 @@ export async function generateMetadata({
     'dd-MM-yyyy',
   ).toISO();
 
-  console.log('description', description);
-
   return {
     title,
     description,

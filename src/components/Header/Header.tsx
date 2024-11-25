@@ -4,7 +4,7 @@ import { BurgerIcon } from '@/src/ui-kit/BurgerIcon/BurgerIcon';
 import { ContactUsBtn } from '@/src/ui-kit/LeagueLink/ContactUsBtn';
 import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
 import { menuListLayer } from '@/src/utils/menuListLayer';
-import { Post } from '@/src/utils/types';
+import { ISubmenu, Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import dynamic from 'next/dynamic';
 import { useEffect, useState } from 'react';
@@ -20,13 +20,8 @@ const DynamicExpertiseMenu = dynamic(() =>
 
 interface Props {
   dark?: boolean;
-  expertiseSubmenu: Submenu[];
+  expertiseSubmenu: ISubmenu[];
   expertiseMetadata: Post[];
-}
-
-interface Submenu {
-  name: string;
-  folderItems: { nameItem: string; link: string; date: string }[];
 }
 
 export const Header = ({
