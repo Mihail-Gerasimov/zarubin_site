@@ -92,6 +92,8 @@ Russian UX is practical, reliable, and focused on localization. Designs accommod
 
 ---
 
+![Screenshot of the application](/assets/images/expertise/it_service/Key considerations.jpeg)
+
 ### UX in Asia
 Asia is a young and vibrant area for digital technology around the world, as well as for UX design. There is a wide range of focus on UX between countries (depending on economic development, cultural preferences and technology penetration rates), from advanced markets such as Japan, South Korea and China - where companies are doubling down on research & design to meet the needs of tech-savvy consumers. Increasingly, the purpose of UX (X = U, S) is being paid special attention to countries like India or Southeast Asian nations whose digital industries are growing faster when it comes to e-commerce, fintech and app sector UX. 
 
