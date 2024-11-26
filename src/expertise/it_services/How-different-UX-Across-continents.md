@@ -1,5 +1,6 @@
 ---
-title: 'Key considerations for effective UX development across continents: US, EU, Russia, Asia. Increase global engagement and conversions. Profit for Business.'
+title: 'Effective UX across continents: Key global strategies and differences.'
+description: 'Key considerations for effective UX development across continents: US, EU, Russia, Asia. Increase global engagement and conversions. Profit for Business.'
 image: '/assets/images/expertise/it_service/ux_banner.jpeg'
 date: '24-11-2024'
 readingTime: ''
