@@ -13,7 +13,7 @@ authorImage: '/assets/images/author/maria.webp'
 
 # KYC for mobile applications in FinTech
 
-*In the fast-paced world of financial technology (fintech), **Know Your Customer (KYC)** processes have emerged as a cornerstone of secure, efficient, and trustworthy mobile applications. As businesses navigate an increasingly digital landscape, robust KYC systems are essential for ensuring regulatory compliance, safeguarding user data, and fostering customer confidence.*
+*In the fast-paced world of financial technology (fintech), Know Your Customer (KYC) processes have emerged as a cornerstone of secure, efficient, and trustworthy mobile applications. As businesses navigate an increasingly digital landscape, robust KYC systems are essential for ensuring regulatory compliance, safeguarding user data, and fostering customer confidence.*
 
 We will walk through the standards in different regions – Europe, USA, CIS countries and the Balkans, with companies such as Robinhood, Deloitte, Grid Capital as real-world examples. Finally, we will cover what the Bright Byte can do to help firms implement robust, scalable KYC workflows for specific regulatory requirements such as these.
 
