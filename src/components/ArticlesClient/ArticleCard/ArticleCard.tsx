@@ -63,7 +63,7 @@ export const ArticleCard = ({
                       onClick(target.name.trim());
                       setCurrentPage(1);
                     }}
-                    className='border-text-text-dark/60 block rounded-[4px] border-[1px] bg-gray-200 p-[5px_10px] font-proxima font-bold'
+                    className='border-text-text-dark/60 block rounded-[4px] border-[1px] bg-gray-200 p-[5px_10px] font-proxima font-bold capitalize'
                   >
                     {item}
                   </button>

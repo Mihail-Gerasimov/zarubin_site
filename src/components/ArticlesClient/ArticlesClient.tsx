@@ -34,7 +34,7 @@ const getUniqueArticlesSubCategory = (array: Post[], word: string) => {
 export const ArticlesClient = ({ data, searchParams }: IArticle) => {
   const [filteredData, setFilteredData] = useState(data);
   const [hasData, setHasData] = useState(true);
-  const [selectedCategiry, setSelectedCategory] = useState(
+  const [selectedCategory, setSelectedCategory] = useState(
     searchParams.category || 'all',
   );
   const [selectedSubCategiry, setSelectedSubCategory] = useState(
@@ -97,8 +97,8 @@ export const ArticlesClient = ({ data, searchParams }: IArticle) => {
 
   useEffect(() => {
     const categotyFilteredData = data.filter((item) => {
-      if (selectedCategiry.toLowerCase() === 'all') return item;
-      return item.category.toLowerCase() === selectedCategiry.toLowerCase();
+      if (selectedCategory.toLowerCase() === 'all') return item;
+      return item.category.toLowerCase() === selectedCategory.toLowerCase();
     });
 
     const subCategoryFilteredData = categotyFilteredData.filter((item) => {
@@ -114,12 +114,12 @@ export const ArticlesClient = ({ data, searchParams }: IArticle) => {
       return item.tag.toLowerCase().includes(selectedTag.toLowerCase());
     });
     setFilteredData(tagFolteredData);
-  }, [selectedCategiry, data, selectedSubCategiry, selectedTag]);
+  }, [selectedCategory, data, selectedSubCategiry, selectedTag]);
 
   return (
     <div className='w-full'>
       <h2 className='w-full border-b-[1px] border-text-dark/60 pb-[40px] font-unbound text-[45px] capitalize'>
-        {selectedCategiry === 'all' ? 'All articles' : selectedCategiry}{' '}
+        {selectedCategory === 'all' ? 'All articles' : selectedCategory}{' '}
         {selectedSubCategiry && `/ ${selectedSubCategiry}`}{' '}
         {selectedTag && `/ ${selectedTag}`}
       </h2>
