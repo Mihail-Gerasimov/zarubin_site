@@ -1,7 +1,6 @@
 import Arrow from '@/public/assets/images/icons/arrow.svg';
-import { Logo } from '@/src/ui-kit/LogoIcon/Logo';
 import { menuListLayer } from '@/src/utils/menuListLayer';
-import { Post } from '@/src/utils/types';
+import { ISubmenu, Post } from '@/src/utils/types';
 import classNames from 'classnames';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -14,13 +13,8 @@ interface Props {
   isOpen: boolean;
   onClick: () => void;
   dark?: boolean;
-  expertiseSubMenu: Submenu[];
+  expertiseSubMenu: ISubmenu[];
   data: Post[];
-}
-
-interface Submenu {
-  name: string;
-  folderItems: { nameItem: string; link: string }[];
 }
 
 export const MobileMenu = ({
@@ -53,9 +47,6 @@ export const MobileMenu = ({
         isOpen && styles.active,
       )}
     >
-      <div className='pb-[20px]'>
-        <Logo dark={dark} />
-      </div>
       <div className={`${styles.content}`}>
         <div
           className={`mb-[40px] w-full duration-300 ${isOpenExpertiseSubMenu ? 'opacity-0' : 'opacity-1'}`}
@@ -89,7 +80,7 @@ export const MobileMenu = ({
           </ul>
         </div>
         <div
-          className={`absolute top-[40px] flex w-full flex-col gap-[24px] overflow-auto bg-main-bg pb-[60px] duration-300 tablet:gap-[40px] ${isOpenExpertiseSubMenu ? 'left-0' : 'left-[-100%]'}`}
+          className={`absolute flex w-full flex-col gap-[24px] overflow-auto bg-main-bg pb-[60px] duration-300 tablet:gap-[40px] ${isOpenExpertiseSubMenu ? 'left-0' : 'left-[-100%]'}`}
         >
           <div>
             <button

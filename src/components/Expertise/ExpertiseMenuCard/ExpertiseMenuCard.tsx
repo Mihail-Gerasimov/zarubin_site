@@ -23,9 +23,9 @@ export const ExpertiseMenuCard = ({
     <Link
       href={`/expertise/${slug}`}
       onClick={onClick}
-      className='flex w-full flex-1 flex-col'
+      className='flex w-full flex-col'
     >
-      <div className='overflow-hiddenn relative aspect-[16/9] w-full'>
+      <div className='relative aspect-[16/9] w-full overflow-hidden'>
         <Image
           src={image || defaultImg}
           alt={title || 'post image'}

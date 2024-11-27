@@ -13,7 +13,7 @@ export const TitleContent = () => {
         Digital business transformation
       </p>
       <Link
-        href='/blog'
+        href='/insights'
         className='z-[5] w-fit rounded-[6px] bg-[#7CFFCD] px-[32px] py-[13px] font-proxima text-[20px] font-bold leading-[1] text-text-dark shadow-button transition-all duration-200 ease-in-out hover:scale-[0.99] hover:bg-[#a6ffdd] hover:shadow-none '
       >
         Go to Insights

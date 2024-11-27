@@ -1,5 +1,6 @@
 import { Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
+import { DateTime } from 'luxon';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ExpertiseMenuCard } from '../../ExpertiseMenuCard/ExpertiseMenuCard';
 
@@ -11,6 +12,12 @@ interface IData {
 export const ExpertiseSubmenuArticles = ({ data, onClick }: IData) => {
   const isMobile = useMediaQuery('<tablet');
   const isTablen = useMediaQuery('<laptop');
+
+  const sortedData = data.sort(
+    (a, b) =>
+      DateTime.fromFormat(b.date, 'dd-MM-yyyy').toMillis() -
+      DateTime.fromFormat(a.date, 'dd-MM-yyyy').toMillis(),
+  );
 
   return (
     <div className='flex w-full flex-col gap-[20px]'>
@@ -24,7 +31,7 @@ export const ExpertiseSubmenuArticles = ({ data, onClick }: IData) => {
           spaceBetween={isMobile ? 20 : 40}
           slidesPerView={isMobile ? 1.2 : isTablen && !isMobile ? 1.5 : 2}
         >
-          {data.slice(0, 2).map((post, idx) => (
+          {sortedData.slice(0, 2).map((post, idx) => (
             <SwiperSlide key={idx} className='w-full'>
               <ExpertiseMenuCard
                 title={post.title}

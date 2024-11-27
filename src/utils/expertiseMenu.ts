@@ -1,4 +1,5 @@
 import fs from 'fs';
+import matter from 'gray-matter';
 import path from 'path';
 
 export const formatMenuItem = (menuItem: string) => {
@@ -18,17 +19,23 @@ export const getExpertiseList = () => {
   const folder = 'src/expertise';
   const directories = fs
     .readdirSync(folder, { withFileTypes: true })
-    .filter((dirent) => dirent.isDirectory())
-    .map((dirent) => dirent.name);
+    .filter((direct) => direct.isDirectory())
+    .map((direct) => direct.name);
 
   const expertiseList = directories.map((directory) => {
     const files = fs
       .readdirSync(path.join(folder, directory))
       .filter((file) => file.endsWith('.md'))
-      .map((file) => ({
-        nameItem: file,
-        link: `/${file}`,
-      }));
+      .map((file) => {
+        const filePath = path.join(folder, directory, file);
+        const fileContent = fs.readFileSync(filePath, 'utf-8');
+        const { data } = matter(fileContent);
+        return {
+          nameItem: file,
+          link: `/${file}`,
+          date: data.date,
+        };
+      });
 
     return {
       name: directory,

@@ -114,7 +114,7 @@ export const ExpertiseCard = ({ data }: IData) => {
       >
         <h3
           ref={titleRef}
-          className='overflow-hidden font-unbound text-[18px] font-bold uppercase leading-[1.3] text-text-dark tablet:text-[18px] tablet:leading-[1.4] desktop:text-[20px]'
+          className='line-clamp-5 overflow-hidden font-unbound text-[18px] font-bold uppercase leading-[1.3] text-text-dark tablet:text-[18px] tablet:leading-[1.4] desktop:line-clamp-4 desktop:text-[20px]'
         >
           {title}
         </h3>
