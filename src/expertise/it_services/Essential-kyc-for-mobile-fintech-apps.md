@@ -29,7 +29,7 @@ KYC is one of the most important processes that must be done by fintech platform
 
 The KYC process is very important because it is, in fact, the bridge that either opens the door to a new customer for a particular fintech company or closes the door forever.
 
-> “A global study of over 450 C-level executives across corporate, institutional and commercial banks found that more than two-thirds (67%) have lost clients due to slow and inefficient client onboarding and KYC, up 19% from 2023 <...> According to Fenergo’s research, the annual cost for performing KYC reviews at a corporate and institutional bank* is estimated to be $60 million and $175 million for a commercial bank”.  
+> A global study of over 450 C-level executives across corporate, institutional and commercial banks found that more than two-thirds (67%) have lost clients due to slow and inefficient client onboarding and KYC, up 19% from 2023 <...> According to Fenergo’s research, the annual cost for performing KYC reviews at a corporate and institutional bank* is estimated to be $60 million and $175 million for a commercial bank.  
 > *Research from [Fenergo](https://resources.fenergo.com/newsroom/share-of-banks-losing-clients-to-poor-kyc-practices-surges-to-record-high)*
 
 ## Key components of a successful KYC process for FinTech
