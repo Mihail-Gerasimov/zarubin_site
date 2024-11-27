@@ -1,7 +1,7 @@
 ---
 title: 'Essential KYC for mobile FinTech apps'
 description: 'This article delves into the importance of KYC for fintech mobile apps, highlighting how compliance enables safe transactions, prevents fraud, and builds trust.'
-image: '/public/assets/images/expertise/it_service/kyc_mobile_apps.jpeg'
+image: '/assets/images/expertise/it_service/kyc_mobile_apps.jpeg'
 date: '27-11-2024'
 readingTime: ''
 category: 'Expertise'
