@@ -9,11 +9,6 @@ import { ArticlesCategory } from './ArticlesCategory/ArticlesCategory';
 
 interface IArticle {
   data: Post[];
-  searchParams: {
-    category: string | undefined;
-    subCategoru: string | undefined;
-    tag: string | undefined;
-  };
 }
 
 const postsPerPage = 8;
@@ -31,16 +26,12 @@ const getUniqueArticlesSubCategory = (array: Post[], word: string) => {
   };
 };
 
-export const ArticlesClient = ({ data, searchParams }: IArticle) => {
+export const ArticlesClient = ({ data }: IArticle) => {
   const [filteredData, setFilteredData] = useState(data);
   const [hasData, setHasData] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState(
-    searchParams.category || 'all',
-  );
-  const [selectedSubCategiry, setSelectedSubCategory] = useState(
-    searchParams.subCategoru || '',
-  );
-  const [selectedTag, setSelectedTag] = useState(searchParams.tag || '');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedSubCategiry, setSelectedSubCategory] = useState('');
+  const [selectedTag, setSelectedTag] = useState('');
   const [inputValue, setInputValue] = useState('');
 
   const [currentPage, setCurrentPage] = useState(1);
