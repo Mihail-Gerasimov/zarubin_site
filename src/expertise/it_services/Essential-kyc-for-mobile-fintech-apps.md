@@ -32,8 +32,6 @@ The KYC process is very important because it is, in fact, the bridge that either
 > “A global study of over 450 C-level executives across corporate, institutional and commercial banks found that more than two-thirds (67%) have lost clients due to slow and inefficient client onboarding and KYC, up 19% from 2023 <...> According to Fenergo’s research, the annual cost for performing KYC reviews at a corporate and institutional bank* is estimated to be $60 million and $175 million for a commercial bank”.  
 > *Research from [Fenergo](https://resources.fenergo.com/newsroom/share-of-banks-losing-clients-to-poor-kyc-practices-surges-to-record-high)*
 
----
-
 ## Key components of a successful KYC process for FinTech
 
 For fintech companies, an effective KYC framework is built around several critical steps:
@@ -84,8 +82,6 @@ Once a customer is onboarded, their transactions are monitored for:
 **Why it matters:**  
 Maintains compliance in an evolving environment, increasing resilience to financial crime and fostering stakeholder confidence.
 
----
-
 ## Characteristics of a Successful KYC Mobile Application
 
 ### User-Friendly Design: Simplifies Onboarding
@@ -110,11 +106,7 @@ Maintains compliance in an evolving environment, increasing resilience to financ
 - Automated checks against global watch lists, sanctions databases, and PEP lists.  
 - Real-time alerts on suspicious activity.  
 
----
-
 Combined, these elements form an integrated framework that drives compliance, security, and an excellent user experience. Fintechs that successfully implement these practices will thrive in regulatory compliance, customer trust, and operational efficiency in the fast-paced financial world.
-
----
 
 ## Case Studies: Real-World Applications of KYC in FinTech
 
@@ -149,8 +141,6 @@ An international company seeks to quickly open a corporate account for payments 
 
 **Scenario:**  
 A buyer wishes to purchase shares in a start-up company via the Grid Capital platform. Before proceeding with the transaction, the system requests confirmation of the source of funds. This step ensures the legitimacy of the funds, protecting the platform’s reputation and all parties involved in the transaction.
-
----
 
 And, of course, like any complex process, KYC has its regional idiosyncrasies. Let's take a closer look at the regional differences.
 
@@ -313,7 +303,6 @@ KYC is the backbone of secure, efficient fintech mobile applications. By prevent
 
 With **The Bright Byte**, businesses can implement tailored, scalable KYC solutions that enhance customer experience and simplify compliance. Explore how [The Bright Byte](https://thebrightbyte) can empower your fintech platform today.
 
----
 ### **Source**
 [Fenergo.com](https://resources.fenergo.com/newsroom/share-of-banks-losing-clients-to-poor-kyc-practices-surges-to-record-high)  
 
