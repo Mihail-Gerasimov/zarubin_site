@@ -26,7 +26,7 @@ export const getPostMetadata = (basePath: string) => {
       downloadLink: matterResult.data.downloadLink,
       readingTime: matterResult.data.readingTime,
       category: matterResult.data.category,
-      subCategory: matterResult.data.category,
+      subCategory: matterResult.data.subCategory,
     };
   });
 

@@ -1,36 +1,86 @@
 'use client';
 
 import SearchImage from '@/public/assets/images/icons/search.svg';
-import { postsSorting } from '@/src/utils/postsSorting';
 import { Post } from '@/src/utils/types';
-import React, { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { Pagination } from '../Pagination/Pagination';
 import { ArticleCard } from './ArticleCard/ArticleCard';
+import { ArticlesCategory } from './ArticlesCategory/ArticlesCategory';
 
 interface IArticle {
   data: Post[];
+  searchParams: {
+    category: string | undefined;
+    subCategoru: string | undefined;
+    tag: string | undefined;
+  };
 }
 
-export const ArticlesClient = ({ data }: IArticle) => {
-  const sortedData = postsSorting(data);
-  const category = data
-    .map((item) => (item.subCategory ? item.subCategory : ''))
-    .filter(
-      (value, index, arr) => arr.indexOf(value) === index && value !== '',
-    );
+const postsPerPage = 8;
 
-  const [filteredData, setFilteredData] = useState(sortedData);
+const getUniqueArticlesSubCategory = (array: Post[], word: string) => {
+  const category = array.filter((item) => item.category.toLowerCase() === word);
+  const subCategory = category.map((item) => item.subCategory);
+  const uniqueSubCategory = subCategory.filter(
+    (value, idx, arr) => arr.indexOf(value) === idx,
+  );
+
+  return {
+    category: word,
+    subCategory: uniqueSubCategory,
+  };
+};
+
+export const ArticlesClient = ({ data, searchParams }: IArticle) => {
+  const [filteredData, setFilteredData] = useState(data);
   const [hasData, setHasData] = useState(true);
-  const [selectedCategiry, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState(
+    searchParams.category || 'all',
+  );
+  const [selectedSubCategiry, setSelectedSubCategory] = useState(
+    searchParams.subCategoru || '',
+  );
+  const [selectedTag, setSelectedTag] = useState(searchParams.tag || '');
   const [inputValue, setInputValue] = useState('');
 
-  const handleKetDown = (e: React.KeyboardEvent) => {
-    if (e.key !== 'Enter') return;
-    handleSearch();
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const isPaginationVisible = filteredData.length > postsPerPage;
+
+  const lastPostIndex = currentPage * postsPerPage;
+  const firstPostIndex = lastPostIndex - postsPerPage;
+  const currentPosts = filteredData.slice(firstPostIndex, lastPostIndex);
+
+  const paginate = (postNumber: number) => {
+    setCurrentPage(postNumber);
   };
 
-  const handleSearch = () => {
-    console.log(inputValue);
-    const newFilteredData = sortedData.filter((item) =>
+  const nextPage = () => {
+    if (currentPage >= filteredData.length / postsPerPage) return;
+    setCurrentPage((prev) => prev + 1);
+  };
+
+  const prevPage = () => {
+    if (currentPage <= 1) return;
+    setCurrentPage((prev) => prev - 1);
+  };
+
+  const expertiseCategory = useMemo(
+    () => getUniqueArticlesSubCategory(data, 'expertise'),
+    [data],
+  );
+  const insightsCategory = useMemo(
+    () => getUniqueArticlesSubCategory(data, 'insights'),
+    [data],
+  );
+  const articlesCategory = [expertiseCategory, insightsCategory];
+
+  useEffect(() => {
+    setSelectedCategory('all');
+    setSelectedSubCategory('');
+    setSelectedTag('');
+    setCurrentPage(1);
+    const newFilteredData = data.filter((item) =>
       item.title.toLowerCase().includes(inputValue.toLowerCase()),
     );
     if (newFilteredData.length === 0) {
@@ -39,12 +89,39 @@ export const ArticlesClient = ({ data }: IArticle) => {
       setFilteredData(newFilteredData);
       setHasData(true);
     }
+  }, [inputValue, data]);
+
+  const handleChangeTag = (value: string) => {
+    setSelectedTag(value);
   };
+
+  useEffect(() => {
+    const categotyFilteredData = data.filter((item) => {
+      if (selectedCategory.toLowerCase() === 'all') return item;
+      return item.category.toLowerCase() === selectedCategory.toLowerCase();
+    });
+
+    const subCategoryFilteredData = categotyFilteredData.filter((item) => {
+      if (selectedSubCategiry.toLocaleLowerCase() === '') return item;
+      return (
+        item.subCategory?.toLowerCase() === selectedSubCategiry.toLowerCase()
+      );
+    });
+
+    const tagFolteredData = subCategoryFilteredData.filter((item) => {
+      if (selectedTag.toLowerCase() === '') return true;
+      if (!item.tag) return false;
+      return item.tag.toLowerCase().includes(selectedTag.toLowerCase());
+    });
+    setFilteredData(tagFolteredData);
+  }, [selectedCategory, data, selectedSubCategiry, selectedTag]);
 
   return (
     <div className='w-full'>
-      <h2 className='w-full border-b-[1px] border-text-dark/60 pb-[40px] font-unbound text-[45px]'>
-        {selectedCategiry === 'all' ? 'All articles' : selectedCategiry}
+      <h2 className='w-full border-b-[1px] border-text-dark/60 pb-[40px] font-unbound text-[45px] capitalize'>
+        {selectedCategory === 'all' ? 'All articles' : selectedCategory}{' '}
+        {selectedSubCategiry && `/ ${selectedSubCategiry}`}{' '}
+        {selectedTag && `/ ${selectedTag}`}
       </h2>
 
       <div className='mt-[80px] flex flex-col gap-[40px] laptop-big:flex-row'>
@@ -55,59 +132,37 @@ export const ArticlesClient = ({ data }: IArticle) => {
               value={inputValue}
               className='w-full border-b-[1px] border-main-blue py-[10px] outline-none'
               onChange={(e) => setInputValue(e.target.value)}
-              onKeyDown={handleKetDown}
             />
-            <button type='button' onClick={handleSearch} className=''>
-              <SearchImage className='absolute right-0 top-[50%] w-[16px] translate-y-[-50%] fill-main-blue' />
-            </button>
+            <SearchImage className='absolute right-0 top-[50%] w-[16px] translate-y-[-50%] fill-main-blue' />
           </div>
           <div className='hidden laptop-big:block'>
             <p className='font-proxima text-[16px] uppercase text-text-dark/60'>
               category:
             </p>
-            {category && category.length !== 0 && (
-              <ul className='flex flex-col'>
-                <li className=''>
-                  <button
-                    type='button'
-                    name='all'
-                    onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
-                      const target = e.target as HTMLButtonElement;
-                      setSelectedCategory(target.name);
-                    }}
-                    className='font-proxima text-[16px] capitalize'
-                  >
-                    all
-                  </button>
-                </li>
-                {category.map((item) => (
-                  <li key={item} className=''>
-                    <button
-                      type='button'
-                      name={item}
-                      onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
-                        const target = e.target as HTMLButtonElement;
-                        setSelectedCategory(target.name);
-                      }}
-                      className='font-proxima text-[16px]'
-                    >
-                      {item}
-                    </button>
-                  </li>
-                ))}
-              </ul>
+            {articlesCategory && articlesCategory.length !== 0 && (
+              <ArticlesCategory
+                onClick={setSelectedCategory}
+                category={articlesCategory}
+                setSelectedSubCategory={setSelectedSubCategory}
+                setSelectedTag={setSelectedTag}
+                setCurrentPage={setCurrentPage}
+              />
             )}
           </div>
         </div>
         <div className='flex w-full items-center'>
           {hasData ? (
             <ul>
-              {filteredData.map((item) => (
+              {currentPosts.map((item) => (
                 <li
                   key={item.slug}
                   className='border-b-[1px] border-text-dark/60 p-[40px_0] first:pt-0'
                 >
-                  <ArticleCard data={item} />
+                  <ArticleCard
+                    data={item}
+                    onClick={handleChangeTag}
+                    setCurrentPage={setCurrentPage}
+                  />
                 </li>
               ))}
             </ul>
@@ -117,6 +172,18 @@ export const ArticlesClient = ({ data }: IArticle) => {
             </p>
           )}
         </div>
+      </div>
+      <div className='mt-[40px]'>
+        {isPaginationVisible && hasData && (
+          <Pagination
+            currentPage={currentPage}
+            postsPerPage={postsPerPage}
+            postLength={filteredData.length}
+            paginate={paginate}
+            prevPage={prevPage}
+            nextPage={nextPage}
+          />
+        )}
       </div>
     </div>
   );
