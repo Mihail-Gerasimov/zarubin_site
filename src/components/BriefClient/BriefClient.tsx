@@ -4,7 +4,7 @@ import { sendBrief } from '@/src/utils/sendBrief';
 import { useFormik } from 'formik';
 import { useQuestion } from '../Contexts/QuestionContext';
 import { initialData } from './briefData';
-import { QuestionComponent } from './QuestionComponent/QuestionQomponent';
+import { QuestionComponent } from './QuestionComponent/QuestionComponent';
 import { StartedComponent } from './StartedComponent/StartedComponent';
 import { ThanksComponent } from './ThanksComponent/ThanksComponent';
 
@@ -81,6 +81,7 @@ export const BriefClient = () => {
 
   return (
     <div className='mx-[auto] flex w-full max-w-[860px] flex-col items-center desktop:text-[28px] desktop:leading-[1.14]'>
+      {pageInfo === 0 && <StartedComponent onClick={handleNext} />}
       {pageInfo !== 0 && pageInfo <= initialData.length && (
         <div className='mb-[20px] flex font-unbound text-[24px] font-bold leading-[1.16] text-main-blue-hover'>
           <span>{pageInfo}</span>
@@ -89,15 +90,12 @@ export const BriefClient = () => {
         </div>
       )}
       {pageInfo !== 0 && pageInfo <= initialData.length && (
-        <>
-          <QuestionComponent
-            data={initialData[pageInfo - 1]}
-            onClick={handleBack}
-            nextClick={handleNext}
-          />
-        </>
+        <QuestionComponent
+          data={initialData[pageInfo - 1]}
+          onClick={handleBack}
+          nextClick={handleNext}
+        />
       )}
-      {pageInfo === 0 && <StartedComponent onClick={handleNext} />}
       {pageInfo > initialData.length && <ThanksComponent />}
     </div>
   );
