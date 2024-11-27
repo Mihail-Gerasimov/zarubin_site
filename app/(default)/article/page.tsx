@@ -9,15 +9,11 @@ const expertiseArticles = getExpertiseMetadata();
 const insightsArticles = getPostMetadata('src/posts');
 const sortedData = postsSorting([...expertiseArticles, ...insightsArticles]);
 
-export default function Article({
-  searchParams,
-}: {
-  searchParams: { category: string; subCategoru: string; tag: string };
-}) {
+export default function Article() {
   return (
     <Section id='article' light>
       <Container className='text-text-dark'>
-        <ArticlesClient data={sortedData} searchParams={searchParams} />
+        <ArticlesClient data={sortedData} />
       </Container>
     </Section>
   );
