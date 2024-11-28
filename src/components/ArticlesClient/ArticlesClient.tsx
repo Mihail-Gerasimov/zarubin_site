@@ -109,15 +109,19 @@ export const ArticlesClient = ({ data }: IArticle) => {
 
   return (
     <div className='w-full'>
-      <h2 className='w-full border-b-[1px] border-text-dark/60 pb-[40px] font-unbound text-[45px] capitalize'>
+      <h2 className='w-full border-b-[1px] border-text-dark/60 pb-[40px] font-unbound text-[24px] uppercase leading-[1.16] tablet:text-[45px] tablet:leading-[1] laptop-big:text-[45px]'>
         {selectedCategory === 'all' ? 'All articles' : selectedCategory}{' '}
-        {selectedSubCategiry && `/ ${selectedSubCategiry}`}{' '}
-        {selectedTag && `/ ${selectedTag}`}
+        <span className='text-[18px] leading-[1.3] text-main-blue tablet:text-[20px] tablet:leading-[1.2]'>
+          {selectedSubCategiry && `/ ${selectedSubCategiry}`}
+        </span>{' '}
+        <span className='text-[18px] leading-[1.3] text-main-blue tablet:text-[20px] tablet:leading-[1.2]'>
+          {selectedTag && `/ ${selectedTag}`}
+        </span>
       </h2>
 
-      <div className='mt-[80px] flex flex-col gap-[40px] laptop-big:flex-row'>
-        <div className='flex min-w-[320px] flex-col gap-[20px]'>
-          <div className='relative w-full laptop-big:w-fit'>
+      <div className='mt-[40px] flex flex-col gap-[40px] laptop-big:mt-[80px] laptop-big:flex-row laptop-big:gap-[80px]'>
+        <div className='flex w-full flex-col gap-[40px] laptop-big:w-[30%]'>
+          <div className='relative w-full laptop-big:w-full'>
             <input
               placeholder='Search article'
               value={inputValue}
@@ -126,9 +130,9 @@ export const ArticlesClient = ({ data }: IArticle) => {
             />
             <SearchImage className='absolute right-0 top-[50%] w-[16px] translate-y-[-50%] fill-main-blue' />
           </div>
-          <div className='hidden laptop-big:block'>
-            <p className='font-proxima text-[16px] uppercase text-text-dark/60'>
-              category:
+          <div className='flex-col items-center laptop-big:flex'>
+            <p className='font-proxima text-[12px] capitalize text-text-dark'>
+              Cathegories:
             </p>
             {articlesCategory && articlesCategory.length !== 0 && (
               <ArticlesCategory
@@ -137,6 +141,8 @@ export const ArticlesClient = ({ data }: IArticle) => {
                 setSelectedSubCategory={setSelectedSubCategory}
                 setSelectedTag={setSelectedTag}
                 setCurrentPage={setCurrentPage}
+                selectedCategory={selectedCategory}
+                selectedSubCategory={selectedSubCategiry}
               />
             )}
           </div>
@@ -151,6 +157,7 @@ export const ArticlesClient = ({ data }: IArticle) => {
                 >
                   <ArticleCard
                     data={item}
+                    selectedTag={selectedTag}
                     onClick={handleChangeTag}
                     setCurrentPage={setCurrentPage}
                   />
