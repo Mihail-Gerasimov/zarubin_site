@@ -28,7 +28,6 @@ export const ArticleCard = ({
       <Link
         href={`/${data.category.toLowerCase()}/${data.slug}`}
         className='relative aspect-[16/9] min-w-[360px] flex-1 overflow-hidden duration-300 group-hover:scale-[102%] group-hover:shadow-2xl laptop-big:max-h-[210px]'
-        // style={{ boxShadow: '0px 11.11px 44.46px 0px rgba(12, 16, 24, 0.12)' }}
       >
         <Image
           src={data.image || defaultImg}
@@ -66,7 +65,6 @@ export const ArticleCard = ({
                       onClick(target.name.trim());
                       setCurrentPage(1);
                     }}
-                    // className={`border-text-text-dark/60 block rounded-[4px] border-[1px] bg-gray-200 p-[5px_10px] font-proxima font-bold capitalize duration-300`}
                     className={`border-text-text-dark/60 block rounded-[4px] border-[1px]  p-[5px_10px] font-proxima font-bold capitalize 
                       transition-transform duration-300 ease-in-out hover:bg-gray-300 focus:outline-none active:scale-95 ${selectedTag.trim().toLowerCase() === item.trim().toLowerCase() ? 'bg-gray-300' : 'bg-gray-200'}`}
                   >

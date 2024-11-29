@@ -43,7 +43,10 @@ export const ArticlesCategory = ({
             </button>
           </li>
           {category.map((item) => (
-            <li key={item.category} className=''>
+            <li
+              key={item.category}
+              className='flex flex-col items-start gap-[2px]'
+            >
               <button
                 type='button'
                 name={item.category}

@@ -1,14 +1,14 @@
 import { ArticlesClient } from '@/src/components/ArticlesClient/ArticlesClient';
 import { Container } from '@/src/components/shared/Container/Container';
 import { Section } from '@/src/components/shared/Section/Section';
+import { BASE_URL } from '@/src/utils/alias';
+import { contentTrimming } from '@/src/utils/contentTrimming';
 import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
-import { postsSorting } from '@/src/utils/postsSorting';
-import { pageMetadata } from '@/src/utils/pageMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
-import { BASE_URL } from '@/src/utils/alias';
+import { pageMetadata } from '@/src/utils/pageMetadata';
+import { postsSorting } from '@/src/utils/postsSorting';
 import { Metadata } from 'next';
-import { contentTrimming } from '@/src/utils/contentTrimming';
 
 const title = pageMetadata.expertise.title;
 const description = contentTrimming(pageMetadata.expertise.description, 155);
@@ -22,24 +22,24 @@ export const metadata: Metadata = {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL(`${BASE_URL}/expertise`),
+    canonical: new URL(`${BASE_URL}/news`),
     types: {
       'application/rss+xml': [
         {
           title: 'Bright Byte Expertise',
-          url: `${BASE_URL}/expertise/rss`,
+          url: `${BASE_URL}/rss`,
         },
       ],
     },
   },
   openGraph: {
-    type: 'website',
+    type: 'article',
     locale: 'en_US',
     siteName: 'BrightByte.com',
     ...openGraphImage,
     title,
     description,
-    url: `${BASE_URL}/expertise`,
+    url: `${BASE_URL}/news`,
   },
   keywords,
 };
@@ -51,7 +51,7 @@ const sortedData = postsSorting([...expertiseArticles, ...insightsArticles]);
 export default function Article() {
   return (
     <Section id='article' light>
-      <Container className='text-text-dark'>
+      <Container className='px-[10px] text-text-dark tablet:px-[40px] laptop-big:px-[50px] desktop:px-[60px] desktop-hard:px-[75px]'>
         <ArticlesClient data={sortedData} />
       </Container>
     </Section>

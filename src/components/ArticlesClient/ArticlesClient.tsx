@@ -2,10 +2,12 @@
 
 import SearchImage from '@/public/assets/images/icons/search.svg';
 import { Post } from '@/src/utils/types';
+import useMediaQuery from '@/src/utils/useMediaQuery';
 import { useEffect, useMemo, useState } from 'react';
 import { Pagination } from '../Pagination/Pagination';
 import { ArticleCard } from './ArticleCard/ArticleCard';
 import { ArticlesCategory } from './ArticlesCategory/ArticlesCategory';
+import { CategoryDropDown } from './CategoryDropDown/CategoryDropDown';
 
 interface IArticle {
   data: Post[];
@@ -35,6 +37,7 @@ export const ArticlesClient = ({ data }: IArticle) => {
   const [inputValue, setInputValue] = useState('');
 
   const [currentPage, setCurrentPage] = useState(1);
+  const isLaptop = useMediaQuery('>=laptop-big');
 
   const isPaginationVisible = filteredData.length > postsPerPage;
 
@@ -109,7 +112,7 @@ export const ArticlesClient = ({ data }: IArticle) => {
 
   return (
     <div className='w-full'>
-      <h2 className='w-full border-b-[1px] border-text-dark/60 pb-[40px] font-unbound text-[24px] uppercase leading-[1.16] tablet:text-[45px] tablet:leading-[1] laptop-big:text-[45px]'>
+      <h2 className='w-full text-center font-unbound text-[24px] uppercase leading-[1.16] tablet:text-[45px] tablet:leading-[1] laptop-big:text-start laptop-big:text-[45px]'>
         {selectedCategory === 'all' ? 'All articles' : selectedCategory}{' '}
         <span className='text-[18px] leading-[1.3] text-main-blue tablet:text-[20px] tablet:leading-[1.2]'>
           {selectedSubCategiry && `/ ${selectedSubCategiry}`}
@@ -119,31 +122,44 @@ export const ArticlesClient = ({ data }: IArticle) => {
         </span>
       </h2>
 
-      <div className='mt-[40px] flex flex-col gap-[40px] laptop-big:mt-[80px] laptop-big:flex-row laptop-big:gap-[80px]'>
-        <div className='flex w-full flex-col gap-[40px] laptop-big:w-[30%]'>
+      <div className='mt-[24px] flex flex-col gap-[24px] tablet:mt-[40px] tablet:gap-[40px]  laptop-big:mt-[80px] laptop-big:flex-row laptop-big:gap-[30px]'>
+        <div className='flex w-full flex-col gap-[12px] tablet:flex-row tablet:items-end tablet:gap-[64px] laptop-big:w-[30%] laptop-big:flex-col laptop-big:items-start laptop-big:gap-[10px]'>
           <div className='relative w-full laptop-big:w-full'>
             <input
               placeholder='Search article'
               value={inputValue}
-              className='w-full border-b-[1px] border-main-blue py-[10px] outline-none'
+              className='w-full border-b-[1px] border-main-blue py-[10px] text-[12px] outline-none tablet:text-[16px]'
               onChange={(e) => setInputValue(e.target.value)}
             />
             <SearchImage className='absolute right-0 top-[50%] w-[16px] translate-y-[-50%] fill-main-blue' />
           </div>
-          <div className='flex-col items-center laptop-big:flex'>
-            <p className='font-proxima text-[12px] capitalize text-text-dark'>
-              Cathegories:
-            </p>
+          <div className='flex flex-col items-start'>
             {articlesCategory && articlesCategory.length !== 0 && (
-              <ArticlesCategory
-                onClick={setSelectedCategory}
-                category={articlesCategory}
-                setSelectedSubCategory={setSelectedSubCategory}
-                setSelectedTag={setSelectedTag}
-                setCurrentPage={setCurrentPage}
-                selectedCategory={selectedCategory}
-                selectedSubCategory={selectedSubCategiry}
-              />
+              <>
+                {isLaptop ? (
+                  <div>
+                    <ArticlesCategory
+                      category={articlesCategory}
+                      onClick={setSelectedCategory}
+                      setSelectedSubCategory={setSelectedSubCategory}
+                      setSelectedTag={setSelectedTag}
+                      setCurrentPage={setCurrentPage}
+                      selectedCategory={selectedCategory}
+                      selectedSubCategory={selectedSubCategiry}
+                    />
+                  </div>
+                ) : (
+                  <CategoryDropDown
+                    categories={articlesCategory}
+                    onClick={setSelectedCategory}
+                    setSelectedSubCategory={setSelectedSubCategory}
+                    setSelectedTag={setSelectedTag}
+                    setCurrentPage={setCurrentPage}
+                    selectetCategory={selectedCategory}
+                    selectetSubCategory={selectedSubCategiry}
+                  />
+                )}
+              </>
             )}
           </div>
         </div>
