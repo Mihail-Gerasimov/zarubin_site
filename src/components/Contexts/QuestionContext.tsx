@@ -32,7 +32,7 @@ export const QuestionProvider = ({
   children: React.ReactNode;
 }) => {
   const [data, setData] = useState<IContextData>(initialFormikValue);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(-1);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

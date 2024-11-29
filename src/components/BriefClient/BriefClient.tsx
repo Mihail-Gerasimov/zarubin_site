@@ -82,14 +82,14 @@ export const BriefClient = () => {
   return (
     <div className='mx-[auto] flex w-full max-w-[860px] flex-col items-center desktop:text-[28px] desktop:leading-[1.14]'>
       {pageInfo === 0 && <StartedComponent onClick={handleNext} />}
-      {pageInfo !== 0 && pageInfo <= initialData.length && (
+      {pageInfo !== -1 && pageInfo !== 0 && pageInfo <= initialData.length && (
         <div className='mb-[20px] flex font-unbound text-[24px] font-bold leading-[1.16] text-main-blue-hover'>
           <span>{pageInfo}</span>
           <span>{'/'}</span>
           <span>{initialData.length}</span>
         </div>
       )}
-      {pageInfo !== 0 && pageInfo <= initialData.length && (
+      {pageInfo !== -1 && pageInfo !== 0 && pageInfo <= initialData.length && (
         <QuestionComponent
           data={initialData[pageInfo - 1]}
           onClick={handleBack}
