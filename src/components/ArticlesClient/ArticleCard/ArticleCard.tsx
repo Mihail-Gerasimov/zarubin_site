@@ -54,7 +54,7 @@ export const ArticleCard = ({
             {formatedDate.toUpperCase()}
           </span>
           {tags && tags.length !== 0 && (
-            <ul className='flex flex-wrap gap-[10px]'>
+            <ul className='flex flex-wrap gap-[8px] desktop:gap-[24px]'>
               {tags.map((item) => (
                 <li key={item} className='h-fit w-fit'>
                   <button
@@ -65,8 +65,8 @@ export const ArticleCard = ({
                       onClick(target.name.trim());
                       setCurrentPage(1);
                     }}
-                    className={`border-text-text-dark/60 block rounded-[4px] border-[1px]  p-[5px_10px] font-proxima font-bold capitalize 
-                      transition-transform duration-300 ease-in-out hover:bg-gray-300 focus:outline-none active:scale-95 ${selectedTag.trim().toLowerCase() === item.trim().toLowerCase() ? 'bg-gray-300' : 'bg-gray-200'}`}
+                    className={`border-text-text-dark/60 block rounded-[4px] border-[1px] p-[10px] font-proxima text-[12px] font-bold capitalize transition-transform 
+                      duration-300 ease-in-out hover:bg-gray-300 focus:outline-none active:scale-95 tablet:text-[16px] ${selectedTag.trim().toLowerCase() === item.trim().toLowerCase() ? 'bg-gray-300' : 'bg-gray-200'}`}
                   >
                     {item}
                   </button>

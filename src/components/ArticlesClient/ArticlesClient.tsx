@@ -169,7 +169,7 @@ export const ArticlesClient = ({ data }: IArticle) => {
               {currentPosts.map((item) => (
                 <li
                   key={item.slug}
-                  className='border-b-[1px] border-text-dark/60 p-[40px_0] first:pt-0'
+                  className='border-b-[1px] border-main-disabled p-[40px_0] first:pt-0'
                 >
                   <ArticleCard
                     data={item}
