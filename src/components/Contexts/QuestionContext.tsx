@@ -31,7 +31,12 @@ export const QuestionProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [data, setData] = useState<IContextData>(initialFormikValue);
+  const [data, setData] = useState<IContextData>(() => {
+    if (typeof window !== 'undefined') {
+      const storageData = localStorage.getItem('questionInfo');
+      return storageData ? JSON.parse(storageData) : initialFormikValue;
+    }
+  });
   const [page, setPage] = useState(-1);
 
   useEffect(() => {
@@ -69,13 +74,6 @@ export const QuestionProvider = ({
   useEffect(() => {
     localStorage.setItem('questionInfo', JSON.stringify(data));
   }, [data]);
-
-  useEffect(() => {
-    const storageState = localStorage.getItem('pageInfo');
-    if (!storageState) return;
-    const pageInfo = JSON.parse(storageState);
-    setPage(pageInfo);
-  }, []);
 
   return (
     <QuestionContext.Provider
