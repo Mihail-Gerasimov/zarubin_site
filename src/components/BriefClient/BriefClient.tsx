@@ -4,7 +4,7 @@ import { sendBrief } from '@/src/utils/sendBrief';
 import { useFormik } from 'formik';
 import { useQuestion } from '../Contexts/QuestionContext';
 import { initialData } from './briefData';
-import { QuestionComponent } from './QuestionComponent/QuestionQomponent';
+import { QuestionComponent } from './QuestionComponent/QuestionComponent';
 import { StartedComponent } from './StartedComponent/StartedComponent';
 import { ThanksComponent } from './ThanksComponent/ThanksComponent';
 
@@ -13,16 +13,28 @@ export const BriefClient = () => {
 
   const formik = useFormik({
     initialValues: data,
+    enableReinitialize: true,
     onSubmit: async (values) => {
+      const {
+        idea,
+        objective,
+        obstacle,
+        budget,
+        name,
+        company_name,
+        about_business,
+        email,
+      } = values;
+
       await sendBrief(
-        values.idea,
-        values.objective,
-        values.obstacles,
-        values.budget,
-        values.name,
-        values.company_name,
-        values.about_business,
-        values.email,
+        idea,
+        objective,
+        obstacle,
+        budget,
+        name,
+        company_name,
+        about_business,
+        email,
       );
 
       const telegramResponse = await fetch(
@@ -35,7 +47,7 @@ export const BriefClient = () => {
           body: JSON.stringify({
             chat_id: '199942509',
             text: `
-              Name: ${values.name}\nEmail: ${values.email}\nCompany_name: ${values.company_name}\nIdea: ${values.idea}\nObjective: ${values.objective}\nObstacles: ${values.obstacles}\nBudget: ${values.budget}\nAbout_business: ${values.about_business}
+              Name: ${name}\nEmail: ${email}\nCompany_name: ${company_name}\nIdea: ${idea}\nObjective: ${objective}\nObstacles: ${obstacle}\nBudget: ${budget}\nAbout_business: ${about_business}
             `,
           }),
         },
@@ -43,13 +55,12 @@ export const BriefClient = () => {
 
       if (telegramResponse.ok) {
         handleSetPage(pageInfo + 1);
-        alert('Thank you! We will contact you soon');
       } else {
         console.error('Error sending message to Telegram:', telegramResponse);
       }
 
       window.open(
-        'https://cal.com/vitaliyzarubin/30-minutes-meeting?date=2024-11-14&month=2024-11',
+        'https://cal.com/vitaliyzarubin/30-minutes-meeting',
         '_blank',
       );
     },
@@ -70,23 +81,21 @@ export const BriefClient = () => {
 
   return (
     <div className='mx-[auto] flex w-full max-w-[860px] flex-col items-center desktop:text-[28px] desktop:leading-[1.14]'>
-      {pageInfo !== 0 && pageInfo <= initialData.length && (
+      {pageInfo === 0 && <StartedComponent onClick={handleNext} />}
+      {pageInfo !== -1 && pageInfo !== 0 && pageInfo <= initialData.length && (
         <div className='mb-[20px] flex font-unbound text-[24px] font-bold leading-[1.16] text-main-blue-hover'>
           <span>{pageInfo}</span>
           <span>{'/'}</span>
           <span>{initialData.length}</span>
         </div>
       )}
-      {pageInfo !== 0 && pageInfo <= initialData.length && (
-        <>
-          <QuestionComponent
-            data={initialData[pageInfo - 1]}
-            onClick={handleBack}
-            nextClick={handleNext}
-          />
-        </>
+      {pageInfo !== -1 && pageInfo !== 0 && pageInfo <= initialData.length && (
+        <QuestionComponent
+          data={initialData[pageInfo - 1]}
+          onClick={handleBack}
+          nextClick={handleNext}
+        />
       )}
-      {pageInfo === 0 && <StartedComponent onClick={handleNext} />}
       {pageInfo > initialData.length && <ThanksComponent />}
     </div>
   );

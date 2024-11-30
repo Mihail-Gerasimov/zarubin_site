@@ -37,13 +37,17 @@ export const QuestionProvider = ({
       return storageData ? JSON.parse(storageData) : initialFormikValue;
     }
   });
+  const [page, setPage] = useState(-1);
 
-  const [page, setPage] = useState(() => {
+  useEffect(() => {
     if (typeof window !== 'undefined') {
+      const storageData = localStorage.getItem('questionInfo');
       const storagePage = localStorage.getItem('pageInfo');
-      return storagePage ? JSON.parse(storagePage) : 0;
+
+      setData(storageData ? JSON.parse(storageData) : initialFormikValue);
+      setPage(storagePage ? JSON.parse(storagePage) : 0);
     }
-  });
+  }, []);
 
   const handleSetPage = (value: number) => {
     setPage(value);
@@ -70,14 +74,6 @@ export const QuestionProvider = ({
   useEffect(() => {
     localStorage.setItem('questionInfo', JSON.stringify(data));
   }, [data]);
-
-  useEffect(() => {
-    const storageState = localStorage.getItem('pageInfo');
-    if (!storageState) return;
-
-    const pageInfo = JSON.parse(storageState);
-    setPage(pageInfo);
-  }, []);
 
   return (
     <QuestionContext.Provider

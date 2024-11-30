@@ -7,19 +7,19 @@ export async function POST(req: Request) {
 
   try {
     const { data } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
+      from: `From <thebrightbyte.com>`,
       to: ['access@thebrightbyte.com'],
-      subject: 'Client brief',
+      subject: `Client brief from ${response.company_name}`,
       html:
         '<h1>Name: ' +
         response.name +
         '</h1>' +
-        '<span>From: ' +
+        '<p>From: ' +
         response.company_name +
-        '</span>' +
-        '<span>Email: ' +
+        '</p>' +
+        '<p>Email: ' +
         response.email +
-        '</span>' +
+        '</p>' +
         '<p>About business: ' +
         response.about_business +
         '</p>' +
@@ -30,15 +30,16 @@ export async function POST(req: Request) {
         response.objective +
         '</p>' +
         '<p>Obstacles: ' +
-        response.obstacles +
+        response.obstacle +
         '</p>' +
         '<p>Budget: ' +
         response.budget +
         '</p>',
     });
 
-    return NextResponse.json({ data });
+    return NextResponse.json({ success: true, data });
   } catch (error) {
+    console.error('Error sending email:', error);
     return NextResponse.json({ error });
   }
 }
