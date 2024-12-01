@@ -1,7 +1,7 @@
 ---
 title: 'PHP is still alive: How it is evolving'
 description: 'PHP is still alive and thriving in 2024. Discover how this programming language is evolving to stay relevant in web development and beyond.'
-image: ''
+image: '/assets/images/expertise/it_service/PHP_banner.jpeg'
 date: '28-10-2024'
 readingTime: ''
 category: 'Expertise'
