@@ -27,6 +27,8 @@ KYC is one of the most important processes that must be done by fintech platform
 2. **Fortify user trust.** KYC process must be easily and transparent to users of the platform so that they trust what is going on. That trust fuels loyalty, especially in competitive markets for fintech as user experience can define a product.  
 3. **Meet global compliance standards.** Fintech companies must navigate complex regulatory environments. Whether it's GDPR compliance in Europe, AML laws in the US, or rapidly evolving standards in the CIS, KYC ensures alignment with regulatory requirements.
 
+![KYC system interfaces and information processing principles](https://imgur.com/a/K7n8S1N)
+
 The KYC process is very important because it is, in fact, the bridge that either opens the door to a new customer for a particular fintech company or closes the door forever.
 
 > A global study of over 450 C-level executives across corporate, institutional and commercial banks found that more than two-thirds (67%) have lost clients due to slow and inefficient client onboarding and KYC, up 19% from 2023 <...> According to Fenergo’s research, the annual cost for performing KYC reviews at a corporate and institutional bank* is estimated to be $60 million and $175 million for a commercial bank.  
