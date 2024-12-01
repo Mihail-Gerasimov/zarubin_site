@@ -1,7 +1,7 @@
 ---
 title: 'Information security in products'
 description: 'Learn the key aspects of information security in custom digital product development. From secure infrastructure to password management and encryption.'
-image: ''
+image: '/assets/images/expertise/it_service/information_security_banner.webp'
 date: '12-10-2024'
 readingTime: ''
 category: 'Expertise'
