@@ -1,7 +1,7 @@
 ---
 title: 'Flutter App Taxi'
 description: 'Bright Byte specializes in custom taxi app development on Flutter for B2C and B2B markets. We provide scalable solutions for drivers, passengers, and fleet management.'
-image: ''
+image: '/assets/images/expertise/it_service/taxi_banner.webp'
 date: '08-10-2024'
 readingTime: ''
 category: 'Expertise'
