@@ -1,7 +1,7 @@
 ---
 title: 'Retail food service application'
 description: 'Find out how Bright Byte developed a bespoke shift management and food ordering system, integrating food service and payment into one seamless solution.'
-image: ''
+image: '/assets/images/expertise/it_service/food_service_banner.jpeg'
 date: '13-10-2024'
 readingTime: ''
 category: 'Expertise'
