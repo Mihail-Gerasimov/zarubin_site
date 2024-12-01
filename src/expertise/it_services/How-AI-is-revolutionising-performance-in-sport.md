@@ -60,7 +60,7 @@ In the era of data-driven sport, advanced technologies have transformed raw stat
 
 The technology isn't just theoretical - it's practical. For example, platforms like BigBro.AI analyse games and produce detailed reports within two hours, highlighting key moments and providing actionable recommendations. This eliminates the need to painstakingly review entire games and ensures that coaches can focus on strategy rather than poring over footage.
 
-![BigBro preview](https://imgur.com/3xxOzaT)
+![BigBro preview](https://imgur.com/3xxOzaT.jpg)
 
 The system provides post-match analysis and highlights. After the game, the coach has up to 4 hours to watch the entire match (90 minutes in football) and mark key moments for analysis with the players. The BigBro.AI does this automatically, giving the coach only the selected information.
 
