@@ -8,7 +8,7 @@ category: 'Expertise'
 subCategory: 'It Service'
 tag: 'sports analytics systems, sports data collection, sports analytics software'
 authorName: 'Maria Ovseytseva'
-authorImage: ''/assets/images/author/maria.webp''
+authorImage: '/assets/images/author/maria.webp'
 ---
 
 #Why the sports industry is rapidly adopting digital tools
@@ -105,14 +105,14 @@ While sports analytics offers immense potential to improve performance and strat
 [Sport Performance Analysis](https://www.sportperformanceanalysis.com/article/data-analysis-and-technology-in-rugby-union)
 - **Costs and Resources:** Implementing analytics requires significant investment in technology, training, and personnel. Smaller schools, clubs, and amateur leagues often lack the budget to integrate these systems effectively. Even for professional teams, the return on investment isn’t always immediate, which can deter adoption.​
 [MDPI](https://www.mdpi.com/2076-3417/14/8/3361)
-- **Intimidation Factor:** A lack of understanding about how to interpret data effectively is another common barrier. Coaches without technical backgrounds might feel intimidated by the complex statistical models or artificial intelligence algorithms, which can alienate them from using these tools in decision-making​.
+- **Intimidation Factor:** A lack of understanding about how to interpret data effectively is another common barrier. Coaches without technical backgrounds might feel intimidated by the complex statistical models or artificial intelligence algorithms, which can alienate them from using these tools in decision-making​. [Oxford Academic](https://academic.oup.com/columbia-scholarship-online/book/14198)  
+[Sport Performance Analysis](https://www.sportperformanceanalysis.com/article/data-analysis-and-technology-in-rugby-union)
 
 ### Illustrative insights from research
 
-A study highlighted in the Wharton Magazine emphasized that while advanced metrics like "expected goals" or "PDO" are useful, they’re only as good as their application. Misuse or overreliance on such stats without understanding the broader game dynamics can lead to poor decisions​.
+A study highlighted in the Wharton Magazine emphasized that while advanced metrics like "expected goals" or "PDO" are useful, they’re only as good as their application. Misuse or overreliance on such stats without understanding the broader game dynamics can lead to poor decisions​. [Wharton Magazine](https://magazine.wharton.upenn.edu/digital/the-dangerous-data-fetishes-of-sports-analytics/)
 
 Another qualitative study on rugby players revealed that excessive monitoring led to fear of failure and strained relationships between players and coaches. Such consequences illustrate the potential downside of poorly integrated analytics​.
-[Oxford Academic](https://academic.oup.com/columbia-scholarship-online/book/14198)  
 [Sport Performance Analysis](https://www.sportperformanceanalysis.com/article/data-analysis-and-technology-in-rugby-union)
 
 ---
