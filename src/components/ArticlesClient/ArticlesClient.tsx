@@ -110,6 +110,12 @@ export const ArticlesClient = ({ data }: IArticle) => {
     setFilteredData(tagFolteredData);
   }, [selectedCategory, data, selectedSubCategiry, selectedTag]);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ behavior: 'smooth', top: 0 });
+    }
+  }, [currentPage]);
+
   return (
     <div className='w-full'>
       <h2 className='w-full text-center font-unbound text-[24px] uppercase leading-[1.16] tablet:text-[45px] tablet:leading-[1] laptop-big:text-start laptop-big:text-[45px]'>
