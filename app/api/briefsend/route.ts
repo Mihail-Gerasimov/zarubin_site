@@ -7,7 +7,7 @@ export async function POST(req: Request) {
 
   try {
     const { data } = await resend.emails.send({
-      from: `From <thebrightbyte.com>`,
+      from: `Acme <onboarding@resend.dev>`,
       to: ['access@thebrightbyte.com'],
       subject: `Client brief from ${response.company_name}`,
       html:
