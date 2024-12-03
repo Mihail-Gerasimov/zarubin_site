@@ -20,7 +20,8 @@ const config = {
             '/insights',
             '/solutions',
             '/policy',
-            '/investments'
+            '/investments',
+            '/brief'
 
         ]
 
@@ -102,7 +103,8 @@ const config = {
                     '/*.jpg',
                     '/*.png',
                     '/*.webp',
-                    '/*.md'
+                    '/*.md',
+                    '/assets/images/**/*.webp'
                 ],
                 disallow: [
                     '/assets/*',
@@ -117,7 +119,8 @@ const config = {
                     '/*?',
                     '*?pr_prod_strat=',
                     '*?target_origin=',
-                    '/account/'
+                    '/account/',
+                    '!/assets/**/*.webp'
                 ]
             },
             {
@@ -130,7 +133,8 @@ const config = {
                     '/*.jpg',
                     '/*.png',
                     '/*.webp',
-                    '/*.md'
+                    '/*.md',
+                    '/assets/images/**/*.webp'
                 ],
                 disallow: [
                     '/assets/*',
@@ -145,7 +149,8 @@ const config = {
                     '/*?',
                     '*?pr_prod_strat=',
                     '*?target_origin=',
-                    '/account/'
+                    '/account/',
+                    '!/assets/**/*.webp'
                 ]
             },
             { userAgent: 'RookeeBot', disallow: '/' },
