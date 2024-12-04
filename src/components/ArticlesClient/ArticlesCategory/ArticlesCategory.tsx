@@ -4,6 +4,8 @@ interface ICategoryProps {
   setSelectedSubCategory: (value: string) => void;
   setSelectedTag: (value: string) => void;
   setCurrentPage: (value: number) => void;
+  selectedCategory: string;
+  selectedSubCategory: string;
 }
 
 interface ICategory {
@@ -17,11 +19,13 @@ export const ArticlesCategory = ({
   setSelectedSubCategory,
   setSelectedTag,
   setCurrentPage,
+  selectedCategory,
+  selectedSubCategory,
 }: ICategoryProps) => {
   return (
-    <div>
+    <div className='mt-[10px]'>
       {category && category.length !== 0 && (
-        <ul className='flex flex-col'>
+        <ul className='flex flex-col gap-[4px]'>
           <li className=''>
             <button
               type='button'
@@ -33,13 +37,16 @@ export const ArticlesCategory = ({
                 setSelectedTag('');
                 setCurrentPage(1);
               }}
-              className='font-proxima text-[16px] font-bold capitalize'
+              className={`font-proxima text-[16px] capitalize leading-[1.8] ${selectedCategory.trim().toLowerCase() === 'all' ? 'font-bold' : ''}`}
             >
               all
             </button>
           </li>
           {category.map((item) => (
-            <li key={item.category} className=''>
+            <li
+              key={item.category}
+              className='flex flex-col items-start gap-[2px]'
+            >
               <button
                 type='button'
                 name={item.category}
@@ -50,13 +57,16 @@ export const ArticlesCategory = ({
                   setSelectedTag('');
                   setCurrentPage(1);
                 }}
-                className='font-proxima text-[16px] font-bold capitalize'
+                className={`font-proxima text-[16px] capitalize duration-300 ${selectedCategory.trim().toLowerCase() === item.category.trim().toLowerCase() ? 'font-bold' : ''}`}
               >
                 {item.category}
               </button>
-              <ul>
+              <ul className='ml-[10px] flex flex-col gap-[2px]'>
                 {item.subCategory.map((el) => (
-                  <li key={el} className=''>
+                  <li
+                    key={el}
+                    className={`font-proxima text-[16px] leading-[1.8] duration-300 ${selectedSubCategory.trim().toLowerCase() === el?.trim().toLowerCase() ? 'font-bold' : ''}`}
+                  >
                     <button
                       type='button'
                       name={el ? el : ''}
@@ -67,8 +77,12 @@ export const ArticlesCategory = ({
                         setSelectedTag('');
                         setCurrentPage(1);
                       }}
+                      className='relative'
                     >
                       {el}
+                      <span
+                        className={`absolute bottom-0 left-0 block h-[1px] w-full duration-300 ${selectedSubCategory.trim().toLowerCase() === el?.trim().toLowerCase() ? 'bg-main-blue' : ''}`}
+                      />
                     </button>
                   </li>
                 ))}

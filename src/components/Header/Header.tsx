@@ -64,7 +64,7 @@ export const Header = ({
             onMenuItemHover={handleChangeActiveMenu}
           />
         </nav>
-        <ContactUsBtn dark={dark} />
+        <ContactUsBtn />
         {isMobile && (
           <>
             <MobileMenu

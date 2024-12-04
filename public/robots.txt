@@ -8,6 +8,7 @@ Allow: /*.jpg
 Allow: /*.png
 Allow: /*.webp
 Allow: /*.md
+Allow: /assets/images/**/*.webp
 Disallow: /assets/*
 Disallow: /_next/*
 Disallow: /tpost/*
@@ -21,6 +22,7 @@ Disallow: /*?
 Disallow: *?pr_prod_strat=
 Disallow: *?target_origin=
 Disallow: /account/
+Disallow: !/assets/**/*.webp
 
 # Googlebot
 User-agent: Googlebot
@@ -32,6 +34,7 @@ Allow: /*.jpg
 Allow: /*.png
 Allow: /*.webp
 Allow: /*.md
+Allow: /assets/images/**/*.webp
 Disallow: /assets/*
 Disallow: /_next/*
 Disallow: /tpost/*
@@ -45,6 +48,7 @@ Disallow: /*?
 Disallow: *?pr_prod_strat=
 Disallow: *?target_origin=
 Disallow: /account/
+Disallow: !/assets/**/*.webp
 
 # RookeeBot
 User-agent: RookeeBot

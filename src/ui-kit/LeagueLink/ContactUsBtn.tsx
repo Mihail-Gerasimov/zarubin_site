@@ -1,21 +1,12 @@
-import classNames from 'classnames';
 import Link from 'next/link';
-import { twMerge } from 'tailwind-merge';
 
-export const ContactUsBtn = ({ dark }: { dark: boolean }) => {
+export const ContactUsBtn = () => {
   return (
     <Link
-      href='#contacts'
-      className={twMerge(
-        classNames(
-          'font-proxima-reg hidden h-[46px] min-w-[162px] items-center justify-center rounded-[4px] font-proxima text-[20px] font-bold transition tablet:rounded-[8px] laptop-big:flex desktop:rounded-[6px]',
-          dark
-            ? 'border-2 border-solid border-emerald-300 text-white hover:border-[#7CFFCD] hover:bg-[#7CFFCD] hover:text-text-dark'
-            : 'bg-main-blue text-white hover:bg-main-blue-hover',
-        ),
-      )}
+      href='/brief'
+      className={`hidden w-fit items-center justify-center rounded-[6px] border-[1px] border-[#7cffcd] p-[14px_32px] font-proxima text-[18px] font-bold leading-[1] text-white duration-300 hover:bg-[#7CFFCD] hover:text-text-dark laptop-big:flex desktop:text-[20px]`}
     >
-      Contact us
+      Free strategy session
     </Link>
   );
 };
