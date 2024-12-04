@@ -2,13 +2,13 @@
 title: 'What stadium related services can be digitalised'
 description: 'Find out which stadium services can be digitised, from ticketing to fan engagement, and how these digital transformations are improving the fan experience at sports venues.'
 image: '/assets/images/expertise/it_service/digital_stadium_banner.webp'
-date: '03-12-2024'
+date: '04-12-2024'
 readingTime: ''
 category: 'Expertise'
 subCategory: 'It Service'
 tag: 'sports analytics systems, digital stadium services, digitisation of stadium services, sports venue technology'
 authorName: 'Vitaliy Zarubin'
-authorImage: ''/assets/images/author/avatar.png''
+authorImage: '/assets/images/author/avatar.png'
 ---
 
 # Digital Stadium Services: A revolution in sports venue technology
@@ -38,7 +38,7 @@ Modern stadium-linked apps are designed to put fans in control of their experien
 #### Real-Life Example: Tottenham Hotspur Stadium
 The venue’s app offers personalized notifications, fast-track entry, and even integrates with the local transit system to plan the journey home, making it a fan favorite.
 
-![Tottenham Hotspur Stadium by Tim Bechervaise](https://imgur.com/mFSHzXN)
+![Tottenham Hotspur Stadium by Tim Bechervaise](https://imgur.com/mFSHzXN.jpg)
 
 ## Smarter operations: Logistics, parking and retail
 
@@ -70,7 +70,7 @@ IoT sensors optimize energy consumption by:
 #### Example: Allianz Arena
 This stadium is a pioneer in energy efficiency, using solar panels and IoT systems to manage power usage effectively.
 
-![Allianz Arena by Herr Bohn](https://imgur.com/ihQzXfg)
+![Allianz Arena by Herr Bohn](https://imgur.com/ihQzXfg.jpg)
 
 ### Water Conservation
 Modern stadiums use IoT to monitor water usage:
