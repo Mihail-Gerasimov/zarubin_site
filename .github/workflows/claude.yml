@@ -56,7 +56,7 @@ jobs:
                 messages: [{
                   role: "user",
                   content: (
-                    "Review this code change and report only potential issues (bugs, security problems, or major improvements needed). If no issues found, respond with \"✅ No issues found\". Keep your response very brief.\n\nChanged Files:\n" + 
+                    "Review this code change and report only potential issues (bugs, security problems, or major improvements needed). Give me your answer in Russian. If no issues found, respond with \"✅ No issues found\". Keep your response very brief.\n\nChanged Files:\n" + 
                     ($files | fromjson) +
                     "\n\nChanges:\n" + 
                     ($diff | fromjson)
