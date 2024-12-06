@@ -128,9 +128,6 @@ export default function ExpertiseCase(props: { params: { slug: string } }) {
     ? post.data.image
     : '/assets/images/banner/default_img.webp';
 
-  // const { image = '/assets/images/banner/default_img.webp', readingTime } =
-  //   post.data;
-
   const hashtagRegex = /#[A-Za-z_]+/g;
   const regexFont = /<font color='(.+?)'>(.+?)<\/font>/g;
 
@@ -175,7 +172,6 @@ export default function ExpertiseCase(props: { params: { slug: string } }) {
           zIndex: '-1',
         }}
       ></div>
-      {/* <BackLink linkName='insights' /> */}
       <GoBackLink />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div className='relative flex w-full items-center justify-center'></div>
