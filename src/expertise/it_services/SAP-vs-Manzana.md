@@ -53,7 +53,7 @@ This makes sense, as sports CRM software helps organisations manage their relati
 ## Manzana CRM: Tailored for Local Markets  
 **Manzana** focuses on affordability and simplicity for regional teams.
 
-![manzana](https://https://imgur.com/tCxvR5J.jpg)
+![manzana](https://imgur.com/tCxvR5J.jpg)
 
 ### Manzana CRM features  
 The Manzana CRM solution is designed for mid-sized organisations, but is also targeted at emerging markets such as Russia and Eastern Europe. It is simple and at the same time less expensive than other solutions, making it perfect for organisations that need a simple way to implement CRM without additional investment.. Key features include:
