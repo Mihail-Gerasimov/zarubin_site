@@ -1,12 +1,12 @@
 'use client';
 
 import {
-  underscopeFormatter,
-  underscopeReverter,
+    underscopeFormatter,
+    underscopeReverter
 } from '@/src/utils/formatter/underscopeFormatter';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface ICategoryProps {
   categories: ICategory[];

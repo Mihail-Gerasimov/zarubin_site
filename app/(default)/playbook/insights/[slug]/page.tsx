@@ -15,7 +15,6 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
-// import NotFoundPage from '../not-found';
 import styles from './Post.module.css';
 
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
@@ -73,7 +72,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `${BASE_URL}/insights/${params.slug}`,
+      canonical: `${BASE_URL}/playbook/insights/${params.slug}`,
     },
     openGraph: {
       type: 'article',
@@ -82,7 +81,7 @@ export async function generateMetadata({
       ...openGraphImage,
       title,
       description,
-      url: `${BASE_URL}/insights/${params.slug}`,
+      url: `${BASE_URL}/playbook/insights/${params.slug}`,
       article: {
         publishedTime: publishedDateISO,
         modifiedTime: publishedDateISO,
@@ -98,7 +97,6 @@ export default function InsightsPostPage(props: { params: { slug: string } }) {
   const post = getPostContent(slug);
 
   if (!post) {
-    // return <NotFoundPage slug={slug} />;
     return null;
   }
 
@@ -154,7 +152,6 @@ export default function InsightsPostPage(props: { params: { slug: string } }) {
           zIndex: '-1',
         }}
       ></div>
-      {/* <BackLink linkName='insights' /> */}
       <GoBackLink />
       <div className='mx-[auto] max-w-[896px] pb-[30px]'>
         <div className='relative flex w-full items-center justify-center'></div>

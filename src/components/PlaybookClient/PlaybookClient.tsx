@@ -1,15 +1,15 @@
 'use client';
 
 import SearchImage from '@/public/assets/images/icons/search.svg';
+import { underscopeReverter } from '@/src/utils/formatter/underscopeFormatter';
 import { Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
 import { Pagination } from '../Pagination/Pagination';
-import { PlaybookCategory } from './PlaybookCategory/PlaybookCategory';
-import { usePathname, useSearchParams } from 'next/navigation';
-import { underscopeReverter } from '@/src/utils/formatter/underscopeFormatter';
-import { PlaybookCategoryDropDown } from './PlaybookCategoryDropDown/PlaybookCategoryDropDown';
 import { PlaybookCard } from './PlaybookCard/PlaybookCard';
+import { PlaybookCategory } from './PlaybookCategory/PlaybookCategory';
+import { PlaybookCategoryDropDown } from './PlaybookCategoryDropDown/PlaybookCategoryDropDown';
 
 interface IArticle {
   data: Post[];
@@ -42,7 +42,7 @@ export const PlaybookClient = ({ data, category }: IArticle) => {
   const tag = searchParams.get('tag');
 
   const pathnameArr = pathname.split('/').filter((item) => item !== '');
-  const pathTitle = pathnameArr.length < 2 ? 'all articles' : pathnameArr[1];
+  const pathTitle = pathnameArr.length < 2 ? 'all playbook' : pathnameArr[1];
 
   const [currentPage, setCurrentPage] = useState(1);
   const isLaptop = useMediaQuery('>=laptop-big');
@@ -116,7 +116,7 @@ export const PlaybookClient = ({ data, category }: IArticle) => {
   }, [currentPage]);
 
   return (
-    <div className='w-full'>
+    <div className='w-full px-[10px] py-[30px] tablet:px-[40px] laptop-big:py-[60px] desktop:px-[75px]'>
       <h2 className='w-full text-center font-unbound text-[24px] uppercase leading-[1.16] tablet:text-[45px] tablet:leading-[1] laptop-big:text-start laptop-big:text-[45px]'>
         {pathTitle}{' '}
         <span className='text-[18px] leading-[1.3] text-main-blue tablet:text-[20px] tablet:leading-[1.2]'>

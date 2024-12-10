@@ -1,12 +1,12 @@
 import { PlaybookClient } from '@/src/components/PlaybookClient/PlaybookClient';
-import { getAllArticles } from '@/src/utils/getAllArticles';
-import { getPostMetadata } from '@/src/utils/getPostMetadata';
-import { postsSorting } from '@/src/utils/postsSorting';
-import { pageMetadata } from '@/src/utils/pageMetadata';
-import { Metadata } from 'next';
-import { openGraphImage } from '@/src/utils/openGraphParams';
 import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
+import { getAllArticles } from '@/src/utils/getAllArticles';
+import { getPostMetadata } from '@/src/utils/getPostMetadata';
+import { openGraphImage } from '@/src/utils/openGraphParams';
+import { pageMetadata } from '@/src/utils/pageMetadata';
+import { postsSorting } from '@/src/utils/postsSorting';
+import { Metadata } from 'next';
 
 const title = pageMetadata.insights.title;
 const description = contentTrimming(pageMetadata.insights.description, 155);

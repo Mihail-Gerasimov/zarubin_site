@@ -9,7 +9,7 @@ export default function PlaybookLayout({
     <Section
       id='playbook'
       light
-      className='relative z-0 px-[10px] tablet:px-[40px] desktop:p-0 desktop:px-[40px]'
+      className='relative z-0 px-0 tablet:px-0 desktop:p-0 desktop:px-0'
     >
       {children}
     </Section>
