@@ -1,8 +1,8 @@
 import LinkArrow from '@/public/assets/images/icons/link_arrow.svg';
 import {
-    formatLink,
-    formatMenuItem,
-    formatMenuTitle
+  formatLink,
+  formatMenuItem,
+  formatMenuTitle,
 } from '@/src/utils/formattedMenuItem';
 import { ISubmenu } from '@/src/utils/types';
 import { DateTime } from 'luxon';
@@ -14,8 +14,6 @@ interface IProps {
 }
 
 export const ExpertiseSubMenuList = ({ data, onClick }: IProps) => {
-  console.log(data);
-
   return (
     <div>
       <div className='flex w-full flex-col gap-[20px] laptop-big:w-[464px]'>

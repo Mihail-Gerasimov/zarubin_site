@@ -46,7 +46,7 @@ const expertiseArticles = getExpertiseMetadata();
 const sortedExpertiseArticles = postsSorting(expertiseArticles);
 const categories = getAllArticles();
 
-export default function Expertise() {
+export default function ExpertisePage() {
   return (
     <div>
       <PlaybookClient data={sortedExpertiseArticles} category={categories} />

@@ -18,15 +18,7 @@ export const metadata: Metadata = {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL(`${BASE_URL}/news`),
-    types: {
-      'application/rss+xml': [
-        {
-          title: 'Bright Byte Expertise',
-          url: `${BASE_URL}/rss`,
-        },
-      ],
-    },
+    canonical: new URL(`${BASE_URL}/playbook`),
   },
   openGraph: {
     type: 'article',
@@ -35,13 +27,13 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title,
     description,
-    url: `${BASE_URL}/news`,
+    url: `${BASE_URL}/playbook`,
   },
   keywords,
 };
 
 const data = getAllArticles();
 
-export default function Article() {
+export default function PlaybookPage() {
   return <PlaybookClient data={data} category={data} />;
 }

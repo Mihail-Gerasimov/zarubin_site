@@ -46,7 +46,7 @@ const insightsArticles = getPostMetadata('src/posts');
 const sortedInsightsArticles = postsSorting(insightsArticles);
 const categories = getAllArticles();
 
-export default function Insights() {
+export default function InsightsPage() {
   return (
     <div>
       <PlaybookClient data={sortedInsightsArticles} category={categories} />
