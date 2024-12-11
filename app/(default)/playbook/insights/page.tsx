@@ -7,6 +7,7 @@ import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { postsSorting } from '@/src/utils/postsSorting';
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 
 const title = pageMetadata.insights.title;
 const description = contentTrimming(pageMetadata.insights.description, 155);
@@ -48,8 +49,8 @@ const categories = getAllArticles();
 
 export default function InsightsPage() {
   return (
-    <div>
+    <Suspense fallback={null}>
       <PlaybookClient data={sortedInsightsArticles} category={categories} />
-    </div>
+    </Suspense>
   );
 }

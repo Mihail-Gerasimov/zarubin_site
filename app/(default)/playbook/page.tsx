@@ -5,6 +5,7 @@ import { getAllArticles } from '@/src/utils/getAllArticles';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Metadata } from 'next';
+import { Suspense } from 'react';
 
 const title = pageMetadata.expertise.title;
 const description = contentTrimming(pageMetadata.expertise.description, 155);
@@ -35,5 +36,9 @@ export const metadata: Metadata = {
 const data = getAllArticles();
 
 export default function PlaybookPage() {
-  return <PlaybookClient data={data} category={data} />;
+  return (
+    <Suspense fallback={null}>
+      <PlaybookClient data={data} category={data} />
+    </Suspense>
+  );
 }

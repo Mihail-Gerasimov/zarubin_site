@@ -1,3 +1,5 @@
+'use client';
+
 import { underscopeFormatter } from '@/src/utils/formatter/underscopeFormatter';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
