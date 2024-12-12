@@ -3,8 +3,8 @@
 import defaultImg from '@/public/assets/images/banner/default_insights.webp';
 import { formattedDate } from '@/src/utils/formattedDate';
 import {
-    underscopeFormatter,
-    underscopeReverter
+  underscopeFormatter,
+  underscopeReverter,
 } from '@/src/utils/formatter/underscopeFormatter';
 import { Post } from '@/src/utils/types';
 import Image from 'next/image';
@@ -19,9 +19,9 @@ export const PlaybookCard = ({ data }: IArticleProps) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const subCategory = searchParams.get('sub_category');
+  const subCategory = searchParams.get('sub-category');
   const tag = searchParams.get('tag');
-  const allSearchParams = `${subCategory ? `sub_category=${subCategory}&` : ''}`;
+  const allSearchParams = `${subCategory ? `sub-category=${subCategory}&` : ''}`;
 
   const formatedDate = formattedDate(data.date);
   const tags = data.tag

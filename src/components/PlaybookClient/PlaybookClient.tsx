@@ -38,7 +38,7 @@ export const PlaybookClient = ({ data, category }: IArticle) => {
 
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const subCategory = searchParams.get('sub_category');
+  const subCategory = searchParams.get('sub-category');
   const tag = searchParams.get('tag');
 
   const pathnameArr = pathname.split('/').filter((item) => item !== '');
