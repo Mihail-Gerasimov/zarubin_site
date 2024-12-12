@@ -37,7 +37,7 @@ const data = getAllArticles();
 
 export default function PlaybookPage() {
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<div className='h-screen w-full bg-white'></div>}>
       <PlaybookClient data={data} category={data} />
     </Suspense>
   );

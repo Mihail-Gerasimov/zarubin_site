@@ -22,7 +22,7 @@ const paramsCorrect = (word: string | null | undefined) => {
 export const PlaybookCategory = ({ category }: ICategoryProps) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const subCategory = searchParams.get('subCategory');
+  const subCategory = searchParams.get('sub_category');
 
   return (
     <div className='mt-[10px]'>
@@ -42,7 +42,7 @@ export const PlaybookCategory = ({ category }: ICategoryProps) => {
               className='flex flex-col items-start gap-[2px]'
             >
               <Link
-                href={`/playbook/${item.category}${item.subCategory.length > 1 ? '?' : `?subCategory=${paramsCorrect(item.subCategory[0]).toLowerCase()}`}`}
+                href={`/playbook/${item.category}${item.subCategory.length > 1 ? '?' : `?sub_category=${paramsCorrect(item.subCategory[0]).toLowerCase()}`}`}
                 className={`font-proxima text-[16px] capitalize duration-300 ${pathname.includes(item.category.trim().toLowerCase()) ? 'font-bold' : ''}`}
               >
                 {item.category}
@@ -55,7 +55,7 @@ export const PlaybookCategory = ({ category }: ICategoryProps) => {
                       className={`font-proxima text-[16px] leading-[1.8] duration-300 ${el && subCategory && subCategory === underscopeFormatter(el.trim().toLowerCase()) ? 'font-bold' : ''}`}
                     >
                       <Link
-                        href={`/playbook/${item.category}?subCategory=${underscopeFormatter(el).toLowerCase()}`}
+                        href={`/playbook/${item.category}?sub_category=${underscopeFormatter(el).toLowerCase()}`}
                         className='relative'
                       >
                         {el}

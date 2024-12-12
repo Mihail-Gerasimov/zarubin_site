@@ -49,7 +49,7 @@ const categories = getAllArticles();
 
 export default function ExpertisePage() {
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<div className='h-screen w-full bg-white'></div>}>
       <PlaybookClient data={sortedExpertiseArticles} category={categories} />
     </Suspense>
   );

@@ -19,9 +19,9 @@ export const PlaybookCard = ({ data }: IArticleProps) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const subCategory = searchParams.get('subCategory');
+  const subCategory = searchParams.get('sub_category');
   const tag = searchParams.get('tag');
-  const allSearchParams = `${subCategory ? `subCategory=${subCategory}&` : ''}`;
+  const allSearchParams = `${subCategory ? `sub_category=${subCategory}&` : ''}`;
 
   const formatedDate = formattedDate(data.date);
   const tags = data.tag

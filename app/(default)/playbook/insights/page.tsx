@@ -49,8 +49,10 @@ const categories = getAllArticles();
 
 export default function InsightsPage() {
   return (
-    <Suspense fallback={null}>
-      <PlaybookClient data={sortedInsightsArticles} category={categories} />
-    </Suspense>
+    <div className='h-full w-full'>
+      <Suspense fallback={<div className='h-screen w-full bg-white'></div>}>
+        <PlaybookClient data={sortedInsightsArticles} category={categories} />
+      </Suspense>
+    </div>
   );
 }
