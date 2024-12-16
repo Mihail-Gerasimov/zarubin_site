@@ -1,9 +1,10 @@
 import { PlaybookClient } from '@/src/components/PlaybookClient/PlaybookClient';
 import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
-import { getAllArticles } from '@/src/utils/getAllArticles';
+import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
+import { postsSorting } from '@/src/utils/postsSorting';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
 
@@ -19,26 +20,35 @@ export const metadata: Metadata = {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL(`${BASE_URL}/playbook`),
+    canonical: new URL(`${BASE_URL}/playbook/expertise`),
+    types: {
+      'application/rss+xml': [
+        {
+          title: 'Bright Byte Expertise',
+          url: `${BASE_URL}/playbook/expertise/rss`,
+        },
+      ],
+    },
   },
   openGraph: {
-    type: 'article',
+    type: 'website',
     locale: 'en_US',
     siteName: 'BrightByte.com',
     ...openGraphImage,
     title,
     description,
-    url: `${BASE_URL}/playbook`,
+    url: `${BASE_URL}/playbook/expertise`,
   },
   keywords,
 };
 
-const data = getAllArticles();
+const expertiseArticles = getExpertiseMetadata();
+const sortedExpertiseArticles = postsSorting(expertiseArticles);
 
-export default function PlaybookPage() {
+export default function ExpertisePage() {
   return (
     <Suspense fallback={<div className='h-screen w-full bg-white'></div>}>
-      <PlaybookClient data={data} category={data} />
+      <PlaybookClient data={sortedExpertiseArticles} />
     </Suspense>
   );
 }

@@ -1,7 +1,6 @@
 import { PlaybookClient } from '@/src/components/PlaybookClient/PlaybookClient';
 import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
-import { getAllArticles } from '@/src/utils/getAllArticles';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
@@ -45,13 +44,12 @@ export const metadata: Metadata = {
 
 const insightsArticles = getPostMetadata('src/posts');
 const sortedInsightsArticles = postsSorting(insightsArticles);
-const categories = getAllArticles();
 
 export default function InsightsPage() {
   return (
     <div className='h-full w-full'>
       <Suspense fallback={<div className='h-screen w-full bg-white'></div>}>
-        <PlaybookClient data={sortedInsightsArticles} category={categories} />
+        <PlaybookClient data={sortedInsightsArticles} />
       </Suspense>
     </div>
   );

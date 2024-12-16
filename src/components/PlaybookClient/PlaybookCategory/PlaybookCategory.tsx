@@ -33,7 +33,7 @@ export const PlaybookCategory = ({ category }: ICategoryProps) => {
               href='/playbook'
               className={`font-proxima text-[16px] capitalize leading-[1.8] ${pathname === '/playbook' ? 'font-bold' : ''}`}
             >
-              all
+              playbook
             </Link>
           </li>
           {category.map((item) => (
