@@ -208,14 +208,13 @@ The final choice between Flutter and React Native depends on the requirements of
 
 These two frameworks are on par in terms of cross-platform support. The choice of mobile app development framework for 2024 will depend on your performance needs, your team, and the type of project. It pays to consider variables like community support, developers, and ecosystem maturity to make the best decision for your app.
 
-## What else to see on this topic
+### What else to see on this topic
 
 - [Nomtek](https://www.nomtek.com/blog/flutter-vs-react-native)
 - [Markovate](https://markovate.com/blog/flutter-vs-react-native/)
 - [Adapty](https://adapty.io/blog/flutter-vs-react-native/)
 -[TechAhead](https://www.techaheadcorp.com/blog/flutter-vs-react-native-in-2024-the-ultimate-showdown-for-app-development-dominance/)
 - [RedCat](https://redcat.dev/flutter-vs-react-native-the-comparison-2024/)
-- ---
 
 ### Source
 - [Flutter](https://flutter.dev/) 
