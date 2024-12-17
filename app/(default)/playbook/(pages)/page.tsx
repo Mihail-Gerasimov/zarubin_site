@@ -7,9 +7,9 @@ import { pageMetadata } from '@/src/utils/pageMetadata';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
 
-const title = pageMetadata.expertise.title;
-const description = contentTrimming(pageMetadata.expertise.description, 155);
-const keywords = pageMetadata.expertise.keywords;
+const title = pageMetadata.playbook.title;
+const description = contentTrimming(pageMetadata.playbook.description, 155);
+const keywords = pageMetadata.playbook.keywords;
 
 export const metadata: Metadata = {
   title,

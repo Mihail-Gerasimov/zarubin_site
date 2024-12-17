@@ -16,7 +16,7 @@ export const finalLink = (str: string) => {
 };
 
 export const getExpertiseList = () => {
-  const folder = 'src/expertise';
+  const folder = 'src/playbook/expertise';
   const directories = fs
     .readdirSync(folder, { withFileTypes: true })
     .filter((direct) => direct.isDirectory())

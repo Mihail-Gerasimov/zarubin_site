@@ -37,7 +37,7 @@ const findMarkdownFile = (dir: string, slug: string): string | null => {
 };
 
 const getPostContent = (slug: string) => {
-  const folder = 'src/insights/';
+  const folder = 'src/playbook/insights/';
   const file = findMarkdownFile(folder, slug);
 
   if (file) {

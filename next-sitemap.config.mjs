@@ -42,7 +42,7 @@ const config = {
             return arrayOfFiles
         }
 
-        const expertiseDir = path.join(process.cwd(), 'src/expertise')
+        const expertiseDir = path.join(process.cwd(), 'src/playbook/expertise')
         const expertiseFiles = getAllMarkdownFiles(expertiseDir)
 
         const dynamicExpertisePages = expertiseFiles.map((file) => {
@@ -50,7 +50,7 @@ const config = {
             return `/playbook/expertise/${fileName}`
         })
 
-        const blogDir = path.join(process.cwd(), 'src/insights')
+        const blogDir = path.join(process.cwd(), 'src/playbook/insights')
         const blogFiles = getAllMarkdownFiles(blogDir)
 
         const dynamicBlogPages = blogFiles.map((file) => {

@@ -22,7 +22,9 @@ export default function PlaybookLayout({
           <PlaybookHeading />
         </Suspense>
         <div className='mt-[24px] flex flex-col gap-[24px] tablet:mt-[40px] tablet:gap-[40px]  laptop-big:mt-[80px] laptop-big:flex-row laptop-big:gap-[30px]'>
-          <CategoryComponent category={data} />
+          <Suspense>
+            <CategoryComponent category={data} />
+          </Suspense>
           {children}
         </div>
       </div>
