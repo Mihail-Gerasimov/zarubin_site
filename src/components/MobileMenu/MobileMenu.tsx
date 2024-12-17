@@ -55,7 +55,7 @@ export const MobileMenu = ({
             {menuListLayer.map((item) => (
               <li key={item.id} className='flex flex-col'>
                 <div className='w-100 flex items-center justify-between gap-[10px]'>
-                  {item.name.toLowerCase() !== 'expertise' ? (
+                  {item.name.toLowerCase() !== 'playbook' ? (
                     <Link
                       href={item.link}
                       className={`${styles.menuLink} ${dark ? styles.dark : styles.light} font-proxima`}
@@ -89,7 +89,7 @@ export const MobileMenu = ({
               className='flex items-center gap-[12px] font-unbound text-[18px] font-bold uppercase text-white tablet:text-[20px]'
             >
               <Arrow className='h-[26px] w-[26px] rotate-[180deg] fill-white' />
-              Expertise
+              Playbook
             </button>
             <div className='mt-[24px]'>
               <ExpertiseSubMenuList data={expertiseSubMenu} onClick={onClick} />

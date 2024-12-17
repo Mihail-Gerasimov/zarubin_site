@@ -1,9 +1,9 @@
-import { getPostMetadata } from '@/src/utils/getPostMetadata';
+import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
 import { postsSorting } from '@/src/utils/postsSorting';
 import { InsightsClient } from './InsightsClient';
 
 export const Insights = () => {
-  const postMetadata = getPostMetadata('src/posts');
+  const postMetadata = getInsightsMetadata();
   const sortedPosts = postsSorting(postMetadata);
   return <InsightsClient posts={sortedPosts} />;
 };

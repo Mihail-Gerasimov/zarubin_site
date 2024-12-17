@@ -4,7 +4,7 @@ import SearchImage from '@/public/assets/images/icons/search.svg';
 import { Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import { useRouter } from 'next/navigation';
-import { useEffect, useMemo, useState } from 'react';
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import { PlaybookCategory } from '../PlaybookCategory/PlaybookCategory';
 import { PlaybookCategoryDropDown } from '../PlaybookCategoryDropDown/PlaybookCategoryDropDown';
 
@@ -65,10 +65,14 @@ export const CategoryComponent = ({ category }: ICategory) => {
           <>
             {isLaptop ? (
               <div>
-                <PlaybookCategory category={articlesCategory} />
+                <Suspense fallback={<div>Loading category....</div>}>
+                  <PlaybookCategory category={articlesCategory} />
+                </Suspense>
               </div>
             ) : (
-              <PlaybookCategoryDropDown categories={articlesCategory} />
+              <Suspense fallback={<div>Loading category....</div>}>
+                <PlaybookCategoryDropDown categories={articlesCategory} />
+              </Suspense>
             )}
           </>
         )}

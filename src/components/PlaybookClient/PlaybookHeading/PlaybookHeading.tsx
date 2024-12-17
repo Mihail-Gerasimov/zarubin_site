@@ -11,7 +11,7 @@ export const PlaybookHeading = () => {
 
   const pathnameArr = pathname.split('/').filter((item) => item !== '');
   const pathTitle = pathnameArr.length < 2 ? 'playbook' : pathnameArr[1];
-  //   const category = searchParams.get('sub-category');
+
   return (
     <div>
       <h2 className='w-full text-center font-unbound text-[24px] uppercase leading-[1.16] tablet:text-[45px] tablet:leading-[1] laptop-big:text-start laptop-big:text-[45px]'>

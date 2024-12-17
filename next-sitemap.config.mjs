@@ -50,7 +50,7 @@ const config = {
             return `/playbook/expertise/${fileName}`
         })
 
-        const blogDir = path.join(process.cwd(), 'src/posts')
+        const blogDir = path.join(process.cwd(), 'src/insights')
         const blogFiles = getAllMarkdownFiles(blogDir)
 
         const dynamicBlogPages = blogFiles.map((file) => {

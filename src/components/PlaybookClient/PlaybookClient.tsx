@@ -96,7 +96,7 @@ export const PlaybookClient = ({ data }: IArticle) => {
           )}
         </div>
       </div>
-      <div className='mt-[40px]'>
+      <div className='mt-[40px] overflow-hidden'>
         {isPaginationVisible && currentPosts.length !== 0 && (
           <Pagination
             currentPage={currentPage}

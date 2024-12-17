@@ -7,6 +7,7 @@ import { BASE_URL } from '@/src/utils/alias';
 import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
+import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
 import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
@@ -15,25 +16,47 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
+import path from 'path';
 import styles from './Post.module.css';
 
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
 
-const getPostContent = (slug: string) => {
-  const folder = 'src/posts/';
-  const file = folder + `${slug}.md`;
+const findMarkdownFile = (dir: string, slug: string): string | null => {
+  const files = fs.readdirSync(dir);
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    if (stat.isDirectory()) {
+      const result = findMarkdownFile(filePath, slug);
+      if (result) return result;
+    } else if (file.endsWith('.md') && file.replace('.md', '') === slug) {
+      return filePath;
+    }
+  }
+  return null;
+};
 
-  try {
-    const content = fs.readFileSync(file, 'utf8');
-    const matterResult = matter(content);
-    return matterResult;
-  } catch (error) {
+const getPostContent = (slug: string) => {
+  const folder = 'src/insights/';
+  const file = findMarkdownFile(folder, slug);
+
+  if (file) {
+    try {
+      const content = fs.readFileSync(file, 'utf8');
+      const matterResult = matter(content);
+      return matterResult;
+    } catch (error) {
+      console.error('Error reading file:', error);
+      return null;
+    }
+  } else {
+    console.error('File not found');
     return null;
   }
 };
 
 const getAllPosts = () => {
-  const postMetadata = getPostMetadata('src/posts');
+  const postMetadata = getInsightsMetadata();
   return postsSorting(postMetadata);
 };
 

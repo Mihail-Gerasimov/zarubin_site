@@ -1,7 +1,7 @@
 import { PlaybookClient } from '@/src/components/PlaybookClient/PlaybookClient';
 import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
-import { getPostMetadata } from '@/src/utils/getPostMetadata';
+import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { postsSorting } from '@/src/utils/postsSorting';
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   keywords,
 };
 
-const insightsArticles = getPostMetadata('src/posts');
+const insightsArticles = getInsightsMetadata();
 const sortedInsightsArticles = postsSorting(insightsArticles);
 
 export default function InsightsPage() {

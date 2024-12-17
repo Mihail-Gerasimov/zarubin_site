@@ -15,6 +15,10 @@
   font-weight: 700;
 }
 
+.markdown tr th {
+  text-align: start;
+}
+
 .research.markdown h2::before {
   margin-right: 12px;
   content: '';
