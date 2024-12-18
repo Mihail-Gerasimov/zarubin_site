@@ -9,7 +9,7 @@ export const GoBackLink = () => {
   return (
     <div className='absolute flex !h-full min-h-screen w-fit items-end'>
       <button
-        onClick={() => router.back()}
+        onClick={() => router.push('/playbook')}
         className='sticky bottom-4 left-0 z-[5] h-fit w-fit items-center gap-[10px] font-proxima text-[20px] font-bold text-text-dark desktop:flex'
       >
         <Back className='w-[24px]' />

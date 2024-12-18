@@ -1,17 +1,16 @@
 import { PlaybookClient } from '@/src/components/PlaybookClient/PlaybookClient';
 import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
-import { getAllArticles } from '@/src/utils/getAllArticles';
-import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
+import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { postsSorting } from '@/src/utils/postsSorting';
 import { Metadata } from 'next';
 import { Suspense } from 'react';
 
-const title = pageMetadata.expertise.title;
-const description = contentTrimming(pageMetadata.expertise.description, 155);
-const keywords = pageMetadata.expertise.keywords;
+const title = pageMetadata.insights.title;
+const description = contentTrimming(pageMetadata.insights.description, 155);
+const keywords = pageMetadata.insights.keywords;
 
 export const metadata: Metadata = {
   title,
@@ -21,12 +20,12 @@ export const metadata: Metadata = {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL(`${BASE_URL}/playbook/expertise`),
+    canonical: new URL(`${BASE_URL}/playbook/insights`),
     types: {
       'application/rss+xml': [
         {
-          title: 'Bright Byte Expertise',
-          url: `${BASE_URL}/playbook/expertise/rss`,
+          title: 'Bright Byte Insights',
+          url: `${BASE_URL}/playbook/insights/rss`,
         },
       ],
     },
@@ -38,19 +37,20 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title,
     description,
-    url: `${BASE_URL}/playbook/expertise`,
+    url: `${BASE_URL}/playbook/insights`,
   },
   keywords,
 };
 
-const expertiseArticles = getExpertiseMetadata();
-const sortedExpertiseArticles = postsSorting(expertiseArticles);
-const categories = getAllArticles();
+const insightsArticles = getInsightsMetadata();
+const sortedInsightsArticles = postsSorting(insightsArticles);
 
-export default function ExpertisePage() {
+export default function InsightsPage() {
   return (
-    <Suspense fallback={<div className='h-screen w-full bg-white'></div>}>
-      <PlaybookClient data={sortedExpertiseArticles} category={categories} />
-    </Suspense>
+    <div className='h-full w-full'>
+      <Suspense fallback={<div className='h-screen w-full bg-white'></div>}>
+        <PlaybookClient data={sortedInsightsArticles} />
+      </Suspense>
+    </div>
   );
 }

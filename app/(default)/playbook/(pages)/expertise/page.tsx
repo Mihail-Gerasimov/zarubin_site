@@ -1,18 +1,12 @@
-import { ExpertiseClient } from '@/src/components/Expertise/ExpertiseClient/ExpertiseClient';
-import { ExpertiseTitle } from '@/src/components/Expertise/ExpertiseTitle/ExpertiseTitle';
-import { Container } from '@/src/components/shared/Container/Container';
-import { Section } from '@/src/components/shared/Section/Section';
+import { PlaybookClient } from '@/src/components/PlaybookClient/PlaybookClient';
 import { BASE_URL } from '@/src/utils/alias';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
 import { postsSorting } from '@/src/utils/postsSorting';
-import { Post } from '@/src/utils/types';
 import { Metadata } from 'next';
-
-const expertisePosts: Post[] = getExpertiseMetadata();
-const sortedExpertisePosts = postsSorting([...expertisePosts]);
+import { Suspense } from 'react';
 
 const title = pageMetadata.expertise.title;
 const description = contentTrimming(pageMetadata.expertise.description, 155);
@@ -26,12 +20,12 @@ export const metadata: Metadata = {
     icon: '/assets/images/info/main_meta.png',
   },
   alternates: {
-    canonical: new URL(`${BASE_URL}/expertise`),
+    canonical: new URL(`${BASE_URL}/playbook/expertise`),
     types: {
       'application/rss+xml': [
         {
           title: 'Bright Byte Expertise',
-          url: `${BASE_URL}/expertise/rss`,
+          url: `${BASE_URL}/playbook/expertise/rss`,
         },
       ],
     },
@@ -43,20 +37,18 @@ export const metadata: Metadata = {
     ...openGraphImage,
     title,
     description,
-    url: `${BASE_URL}/expertise`,
+    url: `${BASE_URL}/playbook/expertise`,
   },
   keywords,
 };
 
-export default function Expertise() {
+const expertiseArticles = getExpertiseMetadata();
+const sortedExpertiseArticles = postsSorting(expertiseArticles);
+
+export default function ExpertisePage() {
   return (
-    <main className='bg-white text-text-dark'>
-      <Section id='title' className='overflow-x-hidden overflow-y-hidden'>
-        <Container className='relative'>
-          <ExpertiseTitle />
-          <ExpertiseClient expertiseData={sortedExpertisePosts} />
-        </Container>
-      </Section>
-    </main>
+    <Suspense fallback={<div className='h-screen w-full bg-white'></div>}>
+      <PlaybookClient data={sortedExpertiseArticles} />
+    </Suspense>
   );
 }

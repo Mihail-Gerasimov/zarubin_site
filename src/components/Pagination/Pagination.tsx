@@ -28,7 +28,7 @@ export const Pagination = ({
   const isPrevtDisable = currentPage !== 1;
 
   return (
-    <div className='flex w-full items-center justify-center gap-[4px]'>
+    <div className='flex w-full items-center justify-center gap-[4px] laptop-big:ml-[calc(50%_-_30%_-_30px)] laptop-big:justify-normal'>
       <button
         type='button'
         onClick={prevPage}

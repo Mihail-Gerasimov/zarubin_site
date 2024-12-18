@@ -32,8 +32,8 @@ const getMarkdownFiles = (dir: string): string[] => {
   return results;
 };
 
-export const getExpertiseMetadata = (): Post[] => {
-  const markdownFiles = getMarkdownFiles('src/playbook/expertise');
+export const getInsightsMetadata = (): Post[] => {
+  const markdownFiles = getMarkdownFiles('src/playbook/insights');
 
   const posts = markdownFiles.map((filePath: string): Post => {
     const fileContent = fs.readFileSync(filePath, 'utf8');
