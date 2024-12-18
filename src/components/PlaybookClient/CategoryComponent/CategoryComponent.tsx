@@ -3,8 +3,8 @@
 import SearchImage from '@/public/assets/images/icons/search.svg';
 import { Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
-import { useRouter, useSearchParams } from 'next/navigation';
-import { Suspense, useMemo } from 'react';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { Suspense, useEffect, useMemo, useState } from 'react';
 import { PlaybookCategory } from '../PlaybookCategory/PlaybookCategory';
 import { PlaybookCategoryDropDown } from '../PlaybookCategoryDropDown/PlaybookCategoryDropDown';
 
@@ -28,6 +28,8 @@ interface ICategory {
 export const CategoryComponent = ({ category }: ICategory) => {
   const isLaptop = useMediaQuery('>=laptop-big');
   const router = useRouter();
+  const pathname = usePathname();
+  const [inputValue, setInputValue] = useState('');
   const searchParams = useSearchParams();
   const searchQuery = searchParams.get('search-query');
 
@@ -42,20 +44,34 @@ export const CategoryComponent = ({ category }: ICategory) => {
 
   const articlesCategory = [expertiseCategory, insightsCategory];
 
-  const handleChangeSearchQuery = (searchQuery: string) => {
+  useEffect(() => {
     const query = new URLSearchParams();
-    query.set('search-query', searchQuery);
+    if (inputValue === '') {
+      query.set('search-query', '');
+      return;
+    }
+    query.set('search-query', inputValue);
     router.push(`/playbook?${query.toString()}`);
-  };
+  }, [inputValue, router]);
+
+  useEffect(() => {
+    if (!searchQuery) {
+      setInputValue('');
+      return;
+    }
+    setInputValue(searchQuery);
+  }, [pathname, searchQuery]);
 
   return (
     <div className='flex w-full flex-col gap-[12px] tablet:flex-row tablet:items-end tablet:gap-[64px] laptop-big:w-[30%] laptop-big:flex-col laptop-big:items-start laptop-big:gap-[10px]'>
       <div className='relative w-full laptop-big:w-full'>
         <input
           placeholder='Search article'
-          value={searchQuery ? searchQuery : ''}
+          value={inputValue}
+          // value={searchQuery || ''}
           className='w-full border-b-[1px] border-main-blue py-[10px] text-[12px] outline-none tablet:text-[16px]'
-          onChange={(e) => handleChangeSearchQuery(e.target.value)}
+          onChange={(e) => setInputValue(e.target.value)}
+          // onChange={(e) => handleChangeSearchQuety(e.target.value)}
         />
         <SearchImage className='absolute right-0 top-[50%] w-[16px] translate-y-[-50%] fill-main-blue' />
       </div>
