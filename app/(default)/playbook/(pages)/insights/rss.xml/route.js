@@ -23,7 +23,7 @@ export async function GET() {
       title: String(insight.title),
       description: String(insight.description),
       guid: `https://thebrightbyte.com/playbook/insights/${insight.slug}`,
-      url: `https://thebrightbyte.com//playbook/insights/${insight.slug}`,
+      url: `https://thebrightbyte.com/playbook/insights/${insight.slug}`,
       date: formattedDate,
     });
   });
