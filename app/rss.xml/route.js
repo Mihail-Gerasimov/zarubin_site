@@ -1,11 +1,11 @@
 import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
-import { getPostMetadata } from '@/src/utils/getPostMetadata';
+import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
 import { DateTime } from 'luxon';
 import { NextResponse } from 'next/server';
 import RSS from 'rss';
 
 const expertises = getExpertiseMetadata('src/expertise');
-const insights = getPostMetadata('src/posts');
+const insights = getInsightsMetadata();
 const expertiseData = expertises.map((item) => {
   return {
     dirName: 'expertise',

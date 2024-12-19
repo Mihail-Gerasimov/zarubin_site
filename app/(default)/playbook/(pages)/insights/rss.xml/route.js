@@ -1,8 +1,8 @@
-import { getPostMetadata } from '@/src/utils/getPostMetadata';
+import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
 import { DateTime } from 'luxon';
 import RSS from 'rss';
 
-const allInsights = getPostMetadata('src/posts');
+const allInsights = getInsightsMetadata();
 
 export async function GET() {
   const feed = new RSS({
@@ -23,7 +23,7 @@ export async function GET() {
       title: String(insight.title),
       description: String(insight.description),
       guid: `https://thebrightbyte.com/playbook/insights/${insight.slug}`,
-      url: `https://thebrightbyte.com//playbookinsights/${insight.slug}`,
+      url: `https://thebrightbyte.com//playbook/insights/${insight.slug}`,
       date: formattedDate,
     });
   });

@@ -8,7 +8,6 @@ import { cleanMetaTitle } from '@/src/utils/cleanMetaTitle';
 import { contentTrimming } from '@/src/utils/contentTrimming';
 import { formattedDate } from '@/src/utils/formattedDate';
 import { getInsightsMetadata } from '@/src/utils/getInsightsMetadata';
-import { getPostMetadata } from '@/src/utils/getPostMetadata';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { postsSorting } from '@/src/utils/postsSorting';
@@ -61,7 +60,7 @@ const getAllPosts = () => {
 };
 
 export const generateStaticParams = async () => {
-  const posts = getPostMetadata('src/posts');
+  const posts = getInsightsMetadata();
   return posts.map((post) => ({ slug: post.slug }));
 };
 
