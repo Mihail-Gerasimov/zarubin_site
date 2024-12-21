@@ -80,7 +80,7 @@ export const Header = ({
       </Container>
 
       <div
-        className={`relative z-[-1] mx-[auto] w-fit transform px-[20px] transition-all duration-300 ease-in-out ${dark ? 'bg-main-bg' : 'bg-white'} ${
+        className={`scrollbar-thin relative z-[-1] mx-[auto] max-h-[600px] w-fit transform overflow-y-scroll px-[20px] transition-all duration-300 ease-in-out ${dark ? 'bg-main-bg' : 'bg-white'} ${
           activeSubmenu ? 'translate-y-0' : '-translate-y-full'
         } ${isMobile ? 'hidden' : 'visible'}`}
       >

@@ -58,10 +58,10 @@ export const ExpertiseSubMenuList = ({ data, onClick }: IProps) => {
                 </ul>
               </div>
               <Link
-                href='/playbook/expertise'
+                href={`/playbook/expertise/${item.name}`}
                 className='group mt-[12px] flex items-center gap-[10px] whitespace-nowrap font-proxima text-[20px] font-bold leading-[1] text-main-blue hover:text-main-blue-hover laptop-big:mt-[20px]'
               >
-                Go to Expertise
+                Go to {formatMenuTitle(item.name)}
                 <LinkArrow className='h-[auto] w-[24px] fill-main-blue group-hover:fill-main-blue-hover' />
               </Link>
             </div>
