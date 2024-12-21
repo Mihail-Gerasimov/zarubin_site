@@ -1,8 +1,8 @@
 import LinkArrow from '@/public/assets/images/icons/link_arrow.svg';
 import {
-    formatLink,
-    formatMenuItem,
-    formatMenuTitle
+  formatLink,
+  formatMenuItem,
+  formatMenuTitle,
 } from '@/src/utils/formattedMenuItem';
 import { ISubmenu } from '@/src/utils/types';
 import { DateTime } from 'luxon';
@@ -58,7 +58,8 @@ export const ExpertiseSubMenuList = ({ data, onClick }: IProps) => {
                 </ul>
               </div>
               <Link
-                href={`/playbook/expertise/${item.name}`}
+                href={`/playbook/expertise?sub-category=${item.name}`}
+                onClick={onClick}
                 className='group mt-[12px] flex items-center gap-[10px] whitespace-nowrap font-proxima text-[20px] font-bold leading-[1] text-main-blue hover:text-main-blue-hover laptop-big:mt-[20px]'
               >
                 Go to {formatMenuTitle(item.name)}
