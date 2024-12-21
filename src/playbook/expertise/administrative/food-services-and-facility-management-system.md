@@ -5,7 +5,7 @@ image: '/assets/images/expertise/it_service/food_banner.webp'
 date: '14-12-2024'
 readingTime: ''
 category: 'Expertise'
-subCategory: 'Administrative Services'
+subCategory: 'Administrative'
 tag: 'Food Service Management System, Catering Management, Shift Management'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
@@ -13,7 +13,7 @@ authorImage: '/assets/images/author/avatar.png'
 
 # Facility Management Software: Ways to improve food services in remote workplaces
 
-*Food services and facility management systems are both types of high-end software designed specifically to streamline the functional and logistical processes of food services. These systems are particularly useful where projects are isolated and in hard-to-reach locations such as manufacturing, mining and large construction projects. Overall, they address the challenges of coordination, monitoring and optimisation and improve daily operations without significant expenditure.*
+_Food services and facility management systems are both types of high-end software designed specifically to streamline the functional and logistical processes of food services. These systems are particularly useful where projects are isolated and in hard-to-reach locations such as manufacturing, mining and large construction projects. Overall, they address the challenges of coordination, monitoring and optimisation and improve daily operations without significant expenditure._
 
 ## Some examples and some statistics from the field of Food Services and Facility Management System
 
@@ -42,6 +42,7 @@ In the extractive industry, solutions like eFacility manage food services and ac
 **Case study:** At a mining site in India, far from any developed area, eFacility reduced the efficiency of manual meal planning by more than 25% within a year. In addition, to eliminate complaints, an efficiently developed preference feedback system was implemented in the platform, allowing employees to submit the necessary meal preferences to improve service quality.
 
 ### Key Statistics:
+
 - According to the **International Facility Management Association (IFMA)**, implementing digital systems can improve operational efficiency by **25-40%**.
 - Approximately **70% of U.S. manufacturing companies** have adopted facility management systems.
 
@@ -50,30 +51,34 @@ In the extractive industry, solutions like eFacility manage food services and ac
 Several challenges that are worked on by facility management software are as follow:
 
 ### 1. Shift management inefficiency
+
 A very obvious problem faced by many organisations with branches in remote areas is shift management. There are major drawbacks to manual shift scheduling: Overlapping schedules, poor resource utilisation and shift conflicts that greatly reduce efficiency.
 
 - **Automated scheduling:** They do not include services such as automated shift scheduling as a task that can be done away with. For example, a mining company using a shift management solution achieved up to **25% fewer scheduling conflicts** and better allocation of labour.
 - **Improved resource allocation:** A key benefit of implementing shift management is that it can be used to identify where resources should be most heavily deployed, so that no department is over- or understaffed.
 
-*Example:* A cement manufacturing company has implemented shift management software in its organisation to assist in the distribution of work schedules to employees. By automating shift rotations and resources, the plant was able to minimise scheduling errors by **30%** and reduce operating times.
+_Example:_ A cement manufacturing company has implemented shift management software in its organisation to assist in the distribution of work schedules to employees. By automating shift rotations and resources, the plant was able to minimise scheduling errors by **30%** and reduce operating times.
 
 ### 2. Managing food services in complex facilities in developing regions
+
 It is quite a task to provide quality and healthy meals to employees working in different regions within the same day. Food service management systems solve this problem by using technology to plan the meals, keep records of the various inventories and organise the food delivery schedules.
 
 - **Menu planning and stock control:** Management systems make it easier for companies to plan food services in advance, while keeping an eye on stock levels of food being prepared. This helps to reduce food waste and ensure that food is always in stock.
 - **Customisable meal services:** Such systems take into account personal food requirements and palettes, which boosts employee morale.
 
-*Example:* An offshore oil rig selected a food service management system for the organisation's catering operations. By automating menu planning and optimising inventory and control, the rig is reducing food waste by **20%** and improving the quality of food offered to employees.
+_Example:_ An offshore oil rig selected a food service management system for the organisation's catering operations. By automating menu planning and optimising inventory and control, the rig is reducing food waste by **20%** and improving the quality of food offered to employees.
 
 ### 3. Administrative staff stress
+
 Many administrative staff in remote manufacturing and mining operations are under a heavy workload because almost every aspect of facility management, resource allocation or employee transportation is done manually.
 
 - **Centralised management:** A facilities management system provides structure to all organisational work, allowing the manager to manage systems from one location. This also eliminates the time spent in performing certain activities manually, thus making the overall operations efficient.
 - **Employee self-service platforms:** Employees can use self-service tools to enter and access their own schedules, request a service, and provide feedback, ultimately reducing the workload.
 
-*Example:* An evaluation of an integrated facilities management system showed that a large mining company was able to reduce its administrative workload by **40%**. By using self-service for scheduling and reporting, administrative staff were able to focus on more effective tasks rather than simply working their way through these processes.
+_Example:_ An evaluation of an integrated facilities management system showed that a large mining company was able to reduce its administrative workload by **40%**. By using self-service for scheduling and reporting, administrative staff were able to focus on more effective tasks rather than simply working their way through these processes.
 
 ### 4. Low employee engagement
+
 Fostering low employee engagement is another key issue, particularly in remote locations where employees often feel exhausted and lack adequate connection with managers. The lack of feedback, reward and accountability tools for employees exacerbates this.
 
 - Employees in large industrial organisations may not have a platform to voice their complaints and make suggestions on how to improve the meals, leading to dissatisfaction.
@@ -82,6 +87,7 @@ Fostering low employee engagement is another key issue, particularly in remote l
 The use of productivity and other administrative applications in the workplace gives employees a voice in the process, which drives motivation.
 
 ### 5. Impact on accounting and control
+
 Procuring and operating food services and facilities in various remote locations requires a rigorous, cohesive system of supply chain management, stock control and expenditure. Challenges include:
 
 - **Manual accounting errors:** Organisations using paper-based systems have problems with inconsistencies in meal counts, stock levels and subsidies. For example, in a large mining camp, there may be some hidden wastage that negatively impacts the company's bottom line.
@@ -90,6 +96,7 @@ Procuring and operating food services and facilities in various remote locations
 Integrated facilities management systems take on these roles to provide real-time information on stock usage and costs, thereby improving control and accountability.
 
 ### 6. Lack of feedback mechanisms
+
 This means that there are no means by which employees and management can communicate to close the loop on service quality and employee satisfaction. Examples include:
 
 - **Substandard food and accommodation:** Employment in offshore oil fields, where employers are far away from workers, workers may be provided with substandard food or accommodation and have no one to complain to.
@@ -98,6 +105,7 @@ This means that there are no means by which employees and management can communi
 The combination of capturing employee feedback will enable a company to respond to the issues raised and improve the quality of service delivery.
 
 ### 7. Productivity held back by logistics failures
+
 The inability to organise and plan how to manage food and facilities in a remote or highly complex environment will cause massive disruption to operations. Key challenges include:
 
 - **Delays in meal delivery:** Poor planning means that meals are delivered late, which does not help the energy levels or morale of staff during their shifts. Failure to adhere to shift schedules, for example due to overlaps, has a devastating impact on productivity.
@@ -106,6 +114,7 @@ The inability to organise and plan how to manage food and facilities in a remote
 Scheduling and management systems manage shifts and systems to handle food efficiently by avoiding complications with organisational complexity.
 
 ### 8. Lack of cost transparency
+
 Lack of cost transparency is always an issue when managing remote stations. Problems include:
 
 - **Hidden costs:** Manual reporting overlooks some of the indirect overheads such as waste, over-purchasing or administrative costs.
@@ -114,6 +123,7 @@ Lack of cost transparency is always an issue when managing remote stations. Prob
 Software solutions provide aggregation in the form of dashboards and reports that can help managers analyse and achieve optimal levels of spend visibility.
 
 Now that we have a little background on the subject, we can talk about who will benefit from such software.
+
 ## Key features of the system
 
 Let's look at the 4 main benefits of such systems:
@@ -125,7 +135,8 @@ Let's look at the 4 main benefits of such systems:
 3. **Cost monitoring and analysis.** The use of facilities management software in today's world comes with total cost analysis and automated reporting. This helps organisations to monitor their expenditure and look for ways to improve efficiency.
 
 4. **Recommendations and stakeholder satisfaction.** The feedback modules built into the facility management system make it easy to report concerns and track solutions within the employee-management relationship. This system improves the overall working environment for employees by addressing their concerns, especially in multi-million dollar industries such as food services and construction.
-Read more on the links below:
+   Read more on the links below:
+
 - [Facility Management Automation](https://traxinsights.com/2023/11/22/facility-management-automation/)
 - [How Digital Shift Scheduling Systems Transform Restaurant Workforce Management](https://grownu.com/blog/How-Digital-Shift-Scheduling-Systems-Transform-Restaurant-Workforce-Management)
 - [Elevating Facilities Management: Automation and Analytics in the Modern Era](https://www.bmtscorp.com/elevating-facilities-management-automation-and-analytics-in-the-modern-era/)
