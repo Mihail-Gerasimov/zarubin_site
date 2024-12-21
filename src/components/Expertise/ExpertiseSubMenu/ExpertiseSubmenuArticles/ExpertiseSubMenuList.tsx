@@ -1,8 +1,8 @@
 import LinkArrow from '@/public/assets/images/icons/link_arrow.svg';
 import {
-  formatLink,
-  formatMenuItem,
-  formatMenuTitle,
+    formatLink,
+    formatMenuItem,
+    formatMenuTitle
 } from '@/src/utils/formattedMenuItem';
 import { ISubmenu } from '@/src/utils/types';
 import { DateTime } from 'luxon';
