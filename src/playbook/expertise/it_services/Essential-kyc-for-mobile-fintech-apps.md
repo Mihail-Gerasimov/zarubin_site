@@ -6,7 +6,7 @@ date: '27-11-2024'
 readingTime: ''
 category: 'Expertise'
 subCategory: 'It Service'
-tag: 'KYC Mobile Apps, Fintech KYC, KYC Compliance Apps, Fintech Mobile Apps'
+tag: 'KYC Mobile Apps, Fintech KYC, KYC Compliance Apps, mobile Apps'
 authorName: 'Maria Ovseytseva'
 authorImage: '/assets/images/author/maria.webp'
 ---
