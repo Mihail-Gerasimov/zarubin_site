@@ -6,7 +6,7 @@ date: '11-11-2024'
 readingTime: '5 minutes'
 category: 'Expertise'
 subCategory: 'It Service'
-tag: 'Docker, Kubernetes, Graphana, High-Load Systems'
+tag: 'docker, infrastructure, kubernetes, graphana, high-Load Systems, devops'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
