@@ -6,7 +6,7 @@ date: '08-10-2024'
 readingTime: ''
 category: 'Expertise'
 subCategory: 'It Service'
-tag: ''
+tag: 'UIPath, Zapier, Integrations, Workflow management'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
