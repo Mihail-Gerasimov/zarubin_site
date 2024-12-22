@@ -6,7 +6,7 @@ date: '28-10-2024'
 readingTime: ''
 category: 'Insights'
 subCategory: 'Notes'
-tag: 'sports recognition systems, data tracking, event detection, automated sports analytics, challenges in sports AI, big data in sports'
+tag: 'sports analytics system, sports recognition systems, data tracking, Analytics, Sports, AI'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
