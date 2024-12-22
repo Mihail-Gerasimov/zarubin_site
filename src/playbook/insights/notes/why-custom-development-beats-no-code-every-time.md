@@ -6,7 +6,7 @@ date: '09-10-2024'
 readingTime: ''
 category: 'Insights'
 subCategory: 'Notes'
-tag: 'Custom development, No-Code, B2B, Mobile'
+tag: 'Zapier, No-Code, UIPath, Flutter, Workflow management, management'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
