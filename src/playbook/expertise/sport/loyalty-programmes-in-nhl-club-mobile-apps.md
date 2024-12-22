@@ -6,7 +6,7 @@ date: '05-12-2024'
 readingTime: ''
 category: 'Expertise'
 subCategory: 'Sport'
-tag: 'loyalty programmes, mobile loyalty apps, sports club loyalty programmes, mobile apps'
+tag: 'loyalty program, mobile apps, sports, NHL'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
