@@ -6,7 +6,7 @@ date: '04-04-2023'
 readingTime: ''
 category: 'Insights'
 subCategory: 'Notes'
-tag: 'IT'
+tag: 'IT, management, Flutter, Native, iOS, Swift'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
