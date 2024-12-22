@@ -6,7 +6,7 @@ date: '01-11-2024'
 readingTime: '5 minutes'
 category: 'Expertise'
 subCategory: 'It Service'
-tag: 'Rates, Sports, IT Consultancy, risk management, quality vs cost, AI, Copilot'
+tag: 'Flutter, php, Sports, IT Consultancy, risk management, quality vs cost, AI, Copilot'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
