@@ -6,7 +6,7 @@ date: '08-10-2024'
 readingTime: ''
 category: 'Expertise'
 subCategory: 'It Service'
-tag: 'Flutter, B2B, Cloud-based App, AWS'
+tag: 'Flutter, B2B, Cloud-based App, AWS, Cross-platform'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
