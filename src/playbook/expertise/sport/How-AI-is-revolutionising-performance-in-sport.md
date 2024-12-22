@@ -6,7 +6,7 @@ date: '01-12-2024'
 readingTime: ''
 category: 'Expertise'
 subCategory: 'Sport'
-tag: 'sports analytics system, sports data collection, AI, sports'
+tag: 'sports analytics system, sports data collection, AI, sports, coaching'
 authorName: 'Maria Ovseytseva'
 authorImage: '/assets/images/author/maria.webp'
 ---
