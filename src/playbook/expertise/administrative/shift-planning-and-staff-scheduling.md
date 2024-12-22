@@ -6,7 +6,7 @@ date: '09-12-2024'
 readingTime: ''
 category: 'Expertise'
 subCategory: 'Administrative'
-tag: 'shift planning, workforce planning, workforce tools, loyalty programme'
+tag: 'Shift Management, workforce planning, loyalty program'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
