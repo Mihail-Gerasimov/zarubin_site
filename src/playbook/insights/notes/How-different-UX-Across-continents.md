@@ -6,7 +6,7 @@ date: '24-11-2024'
 readingTime: ''
 category: 'Insights'
 subCategory: 'Notes'
-tag: 'ux development, user experience design, global ux strategies, regional ux practices, ux best practices'
+tag: 'UX/UI, web design, mobile apps'
 authorName: 'Maria Ovseytseva, Irina Filatova'
 authorImage: '/assets/images/author/maria.webp'
 ---
