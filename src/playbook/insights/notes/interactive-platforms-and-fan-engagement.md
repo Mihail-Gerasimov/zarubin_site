@@ -6,7 +6,7 @@ date: '03-08-2023'
 readingTime: ''
 category: 'Insights'
 subCategory: 'Notes'
-tag: 'Sports'
+tag: 'Sports, loyalty program, management'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
