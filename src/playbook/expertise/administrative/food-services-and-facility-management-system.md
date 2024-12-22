@@ -6,7 +6,7 @@ date: '14-12-2024'
 readingTime: ''
 category: 'Expertise'
 subCategory: 'Administrative'
-tag: 'Food Service Management System, Catering Management, Shift Management'
+tag: 'Workflow management, BMS, Food services, Shift Management'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
