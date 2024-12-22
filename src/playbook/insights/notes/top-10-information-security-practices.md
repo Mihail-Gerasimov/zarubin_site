@@ -6,7 +6,7 @@ date: '12-10-2024'
 readingTime: ''
 category: 'Insights'
 subCategory: 'Notes'
-tag: 'Data security, Infrastructure, Mobile App encryption, GDPR'
+tag: 'Information security, Infrastructure, Mobile App encryption, GDPR, devops'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
