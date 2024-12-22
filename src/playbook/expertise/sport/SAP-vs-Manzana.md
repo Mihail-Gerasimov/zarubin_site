@@ -6,7 +6,7 @@ date: '09-12-2024'
 readingTime: ''
 category: 'Expertise'
 subCategory: 'Sport'
-tag: 'SAP vs Manzana, CRM, sports CRM, SAP for sports, solutions for sports'
+tag: 'SAP, Manzana, CRM, sports CRM, sports'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
