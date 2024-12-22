@@ -6,7 +6,7 @@ date: '13-10-2024'
 readingTime: ''
 category: 'Insights'
 subCategory: 'Notes'
-tag: 'Hackers here, cyber attack recovery, server hacking, data protection'
+tag: 'Information security, cyber attack recovery, server hacking, data protection'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
