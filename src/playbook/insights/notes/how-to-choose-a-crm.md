@@ -6,7 +6,7 @@ date: '30-03-2023'
 readingTime: ''
 category: 'Insights'
 subCategory: 'Notes'
-tag: 'IT'
+tag: 'CRM, Manzana, Loyalty program, management'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
