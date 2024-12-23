@@ -15,14 +15,14 @@ export const finalLink = (str: string) => {
   return splitStr[0];
 };
 
-export const getExpertiseList = () => {
-  const folder = 'src/playbook/expertise';
+export const getArticlesList = (articlePath: string) => {
+  const folder = `src/playbook/${articlePath}`;
   const directories = fs
     .readdirSync(folder, { withFileTypes: true })
     .filter((direct) => direct.isDirectory())
     .map((direct) => direct.name);
 
-  const expertiseList = directories.map((directory) => {
+  const articleList = directories.map((directory) => {
     const files = fs
       .readdirSync(path.join(folder, directory))
       .filter((file) => file.endsWith('.md'))
@@ -42,5 +42,5 @@ export const getExpertiseList = () => {
       folderItems: files,
     };
   });
-  return expertiseList;
+  return articleList;
 };

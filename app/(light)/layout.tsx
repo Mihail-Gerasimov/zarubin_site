@@ -1,6 +1,6 @@
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
-import { getExpertiseList } from '@/src/utils/expertiseMenu';
+import { getArticlesList } from '@/src/utils/articlesMenu';
 import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
 import classNames from 'classnames';
 import localFont from 'next/font/local';
@@ -8,7 +8,7 @@ import Script from 'next/script';
 import 'swiper/css';
 import '../globals.css';
 
-const expertiseSubMenu = getExpertiseList();
+const expertiseSubMenu = getArticlesList('expertise');
 const expertiseMetadata = getExpertiseMetadata();
 
 const Unbound = localFont({

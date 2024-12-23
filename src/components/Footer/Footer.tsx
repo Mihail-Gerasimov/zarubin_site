@@ -1,4 +1,4 @@
-import { getExpertiseList } from '@/src/utils/expertiseMenu';
+import { getArticlesList } from '@/src/utils/articlesMenu';
 import Link from 'next/link';
 import { Container } from '../shared/Container/Container';
 import { FooterExpertiseMenu } from './FooterExpertiseMenu/FooterExpertiseMenu';
@@ -6,7 +6,7 @@ import { FooterLinksInfo } from './FooterLinksInfo/FooterLinksInfo';
 import { FooterNavMenu } from './FooterNavMenu/FooterNavMenu';
 
 export const Footer = () => {
-  const expertiseMenu = getExpertiseList();
+  const expertiseMenu = getArticlesList('expertise');
 
   return (
     <footer className='w-full bg-main-bg py-[40px] text-[14px] leading-[1.2] tablet:py-[60px] desktop:text-[18px] desktop:leading-[1.1]'>

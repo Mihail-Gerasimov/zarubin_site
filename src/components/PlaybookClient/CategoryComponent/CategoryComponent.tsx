@@ -68,10 +68,8 @@ export const CategoryComponent = ({ category }: ICategory) => {
         <input
           placeholder='Search article'
           value={inputValue}
-          // value={searchQuery || ''}
           className='w-full border-b-[1px] border-main-blue py-[10px] text-[12px] outline-none tablet:text-[16px]'
           onChange={(e) => setInputValue(e.target.value)}
-          // onChange={(e) => handleChangeSearchQuety(e.target.value)}
         />
         <SearchImage className='absolute right-0 top-[50%] w-[16px] translate-y-[-50%] fill-main-blue' />
       </div>

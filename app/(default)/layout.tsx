@@ -1,7 +1,7 @@
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
-import { getExpertiseList } from '@/src/utils/expertiseMenu';
-import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
+import { getArticlesList } from '@/src/utils/articlesMenu';
+import { getAllArticles } from '@/src/utils/getAllArticles';
 import classNames from 'classnames';
 import localFont from 'next/font/local';
 import Script from 'next/script';
@@ -9,8 +9,8 @@ import React from 'react';
 import 'swiper/css';
 import '../globals.css';
 
-const expertiseSubMenu = getExpertiseList();
-const expertiseMetadata = getExpertiseMetadata();
+const expertiseSubMenu = getArticlesList('expertise');
+const playbookMetaData = getAllArticles();
 
 const Unbound = localFont({
   src: [
@@ -96,7 +96,7 @@ export default function RootLayout({
       <body className={`flex flex-col bg-main-bg text-white ${bodyClassname}`}>
         <Header
           expertiseSubmenu={expertiseSubMenu}
-          expertiseMetadata={expertiseMetadata}
+          expertiseMetadata={playbookMetaData}
         />
         {children}
         <Footer />

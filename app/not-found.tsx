@@ -1,11 +1,11 @@
 import { Footer } from '@/src/components/Footer/Footer';
 import { Header } from '@/src/components/Header/Header';
 import { NotFound } from '@/src/components/NotFound/NotFound';
-import { getExpertiseList } from '@/src/utils/expertiseMenu';
+import { getArticlesList } from '@/src/utils/articlesMenu';
 import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
 import './globals.css';
 
-const expertiseSubMenu = getExpertiseList();
+const expertiseSubMenu = getArticlesList('expertise');
 const expertiseMetadata = getExpertiseMetadata();
 
 export default function NotFoundPage() {
