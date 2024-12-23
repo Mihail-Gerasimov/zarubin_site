@@ -1,4 +1,4 @@
-import { finalLink, formatMenuItem } from '@/src/utils/expertiseMenu';
+import { finalLink, formatMenuItem } from '@/src/utils/articlesMenu';
 import { formatMenuTitle } from '@/src/utils/formattedMenuItem';
 import { ISubmenu } from '@/src/utils/types';
 import { DateTime } from 'luxon';

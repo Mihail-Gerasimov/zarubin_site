@@ -22,9 +22,7 @@ export const ExpertiseSubMenuList = ({ data, onClick }: IProps) => {
           return (
             <div key={item.name} className={`flex flex-col p-[5px] text-white`}>
               <h3 className='flex w-full flex-1 items-center justify-between text-left font-proxima text-[20px] font-bold'>
-                {item.name === 'it_services'
-                  ? 'IT Services'
-                  : formatMenuTitle(item.name)}
+                {formatMenuTitle(item.name)}
               </h3>
               <div
                 className={`relative mt-[10px] flex w-full transform gap-x-[20px] gap-y-[20px] overflow-hidden bg-dark-blue p-[20px] px-[20px]`}

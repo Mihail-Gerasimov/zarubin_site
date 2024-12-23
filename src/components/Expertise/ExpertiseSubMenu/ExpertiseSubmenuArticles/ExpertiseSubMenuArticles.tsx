@@ -23,7 +23,7 @@ export const ExpertiseSubmenuArticles = ({ data, onClick }: IData) => {
     <div className='flex w-full flex-col gap-[20px]'>
       <div className='group flex items-center justify-between'>
         <p className='font-unbound text-[20px] font-bold uppercase leading-[1.4] text-white'>
-          The latest expertise
+          The latest in Playbook
         </p>
       </div>
       <div className='mx-0 flex w-full px-0'>
