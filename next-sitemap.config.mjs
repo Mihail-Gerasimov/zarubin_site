@@ -75,7 +75,7 @@ const config = {
             ...dynamicExpertisePages.map(loc => ({
                 loc,
                 changefreq: 'daily',
-                priority: 1.0,
+                priority: 0.8,
             })),
             ...dynamicBlogPages.map(loc => ({
                 loc,
