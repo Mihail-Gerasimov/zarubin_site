@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function NewProductsPage() {
   return (
-    <main className='flex flex-col overflow-hidden bg-white'>
+    <div className='flex flex-col gap-[60px] bg-white'>
       <Section id='hero' light className='desktop:py-[60px]'>
         <Container>
           <Products products={products} />
@@ -53,6 +53,6 @@ export default function NewProductsPage() {
           <ContactForm />
         </Container>
       </Section>
-    </main>
+    </div>
   );
 }

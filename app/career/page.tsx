@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 
 export default async function CareerPage() {
   return (
-    <main className='flex flex-col gap-20 overflow-hidden'>
+    <>
       <Section
         id='hero'
         className={`${styles.heroContainer} relative tablet:px-0`}
@@ -115,6 +115,6 @@ export default async function CareerPage() {
           <ContactForm />
         </Container>
       </Section>
-    </main>
+    </>
   );
 }

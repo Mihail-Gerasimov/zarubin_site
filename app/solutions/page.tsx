@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 export default async function BusinessObjectivesPage() {
   const casesMetadata = getCaseMetadata('src/cases');
   return (
-    <main className='flex flex-col gap-20 overflow-hidden'>
+    <>
       <Section id='hero' className='relative py-0 tablet:py-0 desktop:pb-0'>
         <Container>
           <Hero />
@@ -82,6 +82,6 @@ export default async function BusinessObjectivesPage() {
           <ContactForm />
         </Container>
       </Section>
-    </main>
+    </>
   );
 }
