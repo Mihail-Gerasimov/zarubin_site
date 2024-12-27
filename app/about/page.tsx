@@ -68,9 +68,12 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main className='flex flex-col gap-[60px] overflow-hidden'>
-      <Section id='hero' className='py-0 tablet:py-0 desktop:py-0'>
-        <Container className='desktop:px-[20px]'>
+    <>
+      <Section
+        id='hero'
+        className='mt-[60px] px-0  py-0  tablet:py-0 desktop:py-0'
+      >
+        <Container className='tablet:px-0 desktop:px-0 desktop:py-0'>
           <Hero />
         </Container>
       </Section>
@@ -135,6 +138,6 @@ export default function About() {
           </Container>
         </Section>
       </div>
-    </main>
+    </>
   );
 }

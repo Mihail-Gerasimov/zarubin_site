@@ -19,13 +19,11 @@ const DynamicExpertiseMenu = dynamic(() =>
 );
 
 interface Props {
-  dark?: boolean;
   expertiseSubmenu: ISubmenu[];
   expertiseMetadata: Post[];
 }
 
 export const Header = ({
-  dark = true,
   expertiseSubmenu = [],
   expertiseMetadata = [],
 }: Props) => {
@@ -50,16 +48,15 @@ export const Header = ({
   return (
     <header
       onMouseLeave={() => handleChangeActiveMenu(false)}
-      className={`sticky top-0 z-50 mx-auto h-[100px] w-full ${dark ? 'bg-main-bg' : 'bg-white'}`}
+      className={`sticky top-0 z-50 mx-auto h-[100px] w-full bg-main-bg`}
     >
       <Container
-        className={`relative flex h-full items-center overflow-hidden ${dark ? 'bg-main-bg' : 'bg-white'}`}
+        className={`relative flex h-full items-center overflow-hidden bg-main-bg`}
       >
-        <Logo dark={dark} />
+        <Logo />
         <nav className='mx-[auto] w-fit'>
           <MainList
             list={menuListLayer}
-            dark={dark}
             activeSubmenu={activeSubmenu}
             onMenuItemHover={handleChangeActiveMenu}
           />
@@ -70,17 +67,16 @@ export const Header = ({
             <MobileMenu
               isOpen={isOpen}
               onClick={() => setIsOpen(false)}
-              dark={dark}
               expertiseSubMenu={expertiseSubmenu}
               data={expertiseMetadata}
             />
-            <BurgerIcon isOpen={isOpen} setIsOpen={handleOpen} dark={dark} />
+            <BurgerIcon isOpen={isOpen} setIsOpen={handleOpen} />
           </>
         )}
       </Container>
 
       <div
-        className={`scrollbar-thin relative z-[-1] mx-[auto] max-h-[600px] w-fit transform overflow-y-scroll px-[20px] transition-all duration-300 ease-in-out ${dark ? 'bg-main-bg' : 'bg-white'} ${
+        className={`scrollbar-thin relative z-[-1] mx-[auto] max-h-[600px] w-fit transform overflow-y-scroll bg-main-bg px-[20px] transition-all duration-300 ease-in-out ${
           activeSubmenu ? 'translate-y-0' : '-translate-y-full'
         } ${isMobile ? 'hidden' : 'visible'}`}
       >

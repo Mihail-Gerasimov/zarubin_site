@@ -12,7 +12,6 @@ import styles from './MobileMenu.module.css';
 interface Props {
   isOpen: boolean;
   onClick: () => void;
-  dark?: boolean;
   expertiseSubMenu: ISubmenu[];
   data: Post[];
 }
@@ -20,7 +19,6 @@ interface Props {
 export const MobileMenu = ({
   isOpen,
   onClick,
-  dark = true,
   expertiseSubMenu,
   data,
 }: Props) => {
@@ -43,7 +41,7 @@ export const MobileMenu = ({
     <div
       className={classNames(
         styles.menuWrapper,
-        dark ? styles.dark : styles.light,
+        styles.dark,
         isOpen && styles.active,
       )}
     >
@@ -58,7 +56,7 @@ export const MobileMenu = ({
                   {item.name.toLowerCase() !== 'playbook' ? (
                     <Link
                       href={item.link}
-                      className={`${styles.menuLink} ${dark ? styles.dark : styles.light} font-proxima`}
+                      className={`${styles.menuLink} ${styles.dark} font-proxima`}
                       onClick={onClick}
                     >
                       {item.name}
@@ -69,7 +67,7 @@ export const MobileMenu = ({
                       onClick={() =>
                         setIsOpenexpertiseSubmenu(!isOpenExpertiseSubMenu)
                       }
-                      className={`${styles.menuLink} ${dark ? styles.dark : styles.light} font-proxima`}
+                      className={`${styles.menuLink} ${styles.dark} font-proxima`}
                     >
                       {item.name}
                     </button>

@@ -129,7 +129,7 @@ export default async function CasePage(props: { params: { slug: string } }) {
     }));
 
   return (
-    <main className='flex flex-col gap-[60px] overflow-hidden'>
+    <>
       <Section id='hero' className='relative py-0 tablet:py-0 desktop:pb-0'>
         <Container>
           <Hero title={title} tag={tag} industries={industries} />
@@ -182,6 +182,6 @@ export default async function CasePage(props: { params: { slug: string } }) {
           <ContactForm />
         </Container>
       </Section>
-    </main>
+    </>
   );
 }

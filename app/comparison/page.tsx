@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
 export default async function ComparisonPage() {
   return (
-    <main className='flex flex-col gap-20 overflow-hidden'>
+    <>
       <Section id='hero' className={`${styles.heroContainer} relative`}>
         <Container>
           <Hero />
@@ -71,6 +71,6 @@ export default async function ComparisonPage() {
           </Container>
         </Section>
       </div>
-    </main>
+    </>
   );
 }
