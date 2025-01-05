@@ -1,14 +1,14 @@
 'use client';
 
-import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
-import { Section } from '../../shared/Section/Section';
-import { useEffect, useState } from 'react';
 import firstImage from '@/public/assets/images/main/heroSlide/first.webp';
 import secondImage from '@/public/assets/images/main/heroSlide/second.webp';
+import useMediaQuery from '@/src/utils/useMediaQuery';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
-import useMediaQuery from '@/src/utils/useMediaQuery';
+import { Section } from '../../shared/Section/Section';
 
 interface IIconsProp {
   icons: {

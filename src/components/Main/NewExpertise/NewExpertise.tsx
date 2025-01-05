@@ -1,9 +1,9 @@
 // import { areasData } from '@/src/utils/DataLayers/NewExpertiseData';
+import Image from 'next/image';
+import Link from 'next/link';
 import { NextLinePreposition } from '../../NextLinePreposition/NextLinePreposition';
 import { Container } from '../../shared/Container/Container';
 import { Section } from '../../shared/Section/Section';
-import Image from 'next/image';
-import Link from 'next/link';
 
 interface IData {
   data: {

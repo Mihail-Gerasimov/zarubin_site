@@ -6,8 +6,8 @@ import useMediaQuery from '@/src/utils/useMediaQuery';
 import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
-import { NewInsightsCard } from './NewInsightsCard/NewInsightsCard';
 import { Section } from '../../shared/Section/Section';
+import { NewInsightsCard } from './NewInsightsCard/NewInsightsCard';
 
 interface Props {
   posts: Post[];

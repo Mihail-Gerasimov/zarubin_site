@@ -67,7 +67,7 @@ export const NewForm = () => {
           placeholder='Name'
           value={formik.values.name}
           required
-          className='placeholder-gray-placeholder w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[18px] leading-[2.4] text-white outline-none focus:border-main-orange tablet:text-[24px] tablet:leading-[1.8] desktop:text-[26px] desktop:leading-[1.7]'
+          className='w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[18px] leading-[2.4] text-white placeholder-gray-placeholder outline-none focus:border-main-orange tablet:text-[24px] tablet:leading-[1.8] desktop:text-[26px] desktop:leading-[1.7]'
           onChange={formik.handleChange}
         />
         <input
@@ -75,7 +75,7 @@ export const NewForm = () => {
           name='email'
           value={formik.values.email}
           placeholder='E-mail'
-          className='placeholder-gray-placeholder w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[18px] leading-[2.4] text-white outline-none focus:border-main-orange tablet:text-[24px] tablet:leading-[1.8] desktop:text-[26px] desktop:leading-[1.7]'
+          className='w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[18px] leading-[2.4] text-white placeholder-gray-placeholder outline-none focus:border-main-orange tablet:text-[24px] tablet:leading-[1.8] desktop:text-[26px] desktop:leading-[1.7]'
           required
           onChange={formik.handleChange}
         />
@@ -88,7 +88,7 @@ export const NewForm = () => {
           }}
           value={formik.values.phone}
           placeholder='Phone'
-          className='placeholder-gray-placeholder w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[18px] leading-[2.4] text-white outline-none focus:border-main-orange tablet:text-[24px] tablet:leading-[1.8] desktop:text-[26px] desktop:leading-[1.7]'
+          className='w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[18px] leading-[2.4] text-white placeholder-gray-placeholder outline-none focus:border-main-orange tablet:text-[24px] tablet:leading-[1.8] desktop:text-[26px] desktop:leading-[1.7]'
           required
           onChange={formik.handleChange}
         />
@@ -96,7 +96,7 @@ export const NewForm = () => {
           name='details'
           value={formik.values.details}
           placeholder='Request'
-          className='placeholder-gray-placeholder w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[18px] leading-[2.4] text-white outline-none focus:border-main-orange tablet:text-[24px] tablet:leading-[1.8] desktop:text-[26px] desktop:leading-[1.7]'
+          className='w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[18px] leading-[2.4] text-white placeholder-gray-placeholder outline-none focus:border-main-orange tablet:text-[24px] tablet:leading-[1.8] desktop:text-[26px] desktop:leading-[1.7]'
           rows={1}
           onChange={formik.handleChange}
           required
