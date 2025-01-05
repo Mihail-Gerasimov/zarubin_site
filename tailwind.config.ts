@@ -81,6 +81,7 @@ const config: Config = {
         'dark-blue': '#000A25',
         'main-gray': 'rgba(255, 255, 255, 0.30)',
         'main-disabled': '#DCDDEB',
+        'main-orange': '#F8AE3C',
         dark: '#1B2541',
         'text-gray': 'rgba(1, 12, 44, 0.40)',
         'text-dark': '#010C2C',
@@ -93,6 +94,9 @@ const config: Config = {
         'light-bg': '#1E293B',
         'btn-col': '#ECEFFA',
         'card-bg': '#F5F5F5',
+        'second-gray': '#494949',
+        'light-gray': '#AEAEAE',
+        'gray-placeholder': 'A5A5A5',
       },
     },
     screens: {
