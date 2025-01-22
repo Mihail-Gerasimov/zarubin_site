@@ -80,6 +80,7 @@ const config: Config = {
         'main-blue-hover': '#1858FD',
         'dark-blue': '#000A25',
         'main-gray': 'rgba(255, 255, 255, 0.30)',
+        'main-silver': 'rgba(239, 240, 246, 1)',
         'main-disabled': '#DCDDEB',
         'main-orange': '#F8AE3C',
         'orange-light': '#FFCC47',
