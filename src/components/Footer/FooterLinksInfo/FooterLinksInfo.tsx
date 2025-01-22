@@ -5,20 +5,22 @@ import { AddressInfo } from './AddressInfo';
 
 export const FooterLinksInfo = () => {
   return (
-    <div className='flex justify-between laptop:flex-col'>
+    <div className='flex w-full flex-col justify-between'>
       <div className='flex flex-col text-white'>
         <Link aria-label='Go to the main page' href='/'>
           <LightMainLogo className='h-[54px] w-[auto] tablet:h-[80px] desktop:h-[92px]' />
         </Link>
-        <Link
-          href='mailto:access@thebrightbyte.com'
-          className='mt-[24px] font-proxima text-[18px] font-bold text-white tablet:mt-[40px] laptop:mt-[60px] desktop:text-[26px]'
-        >
-          access@thebrightbyte.com
-        </Link>
-        <AddressInfo />
+        <div className='mt-[24px] grid w-full grid-cols-1 tablet:mt-[40px] laptop:mt-[80px] laptop:grid-cols-2'>
+          <Link
+            href='mailto:access@thebrightbyte.com'
+            className='flex h-full w-full items-center font-proxima text-[18px] font-bold text-white tablet:text-[20px] laptop:order-last laptop:justify-end desktop:text-[26px]'
+          >
+            access@thebrightbyte.com
+          </Link>
+          <AddressInfo />
+        </div>
       </div>
-      <div className='laptop:mt-[52px]'>
+      <div className='ml-auto flex items-start laptop:items-end'>
         <Link
           target='_blank'
           rel='noopener'

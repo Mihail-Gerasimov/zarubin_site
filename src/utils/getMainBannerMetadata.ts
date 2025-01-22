@@ -3,13 +3,14 @@ import matter from 'gray-matter';
 
 export interface Case {
   title: string;
-  description: string;
+  image: string;
   slug: string;
-  logo: string;
+  link: string;
+  linkName: string;
 }
 
-export const getExpertiseAreasMetadata = () => {
-  const basePath = 'src/main/expertise_areas';
+export const getMainBannerMetadata = () => {
+  const basePath = 'src/main/banner_slides';
   const folder = basePath + '/';
   const files = fs.readdirSync(folder);
   const markdownPosts = files.filter((file) => file.endsWith('.md'));
@@ -19,9 +20,10 @@ export const getExpertiseAreasMetadata = () => {
     const matterResult = matter(fileContent);
     return {
       title: matterResult.data.title,
-      description: matterResult.data.description,
+      image: matterResult.data.image,
       slug: filename.replace('.md', ''),
-      logo: matterResult.data.logo,
+      link: matterResult.data.link,
+      linkName: matterResult.data.linkName,
     };
   });
 
