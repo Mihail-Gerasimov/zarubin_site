@@ -114,8 +114,8 @@ input:-webkit-autofill:active {
     height: 100%;
     background: linear-gradient(
       to top,
-      rgba(255, 255, 255, 1) 200px,
-      rgba(255, 255, 255, 0)
+      rgba(255, 255, 255, 1) 10%,
+      rgba(255, 255, 255, 0) 50%
     );
     z-index: 2;
     pointer-events: none;
@@ -124,13 +124,14 @@ input:-webkit-autofill:active {
   .gradient-box::after {
     position: absolute;
     content: '';
+    top: 0;
     width: 50%;
     height: 100%;
     filter: blur(80px);
     background: radial-gradient(
-      rgba(255, 204, 71, 0.8),
-      rgba(211, 25, 0, 0.8),
-      rgba(151, 71, 255, 0.8)
+      rgba(255, 204, 71, 0.8) 5%,
+      rgba(211, 25, 0, 0.8) 60%,
+      rgba(151, 71, 255, 0.8) 30%
     );
     z-index: 1;
     pointer-events: none;

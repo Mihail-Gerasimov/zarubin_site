@@ -52,7 +52,7 @@ export const NewHero = ({ slideData }: IHeroProp) => {
         {slideData.map((item) => (
           <SwiperSlide key={item.title}>
             <div
-              className={`gradient-box h-[380px] after:top-0 tablet:h-[465px] desktop:h-[589px] ${slideIndex === 0 || slideIndex % 2 === 0 ? 'after:left-0' : 'after:right-0'} after:duration-500`}
+              className={`gradient-box h-[380px] duration-500 tablet:h-[465px] desktop:h-[589px] ${slideIndex === 0 || slideIndex % 2 === 0 ? 'after:left-0' : 'after:right-0'} after:duration-500`}
             >
               <Image
                 src={item.image}
@@ -93,7 +93,7 @@ export const NewHero = ({ slideData }: IHeroProp) => {
               onClick={() => swiper?.slideTo(idx)}
               className='w-full'
             >
-              <span className={`bg-main-silver block h-[3px] w-full`} />
+              <span className={`block h-[3px] w-full bg-main-silver`} />
             </button>
           ))}
         </div>
