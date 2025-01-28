@@ -8,10 +8,9 @@ export const Footer = () => {
       <Container className='flex flex-col gap-[40px]'>
         <div className='flex w-full flex-col gap-[40px] tablet:gap-[60px] laptop:flex-row laptop:justify-between desktop:justify-between'>
           <FooterLinksInfo />
-          <div className='flex gap-[24px] tablet:gap-[44px] laptop:flex-row laptop:gap-[40px]'></div>
         </div>
-        <div className='w-full border-t-[2px] border-dark'>
-          <span className='mb-[40px] block h-[2px] w-full bg-dark' />
+        <div className='w-full'>
+          <span className='mb-[40px] block h-[2px] w-full bg-[#252525]' />
           <ul className='flex flex-col gap-[20px] tablet:flex-row tablet:justify-between'>
             <li>
               <Link

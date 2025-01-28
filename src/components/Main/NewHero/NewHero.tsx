@@ -36,7 +36,7 @@ export const NewHero = ({ slideData }: IHeroProp) => {
   return (
     <Section
       light
-      className={`relative bg-black p-0 pb-[20px] tablet:p-0 tablet:pb-[40px] desktop:p-0 desktop:pb-[60px]`}
+      className={`relative bg-black p-0 pb-[40px] tablet:p-0 tablet:pb-[40px] desktop:p-0 desktop:pb-[60px]`}
     >
       <Swiper
         modules={[Autoplay]}
@@ -58,9 +58,9 @@ export const NewHero = ({ slideData }: IHeroProp) => {
                 src={item.image}
                 fill
                 objectFit='cover'
-                objectPosition='right'
+                objectPosition='center'
                 alt=''
-                className='-z-10'
+                className='-z-10 grayscale'
               />
               <Container className='flex h-full w-full flex-col justify-end pt-[40px] text-text-dark tablet:pt-[50px] desktop:z-50 desktop:pt-[67px]'>
                 <h2 className='z-50 font-unbound text-[28px] font-bold uppercase leading-[1.16] tablet:text-[50px] tablet:leading-[1.1] desktop-light:text-[70px]'>
@@ -71,14 +71,14 @@ export const NewHero = ({ slideData }: IHeroProp) => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <Container className='mt-[40px] flex flex-col items-start justify-between gap-[35px] tablet:mt-[30px] tablet:flex-row tablet:items-center desktop:mt-[40px]'>
+      <Container className='mt-[20px] flex flex-col items-start justify-between gap-[35px] tablet:mt-[30px] tablet:flex-row tablet:items-center desktop:mt-[40px]'>
         <Link
           href={
             slideData[slideIndex].link
               ? slideData[slideIndex].link
               : '/solutions'
           }
-          className='z-30 rounded-[6px] bg-main-orange p-[5px_31px] font-proxima text-[20px] font-bold leading-[2] text-text-dark duration-300 hover:bg-main-orange/80'
+          className='z-30 rounded-[6px] bg-main-orange p-[5px_31px] font-proxima text-[20px] font-bold leading-[2] text-text-dark duration-300 hover:bg-main-orange-hover'
         >
           Go to{' '}
           {slideData[slideIndex].linkName
@@ -88,12 +88,14 @@ export const NewHero = ({ slideData }: IHeroProp) => {
         <div className='z-30 flex w-full gap-[20px] tablet:max-w-[402px] desktop:max-w-[482px]'>
           {slideData.map((item, idx) => (
             <button
-              key={item.linkName}
+              key={idx}
               type='button'
               onClick={() => swiper?.slideTo(idx)}
-              className='w-full'
+              className='h-[3px] w-full bg-main-silver'
             >
-              <span className={`block h-[3px] w-full bg-main-silver`} />
+              <span
+                className={`block h-full bg-main-orange ${idx === slideIndex ? 'w-full transition-[width] duration-[3000ms] ease-linear' : 'w-0'}`}
+              />
             </button>
           ))}
         </div>
