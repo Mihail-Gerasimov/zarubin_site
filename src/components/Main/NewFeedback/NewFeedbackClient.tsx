@@ -41,9 +41,9 @@ export const NewFeedbackClient = ({ feedback }: Props) => {
         </div>
       </Container>
       <Suspense fallback={<div></div>}>
-        <div className='overflow-visible p-[20px]'>
+        <Container className='overflow-visible'>
           <LazyFeedbackSwiper setSwiper={setSwiper} feedback={feedback} />
-        </div>
+        </Container>
       </Suspense>
     </div>
   );
