@@ -1,15 +1,30 @@
+'use client';
+
 import LightMainLogo from '@/public/assets/images/icons/footer_logo_dark.svg';
 import LinkedInIcon from '@/public/assets/images/icons/linkedin.svg';
 import Link from 'next/link';
 import { AddressInfo } from './AddressInfo';
+import useMediaQuery from '@/src/utils/useMediaQuery';
 
 export const FooterLinksInfo = () => {
+  const isMobile = useMediaQuery('<laptop-big');
   return (
     <div className='flex w-full flex-col justify-between'>
       <div className='flex flex-col text-white'>
-        <Link aria-label='Go to the main page' href='/'>
-          <LightMainLogo className='h-[54px] w-[auto] tablet:h-[80px] desktop:h-[92px]' />
-        </Link>
+        <div className='flex items-center justify-between'>
+          <Link aria-label='Go to the main page' href='/'>
+            <LightMainLogo className='h-[54px] w-[auto] tablet:h-[80px] desktop:h-[92px]' />
+          </Link>
+          {isMobile && (
+            <Link
+              target='_blank'
+              rel='noopener'
+              href='https://www.linkedin.com/company/thebrightbyte/'
+            >
+              <LinkedInIcon className='h-[32px] w-[auto]' />
+            </Link>
+          )}
+        </div>
         <div className='mt-[24px] grid w-full grid-cols-1 tablet:mt-[40px] laptop:mt-[80px] laptop:grid-cols-2'>
           <Link
             href='mailto:access@thebrightbyte.com'
@@ -20,15 +35,17 @@ export const FooterLinksInfo = () => {
           <AddressInfo />
         </div>
       </div>
-      <div className='ml-auto flex items-start laptop:items-end'>
-        <Link
-          target='_blank'
-          rel='noopener'
-          href='https://www.linkedin.com/company/thebrightbyte/'
-        >
-          <LinkedInIcon className='h-[32px] w-[auto]' />
-        </Link>
-      </div>
+      {!isMobile && (
+        <div className='ml-auto flex items-start laptop:items-end'>
+          <Link
+            target='_blank'
+            rel='noopener'
+            href='https://www.linkedin.com/company/thebrightbyte/'
+          >
+            <LinkedInIcon className='h-[32px] w-[auto]' />
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

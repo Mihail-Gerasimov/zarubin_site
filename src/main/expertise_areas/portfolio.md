@@ -1,5 +1,5 @@
 ---
 title: 'Portfolio Investments'
 description: 'Digital business transformation Digital business transformation'
-logo: '/assets/images/main/icons/gadget.svg'
+logo: '/assets/images/main/icons/star.svg'
 ---

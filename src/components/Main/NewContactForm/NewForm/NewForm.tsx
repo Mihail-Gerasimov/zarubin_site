@@ -45,7 +45,7 @@ export const NewForm = () => {
   return (
     <div
       id='contact-form'
-      className='w-full scroll-mt-[100px] rounded-[12px] bg-main-bg px-[20px] py-[40px] mobile-big:px-[40px] mobile-big:py-[40px]'
+      className='w-full scroll-mt-[100px] rounded-[12px] bg-main-bg px-[20px] py-[40px] mobile-big:px-[40px] mobile-big:py-[40px] laptop-big:max-w-[1009px]'
     >
       <NextLinePreposition
         tag='h3'
@@ -103,7 +103,7 @@ export const NewForm = () => {
         />
         <button
           type='submit'
-          className='w-full transform rounded-[6px] bg-main-orange px-[15px] py-[13px] text-xl font-bold text-text-dark transition duration-200 ease-in-out hover:scale-[0.99] hover:bg-blue-500'
+          className='w-full transform rounded-[6px] bg-main-orange px-[15px] py-[13px] text-xl font-bold text-text-dark transition duration-200 ease-in-out hover:scale-[0.99] hover:bg-main-orange-hover'
         >
           Send the request
         </button>

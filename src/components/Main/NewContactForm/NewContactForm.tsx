@@ -13,8 +13,8 @@ export const NewContactForm = () => {
         <source src='/assets/video/bg-video.mp4' type='video/mp4' />
         <source src='/assets/video/bg-video.webm' type='video/webm' />
       </video>
-      <div className='relative z-20 laptop-big:w-[50%]'>
-        <Container className='py-[70px] tablet:py-[80px] desktop-light:py-[100px]'>
+      <div className='relative z-20 box-border w-full'>
+        <Container className='w-full py-[70px] tablet:px-[40px] tablet:py-[80px] desktop-light:py-[100px]'>
           <NewForm />
         </Container>
       </div>

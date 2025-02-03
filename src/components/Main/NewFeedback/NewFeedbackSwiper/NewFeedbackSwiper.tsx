@@ -1,6 +1,5 @@
 import { IFeedback } from '@/src/utils/types';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
-import { Container } from '../../../shared/Container/Container';
 import { NewFeedbackCard } from '../NewFeedbackCard/NewFeedbackCard';
 
 interface IFeedbackSwiper {
@@ -31,13 +30,13 @@ const NewFeedbackSwiper = ({ feedback, setSwiper }: IFeedbackSwiper) => {
     >
       {feedback.map((item, index) => (
         <SwiperSlide key={item.id} className='!h-auto'>
-          <Container className='h-full w-full'>
+          <div className='h-full w-full tablet:pr-[20px] desktop:pr-[40px]'>
             <NewFeedbackCard
               data={item}
               length={feedback.length}
               indexNumber={index + 1}
             />
-          </Container>
+          </div>
         </SwiperSlide>
       ))}
     </Swiper>

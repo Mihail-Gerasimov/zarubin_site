@@ -83,6 +83,7 @@ const config: Config = {
         'main-silver': 'rgba(239, 240, 246, 1)',
         'main-disabled': '#DCDDEB',
         'main-orange': '#F8AE3C',
+        'main-orange-hover': '#FF884D',
         'orange-light': '#FFCC47',
         'main-red': '#D31900',
         'main-purple': '#9747FF',
