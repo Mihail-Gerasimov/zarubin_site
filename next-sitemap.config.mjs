@@ -4,6 +4,7 @@ import path from 'path'
 const config = {
     siteUrl: 'https://thebrightbyte.com',
     generateSitemap: true,
+    outDir: './out',
     generateIndexSitemap: false,
     generateRobotsTxt: true,
     changefreq: 'daily',
