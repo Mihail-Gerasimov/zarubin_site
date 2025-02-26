@@ -12,7 +12,7 @@ const slideData = getMainBannerMetadata();
 
 export default function MainPage() {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col items-center'>
       <NewHero slideData={slideData} />
       <NewExpertise data={data} />
       <NewInsights />
