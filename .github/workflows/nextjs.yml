@@ -23,6 +23,7 @@ on:
       - '**/*.ts'
       - '**/*.js'
       - '**/*.tsx'
+      - '**/*.*'
 
   workflow_dispatch:
 
