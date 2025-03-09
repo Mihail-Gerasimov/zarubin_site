@@ -4,25 +4,23 @@
 }
 
 .markdown h1 {
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 700;
 }
 
 .markdown h2 {
   display: flex;
   align-items: center;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
-}
-
-.markdown tr th {
-  text-align: start;
+  margin-top: 1.2em;
+  margin-bottom: .6em;
 }
 
 .research.markdown h2::before {
   margin-right: 12px;
   content: '';
-  width: 24px;
+  width: 22px;
   height: 1px;
   background-color: var(--text-dark);
   border-radius: 2px;
@@ -30,7 +28,7 @@
 
 .authorImg {
   margin: 0;
-  width: 40px;
+  width: 36px;
   height: auto;
   border-radius: 100%;
 }
@@ -41,7 +39,7 @@
 }
 
 .markdown strong {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .tagList {
@@ -70,13 +68,17 @@
   content: '#';
 }
 
+.markdown hr {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 @media (min-width: 768px) {
   .markdown h1 {
-    font-size: 36px;
+    font-size: 26px; /* Reduce from 36px */
   }
-
   .markdown h2 {
-    font-size: 26px;
+    font-size: 20px; /* Reduce from 26px */
   }
 
   .research.markdown h2::before {
@@ -84,38 +86,37 @@
   }
 
   .authorImg {
-    width: 80px;
+    width: 54px; /* Reduce from 80px */
   }
 
   .markdown li,
   .markdown p,
   .markdown strong {
-    font-size: 21px;
+    font-size: 18px; /* Reduce from 21px */
   }
 
   .tag {
     padding: 8px 12px;
-    font-size: 18px;
+    font-size: 14px; /* Reduce from 18px */
   }
 }
 
 @media (min-width: 1440px) {
   .markdown h1 {
-    font-size: 40px;
+    font-size: 30px; /* Reduce from 40px */
   }
-
   .markdown h2 {
-    font-size: 36px;
+    font-size: 24px; /* Reduce from 36px */
   }
 
   .research.markdown h2::before {
     width: 100px;
-    margin-right: 20px;
+    margin-right: 16px;
   }
 
   .markdown li,
   .markdown p,
   .markdown strong {
-    font-size: 24px;
+    font-size: 16px; /* Reduce from 24px */
   }
 }
