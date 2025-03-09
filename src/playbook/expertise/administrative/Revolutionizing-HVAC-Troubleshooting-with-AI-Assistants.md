@@ -2,7 +2,7 @@
 title: 'Revolutionizing HVAC Troubleshooting with AI-Assistants'
 description: 'Discover how AI-driven solutions are transforming HVAC troubleshooting, cutting training costs, and providing real-time solutions to technicians on-site.'
 image: '/assets/images/expertise/it_service/hvac.jpeg'
-date: '2025-03-09'
+date: '09-03-2025'
 readingTime: '6 minutes'
 category: 'Expertise'
 subCategory: 'It Service'
