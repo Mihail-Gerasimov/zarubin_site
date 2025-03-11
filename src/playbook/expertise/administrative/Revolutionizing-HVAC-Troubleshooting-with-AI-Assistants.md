@@ -6,7 +6,7 @@ date: '09-03-2025'
 readingTime: '6 minutes'
 category: 'Expertise'
 subCategory: 'Administrative'
-tag: 'AI, HVAC, BMS, on-site technicians'
+tag: 'AI, HVAC, Ticketing System, BMS, on-site technicians'
 authorName: 'Vitaliy Zarubin'
 authorImage: '/assets/images/author/avatar.png'
 ---
