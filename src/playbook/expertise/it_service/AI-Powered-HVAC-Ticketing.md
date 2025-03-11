@@ -1,7 +1,7 @@
 ---
 title: 'AI-Powered HVAC Ticketing System: How to Use RAG'
 description: 'A comprehensive technical deep dive into the architecture of AI-powered HVAC troubleshooting, covering RAG-enhanced knowledge retrieval, AI-assisted diagnostics, and a structured ticketing system for real-time issue resolution.'
-image: '/assets/images/expertise/rag.webp'
+image: '/assets/images/expertise/it_service/rag.webp'
 date: '11-03-2025'
 readingTime: '10 minutes'
 category: 'Expertise'
