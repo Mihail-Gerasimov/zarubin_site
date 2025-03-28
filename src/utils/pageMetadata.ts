@@ -16,7 +16,7 @@ export const pageMetadata = {
     title:
       'BrightByte Playbook – Strategic Insights for Business, Technology, and Innovation',
     description:
-      "Explore frameworks and methodologies driving enterprise growth, digital excellence, and operational transformation, curated by BrightByte’s expert team.",
+      'Explore frameworks and methodologies driving enterprise growth, digital excellence, and operational transformation, curated by BrightByte’s expert team.',
     keywords: [
       'Sports IT Solutions',
       'Investment Strategies',
@@ -46,9 +46,9 @@ export const pageMetadata = {
   },
   solutions: {
     title:
-      "Transform Your Business with Bright Byte’s Strategic AI & Tech Solutions",
+      'Transform Your Business with Bright Byte’s Strategic AI & Tech Solutions',
     description:
-      "We craft and implement forward-thinking technology strategies to address complex business problems and deliver measurable results.",
+      'We craft and implement forward-thinking technology strategies to address complex business problems and deliver measurable results.',
     keywords: [
       'IT solutions',
       'Business processes',
@@ -74,7 +74,8 @@ export const pageMetadata = {
     ],
   },
   career: {
-    title: "Join Bright Byte – Shape the Future of Technology & Business Strategy",
+    title:
+      'Join Bright Byte – Shape the Future of Technology & Business Strategy',
     description:
       'We’re building the future of strategic technology consulting. Join Bright Byte to work on cutting-edge projects with a global impact.',
     keywords: [
@@ -102,7 +103,7 @@ export const pageMetadata = {
   about: {
     title: 'Bright Byte – Redefining Consulting for the AI Era',
     description:
-      "Learn how Bright Byte blends technology, strategy, and innovation to guide organizations through complexity and toward exponential growth.",
+      'Learn how Bright Byte blends technology, strategy, and innovation to guide organizations through complexity and toward exponential growth.',
     keywords: [
       'Consulting Studio',
       'AI Expertise',
@@ -133,10 +134,12 @@ export const pageMetadata = {
       'Strategic Investments by Bright Byte – Driving Technological and Business Impact',
     description:
       'From Miami to Luxembourg, Bright Byte strategically invests in visionary technologies and organizations to build a smarter future.',
-    keywords: [      'Strategic Investments',
+    keywords: [
+      'Strategic Investments',
       'AI Startups',
       'Enterprise Tech',
       'Global Innovation',
-      'Bright Byte Capital',]
+      'Bright Byte Capital',
+    ],
   },
 };

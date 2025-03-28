@@ -32,7 +32,7 @@ export const PlaybookCard = ({ data }: IArticleProps) => {
     <div className='group flex flex-col gap-[40px] laptop:flex-row'>
       <Link
         href={`/playbook/${data.category.toLowerCase()}/${data.slug}`}
-        className='relative aspect-[16/9] min-w-[360px] flex-1 overflow-hidden duration-300 group-hover:shadow-2xl laptop-big:max-h-[210px]'
+        className='relative aspect-[16/9] min-w-[360px] flex-1 overflow-hidden duration-300 group-hover:shadow-2xl laptop-big:max-h-[210px] desktop:max-w-[420px]'
       >
         <Image
           src={data.image || defaultImg}
