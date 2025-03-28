@@ -2,9 +2,9 @@
 
 import LightMainLogo from '@/public/assets/images/icons/footer_logo_dark.svg';
 import LinkedInIcon from '@/public/assets/images/icons/linkedin.svg';
+import useMediaQuery from '@/src/utils/useMediaQuery';
 import Link from 'next/link';
 import { AddressInfo } from './AddressInfo';
-import useMediaQuery from '@/src/utils/useMediaQuery';
 
 export const FooterLinksInfo = () => {
   const isMobile = useMediaQuery('<laptop-big');
