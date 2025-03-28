@@ -1,59 +1,54 @@
 export const pageMetadata = {
   main: {
     title:
-      'Bright Byte is a sports and entertainment investment studio in Miami, FL',
+      'BrightByte – Strategic Technology & AI Consulting Studio | Raleigh, NC',
     description:
-      'Bright Byte specialises in enterprise product development and investment in AI, entertainment and operational management products with new levels of innovation. We have a skilled team with strong technical and product expertise. We launch with purpose and ensure sustainable success',
+      'BrightByte delivers high-impact business solutions through advanced technologies and AI-driven strategies. Based in Miami, we empower organizations to transform, innovate, and scale with confidence.',
     keywords: [
-      'Portfolio Investments',
-      'Digital Strategy',
-      'Marketing & Administrative',
-      'Business Consulting',
-      'Startup software development & integration',
+      'AI Consulting',
+      'Technology Strategy',
+      'Digital Transformation',
+      'Business Advisory',
+      'Innovation Consulting',
     ],
   },
   playbook: {
     title:
-      'Bright Byte Playbook – Insights & Strategies for Sports, Business, and Digital Product Launches',
+      'BrightByte Playbook – Strategic Insights for Business, Technology, and Innovation',
     description:
-      "Explore the latest practices and ideas in sports, business, investments, and digital product development with Bright Byte's expertise",
+      "Explore frameworks and methodologies driving enterprise growth, digital excellence, and operational transformation, curated by BrightByte’s expert team.",
     keywords: [
       'Sports IT Solutions',
       'Investment Strategies',
       'Portfolio management',
       'Business Innovation',
-      'IT Consultancy',
-      'Custom Software Development',
-      'Tech Advisory',
-      'Digital Transformation',
-      'Product Development',
-      'Miami Development Studio',
+      'Innovation Playbook',
+      'Operational Excellence',
+      'Business Intelligence',
     ],
   },
   expertise: {
     title:
-      'Bright Byte - Expertise in systems integration, mobile applications: Leading IT Expertise',
+      'BrightByte – Enterprise Expertise in Digital Strategy & Systems Innovation',
     description:
-      "Unleash transformative digital solutions across sports, entertainment, fintech, and beyond with Bright Byte's proven track record of innovation.",
+      "Unleash transformative digital solutions across sports, entertainment, fintech, and beyond with BrightByte's proven track record of innovation.",
     keywords: [
       'IT Services',
       'vCIO',
       'Sport Management System',
       'Entertainment web sites',
-      'IT Consultancy',
-      'IT Advisory',
-      'Development services',
-      'Custom software development',
-      'PHP Laravel',
-      'Flutter',
-      'Miami development studio',
+      'Enterprise Systems',
+      'AI Consulting',
+      'Strategic Technology',
+      'Digital Advisory',
+      'Innovation Services',
     ],
   },
   solutions: {
     title:
-      "Propel Your Business Forward with Bright Byte's Bespoke IT Solutions",
+      "Transform Your Business with Bright Byte’s Strategic AI & Tech Solutions",
     description:
-      "Elevate growth and operational efficiency with our tailored IT strategies, engineered to address your unique business challenges in today's fast-paced digital ecosystem.",
+      "We craft and implement forward-thinking technology strategies to address complex business problems and deliver measurable results.",
     keywords: [
       'IT solutions',
       'Business processes',
@@ -79,9 +74,9 @@ export const pageMetadata = {
     ],
   },
   career: {
-    title: "Shape Tomorrow's Technology: Exciting IT Careers at Bright Byte",
+    title: "Join Bright Byte – Shape the Future of Technology & Business Strategy",
     description:
-      'Embark on a rewarding journey in digital innovation. Join our dynamic team of tech visionaries and play a pivotal role in revolutionizing the IT landscape.',
+      'We’re building the future of strategic technology consulting. Join Bright Byte to work on cutting-edge projects with a global impact.',
     keywords: [
       'Career',
       'Outsource development',
@@ -105,13 +100,15 @@ export const pageMetadata = {
     ],
   },
   about: {
-    title: 'Bright Byte: Architects of Digital Transformation',
+    title: 'Bright Byte – Redefining Consulting for the AI Era',
     description:
-      "Dive into our story of relentless innovation. Learn how Bright Byte's visionary approach to IT solutions is redefining business success in the digital age.",
+      "Learn how Bright Byte blends technology, strategy, and innovation to guide organizations through complexity and toward exponential growth.",
     keywords: [
-      'IT solutions',
-      'Business processes',
-      'IT Strategy',
+      'Consulting Studio',
+      'AI Expertise',
+      'Business Innovation',
+      'Strategy & Technology',
+      'Enterprise Transformation',
       'Engineering',
       'Innovations',
       'Cases',
@@ -133,10 +130,13 @@ export const pageMetadata = {
   },
   investments: {
     title:
-      'Bright Byte invests in development, we invest in products, technology and organisation.',
+      'Strategic Investments by Bright Byte – Driving Technological and Business Impact',
     description:
-      ' From Miami to Luxembourg and San Marino, our initiatives are driving progress and community growth.',
-    keywords:
-      'Investments, Sports Market, Miami Investments, Government Relations',
+      'From Miami to Luxembourg, Bright Byte strategically invests in visionary technologies and organizations to build a smarter future.',
+    keywords: [      'Strategic Investments',
+      'AI Startups',
+      'Enterprise Tech',
+      'Global Innovation',
+      'Bright Byte Capital',]
   },
 };
