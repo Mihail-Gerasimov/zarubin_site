@@ -10,7 +10,7 @@ interface IExpertiseCard {
 }
 
 export const ExpertiseCard = ({ data, idx }: IExpertiseCard) => {
-  const { logo, title } = data;
+  const { logo, title, description } = data;
 
   return (
     <div
@@ -20,6 +20,9 @@ export const ExpertiseCard = ({ data, idx }: IExpertiseCard) => {
         <GenerateIcon path={logo} color='white' />
       </div>
       <div className='mt-auto flex flex-col gap-[24px]'>
+        {description && (
+          <p className='font-regular text-[16px]'>{description}</p>
+        )}
         <h3 className='font-unbound text-[20px] font-bold uppercase leading-[1.1] text-main-bg desktop:text-[28px]'>
           {title}
         </h3>

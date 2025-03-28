@@ -44,7 +44,7 @@ export const NewExpertise = ({ data }: IData) => {
               </h3>
               <Link
                 href='/solutions'
-                className='hover:bg-main-orange-hover h-fit w-fit whitespace-nowrap rounded-[6px] bg-main-orange p-[8px_10px] font-proxima text-[20px] font-bold leading-[1.3] text-text-dark duration-300 tablet:p-[16px_28px] tablet:text-[24px] tablet:leading-[1.16] desktop-big:p-[13px_32px] desktop-big:text-[36px]'
+                className='h-fit w-fit whitespace-nowrap rounded-[6px] bg-main-orange p-[8px_10px] font-proxima text-[20px] font-bold leading-[1.3] text-text-dark duration-300 hover:bg-main-orange-hover tablet:p-[16px_28px] tablet:text-[24px] tablet:leading-[1.16] desktop-big:p-[13px_32px] desktop-big:text-[36px]'
               >
                 Go to solutions
               </Link>
