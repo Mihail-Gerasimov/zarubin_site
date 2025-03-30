@@ -46,7 +46,7 @@ export const pageMetadata = {
   },
   solutions: {
     title:
-      'Transform Your Business with Bright Byte’s Strategic AI & Tech Solutions',
+      'Transform Your Business with BrightByte’s Strategic AI & Tech Solutions',
     description:
       'We craft and implement forward-thinking technology strategies to address complex business problems and deliver measurable results.',
     keywords: [
@@ -61,7 +61,7 @@ export const pageMetadata = {
   },
   insights: {
     title:
-      "Navigate the future: Bright Byte's cutting-edge insights on digital transformation",
+      "Navigate the future: BrightByte's cutting-edge insights on digital transformation",
     description:
       'Gain a competitive edge with our expert analysis, breaking industry news, and visionary thought leadership on emerging technology trends and digital innovation.',
     keywords: [
@@ -75,9 +75,9 @@ export const pageMetadata = {
   },
   career: {
     title:
-      'Join Bright Byte – Shape the Future of Technology & Business Strategy',
+      'Join BrightByte – Shape the Future of Technology & Business Strategy',
     description:
-      'We’re building the future of strategic technology consulting. Join Bright Byte to work on cutting-edge projects with a global impact.',
+      'We’re building the future of strategic technology consulting. Join BrightByte to work on cutting-edge projects with a global impact.',
     keywords: [
       'Career',
       'Outsource development',
@@ -90,9 +90,9 @@ export const pageMetadata = {
     ],
   },
   comparison: {
-    title: 'Bright Byte vs. The Rest: Unparalleled IT Solutions Comparison',
+    title: 'BrightByte vs. The Rest: Unparalleled IT Solutions Comparison',
     description:
-      'Discover why industry leaders choose Bright Byte. Compare our cutting-edge IT services and witness firsthand how our expertise translates into superior business results.',
+      'Discover why industry leaders choose BrightByte. Compare our cutting-edge IT services and witness firsthand how our expertise translates into superior business results.',
     keywords: [
       'IT compare',
       'Development Serbia',
@@ -117,7 +117,7 @@ export const pageMetadata = {
   },
   privacyPolicy: {
     title:
-      "Safeguarding Your Digital Future: Bright Byte's Ironclad Privacy Policy",
+      "Safeguarding Your Digital Future: BrightByte's Ironclad Privacy Policy",
     description:
       'Experience peace of mind with our unwavering commitment to data protection. Explore how we ensure your information remains secure while complying with global privacy standards.',
     keywords: [
@@ -131,15 +131,15 @@ export const pageMetadata = {
   },
   investments: {
     title:
-      'Strategic Investments by Bright Byte – Driving Technological and Business Impact',
+      'Strategic Investments by BrightByte – Driving Technological and Business Impact',
     description:
-      'From Miami to Luxembourg, Bright Byte strategically invests in visionary technologies and organizations to build a smarter future.',
+      'From Miami to Luxembourg, BrightByte strategically invests in visionary technologies and organizations to build a smarter future.',
     keywords: [
       'Strategic Investments',
       'AI Startups',
       'Enterprise Tech',
       'Global Innovation',
-      'Bright Byte Capital',
+      'BrightByte Capital',
     ],
   },
 };
