@@ -3,7 +3,7 @@ export const pageMetadata = {
     title:
       'BrightByte – Strategic Technology & AI Consulting Studio | Raleigh, NC',
     description:
-      'BrightByte delivers high-impact business solutions through advanced technologies and AI-driven strategies. Based in Miami, we empower organizations to transform, innovate, and scale with confidence.',
+      'BrightByte delivers high-impact business solutions through advanced technologies and AI-driven strategies. Based in US, we empower organizations to transform, innovate, and scale with confidence.',
     keywords: [
       'AI Consulting',
       'Technology Strategy',
