@@ -1,5 +1,5 @@
 ---
-title: 'Structured business processes in Entertainment & Finances'
+title: 'Practical Systems for Fast-Moving Industries'
 image: '/assets/images/main/heroSlide/buildings.webp'
 link: '/playbook/expertise'
 linkName: 'expertise'
