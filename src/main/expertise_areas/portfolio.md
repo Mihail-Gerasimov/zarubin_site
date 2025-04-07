@@ -1,5 +1,5 @@
 ---
-title: 'Portfolio Investments'
-description: 'Digital business transformation Digital business transformation'
+title: 'Practical CRM & Loyalty System Design'
+description: 'From audits to vendor choices — we help reduce risk and technical debt.'
 logo: '/assets/images/main/icons/star.svg'
 ---
