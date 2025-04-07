@@ -1,107 +1,97 @@
 export const pageMetadata = {
   main: {
     title:
-      'BrightByte – Strategic Technology & AI Consulting Studio | Raleigh, NC',
+      'BrightByte – Independent Product Studio & Development Advisory | Raleigh, NC',
     description:
-      'BrightByte delivers high-impact business solutions through advanced technologies and AI-driven strategies. Based in US, we empower organizations to transform, innovate, and scale with confidence.',
+      'BrightByte is an independent studio focused on building modern digital products and guiding businesses through early-stage decisions, audits, and development. We help reduce risk, improve clarity, and support clients in building smarter from the start.',
     keywords: [
-      'AI Consulting',
-      'Technology Strategy',
-      'Digital Transformation',
-      'Business Advisory',
-      'Innovation Consulting',
+      'Product Studio',
+      'Development Advisory',
+      'Technology Consulting',
+      'Startup Support',
+      'Digital Product Design',
     ],
   },
   playbook: {
     title:
-      'BrightByte Playbook – Strategic Insights for Business, Technology, and Innovation',
+      'BrightByte Playbook – Lessons from Real Projects in Design, Tech, and Product Strategy',
     description:
-      'Explore frameworks and methodologies driving enterprise growth, digital excellence, and operational transformation, curated by BrightByte’s expert team.',
+      'Explore tools, mental models, and decision frameworks we’ve refined through building real products. The BrightByte Playbook is where practical experience meets clear structure.',
     keywords: [
-      'Sports IT Solutions',
-      'Investment Strategies',
-      'Portfolio management',
-      'Business Innovation',
-      'Innovation Playbook',
-      'Operational Excellence',
-      'Business Intelligence',
+      'Product Frameworks',
+      'Technology Advice',
+      'Design Process',
+      'Startup Guidance',
+      'Project Playbook',
+      'Audit Tips',
     ],
   },
   expertise: {
     title:
-      'BrightByte – Enterprise Expertise in Digital Strategy & Systems Innovation',
+      'BrightByte – Practical Expertise in Product Thinking & Lean Digital Development',
     description:
-      "Unleash transformative digital solutions across sports, entertainment, fintech, and beyond with BrightByte's proven track record of innovation.",
+      "We help clients navigate product planning, vendor selection, and lean implementation strategies. BrightByte combines years of development and business experience to cut waste and build clarity.",
     keywords: [
-      'IT Services',
-      'vCIO',
-      'Sport Management System',
-      'Entertainment web sites',
-      'Enterprise Systems',
-      'AI Consulting',
-      'Strategic Technology',
-      'Digital Advisory',
-      'Innovation Services',
+      'Lean Development',
+      'Product Thinking',
+      'Vendor Selection',
+      'Technical Audit',
+      'Design Support',
+      'Development Strategy',
     ],
   },
   solutions: {
     title:
-      'Transform Your Business with BrightByte’s Strategic AI & Tech Solutions',
+      'Work Smarter with BrightByte — Development Reviews, Product Planning & Digital Guidance',
     description:
-      'We craft and implement forward-thinking technology strategies to address complex business problems and deliver measurable results.',
+      'We assist teams in validating ideas, improving product design, running technical reviews, and avoiding common traps. Our goal is to help you make better decisions, earlier.',
     keywords: [
-      'IT solutions',
-      'Business processes',
-      'IT Strategy',
-      'Engineering',
-      'Innovations',
-      'Cases',
-      'University sport systems',
+      'Product Audits',
+      'Product Discovery',
+      'Development Consulting',
+      'Digital Advisory',
+      'Risk Reduction',
     ],
   },
   insights: {
     title:
-      "Navigate the future: BrightByte's cutting-edge insights on digital transformation",
+      "BrightByte Insights – Real-World Notes on Building Better Digital Products",
     description:
-      'Gain a competitive edge with our expert analysis, breaking industry news, and visionary thought leadership on emerging technology trends and digital innovation.',
+      'Simple reflections and insights from our journey building digital solutions, working with startups, and helping teams make clearer, calmer decisions in tech.',
     keywords: [
-      'Blog',
-      'Digital Insights',
-      'IT Software',
-      'Digital Transformation',
-      'Web Development',
-      'Mobile development',
+      'Digital Product Insights',
+      'Startup Learnings',
+      'Design Reflections',
+      'Development Notes',
+      'Consulting Lessons',
     ],
   },
   career: {
     title:
-      'Join BrightByte – Shape the Future of Technology & Business Strategy',
+      'Join BrightByte – A Quiet Studio for Builders, Thinkers, and Explorers',
     description:
-      'We’re building the future of strategic technology consulting. Join BrightByte to work on cutting-edge projects with a global impact.',
+      'We’re a small team that values independence, clarity, and depth. If you enjoy real work more than buzzwords, BrightByte might be the right fit.',
     keywords: [
-      'Career',
-      'Outsource development',
-      'PHP',
-      'Flutter',
-      'C#',
-      'Next.js',
-      'Javascript',
-      'Go',
+      'Careers',
+      'Product Studio',
+      'Design Jobs',
+      'Engineering Roles',
+      'Remote Team',
     ],
   },
   comparison: {
-    title: 'BrightByte vs. The Rest: Unparalleled IT Solutions Comparison',
+    title: 'BrightByte vs Traditional Agencies – A Different Approach to Building',
     description:
-      'Discover why industry leaders choose BrightByte. Compare our cutting-edge IT services and witness firsthand how our expertise translates into superior business results.',
+      'Unlike typical agencies, BrightByte blends ownership thinking with a consultative approach. We’re not here to sell time — we’re here to reduce noise and build better.',
     keywords: [
-      'IT compare',
-      'Development Serbia',
-      'IT Solutions',
-      'IT Leadership',
+      'Agency Comparison',
+      'Independent Studio',
+      'Product Consultancy',
+      'Digital Teams',
     ],
   },
   about: {
-    title: 'Bright Byte – Redefining Consulting for the AI Era',
+    title: 'BrightByte – Redefining Consulting for the AI Era',
     description:
       'Learn how Bright Byte blends technology, strategy, and innovation to guide organizations through complexity and toward exponential growth.',
     keywords: [
