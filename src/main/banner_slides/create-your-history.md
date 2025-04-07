@@ -1,6 +1,6 @@
 ---
-title: 'Create your history'
+title: 'Strong Teams. Clear Work.'
 image: '/assets/images/main/heroSlide/hockey.webp'
-link: '/playbook/solutions'
+link: '/solutions'
 linkName: 'solutions'
 ---
