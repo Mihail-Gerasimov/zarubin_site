@@ -2,7 +2,7 @@
 title: 'All about Stadium Management Systems'
 description: 'Why arenas are turning into businesses, and how integrated systems help reduce losses, improve communication with fans, and increase revenue. A clear and structured look at what modern stadiums really need to stay efficient.'
 image: '/assets/images/expertise/it_service/shibas.png'
-date: '04-07-2025'
+date: '07-04-2025'
 readingTime: '8 min read'
 category: 'Expertise'
 subCategory: 'Sport Infrastructure'
