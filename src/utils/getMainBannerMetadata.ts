@@ -3,6 +3,7 @@ import matter from 'gray-matter';
 
 export interface Case {
   title: string;
+  description: string;
   image: string;
   slug: string;
   link: string;
@@ -20,6 +21,7 @@ export const getMainBannerMetadata = () => {
     const matterResult = matter(fileContent);
     return {
       title: matterResult.data.title,
+      description: matterResult.data.description,
       image: matterResult.data.image,
       slug: filename.replace('.md', ''),
       link: matterResult.data.link,

@@ -8,6 +8,7 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
 import { Section } from '../../shared/Section/Section';
 import { NewInsightsCard } from './NewInsightsCard/NewInsightsCard';
+import { sectionsTitle } from '@/src/utils/sectionsTitle/sectionsTitle';
 
 interface Props {
   posts: Post[];
@@ -24,15 +25,14 @@ export const NewInsightsClient = ({ posts }: Props) => {
   return (
     <Section light>
       <div className='h-600 relative z-10 flex flex-col gap-[40px] pb-20'>
-        <Container className='desktop-hard:px-[80px]'>
+        <Container className=''>
           <div className='flex items-start justify-between desktop:items-center'>
             <div className='flex flex-col gap-[15px]'>
-              <h2 className='desktop-light::text-[50px] font-unbound text-[28px] font-bold uppercase text-main-bg tablet:text-[40px]'>
-                Insights
+              <h2 className='desktop-light::text-[50px] font-unbound text-[28px] font-bold uppercase text-main-bg tablet:text-[40px] desktop-light:text-[45px]'>
+                {`${sectionsTitle['main']['insights'].title}`}
               </h2>
               <p className='font-proxima text-[18px] font-bold leading-[1.1] text-light-gray tablet:text-[20px] desktop:leading-[1]'>
-                The latest research and articles on information technology in
-                the field of sports and business
+                {`${sectionsTitle['main']['insights'].descripton}`}
               </p>
             </div>
             <div className=''>
