@@ -64,10 +64,10 @@ export const NewHero = ({ slideData }: IHeroProp) => {
                 className='-z-10 grayscale'
               />
               <Container className='flex h-full w-full flex-col justify-end pt-[40px] text-text-dark tablet:pt-[50px] desktop:z-50 desktop:pt-[67px]'>
-                <h2 className='z-50 font-unbound text-[28px] font-bold uppercase leading-[1.16] tablet:text-[50px] tablet:leading-[1.1] desktop-light:text-[60px]'>
+                <h2 className='z-50 font-unbound text-[28px] font-bold uppercase leading-[1.16] tablet:text-[50px] tablet:leading-[1.1] desktop:text-[60px]'>
                   {item.title}
                 </h2>
-                {item.description && (
+                {item?.description && (
                   <p className='z-50 font-proxima text-[20px] font-bold'>
                     {item.description}
                   </p>

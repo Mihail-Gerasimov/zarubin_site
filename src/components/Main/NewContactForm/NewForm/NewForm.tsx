@@ -50,7 +50,7 @@ export const NewForm = () => {
       <NextLinePreposition
         tag='h3'
         text='We are always glad to have new partners and ambitious tasks'
-        className='font-unbound text-[28px] font-semibold uppercase leading-[1.25] text-white tablet:text-[38px] tablet:leading-[1.15]'
+        className='font-unbound text-[28px] font-semibold uppercase leading-[1.25] text-white tablet:text-[24px] tablet:leading-[1.15]'
       />
       <NextLinePreposition
         tag='p'
@@ -67,7 +67,7 @@ export const NewForm = () => {
           placeholder='Name'
           value={formik.values.name}
           required
-          className='w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[18px] leading-[2.4] text-white placeholder-gray-placeholder outline-none focus:border-main-orange tablet:text-[24px] tablet:leading-[1.8] desktop:text-[26px] desktop:leading-[1.7]'
+          className='w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[16px] leading-[2.4] text-white placeholder-gray-placeholder outline-none focus:border-main-orange tablet:leading-[1.8] desktop:leading-[1.7]'
           onChange={formik.handleChange}
         />
         <input
@@ -75,7 +75,7 @@ export const NewForm = () => {
           name='email'
           value={formik.values.email}
           placeholder='E-mail'
-          className='w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[18px] leading-[2.4] text-white placeholder-gray-placeholder outline-none focus:border-main-orange tablet:text-[24px] tablet:leading-[1.8] desktop:text-[26px] desktop:leading-[1.7]'
+          className='w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[16px] leading-[2.4] text-white placeholder-gray-placeholder outline-none focus:border-main-orange tablet:leading-[1.8] desktop:leading-[1.7]'
           required
           onChange={formik.handleChange}
         />
@@ -88,7 +88,7 @@ export const NewForm = () => {
           }}
           value={formik.values.phone}
           placeholder='Phone'
-          className='w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[18px] leading-[2.4] text-white placeholder-gray-placeholder outline-none focus:border-main-orange tablet:text-[24px] tablet:leading-[1.8] desktop:text-[26px] desktop:leading-[1.7]'
+          className='w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[16px] leading-[2.4] text-white placeholder-gray-placeholder outline-none focus:border-main-orange tablet:leading-[1.8] desktop:leading-[1.7]'
           required
           onChange={formik.handleChange}
         />
@@ -96,14 +96,14 @@ export const NewForm = () => {
           name='details'
           value={formik.values.details}
           placeholder='Request'
-          className='w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[18px] leading-[2.4] text-white placeholder-gray-placeholder outline-none focus:border-main-orange tablet:text-[24px] tablet:leading-[1.8] desktop:text-[26px] desktop:leading-[1.7]'
+          className='w-full resize-none rounded-[6px] border-[1px] border-white/20 bg-white/20 p-[8px_20px] font-proxima text-[16px] leading-[2.4] text-white placeholder-gray-placeholder outline-none focus:border-main-orange tablet:leading-[1.8] desktop:leading-[1.7]'
           rows={1}
           onChange={formik.handleChange}
           required
         />
         <button
           type='submit'
-          className='w-full transform rounded-[6px] bg-main-orange px-[15px] py-[13px] text-xl font-bold text-text-dark transition duration-200 ease-in-out hover:scale-[0.99] hover:bg-main-orange-hover'
+          className='w-full transform rounded-[6px] bg-main-orange px-[15px] py-[13px] text-[16px] font-bold text-text-dark transition duration-200 ease-in-out hover:scale-[0.99] hover:bg-main-orange-hover tablet:text-[20px] desktop:text-[24px]'
         >
           Send the request
         </button>
