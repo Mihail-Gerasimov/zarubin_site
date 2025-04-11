@@ -30,7 +30,7 @@ export const pageMetadata = {
     title:
       'BrightByte – Practical Expertise in Product Thinking & Lean Digital Development',
     description:
-      "We help clients navigate product planning, vendor selection, and lean implementation strategies. BrightByte combines years of development and business experience to cut waste and build clarity.",
+      'We help clients navigate product planning, vendor selection, and lean implementation strategies. BrightByte combines years of development and business experience to cut waste and build clarity.',
     keywords: [
       'Lean Development',
       'Product Thinking',
@@ -55,7 +55,7 @@ export const pageMetadata = {
   },
   insights: {
     title:
-      "BrightByte Insights – Real-World Notes on Building Better Digital Products",
+      'BrightByte Insights – Real-World Notes on Building Better Digital Products',
     description:
       'Simple reflections and insights from our journey building digital solutions, working with startups, and helping teams make clearer, calmer decisions in tech.',
     keywords: [
@@ -80,7 +80,8 @@ export const pageMetadata = {
     ],
   },
   comparison: {
-    title: 'BrightByte vs Traditional Agencies – A Different Approach to Building',
+    title:
+      'BrightByte vs Traditional Agencies – A Different Approach to Building',
     description:
       'Unlike typical agencies, BrightByte blends ownership thinking with a consultative approach. We’re not here to sell time — we’re here to reduce noise and build better.',
     keywords: [

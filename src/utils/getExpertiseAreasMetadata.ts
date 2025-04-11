@@ -6,6 +6,9 @@ export interface Case {
   description: string;
   slug: string;
   logo: string;
+  link?: string | undefined;
+  linkTitle?: string | undefined;
+  type?: string | undefined;
 }
 
 export const getExpertiseAreasMetadata = () => {
@@ -22,6 +25,9 @@ export const getExpertiseAreasMetadata = () => {
       description: matterResult.data.description,
       slug: filename.replace('.md', ''),
       logo: matterResult.data.logo,
+      link: matterResult.data.link,
+      linkTitle: matterResult.data.linkTitle,
+      type: matterResult.data.type,
     };
   });
 

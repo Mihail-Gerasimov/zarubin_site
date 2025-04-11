@@ -37,14 +37,9 @@
   border-radius: 100%;
 }
 
-.markdown > p > img {
-  opacity: 1;
-  width: 90%;
-  height: auto;
-}
-
 .markdown img {
   max-width: 90%;
+  max-height: 650px;
   display: block;
   margin: auto;
 }

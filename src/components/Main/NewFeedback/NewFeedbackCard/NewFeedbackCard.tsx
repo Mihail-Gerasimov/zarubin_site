@@ -29,18 +29,18 @@ export const NewFeedbackCard = ({ data }: Props) => {
             className='h-[86px] w-[86px] rounded-full object-cover transition-opacity duration-500 mobile-big:h-[168px] mobile-big:w-[168px]'
             loading='lazy'
           />
-          <div className='relative flex-col justify-between gap-[75px] tablet:pt-[25px]'>
-            <div className='transition-opacity duration-500'>
-              <h3 className='font-proxima text-[28px] font-bold text-text-dark mobile-big:text-[40px]'>
+          <div className='relative '>
+            <div className='flex h-full flex-col items-center justify-center gap-[6px] transition-opacity duration-500'>
+              <h3 className='font-proxima text-[24px] font-bold text-text-dark'>
                 {data.name}
               </h3>
-              <span className='font-proxima text-[16px] text-text-dark mobile-big:text-[20px] tablet:text-[24px]'>
+              <span className='font-proxima text-[16px] text-text-dark mobile-big:text-[20px]'>
                 {data.job}
               </span>
             </div>
           </div>
         </div>
-        <p className='mt-[40px] font-proxima text-[16px] leading-[24px] text-text-dark mobile-big:text-[20px]'>
+        <p className='mt-[40px] font-proxima text-[16px] leading-[24px] text-text-dark'>
           {data.feedback}
         </p>
       </div>

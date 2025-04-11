@@ -23,7 +23,7 @@ export const ExpertiseCard = ({ data, idx }: IExpertiseCard) => {
         {description && (
           <p className='font-regular text-[16px]'>{description}</p>
         )}
-        <h3 className='font-unbound text-[20px] font-bold uppercase leading-[1.1] text-main-bg desktop:text-[28px]'>
+        <h3 className='font-unbound text-[20px] font-bold uppercase leading-[1.1] text-main-bg desktop:text-[24px]'>
           {title}
         </h3>
       </div>

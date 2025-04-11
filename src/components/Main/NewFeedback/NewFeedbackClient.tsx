@@ -1,6 +1,7 @@
 'use client';
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
+import { sectionsTitle } from '@/src/utils/sectionsTitle/sectionsTitle';
 import { IFeedback } from '@/src/utils/types';
 import dynamic from 'next/dynamic';
 import { Suspense, useState } from 'react';
@@ -20,14 +21,14 @@ export const NewFeedbackClient = ({ feedback }: Props) => {
 
   return (
     <div className='flex flex-col gap-[30px]'>
-      <Container className='w-full desktop-hard:px-[80px]'>
+      <Container className='w-full'>
         <div className='relative flex w-full items-start justify-between desktop:items-center'>
           <div className='flex flex-col gap-[16px]'>
-            <h2 className='font-unbound text-[28px] font-bold uppercase leading-[1.25] tablet:text-[40px] tablet:leading-[1.2] desktop:leading-[1.1] desktop-light:text-[50px]'>
-              Feedback
+            <h2 className='font-unbound text-[28px] font-bold uppercase leading-[1.25] tablet:text-[40px] tablet:leading-[1.2] desktop:text-[45px] desktop:leading-[1.1]'>
+              {`${sectionsTitle['main']['feedback'].title}`}
             </h2>
             <p className='font-proxima text-[18px] font-bold leading-[1.1] text-light-gray tablet:text-[20px] tablet:leading-[1.2] desktop:leading-[1]'>
-              Honest words of our partners about cooperation
+              {`${sectionsTitle['main']['feedback'].descripton}`}
             </p>
           </div>
 
