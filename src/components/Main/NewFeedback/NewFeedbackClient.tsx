@@ -1,12 +1,12 @@
 'use client';
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
+import { sectionsTitle } from '@/src/utils/sectionsTitle/sectionsTitle';
 import { IFeedback } from '@/src/utils/types';
 import dynamic from 'next/dynamic';
 import { Suspense, useState } from 'react';
 import { SwiperClass } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
-import { sectionsTitle } from '@/src/utils/sectionsTitle/sectionsTitle';
 
 interface Props {
   feedback: IFeedback[];

@@ -1,11 +1,11 @@
 'use client';
 
+import { sectionsTitle } from '@/src/utils/sectionsTitle/sectionsTitle';
 import Link from 'next/link';
 import { NextLinePreposition } from '../../NextLinePreposition/NextLinePreposition';
 import { Container } from '../../shared/Container/Container';
 import { Section } from '../../shared/Section/Section';
 import { ExpertiseCard } from './ExpertiseCard/ExpertiseCard';
-import { sectionsTitle } from '@/src/utils/sectionsTitle/sectionsTitle';
 
 interface IData {
   data: {

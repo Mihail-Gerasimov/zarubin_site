@@ -1,6 +1,7 @@
 'use client';
 
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
+import { sectionsTitle } from '@/src/utils/sectionsTitle/sectionsTitle';
 import { Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import { useState } from 'react';
@@ -8,7 +9,6 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
 import { Section } from '../../shared/Section/Section';
 import { NewInsightsCard } from './NewInsightsCard/NewInsightsCard';
-import { sectionsTitle } from '@/src/utils/sectionsTitle/sectionsTitle';
 
 interface Props {
   posts: Post[];
