@@ -170,6 +170,7 @@ Thu Apr 25 20:15:54 UTC 2024
        - descriotion: Краткое описание (не обязательное поле)
        - link: ссылка (обязательное поле)
        - linkTitle: имя ссылки
+       - type: 'main'
          ![Инструкция по загрузке карточки с ссылкой](/public/assets/images/instruction/main-page/expertise-card/main-card-props.webp)
 
 ## Инструкция по добавлению и изменению seo данных для страниц:
