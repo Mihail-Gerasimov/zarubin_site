@@ -144,3 +144,53 @@ Thu Apr 25 20:15:54 UTC 2024
       - Убедиться что выбрано "Commit directly to the main branch"
       - Нажать на "Commit changes"
         ![Инструкция по загрузке файла](/public/assets/images/instruction/main-page/slide/instruction-slide-7.webp)
+
+## Инструкция по добавлению и изменению контента карточек экспертизы на главной странице:
+
+![Изображение секции слайда на главной](/public/assets/images/instruction/main-page/expertise-card/expertise-view.webp)
+
+1.  Для загрузки или редактировании карточек экспертизы на главной странице необходимо зайти в репозиторий https://github.com/DgtlBureau/zarubin_site, перейти по следующим директориям : src/main/expertise_areas. [ссылка на сраницу](https://github.com/DgtlBureau/zarubin_site/tree/main/src/main/expertise_areas)
+    ![Путь к карточкам](/public/assets/images/instruction/main-page/expertise-card/card-path.webp)
+
+2.  Добавление и редактирование md файлов происходит аналогично тем что были описаны выше.
+
+3.  В загружаемых файлах должна содержаться следующая основня информация в зависимости от типа (title, description, logo, type, link, linkTitle):
+
+    1. Для обычных карточек с типом **type: 'card'** должны быть следующие обязательные поля:
+
+       - title: Заголовок (обязательное поле)
+       - descriotion: Краткое описание
+       - logo: Путь к иконке (обязательное поле. Иконка должна быть в формате svg)
+       - type: Тип карточки (в основном это 'card')
+         ![Инструкция по загрузке обычных карточек](/public/assets/images/instruction/main-page/expertise-card/card-props.webp)
+
+    2. Для главной карточки с типом **type: 'main'** должны быть следующие обязательные поля:
+
+       - title: Заголовок (обязательное поле)
+       - descriotion: Краткое описание (не обязательное поле)
+       - link: ссылка (обязательное поле)
+       - linkTitle: имя ссылки
+         ![Инструкция по загрузке карточки с ссылкой](/public/assets/images/instruction/main-page/expertise-card/main-card-props.webp)
+
+## Инструкция по добавлению и изменению seo данных для страниц:
+
+1. Для добавления и редактирования сео данных необходимо перейти в данную директорию zarubin_site/src/utils/pageMetadata.ts [ссылка на сео](https://github.com/DgtlBureau/zarubin_site/blob/main/src/utils/pageMetadata.ts)
+
+2. Структура сео данных следующая:
+   - Название страницы
+     - title: Заголовок данной страницы
+     - description: Описание траницы
+     - keywords: массив из ключевых слов
+       ![Инструкция по загрузке карточки с ссылкой](/public/assets/images/instruction/seo/seo.webp)
+
+## Инструкция по добавлению и изменению названия и описания секций:
+
+1. Для добавления и редактирования названия и описания секций необходимо перейти в данную директорию zarubin_site/src/utils/sectionsTitle/sectionsTitle.ts
+   [ссылка на заголовки секций](https://github.com/DgtlBureau/zarubin_site/blob/main/src/utils/sectionsTitle/sectionsTitle.ts)
+
+2. Структура выглядит следующим образом:
+   - название страницы (обязательное поле)
+     - название секци (обязательное поле)
+       - title: заголовок секции (обязательное поле)
+       - description: описание секции (необязательное поле)
+         ![Инструкция по загрузке карточки с ссылкой](/public/assets/images/instruction/section-title/sections-data.webp)
