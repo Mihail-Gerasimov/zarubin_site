@@ -2,7 +2,7 @@
 title: 'BrightByte provides consultancy services, outsourced development, IT audits, and information security expertise'
 description: ''
 logo: ''
-link: '/solutions'
+link: 'thebrightbyte.com/solutions'
 linkTitle: 'Explore our solutions'
 type: 'main'
 ---
