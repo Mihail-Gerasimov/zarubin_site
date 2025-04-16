@@ -1,7 +1,7 @@
 ---
-title: 'Clarity Before Complexity: Scaling with Confidence'
+title: 'Consulting & Custom Engineering for Complex Cases'
 description: ''
 image: '/assets/images/main/heroSlide/conference-room.webp'
 link: '/playbook/expertise'
-linkName: 'Go to playbook'
+linkName: 'Playbook'
 ---
