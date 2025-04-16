@@ -1,5 +1,5 @@
 ---
-title: 'BrightByte provides consultancy services, outsourced development, IT audits, and information security expertise'
+title: 'BrightByte provides consulting services, outsourced development, IT audits, and information security expertise.'
 description: ''
 logo: ''
 link: 'thebrightbyte.com/solutions'
