@@ -10,14 +10,14 @@ interface ISectionsTitle {
 export const sectionsTitle: ISectionsTitle = {
   main: {
     expertise: {
-      title: 'Our Areas of Expertise',
+      title: 'Expertise',
       descripton:
-        'Innovative solutions for your business: our key areas of work',
+        'Designing tech that drives growth, not overhead',
     },
     insights: {
       title: 'Insights',
       descripton:
-        'The latest research and articles on information technology in the field of sports and business',
+        'Explore how modern IT reshapes performance, operations, and strategy in fast-paced industries',
     },
     feedback: {
       title: 'Feedback',
