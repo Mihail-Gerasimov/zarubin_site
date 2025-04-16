@@ -1,8 +1,8 @@
 ---
-title: 'Investing in sports and AI, creating innovative products'
+title: 'BrightByte provides consultancy services, outsourced development, IT audits, and information security expertise'
 description: ''
 logo: ''
-link: ''
-linkTitle: 'Go to solutions'
+link: '/solutions'
+linkTitle: 'Explore our solutions'
 type: 'main'
 ---
