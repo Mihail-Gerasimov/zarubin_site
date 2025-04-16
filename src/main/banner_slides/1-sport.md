@@ -1,7 +1,7 @@
 ---
-title: 'Strong Teams. Clear Work.'
+title: 'Sport Systems and Marketing for clubs'
 description: ''
 image: '/assets/images/main/heroSlide/hockey.webp'
 link: '/solutions'
-linkName: 'Go to solutions'
+linkName: 'Solutions'
 ---
