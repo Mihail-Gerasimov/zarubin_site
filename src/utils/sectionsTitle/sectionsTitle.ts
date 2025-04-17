@@ -11,8 +11,7 @@ export const sectionsTitle: ISectionsTitle = {
   main: {
     expertise: {
       title: 'Expertise',
-      descripton:
-        'Designing tech that drives growth, not overhead',
+      descripton: 'Designing tech that drives growth, not overhead',
     },
     insights: {
       title: 'Insights',

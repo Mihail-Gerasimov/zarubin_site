@@ -50,7 +50,7 @@ export const NewInsightsClient = ({ posts }: Props) => {
             slidesPerView={mobile ? 1 : isTablet ? 1.56 : 3}
             onSwiper={setSwiper}
           >
-            {posts.slice(0, 6).map((post, idx) => (
+            {posts.map((post, idx) => (
               <SwiperSlide key={idx}>
                 <NewInsightsCard
                   title={post.title}

@@ -1,26 +1,26 @@
 'use client';
 
+import { mainBanners } from '@/src/utils/DataLayers/MainBanners';
+import { DateTime } from 'luxon';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
 import { Section } from '../../shared/Section/Section';
 
-interface IHeroProp {
-  slideData: {
-    title: string;
-    description: string;
-    image: string;
-    link: string;
-    linkName: string;
-  }[];
-}
-
-export const NewHero = ({ slideData }: IHeroProp) => {
+export const NewHero = () => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
   const [slideIndex, setActiveSlideIndex] = useState<number>(0);
+
+  const sortedBanners = useMemo(() => {
+    return [...mainBanners].sort((a, b) => {
+      const dateA = DateTime.fromFormat(a.date, 'dd-MM-yyyy');
+      const dateB = DateTime.fromFormat(b.date, 'dd-MM-yyyy');
+      return dateA.toMillis() - dateB.toMillis();
+    });
+  }, [mainBanners]);
 
   useEffect(() => {
     if (swiper) {
@@ -50,7 +50,7 @@ export const NewHero = ({ slideData }: IHeroProp) => {
         }}
         loop={true}
       >
-        {slideData.map((item) => (
+        {sortedBanners.map((item) => (
           <SwiperSlide key={item.title}>
             <div
               className={`gradient-box h-[380px] duration-500 tablet:h-[465px] desktop:h-[589px] ${slideIndex === 0 || slideIndex % 2 === 0 ? 'after:left-0' : 'after:right-0'} after:duration-500`}
@@ -80,18 +80,18 @@ export const NewHero = ({ slideData }: IHeroProp) => {
       <Container className='mt-[20px] flex flex-col items-start justify-between gap-[35px] tablet:mt-[30px] tablet:flex-row tablet:items-center desktop:mt-[40px]'>
         <Link
           href={
-            slideData[slideIndex].link
-              ? slideData[slideIndex].link
+            sortedBanners[slideIndex].link
+              ? sortedBanners[slideIndex].link
               : '/solutions'
           }
           className='z-30 rounded-[6px] bg-main-orange p-[5px_31px] font-proxima text-[20px] font-bold leading-[2] text-text-dark duration-300 hover:bg-main-orange-hover'
         >
-          {slideData[slideIndex].linkName
-            ? slideData[slideIndex].linkName
+          {sortedBanners[slideIndex].linkName
+            ? sortedBanners[slideIndex].linkName
             : 'solutions'}
         </Link>
         <div className='z-30 flex w-full gap-[20px] tablet:max-w-[402px] desktop:max-w-[482px]'>
-          {slideData.map((item, idx) => (
+          {sortedBanners.map((_, idx) => (
             <button
               key={idx}
               type='button'

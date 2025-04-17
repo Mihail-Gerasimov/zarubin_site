@@ -5,15 +5,13 @@ import { NewHero } from '@/src/components/Main/NewHero/NewHero';
 import { NewInsights } from '@/src/components/Main/NewInsights/NewInsights';
 import { Section } from '@/src/components/shared/Section/Section';
 import { getExpertiseAreasMetadata } from '@/src/utils/getExpertiseAreasMetadata';
-import { getMainBannerMetadata } from '@/src/utils/getMainBannerMetadata';
 
 const data = getExpertiseAreasMetadata();
-const slideData = getMainBannerMetadata();
 
-export const MainPage = () => {
+export const MainPageComponent = () => {
   return (
     <div className='flex flex-col'>
-      <NewHero slideData={slideData} />
+      <NewHero />
       <NewExpertise data={data} />
       <NewInsights />
       <Section>

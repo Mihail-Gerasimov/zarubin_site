@@ -1,27 +1,26 @@
-import russPhoto from '@/public/assets/images/main/feedbacks/russPhoto.jpg';
-import joshPhoto from '@/public/assets/images/main/feedbacks/JoshPhoto.jpg';
-import anotherDmitry from '@/public/assets/images/expertise/another_Dmitry.webp';
 import alexeyPhoto from '@/public/assets/images/main/feedbacks/alexey.webp';
 import dmitryPhoto from '@/public/assets/images/main/feedbacks/dmitriy.webp';
 import elenaPhoto from '@/public/assets/images/main/feedbacks/elena.webp';
 import johnPhoto from '@/public/assets/images/main/feedbacks/john.webp';
+import joshPhoto from '@/public/assets/images/main/feedbacks/JoshPhoto.jpg';
 import konstantinPhoto from '@/public/assets/images/main/feedbacks/konstantin.webp';
+import russPhoto from '@/public/assets/images/main/feedbacks/russPhoto.jpg';
 import sergeyPhoto from '@/public/assets/images/main/feedbacks/sergey.webp';
 import vasiliyPhoto from '@/public/assets/images/main/feedbacks/vasiliy.webp';
 import vitaliyPhoto from '@/public/assets/images/main/feedbacks/vitaliy.webp';
 
-import tig1 from '@/public/assets/images/clients/tig1.png';
-import gw from '@/public/assets/images/clients/gw.png';
-import avangard from '@/public/assets/images/clients/avangard.png';
-import dinamo from '@/public/assets/images/clients/dinamo.png';
-import gc from '@/public/assets/images/clients/gc.png';
-import oazis from '@/public/assets/images/clients/oazis.png';
-import orbita from '@/public/assets/images/clients/orbita-dark.png';
-import sports from '@/public/assets/images/clients/sports.png';
-import tractor from '@/public/assets/images/clients/tractor.png';
+import avangard from '@/public/assets/images/clients/avangard.webp';
+import dinamo from '@/public/assets/images/clients/dinamo.webp';
+import gc from '@/public/assets/images/clients/gc.webp';
+import gw from '@/public/assets/images/clients/gw.webp';
+import oazis from '@/public/assets/images/clients/oazis.webp';
+import orbita from '@/public/assets/images/clients/orbita-dark.webp';
+import sports from '@/public/assets/images/clients/sports.webp';
+import tig1 from '@/public/assets/images/clients/tig1.webp';
+import tractor from '@/public/assets/images/clients/tractor.webp';
 
 export const FeedbackDataMain = [
-    {
+  {
     id: 1,
     name: 'Russel Giambrone',
     job: 'TIG1 Strategies',
@@ -71,7 +70,7 @@ export const FeedbackDataMain = [
     feedback:
       'Vitaly and his team found us a technical director and conducted an audit of the project in 3 weeks. Quick response and fast decision-making are very important for startups! The clarity they brought allowed us to reprioritize our tech strategy before launching the next investment round.',
   },
-    {
+  {
     id: 6,
     name: 'Dmitriy Kibkalo',
     job: 'Co-Founder Orbita.vc',
