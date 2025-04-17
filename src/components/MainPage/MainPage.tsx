@@ -8,9 +8,9 @@ import { getExpertiseAreasMetadata } from '@/src/utils/getExpertiseAreasMetadata
 
 const data = getExpertiseAreasMetadata();
 
-export default function MainPage() {
+export const MainPageComponent = () => {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col'>
       <NewHero />
       <NewExpertise data={data} />
       <NewInsights />
@@ -22,4 +22,4 @@ export default function MainPage() {
       </Section>
     </div>
   );
-}
+};
