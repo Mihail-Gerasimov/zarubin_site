@@ -8,5 +8,4 @@ export const menuListLayer = [
   { id: 3, name: 'Investments', link: '/investments' },
   { id: 4, name: 'Career', link: '/career' },
   { id: 5, name: 'Comparison', link: '/comparison' },
-  { id: 6, name: 'About', link: '/about' },
 ];

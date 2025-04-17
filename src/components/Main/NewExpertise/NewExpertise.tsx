@@ -19,7 +19,7 @@ interface IData {
 }
 
 export const NewExpertise = ({ data }: IData) => {
-  const mainData = data.filter((item) => item.type === 'card');
+  const cardsData = data.filter((item) => item.type === 'card');
   const mainCard = data.find((item) => item.type === 'main');
 
   return (
@@ -36,7 +36,7 @@ export const NewExpertise = ({ data }: IData) => {
           {`${sectionsTitle['main']['expertise'].descripton}`}
         </p>
         <div className='mt-[40px] grid grid-cols-1 gap-[20px] tablet:grid-cols-2 desktop:grid-cols-3 desktop:gap-[40px]'>
-          {mainData.map((item, idx) => (
+          {cardsData.map((item, idx) => (
             <ExpertiseCard data={item} key={idx} idx={idx} />
           ))}
           <div
