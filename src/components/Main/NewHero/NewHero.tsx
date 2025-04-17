@@ -18,7 +18,7 @@ export const NewHero = () => {
     return [...mainBanners].sort((a, b) => {
       const dateA = DateTime.fromFormat(a.date, 'dd-MM-yyyy');
       const dateB = DateTime.fromFormat(b.date, 'dd-MM-yyyy');
-      return dateA.toMillis() - dateB.toMillis();
+      return dateB.toMillis() - dateA.toMillis();
     });
   }, [mainBanners]);
 
