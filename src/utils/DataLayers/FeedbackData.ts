@@ -1,3 +1,4 @@
+import russPhoto from '@/public/assets/images/main/feedbacks/russPhoto.jpg';
 import joshPhoto from '@/public/assets/images/main/feedbacks/JoshPhoto.jpg';
 import anotherDmitry from '@/public/assets/images/expertise/another_Dmitry.webp';
 import alexeyPhoto from '@/public/assets/images/main/feedbacks/alexey.webp';
@@ -9,6 +10,7 @@ import sergeyPhoto from '@/public/assets/images/main/feedbacks/sergey.webp';
 import vasiliyPhoto from '@/public/assets/images/main/feedbacks/vasiliy.webp';
 import vitaliyPhoto from '@/public/assets/images/main/feedbacks/vitaliy.webp';
 
+import tig1 from '@/public/assets/images/clients/tig1.png';
 import gw from '@/public/assets/images/clients/gw.png';
 import avangard from '@/public/assets/images/clients/avangard.png';
 import dinamo from '@/public/assets/images/clients/dinamo.png';
@@ -19,8 +21,18 @@ import sports from '@/public/assets/images/clients/sports.png';
 import tractor from '@/public/assets/images/clients/tractor.png';
 
 export const FeedbackDataMain = [
-  {
+    {
     id: 1,
+    name: 'Russel Giambrone',
+    job: 'TIG1 Strategies',
+    image: russPhoto,
+    logo: tig1,
+    date: '15.04.2025',
+    feedback:
+      'We hired BrightByte to build PersoniWay — an AI-based assistant for field technicians. I was impressed with how quickly they understood our domain and got things moving. The scope was clear, the execution fast, and my own involvement minimal. They operated independently, asked smart questions when needed, and delivered consistently — without bloated timelines or inflated budgets. It is rare to find a team thats both technically sharp and business-savvy. Highly recommend if you need traction without friction.',
+  },
+  {
+    id: 2,
     name: 'Josh Austin',
     job: 'Green Way Texas AC',
     image: joshPhoto,
@@ -30,7 +42,7 @@ export const FeedbackDataMain = [
       'Working with BrightByte and his team was a turning point for us. They built an AI assistant tailored to our HVAC service workflows — we cut response time by half and improved field accuracy. Reliable, sharp, and proactive.',
   },
   {
-    id: 2,
+    id: 3,
     name: 'John Cushma',
     job: '21sports',
     image: johnPhoto,
@@ -40,7 +52,7 @@ export const FeedbackDataMain = [
       'We are working with BrightByte on a sports publication website with a relatively simple tech stack that involves integrations. Previous developers consistently delivered an incomplete product full of bugs and were unresponsive when issues were pointed out. BrightByte team has shown a high level of professionalism, adhering to a clear business process and a systematic approach at every stage. I highly recommend working with them.',
   },
   {
-    id: 3,
+    id: 4,
     name: 'Vasiliy Vasiliev',
     job: 'CEO IGFT',
     image: vasiliyPhoto,
@@ -50,7 +62,7 @@ export const FeedbackDataMain = [
       'We have been working with BrightByte for two years, during which time we have actively developed our project. BrightByte impresses with their attention to detail: the team provides comprehensive API documentation, every new feature is meticulously described in a dedicated document, and they constantly offer suggestions for improvement. At the same time, they help us avoid unnecessary actions if our plans go beyond what is required.',
   },
   {
-    id: 4,
+    id: 5,
     name: 'Alexey Sokolov',
     job: 'Founder Grid Capital',
     image: alexeyPhoto,
@@ -60,7 +72,7 @@ export const FeedbackDataMain = [
       'Vitaly and his team found us a technical director and conducted an audit of the project in 3 weeks. Quick response and fast decision-making are very important for startups! The clarity they brought allowed us to reprioritize our tech strategy before launching the next investment round.',
   },
     {
-    id: 5,
+    id: 6,
     name: 'Dmitriy Kibkalo',
     job: 'Co-Founder Orbita.vc',
     image: dmitryPhoto,
@@ -70,7 +82,7 @@ export const FeedbackDataMain = [
       'The BrightByte has the vision necessary for startups to make the most effective and quick decisions. We were impressed by his ability to translate early-stage ideas into concrete roadmaps and technical solutions, which helped us move faster and avoid costly delays.',
   },
   {
-    id: 6,
+    id: 7,
     name: 'Sergey',
     job: 'Commercial Director of HC Tractor',
     image: sergeyPhoto,
@@ -80,7 +92,7 @@ export const FeedbackDataMain = [
       'We have a very conservative market. That is cool when such young and energetic guys like BrightByte and his team show up. Just rocked it! Their solution helped automate our internal ops and gave us fresh insights into how we can grow the brand and engage more with our fanbase.',
   },
   {
-    id: 7,
+    id: 8,
     name: 'Konstantin',
     job: 'Commercial Director of HC Avangard',
     image: konstantinPhoto,
@@ -90,7 +102,7 @@ export const FeedbackDataMain = [
       'Vitaly always takes a proactive position, he really helped the company to move from offline to online. He brought expertise from other industries to the sport and perfected it!',
   },
   {
-    id: 8,
+    id: 9,
     name: 'Vitaliy',
     job: 'CTO, Hockey Club Avangard',
     image: vitaliyPhoto,
@@ -100,13 +112,13 @@ export const FeedbackDataMain = [
       'We are working on the hockey club project, focusing on design and support. I am fully confident that when I hand over my project to Vitaliy, the result is guaranteed. He and his team are genuinely invested and bring their own perspective to the work. Unlike companies that require a detailed technical specification, Vitaliy and his team are more comfortable independently leading the project and defining its boundaries.',
   },
   {
-    id: 9,
+    id: 10,
     name: 'Elena',
     job: 'General Product Manager Go',
     image: elenaPhoto,
     logo: dinamo,
     date: '07.11.2022',
     feedback:
-      'The guys from Bright Byte helped to pack the idea into the final product. They provided professional assistance at all stages and were all about achieving results!',
+      'The guys from BrightByte helped to pack the idea into the final product. They provided professional assistance at all stages and were all about achieving results!',
   },
 ];
