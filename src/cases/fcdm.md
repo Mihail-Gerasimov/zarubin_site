@@ -8,6 +8,7 @@ logo: '/assets/images/case/svg/dinamika.svg'
 logo_hover: '/assets/images/case/svg/dinamika_hover.svg'
 bannerImage: '/assets/images/case/banner/dinamika-case.webp'
 images: ['/assets/images/case/fcdm-1.webp', '/assets/images/case/fcdm-2.webp']
+date: '01-01-2025'
 ---
 
 ## About

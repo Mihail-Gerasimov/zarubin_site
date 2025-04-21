@@ -1,5 +1,6 @@
 'use client';
 
+import defaultLogo from '@/public/assets/images/case/svg/default-case-logo.svg';
 import { NextLinePreposition } from '@/src/components/NextLinePreposition/NextLinePreposition';
 import { Case } from '@/src/utils/getCaseMetadata';
 import Image from 'next/image';
@@ -39,7 +40,7 @@ export const CaseCard = ({ data }: { data: Case }) => {
           <div className='flex items-center justify-between'>
             <div className='h-[35px] w-[auto]'>
               <Image
-                src={logo}
+                src={logo ? logo : defaultLogo}
                 alt={`${data.tag} logo`}
                 height={35}
                 width={120}

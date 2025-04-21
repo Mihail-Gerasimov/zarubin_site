@@ -2,12 +2,12 @@
 title: 'Digital Transformation from 7 Disparate Websites to a Unified System'
 description: "The hockey club has a large vertical structure, starting with a children's academy, youth team, women's team, senior team, and a team from the Continental Hockey League."
 industries: ['Sports and Entertainment', 'Custom Development']
-tag: 'Avangard'
+tag: 'Jedipay'
 instruments: ['php', 'react']
-logo: '/assets/images/case/svg/avangard.svg'
-bannerImage: '/assets/images/case/banner/avangard-case.webp'
-images: ['/assets/images/case/avangard-1.webp']
-date: '01-01-2025'
+logo: '/assets/images/case/svg/default-case-logo.svg'
+bannerImage: '/assets/images/case/banner/jedipay.webp'
+images: ['/assets/images/case/jedi-1.webp']
+date: '21-04-2025'
 ---
 
 ## About

@@ -7,6 +7,7 @@ instruments: ['ruby', 'react', 'figma']
 logo: '/assets/images/case/svg/stocksSoccer.svg'
 bannerImage: '/assets/images/case/banner/stock-socker-case.webp'
 images: ['/assets/images/case/stocks_soccer-1.webp']
+date: '01-01-2025'
 ---
 
 ## About
