@@ -7,6 +7,7 @@ instruments: []
 logo: '/assets/images/case/svg/nis.svg'
 bannerImage: '/assets/images/case/banner/nis-case.webp'
 images: ['/assets/images/case/nis-1.webp']
+date: '01-01-2025'
 ---
 
 ## About

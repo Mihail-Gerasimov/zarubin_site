@@ -10,6 +10,7 @@ import { contentTrimming } from '@/src/utils/contentTrimming';
 import { getCaseMetadata } from '@/src/utils/getCaseMetadata';
 import { openGraphImage } from '@/src/utils/openGraphParams';
 import { pageMetadata } from '@/src/utils/pageMetadata';
+import { DateTime } from 'luxon';
 import { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
@@ -47,6 +48,20 @@ export const metadata: Metadata = {
 
 export default async function BusinessObjectivesPage() {
   const casesMetadata = getCaseMetadata('src/cases');
+  const sortedCases = casesMetadata.sort((a, b) => {
+    if (!a.date && !b.date) return 0;
+    if (!a.date) return 1;
+    if (!b.date) return -1;
+
+    const dateA = DateTime.fromFormat(a.date, 'dd-MM-yyyy');
+    const dateB = DateTime.fromFormat(b.date, 'dd-MM-yyyy');
+
+    if (!dateA.isValid && !dateB.isValid) return 0;
+    if (!dateA.isValid) return 1;
+    if (!dateB.isValid) return -1;
+
+    return dateB.toMillis() - dateA.toMillis();
+  });
   return (
     <>
       <Section id='hero' className='relative py-0 tablet:py-0 desktop:pb-0'>
@@ -57,7 +72,7 @@ export default async function BusinessObjectivesPage() {
       <Section className='!pt-0'>
         <Container>
           <Suspense>
-            <Cases cases={casesMetadata} />
+            <Cases cases={sortedCases} />
           </Suspense>
         </Container>
       </Section>
