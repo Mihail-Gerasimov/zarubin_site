@@ -3,8 +3,9 @@
 import { NextPrevBtn } from '@/src/ui-kit/NextPrevBtn/NextPrevBtn';
 import { sectionsTitle } from '@/src/utils/sectionsTitle/sectionsTitle';
 import { IFeedback } from '@/src/utils/types';
+import { DateTime } from 'luxon';
 import dynamic from 'next/dynamic';
-import { Suspense, useState } from 'react';
+import { Suspense, useMemo, useState } from 'react';
 import { SwiperClass } from 'swiper/react';
 import { Container } from '../../shared/Container/Container';
 
@@ -18,6 +19,19 @@ const LazyFeedbackSwiper = dynamic(
 
 export const NewFeedbackClient = ({ feedback }: Props) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
+
+  const sortedFeedbacks = useMemo(() => {
+    return [...feedback].sort((a, b) => {
+      const dateA = a.date ? DateTime.fromFormat(a.date, 'dd.MM.yyyy') : null;
+      const dateB = b.date ? DateTime.fromFormat(b.date, 'dd.MM.yyyy') : null;
+
+      if (!dateA && !dateB) return 0;
+      if (!dateA) return 1;
+      if (!dateB) return -1;
+
+      return dateB.toMillis() - dateA.toMillis();
+    });
+  }, [feedback]);
 
   return (
     <div className='flex flex-col gap-[30px]'>
@@ -43,7 +57,10 @@ export const NewFeedbackClient = ({ feedback }: Props) => {
       </Container>
       <Suspense fallback={<div></div>}>
         <Container className='overflow-visible'>
-          <LazyFeedbackSwiper setSwiper={setSwiper} feedback={feedback} />
+          <LazyFeedbackSwiper
+            setSwiper={setSwiper}
+            feedback={sortedFeedbacks}
+          />
         </Container>
       </Suspense>
     </div>
