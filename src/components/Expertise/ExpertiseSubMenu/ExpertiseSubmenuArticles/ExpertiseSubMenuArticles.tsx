@@ -38,6 +38,7 @@ export const ExpertiseSubmenuArticles = ({ data, onClick }: IData) => {
                 description={post.description}
                 tag={post.tag}
                 slug={post.slug}
+                category={post.category}
                 subCategory={post.subCategory}
                 image={post.image}
                 onClick={onClick}

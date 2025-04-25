@@ -8,6 +8,7 @@ interface Props {
   description: string;
   slug: string;
   subCategory: string | undefined | null;
+  category: string | undefined | null;
   image: string | undefined | null;
   onClick: () => void;
 }
@@ -15,13 +16,14 @@ interface Props {
 export const ExpertiseMenuCard = ({
   title,
   description,
+  category,
   slug,
   image,
   onClick,
 }: Props) => {
   return (
     <Link
-      href={`/playbook/expertise/${slug}`}
+      href={`/playbook/${category?.toLowerCase()}/${slug}`}
       onClick={onClick}
       className='flex w-full flex-col'
     >
