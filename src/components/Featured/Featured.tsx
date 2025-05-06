@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { SmallBlogCard } from '../BlogCard/SmallBlogCard';
+import { usePathname } from 'next/navigation';
 
 interface Props {
   slug?: string;
@@ -15,6 +16,12 @@ interface Props {
 
 export const Featured = ({ slug, posts }: Props) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
+
+  const path = usePathname();
+
+  const category = path.split('/').filter((item) => item !== '');
+
+  console.log('category', category);
 
   const isMobile = useMediaQuery('<tablet');
 
@@ -54,10 +61,7 @@ export const Featured = ({ slug, posts }: Props) => {
           .filter((post) => post.slug !== slug)
           .map((item) => (
             <SwiperSlide key={item.slug} className='!h-auto'>
-              <Link
-                href={`/insights/${item.slug}`}
-                className='flex h-full flex-1'
-              >
+              <Link href={`${item.slug}`} className='flex h-full flex-1'>
                 <SmallBlogCard
                   tag={item.tag ? item.tag : ''}
                   title={item.title}

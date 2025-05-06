@@ -16,12 +16,19 @@ import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
 import path from 'path';
 import styles from './Post.module.css';
+import { Featured } from '@/src/components/Featured/Featured';
+import { postsSorting } from '@/src/utils/postsSorting';
 
 type Slug = {
   slug: string;
 };
 
 const URL = process.env.NODE_ENV === 'production' ? BASE_URL : '';
+
+const getAllPosts = () => {
+  const postMetadata = getExpertiseMetadata();
+  return postsSorting(postMetadata);
+};
 
 export async function generateStaticParams(): Promise<Slug[]> {
   const expertises = getExpertiseMetadata();
@@ -205,6 +212,9 @@ export default function ExpertisePostPage(props: { params: { slug: string } }) {
           </Markdown>
         </article>
         <SocialFollow />
+        <div className='desktop:bp-0 relative z-[5] mt-[60px] pb-[20px]'>
+          <Featured slug={slug} posts={getAllPosts()} />
+        </div>
       </div>
     </div>
   );
