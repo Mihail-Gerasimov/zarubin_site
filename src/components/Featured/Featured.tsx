@@ -4,10 +4,10 @@ import Arrow from '@/public/assets/images/icons/arrow.svg';
 import { Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { SmallBlogCard } from '../BlogCard/SmallBlogCard';
-import { usePathname } from 'next/navigation';
 
 interface Props {
   slug?: string;

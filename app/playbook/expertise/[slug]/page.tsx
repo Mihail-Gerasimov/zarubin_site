@@ -1,4 +1,5 @@
 import NotFoundPage from '@/app/not-found';
+import { Featured } from '@/src/components/Featured/Featured';
 import { SocialFollow } from '@/src/components/SocialFollow/SocialFollow';
 import { AuthorInfo } from '@/src/ui-kit/AuthorInfo/AuthorInfo';
 import { DownloadLink } from '@/src/ui-kit/DownloadLink/DownloadLink';
@@ -10,14 +11,13 @@ import { formattedDate } from '@/src/utils/formattedDate';
 import { getExpertiseMetadata } from '@/src/utils/getExpertiseMetadata';
 import { ideaMarking } from '@/src/utils/IdeaMarking/ideaMarking';
 import { openGraphImage } from '@/src/utils/openGraphParams';
+import { postsSorting } from '@/src/utils/postsSorting';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { DateTime } from 'luxon';
 import Markdown from 'markdown-to-jsx';
 import path from 'path';
 import styles from './Post.module.css';
-import { Featured } from '@/src/components/Featured/Featured';
-import { postsSorting } from '@/src/utils/postsSorting';
 
 type Slug = {
   slug: string;
