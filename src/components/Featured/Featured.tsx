@@ -4,7 +4,6 @@ import Arrow from '@/public/assets/images/icons/arrow.svg';
 import { Post } from '@/src/utils/types';
 import useMediaQuery from '@/src/utils/useMediaQuery';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { SmallBlogCard } from '../BlogCard/SmallBlogCard';
@@ -16,10 +15,6 @@ interface Props {
 
 export const Featured = ({ slug, posts }: Props) => {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
-
-  const path = usePathname();
-
-  const category = path.split('/').filter((item) => item !== '');
 
   const isMobile = useMediaQuery('<tablet');
 
