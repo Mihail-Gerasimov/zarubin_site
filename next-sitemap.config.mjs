@@ -117,6 +117,7 @@ const config = {
           '/*.png',
           '/*.webp',
           '/assets/images/**/*.webp',
+          '*tag=*',
         ],
         disallow: [
           '/assets/*',
@@ -146,6 +147,7 @@ const config = {
           '/*.png',
           '/*.webp',
           '/assets/images/**/*.webp',
+          '*tag=*',
         ],
         disallow: [
           '/assets/*',

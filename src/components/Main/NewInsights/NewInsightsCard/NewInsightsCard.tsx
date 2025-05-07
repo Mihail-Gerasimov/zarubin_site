@@ -13,6 +13,7 @@ interface Props {
   subCategory: string | undefined | null;
   image: string | undefined | null;
   date?: string;
+  category: string;
 }
 
 export const NewInsightsCard = ({
@@ -24,12 +25,13 @@ export const NewInsightsCard = ({
   subCategory,
   image,
   date,
+  category,
 }: Props) => {
   const tags = tag?.split(',');
 
   return (
     <Link
-      href={`/playbook/insights/${slug}`}
+      href={`/playbook/${category.toLowerCase()}/${slug}`}
       className='group flex h-full flex-col pr-[10px]'
     >
       <div className='hover:shadow-lg'>
