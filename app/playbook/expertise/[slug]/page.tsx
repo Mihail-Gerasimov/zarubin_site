@@ -85,7 +85,7 @@ export async function generateMetadata({
 
   const cleanTitle = cleanMetaTitle(post.data.title);
   const slug = params.slug || '';
-  const { tag } = post.data;
+  const { tag, image } = post.data;
   const keywords = tag.split(',');
 
   const title = contentTrimming(cleanTitle, 85);
@@ -95,6 +95,15 @@ export async function generateMetadata({
     post.data.date,
     'dd-MM-yyyy',
   ).toISO();
+
+  const ogImage = image
+    ? [
+        {
+          url: image,
+          alt: cleanTitle,
+        },
+      ]
+    : openGraphImage.images;
 
   return {
     title,
@@ -106,7 +115,7 @@ export async function generateMetadata({
       type: 'article',
       locale: 'en_US',
       siteName: 'BrightByte.com',
-      ...openGraphImage,
+      images: ogImage,
       title,
       description,
       url: `${BASE_URL}/playbook/expertise/${slug}`,

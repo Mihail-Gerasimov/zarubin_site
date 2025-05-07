@@ -1,39 +1,76 @@
+import defaultImg from '@/public/assets/images/banner/default_insights.webp';
 import { formattedDate } from '@/src/utils/formattedDate';
+import Image from 'next/image';
+import { NextLinePreposition } from '../NextLinePreposition/NextLinePreposition';
 
 interface Props {
   tag: string;
   title: string;
   description: string;
   date: string;
+  image: string | undefined;
 }
 
-export const SmallBlogCard = ({ tag, title, description, date }: Props) => {
+export const SmallBlogCard = ({
+  tag,
+  title,
+  description,
+  date,
+  image,
+}: Props) => {
   const formatDate = formattedDate(date);
   const tags = tag?.split(',');
 
   return (
-    <div className='flex flex-col items-start justify-between gap-[24px] rounded-[12px] bg-main-beige px-[40px] py-[40px]'>
-      <div className='flex flex-col items-start gap-[24px]'>
-        <ul className='flex flex-wrap gap-[12px]'>
-          {tags.map((tag) => (
-            <li
-              key={tag}
-              className='flex items-center rounded-[5px] bg-white px-[10px] py-[10px] font-proxima text-[20px] capitalize leading-[1.2] text-[#000]'
-            >
-              {tag}
-            </li>
-          ))}
-        </ul>
-        <h2 className='line-clamp-3 flex-1 font-proxima text-[22px] font-bold leading-[1.1] text-text-dark tablet:text-[26px] desktop:text-[36px]'>
-          {title}
-        </h2>
-        <p className='line-clamp-2 overflow-hidden font-proxima text-[20px] leading-[1.2] text-text-dark opacity-[70%] tablet:line-clamp-3'>
-          {description}
-        </p>
+    <div className='group flex h-full flex-col pr-[10px]'>
+      <div className='hover:shadow-lg'>
+        <div className='image-container flex aspect-[16/9] transition-transform duration-500 before:opacity-0 before:duration-300 group-hover:before:opacity-20'>
+          {image ? (
+            <Image
+              src={image}
+              alt={title}
+              width={450}
+              height={250}
+              className='absolute h-full w-full object-cover object-center'
+              quality={80}
+            />
+          ) : (
+            <Image
+              src={defaultImg}
+              alt={title}
+              width={450}
+              height={250}
+              className='absolute h-full w-full object-cover object-center'
+              quality={80}
+            />
+          )}
+          <div className='z-60 relative mt-auto flex gap-[10px] p-[20px] text-text-dark'>
+            {tags?.slice(0, 2).map((item, idx) => (
+              <span
+                key={idx}
+                className={`w-fit rounded-[5px] p-[6px_10px] font-proxima text-[16px] font-bold uppercase text-text-dark ${idx === 0 ? 'bg-main-orange' : 'bg-white'}`}
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className='flex h-[360px] w-full flex-1 flex-col items-stretch rounded-b-[5px] bg-card-bg px-[20px] py-[40px] tablet:px-[40px]'>
+          <NextLinePreposition
+            tag='h3'
+            text={title}
+            className='mt-[25px] line-clamp-3 overflow-hidden font-unbound text-[18px] font-bold uppercase leading-[1] text-text-dark duration-300 group-hover:underline tablet:text-[24px] tablet:leading-[1.16]'
+          />
+          <NextLinePreposition
+            tag='p'
+            text={description}
+            className='mb-auto mt-[19px] line-clamp-3 overflow-hidden overflow-hidden font-proxima text-[16px] leading-[1.25] text-text-dark/60 tablet:text-[20px]'
+          />
+          {date && (
+            <span className='mt-[14px] text-text-dark/60'>{formatDate}</span>
+          )}
+        </div>
       </div>
-      <span className='font-proxima text-[16px] leading-[1.25] text-text-dark opacity-[50%]'>
-        {formatDate}
-      </span>
     </div>
   );
 };
