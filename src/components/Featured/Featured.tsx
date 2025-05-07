@@ -21,8 +21,6 @@ export const Featured = ({ slug, posts }: Props) => {
 
   const category = path.split('/').filter((item) => item !== '');
 
-  console.log('category', category);
-
   const isMobile = useMediaQuery('<tablet');
 
   return (
