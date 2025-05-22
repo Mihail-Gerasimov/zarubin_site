@@ -29,6 +29,9 @@ export async function GET() {
   });
 
   return new Response(feed.xml({ indent: true }), {
-    headers: { 'Content-Type': 'application/rss+xml; charset=utf-8' },
+    headers: {
+      'Content-Type': 'application/rss+xml; charset=utf-8',
+      'X-Robots-Tag': 'noindex, follow',
+    },
   });
 }
