@@ -13,6 +13,7 @@ import Script from 'next/script';
 import React from 'react';
 import 'swiper/css';
 import './globals.css';
+import { CookieConsent } from '@/src/components/CookieConsent/CookieConsent';
 
 const expertiseSubMenu = getArticlesList('expertise');
 const playbookMetaData = getAllArticles();
@@ -119,18 +120,6 @@ export default function RootLayout({
               padding: 0;
         }`}
         </style>
-        <Script
-          async
-          src='https://www.googletagmanager.com/gtag/js?id=G-FXGP2J4QFD'
-        ></Script>
-        <Script id='google-analytics' strategy='afterInteractive'>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-FXGP2J4QFD');
-          `}
-        </Script>
       </head>
       <body className={`flex flex-col bg-main-bg text-white ${bodyClassname}`}>
         <Header
@@ -140,6 +129,7 @@ export default function RootLayout({
         <main className='flex flex-col gap-[60px] overflow-hidden'>
           {children}
         </main>
+        <CookieConsent />
         <Footer />
         <Script id='replain'>
           {`window.replainSettings = { id: '07c36061-dbc9-4cb8-85cb-9e69876b9d34' };

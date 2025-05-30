@@ -17,7 +17,10 @@ export const MainPageComponent = () => {
       <Section>
         <NewFeedback />
       </Section>
-      <Section light className='px-0 tablet:px-0 desktop:px-0 desktop:py-0'>
+      <Section
+        light
+        className='px-0 py-0 tablet:px-0 tablet:py-0 desktop:px-0 desktop:py-0'
+      >
         <NewContactForm />
       </Section>
     </div>
