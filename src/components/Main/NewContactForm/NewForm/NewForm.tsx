@@ -121,7 +121,7 @@ export const NewForm = () => {
             </span>
           </div>
           I agree with{' '}
-          <Link href={'policy'} className='text-main-orange'>
+          <Link href={'policy'} className='text-main-orange' target='_blank'>
             the privacy policy
           </Link>
         </label>
