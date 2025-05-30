@@ -130,7 +130,6 @@ export const Privacy = () => {
                   2.10. User – any visitor to the website{' '}
                   <Link className={styles.link} href={'/'}>
                     {BASE_URL}
-                    {BASE_URL}
                   </Link>
                 </p>
               </li>
