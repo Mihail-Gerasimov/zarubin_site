@@ -4,8 +4,11 @@ import { NextLinePreposition } from '@/src/components/NextLinePreposition/NextLi
 import { sendEmail } from '@/src/utils/sendEmail';
 import { InputMask } from '@react-input/mask';
 import { useFormik } from 'formik';
+import Link from 'next/link';
+import { useState } from 'react';
 
 export const NewForm = () => {
+  const [isChecked, setIsChecked] = useState(false);
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -101,9 +104,31 @@ export const NewForm = () => {
           onChange={formik.handleChange}
           required
         />
+        <label className='flex w-fit items-center gap-[8px] font-proxima text-[16px] font-bold text-white'>
+          <input
+            type='checkbox'
+            checked={isChecked}
+            onChange={(e) => setIsChecked(e.target.checked)}
+            className='peer hidden h-[16px] w-[16px] rounded-[2px] border-white accent-main-orange'
+          />
+          <div
+            className={`relative h-[16px] w-[16px] rounded-[4px] border border-[1px] border-white ${isChecked ? 'bg-main-orange' : ''}`}
+          >
+            <span
+              className={`absolute left-1/2 top-1/2 block translate-x-[-50%] translate-y-[-50%] text-[14px] font-bold text-text-dark ${isChecked ? 'block' : 'hidden'}`}
+            >
+              &#10004;
+            </span>
+          </div>
+          I agree with{' '}
+          <Link href={'policy'} className='text-main-orange'>
+            the privacy policy
+          </Link>
+        </label>
         <button
           type='submit'
-          className='w-full transform rounded-[6px] bg-main-orange px-[15px] py-[13px] text-[16px] font-bold text-text-dark transition duration-200 ease-in-out hover:scale-[0.99] hover:bg-main-orange-hover tablet:text-[20px] desktop:text-[24px]'
+          disabled={!isChecked}
+          className={`w-full transform rounded-[6px] px-[15px] py-[13px] text-[16px] font-bold text-text-dark transition duration-200 ease-in-out tablet:text-[20px] desktop:text-[24px] ${isChecked ? 'bg-main-orange hover:scale-[0.99] hover:bg-main-orange-hover' : 'bg-main-orange/60'}`}
         >
           Send the request
         </button>
