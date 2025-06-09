@@ -1,7 +1,7 @@
 ---
 title: "The Best CRM Systems for Sports Organizations: Which Tool to Choose"
 description: "A comprehensive comparison of CRM systems tailored for sports clubs and stadiums, analyzing features, integrations, and industry-specific capabilities."
-image: "/assets/images/expertise/sports_crm.webp"
+image: "/assets/images/expertise/cover.webp"
 date: "09-06-2025"
 readingTime: "8 minutes"
 category: "Expertise"
@@ -22,7 +22,7 @@ For sports organizations CRM is especially important, because they solve specifi
 - **Working with sponsors and partners**
 - **Analyzing stadium occupancy and fan behavior.**
 
-ОБЛОЖКА
+![dashboard](/assets/images/expertise/cover.webp)
 
 ---
 
@@ -82,7 +82,7 @@ This CRM is great for large sports franchises with complex business processes an
 
 ---
 
-КАРТИНКА 2
+![dashboard](/assets/images/expertise/advantages.webp)
 
 ### **HubSpot**
 
@@ -120,7 +120,7 @@ CRM is good for internal coordination of stadium managers and administrators, an
 
 ---
 
-КАРТИНКА 3
+![dashboard](/assets/images/expertise/desctop-phone.webp)
 
 ## **3. Conclusion**
 
